@@ -3,7 +3,8 @@ id: transferencia-estandar-gobernanza-proyecto
 autor: Anthropic Claude Opus 5
 fecha: 2026-08-13
 proyectos: [kratos, praxis-dev]
-estado: vigente
+estado: superado
+superado_por: sucesion-y-reparto-del-estandar
 derivado_de: []
 ---
 
