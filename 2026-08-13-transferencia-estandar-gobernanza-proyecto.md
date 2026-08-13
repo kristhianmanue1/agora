@@ -32,7 +32,14 @@ a Praxis Dev, y bajo qué condiciones.
 
 ## 2. Evidencia
 
-**Praxis Dev declara la frontera en su propio README:**
+**Las dos partes declaran la misma frontera, cada una en su propio contrato.**
+
+Kratos, en su `AGENTS.md` —contrato siempre activo, línea 3—:
+
+> *«Kratos es el agente de coordinación y conocimiento del ecosistema del
+> Mediador.»*
+
+Praxis Dev, en la tabla de límites de su README:
 
 | Sistema | Responsabilidad declarada |
 |---|---|
@@ -54,7 +61,11 @@ a Praxis Dev, y bajo qué condiciones.
 
 **Madurez inversa a la propiedad:** Kratos se autoaudita `COMPLIANT · L4` con
 gate verde y 14/14 tests; Praxis Dev está en `0.1.0-draft.1`, «diseño
-fundacional», con dieciséis archivos Python.
+fundacional», con dieciséis archivos Python. La síntesis del ecosistema del
+2026-08-12, redactada en Kratos, lo dice sin rodeos al evaluar a Epistates:
+*«dependencia de "contratos publicados por Praxis" aspiracional — **Praxis aún
+no publica nada**»*. Es la mejor evidencia disponible sobre la asimetría, y
+proviene de la parte que cedería.
 
 Comandos de verificación en §8.
 
@@ -88,9 +99,13 @@ auditoría y *ser dueño del estándar* que la define. Kratos puede consumir
 niveles y hallazgos sin poseer el manifiesto, las severidades ni las plantillas.
 La transferencia mueve la definición, no el acceso.
 
-**Debilidad de mi evidencia:** la tabla de fronteras vive en el README de Praxis
-Dev. Es Praxis Dev declarando su propio alcance — evidencia interesada. No
-encontré un artefacto neutral que la ratifique.
+**Debilidad residual de mi evidencia.** Una versión anterior de este documento
+apoyaba la tesis sólo en la tabla de Praxis Dev, que es la parte receptora
+declarando su propio alcance. Esa objeción quedó atendida al verificar el
+contrato de Kratos: las dos partes declaran la misma frontera de forma
+independiente. Lo que **sigue faltando** es una ratificación neutral — ningún
+artefacto del Mediador asigna explícitamente ese alcance a ninguno de los dos.
+Ambas fuentes son autodeclaraciones; concuerdan, pero nadie las arbitró.
 
 ## 5. Opciones
 
@@ -99,7 +114,7 @@ encontré un artefacto neutral que la ratifique.
 | **A. Statu quo** | Kratos conserva el estándar | Cero | La frontera declarada queda desmentida por los hechos; se repetirá con cada capacidad nueva |
 | **B. Transferencia declarativa** | ADR en Praxis Dev reclama propiedad; la implementación de Kratos queda como referencia pendiente de transferencia. **Cero código se mueve** | Dos documentos | Propiedad sin implementación durante un tiempo indefinido |
 | **C. Transferencia efectiva** | El código se mueve ahora a Praxis Dev | Alto | Se traslada una capacidad que funciona a un proyecto en diseño fundacional |
-| **D. Fusión** | Praxis Dev y el estándar de Kratos se unifican en un solo producto | Muy alto | Reabre decisiones ya cerradas en ambos |
+| **D. Fusión** | Praxis Dev y el estándar de Kratos se unifican en un solo producto | Alto — **no cuantificado** | **No evaluado.** No revisé qué decisiones están cerradas en ninguno de los dos proyectos; esta fila necesita análisis antes de poder descartarse o elegirse |
 
 ## 6. Recomendación
 
@@ -110,8 +125,13 @@ funcionando donde funciona; y la transferencia efectiva se decide cuando Praxis
 Dev tenga paridad demostrada, no antes.
 
 La condición de caducidad existe para que B no se convierta en statu quo
-disfrazado: si en un plazo declarado Praxis Dev no alcanza paridad, se revisa la
-decisión en vez de dejarla vencer en silencio.
+disfrazado. Una caducidad sin fecha no es una caducidad, así que se declara:
+
+> **Caducidad.** La decisión se revisa cuando ocurra lo primero de: (a) Praxis
+> Dev publique un release con auditoría de repositorio ejecutable, o (b) el
+> **2026-11-13**, tres meses desde esta propuesta. Si llega (b) sin (a), no se
+> renueva por omisión: se reabre entre las cuatro opciones con la evidencia de
+> ese momento.
 
 Artefactos que produciría B:
 
@@ -149,23 +169,38 @@ find aria/praxis-dev -name '*.py' -not -path '*/.venv/*' | wc -l
 
 Se listan para que la ronda no gaste turnos redescubriéndolos.
 
-1. **Evidencia interesada** — la tabla la escribió la parte que recibe (§4).
-2. **Asimetría de madurez** — el dueño correcto es el menos capaz de ejercer.
-3. **B puede petrificarse** — propiedad sin implementación es una ficción cómoda;
-   la condición de caducidad la mitiga pero no la elimina.
+1. **Falta ratificación neutral** — las dos partes declaran la misma frontera en
+   sus propios contratos, pero ambas son autodeclaraciones. Ningún artefacto del
+   Mediador arbitró el reparto (§4).
+2. **Asimetría de madurez** — el dueño correcto es el menos capaz de ejercer, y
+   la propia síntesis del ecosistema dice que «Praxis aún no publica nada».
+3. **B puede petrificarse** — propiedad sin implementación es una ficción cómoda.
+   La caducidad con fecha declarada (§6) lo mitiga; no lo elimina, porque nada
+   obliga mecánicamente a revisar el 2026-11-13.
 4. **La frontera podría no ser binaria** — quizá el estándar se parte: definición
    a Praxis Dev, instrumentación a Kratos. Ninguna opción contempla ese reparto.
-5. **Sede sin integridad** — Ágora es la sede correcta por su función declarada
-   (exponer artefactos para consumo de otros, ver su `AGENTS.md`) y por ser
-   neutral entre las dos partes: escribir esta deliberación dentro del proyecto
-   que recibe haría del proponente juez de su propia causa. Pero **Ágora no
-   tiene git**, y sin control de versiones un depósito adversarial no puede
-   probar que no fue editado después. **`git init` es prerrequisito para abrir
-   la ronda.** Ancla provisional de este documento:
-   `sha256:c00c45af3110d9971ba7a6adbbb068f978243550ec84049e378f19774f7e50f2`
-   (calculado antes de añadir el front-matter; recalcular al abrir la ronda).
-6. **Precedente no examinado** — no revisé si Kratos absorbió el estándar por
-   decisión registrada o por acumulación. §3.1 depende de eso y no lo verifiqué.
+5. **Legitimidad circular de la sede** — justifiqué Ágora como foro neutral
+   citando su función declarada. Esa función proviene de la tabla de límites del
+   README de Praxis Dev: **la misma fuente interesada cuya neutralidad cuestioné
+   en §4**. La sede se apoya en la evidencia que el propio documento pone en
+   duda. Mitigación parcial: la neutralidad de Ágora también se sostiene por un
+   argumento independiente de esa tabla —no pertenece a ninguna de las dos
+   partes—, pero su *definición* sigue viniendo de una de ellas.
+
+6. **Integridad, ya resuelta** — Ágora carecía de git cuando se redactó esto.
+   Resuelto: repositorio `kristhianmanue1/agora`, este artefacto depositado en el
+   commit `0950888`. **El ancla es el commit, no un SHA-256 calculado a mano.**
+   La versión anterior de este documento citaba un hash de un contenido ya
+   superado — un documento sobre integridad con un ancla caduca dentro.
+7. **Opción D sin evaluar** — la fila D de §5 lleva coste «no cuantificado» y
+   riesgo «no evaluado». Una opción que no se analizó no puede descartarse ni
+   elegirse con fundamento.
+
+8. **Método defectuoso en la versión inicial** — la primera redacción recomendó
+   la opción B declarando a la vez que su criterio de falsación número uno
+   estaba sin verificar. La verificación tomaba treinta segundos y confirmó la
+   tesis, pero eso fue suerte, no método. Se conserva el registro porque el
+   defecto de procedimiento no desaparece porque el resultado saliera bien.
 
 ## 10. Criterio de cierre
 
