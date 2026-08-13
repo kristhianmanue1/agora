@@ -21,9 +21,14 @@ Aquí sólo se expone, se atribuye y se consume.
    AN-KLA ni desde Skopos. Si llegó solo, no pertenece aquí. Lo que separa una
    idea de un artefacto es que alguien decidió exponerla.
 
-3. **Todo artefacto declara su estado de vida.** Un artefacto superado apunta al
-   que lo reemplazó. Sin esto, Ágora se vuelve un yacimiento donde lo muerto se
-   ve igual que lo vivo.
+3. **Ágora expone información vigente.** Todo artefacto declara su estado de
+   vida, y un artefacto superado apunta al que lo reemplazó — pero **declarar el
+   estado no basta**: lo que deja de ser vigente se **retira de la superficie**,
+   no se queda ocupando la vista con una etiqueta. Git conserva el registro
+   íntegro, así que retirar no destruye nada.
+
+   El criterio es quien consulta: si un artefacto describe un estado que ya
+   cambió, engaña aunque diga «superado». Se retira.
 
 4. **Almacén plano.** Sin jerarquía de carpetas. La organización por proyecto,
    idea u objetivo es una **vista generada** desde los metadatos. Un artefacto
