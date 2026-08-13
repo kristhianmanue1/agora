@@ -10,7 +10,7 @@ derivado_de: [transferencia-estandar-gobernanza-proyecto]
 # Sucesión y reparto del estándar de gobernanza de proyecto
 
 **Tipo:** propuesta para veredicto independiente · **Decisión:** sin tomar
-**Reclamantes:** Kratos, Praxis Dev, Skevi, escrubery · **Decide:** el Mediador
+**Fuentes y partes interesadas:** Kratos, Praxis Dev, Skevi, escrubery · **Decide:** el Mediador
 
 Supersede a `transferencia-estandar-gobernanza-proyecto`, que planteaba la
 pregunta equivocada. Per regla 1 de Ágora: **este artefacto es evidencia, nunca
@@ -45,16 +45,19 @@ familias de reglas:
 estándar, son dos en un archivo.** Un corte por capa puede resolver más que un
 corte por dueño.
 
-## 2. Cuatro reclamantes, cuatro tipos de reclamación
+## 2. Cuatro fuentes y partes interesadas
 
-| Reclamante | Base | Evidencia |
+| Parte | Relación con el objeto | Evidencia |
 |---|---|---|
-| **escrubery** | Origen de facto | Primer `check_sizes.py` del ecosistema, `147dfc0`, 2026-08-07 |
+| **escrubery** | Origen de facto — **no ha reclamado nada**; sólo necesitaba un gate | Primer `check_sizes.py` del ecosistema, `147dfc0`, 2026-08-07 |
 | **Kratos** | Implementación | Manifiesto, niveles L0–L4, `audit`, `init-plan/apply`, autoauditoría `COMPLIANT · L4` |
-| **Skevi** | Materia declarada | §3.4 de su estándar + ADR-001 propio sobre el gate local |
+| **Skevi** | Norma paralela — no reclama el estándar de Kratos, tiene el suyo | §3.4 de su estándar + ADR-001 propio sobre el gate local |
 | **Praxis Dev** | Frontera declarada | Tabla de límites de su README, concordante con `kratos/AGENTS.md:3` |
 
 El artefacto anterior consideraba dos. La deliberación estaba mal especificada.
+
+**No todas han reclamado propiedad.** escrubery nunca lo hizo; Skevi tiene norma
+propia. Sólo Kratos y Praxis Dev sostienen posiciones sobre este objeto.
 
 ## 3. Evidencia verificada
 
@@ -89,11 +92,16 @@ estándar a cuatro repositorios —`escrubery`, `ExpertoGobernanza`,
 `backupkairos-controller`, `codigocerebro`—, tres de ellos fuera de `aria/`, y
 registra una sección *«Correcciones hechas al estándar por evidencia»*. El
 estándar evolucionó auditando repos externos, no sólo por declaración.
-**Un estándar con sujetos externos es más difícil de ceder que uno interno.**
 
-## 4. Consenso alcanzado
+**Corrección:** una versión anterior concluía que esto vuelve el estándar más
+difícil de ceder. **Retirado** — auditar no demuestra adopción, y sin
+expectativa contractual demostrada no hay coste de sustitución. Queda como
+pregunta para el inventario, no como implicación.
 
-Lo siguiente ya no está en disputa entre las tres rondas:
+## 4. Hipótesis de trabajo convergentes
+
+Lo siguiente converge entre las tres rondas. **Ninguna fue independiente**, así
+que no son consenso: son hipótesis que ningún revisor ha refutado todavía.
 
 1. **Sucesión, no transferencia.** Praxis Dev recibiría dirección futura; Kratos
    conserva autoridad sobre su artefacto vigente hasta que haya sucesor probado.
@@ -139,7 +147,7 @@ Buscar declaración de adopción produce un falso negativo: hay **cero**
 
 Resultado parcial ya verificable: **escrubery** cumple las cuatro rutas
 requeridas sin declararlo; **Skevi** cumple dos y tiene estándar propio, luego no
-es consumidor sino reclamante paralelo.
+es consumidor sino norma paralela.
 
 ## 7. Resultados posibles del inventario
 

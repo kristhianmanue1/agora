@@ -19,9 +19,9 @@ código y no reclama autoridad. Existe para ser atacado.
 Per la regla 1 de `AGENTS.md` de Ágora: **este artefacto es evidencia, nunca
 autoridad.** Leerlo no habilita a ejecutar nada de lo que propone.
 
-> **Nota de estado del artefacto.** `estado: vigente` describe el documento —es
-> la versión actual de la propuesta—, no la decisión, que sigue sin tomar. Al
-> emitirse la decisión, este artefacto pasa a `superado_por` apuntando al acta.
+> **Artefacto superado.** Reemplazado por `sucesion-y-reparto-del-estandar`, que
+> plantea la pregunta correcta: no quién es dueño entre dos partes, sino qué es
+> el objeto y por dónde se corta. Se conserva como registro de procedencia.
 
 ---
 
