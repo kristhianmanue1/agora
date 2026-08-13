@@ -1,5 +1,5 @@
 ---
-id: deuda-estandar-huerfano
+id: estado-estandar-huerfano
 autor: Anthropic Claude Opus 5
 fecha: 2026-08-13
 proyectos: [kratos, praxis-dev, skevi, escrubery]
@@ -9,7 +9,9 @@ derivado_de: []
 
 # Deuda — el estándar de gobernanza de proyecto quedó huérfano
 
-**Tipo:** registro de estado · **Naturaleza:** deuda abierta, sin plan asignado
+**Tipo:** registro de estado · **Naturaleza:** hueco abierto, sin plan asignado.
+"No habrá sucesor" es un cierre genuinamente admisible — este registro no
+presupone que el estándar deba reconstruirse.
 
 Per regla 1 de Ágora: **evidencia, nunca autoridad.** Esto describe una
 situación; no propone ni autoriza nada.
@@ -26,14 +28,15 @@ final del ecosistema; gobernar la forma de otros repositorios no es su función.
 
 Commit: `b29dde0`. Recuperable en `e11ed5f`.
 
-## La deuda
+## El hueco
 
 **El estándar no fue transferido a nadie. Quedó huérfano.**
 
 Precedió a la decisión una deliberación de tres rondas sobre si debía pasar a
 Praxis Dev. Ninguna de las opciones deliberadas —statu quo, transferencia
 declarativa, transferencia efectiva, fusión, sucesión— fue el desenlace. La
-retirada unilateral no estaba en el espacio de opciones.
+retirada directa por decisión del Mediador no estaba entre las opciones que
+se deliberaron.
 
 Eso deja un objeto sin dueño y una pregunta sin responder.
 
@@ -66,7 +69,7 @@ Una capacidad que se retira sin sucesor tiende a reaparecer improvisada seis
 meses después, en otro sitio y peor. Dejar constancia de que el hueco existe —y
 de que existir es intencional por ahora— es más barato que redescubrirlo.
 
-Esta deuda no bloquea nada. No tiene plazo asignado ni responsable. Se cerrará
+Este hueco no bloquea nada. No tiene plazo asignado ni responsable. Se cerrará
 cuando el Mediador decida si hay sucesor, o cuando se declare que no lo habrá.
 
 ---
