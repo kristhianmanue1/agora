@@ -7,7 +7,7 @@ estado: vigente
 derivado_de: []
 ---
 
-# Deuda — el estándar de gobernanza de proyecto quedó huérfano
+# Estado — el estándar de gobernanza de proyecto quedó huérfano
 
 **Tipo:** registro de estado · **Naturaleza:** hueco abierto, sin plan asignado.
 "No habrá sucesor" es un cierre genuinamente admisible — este registro no
