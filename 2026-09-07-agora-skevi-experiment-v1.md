@@ -16,6 +16,12 @@ construir la vertical slice, activar SKEVI ni ejecutar corridas.
 experiment_id: agora-skevi-experiment/v1
 status: frozen
 frozen_at: 2026-09-07T22:30:12-06:00
+refrozen_at: 2026-09-08T03:17:18-06:00
+amendments:
+  - amendment_id: freeze-status-consistency-1
+    prior_git_revision: 0a35bf5702023996dd9163a8f3ade3e0754be713
+    scope: profile status wording and profile digest
+    semantic_change: false
 
 conditions:
   C0:
@@ -31,7 +37,7 @@ baseline:
 skevi_profile:
   id: agora-skevi-pilot/v1
   path: 2026-09-07-agora-skevi-pilot-v1.md
-  sha256: e024471d1106320266439f50e02d4bd5cdb5d29fb083d2f1ad57bc7d1ab4be66
+  sha256: 0fc5a51a1479804afa890d5ef59f4940ebf633091aa978bcda74de47b8e4c34e
   skevi_commit: b400b85c164827ecfb107363a2194c5c6635a9c7
 
 section_digest_rule:

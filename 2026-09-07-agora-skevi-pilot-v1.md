@@ -540,16 +540,15 @@ enmienda previa causa invalidity, no una ampliación retroactiva.
   orden aleatorio aún deben fijarse antes de correr.
 - La semántica superior L0…Ln, backend, privacidad, copyright, prompt injection,
   retención y operación remota quedan fuera.
-- La reconciliación y el protocolo siguen sin commit; todavía no existe una
-  identidad Git congelada de estos documentos.
+- La revisión Git que contiene este texto identifica el freeze documental; su
+  disponibilidad remota debe verificarse por SHA antes de cualquier corrida.
 - Las ponderaciones y márgenes son decisiones provisionales; su sensibilidad se
   reportará sin sustituir la regla primaria.
 
 ### P13. Dictamen
 
-**READY-TO-FREEZE** como protocolo documental. Congelar significa asignar una
-revisión identificable a este texto y a `measurement/v1`; no significa adoptar o
-activar SKEVI. Antes de ejecutar faltan el run manifest con variables concretas,
-la base implementable autorizada y autorización separada para construir la slice.
-Este dictamen no autoriza implementación, instalación, commit, push, cambios de
-GitHub ni ejecución del piloto.
+**FROZEN** como protocolo documental en la revisión Git que contiene este texto
+y `measurement/v1`. El freeze no adopta ni activa SKEVI y no concede autoridad
+por sí mismo. Antes de ejecutar faltan el run manifest de cada corrida, una base
+experimental verificada y autorización separada para implementar la slice y
+ejecutar el piloto.
