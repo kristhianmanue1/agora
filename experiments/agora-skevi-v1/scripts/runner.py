@@ -4,12 +4,16 @@
 from __future__ import annotations
 
 import argparse
+import ctypes
 import difflib
+import errno
 import hashlib
 import json
+import math
 import os
 import signal
 import shutil
+import stat
 import subprocess
 import tempfile
 import time
@@ -17,9 +21,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from isolation import copy_adapter, require_backend, sanitized_environment, seatbelt_profile
+from isolation import copy_adapter, copy_regular_file, require_backend, sanitized_environment, seatbelt_profile
 from prepare_run import CONDITION_MARKER, DEFAULT_LOCK, DEFAULT_ROOT, blind_identifier, require_commit
-from verify_freeze import verify
+from verify_freeze import load_lock, verify_lock
+
+
+MAX_ARTIFACT_FILES = 10_000
+MAX_ARTIFACT_BYTES = 64 * 1024 * 1024
+RENAME_EXCL = 0x00000004
+CONTROLLER_FILES = (
+    "experiments/agora-skevi-v1/experiment.lock.json",
+    "experiments/agora-skevi-v1/scripts/isolation.py",
+    "experiments/agora-skevi-v1/scripts/prepare_run.py",
+    "experiments/agora-skevi-v1/scripts/runner.py",
+    "experiments/agora-skevi-v1/scripts/verify_freeze.py",
+)
 
 
 def now() -> str:
@@ -33,6 +49,63 @@ def digest(path: Path) -> str:
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def controller_identity() -> dict[str, Any]:
+    head = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=DEFAULT_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        check=True,
+    ).stdout.strip()
+    changed = subprocess.run(
+        ["git", "status", "--porcelain", "--", *CONTROLLER_FILES],
+        cwd=DEFAULT_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        check=True,
+    ).stdout.splitlines()
+    return {
+        "git_head": head,
+        "tracked_files_dirty": bool(changed),
+        "files": {relative: digest(DEFAULT_ROOT / relative) for relative in CONTROLLER_FILES},
+    }
+
+
+def rename_directory_exclusive(source: Path, destination: Path) -> None:
+    """Atomically finalize a directory without replacing an existing target."""
+    libc = ctypes.CDLL(None, use_errno=True)
+    renamex = libc.renamex_np
+    renamex.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_uint]
+    renamex.restype = ctypes.c_int
+    result = renamex(os.fsencode(source), os.fsencode(destination), RENAME_EXCL)
+    if result == 0:
+        return
+    observed_errno = ctypes.get_errno()
+    if observed_errno == errno.EEXIST:
+        raise FileExistsError("evidence_output_already_exists")
+    raise OSError(observed_errno, os.strerror(observed_errno), str(destination))
+
+
+def discard_private_paths(staging: Path) -> None:
+    for private_path in (
+        staging / "producer" / "workspace",
+        staging / "producer" / "home",
+        staging / "producer" / "tmp",
+    ):
+        shutil.rmtree(private_path, ignore_errors=True)
+
+
+def finalize_bundle(staging: Path, output: Path, manifest: dict[str, Any]) -> None:
+    discard_private_paths(staging)
+    write_json(
+        staging / "integrity" / "digests.json",
+        integrity_manifest(staging, manifest["run_id"], manifest["experiment_id"]),
+    )
+    rename_directory_exclusive(staging, output)
 
 
 def validate_manifest(manifest: dict[str, Any], lock: dict[str, Any]) -> None:
@@ -57,6 +130,14 @@ def validate_manifest(manifest: dict[str, Any], lock: dict[str, Any]) -> None:
         raise ValueError("run_manifest_shape_mismatch")
     if manifest["schema"] != "agora-skevi/run-manifest/v1":
         raise ValueError("run_manifest_schema_mismatch")
+    if manifest["status"] != "prepared":
+        raise ValueError("run_manifest_status_mismatch")
+    try:
+        prepared_at = datetime.fromisoformat(manifest["prepared_at"].replace("Z", "+00:00"))
+    except (AttributeError, ValueError) as error:
+        raise ValueError("run_manifest_prepared_at_invalid") from error
+    if prepared_at.tzinfo is None:
+        raise ValueError("run_manifest_prepared_at_invalid")
     if not blind_identifier(manifest["run_id"]):
         raise ValueError("invalid_or_condition_revealing_run_id")
     if manifest["experiment_id"] != lock["experiment_id"]:
@@ -125,19 +206,45 @@ def copy_instruction_packs(staging: Path, manifest: dict[str, Any]) -> None:
         destination.write_bytes(source.read_bytes())
 
 
+def workspace_entries(root: Path) -> list[tuple[Path, os.stat_result]]:
+    """Enumerate entries without following directory symlinks."""
+    output: list[tuple[Path, os.stat_result]] = []
+    pending = [root]
+    while pending:
+        directory = pending.pop()
+        with os.scandir(directory) as iterator:
+            entries = sorted(iterator, key=lambda entry: entry.name, reverse=True)
+        for entry in entries:
+            path = Path(entry.path)
+            observed = entry.stat(follow_symlinks=False)
+            output.append((path, observed))
+            if stat.S_ISDIR(observed.st_mode):
+                pending.append(path)
+    return sorted(output, key=lambda item: item[0].relative_to(root).as_posix())
+
+
 def collect_artifacts(workspace: Path, artifacts: Path) -> None:
     artifacts.mkdir(parents=True)
-    for source in sorted(workspace.rglob("*")):
+    file_count = 0
+    total_bytes = 0
+    for source, observed in workspace_entries(workspace):
         relative = source.relative_to(workspace)
-        if source.is_symlink():
+        if stat.S_ISLNK(observed.st_mode):
             raise ValueError(f"producer_symlink_forbidden:{relative}")
-        if source.is_dir():
+        if stat.S_ISDIR(observed.st_mode):
             continue
+        if not stat.S_ISREG(observed.st_mode):
+            raise ValueError(f"producer_special_file_forbidden:{relative}")
         if relative.as_posix() == ".agora-execution-record.json":
             continue
+        file_count += 1
+        total_bytes += observed.st_size
+        if file_count > MAX_ARTIFACT_FILES:
+            raise ValueError("producer_artifact_file_count_exceeded")
+        if total_bytes > MAX_ARTIFACT_BYTES:
+            raise ValueError("producer_artifact_bytes_exceeded")
         destination = artifacts / relative
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source, destination)
+        copy_regular_file(source, destination, error=f"producer_artifact_changed:{relative}")
 
 
 def artifact_patch(artifacts: Path) -> str:
@@ -201,9 +308,14 @@ def prepare_reviewer_packet(staging: Path) -> None:
 
 def integrity_manifest(root: Path, run_id: str, experiment_id: str) -> dict[str, Any]:
     files = {}
-    for path in sorted(root.rglob("*")):
-        if path.is_file() and path.relative_to(root).as_posix() != "integrity/digests.json":
-            files[path.relative_to(root).as_posix()] = digest(path)
+    for path, observed in workspace_entries(root):
+        relative = path.relative_to(root).as_posix()
+        if stat.S_ISLNK(observed.st_mode) or not (
+            stat.S_ISDIR(observed.st_mode) or stat.S_ISREG(observed.st_mode)
+        ):
+            raise ValueError(f"evidence_special_file_forbidden:{relative}")
+        if stat.S_ISREG(observed.st_mode) and relative != "integrity/digests.json":
+            files[relative] = digest(path)
     return {
         "schema": "agora-skevi/evidence-digests/v1",
         "experiment_id": experiment_id,
@@ -252,10 +364,13 @@ def run(
     *,
     timeout_seconds: float | None = None,
 ) -> dict[str, Any]:
-    freeze = verify(DEFAULT_ROOT, DEFAULT_LOCK)
+    try:
+        lock = load_lock(DEFAULT_LOCK)
+    except ValueError as error:
+        raise RuntimeError(str(error)) from error
+    freeze = verify_lock(DEFAULT_ROOT, lock)
     if not freeze["ok"]:
         raise RuntimeError(f"freeze_verification_failed:{freeze['errors']}")
-    lock = json.loads(DEFAULT_LOCK.read_text(encoding="utf-8"))
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     validate_manifest(manifest, lock)
 
@@ -267,9 +382,14 @@ def run(
     if any(CONDITION_MARKER.search(part) for part in output.parts):
         raise ValueError("evidence_path_reveals_condition")
     output.parent.mkdir(parents=True, exist_ok=True)
-    staging = Path(tempfile.mkdtemp(prefix=f".{output.name}.", dir=output.parent))
+    staging = Path(tempfile.mkdtemp(prefix=".agora-run.", dir=output.parent))
     started = now()
     monotonic_start = time.monotonic()
+    launched = False
+    adapter: Path | None = None
+    exit_code: int | None = None
+    timed_out = False
+    finalization_started = False
     try:
         write_json(staging / "run-manifest.json", manifest)
         copy_instruction_packs(staging, manifest)
@@ -282,10 +402,21 @@ def run(
         workspace = staging / "producer" / "workspace"
         stdout_path = staging / "producer" / "stdout.log"
         stderr_path = staging / "producer" / "stderr.log"
-        limit = timeout_seconds or lock["budget"]["producer_active_hours"] * 3600
+        if timeout_seconds is None:
+            limit = lock["budget"]["producer_active_hours"] * 3600
+        elif (
+            isinstance(timeout_seconds, bool)
+            or not isinstance(timeout_seconds, (int, float))
+            or not math.isfinite(timeout_seconds)
+            or timeout_seconds <= 0
+        ):
+            raise ValueError("invalid_timeout_seconds")
+        else:
+            limit = timeout_seconds
         backend = require_backend()
         command = [str(backend), "-f", str(profile_path), str(adapter)]
         with stdout_path.open("wb") as stdout, stderr_path.open("wb") as stderr:
+            launched = True
             exit_code, timed_out = execute_isolated(
                 command,
                 workspace=workspace,
@@ -298,8 +429,15 @@ def run(
         artifacts = staging / "producer" / "artifacts"
         internal_record = workspace / ".agora-execution-record.json"
         public_record = staging / "producer" / "execution-record.json"
-        if internal_record.is_file():
-            shutil.copyfile(internal_record, public_record)
+        if internal_record.exists() or internal_record.is_symlink():
+            record_stat = internal_record.lstat()
+            if not stat.S_ISREG(record_stat.st_mode):
+                raise ValueError("producer_execution_record_must_be_regular_file")
+            copy_regular_file(
+                internal_record,
+                public_record,
+                error="producer_execution_record_changed_or_unreadable",
+            )
         collect_artifacts(workspace, artifacts)
         (staging / "producer" / "patch.diff").write_text(artifact_patch(artifacts), encoding="utf-8")
         producer_record, protocol_deviations = validate_execution_record(public_record, lock)
@@ -316,6 +454,7 @@ def run(
             "finished_at": now(),
             "elapsed_seconds": round(time.monotonic() - monotonic_start, 6),
             "adapter_sha256": digest(adapter),
+            "controller": controller_identity(),
             "isolation_backend": "macos-sandbox-exec",
             "exit_code": exit_code,
             "timed_out": timed_out,
@@ -323,32 +462,72 @@ def run(
             "protocol_status": "valid" if not protocol_deviations else "invalidity_candidate",
             "outcome_signals": outcome_signals,
             "outcome_status": "failure_candidate" if outcome_signals else "no_failure_signaled",
+            "producer_measurements_source": "unverified_self_report",
+            "budget_enforcement": "not_enforced_m1",
             "semantic_verdict": "not_evaluated",
         }
         write_json(staging / "producer" / "runner-record.json", execution)
         write_json(staging / "tests" / "results.json", {"status": "not_run", "phase": "M1"})
         prepare_reviewer_packet(staging)
         write_json(staging / "reviewer" / "review.json", {"status": "pending", "phase": "M2"})
-        for private_path in (
-            staging / "producer" / "workspace",
-            staging / "producer" / "home",
-            staging / "producer" / "tmp",
-        ):
-            shutil.rmtree(private_path, ignore_errors=True)
-        write_json(
-            staging / "integrity" / "digests.json",
-            integrity_manifest(staging, manifest["run_id"], manifest["experiment_id"]),
-        )
-        os.replace(staging, output)
+        finalization_started = True
+        finalize_bundle(staging, output, manifest)
         return {
-            "ok": not protocol_deviations and not outcome_signals,
+            "ok": not protocol_deviations,
             "bundle_finalized": True,
             "protocol_valid": not protocol_deviations,
             "output": str(output),
             "protocol_deviations": protocol_deviations,
             "outcome_signals": outcome_signals,
         }
-    except BaseException:
+    except Exception as error:
+        if finalization_started:
+            shutil.rmtree(staging, ignore_errors=True)
+            raise
+        if launched:
+            failure_code = str(error)
+            if not failure_code or any(character.isspace() for character in failure_code):
+                failure_code = type(error).__name__
+            deviation = f"postlaunch_failure:{failure_code}"
+            write_json(
+                staging / "producer" / "runner-record.json",
+                {
+                    "schema": "agora-skevi/runner-execution/v1",
+                    "started_at": started,
+                    "finished_at": now(),
+                    "elapsed_seconds": round(time.monotonic() - monotonic_start, 6),
+                    "adapter_sha256": digest(adapter) if adapter is not None else None,
+                    "controller": controller_identity(),
+                    "isolation_backend": "macos-sandbox-exec",
+                    "exit_code": exit_code,
+                    "timed_out": timed_out,
+                    "protocol_deviations": [deviation],
+                    "protocol_status": "invalidity_candidate",
+                    "outcome_signals": [],
+                    "outcome_status": "not_interpretable",
+                    "producer_measurements_source": "unavailable",
+                    "budget_enforcement": "not_enforced_m1",
+                    "semantic_verdict": "not_evaluated",
+                },
+            )
+            write_json(staging / "tests" / "results.json", {"status": "not_run", "phase": "M1-R1"})
+            write_json(
+                staging / "reviewer" / "review.json",
+                {"status": "not_prepared", "phase": "M2", "reason": deviation},
+            )
+            try:
+                finalize_bundle(staging, output, manifest)
+            except Exception:
+                shutil.rmtree(staging, ignore_errors=True)
+                raise
+            return {
+                "ok": False,
+                "bundle_finalized": True,
+                "protocol_valid": False,
+                "output": str(output),
+                "protocol_deviations": [deviation],
+                "outcome_signals": [],
+            }
         shutil.rmtree(staging, ignore_errors=True)
         raise
 

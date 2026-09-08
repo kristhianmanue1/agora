@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import os
 import shutil
+import stat
 from pathlib import Path
 
 
@@ -19,6 +20,34 @@ def require_backend() -> Path:
     if os.uname().sysname != "Darwin" or not SANDBOX_EXEC.is_file():
         raise RuntimeError("isolation_backend_unavailable")
     return SANDBOX_EXEC
+
+
+def copy_regular_file(source: Path, destination: Path, *, error: str) -> os.stat_result:
+    """Copy from a no-follow descriptor and bind the copy to the lstat object."""
+    try:
+        source_stat = source.lstat()
+    except OSError as cause:
+        raise ValueError(error) from cause
+    if not stat.S_ISREG(source_stat.st_mode):
+        raise ValueError(error)
+    flags = os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0)
+    try:
+        descriptor = os.open(source, flags)
+    except OSError as cause:
+        raise ValueError(error) from cause
+    try:
+        observed = os.fstat(descriptor)
+        if not stat.S_ISREG(observed.st_mode) or (
+            observed.st_dev,
+            observed.st_ino,
+        ) != (source_stat.st_dev, source_stat.st_ino):
+            raise ValueError(error)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        with os.fdopen(descriptor, "rb", closefd=False) as source_handle, destination.open("xb") as target:
+            shutil.copyfileobj(source_handle, target)
+        return observed
+    finally:
+        os.close(descriptor)
 
 
 def sanitized_environment(run_root: Path) -> dict[str, str]:
@@ -49,6 +78,7 @@ def seatbelt_profile(run_root: Path) -> str:
         Path("/usr"),
         Path("/bin"),
         Path("/Library"),
+        Path("/private/var/select"),
         Path("/private/var/db/timezone"),
         run_root / "input",
         run_root / "producer" / "workspace",
@@ -68,9 +98,11 @@ def seatbelt_profile(run_root: Path) -> str:
             "(deny default)",
             '(import "system.sb")',
             "(allow process*)",
+            "(deny process-info*)",
+            "(allow process-info* (target self))",
+            "(allow process-info-codesignature)",
             '(deny process-exec (literal "/bin/ps") (literal "/usr/bin/pgrep")',
             '  (literal "/usr/sbin/lsof") (literal "/usr/sbin/sysctl"))',
-            "(allow file-read-metadata)",
             f"(allow file-read* {read_rules})",
             f"(allow file-write* {write_rules})",
             '(allow file-read* (literal "/dev/null") (literal "/dev/urandom"))',
@@ -82,11 +114,14 @@ def seatbelt_profile(run_root: Path) -> str:
 
 
 def copy_adapter(source: Path, run_root: Path) -> Path:
-    source = source.resolve()
-    if not source.is_file() or source.is_symlink():
+    source = source.absolute()
+    try:
+        source_stat = source.lstat()
+    except OSError as error:
+        raise ValueError("producer_adapter_must_be_regular_file") from error
+    if not stat.S_ISREG(source_stat.st_mode):
         raise ValueError("producer_adapter_must_be_regular_file")
     destination = run_root / "input" / "producer-adapter"
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, destination)
+    copy_regular_file(source, destination, error="producer_adapter_changed_or_unreadable")
     destination.chmod(0o555)
     return destination

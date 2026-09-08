@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from verify_freeze import DEFAULT_LOCK, DEFAULT_ROOT, verify
+from verify_freeze import DEFAULT_LOCK, DEFAULT_ROOT, load_lock, verify_lock
 
 
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
@@ -92,7 +92,11 @@ def write_new(path: Path, payload: dict[str, Any]) -> None:
             handle.write("\n")
             handle.flush()
             os.fsync(handle.fileno())
-        os.replace(temporary, path)
+        try:
+            os.link(temporary, path)
+        except FileExistsError as error:
+            raise FileExistsError("output_already_exists") from error
+        Path(temporary).unlink()
     except BaseException:
         Path(temporary).unlink(missing_ok=True)
         raise
@@ -107,11 +111,15 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
-    verification = verify(DEFAULT_ROOT, DEFAULT_LOCK)
+    try:
+        lock = load_lock(DEFAULT_LOCK)
+    except ValueError as error:
+        print(json.dumps({"ok": False, "errors": [str(error)]}))
+        return 1
+    verification = verify_lock(DEFAULT_ROOT, lock)
     if not verification["ok"]:
         print(json.dumps(verification, indent=2, sort_keys=True))
         return 1
-    lock = json.loads(DEFAULT_LOCK.read_text(encoding="utf-8"))
     base = require_commit(DEFAULT_ROOT, args.base_commit)
     manifest = build_manifest(
         lock,
