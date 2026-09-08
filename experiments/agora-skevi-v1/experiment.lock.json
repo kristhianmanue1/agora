@@ -1,0 +1,81 @@
+{
+  "schema": "agora-skevi/experiment-lock/v1",
+  "experiment_id": "agora-skevi-experiment/v1",
+  "frozen_git_revision": "7e7c27cc7911e847bfe1be9dbad6cfe4bd2919bc",
+  "documents": {
+    "baseline": {
+      "id": "agora-baseline/v1",
+      "path": "2026-09-07-agora-baseline-v1.md",
+      "sha256": "6f6eef7f5ccbc6092cbe563bbbabc80919ec45ddb19c7f6265a400f3a59a516b"
+    },
+    "profile": {
+      "id": "agora-skevi-pilot/v1",
+      "path": "2026-09-07-agora-skevi-pilot-v1.md",
+      "sha256": "0fc5a51a1479804afa890d5ef59f4940ebf633091aa978bcda74de47b8e4c34e"
+    },
+    "experiment": {
+      "id": "agora-skevi-experiment/v1",
+      "path": "2026-09-07-agora-skevi-experiment-v1.md",
+      "sha256": "c4610a2d43a829679720d6b5ff49aef206288c75e279295fe5f16b0e5809f668"
+    }
+  },
+  "sections": {
+    "fixtures": {
+      "profile_section": 3,
+      "sha256": "9a0f91e3fc0a4b1598938b7eca21f64b3cf7c65c009ac8d356b2ef6f9a68a28b"
+    },
+    "repetitions": {
+      "profile_section": 4,
+      "sha256": "8e87aaea9d18fc1626c80eabb073e185426db930d8c3be22e5f07b1ec044380b"
+    },
+    "measurement": {
+      "profile_section": 5,
+      "sha256": "60af577c0fd4884a6bc73af60c387978ac91c1167b247de46de85fde35bee683"
+    },
+    "isolation": {
+      "profile_section": 8,
+      "sha256": "e4adbd2024d43d98ca4fbb759759e5faf33667741bf73bfbd147714f0364599d"
+    },
+    "reviewers": {
+      "profile_section": 9,
+      "sha256": "46558e17a4c0d0fb76567373fabb9894768e2ca6658f6cfa69fe0768d2337692"
+    },
+    "decisions": {
+      "profile_section": 10,
+      "sha256": "4d5aa2a8f6109d99a375e9c53be9a448333ed15813ff963f8a0a54668470798f"
+    }
+  },
+  "conditions": {
+    "C0": ["baseline"],
+    "C1": ["baseline", "profile"]
+  },
+  "producer": {
+    "provider": "OpenAI",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "high"
+  },
+  "reviewer": {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high"
+  },
+  "pairs": 3,
+  "analysis": {
+    "primary": "intention-to-treat",
+    "secondary": "C0 spontaneous SKEVI-equivalent mechanism rate"
+  },
+  "budget": {
+    "producer_tokens": 150000,
+    "producer_model_invocations": 20,
+    "producer_active_hours": 4,
+    "reviewer_tokens": 30000,
+    "reviewer_active_hours": 1
+  },
+  "tool_manifest": {
+    "id": "agora-producer-tools/v1",
+    "network": false,
+    "an_kla": false,
+    "remote_git_mutation": false,
+    "cross_run_access": false
+  }
+}

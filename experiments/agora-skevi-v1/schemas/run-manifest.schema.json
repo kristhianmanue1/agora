@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agora-skevi/run-manifest/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "experiment_id",
+    "run_id",
+    "pair_id",
+    "condition",
+    "analysis_assignment",
+    "agora_base_commit",
+    "instruction_packs",
+    "producer",
+    "tool_manifest",
+    "budget",
+    "status",
+    "prepared_at"
+  ],
+  "properties": {
+    "schema": {"const": "agora-skevi/run-manifest/v1"},
+    "experiment_id": {"const": "agora-skevi-experiment/v1"},
+    "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"},
+    "pair_id": {"type": "integer", "minimum": 1, "maximum": 3},
+    "condition": {"enum": ["C0", "C1"]},
+    "analysis_assignment": {"enum": ["C0", "C1"]},
+    "agora_base_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "instruction_packs": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "sha256"],
+        "properties": {
+          "id": {"type": "string"},
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "producer": {"type": "object"},
+    "tool_manifest": {"type": "object"},
+    "budget": {"type": "object"},
+    "status": {"const": "prepared"},
+    "prepared_at": {"type": "string", "format": "date-time"}
+  }
+}
