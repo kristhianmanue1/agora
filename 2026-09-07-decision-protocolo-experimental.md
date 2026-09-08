@@ -4,29 +4,36 @@ autor: OpenAI Codex
 fecha: 2026-09-07
 proyectos: [agora, aria]
 estado: borrador
-derivado_de: [proposal]
+derivado_de: [proposal, decision-identidad-agora]
 ---
 
-# Ágora: propuesta de decisión y protocolo experimental
+# Ágora: protocolo experimental y decisiones pendientes
 
-Documento para decisión. La solicitud humana actual autoriza preparar este
-artefacto; no constituye aprobación de la arquitectura, construcción del motor,
-integración con otros productos ni commit o push. Complementa `proposal`, que
-conserva su condición de borrador. No sustituye las reglas de `AGENTS.md`.
+Documento para definir el experimento y las decisiones todavía abiertas. La
+solicitud humana actual autoriza preparar este artefacto; no constituye aprobación
+de la arquitectura física, construcción del motor, integración con otros productos
+ni commit o push. Complementa `proposal`, que conserva su condición de borrador.
+La identidad del producto se concilió en `decision-identidad-agora`; este
+protocolo sigue siendo borrador y no sustituye las reglas de `AGENTS.md`.
 
-## 1. Decisión propuesta
+## 1. Identidad fijada y decisiones pendientes
 
-Mantener Ágora como superficie de exposición deliberada de artefactos atribuidos.
-Evaluar un motor de transformación independiente, con nombre y ubicación por
-decidir. Separar ambos por contratos; esta separación no requiere microservicios.
-El experimento puede ser un único proceso local con módulos internos.
+Reconocer Ágora como el sistema independiente de transformación y memoria
+estructurada, incluida su superficie de exposición deliberada de artefactos
+atribuidos. Motor y superficie son responsabilidades distintas dentro del mismo
+producto y se relacionan mediante contratos; no requieren procesos ni
+repositorios separados. El experimento puede ser un único proceso local con
+módulos internos.
 
-La alternativa es redefinir Ágora como motor y superficie. Es viable, pero exige
-una decisión explícita y revisar sus reglas antes de construir en este repositorio.
-Añadir el motor sin resolver esta diferencia dejaría responsabilidades contradictorias.
+Independiente significa que Ágora puede ingerir, transformar, consolidar,
+consultar y publicar sin Skopos, AN-KLA ni otros componentes de Aria. No significa
+que deje de ser memoria ni que se renuncie a integrarla posteriormente en la
+memoria de agentes de IA.
 
-Tres actos permanecen separados: generar un resultado, publicarlo en Ágora y
-admitirlo en memoria privada. Ninguno implica automáticamente el siguiente.
+Cuatro actos permanecen separados: incorporar una fuente, producir o consolidar
+una memoria derivada, publicar un resultado en la superficie de Ágora y admitirlo
+en AN-KLA u otra memoria de continuidad de un agente. Ninguno implica
+automáticamente el siguiente.
 
 **Resultado que se busca:** una persona consulta documentación técnica versionada,
 obtiene respuestas con evidencia localizable y puede reconocer qué conclusiones
@@ -271,7 +278,7 @@ autoriza industrialización.
 
 | Paso | Entregable | Condición para continuar |
 |---|---|---|
-| 1. Decisión de responsabilidad | Decisión breve: conservar superficie y separar motor, o redefinir Ágora | Decisión humana explícita; nombre y ubicación del experimento |
+| 1. Fijar frontera interna | Identidad ya decidida: motor de memoria y superficie son partes de Ágora; falta elegir estructura física y límites de módulos | Arquitectura revisable y autorización explícita de construcción |
 | 2. Congelar evaluación | Corpus, versiones, preguntas, rúbrica y errores críticos | Custodio y revisores disponibles; partición por familias; manifiesto con hashes y reservado inaccesible al ajuste |
 | 3. Congelar contratos | Esquemas, oráculo de invalidación, fallos, escenario Q/U, límites monetario y de horas | Valores concretos registrados; contratos revisables y autorización de construcción/ejecución |
 | 4. Recorrido completo | Ingesta → síntesis → consulta con evidencia → cambio → actualización | Integridad, aislamiento y recuperación de fallos comprobados |
@@ -282,7 +289,7 @@ No hace falta construir un catálogo ni un marco genérico de agentes para reali
 este experimento. La estrategia de binarios debe decidirse antes de incorporar
 el primero a Ágora; el piloto de texto permite posponer esa inversión.
 
-## 7. Trabajo independiente sobre el Ágora actual
+## 7. Trabajo sobre la superficie documental actual
 
 El validador del front-matter sigue siendo una mejora acotada y distinta del
 motor. Antes de implementarlo, aclarar seis campos siempre presentes más
@@ -330,5 +337,6 @@ Dictamen final del revisor independiente, tras verificar las correcciones:
 **apto para decisión humana, sin bloqueos dentro del alcance revisado**. La
 segunda lectura cerró además la cobertura del subconjunto principal y la regla
 conjunta de avance. Este dictamen no autoriza construcción ni ejecución.
-Permanecen por resolver responsabilidad del producto, ubicación, corpus, personas
-revisoras, presupuesto y aceptación de los criterios antes de construir y ejecutar.
+Permanecen por resolver estructura física, fronteras de módulos, niveles de
+memoria, configuración de CLI y modelos, corpus, personas revisoras, presupuesto y
+aceptación de los criterios antes de construir y ejecutar.

@@ -4,15 +4,16 @@ autor: OpenAI Codex
 fecha: 2026-09-07
 proyectos: [agora, aria]
 estado: borrador
-derivado_de: [proposal, decision-protocolo-experimental]
+derivado_de: [proposal, decision-identidad-agora, decision-protocolo-experimental]
 ---
 
 # Memoria estructurada: especificación técnica y dos opciones de almacenamiento
 
-Propuesta técnica para el motor experimental independiente descrito en
+Propuesta técnica para el núcleo experimental independiente de Ágora descrito en
 `decision-protocolo-experimental`. La solicitud actual autoriza incluir MongoDB
 como opción 2 y realizar revisión adversarial. No selecciona definitivamente un
-backend, redefine Ágora ni autoriza construir, desplegar o publicar en Git.
+backend ni autoriza construir, desplegar o publicar en Git. Independiente describe
+su operación sin otros componentes de Aria, no un producto separado de Ágora.
 
 ## 1. Decisión recomendada
 
@@ -247,8 +248,9 @@ compartido y su despliegue satisface los mismos contratos con costo aceptado.
 
 No hay mediciones aún. Una implementación futura comienza con un solo backend;
 la interfaz de dominio permite evaluar el otro cuando haya una razón concreta.
-El siguiente paso de decisión sigue siendo responsabilidad y ubicación del motor,
-seguido de congelar contratos y evaluación según el protocolo.
+El siguiente paso de diseño es fijar la estructura física, los niveles de memoria,
+la configuración de CLI y modelos y las fronteras internas de Ágora, seguido de
+congelar contratos y evaluación según el protocolo.
 
 ## 8. Revisión adversarial
 
