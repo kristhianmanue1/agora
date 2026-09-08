@@ -75,6 +75,13 @@ def controller_identity() -> dict[str, Any]:
     }
 
 
+def safe_controller_identity() -> dict[str, Any]:
+    try:
+        return {"status": "observed", **controller_identity()}
+    except Exception as error:
+        return {"status": "unavailable", "error": type(error).__name__}
+
+
 def rename_directory_exclusive(source: Path, destination: Path) -> None:
     """Atomically finalize a directory without replacing an existing target."""
     libc = ctypes.CDLL(None, use_errno=True)
@@ -90,13 +97,40 @@ def rename_directory_exclusive(source: Path, destination: Path) -> None:
     raise OSError(observed_errno, os.strerror(observed_errno), str(destination))
 
 
+def _remove_tree(path: Path) -> None:
+    def make_removable(name: Path, *, directory: bool) -> None:
+        try:
+            if hasattr(os, "chflags"):
+                os.chflags(name, 0, follow_symlinks=False)
+        except OSError:
+            pass
+        try:
+            os.chmod(name, 0o700 if directory else 0o600, follow_symlinks=False)
+        except OSError:
+            pass
+
+    if path.is_symlink():
+        path.unlink()
+    elif path.exists():
+        make_removable(path, directory=True)
+        for root, directories, files in os.walk(path, topdown=True, followlinks=False):
+            make_removable(Path(root), directory=True)
+            for name in directories:
+                candidate = Path(root) / name
+                if not candidate.is_symlink():
+                    make_removable(candidate, directory=True)
+            for name in files:
+                make_removable(Path(root) / name, directory=False)
+        shutil.rmtree(path)
+
+
 def discard_private_paths(staging: Path) -> None:
     for private_path in (
         staging / "producer" / "workspace",
         staging / "producer" / "home",
         staging / "producer" / "tmp",
     ):
-        shutil.rmtree(private_path, ignore_errors=True)
+        _remove_tree(private_path)
 
 
 def finalize_bundle(staging: Path, output: Path, manifest: dict[str, Any]) -> None:
@@ -238,13 +272,16 @@ def collect_artifacts(workspace: Path, artifacts: Path) -> None:
         if relative.as_posix() == ".agora-execution-record.json":
             continue
         file_count += 1
-        total_bytes += observed.st_size
         if file_count > MAX_ARTIFACT_FILES:
             raise ValueError("producer_artifact_file_count_exceeded")
-        if total_bytes > MAX_ARTIFACT_BYTES:
-            raise ValueError("producer_artifact_bytes_exceeded")
         destination = artifacts / relative
-        copy_regular_file(source, destination, error=f"producer_artifact_changed:{relative}")
+        _, copied = copy_regular_file(
+            source,
+            destination,
+            error=f"producer_artifact_bytes_exceeded:{relative}",
+            max_bytes=MAX_ARTIFACT_BYTES - total_bytes,
+        )
+        total_bytes += copied
 
 
 def artifact_patch(artifacts: Path) -> str:
@@ -444,7 +481,7 @@ def run(
         outcome_signals = []
         if timed_out:
             protocol_deviations.append("producer_timeout_budget_exceeded")
-        if exit_code not in (0, None):
+        if producer_record is not None and exit_code not in (0, None):
             outcome_signals.append(f"producer_exit_nonzero:{exit_code}")
         if producer_record is not None and producer_record.get("status") == "failed":
             outcome_signals.append("producer_reported_failure")
@@ -454,7 +491,7 @@ def run(
             "finished_at": now(),
             "elapsed_seconds": round(time.monotonic() - monotonic_start, 6),
             "adapter_sha256": digest(adapter),
-            "controller": controller_identity(),
+            "controller": safe_controller_identity(),
             "isolation_backend": "macos-sandbox-exec",
             "exit_code": exit_code,
             "timed_out": timed_out,
@@ -467,11 +504,24 @@ def run(
             "semantic_verdict": "not_evaluated",
         }
         write_json(staging / "producer" / "runner-record.json", execution)
-        write_json(staging / "tests" / "results.json", {"status": "not_run", "phase": "M1"})
+        write_json(staging / "tests" / "results.json", {"status": "not_run", "phase": "M1-R1"})
         prepare_reviewer_packet(staging)
         write_json(staging / "reviewer" / "review.json", {"status": "pending", "phase": "M2"})
         finalization_started = True
-        finalize_bundle(staging, output, manifest)
+        try:
+            finalize_bundle(staging, output, manifest)
+        except BaseException as finalization_error:
+            return {
+                "ok": False,
+                "bundle_finalized": False,
+                "protocol_valid": False,
+                "output": None,
+                "recovery_staging": str(staging),
+                "protocol_deviations": [
+                    f"bundle_finalization_failed:{type(finalization_error).__name__}"
+                ],
+                "outcome_signals": outcome_signals,
+            }
         return {
             "ok": not protocol_deviations,
             "bundle_finalized": True,
@@ -480,9 +530,8 @@ def run(
             "protocol_deviations": protocol_deviations,
             "outcome_signals": outcome_signals,
         }
-    except Exception as error:
+    except BaseException as error:
         if finalization_started:
-            shutil.rmtree(staging, ignore_errors=True)
             raise
         if launched:
             failure_code = str(error)
@@ -497,7 +546,7 @@ def run(
                     "finished_at": now(),
                     "elapsed_seconds": round(time.monotonic() - monotonic_start, 6),
                     "adapter_sha256": digest(adapter) if adapter is not None else None,
-                    "controller": controller_identity(),
+                    "controller": safe_controller_identity(),
                     "isolation_backend": "macos-sandbox-exec",
                     "exit_code": exit_code,
                     "timed_out": timed_out,
@@ -517,9 +566,19 @@ def run(
             )
             try:
                 finalize_bundle(staging, output, manifest)
-            except Exception:
-                shutil.rmtree(staging, ignore_errors=True)
-                raise
+            except BaseException as finalization_error:
+                return {
+                    "ok": False,
+                    "bundle_finalized": False,
+                    "protocol_valid": False,
+                    "output": None,
+                    "recovery_staging": str(staging),
+                    "protocol_deviations": [
+                        deviation,
+                        f"bundle_finalization_failed:{type(finalization_error).__name__}",
+                    ],
+                    "outcome_signals": [],
+                }
             return {
                 "ok": False,
                 "bundle_finalized": True,

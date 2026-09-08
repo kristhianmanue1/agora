@@ -11,6 +11,7 @@ import tempfile
 import time
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -171,6 +172,11 @@ class ExperimentBaseTests(unittest.TestCase):
                 runner.rename_directory_exclusive(source, destination)
             self.assertEqual("preserved", (destination / "existing").read_text())
 
+    def test_safe_controller_identity_degrades_without_aborting(self) -> None:
+        with mock.patch.object(runner, "controller_identity", side_effect=OSError("unavailable")):
+            observed = runner.safe_controller_identity()
+        self.assertEqual({"status": "unavailable", "error": "OSError"}, observed)
+
     def test_assignment_tamper_fails_before_launch(self) -> None:
         manifest = prepare_run.build_manifest(
             self.lock,
@@ -200,6 +206,49 @@ class ExperimentBaseTests(unittest.TestCase):
             observed, errors = runner.validate_execution_record(path, self.lock)
         self.assertEqual([], errors)
         self.assertEqual("failed", observed["status"])
+
+    def test_postlaunch_base_exception_is_preserved(self) -> None:
+        manifest = prepare_run.build_manifest(
+            self.lock,
+            run_id="interrupt-evidence",
+            pair_id=1,
+            slot_id=1,
+            base_commit=self.lock["agora_base_commit"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            temp = Path(directory)
+            manifest_path = temp / "run.json"
+            adapter_path = temp / "adapter"
+            output = temp / "bundle"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            adapter_path.write_text("#!/bin/sh\n", encoding="utf-8")
+            adapter_path.chmod(0o755)
+            with mock.patch.object(runner, "require_backend", return_value=Path("/usr/bin/true")):
+                with mock.patch.object(runner, "execute_isolated", side_effect=KeyboardInterrupt):
+                    result = runner.run(manifest_path, adapter_path, output, timeout_seconds=10)
+            self.assertFalse(result["ok"])
+            self.assertTrue(result["bundle_finalized"])
+            record = json.loads((output / "producer/runner-record.json").read_text())
+            self.assertEqual("invalidity_candidate", record["protocol_status"])
+            self.assertEqual(
+                ["postlaunch_failure:KeyboardInterrupt"],
+                record["protocol_deviations"],
+            )
+
+            output_two = temp / "bundle-two"
+            with mock.patch.object(runner, "require_backend", return_value=Path("/usr/bin/true")):
+                with mock.patch.object(runner, "execute_isolated", side_effect=KeyboardInterrupt):
+                    with mock.patch.object(runner, "finalize_bundle", side_effect=OSError("seal failed")):
+                        result = runner.run(
+                            manifest_path,
+                            adapter_path,
+                            output_two,
+                            timeout_seconds=10,
+                        )
+            self.assertFalse(result["bundle_finalized"])
+            self.assertIsNone(result["output"])
+            self.assertTrue(Path(result["recovery_staging"]).is_dir())
+            self.assertIn("bundle_finalization_failed:OSError", result["protocol_deviations"])
 
     @unittest.skipUnless(
         os.environ.get("AGORA_ISOLATION_INTEGRATION") == "1",
@@ -377,6 +426,7 @@ Path(os.environ["AGORA_EXECUTION_RECORD"]).write_text(json.dumps({{
             self.assertEqual("not_evaluated", runner_record["semantic_verdict"])
             self.assertEqual("unverified_self_report", runner_record["producer_measurements_source"])
             self.assertEqual("not_enforced_m1", runner_record["budget_enforcement"])
+            self.assertEqual("observed", runner_record["controller"]["status"])
             self.assertEqual(40, len(runner_record["controller"]["git_head"]))
             self.assertEqual(set(runner.CONTROLLER_FILES), set(runner_record["controller"]["files"]))
             integrity = json.loads((output / "integrity/digests.json").read_text())
@@ -451,6 +501,10 @@ from pathlib import Path
 
 workspace = Path(os.environ["AGORA_WORKSPACE"])
 os.mkfifo(workspace / "blocking-output")
+protected = Path(os.environ["HOME"]) / "protected"
+protected.mkdir()
+os.mkfifo(protected / "private-fifo")
+protected.chmod(0)
 Path(os.environ["AGORA_EXECUTION_RECORD"]).write_text(json.dumps({
     "schema": "agora-skevi/producer-execution-record/v1",
     "provider": "OpenAI",
@@ -479,6 +533,7 @@ Path(os.environ["AGORA_EXECUTION_RECORD"]).write_text(json.dumps({
             self.assertEqual("invalidity_candidate", record["protocol_status"])
             self.assertIn("producer_special_file_forbidden", record["protocol_deviations"][0])
             self.assertFalse((output / "producer/workspace").exists())
+            self.assertFalse((output / "producer/home").exists())
             integrity = json.loads((output / "integrity/digests.json").read_text())
             for relative, expected in integrity["files"].items():
                 observed = hashlib.sha256((output / relative).read_bytes()).hexdigest()

@@ -22,7 +22,13 @@ def require_backend() -> Path:
     return SANDBOX_EXEC
 
 
-def copy_regular_file(source: Path, destination: Path, *, error: str) -> os.stat_result:
+def copy_regular_file(
+    source: Path,
+    destination: Path,
+    *,
+    error: str,
+    max_bytes: int | None = None,
+) -> tuple[os.stat_result, int]:
     """Copy from a no-follow descriptor and bind the copy to the lstat object."""
     try:
         source_stat = source.lstat()
@@ -43,9 +49,14 @@ def copy_regular_file(source: Path, destination: Path, *, error: str) -> os.stat
         ) != (source_stat.st_dev, source_stat.st_ino):
             raise ValueError(error)
         destination.parent.mkdir(parents=True, exist_ok=True)
+        copied = 0
         with os.fdopen(descriptor, "rb", closefd=False) as source_handle, destination.open("xb") as target:
-            shutil.copyfileobj(source_handle, target)
-        return observed
+            while chunk := source_handle.read(1024 * 1024):
+                copied += len(chunk)
+                if max_bytes is not None and copied > max_bytes:
+                    raise ValueError(error)
+                target.write(chunk)
+        return observed, copied
     finally:
         os.close(descriptor)
 
