@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agora-skevi/evidence-digests/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "experiment_id", "run_id", "files", "finalized_at"],
+  "properties": {
+    "schema": {"const": "agora-skevi/evidence-digests/v1"},
+    "experiment_id": {"const": "agora-skevi-experiment/v1"},
+    "run_id": {"type": "string"},
+    "files": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    },
+    "finalized_at": {"type": "string", "format": "date-time"}
+  }
+}

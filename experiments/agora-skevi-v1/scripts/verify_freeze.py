@@ -18,6 +18,12 @@ DEFAULT_ROOT = EXPERIMENT_DIR.parents[1]
 DEFAULT_LOCK = EXPERIMENT_DIR / "experiment.lock.json"
 SECTION_HEADING = re.compile(r"(?m)^### P(\d+)\.[^\n]*\n")
 EXPECTED_RUNTIME = {
+    "agora_base_commit": "47fb709358a626a8f9c1d35ab442eecfe8a20f41",
+    "workspace_projection": {
+        "id": "agora-producer-empty-base/v1",
+        "include": [],
+        "manifest_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    },
     "producer": {"provider": "OpenAI", "model": "gpt-6-astra", "reasoning_effort": "high"},
     "reviewer": {"provider": "OpenAI", "model": "gpt-5.6-sol", "reasoning_effort": "high"},
     "pairs": 3,
@@ -38,6 +44,10 @@ EXPECTED_RUNTIME = {
         "an_kla": False,
         "remote_git_mutation": False,
         "cross_run_access": False,
+    },
+    "allocation": {
+        "method": "sha256 parity of experiment_id, frozen revision and pair id",
+        "pairs": {"1": ["C0", "C1"], "2": ["C1", "C0"], "3": ["C0", "C1"]},
     },
 }
 
@@ -125,6 +135,9 @@ def verify(root: Path, lock_path: Path, *, check_git: bool = True) -> dict[str, 
                     errors.append(f"missing_frozen_document:{name}:{record['path']}")
                 elif sha256(frozen) != record["sha256"]:
                     errors.append(f"frozen_document_digest_mismatch:{name}")
+        base_revision = lock.get("agora_base_commit", "")
+        if not git_object_exists(root, base_revision):
+            errors.append(f"missing_agora_base_commit:{base_revision}")
 
     expected_conditions = {"C0": ["baseline"], "C1": ["baseline", "profile"]}
     if lock.get("conditions") != expected_conditions:

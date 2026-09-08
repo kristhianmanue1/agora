@@ -17,6 +17,11 @@ from verify_freeze import DEFAULT_LOCK, DEFAULT_ROOT, verify
 
 
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
+CONDITION_MARKER = re.compile(r"(^|[._-])(c0|c1|skevi|control|treatment)($|[._-])", re.IGNORECASE)
+
+
+def blind_identifier(value: str) -> bool:
+    return bool(ID_PATTERN.fullmatch(value)) and not CONDITION_MARKER.search(value)
 
 
 def require_commit(root: Path, revision: str) -> str:
@@ -35,14 +40,18 @@ def require_commit(root: Path, revision: str) -> str:
 
 
 def build_manifest(
-    lock: dict[str, Any], *, run_id: str, pair_id: int, condition: str, base_commit: str
+    lock: dict[str, Any], *, run_id: str, pair_id: int, slot_id: int, base_commit: str
 ) -> dict[str, Any]:
-    if not ID_PATTERN.fullmatch(run_id):
-        raise ValueError("invalid_run_id")
+    if not blind_identifier(run_id):
+        raise ValueError("invalid_or_condition_revealing_run_id")
     if pair_id not in range(1, lock["pairs"] + 1):
         raise ValueError("invalid_pair_id")
-    if condition not in ("C0", "C1"):
-        raise ValueError("invalid_condition")
+    if slot_id not in (1, 2):
+        raise ValueError("invalid_slot_id")
+
+    condition = lock["allocation"]["pairs"][str(pair_id)][slot_id - 1]
+    if base_commit != lock["agora_base_commit"]:
+        raise ValueError("base_commit_not_frozen")
 
     packs = []
     for key in lock["conditions"][condition]:
@@ -54,9 +63,11 @@ def build_manifest(
         "experiment_id": lock["experiment_id"],
         "run_id": run_id,
         "pair_id": pair_id,
+        "slot_id": slot_id,
         "condition": condition,
         "analysis_assignment": condition,
         "agora_base_commit": base_commit,
+        "workspace_projection": lock["workspace_projection"],
         "instruction_packs": packs,
         "producer": lock["producer"],
         "tool_manifest": lock["tool_manifest"],
@@ -91,7 +102,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--pair-id", type=int, required=True)
-    parser.add_argument("--condition", choices=("C0", "C1"), required=True)
+    parser.add_argument("--slot-id", type=int, choices=(1, 2), required=True)
     parser.add_argument("--base-commit", required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
@@ -106,7 +117,7 @@ def main() -> int:
         lock,
         run_id=args.run_id,
         pair_id=args.pair_id,
-        condition=args.condition,
+        slot_id=args.slot_id,
         base_commit=base,
     )
     write_new(args.output, manifest)

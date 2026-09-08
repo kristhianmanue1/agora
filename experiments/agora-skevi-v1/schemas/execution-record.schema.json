@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agora-skevi/producer-execution-record/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "provider",
+    "model",
+    "reasoning_effort",
+    "model_invocations",
+    "input_tokens",
+    "output_tokens",
+    "status"
+  ],
+  "properties": {
+    "schema": {"const": "agora-skevi/producer-execution-record/v1"},
+    "provider": {"type": "string"},
+    "model": {"type": "string"},
+    "reasoning_effort": {"type": "string"},
+    "model_invocations": {"type": "integer", "minimum": 0},
+    "input_tokens": {"type": "integer", "minimum": 0},
+    "output_tokens": {"type": "integer", "minimum": 0},
+    "status": {"enum": ["completed", "failed"]}
+  }
+}

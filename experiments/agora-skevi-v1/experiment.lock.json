@@ -2,6 +2,12 @@
   "schema": "agora-skevi/experiment-lock/v1",
   "experiment_id": "agora-skevi-experiment/v1",
   "frozen_git_revision": "7e7c27cc7911e847bfe1be9dbad6cfe4bd2919bc",
+  "agora_base_commit": "47fb709358a626a8f9c1d35ab442eecfe8a20f41",
+  "workspace_projection": {
+    "id": "agora-producer-empty-base/v1",
+    "include": [],
+    "manifest_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
   "documents": {
     "baseline": {
       "id": "agora-baseline/v1",
@@ -48,6 +54,14 @@
   "conditions": {
     "C0": ["baseline"],
     "C1": ["baseline", "profile"]
+  },
+  "allocation": {
+    "method": "sha256 parity of experiment_id, frozen revision and pair id",
+    "pairs": {
+      "1": ["C0", "C1"],
+      "2": ["C1", "C0"],
+      "3": ["C0", "C1"]
+    }
   },
   "producer": {
     "provider": "OpenAI",

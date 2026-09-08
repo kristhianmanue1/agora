@@ -8,9 +8,11 @@
     "experiment_id",
     "run_id",
     "pair_id",
+    "slot_id",
     "condition",
     "analysis_assignment",
     "agora_base_commit",
+    "workspace_projection",
     "instruction_packs",
     "producer",
     "tool_manifest",
@@ -23,9 +25,20 @@
     "experiment_id": {"const": "agora-skevi-experiment/v1"},
     "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"},
     "pair_id": {"type": "integer", "minimum": 1, "maximum": 3},
+    "slot_id": {"type": "integer", "minimum": 1, "maximum": 2},
     "condition": {"enum": ["C0", "C1"]},
     "analysis_assignment": {"enum": ["C0", "C1"]},
     "agora_base_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "workspace_projection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "include", "manifest_sha256"],
+      "properties": {
+        "id": {"const": "agora-producer-empty-base/v1"},
+        "include": {"type": "array", "maxItems": 0},
+        "manifest_sha256": {"const": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"}
+      }
+    },
     "instruction_packs": {
       "type": "array",
       "minItems": 1,
