@@ -160,6 +160,27 @@ class ExperimentBaseTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "producer_symlink_forbidden"):
                 runner.collect_artifacts(workspace, temp / "artifacts-2")
 
+            regular = temp / "regular"
+            regular.write_bytes(b"ab")
+            with self.assertRaisesRegex(ValueError, "artifact_limit"):
+                runner.copy_regular_file(
+                    regular,
+                    temp / "limited-copy",
+                    error="artifact_changed",
+                    max_bytes=1,
+                    limit_error="artifact_limit",
+                )
+            alias_two = temp / "regular-alias"
+            alias_two.symlink_to(regular)
+            with self.assertRaisesRegex(ValueError, "artifact_changed"):
+                runner.copy_regular_file(
+                    alias_two,
+                    temp / "changed-copy",
+                    error="artifact_changed",
+                    max_bytes=10,
+                    limit_error="artifact_limit",
+                )
+
     def test_exclusive_directory_finalization_does_not_replace(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             temp = Path(directory)

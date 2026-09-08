@@ -278,8 +278,9 @@ def collect_artifacts(workspace: Path, artifacts: Path) -> None:
         _, copied = copy_regular_file(
             source,
             destination,
-            error=f"producer_artifact_bytes_exceeded:{relative}",
+            error=f"producer_artifact_changed:{relative}",
             max_bytes=MAX_ARTIFACT_BYTES - total_bytes,
+            limit_error=f"producer_artifact_bytes_exceeded:{relative}",
         )
         total_bytes += copied
 
@@ -498,7 +499,13 @@ def run(
             "protocol_deviations": protocol_deviations,
             "protocol_status": "valid" if not protocol_deviations else "invalidity_candidate",
             "outcome_signals": outcome_signals,
-            "outcome_status": "failure_candidate" if outcome_signals else "no_failure_signaled",
+            "outcome_status": (
+                "not_interpretable"
+                if protocol_deviations
+                else "failure_candidate"
+                if outcome_signals
+                else "no_failure_signaled"
+            ),
             "producer_measurements_source": "unverified_self_report",
             "budget_enforcement": "not_enforced_m1",
             "semantic_verdict": "not_evaluated",

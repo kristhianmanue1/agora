@@ -28,6 +28,7 @@ def copy_regular_file(
     *,
     error: str,
     max_bytes: int | None = None,
+    limit_error: str | None = None,
 ) -> tuple[os.stat_result, int]:
     """Copy from a no-follow descriptor and bind the copy to the lstat object."""
     try:
@@ -54,7 +55,7 @@ def copy_regular_file(
             while chunk := source_handle.read(1024 * 1024):
                 copied += len(chunk)
                 if max_bytes is not None and copied > max_bytes:
-                    raise ValueError(error)
+                    raise ValueError(limit_error or error)
                 target.write(chunk)
         return observed, copied
     finally:

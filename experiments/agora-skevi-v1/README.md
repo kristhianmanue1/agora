@@ -26,8 +26,9 @@ limita la duplicación de artefactos a 10 000 archivos y 64 MiB. También evita
 clasificar un outcome negativo como invalidez del protocolo y restringe la
 visibilidad de metadatos y procesos. Las anomalías posteriores al lanzamiento
 se sellan como `invalidity_candidate` en vez de borrar su evidencia. Si el
-propio sellado falla, el staging se conserva como evidencia no sellada y se
-reporta mediante `recovery_staging`; nunca se presenta como bundle válido. La
+propio sellado falla, el staging se conserva para recuperación y se reporta
+mediante `recovery_staging`; puede contener digests parciales, pero nunca se
+presenta como bundle finalizado ni como evidencia íntegra. La
 finalización no reemplaza un destino existente y el runner registra el commit,
 estado dirty y digests de sus componentes; si Git no está disponible, esa
 identidad se marca `unavailable` sin impedir la preservación.
