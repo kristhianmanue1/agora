@@ -7,8 +7,10 @@ sin convertirlas por ello en verdad ni autoridad.
 
 En su etapa actual este repositorio mantiene la superficie documental desde la
 que agentes y personas exponen artefactos terminados: documentos, planos,
-propuestas, imágenes y audio. El motor, la CLI, la configuración de modelos y la
-consolidación aún no están implementados.
+propuestas, imágenes y audio. Existe un primer incremento local en `src/agora`:
+fuente verificada y resumen candidato con citas mediante CLI explícita. No es el motor completo: la
+consolidación, recuperación, publicación y revisión semántica automática siguen
+pendientes. Alcance y uso: `docs/primera-transformacion.md`.
 
 Ágora no sustituye a AN-KLA. AN-KLA es un sistema independiente de continuidad
 y assurance para agentes: conserva contexto persistente, identidad de revisiones,
@@ -69,8 +71,8 @@ universal.
    artefactos y aún está por decidirse.
 
 **Honestidad sobre el estado actual.** Las cuatro reglas son hoy *guidance*:
-describen conducta esperada y no hay mecanismo que las verifique. Tampoco existe
-todavía el motor de memoria. Ninguna acumulación de guidance equivale a un
+describen conducta esperada y no hay mecanismo que las verifique. El incremento
+local de transformación tampoco equivale al motor completo de memoria. Ninguna acumulación de guidance equivale a un
 control y ningún borrador equivale a una capacidad construida. El primer chequeo
 ejecutable —forma del front-matter, unicidad de `id`, integridad de
 `superado_por`— es trabajo pendiente y está nombrado en §Decisiones.
