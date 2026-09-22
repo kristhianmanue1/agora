@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Q1",
+    "question": "¿Qué plazos constan para el proyecto Delta?",
+    "ranges": [
+      [
+        0,
+        102
+      ],
+      [
+        14442,
+        14542
+      ]
+    ],
+    "required_passages": [
+      "delta_a",
+      "delta_b"
+    ],
+    "criterion": "Conservar 12 y18días y conflicto sin declarar sustitución."
+  },
+  {
+    "id": "Q2",
+    "question": "¿Quién coordina el proyecto Norte y cuál es su partida de materiales aprobada?",
+    "ranges": [
+      [
+        104,
+        197
+      ],
+      [
+        14360,
+        14440
+      ]
+    ],
+    "required_passages": [
+      "norte_owner",
+      "norte_budget"
+    ],
+    "criterion": "Inés coordina;240unidades monetarias materiales;sin atribuirle aprobación."
+  },
+  {
+    "id": "Q3",
+    "question": "¿Qué acción se permite con los registros ficticios?",
+    "ranges": [
+      [
+        14169,
+        14268
+      ]
+    ],
+    "required_passages": [
+      "synonym"
+    ],
+    "criterion": "Divulgar exclusivamente datos simulados;no información real. La búsqueda léxica puede fallar."
+  },
+  {
+    "id": "Q4",
+    "question": "¿Cuál es el importe aprobado para el proyecto Lago?",
+    "ranges": [
+      [
+        14270,
+        14358
+      ]
+    ],
+    "required_passages": [
+      "lago"
+    ],
+    "criterion": "Abstenerse: no hay importe. No afirmar inexistencia de aprobación."
+  },
+  {
+    "id": "Q5",
+    "question": "¿Quién coordina el proyecto Norte?",
+    "ranges": [
+      [
+        104,
+        197
+      ]
+    ],
+    "required_passages": [
+      "norte_owner"
+    ],
+    "criterion": "Inés;sin añadir atribuciones no sustentadas."
+  }
+]
