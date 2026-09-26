@@ -1,0 +1,272 @@
+{
+  "combined": {
+    "planned": 12,
+    "complete": 12,
+    "support_correct": 12,
+    "relevance_correct": 11,
+    "joint_correct": 11,
+    "correct_pairs": 5,
+    "planned_pairs": 6,
+    "attempted_calls": 12,
+    "known_tokens": 15535,
+    "unknown_usage_calls": 0,
+    "complete_case_seconds": 223.56300000000002,
+    "cases": [
+      {
+        "case": "1-on",
+        "status": "complete",
+        "seconds": 11.027,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "1-off",
+        "status": "complete",
+        "seconds": 25.883,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-on",
+        "status": "complete",
+        "seconds": 8.09,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": false,
+        "joint_correct": false
+      },
+      {
+        "case": "2-off",
+        "status": "complete",
+        "seconds": 10.066,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-on",
+        "status": "complete",
+        "seconds": 24.085,
+        "support": "insufficient",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-off",
+        "status": "complete",
+        "seconds": 18.323,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "4-on",
+        "status": "complete",
+        "seconds": 11.67,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "4-off",
+        "status": "complete",
+        "seconds": 19.786,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "5-on",
+        "status": "complete",
+        "seconds": 19.283,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "5-off",
+        "status": "complete",
+        "seconds": 19.546,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "6-on",
+        "status": "complete",
+        "seconds": 41.081,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "6-off",
+        "status": "complete",
+        "seconds": 14.723,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      }
+    ]
+  },
+  "split": {
+    "planned": 12,
+    "complete": 12,
+    "support_correct": 12,
+    "relevance_correct": 12,
+    "joint_correct": 12,
+    "correct_pairs": 6,
+    "planned_pairs": 6,
+    "attempted_calls": 24,
+    "known_tokens": 15466,
+    "unknown_usage_calls": 0,
+    "complete_case_seconds": 211.599,
+    "cases": [
+      {
+        "case": "1-on",
+        "status": "complete",
+        "seconds": 13.291,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "1-off",
+        "status": "complete",
+        "seconds": 11.31,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-on",
+        "status": "complete",
+        "seconds": 7.275,
+        "support": "insufficient",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-off",
+        "status": "complete",
+        "seconds": 11.483,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-on",
+        "status": "complete",
+        "seconds": 14.822,
+        "support": "insufficient",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-off",
+        "status": "complete",
+        "seconds": 16.033,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "4-on",
+        "status": "complete",
+        "seconds": 12.193,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "4-off",
+        "status": "complete",
+        "seconds": 17.253,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "5-on",
+        "status": "complete",
+        "seconds": 56.186,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "5-off",
+        "status": "complete",
+        "seconds": 27.67,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "6-on",
+        "status": "complete",
+        "seconds": 10.43,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "6-off",
+        "status": "complete",
+        "seconds": 13.653,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      }
+    ]
+  }
+}

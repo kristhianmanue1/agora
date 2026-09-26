@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "source_revision": 2,
+    "old_term_excluded": true,
+    "candidate_status": "rejected",
+    "answer_status": null,
+    "review_status": "not_attempted",
+    "review_recommendation": null,
+    "verified_quote_count": 0,
+    "calls": 1,
+    "known_tokens": 1744,
+    "unknown_usage_calls": 0,
+    "admission": "not_performed",
+    "frozen_files_verified": true
+  },
+  "calls": [
+    {
+      "ordinal": 1,
+      "status": "complete",
+      "tokens": 1744,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 17.218
+    }
+  ],
+  "versions": {
+    "agora": "9a714644343bf28ee5f46e10ed1690d4aabaa4b6",
+    "skopos": "5773dbd8b6440f8ddb44d334f56f7fb98fa91ad0"
+  },
+  "candidate_diagnostics": [
+    {
+      "code": "invalid_json"
+    }
+  ],
+  "note": "The frozen initial runner exited 0 on candidate rejection; current runner fixes the exit status. No GLM rerun."
+}

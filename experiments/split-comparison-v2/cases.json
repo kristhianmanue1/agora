@@ -1,0 +1,388 @@
+[
+  {
+    "id": "1-on",
+    "category": "fecha",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfCu\\u00e1ntos equipos entreg\\u00f3 Orbe el 12 de mayo?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Cuántos equipos entregó Orbe el 12 de mayo?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Orbe entregó 40 equipos el 12 de mayo.",
+              "quotes": [
+                "Orbe no entregó equipos el 12 de mayo; entregó 40 el 13 de mayo."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "1-off",
+    "category": "fecha",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfQui\\u00e9n dise\\u00f1\\u00f3 el logotipo?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Quién diseñó el logotipo?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Orbe entregó 40 equipos el 12 de mayo.",
+              "quotes": [
+                "Orbe no entregó equipos el 12 de mayo; entregó 40 el 13 de mayo."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2-on",
+    "category": "sujeto",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"How many units did Vela ship?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "How many units did Vela ship?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Vela shipped 20 units.",
+              "quotes": [
+                "Orbe shipped 20 units."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2-off",
+    "category": "sujeto",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"What color was the office?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "What color was the office?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Vela shipped 20 units.",
+              "quotes": [
+                "Orbe shipped 20 units."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3-on",
+    "category": "atribucion",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfQu\\u00e9 reducci\\u00f3n de errores demostr\\u00f3 el sistema?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Qué reducción de errores demostró el sistema?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "El sistema redujo los errores un 30 %.",
+              "quotes": [
+                "Nerea afirmó que el sistema redujo los errores un 30 %; la cifra no fue verificada."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3-off",
+    "category": "atribucion",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfCu\\u00e1l es la direcci\\u00f3n de la oficina?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Cuál es la dirección de la oficina?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "El sistema redujo los errores un 30 %.",
+              "quotes": [
+                "Nerea afirmó que el sistema redujo los errores un 30 %; la cifra no fue verificada."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-on",
+    "category": "excepcion",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"Which sites adopted the protocol?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "Which sites adopted the protocol?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "All sites adopted the protocol.",
+              "quotes": [
+                "All sites except the northern site adopted the protocol."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-off",
+    "category": "excepcion",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"Who designed the company logo?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "Who designed the company logo?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "All sites adopted the protocol.",
+              "quotes": [
+                "All sites except the northern site adopted the protocol."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-on",
+    "category": "incertidumbre",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfQu\\u00e9 sugieren los resultados sobre los s\\u00edntomas?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Qué sugieren los resultados sobre los síntomas?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "El tratamiento podría reducir los síntomas.",
+              "quotes": [
+                "Los resultados preliminares sugieren que el tratamiento podría reducir los síntomas."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-off",
+    "category": "incertidumbre",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "es",
+      "prompt": {
+        "user": "{\"question\": \"\\u00bfCu\\u00e1l fue el coste del edificio?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "¿Cuál fue el coste del edificio?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "El tratamiento podría reducir los síntomas.",
+              "quotes": [
+                "Los resultados preliminares sugieren que el tratamiento podría reducir los síntomas."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "6-on",
+    "category": "dos_fragmentos",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"How many units does Orbe have across its warehouses?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "How many units does Orbe have across its warehouses?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Orbe has 30 units across its two warehouses.",
+              "quotes": [
+                "Orbe has exactly two warehouses. The eastern warehouse contains 12 units.",
+                "Orbe’s western warehouse contains 18 units."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "6-off",
+    "category": "dos_fragmentos",
+    "candidate": {
+      "schema": "agora/claim-evidence-query/v2",
+      "execution_status": "complete",
+      "response_language": "en",
+      "prompt": {
+        "user": "{\"question\": \"Who owns the neighboring company?\"}"
+      },
+      "requested_aspects": [
+        {
+          "id": "a",
+          "question": "Who owns the neighboring company?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "missing": [],
+          "claims": [
+            {
+              "text": "Orbe has 30 units across its two warehouses.",
+              "quotes": [
+                "Orbe has exactly two warehouses. The eastern warehouse contains 12 units.",
+                "Orbe’s western warehouse contains 18 units."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

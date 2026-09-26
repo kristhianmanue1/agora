@@ -1,0 +1,50 @@
+{
+  "1-on": {
+    "support": "contradicted",
+    "relevance": "relevant"
+  },
+  "1-off": {
+    "support": "contradicted",
+    "relevance": "extra"
+  },
+  "2-on": {
+    "support": "insufficient",
+    "relevance": "relevant"
+  },
+  "2-off": {
+    "support": "insufficient",
+    "relevance": "extra"
+  },
+  "3-on": {
+    "support": "insufficient",
+    "relevance": "relevant"
+  },
+  "3-off": {
+    "support": "insufficient",
+    "relevance": "extra"
+  },
+  "4-on": {
+    "support": "contradicted",
+    "relevance": "relevant"
+  },
+  "4-off": {
+    "support": "contradicted",
+    "relevance": "extra"
+  },
+  "5-on": {
+    "support": "supported",
+    "relevance": "relevant"
+  },
+  "5-off": {
+    "support": "supported",
+    "relevance": "extra"
+  },
+  "6-on": {
+    "support": "supported",
+    "relevance": "relevant"
+  },
+  "6-off": {
+    "support": "supported",
+    "relevance": "extra"
+  }
+}
