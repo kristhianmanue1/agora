@@ -41,6 +41,7 @@ tokens de salida y tiempo son distintos; no equivalen a un presupuesto monetario
 | Consultar una fuente por aspectos y citar | [Contrato de evidencia](docs/contrato-afirmaciones-evidencia.md) |
 | Fuente completa o recorrido previo | [Selección de ruta](docs/seleccion-ruta-y-partes.md) |
 | Fuente que no cabe en una llamada | [Recorrido acotado](docs/recorrido-acotado.md) |
+| Separar respaldo y pertinencia (optativo) | [Revisión separada](docs/revision-separada.md) |
 | Revisar el candidato sin aprobarlo automáticamente | [Revisión por afirmación](docs/revision-acotada-por-afirmacion.md) |
 | Conocer los límites observados | [Consolidación](docs/consolidacion-2026-09-26.md) |
 
