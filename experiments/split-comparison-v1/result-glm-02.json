@@ -1,0 +1,152 @@
+{
+  "combined": {
+    "planned": 6,
+    "complete": 6,
+    "support_correct": 5,
+    "relevance_correct": 6,
+    "joint_correct": 5,
+    "correct_pairs": 2,
+    "planned_pairs": 3,
+    "attempted_calls": 6,
+    "known_tokens": 6640,
+    "unknown_usage_calls": 0,
+    "complete_case_seconds": 73.19,
+    "cases": [
+      {
+        "case": "1-on",
+        "status": "complete",
+        "seconds": 7.496,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "1-off",
+        "status": "complete",
+        "seconds": 13.996,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-on",
+        "status": "complete",
+        "seconds": 12.088,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": false,
+        "relevance_correct": true,
+        "joint_correct": false
+      },
+      {
+        "case": "2-off",
+        "status": "complete",
+        "seconds": 19.502,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-on",
+        "status": "complete",
+        "seconds": 8.553,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-off",
+        "status": "complete",
+        "seconds": 11.555,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      }
+    ]
+  },
+  "split": {
+    "planned": 6,
+    "complete": 6,
+    "support_correct": 6,
+    "relevance_correct": 6,
+    "joint_correct": 6,
+    "correct_pairs": 3,
+    "planned_pairs": 3,
+    "attempted_calls": 12,
+    "known_tokens": 5411,
+    "unknown_usage_calls": 0,
+    "complete_case_seconds": 64.594,
+    "cases": [
+      {
+        "case": "1-on",
+        "status": "complete",
+        "seconds": 9.98,
+        "support": "supported",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "1-off",
+        "status": "complete",
+        "seconds": 11.665,
+        "support": "supported",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-on",
+        "status": "complete",
+        "seconds": 11.262,
+        "support": "insufficient",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "2-off",
+        "status": "complete",
+        "seconds": 13.88,
+        "support": "insufficient",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-on",
+        "status": "complete",
+        "seconds": 7.425,
+        "support": "contradicted",
+        "relevance": "relevant",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      },
+      {
+        "case": "3-off",
+        "status": "complete",
+        "seconds": 10.382,
+        "support": "contradicted",
+        "relevance": "extra",
+        "support_correct": true,
+        "relevance_correct": true,
+        "joint_correct": true
+      }
+    ]
+  }
+}

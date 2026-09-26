@@ -52,3 +52,7 @@ Siguiente medición: mismos pares de afirmación/citas con preguntas distintas,
 comparación contemporánea combinado/separado, etiquetas esperadas fuera del
 payload, exactitud por eje y conjunta, errores de transporte, tokens y latencia.
 No reetiquetar los ensayos históricos ni contar simulaciones como aciertos del LLM.
+
+Comparación posterior con GLM: [ejecución 02](comparacion-revision-separada-02.md).
+La verificación local anterior conserva su alcance; el nuevo informe aporta
+resultados reales acotados, sin promover el modo a predeterminado.

@@ -1,5 +1,8 @@
 # Comparación combinada/separada — intento 01
 
+Actualización: la [ejecución 02](comparacion-revision-separada-02.md) se completó
+usando la credencial de Llavero. Este documento conserva el intento fallido.
+
 **PARCIAL, 2026-09-26:** la primera solicitud a GLM devolvió HTTP 401 en
 0.418 segundos. Se detuvo el ensayo sin reintentos ni cambios de presupuesto.
 La presencia de ZAI_API_KEY en el entorno no acredita una credencial aceptada.
