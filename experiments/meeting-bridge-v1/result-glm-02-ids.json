@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "citation_mode": "ids",
+    "source_revision": 2,
+    "old_term_excluded": true,
+    "candidate_status": "complete",
+    "answer_status": "candidate_partial",
+    "review_status": "complete",
+    "review_recommendation": "needs_adjudication",
+    "verified_quote_count": 2,
+    "calls": 3,
+    "known_tokens": 3506,
+    "unknown_usage_calls": 0,
+    "admission": "not_performed",
+    "frozen_files_verified": true
+  },
+  "calls": [
+    {
+      "ordinal": 1,
+      "status": "complete",
+      "tokens": 1535,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 11.86
+    },
+    {
+      "ordinal": 2,
+      "status": "complete",
+      "tokens": 955,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 11.886
+    },
+    {
+      "ordinal": 3,
+      "status": "complete",
+      "tokens": 1016,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 11.935
+    }
+  ],
+  "versions": {
+    "agora": "4364bdec0e6f94df361251752696e78d35ba1a2d",
+    "skopos": "5773dbd8b6440f8ddb44d334f56f7fb98fa91ad0"
+  },
+  "parts": [
+    {
+      "id": "delivery",
+      "status": "answered",
+      "claims": [
+        {
+          "text": "La entrega vigente está acordada para el martes 29 de septiembre de 2026 y consiste en un lote de 40 equipos.",
+          "quotes": [
+            "Entrega acordada: martes 29 de septiembre de 2026; lote de 40 equipos."
+          ],
+          "evidence_ids": [
+            "ev_36f0c4448ba05c852b2f3d31"
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "id": "owner",
+      "status": "answered",
+      "claims": [
+        {
+          "text": "La responsable de la entrega es Nerea, y la entrega está condicionada a completar la prueba de aceptación.",
+          "quotes": [
+            "Responsable de la entrega: Nerea. La entrega depende de completar la prueba de aceptación."
+          ],
+          "evidence_ids": [
+            "ev_53880ffc32ab135f53f28b8f"
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "id": "budget",
+      "status": "not_in_passages",
+      "claims": [],
+      "missing": [
+        "No se especifica ningún presupuesto monetario asociado a la entrega en los pasajes proporcionados."
+      ]
+    }
+  ],
+  "assessment": [
+    {
+      "part_id": "delivery",
+      "claim_index": 0,
+      "support": "supported",
+      "relevance": "relevant",
+      "quote_indices": [
+        0
+      ],
+      "support_reason": "The quote literally states 'Entrega acordada: martes 29 de septiembre de 2026; lote de 40 equipos,' which matches the claim's assertion of an agreed delivery on Tuesday, September 29, 2026, consisting of a lot of 40 equipos. Subject, date, day of week, and quantity all align.",
+      "relevance_reason": "La afirmación proporciona directamente la fecha (martes 29 de septiembre de 2026) y la cantidad (lote de 40 equipos) de la entrega vigente, cumpliendo el aspecto asignado sobre fecha y cantidad dentro del plan de entrega preguntado."
+    },
+    {
+      "part_id": "owner",
+      "claim_index": 0,
+      "support": "supported",
+      "relevance": "relevant",
+      "quote_indices": [
+        0
+      ],
+      "support_reason": "The quote literally states 'Responsable de la entrega: Nerea. La entrega depende de completar la prueba de aceptación,' directly supporting both parts of the claim: Nerea is the delivery responsible, and the delivery is conditioned on completing the acceptance test ('depende de' matches 'está condicionada a').",
+      "relevance_reason": "La afirmación identifica a la responsable (Nerea) y la condición de la entrega (sujeta a la prueba de aceptación), respondiendo al aspecto asignado sobre responsable y condición del plan de entrega. Ninguna de las afirmaciones cubre el presupuesto, pero este no está asignado a ningún claim evaluado."
+    }
+  ],
+  "navigation": [
+    {
+      "part_id": "delivery",
+      "claim_index": 0,
+      "quote": "Entrega acordada: martes 29 de septiembre de 2026; lote de 40 equipos.",
+      "locators": [
+        {
+          "id": "delivery",
+          "start_ms": 0,
+          "end_ms": 10000,
+          "speaker": "Nerea"
+        }
+      ]
+    },
+    {
+      "part_id": "owner",
+      "claim_index": 0,
+      "quote": "Responsable de la entrega: Nerea. La entrega depende de completar la prueba de aceptación.",
+      "locators": [
+        {
+          "id": "owner",
+          "start_ms": 10000,
+          "end_ms": 20000,
+          "speaker": "Nerea"
+        }
+      ]
+    }
+  ],
+  "assessment_provenance": "GLM same provider; not independent adjudication",
+  "content_check": "Assistant compared the five requested known facts and missing budget against the synthetic source; no independent reviewer."
+}

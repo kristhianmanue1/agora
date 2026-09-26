@@ -10,6 +10,8 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def main():
     skopos=Path(sys.argv[1]).resolve();out=Path(sys.argv[2]).resolve()
+    citation_mode=sys.argv[3] if len(sys.argv)>3 else 'literal'
+    if citation_mode not in ('literal','ids'):raise ValueError('invalid_citation_mode')
     out.mkdir(parents=True,exist_ok=False)
     shutil.copytree(ROOT/'src/agora',out/'code/agora',ignore=shutil.ignore_patterns('__pycache__'))
     shutil.copytree(skopos/'experiments/meeting-source-v1',out/'skopos',ignore=shutil.ignore_patterns('__pycache__'))
@@ -42,7 +44,7 @@ def main():
         aspects=[{'id':'delivery','question':'Indica fecha y cantidad de la entrega vigente.'},
                  {'id':'owner','question':'Identifica responsable y condición de la entrega.'},
                  {'id':'budget','question':'¿Qué presupuesto monetario está especificado?'}]
-        save(out/'request.json',{'question':question,'aspects':aspects})
+        save(out/'request.json',{'question':question,'aspects':aspects,'citation_mode':citation_mode})
         frozen={str(p.relative_to(out)):sha(p) for p in out.rglob('*') if p.is_file() and p.suffix!='.sqlite'}
         save(out/'freeze.json',frozen);calls=[];stopped=False
         def provider(system,user):
@@ -65,7 +67,7 @@ def main():
                 stopped=True;record.update(status='failed',error=type(exc).__name__);raise
             finally:
                 record['seconds']=round(time.monotonic()-started,3);save(out/'calls.json',calls);print(json.dumps(record),flush=True)
-        candidate=query_evidence(FileSourceAdapter(out/'source.txt',packet['source_id']),packet['content_sha256'],question,aspects,provider)
+        candidate=query_evidence(FileSourceAdapter(out/'source.txt',packet['source_id']),packet['content_sha256'],question,aspects,provider,citation_mode=citation_mode)
         save(out/'candidate.json',candidate)
         navigation=[]
         if candidate['execution_status']=='complete':
@@ -82,7 +84,7 @@ def main():
             save(out/'navigation.json',navigation)
             review=review_split(candidate,provider,provider);save(out/'review.json',review)
         else:review={}
-        summary={'source_revision':packet['revision'],'old_term_excluded':not store.search('lunes'),
+        summary={'citation_mode':citation_mode,'source_revision':packet['revision'],'old_term_excluded':not store.search('lunes'),
                  'candidate_status':candidate['execution_status'],'answer_status':candidate.get('answer_status'),
                  'review_status':review.get('execution_status','not_attempted'),
                  'review_recommendation':review.get('recommendation'),'verified_quote_count':len(navigation),

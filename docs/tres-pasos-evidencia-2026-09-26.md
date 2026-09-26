@@ -1,5 +1,8 @@
 # Tres pasos: batería, publicación de Skopos y recorrido conjunto
 
+Actualización: el [piloto por IDs](piloto-conjunto-ids-02.md) completó después el
+recorrido acotado. Este informe conserva el rechazo del intento literal original.
+
 ## 1. Batería ampliada de Ágora
 
 Doce casos nuevos, seis pares, tres en español y tres en inglés. Fecha, sujeto,

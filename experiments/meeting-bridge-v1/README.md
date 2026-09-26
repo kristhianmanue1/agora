@@ -21,3 +21,17 @@ Código y entradas se congelan antes de la primera llamada. Hashes de código
 identifican el artefacto probado, además de HEAD. La revisión es del mismo proveedor,
 no independiente; no se concede aprobación automática. Prueba pequeña, sin escala,
 concurrencia ni fuentes privadas. No acredita el conector de reuniones de producción.
+
+## Variante por identificadores — protocolo previo a ejecución 02
+
+Invocar run.py con raíz de Skopos, directorio nuevo y cuarto argumento `ids`.
+Sin ese argumento se conserva literal. Se reutiliza el contrato existente de
+Ágora: el modelo selecciona IDs de unidades y el código resuelve sus citas desde
+la fuente. No se completa ni corrige JSON del modelo. Un ID inexistente o una
+salida inválida siguen rechazándose.
+
+Misma reunión, preguntas, modelo y límites (tres solicitudes como máximo,
+8192 tokens por solicitud, HTTP 90 s, proceso 100 s, cero reintentos). Cambia sólo
+el modo de referencia y su prompt derivado. Conservar ejecución 01 íntegra.
+Esta variante reduce copia literal, pero no garantiza JSON válido. Una ejecución
+correcta demostraría este recorrido, no superioridad general del formato.

@@ -43,7 +43,7 @@ tokens de salida y tiempo son distintos; no equivalen a un presupuesto monetario
 | Fuente que no cabe en una llamada | [Recorrido acotado](docs/recorrido-acotado.md) |
 | Separar respaldo y pertinencia (optativo) | [Revisión separada](docs/revision-separada.md) |
 | Revisar el candidato sin aprobarlo automáticamente | [Revisión por afirmación](docs/revision-acotada-por-afirmacion.md) |
-| Batería ampliada y piloto Skopos → Ágora | [Resultados y fallo pendiente](docs/tres-pasos-evidencia-2026-09-26.md) |
+| Batería ampliada y piloto Skopos → Ágora | [Resultados del recorrido](docs/piloto-conjunto-ids-02.md) |
 | Conocer los límites observados | [Consolidación](docs/consolidacion-2026-09-26.md) |
 
 ## Evidencia y reproducción
