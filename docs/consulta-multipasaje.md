@@ -1,5 +1,9 @@
 # Consulta de múltiples pasajes — incremento local
 
+Actualización: la comparación posterior `glm-02` sí se completó; resultados y
+límites en [comparacion-multipasaje-glm-02.md](comparacion-multipasaje-glm-02.md).
+El estado de interrupción descrito abajo corresponde a la primera corrida.
+
 Estado 2026-09-22: consumidor y comparación de recuperación implementados;
 comparación de respuestas GLM **parcial**, detenida por dos errores HTTP.
 No hay integración Skopos/AN-KLA ni admisión automática. El estado local inicial

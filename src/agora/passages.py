@@ -67,7 +67,7 @@ def lexical_ranges(envelope, question, budget, top_k=3):
 
 
 def prepare(adapter, revision, question, mode, *, ranges=None,
-            content_budget=2048, prompt_budget=65536, top_k=3):
+            content_budget=2048, prompt_budget=65536, top_k=3, fallback_source_budget=None):
     if type(question) is not str or not question.strip() or len(question) > 2000:
         raise SourceError('invalid_question')
     question.encode('utf-8')
@@ -77,6 +77,10 @@ def prepare(adapter, revision, question, mode, *, ranges=None,
         raise SourceError('invalid_mode')
     if (mode == 'reference') != (ranges is not None):
         raise SourceError('reference_requires_ranges_only')
+    if fallback_source_budget is not None:
+        integer(fallback_source_budget, 1, SEARCH_LIMIT, 'invalid_fallback_budget')
+        if mode != 'retrieve':
+            raise SourceError('fallback_requires_retrieve')
     inventory = adapter.inventory(revision)
     size = inventory['source']['source_bytes']
     retrieval = {'method': 'explicit_ranges' if mode == 'reference' else 'full_source'}
@@ -87,8 +91,21 @@ def prepare(adapter, revision, question, mode, *, ranges=None,
             raise SourceError('search_source_limit_exceeded')
         full = adapter.fetch(revision, [(0, size)], content_budget=SEARCH_LIMIT)
         ranges, retrieval = lexical_ranges(full, question, content_budget, top_k)
+        if fallback_source_budget is not None:
+            retrieval['fallback'] = {'policy': 'full-source-on-zero-lexical-matches/v0.1',
+                                     'source_budget': fallback_source_budget, 'status': 'not_needed'}
         if not ranges:
-            return None, retrieval, None
+            if fallback_source_budget is None or retrieval['matching_paragraphs']:
+                if fallback_source_budget is not None:
+                    retrieval['fallback']['status'] = 'not_applicable_matching_candidates'
+                return None, retrieval, None
+            if size > fallback_source_budget:
+                retrieval['fallback']['status'] = 'source_budget_exceeded'
+                return None, retrieval, None
+            ranges = [(0, size)]
+            content_budget = fallback_source_budget
+            retrieval['fallback']['status'] = 'used'
+            retrieval['fallback']['reason'] = 'zero_lexical_matches'
     envelope = adapter.fetch(revision, ranges, content_budget=content_budget)
     user = json.dumps({'question': question, 'parts': [{'id': 'P1', 'question': question}],
                        'document': [{'passage': i + 1, 'text': span['text']}
@@ -104,11 +121,16 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', **opt
               'source_id': adapter.source_id, 'source_sha256': revision,
               'options': options, 'provider_calls': 0, 'review_status': 'unreviewed',
               'semantic_support': 'not_verified', 'memory_admission': 'not_performed'}
+    if options.get('fallback_source_budget') is not None:
+        result['schema'] = 'agora/passage-query/v0.2'
     try:
         envelope, retrieval, user = prepare(adapter, revision, question, mode, **options)
         result['retrieval'] = retrieval
         if envelope is None:
-            result.update(execution_status='complete', answer_status='retrieval_budget_exhausted' if retrieval['matching_paragraphs'] else 'no_retrieval_candidates',
+            status = 'retrieval_budget_exhausted' if retrieval['matching_paragraphs'] else 'no_retrieval_candidates'
+            if retrieval.get('fallback', {}).get('status') == 'source_budget_exceeded':
+                status = 'fallback_budget_exhausted'
+            result.update(execution_status='complete', answer_status=status,
                           evidence_sufficiency='unknown', answer='', citations=[])
             return result
         result['envelope'] = envelope

@@ -1,0 +1,250 @@
+{
+  "schema": "agora/attrscore-disagreement-review/v1",
+  "status": "advisory_review_complete",
+  "date": "2026-09-24",
+  "selection": "six disagreements selected after original pilot; not a held-out sample",
+  "reviewer": {
+    "instance": "/root/attrscore_separate_review",
+    "context_fork": "none",
+    "effective_model": "unknown: no independent runtime telemetry",
+    "separation": "initial judgment phase only: separate instance, no gold or previous reviewer outputs read, according to reviewer report",
+    "limitations": [
+      "aware cases were selected disagreements",
+      "read producer prompt embedded in fixtures",
+      "shared host and inherited instructions; not institutional, human or model-family independence",
+      "rubric supplied by producer after original pilot"
+    ],
+    "post_judgment_check": "After fixing judgments, reviewer read this consolidation with original labels visible to check attribution and limits; reported two provenance corrections, applied by producer."
+  },
+  "rubric": {
+    "id": "strict-fragment-multiaxis/01",
+    "scope": "analytical rubric only; no production contract change",
+    "support": "all material assertions, including explicit attribution, require textual support; paraphrase and necessary logical inference allowed; no external facts",
+    "contradicted": "explicit or logically necessary incompatibility; absence alone is insufficient",
+    "relevance": "match question subject, time and property; mixed claims retain detail notes",
+    "provenance": "textual attribution is distinct from authenticated external authorship",
+    "action": "unsupported material details or wrong question require revision; support never equals approval"
+  },
+  "original_evidence": {
+    "audit_sha256": "eb650e84b8814ae4a59f5f16e3eb8c6e175ce8c261af5eecdbe952e2ecfbd4e8",
+    "freeze_sha256": "fbcb2662a747a8004772ee1cc3d014fb3bc02d433b890a627387d7a31427711b",
+    "gold_sha256": "a2e230035861b7be8bd748adb31b9e2e2c9618f3b4e736407bdfa9f53abe7a7a"
+  },
+  "cases": [
+    {
+      "case": "case-01",
+      "candidate_file_sha256": "e7cac1ee82e726c0f751c36b740b1f53544a84770bbcc68dfa3e7944e6efa3e5",
+      "reference_file_sha256": "884e9d6c09af079d89792250b7602213a1b120c66337c1ab0f8965cbb79f8833",
+      "external_gold_original": {
+        "label": "Attributable",
+        "support": "supported"
+      },
+      "separate_review": {
+        "support": "insufficient",
+        "relevance": "relevant",
+        "reason_es": "La cita no establece latest ni una fecha de referencia; segundo especial no implica mas reciente.",
+        "provenance": "not_claimed",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "5ca6d482040c08734007636bd2c0860d2eca95d41821c4f09f18555a4465adc6",
+          "support": "failed",
+          "relevance": null,
+          "recommendation": null,
+          "execution_status": "rejected"
+        },
+        "v2": {
+          "sha256": "818278987121fab9e33b7d533f7646ebed1ce5c45a0e66c64c0b407f0937e560",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    },
+    {
+      "case": "case-03",
+      "candidate_file_sha256": "2e115a7be0ed79f25151871c12eb69bd10e7dc2354d213e5ace9c6f63405e8cd",
+      "reference_file_sha256": "c6b043174e95c3bab5440333049984fb361256290ab61071b5de85782bb415f0",
+      "external_gold_original": {
+        "label": "Attributable",
+        "support": "supported"
+      },
+      "separate_review": {
+        "support": "insufficient",
+        "relevance": "relevant",
+        "reason_es": "Faltan fecha exacta y growing; no cases tampoco demuestra ausencia historica de reportes.",
+        "provenance": "textual_cdc_attribution_only",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "ed9ba79f67118c0b5692126b5336c2820a653cf7ebb497902e285f98492fbf81",
+          "support": "supported",
+          "relevance": "relevant",
+          "recommendation": "needs_adjudication",
+          "execution_status": "complete"
+        },
+        "v2": {
+          "sha256": "da81e4736f61d5d8520027aacb031d18e44f018987306ca1e18f2098f89aede1",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    },
+    {
+      "case": "case-04",
+      "candidate_file_sha256": "f1fef146f9498eb38272361c29216c02bce1be222897fbfbe9831d09000443ca",
+      "reference_file_sha256": "7112c6707eb42e418c0be2744a907320adfc6aaee66a11d2fd85dec28d0c893c",
+      "external_gold_original": {
+        "label": "Attributable",
+        "support": "supported"
+      },
+      "separate_review": {
+        "support": "insufficient",
+        "relevance": "relevant",
+        "reason_es": "Faltan perfiles de metilacion e Illumina 450 K; estimar probabilidades no garantiza diagnostico.",
+        "provenance": "not_claimed",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "e87e77104873793758466117ca791ce4261277e99c22af8f8389648a7f623548",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        },
+        "v2": {
+          "sha256": "1f43c87aab281cb023fc7e043bdb2e850607136ffc605a7ea08292135394b361",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    },
+    {
+      "case": "case-09",
+      "candidate_file_sha256": "10e3bf1bd1703f470689fc83721cc625d6de0dbbc2b2642767ec5049f799614a",
+      "reference_file_sha256": "52f3e69dbef0b2a2af155e24dd14fd37f0e1613dede0dcab8b231f2a29843fdf",
+      "external_gold_original": {
+        "label": "Extrapolatory",
+        "support": "insufficient"
+      },
+      "separate_review": {
+        "support": "supported",
+        "relevance": "extra",
+        "reason_es": "La tasa de CVPR 2022 esta respaldada, pero la pregunta pide 2020.",
+        "provenance": "not_claimed",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "6ffb53a2fc0ffa3876428990d22cae33b2cd6f94f68fd336d842a852fae61985",
+          "support": "supported",
+          "relevance": "extra",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        },
+        "v2": {
+          "sha256": "ae32b1335cfce4a3d507b84ca8f2699e7bd9ef6eea36f8710b6491d6a34c48ad",
+          "support": "supported",
+          "relevance": "extra",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    },
+    {
+      "case": "case-11",
+      "candidate_file_sha256": "419937cf716040784906168be8f2b7f4542f394b5dd5a5c6dbbe859051fb6759",
+      "reference_file_sha256": "78fc3b99a021dcbeb47ec7250191a78aa910a7ebb0f9ea0a550d8c5e85a4eed8",
+      "external_gold_original": {
+        "label": "Contradictory",
+        "support": "contradicted"
+      },
+      "separate_review": {
+        "support": "insufficient",
+        "relevance": "relevant",
+        "reason_es": "Aceptacion ACL 2022 no prueba ni excluye toda publicacion en 2021; faltan afiliacion ETH y ancla de recent.",
+        "provenance": "textual_coauthorship_only_eth_not_established",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "5bdf413384225f7439880352f2876f59948af8919ebbd94c309915f41d99b155",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        },
+        "v2": {
+          "sha256": "540c4d8802dbfb09a5345d96a598cd36f7bbe0a00a8ae0c130806effea335079",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    },
+    {
+      "case": "case-12",
+      "candidate_file_sha256": "2364baa2a4479c6b1736cdaf2829f374bbf136a9ad273038fe21b03c83bc75c9",
+      "reference_file_sha256": "7d0e8c019daa861f5ea0cf80d497eea67378228ac545d1a2637fad1a5ab034a4",
+      "external_gold_original": {
+        "label": "Attributable",
+        "support": "supported"
+      },
+      "separate_review": {
+        "support": "insufficient",
+        "relevance": "relevant",
+        "reason_es": "La tasa AAAI 2022 esta respaldada; la atribucion a la pagina de Lei Feng no esta establecida.",
+        "provenance": "claimed_source_not_established",
+        "action_proposal": "needs_revision",
+        "authority": "advisory_not_operator_ratification",
+        "action_proposal_origin": "producer_consolidation"
+      },
+      "original_results": {
+        "v1": {
+          "sha256": "69c7bcd70b02ff99261ce2d3fb4f9ad016e54af42b0093a85f52e8de9bcb460d",
+          "support": "supported",
+          "relevance": "relevant",
+          "recommendation": "needs_adjudication",
+          "execution_status": "complete"
+        },
+        "v2": {
+          "sha256": "0e5deda7911a1a4110bbd372fc3e53afc83043bcbc66a10dba87bc1e1b8f10d4",
+          "support": "insufficient",
+          "relevance": "relevant",
+          "recommendation": "needs_revision",
+          "execution_status": "complete"
+        }
+      }
+    }
+  ],
+  "posthoc_recommendation_counts": {
+    "v1": {
+      "needs_adjudication": 2,
+      "needs_revision": 9,
+      "structural_failure": 1
+    },
+    "v2": {
+      "needs_revision": 12
+    }
+  },
+  "score_policy": "Original scores unchanged. No accuracy computed against these selected posthoc judgments."
+}

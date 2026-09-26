@@ -1,0 +1,126 @@
+[
+  {
+    "id": "E1",
+    "source": "E1.txt",
+    "source_id": "sufficiency-E1",
+    "ranges": [
+      [
+        0,
+        36
+      ]
+    ],
+    "question": "¿Quién coordina?",
+    "expected_decisions": [
+      "sufficient"
+    ],
+    "criterion": "La identidad está explícita."
+  },
+  {
+    "id": "E2",
+    "source": "E2.txt",
+    "source_id": "sufficiency-E2",
+    "ranges": [
+      [
+        0,
+        45
+      ]
+    ],
+    "question": "¿Quién dirige el proyecto Cauce?",
+    "expected_decisions": [
+      "insufficient",
+      "uncertain"
+    ],
+    "criterion": "Sólo se suministra una coincidencia temática; Mateo queda fuera."
+  },
+  {
+    "id": "E3",
+    "source": "E3.txt",
+    "source_id": "sufficiency-E3",
+    "ranges": [
+      [
+        0,
+        33
+      ]
+    ],
+    "question": "¿Quién coordina Junco y qué importe está aprobado?",
+    "expected_decisions": [
+      "insufficient",
+      "uncertain"
+    ],
+    "criterion": "Falta importe en selección aunque identidad está presente."
+  },
+  {
+    "id": "E4",
+    "source": "E4.txt",
+    "source_id": "sufficiency-E4",
+    "ranges": [
+      [
+        0,
+        45
+      ],
+      [
+        47,
+        100
+      ]
+    ],
+    "question": "¿Cuál es el plazo vigente?",
+    "expected_decisions": [
+      "insufficient",
+      "uncertain"
+    ],
+    "criterion": "No deducir vigencia de la falta de anulación."
+  },
+  {
+    "id": "E5",
+    "source": "E5.txt",
+    "source_id": "sufficiency-E5",
+    "ranges": [
+      [
+        0,
+        45
+      ],
+      [
+        47,
+        100
+      ]
+    ],
+    "question": "¿Qué plazos aparecen en las dos actas?",
+    "expected_decisions": [
+      "sufficient"
+    ],
+    "criterion": "Basta conservar ambas cifras sin resolver vigencia; citar ambas."
+  },
+  {
+    "id": "E6",
+    "source": "E6.txt",
+    "source_id": "sufficiency-E6",
+    "ranges": [
+      [
+        0,
+        69
+      ]
+    ],
+    "question": "¿Quién ha sido designado para coordinar Ópalo?",
+    "expected_decisions": [
+      "sufficient"
+    ],
+    "criterion": "La ausencia está expresamente documentada y permite respuesta acotada."
+  },
+  {
+    "id": "E7",
+    "source": "E7.txt",
+    "source_id": "sufficiency-E7",
+    "ranges": [
+      [
+        0,
+        71
+      ]
+    ],
+    "question": "¿Quién aprobó el presupuesto?",
+    "expected_decisions": [
+      "insufficient",
+      "uncertain"
+    ],
+    "criterion": "Pronombre sin referente inequívoco; no inventar actor."
+  }
+]

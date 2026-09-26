@@ -1,0 +1,298 @@
+[
+  {
+    "id": "L1-retrieve-judge",
+    "question": "¿Quién es responsable del proyecto Lumbre y qué importe está aprobado?",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        0,
+        41
+      ],
+      [
+        54431,
+        54485
+      ]
+    ],
+    "required_facts": [
+      "Nerea",
+      "118 créditos"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L1-retrieve-answer",
+    "question": "¿Quién es responsable del proyecto Lumbre y qué importe está aprobado?",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        0,
+        41
+      ],
+      [
+        54431,
+        54485
+      ]
+    ],
+    "required_facts": [
+      "Nerea",
+      "118 créditos"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  },
+  {
+    "id": "L1-reference-judge",
+    "question": "¿Quién es responsable del proyecto Lumbre y qué importe está aprobado?",
+    "mode": "reference",
+    "ranges": [
+      [
+        0,
+        41
+      ],
+      [
+        54431,
+        54485
+      ]
+    ],
+    "required_facts": [
+      "Nerea",
+      "118 créditos"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L1-reference-answer",
+    "question": "¿Quién es responsable del proyecto Lumbre y qué importe está aprobado?",
+    "mode": "reference",
+    "ranges": [
+      [
+        0,
+        41
+      ],
+      [
+        54431,
+        54485
+      ]
+    ],
+    "required_facts": [
+      "Nerea",
+      "118 créditos"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  },
+  {
+    "id": "L2-retrieve-judge",
+    "question": "¿Quién ocupa la dirección del proyecto Risco?",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        90565,
+        90603
+      ]
+    ],
+    "required_facts": [
+      "Eloy"
+    ],
+    "expected_sufficiency": "insufficient_or_uncertain",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L2-retrieve-answer",
+    "question": "¿Quién ocupa la dirección del proyecto Risco?",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        90565,
+        90603
+      ]
+    ],
+    "required_facts": [
+      "Eloy"
+    ],
+    "expected_sufficiency": "insufficient_or_uncertain",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  },
+  {
+    "id": "L2-reference-judge",
+    "question": "¿Quién ocupa la dirección del proyecto Risco?",
+    "mode": "reference",
+    "ranges": [
+      [
+        90565,
+        90603
+      ]
+    ],
+    "required_facts": [
+      "Eloy"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L2-reference-answer",
+    "question": "¿Quién ocupa la dirección del proyecto Risco?",
+    "mode": "reference",
+    "ranges": [
+      [
+        90565,
+        90603
+      ]
+    ],
+    "required_facts": [
+      "Eloy"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  },
+  {
+    "id": "L3-retrieve-judge",
+    "question": "Resume todas las fases del programa Vela e identifica sus responsables.",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        36360,
+        36429
+      ],
+      [
+        72487,
+        72563
+      ],
+      [
+        108605,
+        108674
+      ],
+      [
+        126676,
+        126747
+      ]
+    ],
+    "required_facts": [
+      "Aina",
+      "Berto",
+      "Cora",
+      "Darío"
+    ],
+    "expected_sufficiency": "insufficient_or_uncertain",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L3-retrieve-answer",
+    "question": "Resume todas las fases del programa Vela e identifica sus responsables.",
+    "mode": "retrieve",
+    "ranges": [
+      [
+        36360,
+        36429
+      ],
+      [
+        72487,
+        72563
+      ],
+      [
+        108605,
+        108674
+      ],
+      [
+        126676,
+        126747
+      ]
+    ],
+    "required_facts": [
+      "Aina",
+      "Berto",
+      "Cora",
+      "Darío"
+    ],
+    "expected_sufficiency": "insufficient_or_uncertain",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  },
+  {
+    "id": "L3-reference-judge",
+    "question": "Resume todas las fases del programa Vela e identifica sus responsables.",
+    "mode": "reference",
+    "ranges": [
+      [
+        36360,
+        36429
+      ],
+      [
+        72487,
+        72563
+      ],
+      [
+        108605,
+        108674
+      ],
+      [
+        126676,
+        126747
+      ]
+    ],
+    "required_facts": [
+      "Aina",
+      "Berto",
+      "Cora",
+      "Darío"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "judge"
+  },
+  {
+    "id": "L3-reference-answer",
+    "question": "Resume todas las fases del programa Vela e identifica sus responsables.",
+    "mode": "reference",
+    "ranges": [
+      [
+        36360,
+        36429
+      ],
+      [
+        72487,
+        72563
+      ],
+      [
+        108605,
+        108674
+      ],
+      [
+        126676,
+        126747
+      ]
+    ],
+    "required_facts": [
+      "Aina",
+      "Berto",
+      "Cora",
+      "Darío"
+    ],
+    "expected_sufficiency": "sufficient",
+    "source": "source.txt",
+    "source_id": "large-synthetic-v1",
+    "operation": "answer"
+  }
+]

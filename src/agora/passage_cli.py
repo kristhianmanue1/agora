@@ -20,6 +20,7 @@ def main():
     parser.add_argument('--content-budget', type=int, default=2048)
     parser.add_argument('--prompt-budget', type=int, default=65536)
     parser.add_argument('--top-k', type=int, default=3)
+    parser.add_argument('--fallback-source-budget', type=int, help='Opt in: full source only on zero lexical matches, bounded bytes')
     parser.add_argument('--model', required=True)
     parser.add_argument('--max-output-tokens', type=token_limit, default=2048)
     parser.add_argument('--timeout-seconds', type=timeout_limit, default=90)
@@ -61,6 +62,8 @@ def main():
 
     options = {'content_budget': args.content_budget, 'prompt_budget': args.prompt_budget,
                'top_k': args.top_k}
+    if args.fallback_source_budget is not None:
+        options['fallback_source_budget'] = args.fallback_source_budget
     if args.range is not None:
         options['ranges'] = args.range
     try:

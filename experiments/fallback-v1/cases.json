@@ -1,0 +1,37 @@
+[
+  {
+    "id": "N1",
+    "question": "¿Qué desembolso exige iniciar?",
+    "source": "N1.txt",
+    "criterion": "73 créditos; no inventar pagos posteriores.",
+    "kind": "zero_match_recoverable"
+  },
+  {
+    "id": "N2",
+    "question": "¿Quién dirige la iniciativa?",
+    "source": "N2.txt",
+    "criterion": "Mara. La búsqueda puede encontrar sólo el distractor; fallback no se activa.",
+    "kind": "false_positive_match"
+  },
+  {
+    "id": "N3",
+    "question": "¿Cuánto dura la travesía?",
+    "source": "N3.txt",
+    "criterion": "Abstención: ninguna duración consta.",
+    "kind": "zero_match_absent"
+  },
+  {
+    "id": "N4",
+    "question": "¿Qué desembolso exige iniciar?",
+    "source": "N4.txt",
+    "criterion": "91 créditos existen, pero fuente excede presupuesto; sin llamada ni truncamiento.",
+    "kind": "zero_match_over_budget"
+  },
+  {
+    "id": "N5",
+    "question": "¿Qué plazo tiene el plan Bruma?",
+    "source": "N5.txt",
+    "criterion": "27 días; ruta léxica suficiente; fallback no necesario.",
+    "kind": "direct_match"
+  }
+]
