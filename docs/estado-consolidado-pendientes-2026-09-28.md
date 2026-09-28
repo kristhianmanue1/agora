@@ -70,3 +70,13 @@ Antes de una fuente real: incluir paquete/recibo en un respaldo recuperable por
 hash y exponer completitud al evaluador. Actualmente esos metadatos están en
 archivos laterales, no íntegramente en el historial o prompt de evaluación.
 Esta limitación impide presentar el puente como integración productiva completa.
+
+## Actualización: paquete autocontenido v2
+
+experiments/skopos-issue-bridge-v2 resuelve la dependencia de archivos laterales
+para recuperar procedencia: paquete íntegro dentro del texto de fuente versionado,
+backup SQLite y recuperación exacta en proceso nuevo. La limitación de v1 sigue
+siendo histórica, no describe v2. Metadatos de completitud llegan al evaluador
+simulado y el wrapper añade una política explícita. 351 tests pasan; cero llamadas
+nuevas al modelo. No se acredita todavía conducta semántica de GLM sobre ausencias
+en selecciones parciales ni aplicación automática por consumidores antiguos.
