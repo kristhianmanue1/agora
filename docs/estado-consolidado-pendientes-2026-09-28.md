@@ -80,3 +80,14 @@ siendo histórica, no describe v2. Metadatos de completitud llegan al evaluador
 simulado y el wrapper añade una política explícita. 351 tests pasan; cero llamadas
 nuevas al modelo. No se acredita todavía conducta semántica de GLM sobre ausencias
 en selecciones parciales ni aplicación automática por consumidores antiguos.
+
+## Actualización: lectura parcial con GLM real
+
+experiments/partial-selection-v1 completa dos evaluaciones reales: mantiene fecha
+pendiente al omitir su segmento, y la resuelve al ampliar la selección. Reconoce
+que ambos paquetes comparten origen. 13 612 tokens; 221,184 segundos; sin reintentos.
+Paquetes recuperados desde SQLite y prompt de sistema ligado a la operación.
+Autorrevisión de explicaciones y citas favorable sólo para este caso sintético;
+el antecedente ya declaraba la fecha pendiente. No acredita ausencia sin
+antecedentes, contradicciones ni robustez general. 351 pruebas pasan.
+Detalle y próximos casos: experiments/partial-selection-v1/RESULTS.md.

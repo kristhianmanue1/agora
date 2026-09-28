@@ -1,0 +1,214 @@
+{
+  "status": "complete",
+  "calls": 2,
+  "stages": [
+    {
+      "stage": 1,
+      "expected_values_match": true,
+      "result": {
+        "revision_sha256": "224a83fcd9aeba9a9f610bc92c091142505992701d886a8e3d7cc42a72c3631d",
+        "assessment": {
+          "fields": {
+            "date": {
+              "observed_value": null,
+              "support_status": "missing",
+              "missing_requirements": [
+                "date_confirmed"
+              ],
+              "relations": [
+                "initial",
+                "irrelevant"
+              ],
+              "change_source_ids": [],
+              "evidence": [
+                {
+                  "source_id": "q1",
+                  "quote": "la fecha de entrega de Nube está pendiente."
+                }
+              ]
+            },
+            "owner": {
+              "observed_value": "Lina",
+              "support_status": "supported",
+              "missing_requirements": [],
+              "relations": [
+                "initial",
+                "clarification"
+              ],
+              "change_source_ids": [],
+              "evidence": [
+                {
+                  "source_id": "q1",
+                  "quote": "Lina es responsable."
+                },
+                {
+                  "source_id": "skopos-packet:e9bbacd7bcd234c9d77d9f3150e683cac8ae2f659ea13886486e8a4de2ead138",
+                  "quote": "Responsabilidad: Lina sigue siendo responsable de Nube."
+                }
+              ]
+            }
+          },
+          "reason": "Fecha: sigue sin confirmarse; q1 declara explícitamente que está pendiente (dato declarado pendiente, no mera ausencia). El paquete Skopos del 2026-10-08 sólo aporta contenido seleccionado sobre responsabilidad; con selection_complete=not_established no puede inferirse que la fuente íntegra carezca de fecha, pero tampoco aporta dato, por lo que respecto a date es irrelevante. Responsable: q1 indica Lina y el paquete lo reconfirma ('sigue siendo responsable'), completando la vigencia del dato sin sustituir valor ni retirar nada, de modo que no hay update ni refutation y change_source_ids queda vacío. La evaluación previa es consistente con las fuentes; capture_complete_declared=false se trata como declaración, no como prueba.",
+          "status": "partial",
+          "reopened_fields": [],
+          "affected": []
+        },
+        "admission": "not_admitted"
+      },
+      "seconds": 110.725
+    },
+    {
+      "stage": 2,
+      "expected_values_match": true,
+      "result": {
+        "revision_sha256": "edbbb4f841451e8dc311b577711ea6e53cf6c157796c6965b790e06d894497c7",
+        "assessment": {
+          "fields": {
+            "date": {
+              "observed_value": "2026-10-21",
+              "support_status": "supported",
+              "missing_requirements": [],
+              "relations": [
+                "initial",
+                "irrelevant",
+                "clarification"
+              ],
+              "evidence": [
+                {
+                  "source_id": "q1",
+                  "quote": "la fecha de entrega de Nube está pendiente."
+                },
+                {
+                  "source_id": "skopos-packet:930872f966c5c56a79a6415c5c019c18a379e60a308653a9a2477c89813cbf78",
+                  "quote": "Calendario: Nube se entrega el 2026-10-21."
+                }
+              ],
+              "change_source_ids": []
+            },
+            "owner": {
+              "observed_value": "Lina",
+              "support_status": "supported",
+              "missing_requirements": [],
+              "relations": [
+                "initial",
+                "clarification",
+                "duplicate"
+              ],
+              "evidence": [
+                {
+                  "source_id": "q1",
+                  "quote": "Lina es responsable."
+                },
+                {
+                  "source_id": "skopos-packet:e9bbacd7bcd234c9d77d9f3150e683cac8ae2f659ea13886486e8a4de2ead138",
+                  "quote": "Responsabilidad: Lina sigue siendo responsable de Nube."
+                }
+              ],
+              "change_source_ids": []
+            }
+          },
+          "reason": "Fecha: el paquete 930872f9 (recibido 2026-10-08, vigente al corte) aporta en su texto seleccionado literal 'Calendario: Nube se entrega el 2026-10-21'. Como antes no existía valor válido (q1 declaraba la fecha explícitamente pendiente), esto es clarification, no update, y change_source_ids queda vacío porque sólo registra update o refutation. selection_complete=not_established y capture_complete_declared=false son declaraciones, no prueba: no se infiere nada sobre el resto de la fuente íntegra ni se afirma haberla revisado completa, pero la cita seleccionada basta como dato. Respecto a date, el paquete e9bbacd7 sigue siendo irrelevant porque su selección sólo cubre responsabilidad. Responsable: q1 (initial) y e9bbacd7 (clarification) sostienen 'Lina'; 930872f9 repite el mismo origen (mismo source_id y source_sha256 subyacente), por lo que su relación respecto a owner es duplicate y no corroboración independiente. No hay retiro ni sustitución de valores; la evaluación previa es consistente con las fuentes. Ambos campos quedan supported.",
+          "status": "resolved",
+          "reopened_fields": [],
+          "affected": []
+        },
+        "admission": "not_admitted"
+      },
+      "seconds": 110.459
+    }
+  ],
+  "known_tokens": 13612,
+  "last_call_seconds": 110.459,
+  "revisions": 3,
+  "packets_recovered": true,
+  "system_bound_in_operation": true,
+  "semantic_reason_review": "Producer reviewed both actual explanations and literal citations; passed within this fixture.",
+  "producer_review": {
+    "partial_absence_scoped": true,
+    "expanded_date_grounded": true,
+    "duplicate_origin_recognized": true,
+    "independent_review": false,
+    "limitation": "Single synthetic sequence with explicit pending-date antecedent; relation labels are not individually evidence-bound."
+  },
+  "reported_models": [
+    "glm-5.3-flash",
+    "glm-5.3-flash"
+  ],
+  "usage_by_stage": [
+    {
+      "completion_tokens": 5090,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4653
+      },
+      "prompt_tokens": 1226,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 6316
+    },
+    {
+      "completion_tokens": 5365,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4743
+      },
+      "prompt_tokens": 1931,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      },
+      "total_tokens": 7296
+    }
+  ],
+  "native_navigation": [
+    {
+      "stage": 1,
+      "quote": "Responsabilidad: Lina sigue siendo responsable de Nube.",
+      "locators": [
+        {
+          "id": "owner",
+          "start_ms": 1000,
+          "end_ms": 9000,
+          "speaker": "Coordinación sintética"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "quote": "Calendario: Nube se entrega el 2026-10-21.",
+      "locators": [
+        {
+          "id": "date",
+          "start_ms": 10000,
+          "end_ms": 19000,
+          "speaker": "Coordinación sintética"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "quote": "Responsabilidad: Lina sigue siendo responsable de Nube.",
+      "locators": [
+        {
+          "id": "owner",
+          "start_ms": 1000,
+          "end_ms": 9000,
+          "speaker": "Coordinación sintética"
+        }
+      ]
+    }
+  ],
+  "artifact_hashes": {
+    "expectations.json": "4b2bfc7673c8ef483912d8a8f16ade5d9deddd51042d6c38642114c81f326ba0",
+    "meeting.json": "88b2aa3864e22535c3bc17b2851080b4f03956491f8ba0fccfa038e1392c4d16",
+    "freeze.json": "a6203696e0c6e66f9b0f0b875daff6e156e843d5dcef4470ca3c5297c2b2ddae",
+    "1/request.json": "a7b8fa9f9f3de0da3b99feba3deeba99c5a94fb75d581af3941d2be6f4f18d86",
+    "1/prepared.json": "c08ce55894877157e85387d339d152eeb3da4df3aa11d534a8aadb64177f3f64",
+    "1/candidate.json": "ddcda5aa555204019b3aba9df5b0b21939b5381da55fbf5cdc12ce06cab41f54",
+    "1/packet.json": "ac6b1bef7500cbbc8d2d1705105cbc45177ffce8c94157a7ae4d65d43f6134c5",
+    "1/response.json": "0d7cae1788345600f755c42b013ca2ed14bc42be9aedbf35bdef28387611016b",
+    "2/request.json": "7023d66743447caecb89f429421716600e94ed099f451fd167595262eeb6e765",
+    "2/prepared.json": "a9e2aeb79bd98172d7aefb032831f0bfe707ce241474ae5103e898a4a51d7e5f",
+    "2/candidate.json": "88697b168b42dfa3c5b1ba9b9cf622edb596b78cbc0ca42d036466a5b7486aee",
+    "2/packet.json": "d588df4b39f63ecdf141afb53bf4e28b346e9899b198f213e68ec1ad3568cf45",
+    "2/response.json": "6dd58cd996c3341ea40c16cae7c6a74b705ff425e8843d4f5de1b240fab82cfb"
+  }
+}
