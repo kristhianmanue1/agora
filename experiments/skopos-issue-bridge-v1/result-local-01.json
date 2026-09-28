@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "source": {
+    "packet_sha256": "abdc7d1c5e67006f2ff2b77916bfe3be67ec58fc831379623a312ea63fca0a6d",
+    "source_id": "skopos-packet:abdc7d1c5e67006f2ff2b77916bfe3be67ec58fc831379623a312ea63fca0a6d",
+    "original_source_id": "meeting-nube-synthetic",
+    "revision": 1,
+    "source_sha256": "9f1b7dd2a8ee495c0ffbe8f42dea55247d73357af75f8ea717a7823763754f20",
+    "capture_complete_declared": false,
+    "selection_complete": "not_established",
+    "spans": [
+      {
+        "start_byte": 0,
+        "end_byte": 85,
+        "text": "Coordinación confirma: Nube se entrega el 2026-10-21. Lina sigue siendo responsable.",
+        "locator": {
+          "id": "decision",
+          "start_ms": 1000,
+          "end_ms": 9000,
+          "speaker": "Coordinación sintética"
+        }
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "quote": "Nube se entrega el 2026-10-21",
+      "locators": [
+        {
+          "id": "decision",
+          "start_ms": 1000,
+          "end_ms": 9000,
+          "speaker": "Coordinación sintética"
+        }
+      ]
+    },
+    {
+      "quote": "Lina sigue siendo responsable",
+      "locators": [
+        {
+          "id": "decision",
+          "start_ms": 1000,
+          "end_ms": 9000,
+          "speaker": "Coordinación sintética"
+        }
+      ]
+    }
+  ],
+  "operation_recovered": true,
+  "revisions": 2,
+  "simulated_provider_calls": 1,
+  "real_model_calls": 0,
+  "skopos_commit": "5773dbd8b6440f8ddb44d334f56f7fb98fa91ad0",
+  "skopos_code_sha256": {
+    "pilot.py": "771ba0f8267fb44efafa994594e88ef7cccdd13ce6221ffda772c8a6c5ef2b43",
+    "export.py": "57e616469150855c340d8cbb028d71d7faacbe1b92f90361177181c7031448ee"
+  },
+  "assessment": {
+    "fields": {
+      "date": {
+        "observed_value": "2026-10-21",
+        "support_status": "supported",
+        "missing_requirements": [],
+        "relations": [
+          "clarification"
+        ],
+        "change_source_ids": [],
+        "evidence": [
+          {
+            "source_id": "skopos-packet:abdc7d1c5e67006f2ff2b77916bfe3be67ec58fc831379623a312ea63fca0a6d",
+            "quote": "Nube se entrega el 2026-10-21"
+          }
+        ]
+      },
+      "owner": {
+        "observed_value": "Lina",
+        "support_status": "supported",
+        "missing_requirements": [],
+        "relations": [
+          "duplicate"
+        ],
+        "change_source_ids": [],
+        "evidence": [
+          {
+            "source_id": "skopos-packet:abdc7d1c5e67006f2ff2b77916bfe3be67ec58fc831379623a312ea63fca0a6d",
+            "quote": "Lina sigue siendo responsable"
+          }
+        ]
+      }
+    },
+    "reason": "Fuente nueva confirma fecha y conserva responsable.",
+    "status": "resolved",
+    "reopened_fields": [],
+    "affected": []
+  },
+  "packet_sha256": "abdc7d1c5e67006f2ff2b77916bfe3be67ec58fc831379623a312ea63fca0a6d",
+  "limitation": "synthetic export, simulated evaluator; packet/receipt kept alongside SQLite, not embedded in issue history"
+}

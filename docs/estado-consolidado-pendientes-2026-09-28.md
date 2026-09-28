@@ -1,8 +1,9 @@
 # Pendientes y evidencia posterior: consolidación técnica
 
 Estado: prototipo local experimental. No producto integrado ni memoria admitida.
-Base Git observada d92ce22 (main). Los incrementos siguientes siguen locales sin
-commit/push en este encargo. No se modifica AGENTS.md ni se reinterpreta como
+Los seis pilotos iniciales fueron publicados en main mediante b49e86f; SHA
+remoto verificado. Las notas de ausencia de publicación en informes anteriores
+describen el cierre histórico de cada piloto. No se modifica AGENTS.md ni se reinterpreta como
 implementado todo el motor de Ágora.
 
 | Pieza | Resultado verificado | Límite principal |
@@ -57,3 +58,15 @@ directa entre almacenes ni integración obligatoria. No añadir watcher.
 Puntos de entrada: experiments/issue-recovery-v1/README.md, luego
 experiments/issue-flow-v1/README.md y experiments/open-issues-v3/README.md.
 Este documento consolida evidencia; no autoriza publicación ni despliegue.
+
+## Actualización: puente sintético con Skopos
+
+Se añadió experiments/skopos-issue-bridge-v1: exportador de Skopos ejecutado
+sobre fuente sintética, verificación contra fetch, dos citas nativas y operación
+recuperada sin duplicar. Evaluador simulado; cero llamadas nuevas al modelo.
+347 tests pasan. No se modificó Skopos ni se publicó su trabajo local pendiente.
+
+Antes de una fuente real: incluir paquete/recibo en un respaldo recuperable por
+hash y exponer completitud al evaluador. Actualmente esos metadatos están en
+archivos laterales, no íntegramente en el historial o prompt de evaluación.
+Esta limitación impide presentar el puente como integración productiva completa.
