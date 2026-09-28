@@ -153,3 +153,13 @@ valores/citas; input contrastado contra request original. 404 tests pasan, cero
 llamadas. La operación fallida no cambió ni se creó revisión admitida. Pendiente:
 incorporación explícita del derivado con enlace a respuesta/request y transacción
 recuperable, primero sobre copia experimental. No es reparación automática general.
+
+## Actualización: reparación incorporada como derivado recuperable
+
+experiments/repair-store-v1 vincula respuesta original, request, revisión base,
+recibo y candidato en un almacén separado. Prueba sobre copia de la base fallida:
+confirmación perdida, recuperación exacta en proceso nuevo y repetición sin duplicar.
+Original y copia sin cambios; operación fuente sigue response_ready. 415 tests pasan;
+cero llamadas. Es registro experimental de derivados, no avance del historial fuente
+ni admisión. Próximo: consolidar CLI explícita para preparación, inspección e incorporación,
+conservando identidades y estados; no más pilotos equivalentes. Véase RESULTS.md del ensayo.

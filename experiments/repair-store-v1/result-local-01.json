@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "real_model_calls": 0,
+  "derivations": 1,
+  "derived_status": "resolved",
+  "derivation_digest": "0597f61519e7fe2defaa4366b68231cbc75c0cfe9f66b8627878fa7299313910",
+  "source_state": "response_ready",
+  "source_files_unchanged": true,
+  "original_database_sha256": "671ed8ca99f432c5e491c5288808f44ac3367553a53a4fc9d6dca6ed5899f53a",
+  "copy_database_sha256": "33c75a998e7a6fc2a0909e38906af58d33ee46210e22defc977db092345650c0",
+  "lost_ack_recovered": true,
+  "repeated_put_same_result": true,
+  "new_process_exact_recovery": true,
+  "admission": "not_admitted",
+  "code_sha256": {
+    "store.py": "aaf43362d30095d6d0458b3c005ee79652917940af80cd6140cd7853a1e7ae1f",
+    "run.py": "74930e3d95239aa4c711f02b6dba6b1e58ca50727c1143fdba756c9a707a23a1"
+  }
+}
