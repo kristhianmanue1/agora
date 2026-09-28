@@ -1,0 +1,170 @@
+[
+  {
+    "id": "08cef9ef632b",
+    "language": "en",
+    "family": 0,
+    "evidence": "The Cedar trial tested 30 samples: exactly 18 passed and 12 failed.",
+    "claim": "Exactly 19 Cedar samples passed."
+  },
+  {
+    "id": "1db34dc8c5bc",
+    "language": "es",
+    "family": 1,
+    "evidence": "El 1 de mayo, la fecha límite era el 3 de junio. El 2 de mayo, la coordinación sustituyó explícitamente esa fecha por el 10 de junio.",
+    "claim": "Después de la sustitución, la fecha límite es el 3 de junio."
+  },
+  {
+    "id": "274a86f15e39",
+    "language": "es",
+    "family": 2,
+    "evidence": "La reunión asignó a Lina la responsabilidad de la entrega. No se discutió una fecha de entrega en el fragmento suministrado.",
+    "claim": "Omar, en lugar de Lina, es responsable de la entrega."
+  },
+  {
+    "id": "2980cb42a1b5",
+    "language": "es",
+    "family": 0,
+    "evidence": "El ensayo Cedro probó 30 muestras: exactamente 18 aprobaron y 12 fallaron.",
+    "claim": "Exactamente 19 muestras de Cedro aprobaron."
+  },
+  {
+    "id": "56b741451620",
+    "language": "en",
+    "family": 1,
+    "evidence": "On May 1, the deadline was June 3. On May 2, the coordinator explicitly replaced that deadline with June 10.",
+    "claim": "Mira approved the deadline replacement."
+  },
+  {
+    "id": "586e3086136e",
+    "language": "en",
+    "family": 0,
+    "evidence": "The Cedar trial tested 30 samples: exactly 18 passed and 12 failed.",
+    "claim": "The Cedar trial took three hours."
+  },
+  {
+    "id": "7389a5c614da",
+    "language": "en",
+    "family": 3,
+    "evidence": "Memo A reports a mass of 12 grams for specimen Birch. Memo B reports a mass of 14 grams for the same specimen. Neither memo supersedes the other.",
+    "claim": "The two memos agree on the mass of Birch."
+  },
+  {
+    "id": "8079b9ac821e",
+    "language": "en",
+    "family": 1,
+    "evidence": "On May 1, the deadline was June 3. On May 2, the coordinator explicitly replaced that deadline with June 10.",
+    "claim": "After the replacement, the deadline is June 3."
+  },
+  {
+    "id": "8cf6a8e0847c",
+    "language": "es",
+    "family": 3,
+    "evidence": "La nota A registra una masa de 12 gramos para la muestra Abedul. La nota B registra una masa de 14 gramos para esa misma muestra. Ninguna nota sustituye a la otra.",
+    "claim": "La nota B es la medición autorizada."
+  },
+  {
+    "id": "906ad12c9287",
+    "language": "es",
+    "family": 1,
+    "evidence": "El 1 de mayo, la fecha límite era el 3 de junio. El 2 de mayo, la coordinación sustituyó explícitamente esa fecha por el 10 de junio.",
+    "claim": "Mira aprobó la sustitución de la fecha."
+  },
+  {
+    "id": "95308f7dbcf2",
+    "language": "es",
+    "family": 0,
+    "evidence": "El ensayo Cedro probó 30 muestras: exactamente 18 aprobaron y 12 fallaron.",
+    "claim": "Exactamente 18 muestras de Cedro aprobaron."
+  },
+  {
+    "id": "a7bb40fdcfa5",
+    "language": "es",
+    "family": 0,
+    "evidence": "El ensayo Cedro probó 30 muestras: exactamente 18 aprobaron y 12 fallaron.",
+    "claim": "El ensayo Cedro duró tres horas."
+  },
+  {
+    "id": "acaae5116d88",
+    "language": "es",
+    "family": 3,
+    "evidence": "La nota A registra una masa de 12 gramos para la muestra Abedul. La nota B registra una masa de 14 gramos para esa misma muestra. Ninguna nota sustituye a la otra.",
+    "claim": "Las dos notas coinciden sobre la masa de Abedul."
+  },
+  {
+    "id": "b1f2745caf28",
+    "language": "es",
+    "family": 3,
+    "evidence": "La nota A registra una masa de 12 gramos para la muestra Abedul. La nota B registra una masa de 14 gramos para esa misma muestra. Ninguna nota sustituye a la otra.",
+    "claim": "Las dos notas discrepan sobre la masa de Abedul."
+  },
+  {
+    "id": "b655beb72cba",
+    "language": "es",
+    "family": 1,
+    "evidence": "El 1 de mayo, la fecha límite era el 3 de junio. El 2 de mayo, la coordinación sustituyó explícitamente esa fecha por el 10 de junio.",
+    "claim": "Después de la sustitución, la fecha límite es el 10 de junio."
+  },
+  {
+    "id": "c0fc1182baa7",
+    "language": "en",
+    "family": 2,
+    "evidence": "The meeting assigned Lina responsibility for delivery. No delivery date was discussed in the supplied excerpt.",
+    "claim": "Lina is responsible for delivery."
+  },
+  {
+    "id": "cef55ae35545",
+    "language": "en",
+    "family": 3,
+    "evidence": "Memo A reports a mass of 12 grams for specimen Birch. Memo B reports a mass of 14 grams for the same specimen. Neither memo supersedes the other.",
+    "claim": "The two memos disagree on the mass of Birch."
+  },
+  {
+    "id": "cf15e8ae3524",
+    "language": "en",
+    "family": 2,
+    "evidence": "The meeting assigned Lina responsibility for delivery. No delivery date was discussed in the supplied excerpt.",
+    "claim": "The delivery date is October 21."
+  },
+  {
+    "id": "d5849d8e9d75",
+    "language": "es",
+    "family": 2,
+    "evidence": "La reunión asignó a Lina la responsabilidad de la entrega. No se discutió una fecha de entrega en el fragmento suministrado.",
+    "claim": "La fecha de entrega es el 21 de octubre."
+  },
+  {
+    "id": "e0b19d4e2946",
+    "language": "es",
+    "family": 2,
+    "evidence": "La reunión asignó a Lina la responsabilidad de la entrega. No se discutió una fecha de entrega en el fragmento suministrado.",
+    "claim": "Lina es responsable de la entrega."
+  },
+  {
+    "id": "ec40fd884476",
+    "language": "en",
+    "family": 3,
+    "evidence": "Memo A reports a mass of 12 grams for specimen Birch. Memo B reports a mass of 14 grams for the same specimen. Neither memo supersedes the other.",
+    "claim": "Memo B is the authoritative measurement."
+  },
+  {
+    "id": "f6314a60ff49",
+    "language": "en",
+    "family": 0,
+    "evidence": "The Cedar trial tested 30 samples: exactly 18 passed and 12 failed.",
+    "claim": "Exactly 18 Cedar samples passed."
+  },
+  {
+    "id": "f8b1ea001003",
+    "language": "en",
+    "family": 1,
+    "evidence": "On May 1, the deadline was June 3. On May 2, the coordinator explicitly replaced that deadline with June 10.",
+    "claim": "After the replacement, the deadline is June 10."
+  },
+  {
+    "id": "f9c964c78385",
+    "language": "en",
+    "family": 2,
+    "evidence": "The meeting assigned Lina responsibility for delivery. No delivery date was discussed in the supplied excerpt.",
+    "claim": "Omar, rather than Lina, is responsible for delivery."
+  }
+]

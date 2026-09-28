@@ -60,3 +60,5 @@ parte de esta publicación. Un informe no sustituye esos artefactos.
 Antes de usar una fuente privada con una CLI externa, decidir expresamente si
 puede enviarse al proveedor. El funcionamiento independiente de Ágora no exige
 que todas sus ejecuciones sean locales.
+
+Comparación experimental de revisores: [GLM y Jev, 2026-09-28](docs/comparacion-revisores-glm-jev-2026-09-28.md).

@@ -1,0 +1,394 @@
+{
+  "schema": "agora/reviewer-comparison/v1-experimental",
+  "cases_sha256": "717bb995e03fffd35d7b4c91fcd92b83a071d3b320ffb70b6e3a006e4b656c79",
+  "gold_sha256": "27204277292fa02f95aac9f981f58d77bd5351e2eb7770ace32b978fcbd06e14",
+  "glm": {
+    "total": 24,
+    "completed": 24,
+    "correct": 22,
+    "false_support": 0,
+    "false_support_denominator": 16,
+    "confusion_matrix": {
+      "supported": {
+        "supported": 8,
+        "contradicted": 0,
+        "insufficient": 0,
+        "no_valid_output": 0
+      },
+      "contradicted": {
+        "supported": 0,
+        "contradicted": 8,
+        "insufficient": 0,
+        "no_valid_output": 0
+      },
+      "insufficient": {
+        "supported": 0,
+        "contradicted": 2,
+        "insufficient": 6,
+        "no_valid_output": 0
+      }
+    },
+    "by_language": {
+      "es": {
+        "correct": 11,
+        "total": 12
+      },
+      "en": {
+        "correct": 11,
+        "total": 12
+      }
+    },
+    "reported_models": [
+      "glm-5.3-flash"
+    ],
+    "usage_totals": {
+      "completion_tokens": 2739,
+      "prompt_tokens": 5729,
+      "total_tokens": 8468
+    },
+    "sum_request_seconds": 171.282,
+    "median_request_seconds": 5.204000000000001,
+    "cost_usd": null,
+    "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+    "cases": [
+      {
+        "case_id": "08cef9ef632b",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "1db34dc8c5bc",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "274a86f15e39",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "2980cb42a1b5",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "56b741451620",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "586e3086136e",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "7389a5c614da",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "8079b9ac821e",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "8cf6a8e0847c",
+        "expected": "insufficient",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "906ad12c9287",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "95308f7dbcf2",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "a7bb40fdcfa5",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "acaae5116d88",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "b1f2745caf28",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "b655beb72cba",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "c0fc1182baa7",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "cef55ae35545",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "cf15e8ae3524",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "d5849d8e9d75",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "e0b19d4e2946",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "ec40fd884476",
+        "expected": "insufficient",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "f6314a60ff49",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "f8b1ea001003",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "f9c964c78385",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      }
+    ]
+  },
+  "jev": {
+    "total": 24,
+    "completed": 24,
+    "correct": 24,
+    "false_support": 0,
+    "false_support_denominator": 16,
+    "confusion_matrix": {
+      "supported": {
+        "supported": 8,
+        "contradicted": 0,
+        "insufficient": 0,
+        "no_valid_output": 0
+      },
+      "contradicted": {
+        "supported": 0,
+        "contradicted": 8,
+        "insufficient": 0,
+        "no_valid_output": 0
+      },
+      "insufficient": {
+        "supported": 0,
+        "contradicted": 0,
+        "insufficient": 8,
+        "no_valid_output": 0
+      }
+    },
+    "by_language": {
+      "es": {
+        "correct": 12,
+        "total": 12
+      },
+      "en": {
+        "correct": 12,
+        "total": 12
+      }
+    },
+    "reported_models": [
+      "jev-1.13.0"
+    ],
+    "usage_totals": {
+      "input_tokens": 10728,
+      "output_tokens": 1104
+    },
+    "sum_request_seconds": 49.071,
+    "median_request_seconds": 0.3385,
+    "cost_usd": null,
+    "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+    "cases": [
+      {
+        "case_id": "08cef9ef632b",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "1db34dc8c5bc",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "274a86f15e39",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "2980cb42a1b5",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "56b741451620",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "586e3086136e",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "7389a5c614da",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "8079b9ac821e",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "8cf6a8e0847c",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "906ad12c9287",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "95308f7dbcf2",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "a7bb40fdcfa5",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "acaae5116d88",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      },
+      {
+        "case_id": "b1f2745caf28",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "b655beb72cba",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "c0fc1182baa7",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "cef55ae35545",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "cf15e8ae3524",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "d5849d8e9d75",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "e0b19d4e2946",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "ec40fd884476",
+        "expected": "insufficient",
+        "predicted": "insufficient",
+        "status": "completed"
+      },
+      {
+        "case_id": "f6314a60ff49",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "f8b1ea001003",
+        "expected": "supported",
+        "predicted": "supported",
+        "status": "completed"
+      },
+      {
+        "case_id": "f9c964c78385",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "status": "completed"
+      }
+    ]
+  }
+}
