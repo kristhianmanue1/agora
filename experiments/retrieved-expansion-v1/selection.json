@@ -1,0 +1,278 @@
+[
+  {
+    "id": "claim0-budget4096",
+    "parent_case_id": "long-1811.00051-0-abstract",
+    "query": "Is the claim supported by the supplied evidence?\nThe proposed ILP models rely on an external text planner rather than directly performing text planning.",
+    "budget": 4096,
+    "source_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "source_bytes": 116094,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 176,
+      "seed_paragraphs": [
+        8,
+        66,
+        268
+      ],
+      "selected_paragraphs": [
+        8,
+        66,
+        67,
+        267,
+        268
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 116094,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 8163,
+        "end_byte": 9203,
+        "sha256": "c8dcaa74601ba23bb8d1b568e45e22f74d66e9e417aa24f93ec4844e2ac34ca2"
+      },
+      {
+        "start_byte": 29017,
+        "end_byte": 30392,
+        "sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2"
+      },
+      {
+        "start_byte": 30394,
+        "end_byte": 30413,
+        "sha256": "750e26952da5b83fc96a43b9a246fc0e3c78853b2ca7e7e33fcbbe65ab70eb6e"
+      },
+      {
+        "start_byte": 107249,
+        "end_byte": 107261,
+        "sha256": "963a0e1c03f3f3c6abbde3990d3fff7586e71e6615cb6074fac201e1ebe1ff0c"
+      },
+      {
+        "start_byte": 107263,
+        "end_byte": 108462,
+        "sha256": "f23dbd557ae2dd4a187e675c381363bbf072ce0fac0a0d5f18216b502fb31602"
+      }
+    ],
+    "retrieved_bytes": 3645,
+    "evidence_bytes": 5341,
+    "evidence_sha256": "651c35793ab62a5bb6af369d2d173c94e91dd3961ad3697b712c1ac9bc6b19bf",
+    "known_target_contained": true
+  },
+  {
+    "id": "claim0-budget8192",
+    "parent_case_id": "long-1811.00051-0-abstract",
+    "query": "Is the claim supported by the supplied evidence?\nThe proposed ILP models rely on an external text planner rather than directly performing text planning.",
+    "budget": 8192,
+    "source_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "source_bytes": 116094,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 176,
+      "seed_paragraphs": [
+        8,
+        66,
+        268
+      ],
+      "selected_paragraphs": [
+        7,
+        8,
+        9,
+        65,
+        66,
+        67,
+        267,
+        268
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 116094,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 6505,
+        "end_byte": 8161,
+        "sha256": "e071e89017240f5b7fef19d7670541402503fa82ea5bf2b5744754a92260301e"
+      },
+      {
+        "start_byte": 8163,
+        "end_byte": 9203,
+        "sha256": "c8dcaa74601ba23bb8d1b568e45e22f74d66e9e417aa24f93ec4844e2ac34ca2"
+      },
+      {
+        "start_byte": 9205,
+        "end_byte": 9835,
+        "sha256": "f4aab94184b30cb8c1bd9cf6d96897073c652b92752ce6319995ba10f7c2d85c"
+      },
+      {
+        "start_byte": 27701,
+        "end_byte": 29015,
+        "sha256": "366a9204c930c525a1c8571f8891e6dd63bafcd9a03def396262ba81a94a401a"
+      },
+      {
+        "start_byte": 29017,
+        "end_byte": 30392,
+        "sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2"
+      },
+      {
+        "start_byte": 30394,
+        "end_byte": 30413,
+        "sha256": "750e26952da5b83fc96a43b9a246fc0e3c78853b2ca7e7e33fcbbe65ab70eb6e"
+      },
+      {
+        "start_byte": 107249,
+        "end_byte": 107261,
+        "sha256": "963a0e1c03f3f3c6abbde3990d3fff7586e71e6615cb6074fac201e1ebe1ff0c"
+      },
+      {
+        "start_byte": 107263,
+        "end_byte": 108462,
+        "sha256": "f23dbd557ae2dd4a187e675c381363bbf072ce0fac0a0d5f18216b502fb31602"
+      }
+    ],
+    "retrieved_bytes": 7245,
+    "evidence_bytes": 8947,
+    "evidence_sha256": "fc25853b730ad02b16d69ee0ddde672f15b3896907eb2751969a19e1298d7cb8",
+    "known_target_contained": true
+  },
+  {
+    "id": "claim1-budget4096",
+    "parent_case_id": "long-1811.00051-1-abstract",
+    "query": "Is the claim supported by the supplied evidence?\nThe proposed ILP models directly perform text planning internally.",
+    "budget": 4096,
+    "source_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "source_bytes": 116094,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 176,
+      "seed_paragraphs": [
+        8,
+        66,
+        268
+      ],
+      "selected_paragraphs": [
+        8,
+        66,
+        67,
+        267,
+        268
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 116094,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 8163,
+        "end_byte": 9203,
+        "sha256": "c8dcaa74601ba23bb8d1b568e45e22f74d66e9e417aa24f93ec4844e2ac34ca2"
+      },
+      {
+        "start_byte": 29017,
+        "end_byte": 30392,
+        "sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2"
+      },
+      {
+        "start_byte": 30394,
+        "end_byte": 30413,
+        "sha256": "750e26952da5b83fc96a43b9a246fc0e3c78853b2ca7e7e33fcbbe65ab70eb6e"
+      },
+      {
+        "start_byte": 107249,
+        "end_byte": 107261,
+        "sha256": "963a0e1c03f3f3c6abbde3990d3fff7586e71e6615cb6074fac201e1ebe1ff0c"
+      },
+      {
+        "start_byte": 107263,
+        "end_byte": 108462,
+        "sha256": "f23dbd557ae2dd4a187e675c381363bbf072ce0fac0a0d5f18216b502fb31602"
+      }
+    ],
+    "retrieved_bytes": 3645,
+    "evidence_bytes": 5341,
+    "evidence_sha256": "651c35793ab62a5bb6af369d2d173c94e91dd3961ad3697b712c1ac9bc6b19bf",
+    "known_target_contained": true
+  },
+  {
+    "id": "claim1-budget8192",
+    "parent_case_id": "long-1811.00051-1-abstract",
+    "query": "Is the claim supported by the supplied evidence?\nThe proposed ILP models directly perform text planning internally.",
+    "budget": 8192,
+    "source_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "source_bytes": 116094,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 176,
+      "seed_paragraphs": [
+        8,
+        66,
+        268
+      ],
+      "selected_paragraphs": [
+        7,
+        8,
+        9,
+        65,
+        66,
+        67,
+        267,
+        268
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 116094,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 6505,
+        "end_byte": 8161,
+        "sha256": "e071e89017240f5b7fef19d7670541402503fa82ea5bf2b5744754a92260301e"
+      },
+      {
+        "start_byte": 8163,
+        "end_byte": 9203,
+        "sha256": "c8dcaa74601ba23bb8d1b568e45e22f74d66e9e417aa24f93ec4844e2ac34ca2"
+      },
+      {
+        "start_byte": 9205,
+        "end_byte": 9835,
+        "sha256": "f4aab94184b30cb8c1bd9cf6d96897073c652b92752ce6319995ba10f7c2d85c"
+      },
+      {
+        "start_byte": 27701,
+        "end_byte": 29015,
+        "sha256": "366a9204c930c525a1c8571f8891e6dd63bafcd9a03def396262ba81a94a401a"
+      },
+      {
+        "start_byte": 29017,
+        "end_byte": 30392,
+        "sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2"
+      },
+      {
+        "start_byte": 30394,
+        "end_byte": 30413,
+        "sha256": "750e26952da5b83fc96a43b9a246fc0e3c78853b2ca7e7e33fcbbe65ab70eb6e"
+      },
+      {
+        "start_byte": 107249,
+        "end_byte": 107261,
+        "sha256": "963a0e1c03f3f3c6abbde3990d3fff7586e71e6615cb6074fac201e1ebe1ff0c"
+      },
+      {
+        "start_byte": 107263,
+        "end_byte": 108462,
+        "sha256": "f23dbd557ae2dd4a187e675c381363bbf072ce0fac0a0d5f18216b502fb31602"
+      }
+    ],
+    "retrieved_bytes": 7245,
+    "evidence_bytes": 8947,
+    "evidence_sha256": "fc25853b730ad02b16d69ee0ddde672f15b3896907eb2751969a19e1298d7cb8",
+    "known_target_contained": true
+  }
+]

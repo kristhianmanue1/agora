@@ -1,0 +1,14 @@
+{
+  "experiments/retrieved-expansion-v1/gold.json": "0be8c336ed1d069a051d9ae37609f9161a5850e31c4e70fbc4c6caf239d1754e",
+  "experiments/retrieved-expansion-v1/run.py": "4c4fe9b63d151441d17e6e972bfb2367490a936f19b508732163b9528f30f0f8",
+  "experiments/retrieved-expansion-v1/README.md": "6c241458ace5a1dd60e4452b637efea84f2f055e343111eee41c3265bccada85",
+  "experiments/retrieved-expansion-v1/.gitignore": "644280b0eb08f498b6d5f87ca6b3106a90da9d4fb421d08a66387afbf25b6d02",
+  "experiments/retrieved-expansion-v1/selection.json": "7e0cb090cbe3a3e9aeae951eb4ec786a022cb761b1bc1fd38f14a4e2230a6387",
+  "experiments/retrieved-expansion-v1/prepare.py": "91ca518b4a39fb8f8d62e0ca98dd87ddecb194051e4e93ec3cfdab79170fa084",
+  "experiments/retrieved-expansion-v1/inputs/cases.json": "3639354490d6a282894ddb2f1b9dd1f2bfdd1603559f89b635d81a4d5db0017f",
+  "experiments/retrieved-expansion-v1/inputs/source.txt": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+  "src/agora/passages.py": "232e6c00955104d84ca06b31e5bf715d203016b40d3b6e3151f1e42302147832",
+  "src/agora/source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+  "experiments/reviewer-comparison-v1/run.py": "a0063c942a76c9f2c38cce5a3877e72539d858275cd7db2156779f99d1a4ab05",
+  "experiments/reviewer-comparison-v2/run.py": "f03c62880aeb9d8d65ddf6d86534c80c6d3b2ae94ef7c1a9ccea9f079276868f"
+}

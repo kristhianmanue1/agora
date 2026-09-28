@@ -1,0 +1,156 @@
+{
+  "schema": "agora/retrieved-expansion/v1-experimental",
+  "frozen_inputs_verified": true,
+  "retrieval_reproduced": true,
+  "providers": {
+    "glm": {
+      "total": 4,
+      "completed": 4,
+      "correct": 4,
+      "false_support": 0,
+      "false_support_denominator": 2,
+      "confusion_matrix": {
+        "supported": {
+          "supported": 2,
+          "contradicted": 0,
+          "insufficient": 0,
+          "no_valid_output": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "contradicted": 2,
+          "insufficient": 0,
+          "no_valid_output": 0
+        },
+        "insufficient": {
+          "supported": 0,
+          "contradicted": 0,
+          "insufficient": 0,
+          "no_valid_output": 0
+        }
+      },
+      "by_language": {
+        "es": {
+          "correct": 0,
+          "total": 0
+        },
+        "en": {
+          "correct": 4,
+          "total": 4
+        }
+      },
+      "reported_models": [
+        "glm-5.3-flash"
+      ],
+      "usage_totals": {
+        "completion_tokens": 480,
+        "prompt_tokens": 6330,
+        "total_tokens": 6810
+      },
+      "sum_request_seconds": 13.475,
+      "median_request_seconds": 3.4234999999999998,
+      "cost_usd": null,
+      "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+      "cases": [
+        {
+          "case_id": "claim0-budget4096",
+          "expected": "supported",
+          "predicted": "supported",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim0-budget8192",
+          "expected": "supported",
+          "predicted": "supported",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim1-budget4096",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim1-budget8192",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "status": "completed"
+        }
+      ]
+    },
+    "jev": {
+      "total": 4,
+      "completed": 4,
+      "correct": 4,
+      "false_support": 0,
+      "false_support_denominator": 2,
+      "confusion_matrix": {
+        "supported": {
+          "supported": 2,
+          "contradicted": 0,
+          "insufficient": 0,
+          "no_valid_output": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "contradicted": 2,
+          "insufficient": 0,
+          "no_valid_output": 0
+        },
+        "insufficient": {
+          "supported": 0,
+          "contradicted": 0,
+          "insufficient": 0,
+          "no_valid_output": 0
+        }
+      },
+      "by_language": {
+        "es": {
+          "correct": 0,
+          "total": 0
+        },
+        "en": {
+          "correct": 4,
+          "total": 4
+        }
+      },
+      "reported_models": [
+        "jev-1.13.0"
+      ],
+      "usage_totals": {
+        "input_tokens": 7348,
+        "output_tokens": 182
+      },
+      "sum_request_seconds": 1.186,
+      "median_request_seconds": 0.2865,
+      "cost_usd": null,
+      "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+      "cases": [
+        {
+          "case_id": "claim0-budget4096",
+          "expected": "supported",
+          "predicted": "supported",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim0-budget8192",
+          "expected": "supported",
+          "predicted": "supported",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim1-budget4096",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "status": "completed"
+        },
+        {
+          "case_id": "claim1-budget8192",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "status": "completed"
+        }
+      ]
+    }
+  }
+}

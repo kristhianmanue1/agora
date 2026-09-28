@@ -1,0 +1,6 @@
+{
+  "claim0-budget4096": "supported",
+  "claim0-budget8192": "supported",
+  "claim1-budget4096": "contradicted",
+  "claim1-budget8192": "contradicted"
+}

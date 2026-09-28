@@ -66,3 +66,5 @@ Comparación experimental de revisores: [GLM y Jev, 2026-09-28](docs/comparacion
 Continuación con fuentes externas: [AttrScore reservado y documentos grandes](docs/comparacion-revisores-reservados-2026-09-28.md).
 
 Ampliación controlada: [pasaje pertinente frente a más texto](docs/ampliacion-evidencia-revisores-2026-09-28.md).
+
+Recuperación verificada: [ampliación sin localizador prefijado](docs/recuperacion-ampliacion-revisores-2026-09-28.md).
