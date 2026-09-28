@@ -1,0 +1,8 @@
+{
+  "content": "{\"fields\":{\"date\":{\"observed_value\":null,\"support_status\":\"missing\",\"missing_requirements\":[\"date_confirmed\"],\"relations\":[\"irrelevant\"],\"evidence\":[],\"change_source_ids\":[]},\"owner\":{\"observed_value\":\"Lina\",\"support_status\":\"supported\",\"missing_requirements\":[],\"relations\":[\"initial\"],\"evidence\":[{\"source_id\":\"skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a\",\"quote\":\"Lina es responsable de Nube.\"}],\"change_source_ids\":[]}},\"reason\":\"Única fuente recibida (paquete AGORA_SOURCE_ENVELOPE_V1, received_at 2026-10-08) con un solo span de texto literal: «Lina es responsable de Nube.». Eso sostiene owner=Lina como responsable de Nube/entrega, sin evaluación previa ni cambios posteriores, por lo que la relación es initial. capture_complete_declared=false es una declaración, no prueba, y no anula el hallazgo positivo. Para date no se encontró ninguna fecha de entrega en el texto seleccionado (dato no encontrado, no negación explícita); como selection_complete=not_established, no puede inferirse ausencia en toda la fuente a partir de la selección, de modo que date queda missing con valor null. La fecha de recepción del paquete (2026-10-08) no constituye fecha de entrega de Nube.\"}",
+  "finish_reason": "stop",
+  "usage": {
+    "total_tokens": 5582
+  },
+  "execution_origin": "historical_recording"
+}

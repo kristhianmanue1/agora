@@ -1,0 +1,8 @@
+{
+  "content": "{\"fields\": {\"date\": {\"observed_value\": \"2026-10-21\", \"support_status\": \"supported\", \"missing_requirements\": [], \"relations\": [\"clarification\"], \"change_source_ids\": [], \"evidence\": [{\"source_id\": \"new-confirmation\", \"quote\": \"Nube se entrega el 2026-10-21\"}]}, \"owner\": {\"observed_value\": \"Lina\", \"support_status\": \"supported\", \"missing_requirements\": [], \"relations\": [\"clarification\"], \"change_source_ids\": [], \"evidence\": [{\"source_id\": \"new-confirmation\", \"quote\": \"Lina sigue siendo responsable\"}]}}, \"reason\": \"Simulated clarification; no semantic model evaluation.\"}",
+  "finish_reason": "stop",
+  "usage": {
+    "total_tokens": 0
+  },
+  "reported_model": "test-double"
+}

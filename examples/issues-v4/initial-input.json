@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-10-08",
+  "dependents": [],
+  "previous_assessment": null,
+  "question": "¿Fecha y responsable de entrega de Nube?",
+  "requirements": {
+    "date": [
+      "date_confirmed"
+    ],
+    "owner": [
+      "owner_confirmed"
+    ]
+  },
+  "sources": [
+    {
+      "id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a",
+      "received_at": "2026-10-08",
+      "sha256": "c654721ef8a8b9164e3fd57f8a64a7b2c173ecbb938b84f9ca71adda214ab815",
+      "text": "AGORA_SOURCE_ENVELOPE_V1\n{\"packet\":{\"capture_complete_declared\":false,\"content_sha256\":\"d38db3718606d780762df092f40ed90a06d7685cc8ad0df2fbe4f97b0b63e2ac\",\"revision\":1,\"schema\":\"skopos/meeting-evidence-packet/v0\",\"selection_complete\":\"not_established\",\"source_id\":\"absence-0\",\"source_sha256\":\"b3f3d36e89bc25f5cf9d8d546d5cc47ab811c0fa4fd083650a94858f08cd4277\",\"spans\":[{\"end_byte\":28,\"locator\":{\"end_ms\":9000,\"id\":\"s0\",\"speaker\":\"Coordinación sintética\",\"start_ms\":0},\"start_byte\":0,\"text\":\"Lina es responsable de Nube.\"}],\"text\":\"Lina es responsable de Nube.\\n\\n\"},\"schema\":\"agora/source-envelope/v1-experimental\"}\n\nLITERAL_SELECTED_TEXT\nLina es responsable de Nube.\n\n"
+    }
+  ]
+}

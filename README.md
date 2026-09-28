@@ -13,6 +13,8 @@ válido no demuestran por sí solos que una afirmación sea verdadera o completa
 - Respuestas por aspectos, afirmaciones con citas literales o identificadores,
   presupuestos y estados que distinguen falta de evidencia y fallo de ejecución.
 - Revisión experimental por afirmación y detalle, con adjudicación separada.
+- CLI de pendientes: preparación, evaluación, inspección, recuperación y reparación
+  explícita separada. [Recorrido reproducible](docs/pendientes-cli.md).
 - Baterías locales y protocolos QASPER, AttrScore y controles sintéticos.
 
 El adaptador local funciona sin Skopos ni AN-KLA. No hay sincronización de sus
