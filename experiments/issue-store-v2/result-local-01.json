@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "real_model_calls": 0,
+  "independent_process": true,
+  "backup_exact_recovery": true,
+  "sidecars_read_by_child": false,
+  "heads": {
+    "absence": "3c87840c1e9812c92c5f9b4b96d98cb5986aafda7c7a7aa6729cf7f2b5e2cf2c",
+    "conflict": "0b46b795755bbc4e0ab2731560358e839c8e3e2af9464bfcb00f3150b138fe6f"
+  },
+  "validator_manifest": {
+    "open-issues-v4/protocol.py": "1e80c65559b57363664b9c4511b764880d6c771c51c47e4f4ff8f0b0d0e77e1c",
+    "skopos-issue-bridge-v2/envelope.py": "5841faad5ae6cc6b75bbd7bc457cbbad9d51ba133724776932649f8bd86e81b2",
+    "skopos-issue-bridge-v1/bridge.py": "647b96b817ae93f88992dffbbb1c606598e855ed540d2af3c222f5e719b890f1"
+  },
+  "states": {
+    "absence": "partial",
+    "conflict": "partial"
+  },
+  "original_model_content_preserved": true,
+  "admission": "not_admitted",
+  "code_sha256": {
+    "store.py": "661807a37c344e9284ca5ed8e4784c374acbb951650cbffac9f43c8cefc54013",
+    "run.py": "cdf684f7b12417e126a3250b0bc881c6fc575c063e9e1b248330f90281259259"
+  },
+  "producer_review": {
+    "independent_reviewer": false,
+    "legacy_rejection_tested": true,
+    "limitation": "No provider operation recovery, power-loss test or automatic migration."
+  }
+}

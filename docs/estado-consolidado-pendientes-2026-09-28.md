@@ -113,3 +113,13 @@ contradicción=partial/disputed; campos originales intactos. 371 tests pasan;
 cero llamadas nuevas. El rechazo histórico v3 no cambia. El contrato nuevo aún
 no está adoptado por SQLite/recovery: el siguiente paso es un consumidor versionado
 con recuperación y rechazo de bases incompatibles, sin migración silenciosa.
+
+## Actualización: persistencia v4 aislada
+
+experiments/issue-store-v2 adopta v4 en una base nueva, conserva respuesta original
+y candidato/alcance por separado y rechaza bases anteriores sin modificarlas.
+Backup recuperado exactamente en proceso nuevo sin archivos laterales. 381 tests
+pasan; cero llamadas a modelos. Los consumidores previos siguen intactos.
+Siguiente: llegada explícita de fuente y evaluación candidata con cabeza esperada
+sobre este consumidor, primero mediante fixtures. No hay watcher ni recuperación
+de operaciones de proveedor v4 todavía. Véase experiments/issue-store-v2/RESULTS.md.
