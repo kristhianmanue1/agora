@@ -37,4 +37,3 @@ def check_package(store,prepared):
     rebuilt=prepare(store,package['issue'],package['expected_head'],package['new_source'],package['input']['as_of'])
     if encode(rebuilt)!=encode(prepared):raise ValueError('package_binding')
     return package
-
