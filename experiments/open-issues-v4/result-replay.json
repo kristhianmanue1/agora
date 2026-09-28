@@ -1,0 +1,183 @@
+{
+  "status": "complete",
+  "real_model_calls": 0,
+  "historical_v3_results_unchanged": true,
+  "validator_sha256": "1e80c65559b57363664b9c4511b764880d6c771c51c47e4f4ff8f0b0d0e77e1c",
+  "results": [
+    {
+      "case": "absence",
+      "original_content_sha256": "ee3362f581b506c85b41f6a110a543a19bd98f8863b6c4a5acc8df3595e9e989",
+      "candidate_sha256": "53c3f8392124ddf930a56070276d520c256d738176c4314f3cc174eeb0e1f7d7",
+      "adapter": "host prepare_candidate; schema and scope only",
+      "model_fields_unchanged": true,
+      "assessment": {
+        "fields": {
+          "date": {
+            "change_source_ids": [],
+            "evidence": [],
+            "missing_requirements": [
+              "date_confirmed"
+            ],
+            "observed_value": null,
+            "relations": [
+              "irrelevant"
+            ],
+            "support_status": "missing"
+          },
+          "owner": {
+            "change_source_ids": [],
+            "evidence": [
+              {
+                "quote": "Lina es responsable de Nube.",
+                "source_id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a"
+              }
+            ],
+            "missing_requirements": [],
+            "observed_value": "Lina",
+            "relations": [
+              "initial"
+            ],
+            "support_status": "supported"
+          }
+        },
+        "reason": "Única fuente recibida (paquete AGORA_SOURCE_ENVELOPE_V1, received_at 2026-10-08) con un solo span de texto literal: «Lina es responsable de Nube.». Eso sostiene owner=Lina como responsable de Nube/entrega, sin evaluación previa ni cambios posteriores, por lo que la relación es initial. capture_complete_declared=false es una declaración, no prueba, y no anula el hallazgo positivo. Para date no se encontró ninguna fecha de entrega en el texto seleccionado (dato no encontrado, no negación explícita); como selection_complete=not_established, no puede inferirse ausencia en toda la fuente a partir de la selección, de modo que date queda missing con valor null. La fecha de recepción del paquete (2026-10-08) no constituye fecha de entrega de Nube.",
+        "reviewed_scope": {
+          "basis": "supplied_input_only",
+          "sources": [
+            {
+              "capture_complete_declared": false,
+              "coordinate_space": "packet_text_utf8",
+              "original_revision": 1,
+              "original_sha256": "b3f3d36e89bc25f5cf9d8d546d5cc47ab811c0fa4fd083650a94858f08cd4277",
+              "original_source_id": "absence-0",
+              "selection_complete": "not_established",
+              "source_id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a",
+              "source_sha256": "c654721ef8a8b9164e3fd57f8a64a7b2c173ecbb938b84f9ca71adda214ab815",
+              "units": [
+                {
+                  "end_byte": 28,
+                  "locator": {
+                    "end_ms": 9000,
+                    "id": "s0",
+                    "speaker": "Coordinación sintética",
+                    "start_ms": 0
+                  },
+                  "start_byte": 0
+                }
+              ]
+            }
+          ]
+        },
+        "schema": "agora/issue-assessment/v4-experimental",
+        "status": "partial",
+        "reopened_fields": [],
+        "affected": []
+      }
+    },
+    {
+      "case": "conflict",
+      "original_content_sha256": "8c10d146a95e87126c047aee04b3e91c9bd5c34c0600641671bd633a2f542041",
+      "candidate_sha256": "083a48d8118ab9a15acb1c5c3171782be6279fd26a809ba98e3fe2e4d54e8b3a",
+      "adapter": "host prepare_candidate; schema and scope only",
+      "model_fields_unchanged": true,
+      "assessment": {
+        "fields": {
+          "date": {
+            "change_source_ids": [],
+            "evidence": [
+              {
+                "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable.",
+                "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe"
+              },
+              {
+                "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable.",
+                "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2"
+              }
+            ],
+            "missing_requirements": [
+              "date_confirmed"
+            ],
+            "observed_value": null,
+            "relations": [
+              "initial"
+            ],
+            "support_status": "disputed"
+          },
+          "owner": {
+            "change_source_ids": [],
+            "evidence": [
+              {
+                "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable.",
+                "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe"
+              },
+              {
+                "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable.",
+                "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2"
+              }
+            ],
+            "missing_requirements": [],
+            "observed_value": "Lina",
+            "relations": [
+              "initial"
+            ],
+            "support_status": "supported"
+          }
+        },
+        "reason": "Dos fuentes de origen distinto, ambas del mismo día 2026-10-08 (igual a la fecha de corte), afirman fechas de entrega contradictorias para Nube (2026-10-21 frente a 2026-10-28); ninguna fuente actualiza o retira explícitamente a la otra, por lo que la fecha queda en disputa y su valor observado es nulo, con date_confirmed incumplido. Para el responsable, ambas fuentes coinciden en Lina, de modo que owner está soportado sin requisitos faltantes. Sólo se cita el texto literal seleccionado; selection_complete=not_established impide inferir ausencias más allá de la selección, y capture_complete_declared es sólo una declaración, no prueba.",
+        "reviewed_scope": {
+          "basis": "supplied_input_only",
+          "sources": [
+            {
+              "capture_complete_declared": false,
+              "coordinate_space": "packet_text_utf8",
+              "original_revision": 1,
+              "original_sha256": "0990e670b9a2404d3448e58e360ff85a2a4e083cd45509ca5aa666c0e4be75f6",
+              "original_source_id": "conflict-0",
+              "selection_complete": "not_established",
+              "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe",
+              "source_sha256": "6bd39d64bbe71f8750f42ea7374f0c846089dccbcb1d75a9cf3768fdc91c1738",
+              "units": [
+                {
+                  "end_byte": 75,
+                  "locator": {
+                    "end_ms": 9000,
+                    "id": "s0",
+                    "speaker": "Coordinación sintética",
+                    "start_ms": 0
+                  },
+                  "start_byte": 0
+                }
+              ]
+            },
+            {
+              "capture_complete_declared": false,
+              "coordinate_space": "packet_text_utf8",
+              "original_revision": 1,
+              "original_sha256": "fee1528eae0df7078025961f0b179ef89bbfca787e9b8a61952ce880822b4e4d",
+              "original_source_id": "conflict-1",
+              "selection_complete": "not_established",
+              "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2",
+              "source_sha256": "2a603b35f41f8d78adae1474648149a9fb72bd13539583ed31664d5770fa51cf",
+              "units": [
+                {
+                  "end_byte": 75,
+                  "locator": {
+                    "end_ms": 9000,
+                    "id": "s0",
+                    "speaker": "Coordinación sintética",
+                    "start_ms": 0
+                  },
+                  "start_byte": 0
+                }
+              ]
+            }
+          ]
+        },
+        "schema": "agora/issue-assessment/v4-experimental",
+        "status": "partial",
+        "reopened_fields": [],
+        "affected": []
+      }
+    }
+  ]
+}

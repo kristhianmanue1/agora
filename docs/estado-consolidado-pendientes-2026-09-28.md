@@ -102,3 +102,14 @@ esa salida ni se corrigió silenciosamente. 355 tests pasan, incluida reproducci
 de esta limitación. La prioridad es un contrato versionado que separe citas de
 soporte y alcance revisado, antes de seguir acumulando llamadas o integrar la API.
 Detalle: experiments/partial-selection-v2/RESULTS.md.
+
+## Actualización: contrato v4 para ausencia sin cita afirmativa
+
+experiments/open-issues-v4 permite evidence vacía sólo en missing, con alcance
+suministrado registrado por el host y validado contra identidad, versión y
+fragmentos del input. Las citas de los otros estados siguen siendo obligatorias.
+Replay explícito de las dos respuestas preservadas: ausencia=partial/missing,
+contradicción=partial/disputed; campos originales intactos. 371 tests pasan;
+cero llamadas nuevas. El rechazo histórico v3 no cambia. El contrato nuevo aún
+no está adoptado por SQLite/recovery: el siguiente paso es un consumidor versionado
+con recuperación y rechazo de bases incompatibles, sin migración silenciosa.
