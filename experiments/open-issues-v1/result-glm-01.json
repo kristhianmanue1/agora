@@ -1,0 +1,1093 @@
+{
+  "observed_at": "2026-09-28T03:40:57.941759+00:00",
+  "summary": {
+    "planned_calls": 24,
+    "attempted_calls": 24,
+    "completed": 24,
+    "stopped": false,
+    "known_tokens": 40413,
+    "unknown_usage_calls": 0,
+    "frozen_files_verified": true,
+    "arms": {
+      "full": {
+        "completed": 12,
+        "joint_correct": 7,
+        "false_closures": 0,
+        "tokens": 20708,
+        "seconds": 279.4
+      },
+      "tracked": {
+        "completed": 12,
+        "joint_correct": 10,
+        "false_closures": 0,
+        "tokens": 19705,
+        "seconds": 243.354
+      }
+    }
+  },
+  "audit": {
+    "frozen_files_verified": true,
+    "pairs": [
+      {
+        "case": "clarification",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "clarification",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      },
+      {
+        "case": "duplicate",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "duplicate",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      },
+      {
+        "case": "irrelevant",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "irrelevant",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      },
+      {
+        "case": "partial",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "partial",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      },
+      {
+        "case": "refutation",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "refutation",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      },
+      {
+        "case": "update",
+        "stage": 0,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": false
+      },
+      {
+        "case": "update",
+        "stage": 1,
+        "same_inputs_except_previous": true,
+        "same_system": true,
+        "baseline_without_history": true,
+        "tracked_history_present": true
+      }
+    ],
+    "mismatches": [
+      {
+        "case": "clarification",
+        "stage": 0,
+        "mode": "full",
+        "failed": [
+          "relation"
+        ]
+      },
+      {
+        "case": "clarification",
+        "stage": 1,
+        "mode": "full",
+        "failed": [
+          "relation"
+        ]
+      },
+      {
+        "case": "clarification",
+        "stage": 1,
+        "mode": "tracked",
+        "failed": [
+          "relation"
+        ]
+      },
+      {
+        "case": "partial",
+        "stage": 1,
+        "mode": "full",
+        "failed": [
+          "relation"
+        ]
+      },
+      {
+        "case": "irrelevant",
+        "stage": 1,
+        "mode": "tracked",
+        "failed": [
+          "relation"
+        ]
+      },
+      {
+        "case": "duplicate",
+        "stage": 0,
+        "mode": "full",
+        "failed": [
+          "status"
+        ]
+      },
+      {
+        "case": "duplicate",
+        "stage": 1,
+        "mode": "full",
+        "failed": [
+          "status"
+        ]
+      }
+    ],
+    "metrics": {
+      "full": {
+        "status": 10,
+        "relation": 9,
+        "values": 12,
+        "affected": 12
+      },
+      "tracked": {
+        "status": 12,
+        "relation": 10,
+        "values": 12,
+        "affected": 12
+      }
+    },
+    "semantic_support": "requires_manual_assessment",
+    "automatic_admission": false
+  },
+  "scores": [
+    {
+      "case": "clarification",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": false,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "clarification",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "clarification",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": false,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "clarification",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": false,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "partial",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "partial",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "partial",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "partial",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": false,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "irrelevant",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "irrelevant",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "irrelevant",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "irrelevant",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": false,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "duplicate",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "duplicate",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": false,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "duplicate",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "duplicate",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": false,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": false,
+      "false_closure": false
+    },
+    {
+      "case": "update",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "update",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "update",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "update",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "refutation",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "refutation",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "refutation",
+      "stage": 1,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "refutation",
+      "stage": 1,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "relation": true,
+        "values": true,
+        "affected": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    }
+  ],
+  "assessments": [
+    {
+      "ordinal": 1,
+      "case": "clarification",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "open",
+        "relation": "clarification",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "a1",
+            "quote": "Coordinación: falta definir la fecha de entrega de Alba."
+          }
+        ],
+        "affected": [],
+        "reason": "La fuente procede de coordinación y aclara que la fecha de entrega de Alba aún no está definida, por lo que no existe fecha explícita confirmada y el criterio de cierre no se cumple; sin dependientes declarados, no hay derivados que reevaluar."
+      }
+    },
+    {
+      "ordinal": 2,
+      "case": "clarification",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "a1",
+            "quote": "Coordinación: falta definir la fecha de entrega de Alba."
+          }
+        ],
+        "affected": [],
+        "reason": "La fuente a1, proveniente de coordinación, indica que la fecha de entrega de Alba aún no está definida; no existe fecha explícita confirmada, por lo que la cuestión permanece abierta sin valor para el campo date."
+      }
+    },
+    {
+      "ordinal": 3,
+      "case": "clarification",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "resolved",
+        "relation": "update",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "a1",
+            "quote": "Coordinación: falta definir la fecha de entrega de Alba."
+          },
+          {
+            "source_id": "a2",
+            "quote": "Coordinación: confirmo entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "a2 es un cambio legítimo respecto de a1: la coordinación, que inicialmente indicaba la fecha sin definir, confirma explícitamente la entrega de Alba el 2026-10-09, cumpliendo el criterio de cierre. No hay dependientes que reevaluar y no se detecta rectificación ni duplicado."
+      }
+    },
+    {
+      "ordinal": 4,
+      "case": "clarification",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "resolved",
+        "relation": "update",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "a1",
+            "quote": "Coordinación: falta definir la fecha de entrega de Alba."
+          },
+          {
+            "source_id": "a2",
+            "quote": "Coordinación: confirmo entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "La fuente a2, procedente de coordinación (la misma autoridad que a1), confirma explícitamente la fecha de entrega de Alba (2026-10-09), cumpliendo el criterio. Supone un cambio legítimo (update) del estado previo 'sin definir' a una fecha confirmada; no es rectificación porque a1 no establecía un valor erróneo. La cuestión pasa a resolved; no hay dependientes que reevaluar."
+      }
+    },
+    {
+      "ordinal": 5,
+      "case": "partial",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null,
+          "owner": null
+        },
+        "evidence": [
+          {
+            "source_id": "b1",
+            "quote": "Coordinación: fecha y responsable de Alba pendientes."
+          }
+        ],
+        "affected": [],
+        "reason": "La primera fuente (llegada inicial) indica explícitamente que tanto la fecha como el responsable de la entrega de Alba están pendientes; al no haber ningún dato de los dos campos requeridos, el pendiente permanece abierto."
+      }
+    },
+    {
+      "ordinal": 6,
+      "case": "partial",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null,
+          "owner": null
+        },
+        "evidence": [
+          {
+            "source_id": "b1",
+            "quote": "Coordinación: fecha y responsable de Alba pendientes."
+          }
+        ],
+        "affected": [],
+        "reason": "La única fuente llegada declara explícitamente que la fecha y el responsable de Alba están pendientes; al no existir dato alguno para los campos solicitados, el pendiente no puede cerrarse según el criterio y permanece abierto."
+      }
+    },
+    {
+      "ordinal": 7,
+      "case": "partial",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "partial",
+        "relation": "partial",
+        "values": {
+          "date": "2026-10-09",
+          "owner": null
+        },
+        "evidence": [
+          {
+            "source_id": "b2",
+            "quote": "Coordinación: Alba se entrega el 2026-10-09. Responsable aún pendiente."
+          },
+          {
+            "source_id": "b1",
+            "quote": "Coordinación: fecha y responsable de Alba pendientes."
+          }
+        ],
+        "affected": [],
+        "reason": "La nueva fuente b2 aporta el dato parcial de la fecha de entrega (2026-10-09), pero confirma explícitamente que el responsable sigue pendiente; como el criterio exige fecha y responsable explícitos para cerrar todo el pendiente, el estado pasa de abierto a parcial. La evaluación anterior era falible y se actualiza con la nueva llegada; no hay derivados que reevaluar."
+      }
+    },
+    {
+      "ordinal": 8,
+      "case": "partial",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "partial",
+        "relation": "update",
+        "values": {
+          "date": "2026-10-09",
+          "owner": null
+        },
+        "evidence": [
+          {
+            "source_id": "b1",
+            "quote": "Coordinación: fecha y responsable de Alba pendientes."
+          },
+          {
+            "source_id": "b2",
+            "quote": "Coordinación: Alba se entrega el 2026-10-09. Responsable aún pendiente."
+          }
+        ],
+        "affected": [],
+        "reason": "La fuente b2 actualiza legítimamente el estado de b1 al aportar la fecha explícita 2026-10-09, pero el responsable sigue pendiente; como el criterio exige ambos campos explícitos para cerrar, el estado es parcial. No hay dependientes que reevaluar."
+      }
+    },
+    {
+      "ordinal": 9,
+      "case": "irrelevant",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "c1",
+            "quote": "Coordinación: no hay fecha definida para Alba."
+          }
+        ],
+        "affected": [],
+        "reason": "Primera fuente (llegada 0, sin evaluación previa): responde al asunto directamente aclarando que no existe fecha definida para Alba, pero al exigir el criterio una fecha concreta, la pregunta permanece abierta. La fuente es inicial, no un cambio, duplicado o rectificación; no hay responsables ni fechas inventadas y no hay derivados que reevaluar."
+      }
+    },
+    {
+      "ordinal": 10,
+      "case": "irrelevant",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "c1",
+            "quote": "Coordinación: no hay fecha definida para Alba."
+          }
+        ],
+        "affected": [],
+        "reason": "La única fuente disponible (llegada inicial) declara explícitamente que no hay fecha definida para Alba, por lo que el campo solicitado no puede rellenarse y el criterio de cierre (una única fecha) no se cumple. No hay dependientes que reevaluar."
+      }
+    },
+    {
+      "ordinal": 11,
+      "case": "irrelevant",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "open",
+        "relation": "irrelevant",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "c1",
+            "quote": "no hay fecha definida para Alba"
+          },
+          {
+            "source_id": "c2",
+            "quote": "Alba sigue pendiente"
+          }
+        ],
+        "affected": [],
+        "reason": "Ninguna fuente aporta una fecha para Alba: c1 indica expresamente que no hay fecha definida y c2, del mismo origen (Coordinación), sólo da la fecha de otro proyecto (Brisa), lo que constituye otro asunto, y reitera que Alba sigue pendiente. Al no existir una fecha para Alba, no se cumple el criterio de cierre."
+      }
+    },
+    {
+      "ordinal": 12,
+      "case": "irrelevant",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "clarification",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "c1",
+            "quote": "Coordinación: no hay fecha definida para Alba."
+          },
+          {
+            "source_id": "c2",
+            "quote": "Coordinación: el proyecto Brisa se entrega el 2026-10-09; Alba sigue pendiente."
+          }
+        ],
+        "affected": [],
+        "reason": "La nueva fuente (c2) reitera que Alba sigue pendiente y no aporta ninguna fecha para ella; la fecha 2026-10-09 corresponde al proyecto Brisa, otro asunto que no responde a la pregunta. No hay copia literal, cambio legítimo ni rectificación, y la información de c2 es consistente con c1 (aclaración). El criterio de cierre (una única fecha para Alba) no se cumple, el campo date permanece null, el estado sigue open y no hay dependientes que reevaluar."
+      }
+    },
+    {
+      "ordinal": 13,
+      "case": "duplicate",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "initial",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "d1",
+            "quote": "Informe de coordinación: Alba se entrega el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Solo existe una confirmación (d1, origen coordination-report) con arrival 0; el criterio exige dos confirmaciones de origen independiente y una copia no cuenta. Al faltar corroboración, date permanece null y la cuestión sigue abierta a la espera de un segundo origen distinto."
+      }
+    },
+    {
+      "ordinal": 14,
+      "case": "duplicate",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "partial",
+        "relation": "initial",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "d1",
+            "quote": "Informe de coordinación: Alba se entrega el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Solo se recibió una fuente (d1, origen coordination-report), primera llegada y sin evaluación previa. El criterio exige dos confirmaciones de origen independiente y una copia no cuenta; con un único origen no hay corroboración, por lo que date=null y la cuestión queda parcial (datos existentes pero insuficientes para cierre). No hay derivados que reevaluar."
+      }
+    },
+    {
+      "ordinal": 15,
+      "case": "duplicate",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "open",
+        "relation": "duplicate",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "d1",
+            "quote": "Informe de coordinación: Alba se entrega el 2026-10-09."
+          },
+          {
+            "source_id": "d2",
+            "quote": "El boletín copia el informe de coordinación: Alba se entrega el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "La nueva fuente d2 (arrival 1) es copia de d1 (copied_from: d1, mismo origen coordination-report), por lo que no constituye confirmación de origen independiente. Solo existe una confirmación real; el criterio exige dos, y una copia no cuenta. Sin corroboración independiente, date permanece null y la cuestión sigue open. No hay dependientes que reevaluar."
+      }
+    },
+    {
+      "ordinal": 16,
+      "case": "duplicate",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "partial",
+        "relation": "duplicate",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "d1",
+            "quote": "Informe de coordinación: Alba se entrega el 2026-10-09."
+          },
+          {
+            "source_id": "d2",
+            "quote": "El boletín copia el informe de coordinación: Alba se entrega el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Solo existe un origen independiente (coordination-report). d2 es copia explícita de d1 (copied_from=d1) y comparte su origen, por lo que no cuenta como segunda confirmación. Al no alcanzarse dos confirmaciones de origen independiente, date queda null; hay un dato parcial pendiente de corroboración."
+      }
+    },
+    {
+      "ordinal": 17,
+      "case": "update",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "resolved",
+        "relation": "initial",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "e1",
+            "quote": "Coordinación fija entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Primera llegada (arrival 0) sin evaluación previa: la fuente e1, emitida por la coordinación con fecha 2026-09-01, fija la entrega de Alba el 2026-10-09, valor completo y vigente que resuelve la cuestión. Al no existir una fecha anterior, no se ha producido cambio de fecha, de modo que el aviso derivado de e1 permanece consistente; la marca de revisión prevista en el criterio solo procedería si la coordinación modificara la fecha en un futuro."
+      }
+    },
+    {
+      "ordinal": 18,
+      "case": "update",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "resolved",
+        "relation": "initial",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "e1",
+            "quote": "Coordinación fija entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Primera evaluación (relation inicial): la única fuente disponible (e1) registra que la coordinación fijó la entrega de Alba para el 2026-10-09, dato completo que responde el campo solicitado. No hay fuente posterior que indique cambio legítimo ni rectificación, por lo que se conserva el acuerdo histórico. El derivado 'notice' se basa en e1, cuya fecha sigue vigente, así que no requiere reevaluación."
+      }
+    },
+    {
+      "ordinal": 19,
+      "case": "update",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "resolved",
+        "relation": "update",
+        "values": {
+          "date": "2026-10-16"
+        },
+        "evidence": [
+          {
+            "source_id": "e1",
+            "quote": "Coordinación fija entrega de Alba el 2026-10-09."
+          },
+          {
+            "source_id": "e2",
+            "quote": "Coordinación cambia la entrega de Alba al 2026-10-16. El acuerdo anterior fue válido hasta este cambio."
+          }
+        ],
+        "affected": [
+          "notice"
+        ],
+        "reason": "e2 (2026-09-05) es un cambio legítimo que actualiza la fecha fijada en e1 (2026-09-01); la fecha vigente de entrega de Alba es 2026-10-16. Según el criterio, se conserva el acuerdo histórico de e1 y el aviso derivado de la fecha anterior (notice) queda marcado para revisión, sin que ello implique su falsedad automática."
+      }
+    },
+    {
+      "ordinal": 20,
+      "case": "update",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "resolved",
+        "relation": "update",
+        "values": {
+          "date": "2026-10-16"
+        },
+        "evidence": [
+          {
+            "source_id": "e2",
+            "quote": "Coordinación cambia la entrega de Alba al 2026-10-16. El acuerdo anterior fue válido hasta este cambio."
+          },
+          {
+            "source_id": "e1",
+            "quote": "Coordinación fija entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [
+          "notice"
+        ],
+        "reason": "e2 es un cambio legítimo (update): la misma autoridad (Coordinación), con fecha posterior (2026-09-05 frente a 2026-09-01), modifica la entrega de Alba a 2026-10-16 y aclara que el acuerdo anterior fue válido hasta ese momento. La evaluación previa (2026-10-09) es falible y queda reemplazada; no se trata de rectificación ni retirada, por lo que el estado es resolved con la fecha vigente actualizada. Según el criterio, se conserva el acuerdo histórico y el derivado 'notice', basado en e1, debe marcarse para revisión sin que ello implique su borrado o falsedad automática."
+      }
+    },
+    {
+      "ordinal": 21,
+      "case": "refutation",
+      "stage": 0,
+      "mode": "tracked",
+      "assessment": {
+        "status": "resolved",
+        "relation": "initial",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "f1",
+            "quote": "Coordinación confirma entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "La única fuente disponible (f1) confirma explícitamente la fecha de entrega de Alba (2026-10-09). No existe rectificación que retire esa fecha, por lo que el criterio de reapertura no se activa, el pendiente queda cerrado y el aviso dependiente (notice), basado en f1, no requiere reevaluación."
+      }
+    },
+    {
+      "ordinal": 22,
+      "case": "refutation",
+      "stage": 0,
+      "mode": "full",
+      "assessment": {
+        "status": "resolved",
+        "relation": "initial",
+        "values": {
+          "date": "2026-10-09"
+        },
+        "evidence": [
+          {
+            "source_id": "f1",
+            "quote": "Coordinación confirma entrega de Alba el 2026-10-09."
+          }
+        ],
+        "affected": [],
+        "reason": "Primera evaluación (arrival 0, sin evaluación previa): f1 es la única fuente y confirma la fecha de entrega de Alba como 2026-10-09, de modo que la cuestión queda resuelta. No hay rectificación que retire la fecha, por lo que el aviso dependiente ('notice', basado en f1) sigue vigente y no requiere reevaluación."
+      }
+    },
+    {
+      "ordinal": 23,
+      "case": "refutation",
+      "stage": 1,
+      "mode": "tracked",
+      "assessment": {
+        "status": "reopened",
+        "relation": "refutation",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "f1",
+            "quote": "Coordinación confirma entrega de Alba el 2026-10-09."
+          },
+          {
+            "source_id": "f2",
+            "quote": "Coordinación rectifica f1: la fecha 2026-10-09 fue un error de transcripción. No hay fecha aprobada de entrega de Alba."
+          }
+        ],
+        "affected": [
+          "notice"
+        ],
+        "reason": "La nueva fuente f2 es una rectificación (refutación) que retira la única fecha disponible (2026-10-09 de f1), declarándola error de transcripción e indicando que no hay fecha aprobada. Según el criterio, retirar la única fecha reabre el pendiente (status reopened, describiendo la retirada de una respuesta previamente disponible; la evaluación anterior no es autoridad), el campo date queda en null y el derivado notice, basado en f1, requiere reevaluación sin que ello implique borrado automático."
+      }
+    },
+    {
+      "ordinal": 24,
+      "case": "refutation",
+      "stage": 1,
+      "mode": "full",
+      "assessment": {
+        "status": "reopened",
+        "relation": "refutation",
+        "values": {
+          "date": null
+        },
+        "evidence": [
+          {
+            "source_id": "f1",
+            "quote": "Coordinación confirma entrega de Alba el 2026-10-09."
+          },
+          {
+            "source_id": "f2",
+            "quote": "Coordinación rectifica f1: la fecha 2026-10-09 fue un error de transcripción. No hay fecha aprobada de entrega de Alba."
+          }
+        ],
+        "affected": [
+          "notice"
+        ],
+        "reason": "La rectificación f2 retira la única fecha disponible (2026-10-09 de f1) al declararla error de transcripción y no existir fecha aprobada; según el criterio, esto reabre el pendiente y obliga a reevaluar el aviso dependiente 'notice' basado en f1."
+      }
+    }
+  ],
+  "freeze": {
+    "gold.json": "9502eed4d907a0eeef083a4d3a20c372678ba2df3272707e505c052c7963f0d5",
+    "run.py": "870acddd08939cd1ff9ce8b6baf67a69155e0db1e58884fe123d669d8a013b58",
+    "transport.py": "8245fff85c750fba5c76134607ed952a7843dd97691df16735f78df39ec7900e",
+    "protocol.py": "94b29f5c195b74e1ca19134ae96e8bdbab7a73f68fd8b9006540a40ed8fb3052",
+    "build_cases.py": "74364a09086f7989844a02cef34f0b516578a6fda3574692dc801e667ed788d9",
+    "README.md": "0b913b44a0ff65b415dd31e2300720b7b152a0a7263b5a5b8f6987d42b0b1230",
+    "cases.json": "f0b742bb8352d6d3fe503e6b1a10167fe68e0536bbdb20387c45e6bd838f7a9b"
+  },
+  "interpretation": "Exploratory; categorical rubric ambiguities prevent superiority claims. Manual producer review of outputs is not independent adjudication."
+}

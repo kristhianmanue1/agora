@@ -1,0 +1,86 @@
+{
+  "wrong_history": [
+    {
+      "status": "resolved",
+      "values": {
+        "date": "2026-10-21",
+        "owner": "Lina"
+      },
+      "support": {
+        "date": "supported",
+        "owner": "supported"
+      },
+      "missing": {
+        "date": [],
+        "owner": []
+      },
+      "affected": [],
+      "reopened_fields": []
+    }
+  ],
+  "late_source": [
+    {
+      "status": "resolved",
+      "values": {
+        "date": "2026-10-21",
+        "owner": "Lina"
+      },
+      "support": {
+        "date": "supported",
+        "owner": "supported"
+      },
+      "missing": {
+        "date": [],
+        "owner": []
+      },
+      "affected": [],
+      "reopened_fields": []
+    }
+  ],
+  "partial_refutation": [
+    {
+      "status": "partial",
+      "values": {
+        "date": null,
+        "owner": "Lina"
+      },
+      "support": {
+        "date": "withdrawn",
+        "owner": "supported"
+      },
+      "missing": {
+        "date": [
+          "date_confirmed"
+        ],
+        "owner": []
+      },
+      "affected": [
+        "schedule"
+      ],
+      "reopened_fields": [
+        "date"
+      ]
+    }
+  ],
+  "unaffected_dependent": [
+    {
+      "status": "resolved",
+      "values": {
+        "date": "2026-10-28",
+        "owner": "Lina"
+      },
+      "support": {
+        "date": "supported",
+        "owner": "supported"
+      },
+      "missing": {
+        "date": [],
+        "owner": []
+      },
+      "affected": [
+        "schedule"
+      ],
+      "reopened_fields": []
+    }
+  ]
+}

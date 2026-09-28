@@ -1,0 +1,136 @@
+[
+  {
+    "id": "clarification",
+    "question": "¿Fecha de entrega del proyecto Alba?",
+    "fields": [
+      "date"
+    ],
+    "criterion": "Fecha explícita de entrega de Alba confirmada por coordinación.",
+    "sources": [
+      {
+        "id": "a1",
+        "text": "Coordinación: falta definir la fecha de entrega de Alba."
+      },
+      {
+        "id": "a2",
+        "text": "Coordinación: confirmo entrega de Alba el 2026-10-09."
+      }
+    ],
+    "dependents": []
+  },
+  {
+    "id": "partial",
+    "question": "¿Fecha y responsable de entrega de Alba?",
+    "fields": [
+      "date",
+      "owner"
+    ],
+    "criterion": "Se necesitan fecha y responsable explícitos para cerrar todo el pendiente.",
+    "sources": [
+      {
+        "id": "b1",
+        "text": "Coordinación: fecha y responsable de Alba pendientes."
+      },
+      {
+        "id": "b2",
+        "text": "Coordinación: Alba se entrega el 2026-10-09. Responsable aún pendiente."
+      }
+    ],
+    "dependents": []
+  },
+  {
+    "id": "irrelevant",
+    "question": "¿Fecha de entrega de Alba?",
+    "fields": [
+      "date"
+    ],
+    "criterion": "Sólo una fecha para Alba resuelve la pregunta.",
+    "sources": [
+      {
+        "id": "c1",
+        "text": "Coordinación: no hay fecha definida para Alba."
+      },
+      {
+        "id": "c2",
+        "text": "Coordinación: el proyecto Brisa se entrega el 2026-10-09; Alba sigue pendiente."
+      }
+    ],
+    "dependents": []
+  },
+  {
+    "id": "duplicate",
+    "question": "¿Está corroborada la entrega de Alba el 2026-10-09?",
+    "fields": [
+      "date"
+    ],
+    "criterion": "Requiere dos confirmaciones de origen independiente. Una copia no cuenta. Mientras falte corroboración, date=null.",
+    "sources": [
+      {
+        "id": "d1",
+        "text": "Informe de coordinación: Alba se entrega el 2026-10-09.",
+        "origin": "coordination-report"
+      },
+      {
+        "id": "d2",
+        "text": "El boletín copia el informe de coordinación: Alba se entrega el 2026-10-09.",
+        "origin": "coordination-report",
+        "copied_from": "d1"
+      }
+    ],
+    "dependents": []
+  },
+  {
+    "id": "update",
+    "question": "¿Fecha vigente de entrega de Alba?",
+    "fields": [
+      "date"
+    ],
+    "criterion": "La coordinación puede cambiar la fecha. Conservar el acuerdo histórico; marcar para revisión el aviso derivado de la fecha anterior.",
+    "sources": [
+      {
+        "id": "e1",
+        "text": "2026-09-01. Coordinación fija entrega de Alba el 2026-10-09."
+      },
+      {
+        "id": "e2",
+        "text": "2026-09-05. Coordinación cambia la entrega de Alba al 2026-10-16. El acuerdo anterior fue válido hasta este cambio."
+      }
+    ],
+    "dependents": [
+      {
+        "id": "notice",
+        "source_ids": [
+          "e1"
+        ],
+        "description": "Aviso de entrega vigente basado en e1"
+      }
+    ]
+  },
+  {
+    "id": "refutation",
+    "question": "¿Fecha confirmada de entrega de Alba?",
+    "fields": [
+      "date"
+    ],
+    "criterion": "Una rectificación que retira la única fecha reabre el pendiente y exige revisar el aviso dependiente.",
+    "sources": [
+      {
+        "id": "f1",
+        "text": "Coordinación confirma entrega de Alba el 2026-10-09."
+      },
+      {
+        "id": "f2",
+        "text": "Coordinación rectifica f1: la fecha 2026-10-09 fue un error de transcripción. No hay fecha aprobada de entrega de Alba."
+      }
+    ],
+    "dependents": [
+      {
+        "id": "notice",
+        "source_ids": [
+          "f1"
+        ],
+        "description": "Aviso de entrega vigente basado en f1"
+      }
+    ]
+  }
+]

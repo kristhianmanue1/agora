@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "simulation": "application_ack_lost_after_commit",
+  "child_exit": 7,
+  "child_returned_result": false,
+  "operation_id": "recovery-demo-001",
+  "operation_state": "committed",
+  "recovered_same_result": true,
+  "revisions": 2,
+  "simulated_provider_calls": 1,
+  "real_model_calls": 0,
+  "result": {
+    "admission": "not_admitted",
+    "assessment": {
+      "affected": [],
+      "fields": {
+        "date": {
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "quote": "Nube se entrega el 2026-10-21",
+              "source_id": "q2"
+            }
+          ],
+          "missing_requirements": [],
+          "observed_value": "2026-10-21",
+          "relations": [
+            "clarification"
+          ],
+          "support_status": "supported"
+        },
+        "owner": {
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "quote": "Lina sigue siendo responsable",
+              "source_id": "q2"
+            }
+          ],
+          "missing_requirements": [],
+          "observed_value": "Lina",
+          "relations": [
+            "duplicate"
+          ],
+          "support_status": "supported"
+        }
+      },
+      "reason": "Fuente nueva confirma fecha y conserva responsable.",
+      "reopened_fields": [],
+      "status": "resolved"
+    },
+    "revision_sha256": "3ae45892837262843e0fb8180f297ce1daa54910029a273e5b945a00141ceafd"
+  }
+}

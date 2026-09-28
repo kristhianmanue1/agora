@@ -1,0 +1,239 @@
+{
+  "observed_at": "2026-09-28T03:55:30.263572+00:00",
+  "summary": {
+    "planned_calls": 6,
+    "attempted_calls": 3,
+    "completed": 2,
+    "stopped": true,
+    "known_tokens": 13963,
+    "unknown_usage_calls": 0,
+    "frozen_files_verified": true,
+    "arms": {
+      "full": {
+        "completed": 1,
+        "joint_correct": 1,
+        "false_closures": 0,
+        "tokens": 7918,
+        "seconds": 112.113
+      },
+      "tracked": {
+        "completed": 1,
+        "joint_correct": 1,
+        "false_closures": 0,
+        "tokens": 6045,
+        "seconds": 101.471
+      }
+    }
+  },
+  "calls": [
+    {
+      "case": "late_source",
+      "stage": 0,
+      "mode": "tracked",
+      "status": "complete",
+      "request_sha256": "27b4fd98e3e70a01051bd484c98208b960fe3d50ad29b471462171281f2c88b3",
+      "response_sha256": "49be55dd3d7875e3928c844fac4271cd737df35304970940bf6d284817f347f4",
+      "tokens": 6045,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 101.471
+    },
+    {
+      "case": "late_source",
+      "stage": 0,
+      "mode": "full",
+      "status": "complete",
+      "request_sha256": "09040393a5b324a52dd23864935c575f192f3809cfb7b7b76fd1bc4acea6c463",
+      "response_sha256": "f75f10552d2ace43bedd950deef560a460163705a9bb70f07191546ec1bcc1d6",
+      "tokens": 4217,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 62.158
+    },
+    {
+      "case": "partial_refutation",
+      "stage": 0,
+      "mode": "full",
+      "status": "failed",
+      "request_sha256": "9fc7c7afde2b514f1a3baed4c80f005adc2b1049db0f3f583cca5302d6c0f98a",
+      "response_sha256": "1a1b6649381f1236c9661e74db6e763e984787bcff0cbe8d6a9f0ec6c6810fb8",
+      "tokens": 3701,
+      "reported_model": "glm-5.3-flash",
+      "failure_type": "ValueError",
+      "failure": "invalid_relation",
+      "seconds": 49.955
+    }
+  ],
+  "scores": [
+    {
+      "case": "late_source",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "late_source",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    }
+  ],
+  "assessments": [
+    {
+      "fields": {
+        "date": {
+          "observed_value": "2026-10-21",
+          "support_status": "supported",
+          "missing_requirements": [],
+          "relations": [
+            "update",
+            "historical"
+          ],
+          "evidence": [
+            {
+              "source_id": "l1",
+              "quote": "la entrega de Nube cambia del 2026-10-14 al 2026-10-21"
+            },
+            {
+              "source_id": "l2",
+              "quote": "Nube se entregará el 2026-10-14"
+            }
+          ]
+        },
+        "owner": {
+          "observed_value": "Lina",
+          "support_status": "supported",
+          "missing_requirements": [],
+          "relations": [
+            "initial",
+            "historical"
+          ],
+          "evidence": [
+            {
+              "source_id": "l1",
+              "quote": "Responsable Lina."
+            },
+            {
+              "source_id": "l2",
+              "quote": "responsable Lina"
+            }
+          ]
+        }
+      },
+      "reason": "La decisión del 2026-10-05 (l1) sustituye la fecha antes válida 2026-10-14 por 2026-10-21 y fija el responsable Lina; es el estado vigente al corte 2026-10-10. El acta del 2026-09-20 (l2), aunque llegó después (2026-10-09), declara registrar únicamente lo acordado ese día, por lo que sólo refleja un estado pasado ya superado: su orden de llegada no le otorga vigencia, es histórica y no altera el valor actual. Los valores de la evaluación previa se confirman contra las fuentes; se refinan las relaciones (l1: update en fecha, initial en responsable) y se añade la evidencia faltante.",
+      "status": "resolved",
+      "reopened_fields": [],
+      "affected": []
+    },
+    {
+      "fields": {
+        "date": {
+          "observed_value": "2026-10-21",
+          "support_status": "supported",
+          "missing_requirements": [],
+          "relations": [
+            "initial",
+            "historical"
+          ],
+          "evidence": [
+            {
+              "source_id": "l1",
+              "quote": "la entrega de Nube cambia del 2026-10-14 al 2026-10-21"
+            },
+            {
+              "source_id": "l2",
+              "quote": "Nube se entregará el 2026-10-14"
+            }
+          ]
+        },
+        "owner": {
+          "observed_value": "Lina",
+          "support_status": "supported",
+          "missing_requirements": [],
+          "relations": [
+            "initial",
+            "historical"
+          ],
+          "evidence": [
+            {
+              "source_id": "l1",
+              "quote": "Responsable Lina"
+            },
+            {
+              "source_id": "l2",
+              "quote": "responsable Lina"
+            }
+          ]
+        }
+      },
+      "reason": "La decisión del 2026-10-05 (l1) fija la fecha vigente de entrega en 2026-10-21 y confirma a Lina como responsable, satisfaciendo date_confirmed y owner_confirmed al corte 2026-10-10. El acta l2 llegó después (2026-10-09) pero sólo registra el acuerdo del 2026-09-20 (fecha 2026-10-14), un estado pasado ya superado por la decisión posterior, por lo que es historical: no refuta ni actualiza, y el orden de llegada no altera la vigencia.",
+      "status": "resolved",
+      "reopened_fields": [],
+      "affected": []
+    }
+  ],
+  "rejected_response": {
+    "content": "{\"fields\":{\"date\":{\"observed_value\":null,\"support_status\":\"withdrawn\",\"missing_requirements\":[\"date_confirmed\"],\"relations\":[{\"source_id\":\"p1\",\"relation\":\"initial\"},{\"source_id\":\"p2\",\"relation\":\"refutation\"}],\"evidence\":[{\"source_id\":\"p1\",\"quote\":\"Nube se entrega el 2026-10-21\"},{\"source_id\":\"p2\",\"quote\":\"la fecha de p1 es un error, no existe fecha aprobada para Nube\"}]},\"owner\":{\"observed_value\":\"Lina\",\"support_status\":\"supported\",\"missing_requirements\":[],\"relations\":[{\"source_id\":\"p1\",\"relation\":\"initial\"},{\"source_id\":\"p2\",\"relation\":\"duplicate\"}],\"evidence\":[{\"source_id\":\"p1\",\"quote\":\"Lina es responsable\"},{\"source_id\":\"p2\",\"quote\":\"Lina sigue siendo responsable\"}]}},\"reason\":\"Para la fecha, p2 retira explícitamente el valor de p1 declarándolo error y sin fecha aprobada de reemplazo, por lo que la fecha queda withdrawn (valor null y requisito date_confirmed faltante). Para el responsable, p1 establece a Lina y p2 (mismo origen Coordinación, sin corroboración independiente) lo reafirma, por lo que el owner vigente es Lina y el requisito owner_confirmed está satisfecho.\"}",
+    "finish_reason": "stop",
+    "reported_model": "glm-5.3-flash",
+    "requested_model": "glm-5.3-flash",
+    "response_id": "20260928115328a1fda3bb8c0a49fd",
+    "usage": {
+      "completion_tokens": 3103,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2728
+      },
+      "prompt_tokens": 598,
+      "prompt_tokens_details": {
+        "cached_tokens": 448
+      },
+      "total_tokens": 3701
+    }
+  },
+  "freeze": {
+    "gold.json": "839cf485c2b9e19cdee3a4b4eb387e3e22d709c169203640fde3abace0d970bd",
+    "run.py": "a3c57be2317ba18039bc17c8a022e37e75b1be24b38d2a836ab94f89a1b3a15b",
+    "transport.py": "8245fff85c750fba5c76134607ed952a7843dd97691df16735f78df39ec7900e",
+    "protocol.py": "41457250414ed5674ffee72b3f6c0e089bf215c01b4435134821e13d1cbb3f80",
+    "build_cases.py": "e0dd887f3877271aef2a37335b8a93913b0c84fdb286b170e1a8595802f52cbe",
+    "README.md": "53bc424c10b0aedb49328adc27f721afb6be4b33b34074a0c18ba24a69ffc1f9",
+    "continue.py": "537108b4af064abcc514088ca6d6a2b1027ed5d1bb6fdec450467b3330ed2f94",
+    "cases.json": "93c6f8aa30d51969226e32da1b8b74db2f3df5d2c98307015d121f983ab7793f",
+    "CONTINUATION.md": "8c94fae91973070706487dc8ad97d1816ee5eaa610697ac416aac34e6f3f7ef5"
+  },
+  "audit": {
+    "frozen_files_verified": true,
+    "same_cases_gold_protocol_as_glm01": true,
+    "completed_pair_same_inputs_except_previous": true,
+    "semantic_review": "producer self-review; both late_source values match l1; rejected output not normalized"
+  },
+  "local_counterexample": {
+    "dependent": {
+      "id": "already_current_notice",
+      "fields": [
+        "date"
+      ],
+      "represented_value": "2026-10-21"
+    },
+    "observed_affected": [
+      "already_current_notice"
+    ],
+    "limitation": "field-only conservative propagation cannot distinguish stale and already-current dependents"
+  }
+}

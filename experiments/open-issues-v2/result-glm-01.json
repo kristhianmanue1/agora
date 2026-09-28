@@ -1,0 +1,200 @@
+{
+  "observed_at": "2026-09-28T03:49:29.345397+00:00",
+  "summary": {
+    "planned_calls": 8,
+    "attempted_calls": 3,
+    "completed": 2,
+    "stopped": true,
+    "known_tokens": 3514,
+    "unknown_usage_calls": 1,
+    "frozen_files_verified": true,
+    "arms": {
+      "full": {
+        "completed": 1,
+        "joint_correct": 1,
+        "false_closures": 0,
+        "tokens": 1369,
+        "seconds": 12.832
+      },
+      "tracked": {
+        "completed": 1,
+        "joint_correct": 1,
+        "false_closures": 0,
+        "tokens": 2145,
+        "seconds": 116.637
+      }
+    }
+  },
+  "calls": [
+    {
+      "case": "wrong_history",
+      "stage": 0,
+      "mode": "full",
+      "status": "complete",
+      "request_sha256": "50b925fe535156d9d6ad4bf3f23da0c3ab3aef528787d69c718fbf27c314c4a9",
+      "response_sha256": "5cae5a5a829e3890baf8ae37483c7345f54681961fcb9d57939b7021a5d50102",
+      "tokens": 1369,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 12.832
+    },
+    {
+      "case": "wrong_history",
+      "stage": 0,
+      "mode": "tracked",
+      "status": "complete",
+      "request_sha256": "b69b7bf3c4f962053cdd6bb351515e8f91599c38c2b60d2a8921866d75083661",
+      "response_sha256": "17f2c2df9d473958384f505716c44beae0e619acfff6479952bb2062520131b7",
+      "tokens": 2145,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 26.445
+    },
+    {
+      "case": "late_source",
+      "stage": 0,
+      "mode": "tracked",
+      "status": "failed",
+      "request_sha256": "27b4fd98e3e70a01051bd484c98208b960fe3d50ad29b471462171281f2c88b3",
+      "response_sha256": "8c206579f0991c0d873ad3989bde56a6de9bd83d3037f85e58acfa115be5caee",
+      "reported_model": null,
+      "http_status": null,
+      "failure_type": "ValueError",
+      "failure": "transport_failure",
+      "seconds": 90.192
+    }
+  ],
+  "scores": [
+    {
+      "case": "wrong_history",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "wrong_history",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    }
+  ],
+  "assessments": [
+    {
+      "ordinal": 1,
+      "case": "wrong_history",
+      "mode": "full",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": "2026-10-21",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial"
+            ],
+            "evidence": [
+              {
+                "source_id": "w1",
+                "quote": "Nube se entrega el 2026-10-21"
+              }
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial"
+            ],
+            "evidence": [
+              {
+                "source_id": "w1",
+                "quote": "La responsable es Lina"
+              }
+            ]
+          }
+        },
+        "reason": "La única fuente w1, recibida el 2026-10-01 (anterior a la fecha de corte 2026-10-10), confirma la fecha de entrega 2026-10-21 y a Lina como responsable, cumpliendo los requisitos date_confirmed y owner_confirmed. No hay fuentes posteriores que modifiquen o retiren estos valores, por lo que ambos campos son apoyados con relación initial.",
+        "status": "resolved",
+        "reopened_fields": [],
+        "affected": []
+      }
+    },
+    {
+      "ordinal": 2,
+      "case": "wrong_history",
+      "mode": "tracked",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": "2026-10-21",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial"
+            ],
+            "evidence": [
+              {
+                "source_id": "w1",
+                "quote": "Nube se entrega el 2026-10-21"
+              }
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial"
+            ],
+            "evidence": [
+              {
+                "source_id": "w1",
+                "quote": "La responsable es Lina"
+              }
+            ]
+          }
+        },
+        "reason": "La evaluación previa carecía de evidencia y sus valores (2026-11-30 y Marco) no están respaldados por ninguna fuente actual, por lo que se verifican contra las fuentes. La única fuente w1 (recibida 2026-10-01, previa al corte 2026-10-10) establece la fecha 2026-10-21 y la responsable Lina, cumpliendo date_confirmed y owner_confirmed. Como w1 es la única fuente relevante y ninguna fuente retira un valor previo, la relación es initial para ambos campos; la corrección de la evaluación previa no constituye refutation.",
+        "status": "resolved",
+        "reopened_fields": [],
+        "affected": []
+      }
+    }
+  ],
+  "freeze": {
+    "gold.json": "839cf485c2b9e19cdee3a4b4eb387e3e22d709c169203640fde3abace0d970bd",
+    "run.py": "a3c57be2317ba18039bc17c8a022e37e75b1be24b38d2a836ab94f89a1b3a15b",
+    "transport.py": "8245fff85c750fba5c76134607ed952a7843dd97691df16735f78df39ec7900e",
+    "protocol.py": "41457250414ed5674ffee72b3f6c0e089bf215c01b4435134821e13d1cbb3f80",
+    "build_cases.py": "e0dd887f3877271aef2a37335b8a93913b0c84fdb286b170e1a8595802f52cbe",
+    "README.md": "53bc424c10b0aedb49328adc27f721afb6be4b33b34074a0c18ba24a69ffc1f9",
+    "cases.json": "93c6f8aa30d51969226e32da1b8b74db2f3df5d2c98307015d121f983ab7793f"
+  },
+  "audit": {
+    "frozen_files_verified": true,
+    "completed_pair_same_inputs_except_previous": true,
+    "manual_review": "producer self-review; corrected values match w1",
+    "pending": [
+      "late_source",
+      "partial_refutation",
+      "unaffected_dependent"
+    ]
+  }
+}

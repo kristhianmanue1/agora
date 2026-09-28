@@ -1,0 +1,116 @@
+{
+  "clarification": [
+    {
+      "status": "open",
+      "relation": "initial",
+      "values": {
+        "date": null
+      },
+      "affected": []
+    },
+    {
+      "status": "resolved",
+      "relation": "clarification",
+      "values": {
+        "date": "2026-10-09"
+      },
+      "affected": []
+    }
+  ],
+  "partial": [
+    {
+      "status": "open",
+      "relation": "initial",
+      "values": {
+        "date": null,
+        "owner": null
+      },
+      "affected": []
+    },
+    {
+      "status": "partial",
+      "relation": "partial",
+      "values": {
+        "date": "2026-10-09",
+        "owner": null
+      },
+      "affected": []
+    }
+  ],
+  "irrelevant": [
+    {
+      "status": "open",
+      "relation": "initial",
+      "values": {
+        "date": null
+      },
+      "affected": []
+    },
+    {
+      "status": "open",
+      "relation": "irrelevant",
+      "values": {
+        "date": null
+      },
+      "affected": []
+    }
+  ],
+  "duplicate": [
+    {
+      "status": "open",
+      "relation": "initial",
+      "values": {
+        "date": null
+      },
+      "affected": []
+    },
+    {
+      "status": "open",
+      "relation": "duplicate",
+      "values": {
+        "date": null
+      },
+      "affected": []
+    }
+  ],
+  "update": [
+    {
+      "status": "resolved",
+      "relation": "initial",
+      "values": {
+        "date": "2026-10-09"
+      },
+      "affected": []
+    },
+    {
+      "status": "resolved",
+      "relation": "update",
+      "values": {
+        "date": "2026-10-16"
+      },
+      "affected": [
+        "notice"
+      ]
+    }
+  ],
+  "refutation": [
+    {
+      "status": "resolved",
+      "relation": "initial",
+      "values": {
+        "date": "2026-10-09"
+      },
+      "affected": []
+    },
+    {
+      "status": "reopened",
+      "relation": "refutation",
+      "values": {
+        "date": null
+      },
+      "affected": [
+        "notice"
+      ]
+    }
+  ]
+}

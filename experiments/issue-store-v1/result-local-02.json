@@ -1,0 +1,44 @@
+{
+  "revisions": [
+    {
+      "revision": 1,
+      "digest": "2a753f5ff5e6eef4100910d56a8de0036463750177a387af5acfa9a350639bdc",
+      "status": "open",
+      "reopened_fields": [],
+      "fresh_process_exact_recovery": true
+    },
+    {
+      "revision": 2,
+      "digest": "7277ec1e8dfe28af7e5040cc59422387dd58814f6417c84d8667e9340655dfaf",
+      "status": "resolved",
+      "reopened_fields": [],
+      "fresh_process_exact_recovery": true
+    },
+    {
+      "revision": 3,
+      "digest": "2d70248e9157a4643f97c66bba0b0e3a6f1f4b5cca1642bcef0c6717f4502198",
+      "status": "partial",
+      "reopened_fields": [
+        "date"
+      ],
+      "fresh_process_exact_recovery": true
+    }
+  ],
+  "model_calls": 0,
+  "source_mode": "synthetic_manual_and_replay",
+  "expected_statuses": [
+    "open",
+    "resolved",
+    "partial"
+  ],
+  "observed_statuses": [
+    "open",
+    "resolved",
+    "partial"
+  ],
+  "code_sha256": {
+    "store.py": "e5a42bb86cee4c039fe641910c1d9bfcf2f10530133fe115449c649b569b6cd2",
+    "run.py": "c0490dbfdcf507ee53e21f359138e9695a011cc5ee06a21c4a237dffb5a5f9f0",
+    "protocol.py": "0deb963449978e60119b30a30907eb0d8d570ac53afc28e4384263a6078db30a"
+  }
+}

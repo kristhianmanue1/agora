@@ -1,0 +1,394 @@
+{
+  "observed_at": "2026-09-28T04:02:05.936779+00:00",
+  "summary": {
+    "planned_calls": 4,
+    "attempted_calls": 4,
+    "completed": 4,
+    "stopped": false,
+    "known_tokens": 14421,
+    "unknown_usage_calls": 0,
+    "frozen_files_verified": true,
+    "arms": {
+      "full": {
+        "completed": 2,
+        "joint_correct": 2,
+        "false_closures": 0,
+        "tokens": 6480,
+        "seconds": 68.066
+      },
+      "tracked": {
+        "completed": 2,
+        "joint_correct": 2,
+        "false_closures": 0,
+        "tokens": 7941,
+        "seconds": 86.824
+      }
+    }
+  },
+  "scores": [
+    {
+      "case": "partial_refutation",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "partial_refutation",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "unaffected_dependent",
+      "stage": 0,
+      "mode": "tracked",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    },
+    {
+      "case": "unaffected_dependent",
+      "stage": 0,
+      "mode": "full",
+      "checks": {
+        "status": true,
+        "values": true,
+        "support": true,
+        "missing": true,
+        "affected": true,
+        "reopened_fields": true
+      },
+      "joint_correct": true,
+      "false_closure": false
+    }
+  ],
+  "calls": [
+    {
+      "case": "partial_refutation",
+      "stage": 0,
+      "mode": "full",
+      "status": "complete",
+      "request_sha256": "13e099e8e912f437f08eadfd9044f610205c2be6f19aff4655dc9a3a2fc4d4fc",
+      "response_sha256": "29b57025f9f8a58efd1479a2a4dc753636c1d7506e5c54d0e69f8d3e64b8890e",
+      "tokens": 2866,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 27.616
+    },
+    {
+      "case": "partial_refutation",
+      "stage": 0,
+      "mode": "tracked",
+      "status": "complete",
+      "request_sha256": "dff6e7e87c60f2071aa16f882764b2f717ccf4a6bf1dad1bd0702abe4a7bb498",
+      "response_sha256": "64dce325454d442d78569e875ebc97f8530948aec69a9a0ad0e6092a2c0ea53c",
+      "tokens": 3299,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 32.457
+    },
+    {
+      "case": "unaffected_dependent",
+      "stage": 0,
+      "mode": "tracked",
+      "status": "complete",
+      "request_sha256": "075d6dac943a241d288762e5dc9e6fecb7269ee316af8f1b9a10349006e55a31",
+      "response_sha256": "5c102b6b0dbe9e335528059a87655eb51371ad72c34abee7e1075f26b9bea27b",
+      "tokens": 4642,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 54.367
+    },
+    {
+      "case": "unaffected_dependent",
+      "stage": 0,
+      "mode": "full",
+      "status": "complete",
+      "request_sha256": "bd5de30f78b9c86be23e47b447d5e77aa8d58a378a312e80c709d95f98708c07",
+      "response_sha256": "565492972a25a14aefa39bfafd4eab2c6845fffdfc89117426d33b568e0503ef",
+      "tokens": 3614,
+      "reported_model": "glm-5.3-flash",
+      "seconds": 40.45
+    }
+  ],
+  "assessments": [
+    {
+      "case": "partial_refutation",
+      "mode": "full",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": null,
+            "support_status": "withdrawn",
+            "missing_requirements": [
+              "date_confirmed"
+            ],
+            "relations": [
+              "initial",
+              "refutation"
+            ],
+            "evidence": [
+              {
+                "source_id": "p1",
+                "quote": "Nube se entrega el 2026-10-21"
+              },
+              {
+                "source_id": "p2",
+                "quote": "la fecha de p1 es un error, no existe fecha aprobada para Nube"
+              }
+            ],
+            "change_source_ids": [
+              "p2"
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "duplicate"
+            ],
+            "evidence": [
+              {
+                "source_id": "p1",
+                "quote": "Lina es responsable"
+              },
+              {
+                "source_id": "p2",
+                "quote": "Lina sigue siendo responsable"
+              }
+            ],
+            "change_source_ids": []
+          }
+        },
+        "reason": "La fecha 2026-10-21 de p1 fue explícitamente retirada por la misma fuente coordinadora en p2 (2026-10-08, vigente al corte) sin reemplazo, por lo que la fecha queda withdrawn y sin valor observado; falta el requisito date_confirmed. El responsable Lina se mantiene vigente y confirmado en p1 y reiterado en p2 (mismo origen, relación duplicate), cumpliendo owner_confirmed.",
+        "status": "partial",
+        "reopened_fields": [
+          "date"
+        ],
+        "affected": [
+          "schedule"
+        ]
+      }
+    },
+    {
+      "case": "partial_refutation",
+      "mode": "tracked",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": null,
+            "support_status": "withdrawn",
+            "missing_requirements": [
+              "date_confirmed"
+            ],
+            "relations": [
+              "initial",
+              "refutation"
+            ],
+            "change_source_ids": [
+              "p2"
+            ],
+            "evidence": [
+              {
+                "source_id": "p1",
+                "quote": "Nube se entrega el 2026-10-21"
+              },
+              {
+                "source_id": "p2",
+                "quote": "la fecha de p1 es un error, no existe fecha aprobada para Nube"
+              }
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "duplicate"
+            ],
+            "change_source_ids": [],
+            "evidence": [
+              {
+                "source_id": "p1",
+                "quote": "Lina es responsable"
+              },
+              {
+                "source_id": "p2",
+                "quote": "Lina sigue siendo responsable"
+              }
+            ]
+          }
+        },
+        "reason": "A la fecha de corte 2026-10-10, p2 (recibida 2026-10-08) retira explícitamente la fecha de p1 sin reemplazo, por lo que la fecha queda retirada (withdrawn) y sin valor vigente; la evaluación previa solo consideraba p1 y la corrección proviene de una fuente, no de una mera revisión del agente. El responsable Lina permanece vigente: p2 lo reafirma desde el mismo origen (Coordinación), lo que se registra como duplicado y no como cambio.",
+        "status": "partial",
+        "reopened_fields": [
+          "date"
+        ],
+        "affected": [
+          "schedule"
+        ]
+      }
+    },
+    {
+      "case": "unaffected_dependent",
+      "mode": "tracked",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": "2026-10-28",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "update"
+            ],
+            "evidence": [
+              {
+                "source_id": "u1",
+                "quote": "Nube se entrega el 2026-10-21"
+              },
+              {
+                "source_id": "u2",
+                "quote": "Nube se entregará el 2026-10-28 en sustitución de la fecha anterior"
+              }
+            ],
+            "change_source_ids": [
+              "u2"
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "duplicate"
+            ],
+            "evidence": [
+              {
+                "source_id": "u1",
+                "quote": "responsable Lina"
+              },
+              {
+                "source_id": "u2",
+                "quote": "La responsable sigue siendo Lina."
+              }
+            ],
+            "change_source_ids": []
+          }
+        },
+        "reason": "u2 (recibida 2026-10-08, vigente al 2026-10-10) sustituye explícitamente la fecha 2026-10-21 de u1 por 2026-10-28, por lo que para date es update (no refutation, pues hay valor de reemplazo con vigencia aplicable). Para owner, u2 reitera el mismo valor Lina desde el mismo origen (Coordinación), sin corroboración independiente: relación duplicate; el valor inicial de u1 se mantiene vigente. Ambos campos cumplen sus requisitos (date_confirmed, owner_confirmed) y quedan soportados; la evaluación previa de date queda superada por la nueva fuente, no retirada.",
+        "status": "resolved",
+        "reopened_fields": [],
+        "affected": [
+          "schedule"
+        ]
+      }
+    },
+    {
+      "case": "unaffected_dependent",
+      "mode": "full",
+      "result": {
+        "fields": {
+          "date": {
+            "observed_value": "2026-10-28",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "update"
+            ],
+            "evidence": [
+              {
+                "source_id": "u1",
+                "quote": "Nube se entrega el 2026-10-21"
+              },
+              {
+                "source_id": "u2",
+                "quote": "Nube se entregará el 2026-10-28 en sustitución de la fecha anterior"
+              }
+            ],
+            "change_source_ids": [
+              "u2"
+            ]
+          },
+          "owner": {
+            "observed_value": "Lina",
+            "support_status": "supported",
+            "missing_requirements": [],
+            "relations": [
+              "initial",
+              "duplicate"
+            ],
+            "evidence": [
+              {
+                "source_id": "u1",
+                "quote": "responsable Lina"
+              },
+              {
+                "source_id": "u2",
+                "quote": "La responsable sigue siendo Lina"
+              }
+            ],
+            "change_source_ids": []
+          }
+        },
+        "reason": "u1 (2026-10-01) estableció la fecha inicial 2026-10-21 y a Lina como responsable. u2 (2026-10-08, recibida antes del corte 2026-10-10) sustituye explícitamente esa fecha por el 2026-10-28 (update sobre date) y confirma que la responsable sigue siendo Lina (mismo origen, corrobora sin cambiar el valor: duplicate sobre owner). Ambos valores están confirmados por Coordinación y vigentes al corte, por lo que date y owner quedan soportados sin requisitos faltantes; el dependiente already_reviewed_schedule ya contempla ambas fuentes.",
+        "status": "resolved",
+        "reopened_fields": [],
+        "affected": [
+          "schedule"
+        ]
+      }
+    }
+  ],
+  "freeze": {
+    "gold.json": "3e733bbace6319a2bb1e61f8eafd37d80d0fab3a593041175caf0d9efb75b844",
+    "run.py": "088665fa1f1cc346069b8323c69204f663d55d13ee7ac912c07e29232661b8a3",
+    "transport.py": "8245fff85c750fba5c76134607ed952a7843dd97691df16735f78df39ec7900e",
+    "protocol.py": "0deb963449978e60119b30a30907eb0d8d570ac53afc28e4384263a6078db30a",
+    "build_cases.py": "e3508bda2fc6ba30b605c4080c05f2b033183dca64072a62461fc231e9ca97c5",
+    "README.md": "acb64fa7f8c65270f59eee389e6236d3a85dc1c0a88c5c32d0747e1ea9717a69",
+    "cases.json": "4e0690555234876eaaabca9333a4f6753c5203e33a9ad3479f35d25b6462bad2"
+  },
+  "audit": {
+    "frozen_files_verified": true,
+    "pairs": [
+      {
+        "case": "partial_refutation",
+        "same_input_except_previous": true
+      },
+      {
+        "case": "unaffected_dependent",
+        "same_input_except_previous": true
+      }
+    ],
+    "source_texts_unchanged_from_v2": true,
+    "semantic_review": "producer self-review of all four outputs against fixtures; no independent adjudication"
+  }
+}
