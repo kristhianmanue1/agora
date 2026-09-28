@@ -1,0 +1,101 @@
+{
+  "status": "complete",
+  "real_model_calls": 0,
+  "simulated_provider_calls": 1,
+  "lost_ack_recovered": true,
+  "child_exit": 7,
+  "original_revision_preserved": true,
+  "revisions": 2,
+  "scope_sources": 2,
+  "operation_state": "committed",
+  "result": {
+    "admission": "not_admitted",
+    "assessment": {
+      "affected": [],
+      "fields": {
+        "date": {
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "quote": "Nube se entrega el 2026-10-21",
+              "source_id": "new-confirmation"
+            }
+          ],
+          "missing_requirements": [],
+          "observed_value": "2026-10-21",
+          "relations": [
+            "clarification"
+          ],
+          "support_status": "supported"
+        },
+        "owner": {
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "quote": "Lina sigue siendo responsable",
+              "source_id": "new-confirmation"
+            }
+          ],
+          "missing_requirements": [],
+          "observed_value": "Lina",
+          "relations": [
+            "clarification"
+          ],
+          "support_status": "supported"
+        }
+      },
+      "reason": "Simulated clarification; no semantic model evaluation.",
+      "reopened_fields": [],
+      "reviewed_scope": {
+        "basis": "supplied_input_only",
+        "sources": [
+          {
+            "capture_complete_declared": false,
+            "coordinate_space": "packet_text_utf8",
+            "original_revision": 1,
+            "original_sha256": "b3f3d36e89bc25f5cf9d8d546d5cc47ab811c0fa4fd083650a94858f08cd4277",
+            "original_source_id": "absence-0",
+            "selection_complete": "not_established",
+            "source_id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a",
+            "source_sha256": "c654721ef8a8b9164e3fd57f8a64a7b2c173ecbb938b84f9ca71adda214ab815",
+            "units": [
+              {
+                "end_byte": 28,
+                "locator": {
+                  "end_ms": 9000,
+                  "id": "s0",
+                  "speaker": "Coordinación sintética",
+                  "start_ms": 0
+                },
+                "start_byte": 0
+              }
+            ]
+          },
+          {
+            "coordinate_space": "source_text_utf8",
+            "selection_complete": "not_established",
+            "source_id": "new-confirmation",
+            "source_sha256": "1e81e014f2f29ebc3418defb2e9a7283af7ed1e6ad505c6e11a284e1ba429bd8",
+            "units": [
+              {
+                "end_byte": 85,
+                "locator": null,
+                "start_byte": 0
+              }
+            ]
+          }
+        ]
+      },
+      "schema": "agora/issue-assessment/v4-experimental",
+      "status": "resolved"
+    },
+    "revision_sha256": "1f84f961441fe4a1122d023b7d992662e9f2ee370e6a19e4b2f73e7c1140eb51"
+  },
+  "code_sha256": {
+    "store.py": "537ef53028b27b5ef3f47b7dc78b35109b6be7503b30912c7c53ca8d3b61f87c",
+    "adapter.py": "5f30dd977b93879a2d2998b5b582769216a7939e22da3db90a1f41d8fcccfe97",
+    "recovery.py": "fdae036a3018fc41be4bde6834900a7034092f0b31716b48c264eb8444b4ec1d",
+    "fixtures.py": "5fbe824d93f4bff353b9efb68e384319900e05fb2e5583560dfeb27e277ba975",
+    "run.py": "ab0367e75db9e72de9ec837b846fef62a28f2b3d7936ed0cf9a38ea053ac4236"
+  }
+}

@@ -123,3 +123,13 @@ pasan; cero llamadas a modelos. Los consumidores previos siguen intactos.
 Siguiente: llegada explícita de fuente y evaluación candidata con cabeza esperada
 sobre este consumidor, primero mediante fixtures. No hay watcher ni recuperación
 de operaciones de proveedor v4 todavía. Véase experiments/issue-store-v2/RESULTS.md.
+
+## Actualización: flujo incremental recuperable v4
+
+experiments/issue-flow-v4 conecta explícitamente fuente nueva, evaluación y nueva
+revisión con request persistido e ID estable. Prueba local: hijo confirma y sale
+sin devolver respuesta; padre recupera sin duplicar proveedor simulado. Se conserva
+revisión original y alcance pasa de una a dos fuentes. 393 tests pasan; cero llamadas
+reales. Consumidores anteriores intactos; base nueva sin migración automática.
+Pendiente: una prueba GLM acotada sobre este flujo y posterior consolidación de
+entrada CLI, sin añadir watcher. Evidencia: experiments/issue-flow-v4/RESULTS.md.
