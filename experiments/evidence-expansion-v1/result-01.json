@@ -1,0 +1,366 @@
+{
+  "schema": "agora/evidence-expansion/v1-experimental",
+  "frozen_inputs_verified": true,
+  "parent_artifacts_unchanged": true,
+  "providers": {
+    "glm": {
+      "conditions": {
+        "baseline": {
+          "total": 4,
+          "completed": 4,
+          "correct": 2,
+          "false_support": 1,
+          "matching_repeat_pairs": 0,
+          "repeat_pairs": 2
+        },
+        "control": {
+          "total": 4,
+          "completed": 4,
+          "correct": 2,
+          "false_support": 0,
+          "matching_repeat_pairs": 2,
+          "repeat_pairs": 2
+        },
+        "target": {
+          "total": 4,
+          "completed": 4,
+          "correct": 4,
+          "false_support": 0,
+          "matching_repeat_pairs": 2,
+          "repeat_pairs": 2
+        }
+      },
+      "usage": {
+        "completion_tokens": 4146,
+        "prompt_tokens": 8486,
+        "total_tokens": 12632
+      },
+      "sum_request_seconds": 125.03,
+      "cases": [
+        {
+          "id": "claim1-baseline-r1",
+          "condition": "baseline",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "insufficient",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim0-control-r2",
+          "condition": "control",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-control-r1",
+          "condition": "control",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim1-control-r2",
+          "condition": "control",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "insufficient",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim1-target-r2",
+          "condition": "target",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim1-target-r1",
+          "condition": "target",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim0-target-r1",
+          "condition": "target",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "supported",
+          "predicted": "supported",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim1-baseline-r2",
+          "condition": "baseline",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "supported",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim1-control-r1",
+          "condition": "control",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "insufficient",
+          "original_label": "supported",
+          "parent_response_sha256": "c2fc6d7255e64a0f0dfb9d17bf694b21fd6a6fdb739ca10aea6c6446bc8e039c",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim0-baseline-r1",
+          "condition": "baseline",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "insufficient",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim0-baseline-r2",
+          "condition": "baseline",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-target-r2",
+          "condition": "target",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "supported",
+          "predicted": "supported",
+          "original_label": "contradicted",
+          "parent_response_sha256": "5c49842beb00314122715eabebcab3f15be53ec7fc3691762a838bd118c92bfc",
+          "changed_from_original": true,
+          "correct": true
+        }
+      ]
+    },
+    "jev": {
+      "conditions": {
+        "baseline": {
+          "total": 4,
+          "completed": 4,
+          "correct": 0,
+          "false_support": 2,
+          "matching_repeat_pairs": 2,
+          "repeat_pairs": 2
+        },
+        "control": {
+          "total": 4,
+          "completed": 4,
+          "correct": 0,
+          "false_support": 2,
+          "matching_repeat_pairs": 2,
+          "repeat_pairs": 2
+        },
+        "target": {
+          "total": 4,
+          "completed": 4,
+          "correct": 4,
+          "false_support": 0,
+          "matching_repeat_pairs": 2,
+          "repeat_pairs": 2
+        }
+      },
+      "usage": {
+        "input_tokens": 11162,
+        "output_tokens": 546
+      },
+      "sum_request_seconds": 3.231,
+      "cases": [
+        {
+          "id": "claim1-baseline-r1",
+          "condition": "baseline",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "supported",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-control-r2",
+          "condition": "control",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-control-r1",
+          "condition": "control",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim1-control-r2",
+          "condition": "control",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "supported",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim1-target-r2",
+          "condition": "target",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim1-target-r1",
+          "condition": "target",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "contradicted",
+          "predicted": "contradicted",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim0-target-r1",
+          "condition": "target",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "supported",
+          "predicted": "supported",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": true,
+          "correct": true
+        },
+        {
+          "id": "claim1-baseline-r2",
+          "condition": "baseline",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "supported",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim1-control-r1",
+          "condition": "control",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "supported",
+          "original_label": "supported",
+          "parent_response_sha256": "14819cb3f3a7d74b982efd3b3f17a80598240e8dc632cb0eb81921ef01a3d4e6",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-baseline-r1",
+          "condition": "baseline",
+          "repeat": 1,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-baseline-r2",
+          "condition": "baseline",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "insufficient",
+          "predicted": "contradicted",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": false,
+          "correct": false
+        },
+        {
+          "id": "claim0-target-r2",
+          "condition": "target",
+          "repeat": 2,
+          "status": "completed",
+          "expected": "supported",
+          "predicted": "supported",
+          "original_label": "contradicted",
+          "parent_response_sha256": "3cce32f4a51b73bcd59b285da1a932bbfaf4b4ea8cecb08114f7feac0eebee94",
+          "changed_from_original": true,
+          "correct": true
+        }
+      ]
+    }
+  }
+}

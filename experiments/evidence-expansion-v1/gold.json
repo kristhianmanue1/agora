@@ -1,0 +1,14 @@
+{
+  "claim0-baseline-r1": "insufficient",
+  "claim0-baseline-r2": "insufficient",
+  "claim0-control-r1": "insufficient",
+  "claim0-control-r2": "insufficient",
+  "claim0-target-r1": "supported",
+  "claim0-target-r2": "supported",
+  "claim1-baseline-r1": "insufficient",
+  "claim1-baseline-r2": "insufficient",
+  "claim1-control-r1": "insufficient",
+  "claim1-control-r2": "insufficient",
+  "claim1-target-r1": "contradicted",
+  "claim1-target-r2": "contradicted"
+}

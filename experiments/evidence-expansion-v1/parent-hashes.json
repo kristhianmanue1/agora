@@ -1,0 +1,16 @@
+{
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/gold.json": "33a6abdb6f78c2c6955190be848453d643fdddf0ec69e8a354802bd3365efbf7",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/audit_selection.py": "7226877a828f40aef8d6ea401db7995426003815afdead2476eab742c3dfad38",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/run.py": "f03c62880aeb9d8d65ddf6d86534c80c6d3b2ae94ef7c1a9ccea9f079276868f",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/cases-metadata.json": "83117fb945850d39c27b422c89a05566a92bcfaee9502ea00c81b2824decab30",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/README.md": "eaf59cedc44d41f0f5adf4137e5ab94e4fa4292dde7ce28450dbde534e719397",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/.gitignore": "644280b0eb08f498b6d5f87ca6b3106a90da9d4fb421d08a66387afbf25b6d02",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/result-01.json": "630ace4bb5789155b449703b905ee6362ad511379087fc696b138670488681ec",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/selection.json": "81b2ca7dccc7e6dc3871dba68382c281c186b93a3cd458d985b5dde1a79d1ddf",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/records-glm.jsonl": "2cf46c10f60e3a66a476680023d21d93efd52144e0028b330c3cc02cd63a639f",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/selection-audit.json": "391c7d17ab200a7867ed0c98ff774c2a0e4768c1352d19f00e714ddec58094ec",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/prepare.py": "9ba07291a38feb77d52abd8ff3139bd34b19dd97fa707578832a65768eb509bb",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/records-jev.jsonl": "7a03b3dbc8456f2937b8cb67a7da1f5d2f16d6301f1aa8d1f4b4b17cd2172879",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/freeze.json": "dfe5b315bc0db1aa9b7d531546c0668adf52064198d5514814513e823a150fcc",
+  "/Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v2/score.py": "5104c10ea7900657541257706a636f5539ecdb0bb409d68189224c8855a3a593"
+}
