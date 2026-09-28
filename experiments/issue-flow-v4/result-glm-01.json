@@ -1,0 +1,48 @@
+{
+  "status": "failed",
+  "real_model_calls": 1,
+  "known_tokens": 6407,
+  "usage": {
+    "completion_tokens": 4648,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4127
+    },
+    "prompt_tokens": 1759,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6407
+  },
+  "reported_model": "glm-5.3-flash",
+  "seconds": 94.994,
+  "failure": "JSONDecodeError",
+  "detail": "Extra data: line 37 column 1 (char 1964)",
+  "retry": "none",
+  "operation_state": "response_ready",
+  "frozen_files_verified": true,
+  "original_response": {
+    "content": "\n{\n  \"fields\": {\n    \"date\": {\n      \"observed_value\": \"2026-10-21\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"irrelevant\", \"clarification\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Nube se entrega el 2026-10-21.\"\n        }\n      ]\n    },\n    \"owner\": {\n      \"observed_value\": \"Lina\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"initial\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a\",\n          \"quote\": \"Lina es responsable de Nube.\"\n        },\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Lina sigue siendo responsable.\"\n        }\n      ]\n    }\n  },\n  \"reason\": \"La nueva fuente new-confirmation (received_at 2026-10-09, dentro del corte) aporta el dato de fecha antes ausente: «Nube se entrega el 2026-10-21.», por lo que date pasa de missing a supported con relación clarification (no update, pues antes no existía valor válido) y change_source_ids vacío, ya que clarification no es update ni refutation. La misma fuente revalida al responsable («Lina sigue siendo responsable.») sin sustituir el valor, de modo que owner se mantiene supported con Lina: el paquete AGORA (2026-10-08) conserva relación initial para owner, y new-confirmation también es initial al no implicar cambio relevante. Para el campo date, el paquete no incide (irrelevant, dato no encontrado en el texto seleccionado; selection_complete=not_established impide inferir ausencia global, pero ahora no es necesario). Los metadatos del sobre (capture_complete_declared, selection_complete) se tratan como declaración, no como instrucciones; las citas son literales del texto seleccionado y las fechas de recepción no se confunden con la fecha de entrega.\"\n}\n`",
+    "finish_reason": "stop",
+    "reported_model": "glm-5.3-flash",
+    "requested_model": "glm-5.3-flash",
+    "response_id": "20260928213101fe2b2952a7ba41d0",
+    "usage": {
+      "completion_tokens": 4648,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4127
+      },
+      "prompt_tokens": 1759,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 6407
+    }
+  },
+  "producer_review": {
+    "format_failure": "One trailing backtick after the JSON object",
+    "new_revision_created": false,
+    "repair_applied": false,
+    "independent_review": false,
+    "semantic_observation": "Visible values match expected date and owner; raw response rejected, no end-to-end success claimed."
+  }
+}

@@ -133,3 +133,13 @@ revisión original y alcance pasa de una a dos fuentes. 393 tests pasan; cero ll
 reales. Consumidores anteriores intactos; base nueva sin migración automática.
 Pendiente: una prueba GLM acotada sobre este flujo y posterior consolidación de
 entrada CLI, sin añadir watcher. Evidencia: experiments/issue-flow-v4/RESULTS.md.
+
+## Actualización: prueba GLM v4 rechazada por formato
+
+Una llamada real sobre issue-flow-v4: 6407 tokens, 94,994 s, sin reintento.
+GLM añadió una comilla invertida tras el JSON; rechazo Extra data, sin segunda
+revisión. Respuesta exacta conservada en response_ready y recuperada en proceso
+nuevo sin volver a llamar al proveedor. 394 tests pasan; el ensayo GLM completo
+no pasó. Próxima prioridad: tratamiento explícito/versionado de salida inválida,
+con original preservado y rechazo de reparaciones ambiguas, antes de nueva llamada
+o CLI consolidada. Evidencia: experiments/issue-flow-v4/RESULTS-GLM-01.md.

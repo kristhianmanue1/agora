@@ -84,3 +84,14 @@ class FlowV4Tests(unittest.TestCase):
         p=Path(self.temp.name)/'old';s=old.Store(p,create=True);s.close();before=p.read_bytes()
         with self.assertRaisesRegex(ValueError,'incompatible_store'):m.Store(p)
         self.assertEqual(before,p.read_bytes())
+    def test_actual_glm_trailing_backtick_retained_and_not_retried(self):
+        import json
+        response=json.loads((BASE/'result-glm-01.json').read_text())['original_response']
+        with self.assertRaises(json.JSONDecodeError):m.evaluate(self.store,'op',self.prepared,lambda request:response)
+        self.assertEqual(m.inspect(self.store,'op')['response'],response)
+        other=m.Store(self.path)
+        try:
+            with self.assertRaises(json.JSONDecodeError):m.evaluate(other,'op',self.prepared,self.forbidden)
+            self.assertEqual(len(other.history('nube',self.head)),1)
+            self.assertEqual(m.inspect(other,'op')['state'],'response_ready')
+        finally:other.close()

@@ -1,0 +1,1 @@
+{"status": "complete", "retained_response_exact": true, "operation_unchanged": true, "operation_state": "response_ready", "revisions": 1, "no_provider_call": true, "validation_error": {"type": "JSONDecodeError", "message": "Extra data"}}
