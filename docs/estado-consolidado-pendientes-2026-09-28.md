@@ -143,3 +143,13 @@ nuevo sin volver a llamar al proveedor. 394 tests pasan; el ensayo GLM completo
 no pasó. Próxima prioridad: tratamiento explícito/versionado de salida inválida,
 con original preservado y rechazo de reparaciones ambiguas, antes de nueva llamada
 o CLI consolidada. Evidencia: experiments/issue-flow-v4/RESULTS-GLM-01.md.
+
+## Actualización: reparación de formato explícita y acotada
+
+experiments/output-format-v1 preserva el original y sólo propone eliminar un
+backtick externo posterior al JSON. Recibo con política, hashes y offsets UTF-8;
+contenido ambiguo rechazado. La reparación candidata histórica pasa v4 sin cambiar
+valores/citas; input contrastado contra request original. 404 tests pasan, cero
+llamadas. La operación fallida no cambió ni se creó revisión admitida. Pendiente:
+incorporación explícita del derivado con enlace a respuesta/request y transacción
+recuperable, primero sobre copia experimental. No es reparación automática general.

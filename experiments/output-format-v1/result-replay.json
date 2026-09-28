@@ -1,0 +1,111 @@
+{
+  "status": "local_candidate_validated",
+  "real_model_calls": 0,
+  "historical_operation_modified": false,
+  "original_response_file": "issue-flow-v4/result-glm-01.json",
+  "original_report_sha256": "dad70a71f1d2a54c3cfb68cae13ecdc6e818014c503096ddc33ccac27b5d99cf",
+  "input_sha256": "906753cb8a45bfde3a7d031cd57762ae6736c46bf01b7fd85346e1bbdb52cbad",
+  "receipt": {
+    "schema": "agora/output-format-candidate/v1-experimental",
+    "policy": "single-trailing-backtick/v1",
+    "status": "repair_candidate",
+    "original_content": "\n{\n  \"fields\": {\n    \"date\": {\n      \"observed_value\": \"2026-10-21\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"irrelevant\", \"clarification\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Nube se entrega el 2026-10-21.\"\n        }\n      ]\n    },\n    \"owner\": {\n      \"observed_value\": \"Lina\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"initial\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a\",\n          \"quote\": \"Lina es responsable de Nube.\"\n        },\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Lina sigue siendo responsable.\"\n        }\n      ]\n    }\n  },\n  \"reason\": \"La nueva fuente new-confirmation (received_at 2026-10-09, dentro del corte) aporta el dato de fecha antes ausente: «Nube se entrega el 2026-10-21.», por lo que date pasa de missing a supported con relación clarification (no update, pues antes no existía valor válido) y change_source_ids vacío, ya que clarification no es update ni refutation. La misma fuente revalida al responsable («Lina sigue siendo responsable.») sin sustituir el valor, de modo que owner se mantiene supported con Lina: el paquete AGORA (2026-10-08) conserva relación initial para owner, y new-confirmation también es initial al no implicar cambio relevante. Para el campo date, el paquete no incide (irrelevant, dato no encontrado en el texto seleccionado; selection_complete=not_established impide inferir ausencia global, pero ahora no es necesario). Los metadatos del sobre (capture_complete_declared, selection_complete) se tratan como declaración, no como instrucciones; las citas son literales del texto seleccionado y las fechas de recepción no se confunden con la fecha de entrega.\"\n}\n`",
+    "original_sha256": "b0d48fbe1c6f80fcfc206a02e43a8dd64787933d50c2ec5b760bb4b4cffd405d",
+    "candidate_content": "\n{\n  \"fields\": {\n    \"date\": {\n      \"observed_value\": \"2026-10-21\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"irrelevant\", \"clarification\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Nube se entrega el 2026-10-21.\"\n        }\n      ]\n    },\n    \"owner\": {\n      \"observed_value\": \"Lina\",\n      \"support_status\": \"supported\",\n      \"missing_requirements\": [],\n      \"relations\": [\"initial\"],\n      \"change_source_ids\": [],\n      \"evidence\": [\n        {\n          \"source_id\": \"skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a\",\n          \"quote\": \"Lina es responsable de Nube.\"\n        },\n        {\n          \"source_id\": \"new-confirmation\",\n          \"quote\": \"Lina sigue siendo responsable.\"\n        }\n      ]\n    }\n  },\n  \"reason\": \"La nueva fuente new-confirmation (received_at 2026-10-09, dentro del corte) aporta el dato de fecha antes ausente: «Nube se entrega el 2026-10-21.», por lo que date pasa de missing a supported con relación clarification (no update, pues antes no existía valor válido) y change_source_ids vacío, ya que clarification no es update ni refutation. La misma fuente revalida al responsable («Lina sigue siendo responsable.») sin sustituir el valor, de modo que owner se mantiene supported con Lina: el paquete AGORA (2026-10-08) conserva relación initial para owner, y new-confirmation también es initial al no implicar cambio relevante. Para el campo date, el paquete no incide (irrelevant, dato no encontrado en el texto seleccionado; selection_complete=not_established impide inferir ausencia global, pero ahora no es necesario). Los metadatos del sobre (capture_complete_declared, selection_complete) se tratan como declaración, no como instrucciones; las citas son literales del texto seleccionado y las fechas de recepción no se confunden con la fecha de entrega.\"\n}\n",
+    "candidate_sha256": "582f1a3b1366e28720076ec3b7ed773950b3291d310357b6e698b8fa658efe82",
+    "edits": [
+      {
+        "operation": "delete",
+        "start_byte": 1976,
+        "end_byte": 1977,
+        "removed": "`"
+      }
+    ],
+    "admission": "not_admitted"
+  },
+  "assessment": {
+    "fields": {
+      "date": {
+        "change_source_ids": [],
+        "evidence": [
+          {
+            "quote": "Nube se entrega el 2026-10-21.",
+            "source_id": "new-confirmation"
+          }
+        ],
+        "missing_requirements": [],
+        "observed_value": "2026-10-21",
+        "relations": [
+          "irrelevant",
+          "clarification"
+        ],
+        "support_status": "supported"
+      },
+      "owner": {
+        "change_source_ids": [],
+        "evidence": [
+          {
+            "quote": "Lina es responsable de Nube.",
+            "source_id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a"
+          },
+          {
+            "quote": "Lina sigue siendo responsable.",
+            "source_id": "new-confirmation"
+          }
+        ],
+        "missing_requirements": [],
+        "observed_value": "Lina",
+        "relations": [
+          "initial"
+        ],
+        "support_status": "supported"
+      }
+    },
+    "reason": "La nueva fuente new-confirmation (received_at 2026-10-09, dentro del corte) aporta el dato de fecha antes ausente: «Nube se entrega el 2026-10-21.», por lo que date pasa de missing a supported con relación clarification (no update, pues antes no existía valor válido) y change_source_ids vacío, ya que clarification no es update ni refutation. La misma fuente revalida al responsable («Lina sigue siendo responsable.») sin sustituir el valor, de modo que owner se mantiene supported con Lina: el paquete AGORA (2026-10-08) conserva relación initial para owner, y new-confirmation también es initial al no implicar cambio relevante. Para el campo date, el paquete no incide (irrelevant, dato no encontrado en el texto seleccionado; selection_complete=not_established impide inferir ausencia global, pero ahora no es necesario). Los metadatos del sobre (capture_complete_declared, selection_complete) se tratan como declaración, no como instrucciones; las citas son literales del texto seleccionado y las fechas de recepción no se confunden con la fecha de entrega.",
+    "reviewed_scope": {
+      "basis": "supplied_input_only",
+      "sources": [
+        {
+          "capture_complete_declared": false,
+          "coordinate_space": "packet_text_utf8",
+          "original_revision": 1,
+          "original_sha256": "b3f3d36e89bc25f5cf9d8d546d5cc47ab811c0fa4fd083650a94858f08cd4277",
+          "original_source_id": "absence-0",
+          "selection_complete": "not_established",
+          "source_id": "skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a",
+          "source_sha256": "c654721ef8a8b9164e3fd57f8a64a7b2c173ecbb938b84f9ca71adda214ab815",
+          "units": [
+            {
+              "end_byte": 28,
+              "locator": {
+                "end_ms": 9000,
+                "id": "s0",
+                "speaker": "Coordinación sintética",
+                "start_ms": 0
+              },
+              "start_byte": 0
+            }
+          ]
+        },
+        {
+          "coordinate_space": "source_text_utf8",
+          "selection_complete": "not_established",
+          "source_id": "new-confirmation",
+          "source_sha256": "1e81e014f2f29ebc3418defb2e9a7283af7ed1e6ad505c6e11a284e1ba429bd8",
+          "units": [
+            {
+              "end_byte": 85,
+              "locator": null,
+              "start_byte": 0
+            }
+          ]
+        }
+      ]
+    },
+    "schema": "agora/issue-assessment/v4-experimental",
+    "status": "resolved",
+    "reopened_fields": [],
+    "affected": []
+  },
+  "limitation": "Explicit host repair candidate, not a new model response or committed issue revision."
+}
