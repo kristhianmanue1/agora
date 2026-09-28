@@ -1,0 +1,13 @@
+{
+  "experiments/reviewer-comparison-v2/gold.json": "33a6abdb6f78c2c6955190be848453d643fdddf0ec69e8a354802bd3365efbf7",
+  "experiments/reviewer-comparison-v2/run.py": "f03c62880aeb9d8d65ddf6d86534c80c6d3b2ae94ef7c1a9ccea9f079276868f",
+  "experiments/reviewer-comparison-v2/cases-metadata.json": "83117fb945850d39c27b422c89a05566a92bcfaee9502ea00c81b2824decab30",
+  "experiments/reviewer-comparison-v2/README.md": "eaf59cedc44d41f0f5adf4137e5ab94e4fa4292dde7ce28450dbde534e719397",
+  "experiments/reviewer-comparison-v2/.gitignore": "644280b0eb08f498b6d5f87ca6b3106a90da9d4fb421d08a66387afbf25b6d02",
+  "experiments/reviewer-comparison-v2/selection.json": "81b2ca7dccc7e6dc3871dba68382c281c186b93a3cd458d985b5dde1a79d1ddf",
+  "experiments/reviewer-comparison-v2/prepare.py": "9ba07291a38feb77d52abd8ff3139bd34b19dd97fa707578832a65768eb509bb",
+  "experiments/reviewer-comparison-v2/inputs/cases.json": "3966ef7882cb5951d427a1b2c66b17edbb774ca7361fb8237c12acf8b205bf41",
+  "experiments/reviewer-comparison-v1/run.py": "a0063c942a76c9f2c38cce5a3877e72539d858275cd7db2156779f99d1a4ab05",
+  "experiments/attrscore-v2/prepare.py": "6de68ebd927ca53b1731100de294ba97ddde858457ad4b5eef0c35ab35a8e75f",
+  "src/agora/qasper.py": "b1099ea3d81b9055c01f52533570a1ae0a438fa34056a64553d51c1f48a1fe15"
+}

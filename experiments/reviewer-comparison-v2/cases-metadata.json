@@ -1,0 +1,230 @@
+[
+  {
+    "id": "attr-200",
+    "source_row_index": 200,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-134",
+    "source_row_index": 134,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-170",
+    "source_row_index": 170,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-147",
+    "source_row_index": 147,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-114",
+    "source_row_index": 114,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-135",
+    "source_row_index": 135,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-93",
+    "source_row_index": 93,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-231",
+    "source_row_index": 231,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-71",
+    "source_row_index": 71,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-96",
+    "source_row_index": 96,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-220",
+    "source_row_index": 220,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-196",
+    "source_row_index": 196,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-66",
+    "source_row_index": 66,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-124",
+    "source_row_index": 124,
+    "original_label": "Attributable"
+  },
+  {
+    "id": "attr-42",
+    "source_row_index": 42,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-123",
+    "source_row_index": 123,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-24",
+    "source_row_index": 24,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-0",
+    "source_row_index": 0,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-121",
+    "source_row_index": 121,
+    "original_label": "Extrapolatory"
+  },
+  {
+    "id": "attr-4",
+    "source_row_index": 4,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-210",
+    "source_row_index": 210,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-209",
+    "source_row_index": 209,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-158",
+    "source_row_index": 158,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "attr-204",
+    "source_row_index": 204,
+    "original_label": "Contradictory"
+  },
+  {
+    "id": "long-1811.00051-0-full",
+    "paper_id": "1811.00051",
+    "scope": "full",
+    "evidence_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "evidence_bytes": 116094,
+    "reference_paragraph_sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1811.00051-0-abstract",
+    "paper_id": "1811.00051",
+    "scope": "abstract",
+    "evidence_sha256": "1af401bfd728ead954b0cb511a9829122ed69537257c898f712f74a8db8bbc6e",
+    "evidence_bytes": 1686,
+    "reference_paragraph_sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1811.00051-1-full",
+    "paper_id": "1811.00051",
+    "scope": "full",
+    "evidence_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "evidence_bytes": 116094,
+    "reference_paragraph_sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1811.00051-1-abstract",
+    "paper_id": "1811.00051",
+    "scope": "abstract",
+    "evidence_sha256": "1af401bfd728ead954b0cb511a9829122ed69537257c898f712f74a8db8bbc6e",
+    "evidence_bytes": 1686,
+    "reference_paragraph_sha256": "9abd85ecc6287915d8b90c45f64a4f3f3a5142227b38bbb021702be7987b50a2",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1811.00051-2-full",
+    "paper_id": "1811.00051",
+    "scope": "full",
+    "evidence_sha256": "5f8685bb12a3d45a19d9f16908d434acc3fc1f6d54ff14082963f4dd42f925a0",
+    "evidence_bytes": 116094,
+    "reference_paragraph_sha256": "3e65c33bcd59d60a74f47c4c62eef92141e054e565295bed832e9fd14fbeef18",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1811.00051-2-abstract",
+    "paper_id": "1811.00051",
+    "scope": "abstract",
+    "evidence_sha256": "1af401bfd728ead954b0cb511a9829122ed69537257c898f712f74a8db8bbc6e",
+    "evidence_bytes": 1686,
+    "reference_paragraph_sha256": "3e65c33bcd59d60a74f47c4c62eef92141e054e565295bed832e9fd14fbeef18",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-0-full",
+    "paper_id": "1911.03977",
+    "scope": "full",
+    "evidence_sha256": "7df5b9e8afc672cb4688d4c876fa353f8f03432adc3d8a15687d15a227f4e1ac",
+    "evidence_bytes": 68344,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-0-abstract",
+    "paper_id": "1911.03977",
+    "scope": "abstract",
+    "evidence_sha256": "d5a24436ddd8e12be94cd6111b23612aa2579c6a1d359c77b13282737d6a1327",
+    "evidence_bytes": 1678,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-1-full",
+    "paper_id": "1911.03977",
+    "scope": "full",
+    "evidence_sha256": "7df5b9e8afc672cb4688d4c876fa353f8f03432adc3d8a15687d15a227f4e1ac",
+    "evidence_bytes": 68344,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-1-abstract",
+    "paper_id": "1911.03977",
+    "scope": "abstract",
+    "evidence_sha256": "d5a24436ddd8e12be94cd6111b23612aa2579c6a1d359c77b13282737d6a1327",
+    "evidence_bytes": 1678,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-2-full",
+    "paper_id": "1911.03977",
+    "scope": "full",
+    "evidence_sha256": "7df5b9e8afc672cb4688d4c876fa353f8f03432adc3d8a15687d15a227f4e1ac",
+    "evidence_bytes": 68344,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  },
+  {
+    "id": "long-1911.03977-2-abstract",
+    "paper_id": "1911.03977",
+    "scope": "abstract",
+    "evidence_sha256": "d5a24436ddd8e12be94cd6111b23612aa2579c6a1d359c77b13282737d6a1327",
+    "evidence_bytes": 1678,
+    "reference_paragraph_sha256": "72a94e3f62eb831c6cbd81107742a5742ddae050e04982042b1821eb45d67b32",
+    "gold_origin": "producer-authored evidence-scope control, not official QASPER answer"
+  }
+]

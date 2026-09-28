@@ -62,3 +62,5 @@ puede enviarse al proveedor. El funcionamiento independiente de Ágora no exige
 que todas sus ejecuciones sean locales.
 
 Comparación experimental de revisores: [GLM y Jev, 2026-09-28](docs/comparacion-revisores-glm-jev-2026-09-28.md).
+
+Continuación con fuentes externas: [AttrScore reservado y documentos grandes](docs/comparacion-revisores-reservados-2026-09-28.md).

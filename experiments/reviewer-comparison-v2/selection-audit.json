@@ -1,0 +1,7 @@
+{
+  "original_csv_selection_identical": true,
+  "selected_texts_identical": true,
+  "prior_cases": 36,
+  "selected": 24,
+  "limitation": "Frozen preparer used splitlines; unselected multiline rows may differ. Correct CSV parsing reproduced this exact selection and all selected text. Use newline-preserving parsing for future corpora."
+}

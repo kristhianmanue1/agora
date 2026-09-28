@@ -1,0 +1,777 @@
+{
+  "schema": "agora/reviewer-comparison/v2-experimental",
+  "freeze_verified": true,
+  "groups": {
+    "attrscore": {
+      "glm": {
+        "total": 24,
+        "completed": 24,
+        "correct": 20,
+        "false_support": 0,
+        "false_support_denominator": 16,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 7,
+            "contradicted": 0,
+            "insufficient": 1,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 6,
+            "insufficient": 2,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 0,
+            "contradicted": 1,
+            "insufficient": 7,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 20,
+            "total": 24
+          }
+        },
+        "reported_models": [
+          "glm-5.3-flash"
+        ],
+        "usage_totals": {
+          "completion_tokens": 8530,
+          "prompt_tokens": 7925,
+          "total_tokens": 16455
+        },
+        "sum_request_seconds": 243.03,
+        "median_request_seconds": 8.780000000000001,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "attr-200",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-134",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-170",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-147",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-114",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-135",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-93",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-231",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-71",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-96",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-220",
+            "expected": "insufficient",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-196",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-66",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-124",
+            "expected": "supported",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-42",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-123",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-24",
+            "expected": "contradicted",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-0",
+            "expected": "contradicted",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-121",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-4",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-210",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-209",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-158",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-204",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.837037037037037,
+        "no_valid_output": 0
+      },
+      "jev": {
+        "total": 24,
+        "completed": 24,
+        "correct": 21,
+        "false_support": 0,
+        "false_support_denominator": 16,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 7,
+            "contradicted": 1,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 7,
+            "insufficient": 1,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 0,
+            "contradicted": 1,
+            "insufficient": 7,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 21,
+            "total": 24
+          }
+        },
+        "reported_models": [
+          "jev-1.13.0"
+        ],
+        "usage_totals": {
+          "input_tokens": 13242,
+          "output_tokens": 1107
+        },
+        "sum_request_seconds": 6.611,
+        "median_request_seconds": 0.284,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "attr-200",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-134",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-170",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-147",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-114",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-135",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-93",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-231",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-71",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-96",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-220",
+            "expected": "insufficient",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-196",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-66",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-124",
+            "expected": "supported",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-42",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-123",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-24",
+            "expected": "contradicted",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-0",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-121",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-4",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-210",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-209",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-158",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "attr-204",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.8772875816993464,
+        "no_valid_output": 0
+      },
+      "paired": {
+        "both_match_gold": 20,
+        "only_glm_matches": 0,
+        "only_jev_matches": 1,
+        "neither_matches": 3
+      }
+    },
+    "large_full": {
+      "glm": {
+        "total": 6,
+        "completed": 6,
+        "correct": 6,
+        "false_support": 0,
+        "false_support_denominator": 2,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 4,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 2,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "reported_models": [
+          "glm-5.3-flash"
+        ],
+        "usage_totals": {
+          "completion_tokens": 997,
+          "prompt_tokens": 126080,
+          "total_tokens": 127077
+        },
+        "sum_request_seconds": 28.867,
+        "median_request_seconds": 5.015000000000001,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "long-1811.00051-0-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-1-full",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-2-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-0-full",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-1-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-2-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.6666666666666666,
+        "no_valid_output": 0
+      },
+      "jev": {
+        "total": 6,
+        "completed": 6,
+        "correct": 6,
+        "false_support": 0,
+        "false_support_denominator": 2,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 4,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 2,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "reported_models": [
+          "jev-1.13.0"
+        ],
+        "usage_totals": {
+          "input_tokens": 133657,
+          "output_tokens": 270
+        },
+        "sum_request_seconds": 3.318,
+        "median_request_seconds": 0.5265,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "long-1811.00051-0-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-1-full",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-2-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-0-full",
+            "expected": "contradicted",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-1-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-2-full",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.6666666666666666,
+        "no_valid_output": 0
+      },
+      "paired": {
+        "both_match_gold": 6,
+        "only_glm_matches": 0,
+        "only_jev_matches": 0,
+        "neither_matches": 0
+      }
+    },
+    "large_abstract": {
+      "glm": {
+        "total": 6,
+        "completed": 6,
+        "correct": 4,
+        "false_support": 1,
+        "false_support_denominator": 4,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 2,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 1,
+            "contradicted": 1,
+            "insufficient": 2,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 4,
+            "total": 6
+          }
+        },
+        "reported_models": [
+          "glm-5.3-flash"
+        ],
+        "usage_totals": {
+          "completion_tokens": 2074,
+          "prompt_tokens": 3083,
+          "total_tokens": 5157
+        },
+        "sum_request_seconds": 53.659,
+        "median_request_seconds": 4.322,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "long-1811.00051-0-abstract",
+            "expected": "insufficient",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-1-abstract",
+            "expected": "insufficient",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-2-abstract",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-0-abstract",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-1-abstract",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-2-abstract",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.48888888888888893,
+        "no_valid_output": 0
+      },
+      "jev": {
+        "total": 6,
+        "completed": 6,
+        "correct": 4,
+        "false_support": 1,
+        "false_support_denominator": 4,
+        "confusion_matrix": {
+          "supported": {
+            "supported": 2,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "contradicted": 0,
+            "insufficient": 0,
+            "no_valid_output": 0
+          },
+          "insufficient": {
+            "supported": 1,
+            "contradicted": 1,
+            "insufficient": 2,
+            "no_valid_output": 0
+          }
+        },
+        "by_language": {
+          "es": {
+            "correct": 0,
+            "total": 0
+          },
+          "en": {
+            "correct": 4,
+            "total": 6
+          }
+        },
+        "reported_models": [
+          "jev-1.13.0"
+        ],
+        "usage_totals": {
+          "input_tokens": 4402,
+          "output_tokens": 273
+        },
+        "sum_request_seconds": 1.58,
+        "median_request_seconds": 0.2595,
+        "cost_usd": null,
+        "cost_note": "No verified per-request charge or tariff supplied; tokens are not dollars.",
+        "cases": [
+          {
+            "case_id": "long-1811.00051-0-abstract",
+            "expected": "insufficient",
+            "predicted": "contradicted",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-1-abstract",
+            "expected": "insufficient",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1811.00051-2-abstract",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-0-abstract",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-1-abstract",
+            "expected": "insufficient",
+            "predicted": "insufficient",
+            "status": "completed"
+          },
+          {
+            "case_id": "long-1911.03977-2-abstract",
+            "expected": "supported",
+            "predicted": "supported",
+            "status": "completed"
+          }
+        ],
+        "macro_f1_fixed_three_classes": 0.48888888888888893,
+        "no_valid_output": 0
+      },
+      "paired": {
+        "both_match_gold": 4,
+        "only_glm_matches": 0,
+        "only_jev_matches": 0,
+        "neither_matches": 2
+      }
+    }
+  }
+}
