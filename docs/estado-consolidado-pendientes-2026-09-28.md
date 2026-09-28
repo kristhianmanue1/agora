@@ -91,3 +91,14 @@ Autorrevisión de explicaciones y citas favorable sólo para este caso sintétic
 el antecedente ya declaraba la fecha pendiente. No acredita ausencia sin
 antecedentes, contradicciones ni robustez general. 351 pruebas pasan.
 Detalle y próximos casos: experiments/partial-selection-v1/RESULTS.md.
+
+## Actualización: ausencia fría y contradicción
+
+experiments/partial-selection-v2 ejecutó dos llamadas GLM (9713 tokens). La
+contradicción quedó abierta, con ambas fechas citadas y responsable conservada.
+La ausencia sin antecedente fue bien delimitada en la explicación, pero el
+validador rechazó evidence vacía con missing_evidence. No se considera aprobada
+esa salida ni se corrigió silenciosamente. 355 tests pasan, incluida reproducción
+de esta limitación. La prioridad es un contrato versionado que separe citas de
+soporte y alcance revisado, antes de seguir acumulando llamadas o integrar la API.
+Detalle: experiments/partial-selection-v2/RESULTS.md.

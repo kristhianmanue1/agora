@@ -1,0 +1,185 @@
+{
+  "experiment_status": "complete_with_contract_finding",
+  "independent_review": false,
+  "real_calls": 2,
+  "retries": 0,
+  "known_tokens": 9713,
+  "absence": {
+    "runner_report": {
+      "status": "failed",
+      "calls": 1,
+      "known_tokens": 5582,
+      "cases": [],
+      "failure": "ValueError",
+      "detail": "missing_evidence",
+      "retry": "none"
+    },
+    "response": {
+      "content": "{\"fields\":{\"date\":{\"observed_value\":null,\"support_status\":\"missing\",\"missing_requirements\":[\"date_confirmed\"],\"relations\":[\"irrelevant\"],\"evidence\":[],\"change_source_ids\":[]},\"owner\":{\"observed_value\":\"Lina\",\"support_status\":\"supported\",\"missing_requirements\":[],\"relations\":[\"initial\"],\"evidence\":[{\"source_id\":\"skopos-packet:00e3aa8cb91101b809c9e4259eb3e13a8ee08048923e48f35d254f859d4a8b8a\",\"quote\":\"Lina es responsable de Nube.\"}],\"change_source_ids\":[]}},\"reason\":\"Única fuente recibida (paquete AGORA_SOURCE_ENVELOPE_V1, received_at 2026-10-08) con un solo span de texto literal: «Lina es responsable de Nube.». Eso sostiene owner=Lina como responsable de Nube/entrega, sin evaluación previa ni cambios posteriores, por lo que la relación es initial. capture_complete_declared=false es una declaración, no prueba, y no anula el hallazgo positivo. Para date no se encontró ninguna fecha de entrega en el texto seleccionado (dato no encontrado, no negación explícita); como selection_complete=not_established, no puede inferirse ausencia en toda la fuente a partir de la selección, de modo que date queda missing con valor null. La fecha de recepción del paquete (2026-10-08) no constituye fecha de entrega de Nube.\"}",
+      "finish_reason": "stop",
+      "reported_model": "glm-5.3-flash",
+      "requested_model": "glm-5.3-flash",
+      "response_id": "20260928202456bf45a86e2609436b",
+      "usage": {
+        "completion_tokens": 4567,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4173
+        },
+        "prompt_tokens": 1015,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        },
+        "total_tokens": 5582
+      }
+    },
+    "producer_semantic_review": "Correctly scopes missing date to selected text; no global absence claim. Not accepted by existing validator: empty evidence on missing field."
+  },
+  "conflict": {
+    "status": "complete",
+    "calls": 1,
+    "known_tokens": 4131,
+    "checks": {
+      "status": true,
+      "values": true,
+      "support": true,
+      "both_conflicting_sources": true
+    },
+    "assessment": {
+      "fields": {
+        "date": {
+          "observed_value": null,
+          "support_status": "disputed",
+          "missing_requirements": [
+            "date_confirmed"
+          ],
+          "relations": [
+            "initial"
+          ],
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe",
+              "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable."
+            },
+            {
+              "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2",
+              "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable."
+            }
+          ]
+        },
+        "owner": {
+          "observed_value": "Lina",
+          "support_status": "supported",
+          "missing_requirements": [],
+          "relations": [
+            "initial"
+          ],
+          "change_source_ids": [],
+          "evidence": [
+            {
+              "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe",
+              "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable."
+            },
+            {
+              "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2",
+              "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable."
+            }
+          ]
+        }
+      },
+      "reason": "Dos fuentes de origen distinto, ambas del mismo día 2026-10-08 (igual a la fecha de corte), afirman fechas de entrega contradictorias para Nube (2026-10-21 frente a 2026-10-28); ninguna fuente actualiza o retira explícitamente a la otra, por lo que la fecha queda en disputa y su valor observado es nulo, con date_confirmed incumplido. Para el responsable, ambas fuentes coinciden en Lina, de modo que owner está soportado sin requisitos faltantes. Sólo se cita el texto literal seleccionado; selection_complete=not_established impide inferir ausencias más allá de la selección, y capture_complete_declared es sólo una declaración, no prueba.",
+      "status": "partial",
+      "reopened_fields": [],
+      "affected": []
+    },
+    "navigation": [
+      {
+        "reference": {
+          "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe",
+          "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable."
+        },
+        "locators": [
+          {
+            "id": "s0",
+            "start_ms": 0,
+            "end_ms": 9000,
+            "speaker": "Coordinación sintética"
+          }
+        ]
+      },
+      {
+        "reference": {
+          "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2",
+          "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable."
+        },
+        "locators": [
+          {
+            "id": "s0",
+            "start_ms": 0,
+            "end_ms": 9000,
+            "speaker": "Coordinación sintética"
+          }
+        ]
+      },
+      {
+        "reference": {
+          "source_id": "skopos-packet:6cb7eec0f0a72f04aa3733c67aaf802014884c3c09f422673c2e5ef56c206cbe",
+          "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-21. Lina es responsable."
+        },
+        "locators": [
+          {
+            "id": "s0",
+            "start_ms": 0,
+            "end_ms": 9000,
+            "speaker": "Coordinación sintética"
+          }
+        ]
+      },
+      {
+        "reference": {
+          "source_id": "skopos-packet:ed64f3f8c8fd0281125cac6fe753daf97163f30cffd61c01ffdb64d31c89e9c2",
+          "quote": "Acuerdo del 2026-10-08: Nube se entrega el 2026-10-28. Lina es responsable."
+        },
+        "locators": [
+          {
+            "id": "s0",
+            "start_ms": 0,
+            "end_ms": 9000,
+            "speaker": "Coordinación sintética"
+          }
+        ]
+      }
+    ],
+    "head": "921245e7977d52f37e2765ef6baf0f0da032fb3fe0c03969ef8c0361411b859c",
+    "packets_recovered": true,
+    "usage": {
+      "completion_tokens": 2634,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1968
+      },
+      "prompt_tokens": 1497,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      },
+      "total_tokens": 4131
+    },
+    "reported_model": "glm-5.3-flash",
+    "seconds": 54.905
+  },
+  "producer_conflict_review": "Both dates explicitly cited; no precedence invented; owner retained. Reported distinct source IDs do not prove independence.",
+  "evidence_hashes": {
+    "runs/glm-01/absence-0.json": "b3f3d36e89bc25f5cf9d8d546d5cc47ab811c0fa4fd083650a94858f08cd4277",
+    "runs/glm-01/report.json": "f07f0225f3dadef7ea32ac91ca1491cf0ad809f83002595c1b1571b12e2a1906",
+    "runs/glm-01/budget.json": "4939ee772f028f4122f210a17e6772f26e97088ff1b39c986e8f08732c8379b2",
+    "runs/glm-01/cases-and-gold.json": "81a701fe2b25f9110f5439cef9148d85932d2b1f48f966e719263043438f9686",
+    "runs/glm-01/conflict-0.json": "0990e670b9a2404d3448e58e360ff85a2a4e083cd45509ca5aa666c0e4be75f6",
+    "runs/glm-01/conflict-1.json": "fee1528eae0df7078025961f0b179ef89bbfca787e9b8a61952ce880822b4e4d",
+    "runs/glm-01/freeze.json": "936f3d1372e2664faefcb1cba7ccb985cc8f761eb45ec08a92e1f19c3b8551a2",
+    "runs/glm-01/absence/request.json": "c90fa992173506b06ad4ad710e99569664904567e6996d61ae64b7553e9d5e4b",
+    "runs/glm-01/absence/response.json": "9efbbe5ffbfc004a21303d10f986e0a1b3869f955ebfc02ca63e994597b51469",
+    "runs/glm-02-conflict/request.json": "7b3a02c75a0c018b1edcff28ce6ccd289a9b85518d9795035710c38c6e063d61",
+    "runs/glm-02-conflict/report.json": "2350f17e69e00b2efc8baf26cb0bfe80f9590715c20fc59e85fc1d232959834f",
+    "runs/glm-02-conflict/response.json": "10633c3cf2e88891a18663539d01bc205c0698fdb6b44a457bbd5cebd27467b2",
+    "runs/glm-02-conflict/continuation.json": "6faf3bd9a7803d0283af7f99cbb2f5b7be6b1d0841d9782fb8ecb586876bed71"
+  }
+}
