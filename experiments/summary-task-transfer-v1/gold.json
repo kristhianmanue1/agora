@@ -1,0 +1,98 @@
+[
+  {
+    "id": "exception-full",
+    "family": "exception",
+    "mode": "full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered"
+  },
+  {
+    "id": "exception-omitted",
+    "family": "exception",
+    "mode": "omitted",
+    "sufficiency": "insufficient",
+    "e1": "covered",
+    "e2": "missing_required"
+  },
+  {
+    "id": "exception-descriptive",
+    "family": "exception",
+    "mode": "descriptive",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "not_required"
+  },
+  {
+    "id": "owner-full",
+    "family": "owner",
+    "mode": "full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered"
+  },
+  {
+    "id": "owner-omitted",
+    "family": "owner",
+    "mode": "omitted",
+    "sufficiency": "insufficient",
+    "e1": "covered",
+    "e2": "missing_required"
+  },
+  {
+    "id": "owner-descriptive",
+    "family": "owner",
+    "mode": "descriptive",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "not_required"
+  },
+  {
+    "id": "deadline-full",
+    "family": "deadline",
+    "mode": "full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered"
+  },
+  {
+    "id": "deadline-omitted",
+    "family": "deadline",
+    "mode": "omitted",
+    "sufficiency": "insufficient",
+    "e1": "covered",
+    "e2": "missing_required"
+  },
+  {
+    "id": "deadline-descriptive",
+    "family": "deadline",
+    "mode": "descriptive",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "not_required"
+  },
+  {
+    "id": "quantity-full",
+    "family": "quantity",
+    "mode": "full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered"
+  },
+  {
+    "id": "quantity-omitted",
+    "family": "quantity",
+    "mode": "omitted",
+    "sufficiency": "insufficient",
+    "e1": "covered",
+    "e2": "missing_required"
+  },
+  {
+    "id": "quantity-descriptive",
+    "family": "quantity",
+    "mode": "descriptive",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "not_required"
+  }
+]

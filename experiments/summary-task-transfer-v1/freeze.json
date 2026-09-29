@@ -1,0 +1,11 @@
+{
+  "cases_sha256": "40a929fe843dd21b0ea373e3c464266c858382bcb06c542f3f7503fba1608bd4",
+  "gold_sha256": "950cad6175c1f60265de3d818a4f89d002116799d620e162b0b4174b0a0e6ae3",
+  "code_head": "e11262bbcf7565095079de9e6a3e574089889f55",
+  "max_calls": 12,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "source": "synthetic producer-written fixtures, not factual policies",
+  "gold_provenance": "producer-written, no independent adjudication",
+  "primary": "12/12 sufficiency labels and 4/4 missing_required plus 4/4 not_required on e2; report unit matches and inconsistencies separately"
+}
