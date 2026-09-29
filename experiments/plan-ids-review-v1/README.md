@@ -35,12 +35,11 @@ ni clínica. La respuesta es extensa y reproduce frases: el respaldo local no
 acredita una buena compresión. Algunos entrecomillados de la prosa normalizan
 espacios; las citas canónicas son las resueltas en `quotes`, con offsets originales.
 
-## Estado de ejecución externa
+## Ejecución externa completada
 
-Pendiente de autorización concreta solicitada: la revisión automática rechazó
-el envío del nuevo payload a Typesafe/Jev. **Cero llamadas ejecutadas en esta
-batería**. La solicitud bloqueada no llegó a preparar ni ejecutar el consumidor;
-la selección se completó después en una operación exclusivamente local.
+Autorización explícita posterior del Operador: doce llamadas a Typesafe/Jev,
+cero errores, cero reintentos. El bloqueo previo se resolvió por autorización,
+no mediante cambio de destino ni elusión. Resultados en [RESULTS.md](RESULTS.md).
 
 Entradas y corridas permanecen en `inputs/` y `runs/`, ignorados por Git.
 `freeze.json` identifica entradas y etiquetas; `selection.json` registra exclusión

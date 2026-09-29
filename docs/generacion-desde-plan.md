@@ -87,4 +87,4 @@ Siguiente paso: revisar por separado las seis afirmaciones contra su evidencia
 y ensayar casos reservados con presupuesto explícito; no promover el modo ID
 a predeterminado ni afirmar ahorro a partir de esta muestra.
 
-Revisión semántica local y siguiente batería congelada: [plan-ids-review-v1](../experiments/plan-ids-review-v1/README.md). Las seis afirmaciones resultaron respaldadas en el cotejo del productor; la revisión externa continúa pendiente.
+Revisión semántica local y siguiente batería congelada: [plan-ids-review-v1](../experiments/plan-ids-review-v1/README.md). Las seis afirmaciones resultaron respaldadas en el cotejo del productor; Jev completó después la revisión: 6/6 `supported` en el manual y concordancia 4/6 con etiquetas externas de AttrScore; véanse los [resultados separados](../experiments/plan-ids-review-v1/RESULTS.md). No equivale a adjudicación independiente.

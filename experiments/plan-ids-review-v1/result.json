@@ -1,0 +1,424 @@
+{
+  "observed_at": "2026-09-29T10:50:53.212509+00:00",
+  "code_head": "79c2c542c3c5069453166eb8433783498521afa8",
+  "calls": 12,
+  "retries": 0,
+  "freeze_verified": true,
+  "provider_input_has_no_gold": true,
+  "summary": {
+    "manual": {
+      "cases": 6,
+      "completed": 6,
+      "matches": 6,
+      "confusion_matrix": {
+        "supported": {
+          "supported": 6,
+          "contradicted": 0,
+          "insufficient": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "contradicted": 0,
+          "insufficient": 0
+        },
+        "insufficient": {
+          "supported": 0,
+          "contradicted": 0,
+          "insufficient": 0
+        }
+      },
+      "macro_f1": null,
+      "input_tokens": 3820,
+      "output_tokens": 264,
+      "elapsed_seconds": 2.3
+    },
+    "attrscore_reserved": {
+      "cases": 6,
+      "completed": 6,
+      "matches": 4,
+      "confusion_matrix": {
+        "supported": {
+          "supported": 1,
+          "contradicted": 0,
+          "insufficient": 1
+        },
+        "contradicted": {
+          "supported": 0,
+          "contradicted": 1,
+          "insufficient": 1
+        },
+        "insufficient": {
+          "supported": 0,
+          "contradicted": 0,
+          "insufficient": 2
+        }
+      },
+      "macro_f1": 0.6666666666666666,
+      "input_tokens": 3328,
+      "output_tokens": 279,
+      "elapsed_seconds": 2.172
+    }
+  },
+  "records": [
+    {
+      "id": "manual-1",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.512,
+      "request_sha256": "4ba8041a68cb2ad74651b4f914459ff92d0f818978b8c7b43bc2f65c7e36e7d8",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.96,
+            "probabilities": {
+              "supported": 0.97,
+              "insufficient": 0.03,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 578,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "manual-2",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.399,
+      "request_sha256": "0c2102ad5decd29c60faea04b7bea41e0eefbf921a9a005d4293d9c538cd0e81",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.86,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.09,
+              "supported": 0.91
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 629,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "manual-3",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.291,
+      "request_sha256": "1460316c5479cd3777c55d4d1eb52f4ee3bc9cd207bd080e9e5b68180ec7cff9",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0.0,
+              "insufficient": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 654,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "manual-4",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.365,
+      "request_sha256": "6806cefe628e6f0894e2639bd33fb2615427d61c1a197f322a9037bcde1bfcf5",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "supported": 0.99,
+              "contradicted": 0.0,
+              "insufficient": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 718,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "manual-5",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.413,
+      "request_sha256": "eefc23a47c2671a837d782d03e87f3d974b556728b1566fbeab5fab967e437d4",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.02,
+              "supported": 0.98
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 617,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "manual-6",
+      "group": "manual",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.32,
+      "request_sha256": "feb23ff6fa252e12469b34a689174ba22d36b5a348c2fbe84eac96e29ceea5fe",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.01,
+              "supported": 0.99
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "reserved-189",
+      "group": "attrscore_reserved",
+      "gold": "supported",
+      "label": "insufficient",
+      "status": "completed",
+      "elapsed_seconds": 0.283,
+      "request_sha256": "44578a8a66dbcf7af3e419bdfe6e290d057b91f58f9d26e9ce93899a4f51f949",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.79,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.86,
+              "supported": 0.14
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 47
+        }
+      },
+      "matches_gold": false
+    },
+    {
+      "id": "reserved-140",
+      "group": "attrscore_reserved",
+      "gold": "contradicted",
+      "label": "contradicted",
+      "status": "completed",
+      "elapsed_seconds": 0.407,
+      "request_sha256": "9ca50b262ea3da8a283d80979cb7d407880f541e73759898c15fc0033f4ab1a0",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.99,
+            "probabilities": {
+              "contradicted": 0.99,
+              "insufficient": 0.01,
+              "supported": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 521,
+          "output_tokens": 47
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "reserved-97",
+      "group": "attrscore_reserved",
+      "gold": "insufficient",
+      "label": "insufficient",
+      "status": "completed",
+      "elapsed_seconds": 0.369,
+      "request_sha256": "9c0ea4802e640c7008bf0c3915b1b68586a7212fd86a44d27b68cf20f9e6b440",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 1.0,
+            "probabilities": {
+              "supported": 0.0,
+              "insufficient": 1.0,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 564,
+          "output_tokens": 47
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "reserved-241",
+      "group": "attrscore_reserved",
+      "gold": "supported",
+      "label": "supported",
+      "status": "completed",
+      "elapsed_seconds": 0.297,
+      "request_sha256": "8feb73afda98d7712585bc4b1a0e916c4abcedfe0e1551037f9af044b8606bc8",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.82,
+            "probabilities": {
+              "supported": 0.88,
+              "insufficient": 0.1,
+              "contradicted": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 585,
+          "output_tokens": 44
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "reserved-139",
+      "group": "attrscore_reserved",
+      "gold": "insufficient",
+      "label": "insufficient",
+      "status": "completed",
+      "elapsed_seconds": 0.437,
+      "request_sha256": "5bafc4f95d025e439b255790262d70990e534eb38b9351637b2b36b8e2eccd51",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.92,
+            "probabilities": {
+              "supported": 0.02,
+              "contradicted": 0.03,
+              "insufficient": 0.95
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 725,
+          "output_tokens": 47
+        }
+      },
+      "matches_gold": true
+    },
+    {
+      "id": "reserved-55",
+      "group": "attrscore_reserved",
+      "gold": "contradicted",
+      "label": "insufficient",
+      "status": "completed",
+      "elapsed_seconds": 0.379,
+      "request_sha256": "7dc758917c5e07cef3c76eefffcfbef15429a6d6deff2e85f3e6a105c30cd1cf",
+      "model_reported": "jev-1.13.0",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.99,
+            "probabilities": {
+              "supported": 0.0,
+              "contradicted": 0.0,
+              "insufficient": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 448,
+          "output_tokens": 47
+        }
+      },
+      "matches_gold": false
+    }
+  ]
+}
