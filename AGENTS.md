@@ -5,12 +5,14 @@ compartida para agentes de IA**. Parte de fuentes, conserva evidencia y
 procedencia, construye representaciones en varios niveles y permite consolidarlas
 sin convertirlas por ello en verdad ni autoridad.
 
-En su etapa actual este repositorio mantiene la superficie documental desde la
-que agentes y personas exponen artefactos terminados: documentos, planos,
-propuestas, imágenes y audio. Existe un primer incremento local en `src/agora`:
-fuente verificada y resumen candidato con citas mediante CLI explícita. No es el motor completo: la
-consolidación, recuperación, publicación y revisión semántica automática siguen
-pendientes. Alcance y uso: `docs/primera-transformacion.md`.
+En su etapa actual conserva la superficie documental y un prototipo ejecutable
+local en `src/agora`: fuentes fijadas por hash, recuperación de pasajes y
+subpreguntas, resúmenes candidatos con citas, revisión experimental, y CLI de
+pendientes con inspección, recuperación y reparación explícita. El consumidor
+`generate-plan` conecta planes verificados a generación limitada a sus pasajes.
+No es el motor completo: siguen pendientes consolidación L0→LN, catálogo,
+admisión gobernada y fiabilidad semántica general. No hay vigilancia automática.
+Estado y rutas de uso: `docs/estado-actual.md`; guías: `README.md`.
 
 Ágora no sustituye a AN-KLA. AN-KLA es un sistema independiente de continuidad
 y assurance para agentes: conserva contexto persistente, identidad de revisiones,
@@ -126,8 +128,9 @@ deja de serlo antes de esa cifra, el catálogo se adelanta.
 
 - **Arquitectura física.** Ágora ya está definida como memoria estructurada
   independiente con una superficie de publicación. Falta decidir la estructura
-  del código, niveles de memoria, CLI, configuración de modelos, consolidación y
-  frontera exacta entre almacenamiento interno y artefactos expuestos.
+  final de niveles de memoria, configuración unificada de modelos, consolidación y
+  frontera entre almacenamiento interno y artefactos expuestos. Ya existen código
+  y CLI experimentales; no equivalen a esa arquitectura completa.
 - **Chequeo ejecutable del front-matter.** Sin él, las cuatro reglas y el
   esquema son guidance. Es lo que convierte a Ágora de convención en contrato.
 - **Binarios en git.** Imagen y audio no funcionan en git plano: sin diff, el

@@ -1,5 +1,7 @@
 # Primera transformación local de Ágora
 
+> Alcance temporal: este documento conserva el incremento y sus resultados originales. Para capacidades y pendientes actuales, consultar [estado actual](estado-actual.md). Las cifras y próximos pasos de corridas anteriores no se reinterpretan como estado presente.
+
 Incremento autorizado el 2026-09-16 por el Operador; modelo elegido explícitamente:
 glm-5.3-flash. Implementación local sin commit, instalación ni publicación.
 Este desarrollo no ejecuta ni modifica el experimento congelado M1-R1. No es

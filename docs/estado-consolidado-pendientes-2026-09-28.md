@@ -1,5 +1,7 @@
 # Pendientes y evidencia posterior: consolidación técnica
 
+> Alcance temporal: este documento conserva el incremento y sus resultados originales. Para capacidades y pendientes actuales, consultar [estado actual](estado-actual.md). Las cifras y próximos pasos de corridas anteriores no se reinterpretan como estado presente.
+
 Estado: prototipo local experimental. No producto integrado ni memoria admitida.
 Los seis pilotos iniciales fueron publicados en main mediante b49e86f; SHA
 remoto verificado. Las notas de ausencia de publicación en informes anteriores

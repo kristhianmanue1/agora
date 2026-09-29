@@ -1,5 +1,7 @@
 # Consolidación de Ágora — 2026-09-26
 
+> Alcance temporal: este documento conserva el incremento y sus resultados originales. Para capacidades y pendientes actuales, consultar [estado actual](estado-actual.md). Las cifras y próximos pasos de corridas anteriores no se reinterpretan como estado presente.
+
 Alcance autorizado: consolidar el incremento acumulado y publicarlo con commit
 y push. Base de partida: `dd597f3194c302c9d6d6c55f5a73b043fc69d7fd` en main.
 No se promueve una fase ni se acredita fidelidad por publicar código.

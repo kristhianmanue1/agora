@@ -29,7 +29,7 @@ El presupuesto total se divide equitativamente entre 1–32 subpreguntas; el sob
 - `semantic_support=not_verified` y `global_completeness=not_established` siempre: ni los rangos ni las coincidencias léxicas certifican fidelidad o exhaustividad.
 - `envelope` conserva texto literal, offsets y procedencia. Contiene datos de la fuente; no debe publicarse sin revisar su alcance.
 
-La descomposición es manual y explícita. No se interpreta automáticamente un índice, no se ejecuta OCR y este nuevo plan no se acepta silenciosamente como un plan de `expand-evaluate`. Conectarlo al generador/revisor exige un consumidor explícito posterior. La fuente puede escanearse localmente varias veces: los bytes entregados no son una medida de trabajo total ni tokens ahorrados.
+La descomposición es manual y explícita. No se interpreta automáticamente un índice, no se ejecuta OCR y este nuevo plan no se acepta silenciosamente como un plan de `expand-evaluate`. El consumidor explícito `generate-plan` ya conecta este plan al generador; véase [generación desde plan](generacion-desde-plan.md). La conexión al revisor no es automática. La fuente puede escanearse localmente varias veces: los bytes entregados no son una medida de trabajo total ni tokens ahorrados.
 
 ## Regresión con Manual DPM
 
@@ -60,4 +60,4 @@ La inspección del productor confirmó que los dos pasajes del caso compuesto ex
 
 Resultados reproducibles: `experiments/manual-dpm-v1/run_functions.py` y `functions-results.json`; planes con contenido permanecen en `inputs/`, fuera de Git. Cinco pruebas adicionales cubren offsets UTF-8, encabezados, presupuesto, redistribución y deduplicación. Se corrigió durante las pruebas un error al combinar intervalos representados como listas y tuplas. No hubo llamadas a proveedores.
 
-Próximo paso: conectar este plan mediante un consumidor explícito y evaluar una síntesis limitada a las funciones recuperadas. El plan mantiene `global_completeness=not_established`; ninguna reducción de bytes autoriza afirmar exhaustividad.
+Continuación ejecutada: [conexión y evaluación](generacion-desde-plan.md); la respuesta real fue rechazada por citas no literales. El plan mantiene `global_completeness=not_established`; ninguna reducción de bytes autoriza afirmar exhaustividad.

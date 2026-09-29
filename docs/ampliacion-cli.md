@@ -124,3 +124,7 @@ los archivos realmente probados, incluidos los cambios aún sin commit al ejecut
 Siguiente paso: usar esta interfaz con casos nuevos reservados y preguntas globales,
 midiendo información omitida además del respaldo de afirmaciones. La validación
 de transporte ya no es el cuello de botella de este recorrido.
+
+## Continuación comprobada
+
+El Manual DPM amplió esta evidencia con cuatro casos reales por revisor y una generación global fallida: [ensayo](../experiments/manual-dpm-v1/LIVE.md). Después se incorporaron [subpreguntas](subpreguntas.md) y [generación desde plan](generacion-desde-plan.md). Son contratos separados; no se migran los planes de ampliación.

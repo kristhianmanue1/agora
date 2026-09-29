@@ -1,5 +1,7 @@
 # Consulta de múltiples pasajes — incremento local
 
+> Alcance temporal: este documento conserva el incremento y sus resultados originales. Para capacidades y pendientes actuales, consultar [estado actual](estado-actual.md). Las cifras y próximos pasos de corridas anteriores no se reinterpretan como estado presente.
+
 Actualización: la comparación posterior `glm-02` sí se completó; resultados y
 límites en [comparacion-multipasaje-glm-02.md](comparacion-multipasaje-glm-02.md).
 El estado de interrupción descrito abajo corresponde a la primera corrida.

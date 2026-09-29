@@ -4,6 +4,8 @@
 
 **Incremento posterior:** [recuperación por subpreguntas](../../docs/subpreguntas.md), con resultados locales en `subquestions-results.json`.
 
+**Generación conectada:** [evaluación y rechazo conservado](../../docs/generacion-desde-plan.md), `generation-result.json`.
+
 ## Resultado y alcance
 
 El PDF `2000-002-001.pdf`, Manual de Organización de la Dirección de Prestaciones Médicas, sirve como caso de documento largo: **188 páginas, 391.299 bytes de texto UTF-8 y aproximadamente 54.658 palabras**. El conteo incluye encabezados, pies y marcadores; no es un conteo de tokens. No demuestra escalabilidad a corpus mayores ni vigencia jurídica del documento.

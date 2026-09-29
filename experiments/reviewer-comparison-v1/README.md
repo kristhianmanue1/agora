@@ -52,8 +52,8 @@ esa primera línea y cada registro como `<case_id>.json` en directorios nuevos.
 Nueva ejecución, con consumo real y rutas de salida inexistentes:
 
 ```bash
-python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar zai -- python3 experiments/reviewer-comparison-v1/run.py glm --out /tmp/agora-comparison-glm-new
-python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar agora.dev.typesafe -- python3 experiments/reviewer-comparison-v1/run.py jev --out /tmp/agora-comparison-jev-new
+python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar zai -- /usr/bin/python3 /Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v1/run.py glm --out /tmp/agora-comparison-glm-new
+python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar agora.dev.typesafe -- /usr/bin/python3 /Users/krisnova/www/aria/agora/experiments/reviewer-comparison-v1/run.py jev --out /tmp/agora-comparison-jev-new
 ```
 
 ## Autorrevisión adversarial

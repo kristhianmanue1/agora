@@ -1,0 +1,1396 @@
+{
+  "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
+  "documents": 123,
+  "bytes": 629463,
+  "missing_links": 0,
+  "missing_modules": 0,
+  "records": [
+    {
+      "path": "2026-08-13-estado-estandar-huerfano.md",
+      "sha256": "284ad50a9a6440f1094573dcd527e0542e6e5a9eb692bbfa8ea4d3e9d2349861",
+      "bytes": 3298,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-agora-baseline-v1.md",
+      "sha256": "6f6eef7f5ccbc6092cbe563bbbabc80919ec45ddb19c7f6265a400f3a59a516b",
+      "bytes": 3830,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-agora-skevi-experiment-v1.md",
+      "sha256": "c4610a2d43a829679720d6b5ff49aef206288c75e279295fe5f16b0e5809f668",
+      "bytes": 4965,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-agora-skevi-pilot-v1.md",
+      "sha256": "0fc5a51a1479804afa890d5ef59f4940ebf633091aa978bcda74de47b8e4c34e",
+      "bytes": 35160,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-decision-identidad-agora.md",
+      "sha256": "a8c70c92729139b643f1dd5505386cfff3381e715313e830690d9c3fd6db9557",
+      "bytes": 8330,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-decision-protocolo-experimental.md",
+      "sha256": "5b30f3ee1fa4282cbfcfcd26507cd4c82e28dd63eb92ff32f1796c1cbc08156f",
+      "bytes": 22891,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-especificacion-memoria-opciones-almacenamiento.md",
+      "sha256": "ba684e7cc94500f83837e567e75724dd739823fe22316755b206e3b30f7a499f",
+      "bytes": 17674,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-evaluacion-skevi-agora.md",
+      "sha256": "21d667092a084c739a6bb8c9ddb4b7f7560113b1799f99b179d3228ba2514d5b",
+      "bytes": 12560,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-07-proposal.md",
+      "sha256": "a7cd6fd98f36e0e547d0eb3e3567f9a6c8a6d5381bf9053caa0e1d45eae749a7",
+      "bytes": 5657,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "2026-09-08-revision-adversarial-m1-r1.md",
+      "sha256": "9fd4df778cadd1d559fca4f75003eb5b99033192c376014edf2d81da6ee4f946",
+      "bytes": 5993,
+      "scope": "decision_or_historical",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "74fbef680d99705a74b0889fefc62606e2668bb6e8f9cd001cc3f2015b3fb015",
+      "bytes": 8039,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "AN-KLA.md",
+      "sha256": "12b7f0175516b9d0e406e2df6e252bb4c7558257e7483eb4145e06ec40139eaf",
+      "bytes": 13997,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "README.md",
+      "sha256": "368ebc6b7391a46ff3ba0f23c29b996219ef2dbe33bc2aed30b2c492104e3f7b",
+      "bytes": 4349,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "docs/estado-actual.md",
+          "exists": true
+        },
+        {
+          "target": "docs/auditoria-documentacion.md",
+          "exists": true
+        },
+        {
+          "target": "docs/pendientes-cli.md",
+          "exists": true
+        },
+        {
+          "target": "docs/contrato-afirmaciones-evidencia.md",
+          "exists": true
+        },
+        {
+          "target": "docs/seleccion-ruta-y-partes.md",
+          "exists": true
+        },
+        {
+          "target": "docs/recorrido-acotado.md",
+          "exists": true
+        },
+        {
+          "target": "docs/revision-separada.md",
+          "exists": true
+        },
+        {
+          "target": "docs/revision-acotada-por-afirmacion.md",
+          "exists": true
+        },
+        {
+          "target": "docs/piloto-conjunto-ids-02.md",
+          "exists": true
+        },
+        {
+          "target": "docs/consolidacion-2026-09-26.md",
+          "exists": true
+        },
+        {
+          "target": "docs/comparacion-revisores-glm-jev-2026-09-28.md",
+          "exists": true
+        },
+        {
+          "target": "docs/comparacion-revisores-reservados-2026-09-28.md",
+          "exists": true
+        },
+        {
+          "target": "docs/ampliacion-evidencia-revisores-2026-09-28.md",
+          "exists": true
+        },
+        {
+          "target": "docs/recuperacion-ampliacion-revisores-2026-09-28.md",
+          "exists": true
+        },
+        {
+          "target": "docs/ampliacion-cli.md",
+          "exists": true
+        },
+        {
+          "target": "docs/subpreguntas.md",
+          "exists": true
+        },
+        {
+          "target": "docs/generacion-desde-plan.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/adjudicacion-attrscore-01.md",
+      "sha256": "166142a5a13f807c09f9cb5489054573d69219c02318a40421974a4685e4c783",
+      "bytes": 8654,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "piloto-attrscore-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/ampliacion-cli.md",
+      "sha256": "9495518d60254686c7dee9d714b6c736579c0bfa35fd61fcbaaa396aac6f22cd",
+      "bytes": 8275,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "evidence/ampliacion-cli-live-2026-09-28.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/manual-dpm-v1/LIVE.md",
+          "exists": true
+        },
+        {
+          "target": "subpreguntas.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/ampliacion-evidencia-revisores-2026-09-28.md",
+      "sha256": "edaf95c9332b347c0e5ec2f06498eb4a49b2a88a8bbace388dd278945985d8ba",
+      "bytes": 4792,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/evidence-expansion-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-expansion-v1/result-01.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-expansion-v1/lineage.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-expansion-v1/originals.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/auditoria-documentacion.md",
+      "sha256": "a418e1666658e5ee1017aac685788fb1db78fdd6dda02ff50a8edb66f41fabcc",
+      "bytes": 3821,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "documentation-audit.json",
+          "exists": true
+        },
+        {
+          "target": "estado-actual.md",
+          "exists": true
+        },
+        {
+          "target": "subpreguntas.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "ampliacion-cli.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/bateria-qasper.md",
+      "sha256": "6f738443f8aed4e871be39acfedfd2aabd54ef626c812c95ed01ffc9a2b3472d",
+      "bytes": 7120,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "qasper-linea-base-01.md",
+          "exists": true
+        },
+        {
+          "target": "qasper-comparacion-perfiles-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/capacidad-formato-glm.md",
+      "sha256": "7665d00f51f6c4ddc9cc8c72bee30eba83397f46958d540471972a4406b98f6c",
+      "bytes": 5408,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "comparacion-modo-json.md",
+          "exists": true
+        },
+        {
+          "target": "comparacion-modo-json-cierre.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/cobertura-global.md",
+      "sha256": "35f12af559e089a1c28dbfcf17a88b61eed3fe58037f90761f0e046d99d50f39",
+      "bytes": 4720,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "recorrido-acotado.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-modo-json-cierre.md",
+      "sha256": "b9b04650c1f2617df390dae9657e2d08f79743565464e5ac6a1192fe7150db81",
+      "bytes": 5537,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "comparacion-modo-json.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-modo-json.md",
+      "sha256": "9464659ef0fecdbec8a8d262cfe71a82e7c5a21fec546dd85cce31a15eb3ec20",
+      "bytes": 4326,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "comparacion-modo-json-cierre.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-multipasaje-glm-02.md",
+      "sha256": "287ad940fc9bc93149f474aba034aea29dea41bac120f3fd8df9ec7bff82186c",
+      "bytes": 6075,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-revision-separada-01.md",
+      "sha256": "0f5540767514a51c609f16c7af2a757c1541de3060c6ffe2a1f8b43ab835bc2c",
+      "bytes": 1831,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "comparacion-revision-separada-02.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-revision-separada-02.md",
+      "sha256": "86a46f942af24199f54ec8da11532a0930a022b7bdf1a4d8399486c32d064a10",
+      "bytes": 3589,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-revisores-glm-jev-2026-09-28.md",
+      "sha256": "fd4b8378ecfc70e21eb51510fac646fb6c206d367e67a0cc6548e214afb3f81a",
+      "bytes": 3942,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/reviewer-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-comparison-v1/result-01.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-comparison-v1/cli-live-operation-01.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-comparison-v1/evidence-sha256.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/comparacion-revisores-reservados-2026-09-28.md",
+      "sha256": "53a9d26d5a1c425f480fda1648463622de95742afb1f6d580c21af5797726f90",
+      "bytes": 6343,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/reviewer-comparison-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-comparison-v2/selection.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-comparison-v2/result-01.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/consolidacion-2026-09-26.md",
+      "sha256": "84172ec43650941284494e539a4ba2900013b995058bdfc9893c4555746898fa",
+      "bytes": 3711,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "estado-actual.md",
+          "exists": true
+        },
+        {
+          "target": "revision-invariancia-01.md",
+          "exists": true
+        },
+        {
+          "target": "piloto-attrscore-02.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/consulta-con-fuente.md",
+      "sha256": "16cdf709b4a55eb48fb0ba39284e0b970a6c4b5292c8e5a2fcbdde356a0d59be",
+      "bytes": 3499,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/consulta-multipasaje.md",
+      "sha256": "a85ee015b9580937522b894655bc87d93b86c53659cf75dfb601b2aa85305946",
+      "bytes": 8312,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "estado-actual.md",
+          "exists": true
+        },
+        {
+          "target": "comparacion-multipasaje-glm-02.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/consulta-recorrido.md",
+      "sha256": "fa42c3c8f67cdac1e6ae2fc0bc006c47dbca348b47c2655e6b5815a5a62d1350",
+      "bytes": 4367,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/contrato-afirmaciones-evidencia.md",
+      "sha256": "0ef293641c6b9fa03b9ac9b3ca24bf00f06b47b64e2ed46e345b422f52b72c0a",
+      "bytes": 5277,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "referencias-evidencia-por-id.md",
+          "exists": true
+        },
+        {
+          "target": "evaluacion-referencias-id-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/control-contexto-suficiente-01.md",
+      "sha256": "45d3c0f2cce0815ecd34386bb0899f1017ef680ccd45722823d59c5a4957fe02",
+      "bytes": 4246,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/controles-revision-01.md",
+      "sha256": "16c3c9f4114b6ab85cbcb1d98e3cb76d8777600f283f5948a4a95fc9ba5d7f1c",
+      "bytes": 9121,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/ensayo-documento-real.md",
+      "sha256": "828359b8a59c2bef7773e7024c0e801589a72485984fa3a272baee540cf89979",
+      "bytes": 5480,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "seleccion-ruta-y-partes.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/estado-actual.md",
+      "sha256": "23b8ed58e96a51b5e0f26f26e707aa6da5c3ae15ad060eb6e2760e208d17b327",
+      "bytes": 3729,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "proveedor-archivos.md",
+          "exists": true
+        },
+        {
+          "target": "subpreguntas.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "pendientes-cli.md",
+          "exists": true
+        },
+        {
+          "target": "ampliacion-cli.md",
+          "exists": true
+        },
+        {
+          "target": "revision-acotada-por-afirmacion.md",
+          "exists": true
+        },
+        {
+          "target": "evaluacion-corpus-publicos.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "referencias-evidencia-por-id.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/estado-consolidado-pendientes-2026-09-28.md",
+      "sha256": "dc3d780664adc30e8dcdddefb7921aca68566bfd66adb8096e3f711ffa1490c5",
+      "bytes": 10685,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "estado-actual.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-contrato-evidencia-01.md",
+      "sha256": "f144c792c2e69127dcd6a36d327656b88ea59cb09612041602404ecef77f1f9c",
+      "bytes": 7017,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "contrato-afirmaciones-evidencia.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-corpus-publicos.md",
+      "sha256": "c1e46e8c1bc9c8e4fcfd3b0ee1907ea069c5d5868b99247ef75352aad73c08f6",
+      "bytes": 6979,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "bateria-qasper.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-referencias-id-01.md",
+      "sha256": "7c36862dd9baee7a804549030525d3164e2f6128d340628c553e550eaf81037b",
+      "bytes": 6764,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "referencias-evidencia-por-id.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-revision-acotada-01.md",
+      "sha256": "019fe6efa80812f2f7ed8a55ee500a598be7cf4dc90c33b34a0f931a5d88acad",
+      "bytes": 7365,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-revision-detalles-01.md",
+      "sha256": "563c84b517b36c087b9b6651654ed732e1c1586778cab3473b76c82075c0b084",
+      "bytes": 7090,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/evaluacion-revision-evidencia-01.md",
+      "sha256": "bbc51589d79bc7bbe3f9edbc072aefb07007494832d73d6a73be3745db1fc762",
+      "bytes": 8753,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/extraccion-y-comparacion.md",
+      "sha256": "342fb4649b68911b09fde03ffa33badbdab886f96b1bff8df95766966dd17d6d",
+      "bytes": 6136,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/fallback-fuente.md",
+      "sha256": "9dbb83157c9781224c0b1abde5bdb8f69f7bf3a5e6901711b7c03a6cdcc9c335",
+      "bytes": 4724,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/fuente-grande-comparacion-01.md",
+      "sha256": "108a1354edf4076c0183ef70e28c52107b994dbace6e266bc1c5a0178448ca4a",
+      "bytes": 6665,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "recuperacion-por-aspectos-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/generacion-desde-plan.md",
+      "sha256": "003c47b16b2bdc0698d96ae3a3f68468fe5d93a87d4611805d89068c692dc859",
+      "bytes": 3206,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/manual-dpm-v1/generation-result.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/pendientes-cli.md",
+      "sha256": "d5f58f418a3d6cafb8150fbb99e83cf62b1652cc87cfb3be5cd97c85942212a2",
+      "bytes": 5785,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "ampliacion-cli.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/piloto-attrscore-01.md",
+      "sha256": "cea73469fb030fdab9588864b57dc860e213d43c7207d28fbcccbf067c4b3946",
+      "bytes": 11842,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "adjudicacion-attrscore-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/piloto-attrscore-02.md",
+      "sha256": "99df7c57e4e0f9e15692e50e3c025b1168088db9d5469c976c2a176ce2da56d8",
+      "bytes": 11918,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/piloto-conjunto-ids-02.md",
+      "sha256": "ff7c2e347d3c83eb3ddb6e90e0de95bd85ef6c09d961c7d112ee7fab38b4b955",
+      "bytes": 3631,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/primera-transformacion.md",
+      "sha256": "c1eceb3481c9dc70957a811fa86f2ce984d44b3372f08470e0817af212d952c1",
+      "bytes": 6222,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "estado-actual.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/proveedor-archivos.md",
+      "sha256": "fa630927e7717ab96837ed0046fd503bda193f4a9d715b0823f1b93fb1e273e6",
+      "bytes": 6340,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/publicacion-incremento-2026-09-17.md",
+      "sha256": "ca9362a90527cb4029de7162a5a4a180cd1d79d49113d566425f92faae592f4b",
+      "bytes": 2089,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/qasper-comparacion-perfiles-01.md",
+      "sha256": "4b38955cd39c26aaa6eb923403b292c7170c9c407013b3d088f71986a0263d34",
+      "bytes": 5060,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/qasper-linea-base-01.md",
+      "sha256": "6cda1d291ec2bfbe9bbcdb3ea25d779ebe73574aa791c13c8177b3bf78357bf6",
+      "bytes": 5238,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "bateria-qasper.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/recorrido-acotado.md",
+      "sha256": "4e8269066dcbac063f30e5d45c00e089ea52f45ecf90e24d0ea42f6580d8d6a8",
+      "bytes": 5061,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "consulta-recorrido.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/recuperacion-ampliacion-revisores-2026-09-28.md",
+      "sha256": "a2a8c04613c7b8dc956d4a4bd7fbbf5e7ef6200a01f87cf462e7571883c83010",
+      "bytes": 4564,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/retrieved-expansion-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieved-expansion-v1/selection.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieved-expansion-v1/result-01.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/recuperacion-por-aspectos-01.md",
+      "sha256": "284ba7bf6d2d413e05871997e97f633304fe4c14b8042882f8e20bd81eb35800",
+      "bytes": 6419,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "fuente-grande-comparacion-01.md",
+          "exists": true
+        },
+        {
+          "target": "control-contexto-suficiente-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/referencias-evidencia-por-id.md",
+      "sha256": "ffc2855e5be613986444302006c898bceb4928704710818e458faebee60ad4ba",
+      "bytes": 3881,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/respuesta-breve-y-alcance.md",
+      "sha256": "51c7eb8f159d2960af7089aa9a16d9727c6563fe15366317078adab7cbb6289e",
+      "bytes": 5922,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "qasper-comparacion-perfiles-01.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-acotada-por-afirmacion.md",
+      "sha256": "f4a95556280ed2145af81aa3125b1832ae5b0cf314cd5a4061ae2772b7979031",
+      "bytes": 4191,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-comprobaciones-01.md",
+      "sha256": "f7ee62aea0cd296784dfcbe30563b0078f72c6096df4cc73be0c83f9e9c5208f",
+      "bytes": 14069,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-evidencia-e-idioma.md",
+      "sha256": "f386d78343815e09db526351a6aa7971e0bb8da2b820b7f257056646db19e961",
+      "bytes": 4119,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-evidencia-por-detalle.md",
+      "sha256": "4a292f699c35c3843a1509a7375d0a32856a8b1063140f4b3f5813f0f8c5a7e6",
+      "bytes": 4543,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-invariancia-01.md",
+      "sha256": "c7a1dd72a5012d2e9e1ac491d35551c7fe654600cedcfa764feca22cdce4b0a1",
+      "bytes": 8038,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-local.md",
+      "sha256": "564eb15ded00b634cc52a72e78c71b15138eae87c58a480a2245ba49a82a6f76",
+      "bytes": 5066,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-separada.md",
+      "sha256": "802abc44c2de8cf2ba82713419da69aab14ba8121e03069001381aa8bef9a14f",
+      "bytes": 3254,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "comparacion-revision-separada-02.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/seleccion-lectura.md",
+      "sha256": "4d47d4ab6e653224e6ec683541251790536ae865962cb5810a9bb88b097697e4",
+      "bytes": 2081,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/seleccion-ruta-y-partes.md",
+      "sha256": "0b196b9059fcbe18e32cff6eb7445cd92758bdb155ac9ca20f781f6c32a4f6b4",
+      "bytes": 7602,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "bateria-qasper.md",
+          "exists": true
+        },
+        {
+          "target": "respuesta-breve-y-alcance.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/sintesis-breve.md",
+      "sha256": "6db63b080bb3cd5c3271b59b66e8623234dd33e0e3586b532b2f661888703d2a",
+      "bytes": 5875,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/subpreguntas.md",
+      "sha256": "6329fce15d4c5505204673797bb4ca3adef31ab56ac5a0b2083f28ac731d1c81",
+      "bytes": 6634,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/suficiencia-evidencia.md",
+      "sha256": "89ac9cdf3cefb75ceb0b6bd829b1a302aafc9690a3c79f64c1e8accf23d29455",
+      "bytes": 4534,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "suficiencia-fuente-mayor.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/suficiencia-fuente-mayor.md",
+      "sha256": "6b1ce7fc40ce808861282b34c1cace6b7134682faa0f46968abe7836d87f71ec",
+      "bytes": 5532,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "cobertura-global.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/tres-pasos-evidencia-2026-09-26.md",
+      "sha256": "2f906f6724a40a135169a69b32e5b186fd1de50da5eb3742a6cc26be4bdc2263",
+      "bytes": 6439,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "piloto-conjunto-ids-02.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/agora-skevi-v1/AGENTS.md",
+      "sha256": "0fb49ee777e85a49d25453c8d5e69b8fbf5b44c28e5dc977ee279d2cc880c5c7",
+      "bytes": 1003,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/agora-skevi-v1/README.md",
+      "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
+      "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/evidence-expansion-v1/README.md",
+      "sha256": "891b46dbe41f80c7b254cc7a06a3d9c6b92ac0994e1930b6b259a33317a1982a",
+      "bytes": 2167,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/fallback-v1/protocol.md",
+      "sha256": "f0068fb27e9ad594868dc2dfaa2dfd3166c52c6235ef488c5084d1ceabb73eb0",
+      "bytes": 1455,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-flow-v1/README.md",
+      "sha256": "87b328ec5a2edcf4f02e9d7dbc20887a31a4095dc5fdbd8f707a48708b46aa96",
+      "bytes": 1746,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-flow-v1/RESULTS.md",
+      "sha256": "9a54fe7840fa2f28f765c61f7c0a24ea5e3c797a68c1d4e33ee6fcdb8f2479d4",
+      "bytes": 3484,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-flow-v4/README.md",
+      "sha256": "87af1bac01708f801404ffbed37275ed444e1c4db7329a88938d9339d1918658",
+      "bytes": 1972,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-flow-v4/RESULTS-GLM-01.md",
+      "sha256": "6af22bfde6ff31469fcce08b4e82b0ffecd45fa00e193e9035967eeecee67c75",
+      "bytes": 2388,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-flow-v4/RESULTS.md",
+      "sha256": "a6ce95f43f1e5ca9973cb51bb311d4ac534dbb5d8aabdd9ab37dc9b8be9c61ef",
+      "bytes": 2199,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-recovery-v1/README.md",
+      "sha256": "abefa09a30fbf658b5fb770472ef33c3d808463403ec467786e467d7fb74d239",
+      "bytes": 3276,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-store-v1/README.md",
+      "sha256": "67898877bb6e949c5e80b77471e83a54b56b4341cc6089b65477fadbdc8e8a74",
+      "bytes": 3963,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-store-v2/README.md",
+      "sha256": "f0f0c64c5fdd92a27e38e3c7f63ef01ddbca68923b786007665ac24e4268c67f",
+      "bytes": 1734,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/issue-store-v2/RESULTS.md",
+      "sha256": "31a341ef1a9d4058124581af585ac69436e1a021826fb7da785679734bb174e3",
+      "bytes": 2621,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/manual-dpm-v1/LIVE.md",
+      "sha256": "55884546aec723e49661f160af3f5fcfaada7caa58c2c3d52789fa6df1dba896",
+      "bytes": 4396,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/manual-dpm-v1/README.md",
+      "sha256": "188345186580261eb247405e5c8c003541f07047c5b1b97412b09f17125a43f7",
+      "bytes": 5925,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "LIVE.md",
+          "exists": true
+        },
+        {
+          "target": "../../docs/subpreguntas.md",
+          "exists": true
+        },
+        {
+          "target": "../../docs/generacion-desde-plan.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/meeting-bridge-v1/README.md",
+      "sha256": "19156ff51715d6cf664642de5c61526b9f142aaa78f00621e315eed9093b91c9",
+      "bytes": 2348,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v1/README.md",
+      "sha256": "0b913b44a0ff65b415dd31e2300720b7b152a0a7263b5a5b8f6987d42b0b1230",
+      "bytes": 1905,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v1/RESULTS.md",
+      "sha256": "1eef864b55e737ad92f77a629b578f258d6ce5c085d84af6a4a28e9f9329b49d",
+      "bytes": 5177,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v2/CONTINUATION.md",
+      "sha256": "8c94fae91973070706487dc8ad97d1816ee5eaa610697ac416aac34e6f3f7ef5",
+      "bytes": 744,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v2/README.md",
+      "sha256": "53bc424c10b0aedb49328adc27f721afb6be4b33b34074a0c18ba24a69ffc1f9",
+      "bytes": 1895,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v2/RESULTS-02.md",
+      "sha256": "993f4280ff12a7b8a33d5e7866c311232a9479dd467ebe7c2b26e92641082e9d",
+      "bytes": 3490,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v2/RESULTS.md",
+      "sha256": "f9cda1f76d06c2be16dfc42f94b9ee9bcc5a750f7cc478dda270a4bcba244887",
+      "bytes": 3678,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v3/README.md",
+      "sha256": "acb64fa7f8c65270f59eee389e6236d3a85dc1c0a88c5c32d0747e1ea9717a69",
+      "bytes": 2098,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v3/RESULTS.md",
+      "sha256": "aabcc73f357355581ec2d819e993801c39022e857697a3f06cbc94b808b8b25f",
+      "bytes": 4192,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v4/README.md",
+      "sha256": "1f1ef84b08f1cdb96784664049cd653df99e5dc59cbc96f31456fca62c8a6bab",
+      "bytes": 1961,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/open-issues-v4/RESULTS.md",
+      "sha256": "ed37c9abf66c0c9df18b083949acfdc159a1e554a7af43c8df3ff475a2f116d7",
+      "bytes": 2398,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/output-format-v1/README.md",
+      "sha256": "4ef85f9dc2347bae73524d0365a5ba68e9f09f192aa79f912d6c6cca8ce38fc6",
+      "bytes": 1327,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/output-format-v1/RESULTS.md",
+      "sha256": "17788b4823111c347b1d79a8129b4fe4c28e629973b6d868d202c393769ecd0f",
+      "bytes": 2303,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/partial-selection-v1/README.md",
+      "sha256": "4f712b0e385b24f90051b65ea98873a1433a8965fb261a029c64e8fd985d72c7",
+      "bytes": 1468,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/partial-selection-v1/RESULTS.md",
+      "sha256": "62f699900a4b4db180574428ff5af36ce5ca7cd3cea26b4a6f145af6e1a8c908",
+      "bytes": 2220,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/partial-selection-v2/README.md",
+      "sha256": "e59cbd8c779e9864bf0c0f237f0e30fcac672e42ba8d4fbaed39c0b56fe95897",
+      "bytes": 1592,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/partial-selection-v2/RESULTS.md",
+      "sha256": "0eb718dda4db3370bb7658b44ace9169f5ff3634796b370c236486b3f8b6d206",
+      "bytes": 3304,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/passage-comparison-v1/protocol.md",
+      "sha256": "af62e7992981410f625f09f093a889d6d3d3eca60bcdf52bc06646a31ef7508c",
+      "bytes": 2321,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/real-document-v1/README.md",
+      "sha256": "3d04e765f62683788b1dfa26c18f5c0bb30943aca9fff7a00913cd6da70de764",
+      "bytes": 1266,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/repair-store-v1/README.md",
+      "sha256": "4e973b03a73829922774d3facc678af324ac17b9d381366297eef9ed7ce43cef",
+      "bytes": 2059,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/repair-store-v1/RESULTS.md",
+      "sha256": "74d069f17cdbfa5293de39666272b8c27c9455bcaf9e16408c9daf756ec73b14",
+      "bytes": 2536,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieved-expansion-v1/README.md",
+      "sha256": "6c241458ace5a1dd60e4452b637efea84f2f055e343111eee41c3265bccada85",
+      "bytes": 1362,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/reviewer-comparison-v1/README.md",
+      "sha256": "ab9d397f1d509003d32a16617d30e9438f1249a9d3078c9010bfab9d5cac4c9f",
+      "bytes": 4424,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/reviewer-comparison-v2/README.md",
+      "sha256": "eaf59cedc44d41f0f5adf4137e5ab94e4fa4292dde7ce28450dbde534e719397",
+      "bytes": 3891,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/routed-query-v1/README.md",
+      "sha256": "842b9295c880b3b5e00b9eb989c75b7f304348f96ac7fd4b0e810b2e8fc0a330",
+      "bytes": 854,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/skopos-issue-bridge-v1/README.md",
+      "sha256": "73068fb50698e39ec97436b076e6c540508131c0c99cb0a8c0300a40ca4a74a7",
+      "bytes": 2442,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/skopos-issue-bridge-v2/README.md",
+      "sha256": "98083bfb322cae9d18c273504c3ab8ac0e5ab5fbea7376bf2171aeb06357bb10",
+      "bytes": 3677,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/source-query-pilot/README.md",
+      "sha256": "032e40f82ac7f8723e01e4c02017fce643e9751a46cf69b0aa51e96e4c07427e",
+      "bytes": 1845,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/split-comparison-v1/README.md",
+      "sha256": "685e9666b69f1c568518ea251384313d7c37d3ab8103c187d83b818f094b3b01",
+      "bytes": 1929,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/split-comparison-v2/README.md",
+      "sha256": "4c365ee3f18f4534f5923de8adb5e02caf11875b3ba10c84936c8ede8956424d",
+      "bytes": 1229,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-large-v1/protocol.md",
+      "sha256": "eba0606369144db904151f9c2731a16b7c2369a761f35bf61283085add3c5b9e",
+      "bytes": 1686,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-v1/protocol.md",
+      "sha256": "553a2e6036b1875cfbf65fef6fec466a2dddbc1308f8c43e977b690daf1a32f6",
+      "bytes": 1327,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/traversal-query-v1/README.md",
+      "sha256": "1870f48938ad4def502b20e5eb4119cf9f81d8cb2709e901fac43a356e5f8c16",
+      "bytes": 593,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    }
+  ]
+}

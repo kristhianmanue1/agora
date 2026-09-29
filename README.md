@@ -4,6 +4,9 @@ Prototipo independiente para transformar y consultar fuentes con referencias
 comprobables al original. Produce **candidatos**: una cita literal y un JSON
 válido no demuestran por sí solos que una afirmación sea verdadera o completa.
 
+**Estado operativo:** [capacidades, límites y próxima prioridad](docs/estado-actual.md).
+**Documentación completa:** [inventario y auditoría](docs/auditoria-documentacion.md).
+
 ## Qué hay implementado
 
 - Transformación inicial de texto y selección de fragmentos con identidad,
@@ -32,7 +35,9 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m agora.evidence_cli --help
 ```
 
 Los tests usan proveedores simulados; no consumen la API. Las CLI que ejecutan
-consultas sí requieren un proveedor explícito y ZAI_API_KEY en el entorno.
+consultas sí requieren proveedor explícito. GLM usa `ZAI_API_KEY`; algunos
+comandos también aceptan `SKOPOS_LLM_API_KEY`. Jev utiliza `TYPESAFE_API_KEY`
+y sólo participa en los recorridos que lo admiten expresamente.
 No se deben guardar claves en el repositorio. Los límites de bytes de lectura,
 tokens de salida y tiempo son distintos; no equivalen a un presupuesto monetario.
 
@@ -70,3 +75,7 @@ Ampliación controlada: [pasaje pertinente frente a más texto](docs/ampliacion-
 Recuperación verificada: [ampliación sin localizador prefijado](docs/recuperacion-ampliacion-revisores-2026-09-28.md).
 
 CLI de ampliación: [preparar, inspeccionar y volver a evaluar](docs/ampliacion-cli.md).
+
+Recuperación local: [subpreguntas y funciones](docs/subpreguntas.md).
+
+Generación conectada: [plan verificado → candidato](docs/generacion-desde-plan.md).
