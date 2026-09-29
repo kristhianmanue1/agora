@@ -1,0 +1,12 @@
+{
+  "cases_sha256": "61bcfd88d1d67cdbb3adb466a3abb9adfec3e09f3d50e0d270f6ea628f2155d2",
+  "code_head": "b88b9c086cb1b73589c81d495ba24721626a6988",
+  "retrieval_budget_bytes": 8000,
+  "top_k": 3,
+  "max_calls_per_provider": 4,
+  "retries": 0,
+  "timeout_seconds": 90,
+  "selection": "source + original question only; no answers/evidence annotations passed to retrieval",
+  "source_format": "existing agora.qasper.render uses double newlines; different bytes/hash from previous single-newline review serialization",
+  "expected_policy": "No inherited gold for source sufficiency after context changes; report judgments and evidence audit, not automatic accuracy."
+}

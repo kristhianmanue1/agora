@@ -1,0 +1,139 @@
+{
+  "freeze_verified": true,
+  "annotations_not_passed_to_retriever": true,
+  "provider_gold_not_sent": true,
+  "retries": 0,
+  "providers": {
+    "jev": {
+      "totals": {
+        "calls": 4,
+        "input_tokens": 6067,
+        "output_tokens": 379,
+        "elapsed_seconds": 1.457,
+        "prior_full_input_tokens": 53807,
+        "input_reduction_vs_prior_full_percent": 88.72
+      },
+      "records": [
+        {
+          "id": "r01",
+          "document_id": "1610.00479",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "12213f7f837cfd2ae53c39b3fd054cf586078b873560fac29c8038c9e2cecdec",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.388,
+          "input_tokens": 1463,
+          "output_tokens": 95
+        },
+        {
+          "id": "r02",
+          "document_id": "1610.00479",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "da3bede95d1142bfbef2cd951f882409c8d9069220736c240c96667c4147cf9a",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.393,
+          "input_tokens": 1462,
+          "output_tokens": 95
+        },
+        {
+          "id": "r03",
+          "document_id": "1902.08830",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "request_sha256": "f7e141cff38f60f4a7f102f25d38ad3ed4c40ac526891cb2a4c3d4922644fa3d",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.317,
+          "input_tokens": 1574,
+          "output_tokens": 94
+        },
+        {
+          "id": "r04",
+          "document_id": "1902.08830",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "6663340b5209d79a276836d74de83d59cdbc0ce156828f959935d1d9259ce1af",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.359,
+          "input_tokens": 1568,
+          "output_tokens": 95
+        }
+      ]
+    },
+    "glm": {
+      "totals": {
+        "calls": 4,
+        "input_tokens": 4708,
+        "output_tokens": 1515,
+        "elapsed_seconds": 30.259,
+        "prior_full_input_tokens": 49784,
+        "input_reduction_vs_prior_full_percent": 90.54
+      },
+      "records": [
+        {
+          "id": "r01",
+          "document_id": "1610.00479",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "4111a81f5295dfed1aed68107b501842a562ace217e07bdaf6da9518a6b31278",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 13.869,
+          "input_tokens": 1128,
+          "output_tokens": 770
+        },
+        {
+          "id": "r02",
+          "document_id": "1610.00479",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "784ffe2db25154e10fd774b53652b1b5058c074618b95495069f37c032be1577",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 9.947,
+          "input_tokens": 1128,
+          "output_tokens": 465
+        },
+        {
+          "id": "r03",
+          "document_id": "1902.08830",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "request_sha256": "10273c66b47ac328e854c4eb72c18ea9da31f48a6deefb9a8938999b82d22df8",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 2.676,
+          "input_tokens": 1229,
+          "output_tokens": 136
+        },
+        {
+          "id": "r04",
+          "document_id": "1902.08830",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "request_sha256": "4a32e6e85721a607cad628aeac23f79953925ecb77925dc8fb62b754bd09876b",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 3.767,
+          "input_tokens": 1223,
+          "output_tokens": 144
+        }
+      ]
+    }
+  },
+  "local_retrieval_seconds": 0.008419,
+  "monetary_cost": "not verified",
+  "scope": "retrieval + review of fixed summaries, not new generation or end-to-end task completion"
+}

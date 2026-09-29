@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 137,
-  "bytes": 675937,
+  "documents": 138,
+  "bytes": 681037,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "35a0e82cb61e00dc183a93bf0bc92557d2a52739d1a8e89e28811ed03ba2b7c1",
-      "bytes": 7098,
+      "sha256": "b45618ea168a963e42001cae6862cb24f59f8efa182178b7bb91fd7198573391",
+      "bytes": 7552,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -591,6 +591,10 @@
         },
         {
           "target": "../experiments/sufficiency-long-reserved-v1/RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/sufficiency-real-retrieval-v1/README.md",
           "exists": true
         }
       ],
@@ -1529,6 +1533,27 @@
       "bytes": 4082,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-real-retrieval-v1/README.md",
+      "sha256": "4a604ff06ec40425fbd81763dfac9abedb5cc51eaab8b85b9c9199d62e205ad0",
+      "bytes": 4646,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "result.json",
+          "exists": true
+        },
+        {
+          "target": "retrieval.json",
+          "exists": true
+        },
+        {
+          "target": "coverage-audit.json",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

@@ -1,0 +1,158 @@
+[
+  {
+    "document_id": "1610.00479",
+    "source_sha256": "46e335f20950794080dec8d10ed82cc1688e0e745c816ced626faf998ba7c0a8",
+    "previous_serialization_sha256": "5c2547978e47b38d77aa963c49617d6dcc40a219ad22268c9a4bc7a8d913d91b",
+    "source_bytes": 51936,
+    "delivered_bytes": 3786,
+    "retrieval_seconds": 0.00392,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 59,
+      "seed_paragraphs": [
+        41,
+        77,
+        104
+      ],
+      "selected_paragraphs": [
+        40,
+        41,
+        42,
+        76,
+        77,
+        78,
+        103,
+        104,
+        105
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 51936,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 19292,
+        "end_byte": 19890,
+        "sha256": "b15349a75eaf14b05a07fe6013e4f164df5069dc26cf97468700213ada1d92c3"
+      },
+      {
+        "start_byte": 19892,
+        "end_byte": 21001,
+        "sha256": "7ff6c72a79fdd7554efbe8c7b6a9ba57059499146ea65be8c306544d8b7a5c11"
+      },
+      {
+        "start_byte": 21003,
+        "end_byte": 21637,
+        "sha256": "1ae1652d792e59965c6332a50976689fc357690a8cd32e55e93cd855e9223797"
+      },
+      {
+        "start_byte": 35814,
+        "end_byte": 35942,
+        "sha256": "b91e5dd5a521ed41977d00765587f334bfe23f5d325ee20421941226a3532f4a"
+      },
+      {
+        "start_byte": 35944,
+        "end_byte": 36466,
+        "sha256": "8c45139892c12e82b85c50ec022c9ec90449befe599cc2c1501c95cf68f1a876"
+      },
+      {
+        "start_byte": 36468,
+        "end_byte": 36716,
+        "sha256": "84cf56842f83e5cd6078dfb8f64a6abc6d51dc6171ecc027c97b5ec036e4021b"
+      },
+      {
+        "start_byte": 44687,
+        "end_byte": 44704,
+        "sha256": "0dbd487c01b010a0998c908b638e6c5330c11558806cc8ebedb2eadece6df19a"
+      },
+      {
+        "start_byte": 44706,
+        "end_byte": 45088,
+        "sha256": "58ec09f4afd1513cf4c73633cbd7a463bc1575c8d490fc6d5a7ec4cd6391bbba"
+      },
+      {
+        "start_byte": 45090,
+        "end_byte": 45238,
+        "sha256": "6d5bac0730d7c4807af061469666740c701ed70f06855f45cd9c9583df785448"
+      }
+    ],
+    "question": "On which datasets do they evaluate their models?"
+  },
+  {
+    "document_id": "1902.08830",
+    "source_sha256": "2569f61cd7aa75871573fd424a645180d99317b98304c55ecf786f8c3334f960",
+    "previous_serialization_sha256": "8bf239d61f81483c492f7f719f8a29136195e1f3d2287d69050f38c5a589f5f1",
+    "source_bytes": 64497,
+    "delivered_bytes": 5254,
+    "retrieval_seconds": 0.004499,
+    "retrieval": {
+      "method": "lexical-paragraph-overlap/v0.1",
+      "top_k": 3,
+      "matching_paragraphs": 44,
+      "seed_paragraphs": [
+        1,
+        9,
+        11
+      ],
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "oversized_candidates": [],
+      "local_scan_bytes": 64497,
+      "selection_complete": false,
+      "search_exhaustive_for_meaning": false
+    },
+    "ranges": [
+      {
+        "start_byte": 0,
+        "end_byte": 95,
+        "sha256": "1546ad83ce9878cfdf5ef7ddf11659cd0dbe0245a95f9a4bb005098fd74495bd"
+      },
+      {
+        "start_byte": 97,
+        "end_byte": 1553,
+        "sha256": "5e51e1ddfe9664431652b7ecfd3387e2385e69cab143863e0c3140962f232330"
+      },
+      {
+        "start_byte": 1555,
+        "end_byte": 1567,
+        "sha256": "b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e"
+      },
+      {
+        "start_byte": 7179,
+        "end_byte": 8047,
+        "sha256": "5eba83e834317ee0a52fcecfbbf40c95a860bd602ade6e613605a434c1096ec9"
+      },
+      {
+        "start_byte": 8049,
+        "end_byte": 9495,
+        "sha256": "982b17881d11b992a40f988e99d292ae255ecd831696e325dd98fb032d259c42"
+      },
+      {
+        "start_byte": 9497,
+        "end_byte": 10111,
+        "sha256": "cf98395ce291deb86112f2094394283d084e6082576a743f6a4a1a8a5a0235b7"
+      },
+      {
+        "start_byte": 10113,
+        "end_byte": 10864,
+        "sha256": "e5e0ed502c155140c266d45f35be0514d5e2c948d700ce0f36738ab80793b9f8"
+      },
+      {
+        "start_byte": 10866,
+        "end_byte": 10878,
+        "sha256": "963a0e1c03f3f3c6abbde3990d3fff7586e71e6615cb6074fac201e1ebe1ff0c"
+      }
+    ],
+    "question": "what languages did they evaluate on?"
+  }
+]

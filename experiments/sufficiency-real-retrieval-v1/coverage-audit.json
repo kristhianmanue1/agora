@@ -1,0 +1,20 @@
+[
+  {
+    "document_id": "1610.00479",
+    "same_text_except_whitespace": true,
+    "annotated_paragraphs": 1,
+    "annotated_paragraphs_fully_retrieved": 0,
+    "denoising_paragraphs_in_full": 2,
+    "denoising_paragraphs_fully_retrieved": 0,
+    "retrieval_does_not_prove_exhaustiveness": true
+  },
+  {
+    "document_id": "1902.08830",
+    "same_text_except_whitespace": true,
+    "annotated_paragraphs": 2,
+    "annotated_paragraphs_fully_retrieved": 1,
+    "denoising_paragraphs_in_full": 0,
+    "denoising_paragraphs_fully_retrieved": 0,
+    "retrieval_does_not_prove_exhaustiveness": true
+  }
+]
