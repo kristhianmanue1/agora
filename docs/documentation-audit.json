@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 127,
-  "bytes": 648392,
+  "documents": 128,
+  "bytes": 651746,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "f6f926ef4bbca7739f88b4c6bd944b5e4f10fa0f1899ca2c6ebc7d5ed494c92c",
-      "bytes": 5488,
+      "sha256": "5938c6af1f2a46df016219f5d5ca483655f5bc2a9ddf3f0c83e8c1a63bb97ace",
+      "bytes": 5745,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -563,6 +563,10 @@
         },
         {
           "target": "../experiments/plan-ids-negative-v1/RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/summary-task-sufficiency-v1/README.md",
           "exists": true
         },
         {
@@ -1459,6 +1463,23 @@
       "bytes": 1327,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/summary-task-sufficiency-v1/README.md",
+      "sha256": "970f8e0928b7c73299cbaec488d7f8f8a09d648f108cacb974508f39589f754b",
+      "bytes": 3097,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "replay.json",
+          "exists": true
+        },
+        {
+          "target": "gold.json",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

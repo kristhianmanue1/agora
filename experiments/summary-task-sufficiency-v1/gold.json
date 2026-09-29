@@ -1,0 +1,17 @@
+[
+  {
+    "id": "positive-1",
+    "expected": "sufficient",
+    "missing": [],
+    "provenance": "producer_label_not_independently_adjudicated"
+  },
+  {
+    "id": "benign-omission",
+    "expected": "insufficient",
+    "missing": [
+      "Autorización previa a la instrumentación",
+      "Persona titular de la Dirección de Prestaciones Médicas como autoridad"
+    ],
+    "provenance": "producer_label_not_independently_adjudicated"
+  }
+]

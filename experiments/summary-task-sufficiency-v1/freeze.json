@@ -1,0 +1,10 @@
+{
+  "schema": "agora/summary-task-sufficiency-freeze/v1",
+  "code_head": "f7fc1d6f288ee20414d74d7f4873f7da16eaf31b",
+  "cases_sha256": "a355bf0d0203b7a5ed9c0b4f272f6b591fcda175b8cdc2e88d9e0b53ad400600",
+  "gold_sha256": "2a7daaaecf1a74bb133f1d0184b9d07d809ffe6d3a9bd8ddd59abc1fa5ee9960",
+  "max_calls": 2,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "primary": "positive-1 sufficient AND benign-omission insufficient; no label revision after observing results."
+}

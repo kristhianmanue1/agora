@@ -1,0 +1,22 @@
+{
+  "provider_calls": 0,
+  "records": [
+    {
+      "id": "positive-1",
+      "observed_support": "supported",
+      "request_sha256": "4ba8041a68cb2ad74651b4f914459ff92d0f818978b8c7b43bc2f65c7e36e7d8",
+      "response_sha256": "c49b04ca2468ac2ffd7dfa43a5bbe51b8f384e743cb7e46771c9d64973d6ad43",
+      "source": "plan-ids-negative-v1",
+      "caveat": "Reused original support judgment; new task was not sent in that call."
+    },
+    {
+      "id": "benign-omission",
+      "observed_support": "supported",
+      "request_sha256": "ab09ccaf4b4e60db315fd53a3e8518f66371992b7be077d92baa24934ce258f8",
+      "response_sha256": "dce99d116f724993031686f6fa8919953c512b20d7753e222ff6463b7a0c8a5a",
+      "source": "plan-ids-negative-v1",
+      "caveat": "Reused original support judgment; new task was not sent in that call."
+    }
+  ],
+  "conclusion": "Support alone cannot establish task sufficiency; no new model sufficiency judgment obtained."
+}
