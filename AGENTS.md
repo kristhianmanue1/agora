@@ -2,15 +2,15 @@
 
 Ágora es un sistema independiente de **transformación y memoria estructurada
 compartida para agentes de IA**. Parte de fuentes, conserva evidencia y
-procedencia, construye representaciones en varios niveles y permite consolidarlas
-sin convertirlas por ello en verdad ni autoridad.
+procedencia, produce representaciones derivadas y conserva sus relaciones con
+fuentes, afirmaciones y revisiones, sin convertirlas por ello en verdad ni autoridad.
 
 En su etapa actual conserva la superficie documental y un prototipo ejecutable
 local en `src/agora`: fuentes fijadas por hash, recuperación de pasajes y
 subpreguntas, resúmenes candidatos con citas, revisión experimental, y CLI de
 pendientes con inspección, recuperación y reparación explícita. El consumidor
 `generate-plan` conecta planes verificados a generación limitada a sus pasajes.
-No es el motor completo: siguen pendientes consolidación L0→LN, catálogo,
+No es el motor completo: siguen pendientes consolidación general, catálogo,
 admisión gobernada y fiabilidad semántica general. No hay vigilancia automática.
 Estado y rutas de uso: `docs/estado-actual.md`; guías: `README.md`.
 
@@ -128,7 +128,7 @@ deja de serlo antes de esa cifra, el catálogo se adelanta.
 
 - **Arquitectura física.** Ágora ya está definida como memoria estructurada
   independiente con una superficie de publicación. Falta decidir la estructura
-  final de niveles de memoria, configuración unificada de modelos, consolidación y
+  final de representaciones y sus relaciones, configuración unificada de modelos, consolidación y
   frontera entre almacenamiento interno y artefactos expuestos. Ya existen código
   y CLI experimentales; no equivalen a esa arquitectura completa.
 - **Chequeo ejecutable del front-matter.** Sin él, las cuatro reglas y el

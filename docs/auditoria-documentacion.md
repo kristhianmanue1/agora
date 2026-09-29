@@ -42,3 +42,14 @@ Los documentos de decisiones de septiembre y protocolos congelados conservan su 
 5. Informes de experimentos y decisiones originales según la pregunta concreta.
 
 Próxima prioridad técnica: referencias por ID en el consumidor nuevo, antes de cambiar tolerancias de citas o repetir llamadas. OCR, estructura automática y validación con casos reservados permanecen pendientes.
+
+## Corrección posterior: descripción L0…Ln
+
+La auditoría inicial no detectó una extrapolación del estado: se había trasladado
+la propuesta de niveles de septiembre a los pendientes actuales como si fuera
+un requisito vigente de implementación. A petición del Operador se corrigieron
+AGENTS, README y estado actual; se añadió una aclaración al documento de origen.
+El mapa operativo se expresa por fuentes, evidencia, derivados, afirmaciones,
+cuestiones y revisiones. No se afirma sustitución general de contratos históricos
+ni se modifica código. Este hallazgo ilustra que inventariar todos los documentos
+y verificar sus enlaces no demuestra consistencia semántica completa.

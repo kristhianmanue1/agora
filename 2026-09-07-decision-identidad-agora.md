@@ -44,7 +44,14 @@ revisar una afirmación, no la certifica. La consolidación produce una
 representación derivada, no autoridad. Publicar un resultado tampoco lo admite
 automáticamente en AN-KLA ni en otra memoria de continuidad de un agente.
 
-## Arquitectura conceptual vigente
+## Arquitectura conceptual declarada el 7 de septiembre
+
+> Aclaración documental del 29 de septiembre, solicitada por el Operador: la
+> referencia L0…Ln de esta tabla conserva el antecedente de diseño. No describe
+> un contrato implementado ni la organización operativa actual en niveles fijos.
+> Véase [estado actual](docs/estado-actual.md). Se preserva el resto de la decisión
+> de identidad; esta nota no afirma una migración ni una arquitectura nueva implementada.
+
 
 La arquitectura física sigue abierta, pero el producto debe conservar estas
 responsabilidades separables:

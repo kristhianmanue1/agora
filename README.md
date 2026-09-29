@@ -22,7 +22,7 @@ válido no demuestran por sí solos que una afirmación sea verdadera o completa
 
 El adaptador local funciona sin Skopos ni AN-KLA. No hay sincronización de sus
 almacenes ni admisión automática de candidatos. Tampoco hay motor completo de
-memoria jerárquica ni revisión semántica fiable acreditada.
+transformación y consolidación de memoria ni revisión semántica fiable acreditada.
 
 ## Probar sin proveedor
 

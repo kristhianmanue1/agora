@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
   "documents": 123,
-  "bytes": 629463,
+  "bytes": 631784,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -39,10 +39,15 @@
     },
     {
       "path": "2026-09-07-decision-identidad-agora.md",
-      "sha256": "a8c70c92729139b643f1dd5505386cfff3381e715313e830690d9c3fd6db9557",
-      "bytes": 8330,
+      "sha256": "b226cb09726e4ec465ae24fb143e0030b84de4b459a38ad653ba5419f0e58806",
+      "bytes": 8773,
       "scope": "decision_or_historical",
-      "local_links": [],
+      "local_links": [
+        {
+          "target": "docs/estado-actual.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
@@ -87,8 +92,8 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "74fbef680d99705a74b0889fefc62606e2668bb6e8f9cd001cc3f2015b3fb015",
-      "bytes": 8039,
+      "sha256": "ab5282e96ffeaba1f2b12a3feecb81dc8952d75d353b16c4a10a130efe94ac54",
+      "bytes": 8086,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
@@ -103,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "368ebc6b7391a46ff3ba0f23c29b996219ef2dbe33bc2aed30b2c492104e3f7b",
-      "bytes": 4349,
+      "sha256": "b441dc128b98e955bed303d7d9be53838ebd80b120e806a013d6b47a682bac1a",
+      "bytes": 4373,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -243,8 +248,8 @@
     },
     {
       "path": "docs/auditoria-documentacion.md",
-      "sha256": "a418e1666658e5ee1017aac685788fb1db78fdd6dda02ff50a8edb66f41fabcc",
-      "bytes": 3821,
+      "sha256": "d9a169a810b8890ae7d4eb088cc9958774f2f19cecf480d4878cb021917b1501",
+      "bytes": 4515,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -520,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "23b8ed58e96a51b5e0f26f26e707aa6da5c3ae15ad060eb6e2760e208d17b327",
-      "bytes": 3729,
+      "sha256": "66584d4594d3e7eab3edf02bae27c1507e0cc3c0de26ee4f00c38e78a0d4c22b",
+      "bytes": 4842,
       "scope": "guidance_or_report",
       "local_links": [
         {
