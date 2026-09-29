@@ -1,0 +1,196 @@
+{
+  "observed_at": "2026-09-29T01:52:46.934652+00:00",
+  "review_calls": 8,
+  "retries": 0,
+  "initial_launcher_failures_before_consumer": 8,
+  "records": [
+    {
+      "case": "norms",
+      "provider": "glm",
+      "model_reported": "glm-5.3-flash",
+      "support": "supported",
+      "expected": "supported",
+      "matches_expected": true,
+      "review_sha256": "81e15c2589c92101691c2d2911c4038d324fe4e3e5557b598b4efb79f285f865",
+      "operation_sha256": "fe848a3cfed2808ffcb7d72de1dadb71394300dbd979fb59c78c381a56a7ab3c",
+      "operation_state": "committed",
+      "plan_sha256": "421708f86d5897e3a77012d7087d44c4c446eff889819044a04d9855dacff6b7",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 5.357,
+      "usage": {
+        "completion_tokens": 218,
+        "completion_tokens_details": {
+          "reasoning_tokens": 206
+        },
+        "prompt_tokens": 2335,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2553
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "norms",
+      "provider": "jev",
+      "model_reported": "jev-1.13.0",
+      "support": "supported",
+      "expected": "supported",
+      "matches_expected": true,
+      "review_sha256": "4b876e1f6f73a2573b9c788a007719c43dcb05703d143fdeeeafb76de7332e9f",
+      "operation_sha256": "7eb9c71d473817d1b487deb747ee8d4a0aee260ec5fe678a28c890b5e36c66bb",
+      "operation_state": "committed",
+      "plan_sha256": "421708f86d5897e3a77012d7087d44c4c446eff889819044a04d9855dacff6b7",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 0.433,
+      "usage": {
+        "input_tokens": 2724,
+        "output_tokens": 44
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "equipment",
+      "provider": "glm",
+      "model_reported": "glm-5.3-flash",
+      "support": "contradicted",
+      "expected": "contradicted",
+      "matches_expected": true,
+      "review_sha256": "f59afd146a7830db1881ff0ddd072593a3aa9608272d9a5703145b5133257d50",
+      "operation_sha256": "ecfc6316ece90cbd715a9df9b8b0bbe0067f0491a8a64caf15e292e394e3171b",
+      "operation_state": "committed",
+      "plan_sha256": "481fcae1f36d1abeded4d5005306ec0e401334f9a0c6eefc5d36f4590b82e3ff",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 4.897,
+      "usage": {
+        "completion_tokens": 201,
+        "completion_tokens_details": {
+          "reasoning_tokens": 187
+        },
+        "prompt_tokens": 2347,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2548
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "equipment",
+      "provider": "jev",
+      "model_reported": "jev-1.13.0",
+      "support": "contradicted",
+      "expected": "contradicted",
+      "matches_expected": true,
+      "review_sha256": "9acbba68dbd3f9f365b381f0a63ffbaf1e1ba2d1c7101632d26e669d5b0f66e9",
+      "operation_sha256": "8adb5105976e6aa590948d8efffbd96fa65ea20e51fef3b233dbfa05bf98dd52",
+      "operation_state": "committed",
+      "plan_sha256": "481fcae1f36d1abeded4d5005306ec0e401334f9a0c6eefc5d36f4590b82e3ff",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 0.611,
+      "usage": {
+        "input_tokens": 2684,
+        "output_tokens": 47
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "cross_sections",
+      "provider": "glm",
+      "model_reported": "glm-5.3-flash",
+      "support": "insufficient",
+      "expected": "insufficient",
+      "matches_expected": true,
+      "review_sha256": "4fcdc0a1854b45fdfba76fab579168b7400af1cb2c9cf385d3e121831615748f",
+      "operation_sha256": "4528843b66c8ef80d57824b2d434c44d9aca0582a895e680ab963ba222bf4127",
+      "operation_state": "committed",
+      "plan_sha256": "48b9e68930c799ea66875f8f77c22faba0f184ae1717a8701e5c32abb4b526b2",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 31.274,
+      "usage": {
+        "completion_tokens": 1410,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1402
+        },
+        "prompt_tokens": 2527,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 3937
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "cross_sections",
+      "provider": "jev",
+      "model_reported": "jev-1.13.0",
+      "support": "insufficient",
+      "expected": "insufficient",
+      "matches_expected": true,
+      "review_sha256": "fe077d87211bb62550d34b6e70771caf52a4d03e12978cecbef3374c5ab62840",
+      "operation_sha256": "6b55829316563883837deff0a59c8c378a74105a4d72afc04177acfa72a4fcf4",
+      "operation_state": "committed",
+      "plan_sha256": "48b9e68930c799ea66875f8f77c22faba0f184ae1717a8701e5c32abb4b526b2",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 0.662,
+      "usage": {
+        "input_tokens": 2882,
+        "output_tokens": 47
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "cover",
+      "provider": "glm",
+      "model_reported": "glm-5.3-flash",
+      "support": "insufficient",
+      "expected": "insufficient",
+      "matches_expected": true,
+      "review_sha256": "b4e060539b2e32f894bd1c4b70a6cd9a860c8fc4228fba095d9ea1163e3b4c7d",
+      "operation_sha256": "d916247e22e9125d8f3fd1c0ca746c961ee9ca0ff53b8823a67c08bb649980c5",
+      "operation_state": "committed",
+      "plan_sha256": "c6cd7c14621777698686b0646cc359834b7146189d2fd25b01c9900a81096ac9",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 9.748,
+      "usage": {
+        "completion_tokens": 211,
+        "completion_tokens_details": {
+          "reasoning_tokens": 198
+        },
+        "prompt_tokens": 3177,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 3388
+      },
+      "origin": "live_provider"
+    },
+    {
+      "case": "cover",
+      "provider": "jev",
+      "model_reported": "jev-1.13.0",
+      "support": "insufficient",
+      "expected": "insufficient",
+      "matches_expected": true,
+      "review_sha256": "46e0abec10a5c13552b75b5abdc7e90dcceca1ec4bb1dbd19a0e1454bd59a021",
+      "operation_sha256": "5f51f29cc82e3e6e0cc413052730241051b530eb41f27b1e6d62a693b607d179",
+      "operation_state": "committed",
+      "plan_sha256": "c6cd7c14621777698686b0646cc359834b7146189d2fd25b01c9900a81096ac9",
+      "parent_unchanged": true,
+      "recovery_identical": true,
+      "elapsed_seconds": 0.554,
+      "usage": {
+        "input_tokens": 3671,
+        "output_tokens": 47
+      },
+      "origin": "live_provider"
+    }
+  ]
+}

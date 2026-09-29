@@ -1,0 +1,63 @@
+{
+  "schema": "agora/passage-query/v0.1",
+  "question": "Ofrece una visión global de la estructura actual de la Dirección de Prestaciones Médicas: identifica sus unidades y las coordinaciones que dependen directamente de ella, y explica una responsabilidad principal de cada una. Distingue la estructura actual de los antecedentes históricos y señala cualquier información que no esté respaldada por los fragmentos disponibles.",
+  "mode": "retrieve",
+  "source_id": "manual-dpm:2000-002-001",
+  "source_sha256": "eeb7ee358c2c956e5f88dd06a8d149a3b5ba9c8cd324639a6c0337104ab986e6",
+  "options": {
+    "content_budget": 12000,
+    "prompt_budget": 65536,
+    "top_k": 3
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "retrieval": {
+    "method": "lexical-paragraph-overlap/v0.1",
+    "top_k": 3,
+    "matching_paragraphs": 187,
+    "seed_paragraphs": [
+      10,
+      302,
+      370
+    ],
+    "selected_paragraphs": [
+      9,
+      10,
+      11,
+      301,
+      302,
+      303,
+      369,
+      370,
+      371
+    ],
+    "oversized_candidates": [],
+    "local_scan_bytes": 391299,
+    "selection_complete": false,
+    "search_exhaustive_for_meaning": false
+  },
+  "prompt_bytes": 9260,
+  "execution_status": "failed",
+  "diagnostic": "timeout",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 8192,
+    "timeout_seconds": 90,
+    "max_calls": 1,
+    "temperature": 0
+  },
+  "implementation_hashes": {
+    "passages.py": "232e6c00955104d84ca06b31e5bf715d203016b40d3b6e3151f1e42302147832",
+    "passage_cli.py": "9e3ee38732603589ff0ee0f105f4be67c781eda89ee2860330c13802b1b07332",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+  },
+  "implementation_unchanged": true,
+  "elapsed_seconds": 90.373,
+  "billing_outcome": "unknown: timeout does not prove provider cancellation or zero charge"
+}
