@@ -50,6 +50,11 @@ def parser():
     s.add_argument('--operation',required=True);s.add_argument('--expected-head',required=True);s.add_argument('--out',type=Path,required=True)
     s=sub.add_parser('repair-apply',help='Incorporar derivado separado, sin cambiar la respuesta original.')
     s.add_argument('--derivation',required=True);s.add_argument('--plan',type=Path,required=True);s.add_argument('--expected-plan-sha256',required=True)
+    s=sub.add_parser('retrieve-subquestions',help='Preparar subpreguntas y cobertura por rangos declarados; sin proveedor.')
+    for name in ('source','source-id','source-sha256','spec','out'):
+        s.add_argument('--'+name,required=True)
+    s.add_argument('--budget',type=int,default=12000)
+    s.add_argument('--top-k',type=int,default=1)
     from .expansion_cli import add_commands
     add_commands(sub)
     return p
@@ -63,6 +68,12 @@ def run(args):
         write_new(workspace/'workspace.json',dict(schema=WORKSPACE))
         return dict(status='initialized',workspace=str(workspace))
     if read(workspace/'workspace.json')!={'schema':WORKSPACE}:raise ValueError('incompatible_workspace')
+    if args.command=='retrieve-subquestions':
+        from .subquestions import prepare_subquestions
+        from .source import FileSourceAdapter
+        report=prepare_subquestions(FileSourceAdapter(args.source,args.source_id),args.source_sha256,read(args.spec),args.budget,args.top_k)
+        write_new(args.out,report)
+        return dict(status='prepared',output=args.out,delivered_bytes=report['delivered_bytes'],global_completeness=report['global_completeness'],questions=[{k:q[k] for k in ('id','candidate_status','reference_coverage','missing_reference_ranges')} for q in report['questions']],provider_calls=0)
     from .expansion_cli import COMMANDS, run as run_expansion
     if args.command in COMMANDS:
         return run_expansion(args,workspace,write_new)

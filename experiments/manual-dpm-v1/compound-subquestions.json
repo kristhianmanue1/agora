@@ -1,0 +1,25 @@
+{
+  "schema": "agora/subquestions-input/v1-experimental",
+  "questions": [
+    {
+      "id": "norms",
+      "query": "Coordinación de Planeación de Infraestructura Médica aprobar difundir normas criterios planeación integral",
+      "reference_ranges": [
+        [
+          345826,
+          348522
+        ]
+      ]
+    },
+    {
+      "id": "equipment",
+      "query": "Coordinación Técnica de Equipamiento Médico consolidar normas criterios adquisición equipo cocina comedor",
+      "reference_ranges": [
+        [
+          364030,
+          366458
+        ]
+      ]
+    }
+  ]
+}

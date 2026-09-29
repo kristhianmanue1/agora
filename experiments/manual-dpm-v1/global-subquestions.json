@@ -1,0 +1,65 @@
+{
+  "schema": "agora/subquestions-input/v1-experimental",
+  "questions": [
+    {
+      "id": "care",
+      "query": "Unidad de Atención Médica funciones políticas programas atención médica",
+      "reference_ranges": [
+        [
+          47394,
+          49904
+        ]
+      ]
+    },
+    {
+      "id": "education",
+      "query": "Unidad de Educación e Investigación funciones formación recursos humanos investigación",
+      "reference_ranges": [
+        [
+          171841,
+          174504
+        ]
+      ]
+    },
+    {
+      "id": "planning",
+      "query": "Unidad de Planeación e Innovación en Salud funciones innovación inteligencia epidemiología",
+      "reference_ranges": [
+        [
+          223043,
+          225567
+        ]
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "query": "Unidad de Infraestructura Servicios Médicos Indirectos Integración Sectorial funciones",
+      "reference_ranges": [
+        [
+          295353,
+          298283
+        ]
+      ]
+    },
+    {
+      "id": "special",
+      "query": "Coordinación de Proyectos Especiales en Salud funciones desastres continuidad",
+      "reference_ranges": [
+        [
+          374984,
+          377893
+        ]
+      ]
+    },
+    {
+      "id": "administration",
+      "query": "Coordinación de Servicios Administrativos funciones recursos presupuesto",
+      "reference_ranges": [
+        [
+          380507,
+          383266
+        ]
+      ]
+    }
+  ]
+}

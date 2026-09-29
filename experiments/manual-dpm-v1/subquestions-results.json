@@ -1,0 +1,112 @@
+[
+  {
+    "case": "compound",
+    "status": "prepared",
+    "delivered_bytes": 5180,
+    "global_completeness": "not_established",
+    "questions": [
+      {
+        "id": "norms",
+        "candidate_status": "retrieved",
+        "reference_coverage": "covered",
+        "missing_reference_ranges": []
+      },
+      {
+        "id": "equipment",
+        "candidate_status": "retrieved",
+        "reference_coverage": "covered",
+        "missing_reference_ranges": []
+      }
+    ],
+    "provider_calls": 0,
+    "reference_pages": [
+      170,
+      177
+    ],
+    "queries_origin": "manually decomposed from known document; development regression, not held-out"
+  },
+  {
+    "case": "global",
+    "status": "prepared",
+    "delivered_bytes": 6403,
+    "global_completeness": "not_established",
+    "questions": [
+      {
+        "id": "care",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            47394,
+            49904
+          ]
+        ]
+      },
+      {
+        "id": "education",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            171841,
+            174504
+          ]
+        ]
+      },
+      {
+        "id": "planning",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            223043,
+            225567
+          ]
+        ]
+      },
+      {
+        "id": "infrastructure",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            295353,
+            298283
+          ]
+        ]
+      },
+      {
+        "id": "special",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            374984,
+            377893
+          ]
+        ]
+      },
+      {
+        "id": "administration",
+        "candidate_status": "retrieved",
+        "reference_coverage": "partial",
+        "missing_reference_ranges": [
+          [
+            380507,
+            383266
+          ]
+        ]
+      }
+    ],
+    "provider_calls": 0,
+    "reference_pages": [
+      25,
+      87,
+      109,
+      146,
+      182,
+      184
+    ],
+    "queries_origin": "manually decomposed from known document; development regression, not held-out"
+  }
+]
