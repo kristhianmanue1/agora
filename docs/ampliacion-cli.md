@@ -18,7 +18,7 @@ El primer juicio es deliberadamente incorrecto y simulado; no proviene de GLM re
 export PYTHONPATH="$PWD/src"
 export PYTHONDONTWRITEBYTECODE=1
 agora_trial=$(mktemp -d)
-function agora_review() { python3 -m agora.issue_cli --workspace "$agora_trial/workspace" "$@"; }
+function agora_review() { python3 scripts/agora_issues.py --workspace "$agora_trial/workspace" "$@"; }
 agora_review init
 agora_review review-init
 agora_review review-import --review original --input examples/review-expansion/initial.json
@@ -53,18 +53,20 @@ la CLI; los hashes detectan correspondencia, no autenticidad ni autoridad.
 Elegir un id nuevo para una llamada nueva y usar `--live` en lugar de `--response`.
 GLM recibe ZAI_API_KEY o SKOPOS_LLM_API_KEY; Jev recibe TYPESAFE_API_KEY.
 Llavero puede inyectarlas; no escribirlas en archivos ni argumentos.
+El punto de entrada scripts/agora_issues.py resuelve src desde el checkout y funciona
+sin PYTHONPATH, que Llavero retira del entorno del proceso ejecutado.
 
 Ejemplo GLM, después de inspeccionar el mismo plan:
 
 ```bash
-python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar zai -- python3 -m agora.issue_cli --workspace "$agora_trial/workspace" expand-evaluate --review glm-live --plan "$agora_trial/plan.json" --expected-plan-sha256 "$agora_plan" --provider glm --live
+python3 /Users/krisnova/www/aria/llavero/llavero.py ejecutar zai -- python3 scripts/agora_issues.py --workspace "$agora_trial/workspace" expand-evaluate --review glm-live --plan "$agora_trial/plan.json" --expected-plan-sha256 "$agora_plan" --provider glm --live
 ```
 
 Para Jev usar perfil `agora.dev.typesafe`, `--provider jev` e id diferente.
 La llamada envía la evidencia al proveedor: glm-5.3-flash con máximo 2048 tokens
 de salida y temperatura 0, o jev-1.13.0 con choice; 90 segundos, sin reintentos.
-El paquete no lleva un límite monetario. Este incremento se validó sin llamadas
-nuevas; las llamadas de experimentos anteriores no equivalen a probar este transporte.
+El paquete no lleva un límite monetario. La validación inicial usó respuestas conservadas. La comprobación real posterior
+de este transporte está registrada al final de esta guía.
 
 ## Fallos y recuperación
 
@@ -94,3 +96,31 @@ Los dos bloques locales de esta guía se ejecutaron juntos sin editar scripts.
 Se conservaron los juicios originales, se crearon derivados GLM/Jev reproducidos
 y se recuperó la revisión sin llamada al proveedor. Cero llamadas nuevas.
 Autorrevisión del diff y comportamiento; no hubo revisión independiente.
+
+## Validación real posterior — 2026-09-28
+
+La primera ejecución mediante Llavero falló antes de reservar operación: el entorno
+saneado retiró PYTHONPATH y Python no encontró agora. Se añadió el punto de entrada
+scripts/agora_issues.py y se probó desde otro directorio, sin PYTHONPATH y con -I.
+No se modificó Llavero ni su política de entorno.
+
+Después se ejecutó una llamada por proveedor con el mismo plan sintético. Ambos
+reportaron contradicted, origin=live_provider, admission=not_admitted. Modelos
+solicitados y reportados: glm-5.3-flash y jev-1.13.0. GLM reportó 244 tokens de
+entrada y 102 de salida (346 total), Jev 450 y 47 (497 total). Duración del comando
+completo, incluyendo Llavero y proceso: 3.487 s y 0.432 s. No se verificó coste monetario.
+
+La recuperación en procesos nuevos sin credenciales devolvió el mismo hash para
+cada derivado. Original y fuente sin cambios. Dos llamadas nuevas, cero reintentos
+de proveedor. 442 tests pasan. Esta comprobación acredita funcionamiento de la
+ruta real con ese caso; no generaliza fidelidad ni estabilidad de los revisores.
+Autorrevisión, sin revisión independiente. El generador y el revisor predeterminado
+no cambiaron; no hubo admisión en memoria.
+
+[Evidencia: plan, originales, operaciones, respuestas y recuperación](evidence/ampliacion-cli-live-2026-09-28.json).
+El SHA base del registro precede al nuevo lanzador; los hashes de código identifican
+los archivos realmente probados, incluidos los cambios aún sin commit al ejecutar.
+
+Siguiente paso: usar esta interfaz con casos nuevos reservados y preguntas globales,
+midiendo información omitida además del respaldo de afirmaciones. La validación
+de transporte ya no es el cuello de botella de este recorrido.

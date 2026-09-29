@@ -77,3 +77,9 @@ class ExpansionCliTests(unittest.TestCase):
   self.assertEqual(ledger.get('operations','atomic')['record']['state'],'response_ready')
   ledger.put=put
   result=module.finalize(ledger,'atomic');self.assertEqual(result['record']['support'],'contradicted');self.assertEqual(calls,['glm'])
+
+ def test_checkout_entrypoint_works_without_pythonpath_from_another_directory(self):
+  env=dict(self.env);env.pop('PYTHONPATH',None)
+  proc=subprocess.run([sys.executable,'-I',str(ROOT/'scripts/agora_issues.py'),'--help'],cwd=self.root,env=env,capture_output=True,text=True)
+  self.assertEqual(proc.returncode,0,proc.stderr)
+  self.assertIn('expand-evaluate',proc.stdout)
