@@ -1,0 +1,8 @@
+{
+  "cases_sha256": "648c285232b50f07faf30c0e2ab5b900d996d2602db13f022b58765a50cbabd4",
+  "gold_sha256": "8feb7820aa5ce18c4ad9ef74a7bbe6a51bff5bbc46b44c6641ddc2756a2ad227",
+  "max_calls": 12,
+  "provider": "jev",
+  "timeout_seconds": 90,
+  "retries": 0
+}

@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 123,
-  "bytes": 634893,
+  "documents": 124,
+  "bytes": 638153,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -679,8 +679,8 @@
     },
     {
       "path": "docs/generacion-desde-plan.md",
-      "sha256": "d53f18174dafde22318c8ecd190a119628e99fcffd31888999b8f871e8858442",
-      "bytes": 6069,
+      "sha256": "8171076dcd572339781572a96441c4bba8813a72acd91e7f59f4a461828d6b0d",
+      "bytes": 6311,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -689,6 +689,10 @@
         },
         {
           "target": "../experiments/manual-dpm-v1/generation-ids-result.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/plan-ids-review-v1/README.md",
           "exists": true
         }
       ],
@@ -1281,6 +1285,14 @@
       "path": "experiments/passage-comparison-v1/protocol.md",
       "sha256": "af62e7992981410f625f09f093a889d6d3d3eca60bcdf52bc06646a31ef7508c",
       "bytes": 2321,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/plan-ids-review-v1/README.md",
+      "sha256": "2bab4a45891c5be184dc0ffed814cbbbcef793fc022cd6898284a770e765889e",
+      "bytes": 3018,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

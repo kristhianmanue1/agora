@@ -1,0 +1,92 @@
+[
+  {
+    "id": "manual-1",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_7873863a8d3e59bd9726d2f9",
+      "ev_97e265f5cc35eddd9c326649"
+    ],
+    "evidence_sha256": "ed3e4b7ab41959ecf1ba3cc08715b7862a14712ea89a784de9470c5d7588b599"
+  },
+  {
+    "id": "manual-2",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_f482b354f133d2026dc29655",
+      "ev_e2b1489887603b9c922e76b5"
+    ],
+    "evidence_sha256": "246c9234441215f4d3ab2bdf1eaaba1b0f571dc6294efb4cfbd6521b4bf02769"
+  },
+  {
+    "id": "manual-3",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_5b744177d9067b80c8225ff2",
+      "ev_6432fdfde436849a6892862c"
+    ],
+    "evidence_sha256": "6d01b724c186422434585ce45b9e5638612ac159b212b6e196b73a707d3b7890"
+  },
+  {
+    "id": "manual-4",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_696a6406f832763012bf631d",
+      "ev_b73250fc114c909182d6066b"
+    ],
+    "evidence_sha256": "0da07549369b2e33d27c4d15db76dcdae69ffad63d0acd5a434da984cd7fb797"
+  },
+  {
+    "id": "manual-5",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_eb4300699b9d4cb90b2a7aad",
+      "ev_32b24469a7401b2c24b8715d"
+    ],
+    "evidence_sha256": "a8ea6a441c6d9a7b153275913053d8d25a489c46c7a17b04ce06ebc84904919b"
+  },
+  {
+    "id": "manual-6",
+    "gold_origin": "producer source review, not independent",
+    "evidence_ids": [
+      "ev_874f12c1d18ef99d1189fb7a",
+      "ev_65ef1852a6423434cc622e23"
+    ],
+    "evidence_sha256": "79e9f86e507ad58d70ff9dbd06bcfce56a3a62c9a46ad70107b38a1b5b6d4845"
+  },
+  {
+    "id": "reserved-189",
+    "source_row_index": 189,
+    "original_label": "Attributable",
+    "gold_origin": "external unchanged"
+  },
+  {
+    "id": "reserved-140",
+    "source_row_index": 140,
+    "original_label": "Contradictory",
+    "gold_origin": "external unchanged"
+  },
+  {
+    "id": "reserved-97",
+    "source_row_index": 97,
+    "original_label": "Extrapolatory",
+    "gold_origin": "external unchanged"
+  },
+  {
+    "id": "reserved-241",
+    "source_row_index": 241,
+    "original_label": "Attributable",
+    "gold_origin": "external unchanged"
+  },
+  {
+    "id": "reserved-139",
+    "source_row_index": 139,
+    "original_label": "Extrapolatory",
+    "gold_origin": "external unchanged"
+  },
+  {
+    "id": "reserved-55",
+    "source_row_index": 55,
+    "original_label": "Contradictory",
+    "gold_origin": "external unchanged"
+  }
+]

@@ -86,3 +86,5 @@ pruebas corresponde al commit `86774e4` usado en el ensayo.
 Siguiente paso: revisar por separado las seis afirmaciones contra su evidencia
 y ensayar casos reservados con presupuesto explícito; no promover el modo ID
 a predeterminado ni afirmar ahorro a partir de esta muestra.
+
+Revisión semántica local y siguiente batería congelada: [plan-ids-review-v1](../experiments/plan-ids-review-v1/README.md). Las seis afirmaciones resultaron respaldadas en el cotejo del productor; la revisión externa continúa pendiente.

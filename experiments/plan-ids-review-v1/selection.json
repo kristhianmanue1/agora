@@ -1,0 +1,569 @@
+{
+  "seed": "agora-plan-ids-semantic-20260929",
+  "total_rows": 242,
+  "eligible_after_prior_and_bounds": 103,
+  "excluded": [
+    {
+      "row_index": 0,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 4,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 5,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 6,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 7,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 8,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 9,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 10,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 14,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 15,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 16,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 22,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 23,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 24,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 25,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 28,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 29,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 30,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 31,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 32,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 34,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 35,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 39,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 41,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 42,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 45,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 46,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 47,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 48,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 50,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 51,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 52,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 53,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 54,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 56,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 58,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 59,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 61,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 66,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 68,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 69,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 70,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 71,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 73,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 74,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 76,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 77,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 79,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 84,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 86,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 87,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 88,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 91,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 93,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 95,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 96,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 98,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 100,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 103,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 108,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 110,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 112,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 113,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 114,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 115,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 117,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 118,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 119,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 120,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 121,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 123,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 124,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 125,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 126,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 129,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 131,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 134,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 135,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 137,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 138,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 141,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 144,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 147,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 148,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 149,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 151,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 152,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 153,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 154,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 155,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 158,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 159,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 160,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 161,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 163,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 164,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 165,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 166,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 167,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 168,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 169,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 170,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 172,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 174,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 175,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 176,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 177,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 178,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 182,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 183,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 186,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 187,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 188,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 190,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 192,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 196,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 199,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 200,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 204,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 205,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 208,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 209,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 210,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 211,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 213,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 214,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 215,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 217,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 218,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 219,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 220,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 222,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 223,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 226,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 228,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 229,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 231,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 232,
+      "reason": "prior_question_answer_or_reference"
+    },
+    {
+      "row_index": 238,
+      "reason": "prior_question_answer_or_reference"
+    }
+  ],
+  "selection_collisions": [],
+  "selected": 6,
+  "per_class": 2,
+  "deduplication": "nonempty whitespace-normalized casefold question, answer OR reference; against prior 12 and within new sample; not semantic/topic deduplication",
+  "previous_count": 60,
+  "csv_sha256": "20e04c78161c0cbb6506507220ec04fdd035db24540279228d61479381187ca2"
+}
