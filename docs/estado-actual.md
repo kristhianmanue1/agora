@@ -57,3 +57,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Subpreguntas: resultado de redistribución experimental
 
 [Contraste local](../experiments/sufficiency-subquestions-v1/README.md): las cuotas iguales dejaron fuera un párrafo de 929 bytes pese a 1.989 bytes libres tras deduplicar. Una ampliación experimental por vecinos lo recuperó usando 7.882/8.000 bytes y conservando rangos previos. Sin llamadas API ni cambios de producto; falta validación en casos nuevos antes de proponer estrategia optativa.
+
+## Validación de redistribución en documentos nuevos
+
+[Doce documentos y casos límite](../experiments/shared-neighbor-validation-v1/README.md): integridad, presupuesto y conservación aprobados; a 8.000 bytes la cobertura anotada pasa de 10/29 a 12/29, con mejora en 2/12 documentos y 20,88% más bytes recuperados. Sin llamadas API ni cambios de producto. Candidata experimental, sin justificación para reemplazar el método predeterminado.

@@ -1,0 +1,2650 @@
+{
+  "pilot_equivalence": [
+    "1610.00479",
+    "1902.08830"
+  ],
+  "edge_cases": [
+    "utf8",
+    "duplicates",
+    "no-match",
+    "no-space",
+    "oversized",
+    "crlf"
+  ],
+  "randomized_cases": 200,
+  "invariants_passed": true,
+  "provider_calls": 0,
+  "summary": [
+    {
+      "budget": 4000,
+      "documents": 12,
+      "improved_documents": 1,
+      "equal_documents": 11,
+      "regressed_documents": 0,
+      "references": 29,
+      "before_bytes": 35712,
+      "after_bytes": 43555,
+      "before_covered": 9,
+      "after_covered": 10,
+      "before_annotated_overlap_bytes": 4974,
+      "after_annotated_overlap_bytes": 5556
+    },
+    {
+      "budget": 8000,
+      "documents": 12,
+      "improved_documents": 2,
+      "equal_documents": 10,
+      "regressed_documents": 0,
+      "references": 29,
+      "before_bytes": 58690,
+      "after_bytes": 70944,
+      "before_covered": 10,
+      "after_covered": 12,
+      "before_annotated_overlap_bytes": 5232,
+      "after_annotated_overlap_bytes": 6559
+    }
+  ],
+  "records": [
+    {
+      "document_id": "1803.08419",
+      "question_id": "f92c344e9b1a986754277fd0f08a47dc3e5f9feb",
+      "budget": 4000,
+      "source_bytes": 41578,
+      "source_words": 6474,
+      "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+      "reference_ranges": [
+        [
+          4504,
+          4899
+        ],
+        [
+          14385,
+          15677
+        ],
+        [
+          38665,
+          39325
+        ],
+        [
+          39327,
+          39909
+        ]
+      ],
+      "reference_count": 4,
+      "before_ranges": [
+        [
+          5987,
+          7322
+        ],
+        [
+          11206,
+          11919
+        ],
+        [
+          11921,
+          12499
+        ],
+        [
+          38645,
+          38663
+        ],
+        [
+          38665,
+          39325
+        ]
+      ],
+      "after_ranges": [
+        [
+          5987,
+          7322
+        ],
+        [
+          11206,
+          11919
+        ],
+        [
+          11921,
+          12499
+        ],
+        [
+          12501,
+          12555
+        ],
+        [
+          38645,
+          38663
+        ],
+        [
+          38665,
+          39325
+        ],
+        [
+          39327,
+          39909
+        ]
+      ],
+      "before_bytes": 3304,
+      "after_bytes": 3940,
+      "before_covered": 1,
+      "after_covered": 2,
+      "before_annotated_overlap_bytes": 660,
+      "after_annotated_overlap_bytes": 1242,
+      "elapsed_seconds": 0.007436457999999924
+    },
+    {
+      "document_id": "1803.08419",
+      "question_id": "f92c344e9b1a986754277fd0f08a47dc3e5f9feb",
+      "budget": 8000,
+      "source_bytes": 41578,
+      "source_words": 6474,
+      "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+      "reference_ranges": [
+        [
+          4504,
+          4899
+        ],
+        [
+          14385,
+          15677
+        ],
+        [
+          38665,
+          39325
+        ],
+        [
+          39327,
+          39909
+        ]
+      ],
+      "reference_count": 4,
+      "before_ranges": [
+        [
+          4919,
+          5985
+        ],
+        [
+          5987,
+          7322
+        ],
+        [
+          11921,
+          12499
+        ],
+        [
+          12501,
+          12555
+        ],
+        [
+          38645,
+          38663
+        ],
+        [
+          38665,
+          39325
+        ]
+      ],
+      "after_ranges": [
+        [
+          4919,
+          5985
+        ],
+        [
+          5987,
+          7322
+        ],
+        [
+          7324,
+          7997
+        ],
+        [
+          11206,
+          11919
+        ],
+        [
+          11921,
+          12499
+        ],
+        [
+          12501,
+          12555
+        ],
+        [
+          38645,
+          38663
+        ],
+        [
+          38665,
+          39325
+        ],
+        [
+          39327,
+          39909
+        ]
+      ],
+      "before_bytes": 3711,
+      "after_bytes": 5679,
+      "before_covered": 1,
+      "after_covered": 2,
+      "before_annotated_overlap_bytes": 660,
+      "after_annotated_overlap_bytes": 1242,
+      "elapsed_seconds": 0.008131333000000018
+    },
+    {
+      "document_id": "1606.02892",
+      "question_id": "2686e8d51caff9a19684e0c9984bcb5a1937d08d",
+      "budget": 4000,
+      "source_bytes": 22948,
+      "source_words": 3444,
+      "source_sha256": "e01cc2b75fc85eb42d6956df385e4764ebc70bca79977050a9264a888105412f",
+      "reference_ranges": [
+        [
+          9285,
+          9769
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          60
+        ],
+        [
+          62,
+          1041
+        ],
+        [
+          1043,
+          1055
+        ],
+        [
+          3635,
+          3867
+        ],
+        [
+          7283,
+          7288
+        ],
+        [
+          7290,
+          8070
+        ],
+        [
+          21136,
+          21303
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          60
+        ],
+        [
+          62,
+          1041
+        ],
+        [
+          1043,
+          1055
+        ],
+        [
+          3479,
+          3633
+        ],
+        [
+          3635,
+          3867
+        ],
+        [
+          3869,
+          3895
+        ],
+        [
+          7283,
+          7288
+        ],
+        [
+          7290,
+          8070
+        ],
+        [
+          8072,
+          8102
+        ],
+        [
+          21124,
+          21134
+        ],
+        [
+          21136,
+          21303
+        ],
+        [
+          21305,
+          22016
+        ]
+      ],
+      "before_bytes": 2235,
+      "after_bytes": 3166,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.004827375000000078
+    },
+    {
+      "document_id": "1606.02892",
+      "question_id": "2686e8d51caff9a19684e0c9984bcb5a1937d08d",
+      "budget": 8000,
+      "source_bytes": 22948,
+      "source_words": 3444,
+      "source_sha256": "e01cc2b75fc85eb42d6956df385e4764ebc70bca79977050a9264a888105412f",
+      "reference_ranges": [
+        [
+          9285,
+          9769
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          60
+        ],
+        [
+          62,
+          1041
+        ],
+        [
+          1043,
+          1055
+        ],
+        [
+          7283,
+          7288
+        ],
+        [
+          7290,
+          8070
+        ],
+        [
+          8072,
+          8102
+        ],
+        [
+          14507,
+          15189
+        ],
+        [
+          15191,
+          16214
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          60
+        ],
+        [
+          62,
+          1041
+        ],
+        [
+          1043,
+          1055
+        ],
+        [
+          7283,
+          7288
+        ],
+        [
+          7290,
+          8070
+        ],
+        [
+          8072,
+          8102
+        ],
+        [
+          14507,
+          15189
+        ],
+        [
+          15191,
+          16214
+        ],
+        [
+          16216,
+          17137
+        ]
+      ],
+      "before_bytes": 3571,
+      "after_bytes": 4492,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.004589708000000026
+    },
+    {
+      "document_id": "1707.06875",
+      "question_id": "97708d93bccc832ea671dc31a76dad6a121fcd60",
+      "budget": 4000,
+      "source_bytes": 27309,
+      "source_words": 4127,
+      "source_sha256": "380fd1c8096aacaae654fdf62c6e3d4cc51974f4fa38934f19b428c9b9ad2c16",
+      "reference_ranges": [
+        [
+          6126,
+          6332
+        ],
+        [
+          6334,
+          6607
+        ],
+        [
+          6639,
+          7002
+        ],
+        [
+          7004,
+          7780
+        ],
+        [
+          7782,
+          8555
+        ]
+      ],
+      "reference_count": 5,
+      "before_ranges": [
+        [
+          0,
+          42
+        ],
+        [
+          44,
+          704
+        ],
+        [
+          706,
+          718
+        ],
+        [
+          2212,
+          2343
+        ],
+        [
+          2345,
+          2521
+        ],
+        [
+          5549,
+          5574
+        ],
+        [
+          5576,
+          6124
+        ],
+        [
+          16953,
+          16959
+        ],
+        [
+          16961,
+          17407
+        ],
+        [
+          20209,
+          21036
+        ],
+        [
+          22735,
+          22747
+        ],
+        [
+          22749,
+          23840
+        ],
+        [
+          23842,
+          23853
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          42
+        ],
+        [
+          44,
+          704
+        ],
+        [
+          706,
+          718
+        ],
+        [
+          2212,
+          2343
+        ],
+        [
+          2345,
+          2521
+        ],
+        [
+          5549,
+          5574
+        ],
+        [
+          5576,
+          6124
+        ],
+        [
+          16953,
+          16959
+        ],
+        [
+          16961,
+          17407
+        ],
+        [
+          20209,
+          21036
+        ],
+        [
+          22735,
+          22747
+        ],
+        [
+          22749,
+          23840
+        ],
+        [
+          23842,
+          23853
+        ]
+      ],
+      "before_bytes": 3987,
+      "after_bytes": 3987,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.006810584000000008
+    },
+    {
+      "document_id": "1707.06875",
+      "question_id": "97708d93bccc832ea671dc31a76dad6a121fcd60",
+      "budget": 8000,
+      "source_bytes": 27309,
+      "source_words": 4127,
+      "source_sha256": "380fd1c8096aacaae654fdf62c6e3d4cc51974f4fa38934f19b428c9b9ad2c16",
+      "reference_ranges": [
+        [
+          6126,
+          6332
+        ],
+        [
+          6334,
+          6607
+        ],
+        [
+          6639,
+          7002
+        ],
+        [
+          7004,
+          7780
+        ],
+        [
+          7782,
+          8555
+        ]
+      ],
+      "reference_count": 5,
+      "before_ranges": [
+        [
+          0,
+          42
+        ],
+        [
+          44,
+          704
+        ],
+        [
+          706,
+          718
+        ],
+        [
+          2212,
+          2343
+        ],
+        [
+          2345,
+          2521
+        ],
+        [
+          2523,
+          2625
+        ],
+        [
+          5549,
+          5574
+        ],
+        [
+          5576,
+          6124
+        ],
+        [
+          6126,
+          6332
+        ],
+        [
+          20209,
+          21036
+        ],
+        [
+          21038,
+          21060
+        ],
+        [
+          22735,
+          22747
+        ],
+        [
+          22749,
+          23840
+        ],
+        [
+          23842,
+          23853
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          42
+        ],
+        [
+          44,
+          704
+        ],
+        [
+          706,
+          718
+        ],
+        [
+          2212,
+          2343
+        ],
+        [
+          2345,
+          2521
+        ],
+        [
+          2523,
+          2625
+        ],
+        [
+          5549,
+          5574
+        ],
+        [
+          5576,
+          6124
+        ],
+        [
+          6126,
+          6332
+        ],
+        [
+          18701,
+          20207
+        ],
+        [
+          20209,
+          21036
+        ],
+        [
+          21038,
+          21060
+        ],
+        [
+          22735,
+          22747
+        ],
+        [
+          22749,
+          23840
+        ],
+        [
+          23842,
+          23853
+        ]
+      ],
+      "before_bytes": 3865,
+      "after_bytes": 5371,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 206,
+      "after_annotated_overlap_bytes": 206,
+      "elapsed_seconds": 0.005166000000000004
+    },
+    {
+      "document_id": "1911.01940",
+      "question_id": "26e32f24fe0c31ef25de78935daa479534b9dd58",
+      "budget": 4000,
+      "source_bytes": 20333,
+      "source_words": 2988,
+      "source_sha256": "84c8bc0582d004fd99cbbc02b00a38917dfb529bb46216b0b5d438bbe766b284",
+      "reference_ranges": [
+        [
+          7417,
+          7851
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ]
+      ],
+      "reference_count": 3,
+      "before_ranges": [
+        [
+          2024,
+          2806
+        ],
+        [
+          4390,
+          4402
+        ],
+        [
+          4404,
+          5885
+        ],
+        [
+          6112,
+          6164
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ],
+        [
+          8769,
+          8870
+        ]
+      ],
+      "after_ranges": [
+        [
+          2024,
+          2806
+        ],
+        [
+          4390,
+          4402
+        ],
+        [
+          4404,
+          5885
+        ],
+        [
+          5887,
+          6110
+        ],
+        [
+          6112,
+          6164
+        ],
+        [
+          6166,
+          6592
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ],
+        [
+          8769,
+          8870
+        ]
+      ],
+      "before_bytes": 3340,
+      "after_bytes": 3989,
+      "before_covered": 2,
+      "after_covered": 2,
+      "before_annotated_overlap_bytes": 912,
+      "after_annotated_overlap_bytes": 912,
+      "elapsed_seconds": 0.003980082999999968
+    },
+    {
+      "document_id": "1911.01940",
+      "question_id": "26e32f24fe0c31ef25de78935daa479534b9dd58",
+      "budget": 8000,
+      "source_bytes": 20333,
+      "source_words": 2988,
+      "source_sha256": "84c8bc0582d004fd99cbbc02b00a38917dfb529bb46216b0b5d438bbe766b284",
+      "reference_ranges": [
+        [
+          7417,
+          7851
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ]
+      ],
+      "reference_count": 3,
+      "before_ranges": [
+        [
+          1599,
+          2022
+        ],
+        [
+          2024,
+          2806
+        ],
+        [
+          2808,
+          3134
+        ],
+        [
+          4390,
+          4402
+        ],
+        [
+          4404,
+          5885
+        ],
+        [
+          5887,
+          6110
+        ],
+        [
+          7417,
+          7851
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ],
+        [
+          8769,
+          8870
+        ],
+        [
+          15580,
+          15608
+        ],
+        [
+          15610,
+          16606
+        ]
+      ],
+      "after_ranges": [
+        [
+          1599,
+          2022
+        ],
+        [
+          2024,
+          2806
+        ],
+        [
+          2808,
+          3134
+        ],
+        [
+          4390,
+          4402
+        ],
+        [
+          4404,
+          5885
+        ],
+        [
+          5887,
+          6110
+        ],
+        [
+          7417,
+          7851
+        ],
+        [
+          7853,
+          8303
+        ],
+        [
+          8305,
+          8767
+        ],
+        [
+          8769,
+          8870
+        ],
+        [
+          15580,
+          15608
+        ],
+        [
+          15610,
+          16606
+        ],
+        [
+          16608,
+          17879
+        ]
+      ],
+      "before_bytes": 5718,
+      "after_bytes": 6989,
+      "before_covered": 3,
+      "after_covered": 3,
+      "before_annotated_overlap_bytes": 1346,
+      "after_annotated_overlap_bytes": 1346,
+      "elapsed_seconds": 0.004102500000000009
+    },
+    {
+      "document_id": "1909.11706",
+      "question_id": "ff36168caf48161db7039e3bd4732cef31d4de99",
+      "budget": 4000,
+      "source_bytes": 23656,
+      "source_words": 3608,
+      "source_sha256": "3631d0008d6555da0bb6d31aed50a8d540d65aa1f21e0c7b3b8306bd0f484358",
+      "reference_ranges": [
+        [
+          21735,
+          22480
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          119
+        ],
+        [
+          21044,
+          21050
+        ],
+        [
+          21052,
+          21733
+        ],
+        [
+          22482,
+          22508
+        ],
+        [
+          22510,
+          23654
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          119
+        ],
+        [
+          121,
+          1504
+        ],
+        [
+          21044,
+          21050
+        ],
+        [
+          21052,
+          21733
+        ],
+        [
+          22482,
+          22508
+        ],
+        [
+          22510,
+          23654
+        ]
+      ],
+      "before_bytes": 1976,
+      "after_bytes": 3359,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.0043545409999999896
+    },
+    {
+      "document_id": "1909.11706",
+      "question_id": "ff36168caf48161db7039e3bd4732cef31d4de99",
+      "budget": 8000,
+      "source_bytes": 23656,
+      "source_words": 3608,
+      "source_sha256": "3631d0008d6555da0bb6d31aed50a8d540d65aa1f21e0c7b3b8306bd0f484358",
+      "reference_ranges": [
+        [
+          21735,
+          22480
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          119
+        ],
+        [
+          121,
+          1504
+        ],
+        [
+          1506,
+          1518
+        ],
+        [
+          21044,
+          21050
+        ],
+        [
+          21052,
+          21733
+        ],
+        [
+          22482,
+          22508
+        ],
+        [
+          22510,
+          23654
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          119
+        ],
+        [
+          121,
+          1504
+        ],
+        [
+          1506,
+          1518
+        ],
+        [
+          21044,
+          21050
+        ],
+        [
+          21052,
+          21733
+        ],
+        [
+          21735,
+          22480
+        ],
+        [
+          22482,
+          22508
+        ],
+        [
+          22510,
+          23654
+        ]
+      ],
+      "before_bytes": 3371,
+      "after_bytes": 4116,
+      "before_covered": 0,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 745,
+      "elapsed_seconds": 0.004198625000000011
+    },
+    {
+      "document_id": "1802.03052",
+      "question_id": "641fe5dc93611411582e6a4a0ea2d5773eaf0310",
+      "budget": 4000,
+      "source_bytes": 30634,
+      "source_words": 4554,
+      "source_sha256": "efa54304de35ed711648b4a8ad9baa1bbe87b3db83f7c1fa61726aa9746d5a40",
+      "reference_ranges": [
+        [
+          19321,
+          19786
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          105
+        ],
+        [
+          107,
+          1489
+        ],
+        [
+          1491,
+          1503
+        ],
+        [
+          19321,
+          19786
+        ],
+        [
+          20940,
+          21087
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          105
+        ],
+        [
+          107,
+          1489
+        ],
+        [
+          1491,
+          1503
+        ],
+        [
+          19282,
+          19319
+        ],
+        [
+          19321,
+          19786
+        ],
+        [
+          19788,
+          20073
+        ],
+        [
+          20675,
+          20938
+        ],
+        [
+          20940,
+          21087
+        ],
+        [
+          21089,
+          21203
+        ]
+      ],
+      "before_bytes": 2111,
+      "after_bytes": 2810,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 465,
+      "after_annotated_overlap_bytes": 465,
+      "elapsed_seconds": 0.0058592500000000936
+    },
+    {
+      "document_id": "1802.03052",
+      "question_id": "641fe5dc93611411582e6a4a0ea2d5773eaf0310",
+      "budget": 8000,
+      "source_bytes": 30634,
+      "source_words": 4554,
+      "source_sha256": "efa54304de35ed711648b4a8ad9baa1bbe87b3db83f7c1fa61726aa9746d5a40",
+      "reference_ranges": [
+        [
+          19321,
+          19786
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          105
+        ],
+        [
+          107,
+          1489
+        ],
+        [
+          1491,
+          1503
+        ],
+        [
+          4147,
+          5457
+        ],
+        [
+          5459,
+          5645
+        ],
+        [
+          7554,
+          8211
+        ],
+        [
+          8213,
+          9206
+        ],
+        [
+          19282,
+          19319
+        ],
+        [
+          19321,
+          19786
+        ],
+        [
+          19788,
+          20073
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          105
+        ],
+        [
+          107,
+          1489
+        ],
+        [
+          1491,
+          1503
+        ],
+        [
+          3070,
+          4145
+        ],
+        [
+          4147,
+          5457
+        ],
+        [
+          5459,
+          5645
+        ],
+        [
+          7554,
+          8211
+        ],
+        [
+          8213,
+          9206
+        ],
+        [
+          9208,
+          9735
+        ],
+        [
+          19282,
+          19319
+        ],
+        [
+          19321,
+          19786
+        ],
+        [
+          19788,
+          20073
+        ]
+      ],
+      "before_bytes": 5432,
+      "after_bytes": 7034,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 465,
+      "after_annotated_overlap_bytes": 465,
+      "elapsed_seconds": 0.005861333000000024
+    },
+    {
+      "document_id": "2003.11531",
+      "question_id": "9b6339e24f58b576143d2adf599cfc4a31fd3b0c",
+      "budget": 4000,
+      "source_bytes": 37922,
+      "source_words": 5716,
+      "source_sha256": "fb5d5ae81eb37a6300f73996ec993260332f8101e86e13802731375807925162",
+      "reference_ranges": [
+        [
+          23349,
+          24129
+        ],
+        [
+          36830,
+          37625
+        ]
+      ],
+      "reference_count": 2,
+      "before_ranges": [
+        [
+          71,
+          1246
+        ],
+        [
+          31758,
+          31778
+        ],
+        [
+          36830,
+          37625
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          69
+        ],
+        [
+          71,
+          1246
+        ],
+        [
+          1248,
+          1260
+        ],
+        [
+          31674,
+          31756
+        ],
+        [
+          31758,
+          31778
+        ],
+        [
+          31780,
+          32241
+        ],
+        [
+          36817,
+          36828
+        ],
+        [
+          36830,
+          37625
+        ],
+        [
+          37627,
+          37643
+        ]
+      ],
+      "before_bytes": 1990,
+      "after_bytes": 2641,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 795,
+      "after_annotated_overlap_bytes": 795,
+      "elapsed_seconds": 0.006960791000000022
+    },
+    {
+      "document_id": "2003.11531",
+      "question_id": "9b6339e24f58b576143d2adf599cfc4a31fd3b0c",
+      "budget": 8000,
+      "source_bytes": 37922,
+      "source_words": 5716,
+      "source_sha256": "fb5d5ae81eb37a6300f73996ec993260332f8101e86e13802731375807925162",
+      "reference_ranges": [
+        [
+          23349,
+          24129
+        ],
+        [
+          36830,
+          37625
+        ]
+      ],
+      "reference_count": 2,
+      "before_ranges": [
+        [
+          0,
+          69
+        ],
+        [
+          71,
+          1246
+        ],
+        [
+          1248,
+          1260
+        ],
+        [
+          1803,
+          3579
+        ],
+        [
+          36817,
+          36828
+        ],
+        [
+          36830,
+          37625
+        ],
+        [
+          37627,
+          37643
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          69
+        ],
+        [
+          71,
+          1246
+        ],
+        [
+          1248,
+          1260
+        ],
+        [
+          1262,
+          1801
+        ],
+        [
+          1803,
+          3579
+        ],
+        [
+          3581,
+          4616
+        ],
+        [
+          36817,
+          36828
+        ],
+        [
+          36830,
+          37625
+        ],
+        [
+          37627,
+          37643
+        ]
+      ],
+      "before_bytes": 3854,
+      "after_bytes": 5428,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 795,
+      "after_annotated_overlap_bytes": 795,
+      "elapsed_seconds": 0.0074277090000000046
+    },
+    {
+      "document_id": "1909.13466",
+      "question_id": "e5be900e70ea86c019efb06438ba200e11773a7c",
+      "budget": 4000,
+      "source_bytes": 40904,
+      "source_words": 6226,
+      "source_sha256": "15f1fd48104a9f4c90703284ecbb058d9d34726e62255421178e9980a0db76a6",
+      "reference_ranges": [
+        [
+          20340,
+          20603
+        ],
+        [
+          20605,
+          20987
+        ],
+        [
+          20989,
+          21517
+        ],
+        [
+          21519,
+          21955
+        ],
+        [
+          21957,
+          22695
+        ]
+      ],
+      "reference_count": 5,
+      "before_ranges": [
+        [
+          2586,
+          3056
+        ],
+        [
+          7581,
+          8699
+        ],
+        [
+          12877,
+          12899
+        ],
+        [
+          14751,
+          15149
+        ],
+        [
+          20605,
+          20987
+        ],
+        [
+          25557,
+          27120
+        ]
+      ],
+      "after_ranges": [
+        [
+          2586,
+          3056
+        ],
+        [
+          7581,
+          8699
+        ],
+        [
+          12877,
+          12899
+        ],
+        [
+          14751,
+          15149
+        ],
+        [
+          15151,
+          15190
+        ],
+        [
+          20605,
+          20987
+        ],
+        [
+          25557,
+          27120
+        ]
+      ],
+      "before_bytes": 3953,
+      "after_bytes": 3992,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 382,
+      "after_annotated_overlap_bytes": 382,
+      "elapsed_seconds": 0.007619625000000019
+    },
+    {
+      "document_id": "1909.13466",
+      "question_id": "e5be900e70ea86c019efb06438ba200e11773a7c",
+      "budget": 8000,
+      "source_bytes": 40904,
+      "source_words": 6226,
+      "source_sha256": "15f1fd48104a9f4c90703284ecbb058d9d34726e62255421178e9980a0db76a6",
+      "reference_ranges": [
+        [
+          20340,
+          20603
+        ],
+        [
+          20605,
+          20987
+        ],
+        [
+          20989,
+          21517
+        ],
+        [
+          21519,
+          21955
+        ],
+        [
+          21957,
+          22695
+        ]
+      ],
+      "reference_count": 5,
+      "before_ranges": [
+        [
+          1460,
+          2584
+        ],
+        [
+          2586,
+          3056
+        ],
+        [
+          7581,
+          8699
+        ],
+        [
+          10130,
+          11201
+        ],
+        [
+          11203,
+          11236
+        ],
+        [
+          11238,
+          12561
+        ],
+        [
+          12563,
+          12875
+        ],
+        [
+          25557,
+          27120
+        ],
+        [
+          27122,
+          27145
+        ],
+        [
+          35287,
+          35319
+        ],
+        [
+          35321,
+          35943
+        ]
+      ],
+      "after_ranges": [
+        [
+          1460,
+          2584
+        ],
+        [
+          2586,
+          3056
+        ],
+        [
+          7581,
+          8699
+        ],
+        [
+          10130,
+          11201
+        ],
+        [
+          11203,
+          11236
+        ],
+        [
+          11238,
+          12561
+        ],
+        [
+          12563,
+          12875
+        ],
+        [
+          25557,
+          27120
+        ],
+        [
+          27122,
+          27145
+        ],
+        [
+          35287,
+          35319
+        ],
+        [
+          35321,
+          35943
+        ]
+      ],
+      "before_bytes": 7691,
+      "after_bytes": 7691,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.007460250000000057
+    },
+    {
+      "document_id": "1909.02322",
+      "question_id": "74fcb741d29892918903702dbb145fef372d1de3",
+      "budget": 4000,
+      "source_bytes": 27138,
+      "source_words": 3998,
+      "source_sha256": "ded70512a4e9a93fa09da024c606710296ec19362fa89aae5aa554fa2d7a053c",
+      "reference_ranges": [
+        [
+          8373,
+          9446
+        ],
+        [
+          9500,
+          9906
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          12133,
+          12594
+        ]
+      ],
+      "reference_count": 4,
+      "before_ranges": [
+        [
+          0,
+          50
+        ],
+        [
+          52,
+          1264
+        ],
+        [
+          1266,
+          1278
+        ],
+        [
+          9448,
+          9498
+        ],
+        [
+          10305,
+          10364
+        ],
+        [
+          10788,
+          10838
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          15044,
+          15099
+        ],
+        [
+          15101,
+          16868
+        ],
+        [
+          16870,
+          16900
+        ],
+        [
+          17567,
+          17612
+        ],
+        [
+          17614,
+          18098
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          50
+        ],
+        [
+          52,
+          1264
+        ],
+        [
+          1266,
+          1278
+        ],
+        [
+          9448,
+          9498
+        ],
+        [
+          10305,
+          10364
+        ],
+        [
+          10788,
+          10838
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          15044,
+          15099
+        ],
+        [
+          15101,
+          16868
+        ],
+        [
+          16870,
+          16900
+        ],
+        [
+          17567,
+          17612
+        ],
+        [
+          17614,
+          18098
+        ],
+        [
+          18100,
+          18141
+        ]
+      ],
+      "before_bytes": 3946,
+      "after_bytes": 3987,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 132,
+      "after_annotated_overlap_bytes": 132,
+      "elapsed_seconds": 0.00496195899999996
+    },
+    {
+      "document_id": "1909.02322",
+      "question_id": "74fcb741d29892918903702dbb145fef372d1de3",
+      "budget": 8000,
+      "source_bytes": 27138,
+      "source_words": 3998,
+      "source_sha256": "ded70512a4e9a93fa09da024c606710296ec19362fa89aae5aa554fa2d7a053c",
+      "reference_ranges": [
+        [
+          8373,
+          9446
+        ],
+        [
+          9500,
+          9906
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          12133,
+          12594
+        ]
+      ],
+      "reference_count": 4,
+      "before_ranges": [
+        [
+          1266,
+          1278
+        ],
+        [
+          1280,
+          4535
+        ],
+        [
+          10788,
+          10838
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          15044,
+          15099
+        ],
+        [
+          15101,
+          16868
+        ],
+        [
+          16870,
+          16900
+        ],
+        [
+          17567,
+          17612
+        ],
+        [
+          17614,
+          18098
+        ],
+        [
+          18100,
+          18141
+        ],
+        [
+          25671,
+          26400
+        ],
+        [
+          26402,
+          26413
+        ]
+      ],
+      "after_ranges": [
+        [
+          1266,
+          1278
+        ],
+        [
+          1280,
+          4535
+        ],
+        [
+          4537,
+          5805
+        ],
+        [
+          10788,
+          10838
+        ],
+        [
+          10840,
+          10972
+        ],
+        [
+          10974,
+          11048
+        ],
+        [
+          15044,
+          15099
+        ],
+        [
+          15101,
+          16868
+        ],
+        [
+          16870,
+          16900
+        ],
+        [
+          17567,
+          17612
+        ],
+        [
+          17614,
+          18098
+        ],
+        [
+          18100,
+          18141
+        ],
+        [
+          25671,
+          26400
+        ],
+        [
+          26402,
+          26413
+        ]
+      ],
+      "before_bytes": 6611,
+      "after_bytes": 7953,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 132,
+      "after_annotated_overlap_bytes": 132,
+      "elapsed_seconds": 0.004993750000000019
+    },
+    {
+      "document_id": "2004.02214",
+      "question_id": "fcb0ac1934e2fd9f58f4b459e6853999a27844f9",
+      "budget": 4000,
+      "source_bytes": 24603,
+      "source_words": 3633,
+      "source_sha256": "15e8c8477585d3ab062496553711ae9649a9b4e071f89b30fccdc1c82ed8949d",
+      "reference_ranges": [
+        [
+          12886,
+          13149
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          84
+        ],
+        [
+          86,
+          948
+        ],
+        [
+          950,
+          962
+        ],
+        [
+          2398,
+          3010
+        ],
+        [
+          21866,
+          21926
+        ],
+        [
+          21928,
+          22744
+        ],
+        [
+          22746,
+          23271
+        ],
+        [
+          23273,
+          23299
+        ],
+        [
+          24165,
+          24175
+        ],
+        [
+          24177,
+          24601
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          84
+        ],
+        [
+          86,
+          948
+        ],
+        [
+          950,
+          962
+        ],
+        [
+          1828,
+          2396
+        ],
+        [
+          2398,
+          3010
+        ],
+        [
+          21866,
+          21926
+        ],
+        [
+          21928,
+          22744
+        ],
+        [
+          22746,
+          23271
+        ],
+        [
+          23273,
+          23299
+        ],
+        [
+          24165,
+          24175
+        ],
+        [
+          24177,
+          24601
+        ]
+      ],
+      "before_bytes": 3431,
+      "after_bytes": 3999,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.005030499999999938
+    },
+    {
+      "document_id": "2004.02214",
+      "question_id": "fcb0ac1934e2fd9f58f4b459e6853999a27844f9",
+      "budget": 8000,
+      "source_bytes": 24603,
+      "source_words": 3633,
+      "source_sha256": "15e8c8477585d3ab062496553711ae9649a9b4e071f89b30fccdc1c82ed8949d",
+      "reference_ranges": [
+        [
+          12886,
+          13149
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          84
+        ],
+        [
+          86,
+          948
+        ],
+        [
+          950,
+          962
+        ],
+        [
+          1828,
+          2396
+        ],
+        [
+          2398,
+          3010
+        ],
+        [
+          3012,
+          4182
+        ],
+        [
+          21866,
+          21926
+        ],
+        [
+          21928,
+          22744
+        ],
+        [
+          22746,
+          23271
+        ],
+        [
+          24165,
+          24175
+        ],
+        [
+          24177,
+          24601
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          84
+        ],
+        [
+          86,
+          948
+        ],
+        [
+          950,
+          962
+        ],
+        [
+          1828,
+          2396
+        ],
+        [
+          2398,
+          3010
+        ],
+        [
+          3012,
+          4182
+        ],
+        [
+          21866,
+          21926
+        ],
+        [
+          21928,
+          22744
+        ],
+        [
+          22746,
+          23271
+        ],
+        [
+          24165,
+          24175
+        ],
+        [
+          24177,
+          24601
+        ]
+      ],
+      "before_bytes": 5143,
+      "after_bytes": 5143,
+      "before_covered": 0,
+      "after_covered": 0,
+      "before_annotated_overlap_bytes": 0,
+      "after_annotated_overlap_bytes": 0,
+      "elapsed_seconds": 0.004450249999999989
+    },
+    {
+      "document_id": "1909.04251",
+      "question_id": "2dba0b83fc22995f83e7ac66cc8f68bcdcc70ee9",
+      "budget": 4000,
+      "source_bytes": 29013,
+      "source_words": 4428,
+      "source_sha256": "1a77a735ab2c893f6c57e2061d2ef6b05bb3c018bcdb788ea73f7e06c22f54ab",
+      "reference_ranges": [
+        [
+          22551,
+          23691
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          3797,
+          3844
+        ],
+        [
+          3846,
+          3997
+        ],
+        [
+          3999,
+          4076
+        ],
+        [
+          4078,
+          4181
+        ],
+        [
+          22551,
+          23691
+        ],
+        [
+          23693,
+          23744
+        ],
+        [
+          23746,
+          24012
+        ],
+        [
+          26693,
+          27443
+        ]
+      ],
+      "after_ranges": [
+        [
+          3797,
+          3844
+        ],
+        [
+          3846,
+          3997
+        ],
+        [
+          3999,
+          4076
+        ],
+        [
+          4078,
+          4181
+        ],
+        [
+          21974,
+          22549
+        ],
+        [
+          22551,
+          23691
+        ],
+        [
+          23693,
+          23744
+        ],
+        [
+          23746,
+          24012
+        ],
+        [
+          26693,
+          27443
+        ],
+        [
+          27445,
+          28057
+        ]
+      ],
+      "before_bytes": 2585,
+      "after_bytes": 3772,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 1140,
+      "after_annotated_overlap_bytes": 1140,
+      "elapsed_seconds": 0.005974000000000146
+    },
+    {
+      "document_id": "1909.04251",
+      "question_id": "2dba0b83fc22995f83e7ac66cc8f68bcdcc70ee9",
+      "budget": 8000,
+      "source_bytes": 29013,
+      "source_words": 4428,
+      "source_sha256": "1a77a735ab2c893f6c57e2061d2ef6b05bb3c018bcdb788ea73f7e06c22f54ab",
+      "reference_ranges": [
+        [
+          22551,
+          23691
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          11053,
+          11088
+        ],
+        [
+          11090,
+          12004
+        ],
+        [
+          12006,
+          12037
+        ],
+        [
+          22551,
+          23691
+        ],
+        [
+          23693,
+          23744
+        ],
+        [
+          24889,
+          25258
+        ],
+        [
+          25260,
+          26691
+        ]
+      ],
+      "after_ranges": [
+        [
+          11053,
+          11088
+        ],
+        [
+          11090,
+          12004
+        ],
+        [
+          12006,
+          12037
+        ],
+        [
+          21974,
+          22549
+        ],
+        [
+          22551,
+          23691
+        ],
+        [
+          23693,
+          23744
+        ],
+        [
+          24889,
+          25258
+        ],
+        [
+          25260,
+          26691
+        ],
+        [
+          26693,
+          27443
+        ]
+      ],
+      "before_bytes": 3971,
+      "after_bytes": 5296,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 1140,
+      "after_annotated_overlap_bytes": 1140,
+      "elapsed_seconds": 0.005620040999999798
+    },
+    {
+      "document_id": "1610.07149",
+      "question_id": "97055ab0227ed6ac7a8eba558b94f01867bb9562",
+      "budget": 4000,
+      "source_bytes": 25371,
+      "source_words": 3715,
+      "source_sha256": "910e705bdb450be013f4336afba238d90d10381c604f8702bda9cb7363ed762e",
+      "reference_ranges": [
+        [
+          16919,
+          17407
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          86
+        ],
+        [
+          88,
+          1189
+        ],
+        [
+          1191,
+          1203
+        ],
+        [
+          1669,
+          2367
+        ],
+        [
+          13564,
+          13759
+        ],
+        [
+          16838,
+          16917
+        ],
+        [
+          16919,
+          17407
+        ],
+        [
+          17945,
+          18140
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          86
+        ],
+        [
+          88,
+          1189
+        ],
+        [
+          1191,
+          1203
+        ],
+        [
+          1205,
+          1667
+        ],
+        [
+          1669,
+          2367
+        ],
+        [
+          2369,
+          2938
+        ],
+        [
+          13552,
+          13562
+        ],
+        [
+          13564,
+          13759
+        ],
+        [
+          13761,
+          13779
+        ],
+        [
+          16838,
+          16917
+        ],
+        [
+          16919,
+          17407
+        ],
+        [
+          17945,
+          18140
+        ]
+      ],
+      "before_bytes": 2854,
+      "after_bytes": 3913,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 488,
+      "after_annotated_overlap_bytes": 488,
+      "elapsed_seconds": 0.005054457999999817
+    },
+    {
+      "document_id": "1610.07149",
+      "question_id": "97055ab0227ed6ac7a8eba558b94f01867bb9562",
+      "budget": 8000,
+      "source_bytes": 25371,
+      "source_words": 3715,
+      "source_sha256": "910e705bdb450be013f4336afba238d90d10381c604f8702bda9cb7363ed762e",
+      "reference_ranges": [
+        [
+          16919,
+          17407
+        ]
+      ],
+      "reference_count": 1,
+      "before_ranges": [
+        [
+          0,
+          86
+        ],
+        [
+          88,
+          1189
+        ],
+        [
+          1191,
+          1203
+        ],
+        [
+          1205,
+          1667
+        ],
+        [
+          1669,
+          2367
+        ],
+        [
+          2369,
+          2938
+        ],
+        [
+          12280,
+          12370
+        ],
+        [
+          12372,
+          12870
+        ],
+        [
+          12872,
+          13222
+        ],
+        [
+          16838,
+          16917
+        ],
+        [
+          16919,
+          17407
+        ],
+        [
+          17409,
+          17943
+        ],
+        [
+          17945,
+          18140
+        ],
+        [
+          18142,
+          18732
+        ]
+      ],
+      "after_ranges": [
+        [
+          0,
+          86
+        ],
+        [
+          88,
+          1189
+        ],
+        [
+          1191,
+          1203
+        ],
+        [
+          1205,
+          1667
+        ],
+        [
+          1669,
+          2367
+        ],
+        [
+          2369,
+          2938
+        ],
+        [
+          12280,
+          12370
+        ],
+        [
+          12372,
+          12870
+        ],
+        [
+          12872,
+          13222
+        ],
+        [
+          16838,
+          16917
+        ],
+        [
+          16919,
+          17407
+        ],
+        [
+          17409,
+          17943
+        ],
+        [
+          17945,
+          18140
+        ],
+        [
+          18142,
+          18732
+        ]
+      ],
+      "before_bytes": 5752,
+      "after_bytes": 5752,
+      "before_covered": 1,
+      "after_covered": 1,
+      "before_annotated_overlap_bytes": 488,
+      "after_annotated_overlap_bytes": 488,
+      "elapsed_seconds": 0.004805750000000053
+    }
+  ],
+  "total_seconds": 0.9310170000000001
+}

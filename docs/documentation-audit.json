@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 139,
-  "bytes": 686032,
+  "documents": 140,
+  "bytes": 690816,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "a129d3dcad1e395f48469cc5dd249145c5d816eef60cbd78495537fe0b233d0e",
-      "bytes": 8010,
+      "sha256": "da059c3e0841a76de6f3c516bb5577cf70236e9492d8ae704e43a847020abbf1",
+      "bytes": 8457,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -599,6 +599,10 @@
         },
         {
           "target": "../experiments/sufficiency-subquestions-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/shared-neighbor-validation-v1/README.md",
           "exists": true
         }
       ],
@@ -1429,6 +1433,14 @@
       "path": "experiments/routed-query-v1/README.md",
       "sha256": "842b9295c880b3b5e00b9eb989c75b7f304348f96ac7fd4b0e810b2e8fc0a330",
       "bytes": 854,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/shared-neighbor-validation-v1/README.md",
+      "sha256": "c9c76b45a66a74edc7a57d402037bf303a8ab9ac45c6e1205f9dbabb58e5f3c9",
+      "bytes": 4337,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
