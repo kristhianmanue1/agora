@@ -1,0 +1,30 @@
+[
+  {
+    "id": "operational-full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered",
+    "provenance": "producer_label_no_independent_adjudication"
+  },
+  {
+    "id": "operational-brief",
+    "sufficiency": "insufficient",
+    "e1": "covered",
+    "e2": "missing_required",
+    "provenance": "producer_label_no_independent_adjudication"
+  },
+  {
+    "id": "descriptive-full",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "covered",
+    "provenance": "producer_label_no_independent_adjudication"
+  },
+  {
+    "id": "descriptive-brief",
+    "sufficiency": "sufficient",
+    "e1": "covered",
+    "e2": "not_required",
+    "provenance": "producer_label_no_independent_adjudication"
+  }
+]

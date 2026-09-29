@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 129,
-  "bytes": 654774,
+  "documents": 130,
+  "bytes": 657582,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -1497,6 +1497,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/summary-task-sufficiency-v2/README.md",
+      "sha256": "5b1187073c156fe0a33d15ecf6907d25523354e590fd04c07a4439d85a0d809c",
+      "bytes": 2808,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

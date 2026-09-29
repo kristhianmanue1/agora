@@ -1,0 +1,9 @@
+{
+  "cases_sha256": "78d0d73d3eb22d4899575dcdbfb835aabbdbc88479a149b6bc56c67eff43c9aa",
+  "gold_sha256": "826a0090eeaeec9a96a3ea9526628703eb01cd80e91d0d21ead576303334df43",
+  "code_head": "652ad9c07dc76604a87391cdfeb1d71f25bbb5ec",
+  "max_calls": 4,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "primary": "All four sufficiency labels match; operational-brief e2 missing_required and descriptive-brief e2 not_required; report unit labels separately."
+}
