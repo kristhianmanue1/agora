@@ -31,3 +31,28 @@ La salida describió las seis áreas y una responsabilidad por área e indicó a
 La primera invocación devolvió código de proceso 0 con estado JSON `rejected`. Se corrigió el código de salida a 2 para fallos/rechazos y se comprobó con replay, sin repetir la llamada. La evidencia conserva ese resultado anterior y los hashes de la implementación que lo produjo.
 
 Evidencia: [resultado](../experiments/manual-dpm-v1/generation-result.json). La respuesta cruda sigue en `runs/`, ignorada por Git. Próximo incremento: evaluar referencias por identificador usando los mecanismos ya existentes, conservando el rechazo original, antes de relajar fidelidad literal.
+
+## Referencias por identificador
+
+`generate-plan --citation-mode ids` reutiliza `query_evidence`, `build_units` y
+`validate_ids`. El valor predeterminado sigue siendo `literal`; no cambia el
+contrato de respuestas anteriores. La salida ID usa
+`agora/claim-evidence-query/v2`: `parts[].claims[]` contiene texto, IDs y citas
+resueltas; `citations` conserva los offsets originales. No es el formato plano
+`answer` de la ruta literal.
+
+Cada ID está ligado a identidad de fuente, revisión, offsets y texto. El modelo
+selecciona IDs del paquete; Ágora recupera el texto literal sin pedir que lo copie.
+IDs desconocidos, de otra revisión o fuera de la selección se rechazan. Los
+presupuestos de citas se aplican al texto resuelto, no a la longitud del ID.
+Un ID válido demuestra pertenencia y procedencia, **no respaldo semántico**.
+Se conservan `semantic_support=not_verified` y
+`global_completeness=not_established`.
+
+```bash
+# Añadir al comando anterior; mismo plan, fuente, hash y alcance.
+--citation-mode ids
+```
+
+No se normalizan ni aceptan retrospectivamente las citas rechazadas del ensayo
+literal. La evaluación real por ID se registra aparte cuando esté disponible.

@@ -61,6 +61,7 @@ def parser():
         s.add_argument('--'+name,required=True)
     group=s.add_mutually_exclusive_group(required=True)
     group.add_argument('--live',action='store_true');group.add_argument('--response')
+    s.add_argument('--citation-mode',choices=('literal','ids'),default='literal')
     from .expansion_cli import add_commands
     add_commands(sub)
     return p

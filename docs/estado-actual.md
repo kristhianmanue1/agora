@@ -30,9 +30,9 @@ Skopos conserva fuentes; hay pilotos mediante contratos/exportaciones explícita
 
 No están resueltos: motor completo de transformación y consolidación de memoria, consolidación general, OCR fiable, extracción automática de estructura, descomposición autónoma de preguntas, adjudicación independiente general, catálogo de artefactos y verificación de sus front-matter. Tampoco watcher ni corrección automática de documentos.
 
-**Próxima prioridad:** reutilizar referencias por identificador para que el generador no tenga que volver a copiar citas; contrastar respuesta, cobertura y evidencia sin relajar silenciosamente literalidad. Después, casos nuevos reservados. Aumentar tiempo o contexto no basta para corregir omisiones.
+**Incremento disponible:** `generate-plan --citation-mode ids` reutiliza las referencias por identificador existentes. Validación local completada; la nueva evaluación real está pendiente. Próxima prioridad: contrastar respuesta, cobertura y respaldo semántico con esa ruta y después con casos reservados. Aumentar tiempo o contexto no basta para corregir omisiones.
 
-Los prototipos ya existentes de [referencias por ID](referencias-evidencia-por-id.md) son una base de implementación, no prueba de compatibilidad automática con `generate-plan`.
+La integración explícita de [referencias por ID](referencias-evidencia-por-id.md) mantiene el modo literal anterior y usa un formato de salida por afirmaciones distinto; véase [generación desde plan](generacion-desde-plan.md).
 
 ## Aclaración sobre L0…Ln
 

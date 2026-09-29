@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
   "documents": 123,
-  "bytes": 631784,
+  "bytes": 633084,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "66584d4594d3e7eab3edf02bae27c1507e0cc3c0de26ee4f00c38e78a0d4c22b",
-      "bytes": 4842,
+      "sha256": "43a9b55dcd1ed816d86ae092bb7414a6febac4adb637e31315962a723825d4ed",
+      "bytes": 4962,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -563,6 +563,10 @@
         },
         {
           "target": "referencias-evidencia-por-id.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
           "exists": true
         }
       ],
@@ -675,8 +679,8 @@
     },
     {
       "path": "docs/generacion-desde-plan.md",
-      "sha256": "003c47b16b2bdc0698d96ae3a3f68468fe5d93a87d4611805d89068c692dc859",
-      "bytes": 3206,
+      "sha256": "37b6751c5409281c19d585e31a44c4e370d5c3c87af018ef944f517f16094588",
+      "bytes": 4386,
       "scope": "guidance_or_report",
       "local_links": [
         {

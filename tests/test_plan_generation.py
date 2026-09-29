@@ -48,3 +48,25 @@ class PlanGenerationTests(unittest.TestCase):
         self.assertEqual(json.loads(p.stdout)['http_attempts'],0)
         p=subprocess.run(args,capture_output=True,text=True)
         self.assertEqual(p.returncode,2)
+    def test_ids_resolve_original_offsets(self):
+        def provider(system,user):
+            units=json.loads(user)['evidence_units']
+            return dict(finish_reason='stop',content=json.dumps({'parts':[dict(id='P1',status='answered',claims=[dict(text='Aprueba normas.',evidence_ids=[units[-1]['id']])],missing=[])]}))
+        data=json.dumps(self.plan).encode()
+        r=generate(self.path,data,digest(data),'Función',provider,'ids')
+        self.assertEqual(r['execution_status'],'complete')
+        self.assertEqual(r['schema'],'agora/claim-evidence-query/v2')
+        for citation in r['citations']:
+            anchor=citation['matches'][0]
+            self.assertEqual(self.raw[anchor['start_byte']:anchor['end_byte']].decode(),citation['quote'])
+        self.assertEqual(r['semantic_support'],'not_verified')
+        self.assertEqual(r['global_completeness'],'not_established')
+    def test_ids_reject_invented_and_foreign_revision(self):
+        from agora.evidence_ids import build_units
+        foreign=build_units(self.plan['envelope'],'x','different-revision')[0]['id']
+        for uid in ['ev_invented',foreign]:
+            def provider(system,user):
+                return dict(finish_reason='stop',content=json.dumps({'parts':[dict(id='P1',status='answered',claims=[dict(text='Claim',evidence_ids=[uid])],missing=[])]}))
+            data=json.dumps(self.plan).encode();r=generate(self.path,data,digest(data),'Función',provider,'ids')
+            self.assertEqual(r['execution_status'],'rejected')
+            self.assertEqual(r['diagnostics'][0]['code'],'unknown_evidence_id')
