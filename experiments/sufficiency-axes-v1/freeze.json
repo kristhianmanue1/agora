@@ -1,0 +1,8 @@
+{
+  "cases_sha256": "d0c398b1e0c9fd509c93afebf8ff3b74f3e3da71ea0ad2eab2d0a7bc899f01f6",
+  "gold_sha256": "94ce444c6ad5b76b9b732a60f831f2f572b65f4ac07bc37b59bf16f4ce2b2e71",
+  "max_calls_per_provider": 4,
+  "retries": 0,
+  "timeout_seconds": 90,
+  "gold_note": "producer diagnostic hypotheses; original task ambiguity not retroactive correction of previous gold"
+}

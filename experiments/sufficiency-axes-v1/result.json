@@ -1,0 +1,228 @@
+{
+  "freeze_verified": true,
+  "gold_not_sent": true,
+  "providers": {
+    "jev": {
+      "groups": {
+        "diagnostic": {
+          "calls": 4,
+          "source_matches": 3,
+          "summary_matches": 4,
+          "input_tokens": 2558,
+          "output_tokens": 377,
+          "elapsed_seconds": 1.456
+        }
+      },
+      "records": [
+        {
+          "id": "original",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "uncertain",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": false,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "39158d6e71cdc6216f396e3afc4a0950fda2a6ed819358c5fd2cdf4d73eb0623",
+          "response_sha256": "aab3b07c03ff21c5aa53275b8191c2c9e50c39fe4b2440c2142b43169e844eb1",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.431,
+          "input_tokens": 637,
+          "output_tokens": 94
+        },
+        {
+          "id": "bounded",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "d08e4c125866b2c903d4961118bde3288f812b6d06438a7c5605f93a3ebb265d",
+          "response_sha256": "e1e294a7838cbb0724fb833c349ad210119318b0f13c62c295654f152de567d5",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.284,
+          "input_tokens": 645,
+          "output_tokens": 94
+        },
+        {
+          "id": "omission",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "5a7e39b10457ab6271c177420fab6720bf09d4bab1d8b8ad040e0ad52ed6066a",
+          "response_sha256": "6615f19cf5bbeb8241014a4fa03b9d09b795a5a700a699f7f36872860d2dbd69",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.37,
+          "input_tokens": 634,
+          "output_tokens": 95
+        },
+        {
+          "id": "source-gap",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "cf6384cf29b04fb1bc2a025ee3266c3a5be90656fd57ce9ffb0bc413515ea599",
+          "response_sha256": "fb1ec17f5c506320ec4c6c284105a481e2cadfbc9c37882b431f98e3b9a8bc6e",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.371,
+          "input_tokens": 642,
+          "output_tokens": 94
+        }
+      ]
+    },
+    "glm": {
+      "groups": {
+        "diagnostic": {
+          "calls": 4,
+          "source_matches": 3,
+          "summary_matches": 4,
+          "input_tokens": 1397,
+          "output_tokens": 909,
+          "elapsed_seconds": 19.997
+        }
+      },
+      "records": [
+        {
+          "id": "original",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "uncertain",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": false,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "7433f8c10bdacc271ccb96fda172655311db33d3fd12cd982a021a023f4fa011",
+          "response_sha256": "a019168723480b3cd476372fe66c9ee38bf520926dbed6e7670b552450d04221",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 7.61,
+          "input_tokens": 346,
+          "output_tokens": 400
+        },
+        {
+          "id": "bounded",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "5d4871ab2f196bb60ec23f6eb387cb5c7d17ac2508a123cac1d74e2792310310",
+          "response_sha256": "3c92e29422f9a6da2c2c0198e28e6d8b9f3e3a9f7120dcd108cf960a1489fd34",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 3.798,
+          "input_tokens": 356,
+          "output_tokens": 135
+        },
+        {
+          "id": "omission",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "22e685a224b695145fa8ebc6e7fde32b62d61f6ae411e52bea12351fd7deaa38",
+          "response_sha256": "7d5b18e2b736c9a6405cc6e1a787cba36e36800e7803867e16a3c0f51022400c",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 3.771,
+          "input_tokens": 343,
+          "output_tokens": 102
+        },
+        {
+          "id": "source-gap",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "insufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "diagnostic",
+          "mode": null,
+          "request_sha256": "62dfea25d44ae7b9041b203ef7fe2b2cc632f4b683f1db28e24f8805bb8edf83",
+          "response_sha256": "924016b693b31ced40e4a5e52f7cd3d51da88ffb22c501203c5326723fd4a402",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 4.818,
+          "input_tokens": 352,
+          "output_tokens": 272
+        }
+      ]
+    }
+  },
+  "monetary_cost": "not verified: no billed ledger or frozen applicable price",
+  "retries": 0
+}

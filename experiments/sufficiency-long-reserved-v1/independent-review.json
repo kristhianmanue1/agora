@@ -1,0 +1,61 @@
+{
+  "reviewer": "blind_label_review; separate instance same declared model/environment, not human nor different provider",
+  "blinding": "only inputs/cases.json with neutral IDs; no gold/selection/documents/results",
+  "corpus_sha256": "2afcf85decdd1f08aebff8b05500111390b5141c2d20a66fc96867647eb80817",
+  "coverage_limit": "read tasks, summaries, short contexts and relevant long passages; not every character",
+  "labels": [
+    {
+      "id": "c01",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "omitted",
+      "qualification": null
+    },
+    {
+      "id": "c02",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "omitted",
+      "qualification": null
+    },
+    {
+      "id": "c03",
+      "source_sufficiency": "insufficient",
+      "summary_coverage": "complete",
+      "qualification": "coverage uncertain if requiring proven evaluation role rather than available pertinent corpus identity"
+    },
+    {
+      "id": "c04",
+      "source_sufficiency": "insufficient",
+      "summary_coverage": "omitted",
+      "qualification": "coverage uncertain if requiring proven evaluation role rather than available pertinent corpus identity"
+    },
+    {
+      "id": "c05",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "complete",
+      "qualification": null
+    },
+    {
+      "id": "c06",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "omitted",
+      "qualification": null
+    },
+    {
+      "id": "c07",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "complete",
+      "qualification": null
+    },
+    {
+      "id": "c08",
+      "source_sufficiency": "sufficient",
+      "summary_coverage": "omitted",
+      "qualification": null
+    }
+  ],
+  "findings": [
+    "c01 omits entity-typing evaluation dataset xie16entitydesc2/FACC/Freebase and denoising contexts present in full source; Wikipedia is identified as training corpus.",
+    "c03/c04 excerpt identifies experiments/training corpus, not full evaluation dataset list. Source sufficiency insufficient; do not impute unseen information as summary omission.",
+    "c05/c07 preserve five languages; c06/c08 omit English, French and German. One wording anomaly says five additional languages, but explicit experimental list specifies five total."
+  ]
+}

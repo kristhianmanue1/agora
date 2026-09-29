@@ -1,0 +1,8 @@
+{
+  "cases_sha256": "2afcf85decdd1f08aebff8b05500111390b5141c2d20a66fc96867647eb80817",
+  "gold_sha256": "1f0f0c73432b70b6713472b8fb7e25ef2ff7e88810eafc2b51de9a45e463ad72",
+  "max_calls_per_provider": 8,
+  "retries": 0,
+  "timeout_seconds": 90,
+  "primary": "Both reviewers source sufficient and expected summary coverage on all eight variants; report errors in denominator."
+}

@@ -1,0 +1,436 @@
+{
+  "freeze_verified": true,
+  "gold_not_sent": true,
+  "providers": {
+    "jev": {
+      "groups": {
+        "annotated": {
+          "calls": 4,
+          "source_matches": 4,
+          "summary_matches": 4,
+          "input_tokens": 3869,
+          "output_tokens": 378,
+          "elapsed_seconds": 1.302
+        },
+        "full": {
+          "calls": 4,
+          "source_matches": 4,
+          "summary_matches": 3,
+          "input_tokens": 53807,
+          "output_tokens": 379,
+          "elapsed_seconds": 1.738
+        }
+      },
+      "records": [
+        {
+          "id": "c01",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": false
+          },
+          "context": "full",
+          "mode": "complete",
+          "request_sha256": "054d52ea62cb0d1c4b4ea352d41bd97dcd1a43e565250e4e182d01368a8f2afb",
+          "response_sha256": "3b3b379d034cd51742712abb5ce9113e75bf3878c923e195c000beca4a98a9b0",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.405,
+          "input_tokens": 12288,
+          "output_tokens": 95
+        },
+        {
+          "id": "c02",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "omitted",
+          "request_sha256": "c2958b05b20ad0337980a26de89ca1f6c571a6ca103f93c2ae2477481688ce31",
+          "response_sha256": "b7b67f188b8b5ea0032303579e556989c0724aa7596dfeba9de17cd473600ba0",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.465,
+          "input_tokens": 12287,
+          "output_tokens": 95
+        },
+        {
+          "id": "c03",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "complete",
+          "request_sha256": "186346653865cbb73b7615408eb23d4895045830383a30e8ae54ca9f0776e719",
+          "response_sha256": "69be3b5dbee6bcee3baaadaed8ad3ff329a7bee20013d370801f8fcc4c4280d1",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.331,
+          "input_tokens": 875,
+          "output_tokens": 94
+        },
+        {
+          "id": "c04",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "omitted",
+          "request_sha256": "3f64a87d8644df50235b3aa9888c5816dede0684c2f566a457b1845b3b9f6b0f",
+          "response_sha256": "8d58c46fd82cc01adad731a33671b83ec483c08fdd9a1a1c0b694a91cef54643",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.307,
+          "input_tokens": 874,
+          "output_tokens": 95
+        },
+        {
+          "id": "c05",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "complete",
+          "request_sha256": "b78647ad60705e9a4884c378d389e898c10a981509afb94014cb1a2844336bae",
+          "response_sha256": "3e95dbc242c556ac537685e3e94d2cfc4143ce353adbe1328eec36cef9b1ae6c",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.422,
+          "input_tokens": 14619,
+          "output_tokens": 94
+        },
+        {
+          "id": "c06",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "omitted",
+          "request_sha256": "55ebd0d480b7295d076c39c53278b5772a454c1f7bf9c189974a5dfea18a5fb2",
+          "response_sha256": "215f9e6d733afdea645816a2bb5d8f8c9896297aaeafc1ffeb9078bc1dbcb6e9",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.446,
+          "input_tokens": 14613,
+          "output_tokens": 95
+        },
+        {
+          "id": "c07",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "complete",
+          "request_sha256": "81be5ba1c36da7663184f31bbbc5c6c0247aedf3658f8e0a73585b4e506a14e5",
+          "response_sha256": "aff84c7b39ab7b9d7384dcd842af9bd9036c030c4bbb9a5b332b49ddcb79320a",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.382,
+          "input_tokens": 1063,
+          "output_tokens": 94
+        },
+        {
+          "id": "c08",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "omitted",
+          "request_sha256": "97008a9e8d83b235f939aac4dd26029c085a01636336407c23610db3aa9c6ba7",
+          "response_sha256": "64a143b66a6d545379381ec96fb2c65039e2c09e1a4522e825829084a669ad1e",
+          "model_reported": "jev-1.13.0",
+          "elapsed_seconds": 0.282,
+          "input_tokens": 1057,
+          "output_tokens": 95
+        }
+      ]
+    },
+    "glm": {
+      "groups": {
+        "annotated": {
+          "calls": 4,
+          "source_matches": 4,
+          "summary_matches": 3,
+          "input_tokens": 2594,
+          "output_tokens": 1292,
+          "elapsed_seconds": 30.251
+        },
+        "full": {
+          "calls": 4,
+          "source_matches": 4,
+          "summary_matches": 3,
+          "input_tokens": 49784,
+          "output_tokens": 1681,
+          "elapsed_seconds": 34.891
+        }
+      },
+      "records": [
+        {
+          "id": "c01",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": false
+          },
+          "context": "full",
+          "mode": "complete",
+          "request_sha256": "7aea2dc69514a7eb2cf7b133c24560a8ccd595e39c4def654a7b0f87ddc16820",
+          "response_sha256": "08e07ec257644323c8e99f486a2267eaaf3286970d5a8865538ba748510c192c",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 11.32,
+          "input_tokens": 11165,
+          "output_tokens": 581
+        },
+        {
+          "id": "c02",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "omitted",
+          "request_sha256": "63e69a3661f94dfa8c75da66b9185d8367d7ce7d5dcb74662b1c3e96b523aee3",
+          "response_sha256": "2d9dd3b340458eec4b236f1b20e7ca115f31858a863dc61d6555edbdece9ba14",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 14.643,
+          "input_tokens": 11165,
+          "output_tokens": 762
+        },
+        {
+          "id": "c03",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": false
+          },
+          "context": "annotated",
+          "mode": "complete",
+          "request_sha256": "9a39659be44e49fa9450bf73f15d7482d4ea7dbbc6fa8a51a78883de8c5b6586",
+          "response_sha256": "447629e0b86ab0eefc2cebff0ff225ee363170e932cef21ae8e9190beb3b7b4f",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 17.884,
+          "input_tokens": 556,
+          "output_tokens": 905
+        },
+        {
+          "id": "c04",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "omitted",
+          "request_sha256": "0458af6d898db71c9084912d7471bbc2d96114b51b3b3618c1224094ef99dd78",
+          "response_sha256": "23f3df2701a588d5f8ef5a0f72e221bee6951f7c91805efe26591f919d2279c1",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 4.489,
+          "input_tokens": 556,
+          "output_tokens": 131
+        },
+        {
+          "id": "c05",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "complete",
+          "request_sha256": "69302cb4d4ef6f3acc026bcb5db1b322e38fbaf8082c891fe3edff10d89be5c3",
+          "response_sha256": "bb39604cec41a5c218f0a68a8c4c5467e10ea97d862a2a552e52572803b5fbd4",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 3.896,
+          "input_tokens": 13730,
+          "output_tokens": 111
+        },
+        {
+          "id": "c06",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "full",
+          "mode": "omitted",
+          "request_sha256": "73a9b5319409b727144e84433f788e8039f1f33cfa168bf1d4c29f57f67cb0b1",
+          "response_sha256": "cd6351f00ef645a44eecea46bf3eb534d6d8bde15b0c10b05ec7f43da508b154",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 5.032,
+          "input_tokens": 13724,
+          "output_tokens": 227
+        },
+        {
+          "id": "c07",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "complete"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "complete",
+          "request_sha256": "7c2e49fbab6416ed4c015d9d226274d820f569dc323a33634ed0e231b2845ae9",
+          "response_sha256": "b213acecc84be6ff7b3277373c551f6ba5148afcefc253adba4489496bd80cdb",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 3.844,
+          "input_tokens": 744,
+          "output_tokens": 121
+        },
+        {
+          "id": "c08",
+          "status": "completed",
+          "observed": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "expected": {
+            "source_sufficiency": "sufficient",
+            "summary_coverage": "omitted"
+          },
+          "matches": {
+            "source_sufficiency": true,
+            "summary_coverage": true
+          },
+          "context": "annotated",
+          "mode": "omitted",
+          "request_sha256": "27ea591a840bed37aae1d7cf1337e93545060423bc73d25ff0ac1b6d9df489ed",
+          "response_sha256": "2ef0de624d88f4ef7666d3676bba7178e7481a417e730aff7a0f3cc27e44ca5c",
+          "model_reported": "glm-5.3-flash",
+          "elapsed_seconds": 4.034,
+          "input_tokens": 738,
+          "output_tokens": 135
+        }
+      ]
+    }
+  },
+  "monetary_cost": "not verified: no billed ledger or frozen applicable price",
+  "retries": 0
+}

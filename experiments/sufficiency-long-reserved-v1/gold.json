@@ -1,0 +1,74 @@
+[
+  {
+    "id": "c01",
+    "document_id": "1610.00479",
+    "context": "full",
+    "mode": "complete",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "complete",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c02",
+    "document_id": "1610.00479",
+    "context": "full",
+    "mode": "omitted",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "omitted",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c03",
+    "document_id": "1610.00479",
+    "context": "annotated",
+    "mode": "complete",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "complete",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c04",
+    "document_id": "1610.00479",
+    "context": "annotated",
+    "mode": "omitted",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "omitted",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c05",
+    "document_id": "1902.08830",
+    "context": "full",
+    "mode": "complete",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "complete",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c06",
+    "document_id": "1902.08830",
+    "context": "full",
+    "mode": "omitted",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "omitted",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c07",
+    "document_id": "1902.08830",
+    "context": "annotated",
+    "mode": "complete",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "complete",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  },
+  {
+    "id": "c08",
+    "document_id": "1902.08830",
+    "context": "annotated",
+    "mode": "omitted",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "omitted",
+    "provenance": "QASPER answer/evidence annotations; omission variant and sufficiency mapping by producer, not official QASPER sufficiency labels"
+  }
+]

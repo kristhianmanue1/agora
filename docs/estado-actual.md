@@ -45,3 +45,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Último contraste de suficiencia
 
 [Batería sintética de transferencia](../experiments/summary-task-transfer-v1/RESULTS.md): 11/12 decisiones y 24/24 unidades coinciden con etiquetas del productor. Un resumen completo fue rechazado aunque todas sus unidades se clasificaron como cubiertas. El criterio principal no se cumplió; prioridad: separar insuficiencia de la fuente y omisión del resumen, y tratar inconsistencias antes de integrar el eje en producto.
+
+## Diagnóstico pareado y fuentes largas
+
+[Contraste GLM/Jev](../experiments/sufficiency-axes-v1/README.md): separar fuente suficiente y resumen sin omisiones evita mezclar carencias. [Dos documentos largos reservados localmente](../experiments/sufficiency-long-reserved-v1/RESULTS.md) revelan pérdida de contexto con pasajes anotados y desacuerdos del gold. No se cumple aún el criterio para integrar el nuevo eje en la CLI. La reducción de tokens con selección oracle no es ahorro end-to-end del producto.

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "original",
+    "source_sufficiency": "uncertain",
+    "summary_coverage": "complete"
+  },
+  {
+    "id": "bounded",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "complete"
+  },
+  {
+    "id": "omission",
+    "source_sufficiency": "sufficient",
+    "summary_coverage": "omitted"
+  },
+  {
+    "id": "source-gap",
+    "source_sufficiency": "insufficient",
+    "summary_coverage": "complete"
+  }
+]

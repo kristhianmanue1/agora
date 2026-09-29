@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1610.00479",
+    "question_id": "0dbb5309d2be97f6eda29d7ae220aa16cafbabb7",
+    "source_bytes": 51806,
+    "source_words": 7689,
+    "evidence_bytes": 1180,
+    "source_sha256": "5c2547978e47b38d77aa963c49617d6dcc40a219ad22268c9a4bc7a8d913d91b",
+    "evidence_sha256": "831b2e1af113a2efa6238b7c1312e42f111b5f4e5a2e9c0f336a1832998f26ad"
+  },
+  {
+    "id": "1902.08830",
+    "question_id": "3699927c6c1146f5057576034d226a99946d52cb",
+    "source_bytes": 64369,
+    "source_words": 9555,
+    "evidence_bytes": 2452,
+    "source_sha256": "8bf239d61f81483c492f7f719f8a29136195e1f3d2287d69050f38c5a589f5f1",
+    "evidence_sha256": "89c1a6e9acc6c3fda18135faedb5d1d66746911451514c16c9d550586d7fef8a"
+  }
+]

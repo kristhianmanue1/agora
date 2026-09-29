@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 133,
-  "bytes": 667071,
+  "documents": 137,
+  "bytes": 675937,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "8ad26c920b90ec91e443d234ed7d06d6e954dcb76d96a0fda5fde931143d6388",
-      "bytes": 6585,
+      "sha256": "35a0e82cb61e00dc183a93bf0bc92557d2a52739d1a8e89e28811ed03ba2b7c1",
+      "bytes": 7098,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -583,6 +583,14 @@
         },
         {
           "target": "../experiments/summary-task-transfer-v1/RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/sufficiency-axes-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/sufficiency-long-reserved-v1/RESULTS.md",
           "exists": true
         }
       ],
@@ -1458,9 +1466,67 @@
       "python_modules": []
     },
     {
+      "path": "experiments/sufficiency-axes-v1/INDEPENDENT_REVIEW.md",
+      "sha256": "8c8d77796fcf691a9dd00819fcc34367d91d3159d617054582e6b0afdb39cf00",
+      "bytes": 1388,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-axes-v1/README.md",
+      "sha256": "030c4c40ea7f4aca634dda1344f324e7df209ebe3264822785b85b7c0d8a28d5",
+      "bytes": 1445,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "INDEPENDENT_REVIEW.md",
+          "exists": true
+        },
+        {
+          "target": "result.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "experiments/sufficiency-large-v1/protocol.md",
       "sha256": "eba0606369144db904151f9c2731a16b7c2369a761f35bf61283085add3c5b9e",
       "bytes": 1686,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-long-reserved-v1/README.md",
+      "sha256": "50349aef3060276699c1779146a0a462fceee55d33a01df3bef25f85263f9e87",
+      "bytes": 1438,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "independent-review.json",
+          "exists": true
+        },
+        {
+          "target": "documents.json",
+          "exists": true
+        },
+        {
+          "target": "result.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/sufficiency-long-reserved-v1/RESULTS.md",
+      "sha256": "158b6f0c1ca53c8cca3bfbfadef122c525e982facb82d6706eb565f0f371e831",
+      "bytes": 4082,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
