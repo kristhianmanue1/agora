@@ -1,0 +1,51 @@
+[
+  {
+    "id": "positive-1",
+    "parent": "manual-1",
+    "label": "supported",
+    "family": "positive",
+    "rationale": "Repite el control respaldado sin alterar evidencia ni afirmación."
+  },
+  {
+    "id": "positive-2",
+    "parent": "manual-2",
+    "label": "supported",
+    "family": "positive",
+    "rationale": "Repite el control respaldado sin alterar evidencia ni afirmación."
+  },
+  {
+    "id": "positive-6",
+    "parent": "manual-6",
+    "label": "supported",
+    "family": "positive",
+    "rationale": "Repite el control respaldado sin alterar evidencia ni afirmación."
+  },
+  {
+    "id": "wrong-attribution",
+    "parent": "manual-2",
+    "label": "contradicted",
+    "family": "attribution",
+    "rationale": "La afirmación describe la atribución del propio fragmento 7.1.2; su encabezado identifica Unidad de Educación e Investigación. No afirma exclusividad de funciones entre unidades."
+  },
+  {
+    "id": "authorization-removed",
+    "parent": "manual-1",
+    "label": "contradicted",
+    "family": "authorization",
+    "rationale": "El fragmento exige someterlos a autorización antes de instrumentarlos."
+  },
+  {
+    "id": "scope-expanded",
+    "parent": "manual-6",
+    "label": "insufficient",
+    "family": "scope",
+    "rationale": "El texto sólo respalda el ámbito de la Dirección de Prestaciones Médicas; no demuestra el ámbito federal ni lo niega explícitamente."
+  },
+  {
+    "id": "benign-omission",
+    "parent": "manual-1",
+    "label": "supported",
+    "family": "omission-control",
+    "rationale": "Omitir aquí el paso posterior no afirma permiso para instrumentar sin autorización. Fidelidad de la afirmación no equivale a completitud de una guía operativa."
+  }
+]
