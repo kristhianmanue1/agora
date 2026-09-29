@@ -1,0 +1,289 @@
+{
+  "schema": "agora/summary-task-sufficiency-result/v2",
+  "execution_head": "63734b95bcaecae169a5be3effb7cd82459ed75d",
+  "freeze_verified": true,
+  "provider_input_has_no_gold": true,
+  "summary": {
+    "calls": 4,
+    "errors": 0,
+    "retries": 0,
+    "sufficiency_matches": 4,
+    "unit_matches": 8,
+    "unit_total": 8,
+    "inconsistencies": 0,
+    "input_tokens": 3842,
+    "output_tokens": 586,
+    "elapsed_seconds_sum": 1.409,
+    "primary_pass": true
+  },
+  "records": [
+    {
+      "case_id": "operational-full",
+      "status": "completed",
+      "elapsed_seconds": 0.38,
+      "started_at": "2026-09-29T11:18:49Z",
+      "request_sha256": "b9afd8d04453188b36a4c8d1058997c36f3a332a6d2aa00399526c05d3e66007",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "sufficient",
+            "confidence": 0.96,
+            "probabilities": {
+              "sufficient": 0.97,
+              "uncertain": 0.0,
+              "insufficient": 0.03
+            }
+          },
+          "e1": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.99,
+            "probabilities": {
+              "covered": 0.99,
+              "uncertain": 0.0,
+              "not_required": 0.0,
+              "missing_required": 0.01
+            }
+          },
+          "e2": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.97,
+            "probabilities": {
+              "covered": 0.98,
+              "not_required": 0.0,
+              "uncertain": 0.0,
+              "missing_required": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 993,
+          "output_tokens": 146
+        }
+      },
+      "observed": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "covered"
+      },
+      "expected": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "covered"
+      },
+      "matches": {
+        "sufficiency": true,
+        "e1": true,
+        "e2": true
+      },
+      "inconsistent": false,
+      "missing_evidence_bindings": []
+    },
+    {
+      "case_id": "operational-brief",
+      "status": "completed",
+      "elapsed_seconds": 0.385,
+      "started_at": "2026-09-29T11:18:49Z",
+      "request_sha256": "dbf7a75460769a366c6d133a8c56f082835b1f2d81e09d1b6ea2b95720f79b89",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 1.0,
+            "probabilities": {
+              "uncertain": 0.0,
+              "insufficient": 1.0,
+              "sufficient": 0.0
+            }
+          },
+          "e1": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.66,
+            "probabilities": {
+              "covered": 0.75,
+              "missing_required": 0.25,
+              "uncertain": 0.0,
+              "not_required": 0.0
+            }
+          },
+          "e2": {
+            "type": "choice",
+            "choice": "missing_required",
+            "confidence": 0.98,
+            "probabilities": {
+              "covered": 0.0,
+              "missing_required": 0.99,
+              "uncertain": 0.0,
+              "not_required": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 936,
+          "output_tokens": 147
+        }
+      },
+      "observed": {
+        "sufficiency": "insufficient",
+        "e1": "covered",
+        "e2": "missing_required"
+      },
+      "expected": {
+        "sufficiency": "insufficient",
+        "e1": "covered",
+        "e2": "missing_required"
+      },
+      "matches": {
+        "sufficiency": true,
+        "e1": true,
+        "e2": true
+      },
+      "inconsistent": false,
+      "missing_evidence_bindings": [
+        {
+          "unit_id": "e2",
+          "start_char": 105,
+          "end_char": 229,
+          "text_sha256": "b2c4702281202b6a4ccfaa3108d5bc97dc0a1385ebcfa5784070641235de3f32",
+          "offset_scope": "local evidence string, Unicode character offsets"
+        }
+      ]
+    },
+    {
+      "case_id": "descriptive-full",
+      "status": "completed",
+      "elapsed_seconds": 0.3,
+      "started_at": "2026-09-29T11:18:50Z",
+      "request_sha256": "55ae8aef7060ec2687315776e9f8efecc1717027336af5d89497a56dd1376eca",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "sufficient",
+            "confidence": 0.99,
+            "probabilities": {
+              "uncertain": 0.0,
+              "sufficient": 1.0,
+              "insufficient": 0.0
+            }
+          },
+          "e1": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.93,
+            "probabilities": {
+              "covered": 0.95,
+              "missing_required": 0.04,
+              "not_required": 0.01,
+              "uncertain": 0.0
+            }
+          },
+          "e2": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.61,
+            "probabilities": {
+              "covered": 0.71,
+              "missing_required": 0.01,
+              "not_required": 0.28,
+              "uncertain": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 985,
+          "output_tokens": 146
+        }
+      },
+      "observed": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "covered"
+      },
+      "expected": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "covered"
+      },
+      "matches": {
+        "sufficiency": true,
+        "e1": true,
+        "e2": true
+      },
+      "inconsistent": false,
+      "missing_evidence_bindings": []
+    },
+    {
+      "case_id": "descriptive-brief",
+      "status": "completed",
+      "elapsed_seconds": 0.344,
+      "started_at": "2026-09-29T11:18:50Z",
+      "request_sha256": "2168cc509196702e131a09c0ba7a09faa86862489425eeb82a12d2a8d1013baa",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "sufficient",
+            "confidence": 0.91,
+            "probabilities": {
+              "sufficient": 0.94,
+              "insufficient": 0.06,
+              "uncertain": 0.0
+            }
+          },
+          "e1": {
+            "type": "choice",
+            "choice": "covered",
+            "confidence": 0.93,
+            "probabilities": {
+              "covered": 0.95,
+              "uncertain": 0.0,
+              "missing_required": 0.03,
+              "not_required": 0.02
+            }
+          },
+          "e2": {
+            "type": "choice",
+            "choice": "not_required",
+            "confidence": 0.93,
+            "probabilities": {
+              "covered": 0.01,
+              "uncertain": 0.0,
+              "missing_required": 0.04,
+              "not_required": 0.95
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 928,
+          "output_tokens": 147
+        }
+      },
+      "observed": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "not_required"
+      },
+      "expected": {
+        "sufficiency": "sufficient",
+        "e1": "covered",
+        "e2": "not_required"
+      },
+      "matches": {
+        "sufficiency": true,
+        "e1": true,
+        "e2": true
+      },
+      "inconsistent": false,
+      "missing_evidence_bindings": []
+    }
+  ]
+}

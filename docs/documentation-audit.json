@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 130,
-  "bytes": 657582,
+  "documents": 131,
+  "bytes": 661842,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "f7f8d13890abfe5f5d486186913e127fa29d615d06ced3517ff13039a09b3646",
-      "bytes": 5849,
+      "sha256": "c062b85d3e857d4fb754b867bb24182bf50c88dfd4368c1971585a445d9bed05",
+      "bytes": 6119,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -567,6 +567,10 @@
         },
         {
           "target": "../experiments/summary-task-sufficiency-v1/RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/summary-task-sufficiency-v2/RESULTS.md",
           "exists": true
         },
         {
@@ -1501,10 +1505,28 @@
     },
     {
       "path": "experiments/summary-task-sufficiency-v2/README.md",
-      "sha256": "5b1187073c156fe0a33d15ecf6907d25523354e590fd04c07a4439d85a0d809c",
-      "bytes": 2808,
+      "sha256": "7325efde43f1745a9f1d59a1520aa1d33e78f3ad4be82797b8dd774d3ff3dc8d",
+      "bytes": 2959,
       "scope": "experiment_record",
-      "local_links": [],
+      "local_links": [
+        {
+          "target": "RESULTS.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/summary-task-sufficiency-v2/RESULTS.md",
+      "sha256": "955e157e43355cf6bbaf7ac8bcd592f1142f60584c4097349855e452c2e40380",
+      "bytes": 3839,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "result.json",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

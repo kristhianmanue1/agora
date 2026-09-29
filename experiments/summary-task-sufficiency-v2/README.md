@@ -1,6 +1,6 @@
 # Suficiencia contextual: tarea menos dirigida
 
-Preparado; cero llamadas. Cuatro casos de desarrollo: resumen completo/breve × tarea operativa/descriptiva. Se conserva el mismo fragmento ya empleado en v1. La tarea operativa no nombra autorización, autoridad ni momento; la descriptiva pregunta qué unidad define las políticas.
+Ejecutado: cuatro llamadas completadas, 4/4 etiquetas de suficiencia y 8/8 etiquetas de unidades coincidentes con gold. Véanse [resultados y límites](RESULTS.md). Cuatro casos de desarrollo: resumen completo/breve × tarea operativa/descriptiva. Se conserva el mismo fragmento ya empleado en v1. La tarea operativa no nombra autorización, autoridad ni momento; la descriptiva pregunta qué unidad define las políticas.
 
 ## Hipótesis fijada antes de la ejecución
 
@@ -14,7 +14,7 @@ Selección de una cita no prueba por sí sola que el juicio semántico sea corre
 
 ## Alcance y límites
 
-Máximo cuatro llamadas a Typesafe/Jev jev-1.13.0, 90 segundos cada una, cero reintentos. State: tarea, fragmento, resumen y unidades exactas; gold excluido. Entradas y journals fuera de Git. Requiere autorización explícita del nuevo conjunto, conforme al bloqueo previo por payload. No se ha intentado el envío.
+Máximo cuatro llamadas a Typesafe/Jev jev-1.13.0, 90 segundos cada una, cero reintentos. State: tarea, fragmento, resumen y unidades exactas; gold excluido. Entradas y journals fuera de Git. El Operador autorizó todos los envíos de esta serie; este lote se ejecutó una sola vez, dentro del presupuesto congelado.
 
 Comparación de desarrollo, una fuente y etiquetas del productor; no benchmark independiente. Separar dos unidades hace visible la estructura: la tarea es menos dirigida, pero esto no demuestra descubrimiento autónomo de requisitos en documentos completos. No mide recuperación, omisiones globales ni capacidad de explicación libre. No cambia defaults ni contratos de producto.
 
@@ -22,4 +22,4 @@ Documentación consultada: https://docs.typesafe.ai/introduction/quickstart (tip
 
 ## Verificación local
 
-Checks: cuatro casos; hashes congelados; cada unidad coincide con su subcadena; gold no enviado; parser rechaza campos/etiquetas incorrectos. Cero respuestas de modelo nuevas. Ejecutar sólo tras aprobación del envío mediante Llavero: `python3 experiments/summary-task-sufficiency-v2/run.py jev --out experiments/summary-task-sufficiency-v2/runs`.
+Checks: cuatro casos; hashes congelados; cada unidad coincide con su subcadena; gold no enviado; parser rechaza campos/etiquetas incorrectos. Resultados reales registrados; no repetir sobre el journal existente. Comando utilizado mediante Llavero: `python3 experiments/summary-task-sufficiency-v2/run.py jev --out experiments/summary-task-sufficiency-v2/runs`.
