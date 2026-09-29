@@ -21,8 +21,8 @@ La entrada `python3 scripts/agora_issues.py --help` reúne pendientes, ampliaci�
 - Manual DPM: 188 páginas, unas 54.658 palabras extraídas. La portada y el organigrama muestran pérdidas de extracción; OCR/lectura visual automática sigue pendiente.
 - GLM/Jev: ambos coinciden con cuatro etiquetas del productor; sin base para sustituir al revisor predeterminado.
 - Funciones: 439 bytes para los dos pasajes del caso compuesto; 2.152 bytes para una función de cada una de seis áreas. Cobertura global no establecida y referencias de páginas completas todavía parciales.
-- Generación conectada: devuelve seis áreas con responsabilidades y alcance parcial, pero se rechaza porque seis citas no son literales. No hay síntesis aceptada de este ensayo. Evidencia y límites: [generación](generacion-desde-plan.md).
-- Última regresión de código: 458 pruebas aprobadas. Es una fotografía de esta revisión, no un contador contractual ni validación semántica general.
+- Generación conectada: devuelve seis áreas con responsabilidades y alcance parcial, pero se rechaza porque seis citas no son literales. El ensayo posterior con IDs sí produjo un candidato parcial válido, sin certificar exhaustividad. Evidencia y límites: [generación](generacion-desde-plan.md).
+- Última regresión de código: 460 pruebas aprobadas. Es una fotografía de esta revisión, no un contador contractual ni validación semántica general.
 
 ## Fronteras y pendientes
 
@@ -30,7 +30,7 @@ Skopos conserva fuentes; hay pilotos mediante contratos/exportaciones explícita
 
 No están resueltos: motor completo de transformación y consolidación de memoria, consolidación general, OCR fiable, extracción automática de estructura, descomposición autónoma de preguntas, adjudicación independiente general, catálogo de artefactos y verificación de sus front-matter. Tampoco watcher ni corrección automática de documentos.
 
-**Incremento disponible:** `generate-plan --citation-mode ids` reutiliza las referencias por identificador existentes. Validación local completada; la nueva evaluación real está pendiente. Próxima prioridad: contrastar respuesta, cobertura y respaldo semántico con esa ruta y después con casos reservados. Aumentar tiempo o contexto no basta para corregir omisiones.
+**Incremento disponible:** `generate-plan --citation-mode ids` reutiliza las referencias por identificador existentes. Validación local y una ejecución real completadas: seis afirmaciones, doce referencias exactas y candidato parcial; sin ahorro demostrado. Próxima prioridad: contrastar respuesta, cobertura y respaldo semántico con esa ruta y después con casos reservados. Aumentar tiempo o contexto no basta para corregir omisiones.
 
 La integración explícita de [referencias por ID](referencias-evidencia-por-id.md) mantiene el modo literal anterior y usa un formato de salida por afirmaciones distinto; véase [generación desde plan](generacion-desde-plan.md).
 

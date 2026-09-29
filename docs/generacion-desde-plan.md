@@ -56,3 +56,33 @@ Se conservan `semantic_support=not_verified` y
 
 No se normalizan ni aceptan retrospectivamente las citas rechazadas del ensayo
 literal. La evaluación real por ID se registra aparte cuando esté disponible.
+
+## Ensayo real con IDs — 2026-09-29
+
+Una llamada nueva autorizada, mismo plan de 2.152 bytes y misma pregunta del
+ensayo literal: `complete`, `candidate_partial`, cero diagnósticos. Seis
+afirmaciones describen las seis áreas y una responsabilidad por área. Las doce
+referencias (encabezado y función por afirmación) se resolvieron exactamente
+contra los bytes de la fuente fijada. Se conservó como parcial la cobertura de
+las referencias de páginas completas; la salida declaró que no acredita
+organigrama completo ni vigencia externa.
+
+Modelo reportado: `glm-5.3-flash`. Tiempo: 51,217 s. Tokens: 1.506 entrada +
+3.963 salida = 5.469; el intento literal rechazado consumió 3.962. La diferencia
+incluye formatos/prompts distintos y una sola ejecución por modo; no es un
+benchmark causal ni demuestra ahorro. El texto reproduce ampliamente las
+funciones: la concisión sigue siendo mejorable.
+
+Resultado aceptado por el contrato estructural y de referencias, no adjudicado
+como verdad ni admitido en memoria. Inspección semántica del productor, sin
+revisor independiente. No se llamó a Jev. No se repitió el intento literal ni se
+modificó su rechazo.
+
+[Evidencia publicable](../experiments/manual-dpm-v1/generation-ids-result.json):
+uso, tiempos, hashes y localizadores; respuesta completa y fuente permanecen
+locales. No hubo cambios de código en esta ejecución; la regresión de 460
+pruebas corresponde al commit `86774e4` usado en el ensayo.
+
+Siguiente paso: revisar por separado las seis afirmaciones contra su evidencia
+y ensayar casos reservados con presupuesto explícito; no promover el modo ID
+a predeterminado ni afirmar ahorro a partir de esta muestra.

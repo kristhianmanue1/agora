@@ -1,0 +1,264 @@
+{
+  "execution_status": "complete",
+  "answer_status": "candidate_partial",
+  "diagnostics": [],
+  "http_attempts": 1,
+  "request_config": {
+    "citation_mode": "ids",
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 8192,
+    "timeout_seconds": 90,
+    "max_calls": 1
+  },
+  "implementation_hashes": {
+    "plan_generation.py": "81bd1f5924fb3107d9ba004740c471c478f3ce6491772ef86e5b9cad4a7b1e4c",
+    "subquestions.py": "d469ca097a24e90912ab9598838294913fa41685795f9c25b8b653c75d5c0479",
+    "function_retrieval.py": "dd07701b922ede3e9a57253c9da3aaab53b96f3253816fb79f59997f153fe6fa",
+    "passages.py": "232e6c00955104d84ca06b31e5bf715d203016b40d3b6e3151f1e42302147832",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0",
+    "routed_query.py": "103df84333e5883352d57c1e9f3ac0e42312175c5af2c135a98811603b0d49ce"
+  },
+  "implementation_unchanged": true,
+  "plan_sha256": "f72f9429f7de91b766e182ac7ca81ed7b8eee503e9778094c421bdb5b56b1dac",
+  "source_sha256": "eeb7ee358c2c956e5f88dd06a8d149a3b5ba9c8cd324639a6c0337104ab986e6",
+  "global_completeness": "not_established",
+  "answer_scope": "selected_passages_only",
+  "semantic_support": "not_verified",
+  "reference_coverage": [
+    {
+      "id": "care",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          47394,
+          49904
+        ]
+      ]
+    },
+    {
+      "id": "education",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          171841,
+          174504
+        ]
+      ]
+    },
+    {
+      "id": "planning",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          223043,
+          225567
+        ]
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          295353,
+          298283
+        ]
+      ]
+    },
+    {
+      "id": "special",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          374984,
+          377893
+        ]
+      ]
+    },
+    {
+      "id": "administration",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          380507,
+          383266
+        ]
+      ]
+    }
+  ],
+  "observed_at": "2026-09-29T04:53:30.107735+00:00",
+  "elapsed_seconds": 51.217,
+  "model_reported": "glm-5.3-flash",
+  "usage": {
+    "completion_tokens": 3963,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3018
+    },
+    "prompt_tokens": 1506,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5469
+  },
+  "response_sha256": "23f0f4abd871480eac4346b72456176cc9483da8ab5617bd573bb60c56914b4f",
+  "claims_count": 6,
+  "citation_count": 12,
+  "citations": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "quote_index": 0,
+      "evidence_id": "ev_7873863a8d3e59bd9726d2f9",
+      "matches": [
+        {
+          "start_byte": 47525,
+          "end_byte": 47561
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "quote_index": 1,
+      "evidence_id": "ev_97e265f5cc35eddd9c326649",
+      "matches": [
+        {
+          "start_byte": 47562,
+          "end_byte": 47763
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "quote_index": 0,
+      "evidence_id": "ev_f482b354f133d2026dc29655",
+      "matches": [
+        {
+          "start_byte": 171972,
+          "end_byte": 172018
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "quote_index": 1,
+      "evidence_id": "ev_e2b1489887603b9c922e76b5",
+      "matches": [
+        {
+          "start_byte": 173612,
+          "end_byte": 173957
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "quote_index": 0,
+      "evidence_id": "ev_5b744177d9067b80c8225ff2",
+      "matches": [
+        {
+          "start_byte": 223175,
+          "end_byte": 223228
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "quote_index": 1,
+      "evidence_id": "ev_6432fdfde436849a6892862c",
+      "matches": [
+        {
+          "start_byte": 223229,
+          "end_byte": 223577
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "quote_index": 0,
+      "evidence_id": "ev_696a6406f832763012bf631d",
+      "matches": [
+        {
+          "start_byte": 295485,
+          "end_byte": 295575
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "quote_index": 1,
+      "evidence_id": "ev_b73250fc114c909182d6066b",
+      "matches": [
+        {
+          "start_byte": 295576,
+          "end_byte": 295969
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 4,
+      "quote_index": 0,
+      "evidence_id": "ev_eb4300699b9d4cb90b2a7aad",
+      "matches": [
+        {
+          "start_byte": 375116,
+          "end_byte": 375171
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 4,
+      "quote_index": 1,
+      "evidence_id": "ev_32b24469a7401b2c24b8715d",
+      "matches": [
+        {
+          "start_byte": 375172,
+          "end_byte": 375413
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 5,
+      "quote_index": 0,
+      "evidence_id": "ev_874f12c1d18ef99d1189fb7a",
+      "matches": [
+        {
+          "start_byte": 380639,
+          "end_byte": 380690
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 5,
+      "quote_index": 1,
+      "evidence_id": "ev_65ef1852a6423434cc622e23",
+      "matches": [
+        {
+          "start_byte": 380691,
+          "end_byte": 380984
+        }
+      ]
+    }
+  ],
+  "all_citations_match_original_bytes": true,
+  "producer_review": {
+    "areas": 6,
+    "responsibilities": 6,
+    "scope_limits_reported": true,
+    "independent": false,
+    "summary_conciseness": "limited: substantially repeats source wording"
+  }
+}

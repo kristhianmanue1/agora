@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
   "documents": 123,
-  "bytes": 633084,
+  "bytes": 634893,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "43a9b55dcd1ed816d86ae092bb7414a6febac4adb637e31315962a723825d4ed",
-      "bytes": 4962,
+      "sha256": "dc05fab744cf336bdd0583df43c3742b9f417940ce1d2d6d00aab09fc13c3be0",
+      "bytes": 5088,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -679,12 +679,16 @@
     },
     {
       "path": "docs/generacion-desde-plan.md",
-      "sha256": "37b6751c5409281c19d585e31a44c4e370d5c3c87af018ef944f517f16094588",
-      "bytes": 4386,
+      "sha256": "d53f18174dafde22318c8ecd190a119628e99fcffd31888999b8f871e8858442",
+      "bytes": 6069,
       "scope": "guidance_or_report",
       "local_links": [
         {
           "target": "../experiments/manual-dpm-v1/generation-result.json",
+          "exists": true
+        },
+        {
+          "target": "../experiments/manual-dpm-v1/generation-ids-result.json",
           "exists": true
         }
       ],
