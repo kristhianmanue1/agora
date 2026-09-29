@@ -1,0 +1,3 @@
+The engine produces compact texts.
+
+The engine does not perform text planning internally. It relies on an external text planner.

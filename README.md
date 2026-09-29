@@ -68,3 +68,5 @@ Continuación con fuentes externas: [AttrScore reservado y documentos grandes](d
 Ampliación controlada: [pasaje pertinente frente a más texto](docs/ampliacion-evidencia-revisores-2026-09-28.md).
 
 Recuperación verificada: [ampliación sin localizador prefijado](docs/recuperacion-ampliacion-revisores-2026-09-28.md).
+
+CLI de ampliación: [preparar, inspeccionar y volver a evaluar](docs/ampliacion-cli.md).

@@ -1,0 +1,8 @@
+{
+  "schema": "agora/claim-review-input/v1-experimental",
+  "question": "Does the engine perform text planning internally?",
+  "claim": "The engine performs text planning internally.",
+  "evidence": "The engine produces compact texts.",
+  "provider": "glm",
+  "response": {"model":"test-double","choices":[{"finish_reason":"stop","message":{"content":"{\"support\":\"supported\"}"}}],"usage":{"total_tokens":0}}
+}

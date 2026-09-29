@@ -1,0 +1,1 @@
+{"model":"test-double","choices":[{"finish_reason":"stop","message":{"content":"{\"support\":\"contradicted\"}"}}],"usage":{"total_tokens":0}}

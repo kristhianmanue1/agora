@@ -96,3 +96,5 @@ Comprobación del 2026-09-28: 421 tests pasan (6 de la nueva CLI). Los tres
 bloques de comandos de esta guía se ejecutaron juntos en bash: rechazo esperado,
 derivado separado, original con una revisión y replay válido con dos revisiones.
 Autorrevisión del incremento; no se realizó revisión independiente.
+
+Ampliación explícita de juicios sobre afirmaciones: [guía y comandos](ampliacion-cli.md). Usa un registro separado creado con review-init.

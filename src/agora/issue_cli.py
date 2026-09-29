@@ -50,6 +50,8 @@ def parser():
     s.add_argument('--operation',required=True);s.add_argument('--expected-head',required=True);s.add_argument('--out',type=Path,required=True)
     s=sub.add_parser('repair-apply',help='Incorporar derivado separado, sin cambiar la respuesta original.')
     s.add_argument('--derivation',required=True);s.add_argument('--plan',type=Path,required=True);s.add_argument('--expected-plan-sha256',required=True)
+    from .expansion_cli import add_commands
+    add_commands(sub)
     return p
 
 def run(args):
@@ -61,6 +63,9 @@ def run(args):
         write_new(workspace/'workspace.json',dict(schema=WORKSPACE))
         return dict(status='initialized',workspace=str(workspace))
     if read(workspace/'workspace.json')!={'schema':WORKSPACE}:raise ValueError('incompatible_workspace')
+    from .expansion_cli import COMMANDS, run as run_expansion
+    if args.command in COMMANDS:
+        return run_expansion(args,workspace,write_new)
     store=flow.Store(workspace/'issues.sqlite3')
     try:
         if args.command=='seed':
