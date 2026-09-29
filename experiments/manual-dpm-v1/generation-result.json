@@ -1,0 +1,171 @@
+{
+  "execution_status": "rejected",
+  "diagnostic": "answer_quote_mismatch",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 8192,
+    "timeout_seconds": 90,
+    "max_calls": 1
+  },
+  "implementation_hashes": {
+    "plan_generation.py": "eb594724e57d3c5cbca20158e754cfe44331578d4afe6125f7429fe6e0861435",
+    "subquestions.py": "d469ca097a24e90912ab9598838294913fa41685795f9c25b8b653c75d5c0479",
+    "function_retrieval.py": "dd07701b922ede3e9a57253c9da3aaab53b96f3253816fb79f59997f153fe6fa",
+    "passages.py": "232e6c00955104d84ca06b31e5bf715d203016b40d3b6e3151f1e42302147832",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec"
+  },
+  "implementation_unchanged": true,
+  "plan_sha256": "f72f9429f7de91b766e182ac7ca81ed7b8eee503e9778094c421bdb5b56b1dac",
+  "global_completeness": "not_established",
+  "answer_scope": "selected_passages_only",
+  "reference_coverage": [
+    {
+      "id": "care",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          47394,
+          49904
+        ]
+      ]
+    },
+    {
+      "id": "education",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          171841,
+          174504
+        ]
+      ]
+    },
+    {
+      "id": "planning",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          223043,
+          225567
+        ]
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          295353,
+          298283
+        ]
+      ]
+    },
+    {
+      "id": "special",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          374984,
+          377893
+        ]
+      ]
+    },
+    {
+      "id": "administration",
+      "reference_coverage": "partial",
+      "missing_reference_ranges": [
+        [
+          380507,
+          383266
+        ]
+      ]
+    }
+  ],
+  "elapsed_seconds": 37.179,
+  "model_reported": "glm-5.3-flash",
+  "usage": {
+    "completion_tokens": 2791,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1974
+    },
+    "prompt_tokens": 1171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3962
+  },
+  "response_sha256": "cd5f822ae375acfd15cc57c52bc4ba3f42d643d69c09958423b4e83fd6f43f79",
+  "citation_checks": [
+    {
+      "index": 1,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 2,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 3,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 4,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 5,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 6,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 7,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 8,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 9,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 10,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 11,
+      "exact_match": true,
+      "whitespace_normalized_match": true
+    },
+    {
+      "index": 12,
+      "exact_match": false,
+      "whitespace_normalized_match": true
+    }
+  ],
+  "raw_cli_exit_code": 0,
+  "exit_code_note": "Subsequently corrected: generate-plan now returns 2 for rejected/failed results; network run not repeated.",
+  "producer_semantic_review": {
+    "areas_described": 6,
+    "responsibilities_described": 6,
+    "scope_qualified": true,
+    "independent": false
+  },
+  "acceptance": "rejected; no automatic quote normalization"
+}
