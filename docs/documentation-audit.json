@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 125,
-  "bytes": 642214,
+  "documents": 127,
+  "bytes": 648392,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "953d0b3cda1e74831bacbb60324de319deb2a0872c2d7be6338b3e52917b4f19",
-      "bytes": 5216,
+      "sha256": "f6f926ef4bbca7739f88b4c6bd944b5e4f10fa0f1899ca2c6ebc7d5ed494c92c",
+      "bytes": 5488,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -559,6 +559,10 @@
         },
         {
           "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/plan-ids-negative-v1/RESULTS.md",
           "exists": true
         },
         {
@@ -1291,6 +1295,32 @@
       "bytes": 2321,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/plan-ids-negative-v1/README.md",
+      "sha256": "46877c5b78adf17ab0cd1c9257bc6e3a83ddceddacb6f9b6207244e5d99992d9",
+      "bytes": 2333,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "RESULTS.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/plan-ids-negative-v1/RESULTS.md",
+      "sha256": "f57eee27446906423f58f1ed9b7ba50386c11928daf616c256f29d2089daccf2",
+      "bytes": 3573,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "result.json",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

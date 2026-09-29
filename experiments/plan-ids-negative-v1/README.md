@@ -12,4 +12,4 @@ Ejecución: inyectar TYPESAFE_API_KEY mediante Llavero y ejecutar `python3 exper
 
 ## Estado de ejecución
 
-Preparado y comprobado localmente; cero llamadas realizadas. La revisión automática bloqueó el envío porque requiere autorización explícita del payload nuevo de siete casos a Typesafe/Jev. La autorización general para continuar no se interpretó como autorización suficiente de esta transferencia. Inputs locales en `inputs/cases.json`; etiquetas separadas en `gold.json`. No hay resultados semánticos nuevos ni promoción del revisor.
+Completada tras autorización explícita del Operador para enviar los siete casos a Typesafe/Jev. Siete llamadas, cero errores y cero reintentos. Criterio principal cumplido; etiquetas exactas 6/7. La ampliación de ámbito produjo contradicted donde se esperaba insufficient. Véanse [resultados y límites](RESULTS.md). La preparación conservó el bloqueo inicial; el freeze y el gold originales no fueron modificados.

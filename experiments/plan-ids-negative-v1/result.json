@@ -1,0 +1,232 @@
+{
+  "schema": "agora/negative-review-result/v1",
+  "execution_head": "79772745b324c4a8ca382d7b8528496bb6aca7e5",
+  "freeze_verified": true,
+  "provider_input_has_no_gold": true,
+  "summary": {
+    "calls": 7,
+    "errors": 0,
+    "retries": 0,
+    "exact_matches": 6,
+    "negative_not_supported": 3,
+    "negative_total": 3,
+    "positive_supported": 4,
+    "positive_total": 4,
+    "input_tokens": 4053,
+    "output_tokens": 317,
+    "elapsed_seconds_sum": 2.404,
+    "primary_pass": true
+  },
+  "records": [
+    {
+      "case_id": "positive-1",
+      "status": "completed",
+      "label": "supported",
+      "started_at": "2026-09-29T11:01:27Z",
+      "elapsed_seconds": 0.447,
+      "request_sha256": "4ba8041a68cb2ad74651b4f914459ff92d0f818978b8c7b43bc2f65c7e36e7d8",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.98,
+              "insufficient": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 578,
+          "output_tokens": 44
+        }
+      },
+      "gold": "supported",
+      "family": "positive",
+      "match": true
+    },
+    {
+      "case_id": "positive-2",
+      "status": "completed",
+      "label": "supported",
+      "started_at": "2026-09-29T11:01:28Z",
+      "elapsed_seconds": 0.318,
+      "request_sha256": "0c2102ad5decd29c60faea04b7bea41e0eefbf921a9a005d4293d9c538cd0e81",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.84,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.1,
+              "supported": 0.9
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 629,
+          "output_tokens": 44
+        }
+      },
+      "gold": "supported",
+      "family": "positive",
+      "match": true
+    },
+    {
+      "case_id": "positive-6",
+      "status": "completed",
+      "label": "supported",
+      "started_at": "2026-09-29T11:01:28Z",
+      "elapsed_seconds": 0.326,
+      "request_sha256": "feb23ff6fa252e12469b34a689174ba22d36b5a348c2fbe84eac96e29ceea5fe",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.01,
+              "supported": 0.99
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 44
+        }
+      },
+      "gold": "supported",
+      "family": "positive",
+      "match": true
+    },
+    {
+      "case_id": "wrong-attribution",
+      "status": "completed",
+      "label": "contradicted",
+      "started_at": "2026-09-29T11:01:28Z",
+      "elapsed_seconds": 0.317,
+      "request_sha256": "302bf5aa3418ce830c05eb52396d745016cdfe3e23d801377ad38b04b4248dc9",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.25,
+            "probabilities": {
+              "insufficient": 0.5,
+              "supported": 0.0,
+              "contradicted": 0.5
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 588,
+          "output_tokens": 47
+        }
+      },
+      "gold": "contradicted",
+      "family": "attribution",
+      "match": true
+    },
+    {
+      "case_id": "authorization-removed",
+      "status": "completed",
+      "label": "contradicted",
+      "started_at": "2026-09-29T11:01:29Z",
+      "elapsed_seconds": 0.261,
+      "request_sha256": "e5707d006ea246b293cbb9da5a1de2685752eb17efa827f47fa9a88560eae2de",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 1.0,
+            "probabilities": {
+              "contradicted": 1.0,
+              "supported": 0.0,
+              "insufficient": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 542,
+          "output_tokens": 47
+        }
+      },
+      "gold": "contradicted",
+      "family": "authorization",
+      "match": true
+    },
+    {
+      "case_id": "scope-expanded",
+      "status": "completed",
+      "label": "contradicted",
+      "started_at": "2026-09-29T11:01:29Z",
+      "elapsed_seconds": 0.312,
+      "request_sha256": "757648c3338ae010ea0be1efcd990b869224bac7cf6175cc2499a14407037a60",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "contradicted",
+            "confidence": 0.41,
+            "probabilities": {
+              "contradicted": 0.61,
+              "insufficient": 0.39,
+              "supported": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 570,
+          "output_tokens": 47
+        }
+      },
+      "gold": "insufficient",
+      "family": "scope",
+      "match": false
+    },
+    {
+      "case_id": "benign-omission",
+      "status": "completed",
+      "label": "supported",
+      "started_at": "2026-09-29T11:01:29Z",
+      "elapsed_seconds": 0.423,
+      "request_sha256": "ab09ccaf4b4e60db315fd53a3e8518f66371992b7be077d92baa24934ce258f8",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.96,
+            "probabilities": {
+              "insufficient": 0.03,
+              "supported": 0.97,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 522,
+          "output_tokens": 44
+        }
+      },
+      "gold": "supported",
+      "family": "omission-control",
+      "match": true
+    }
+  ]
+}
