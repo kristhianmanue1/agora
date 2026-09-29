@@ -1,0 +1,289 @@
+[
+  {
+    "id": "norms",
+    "question": "¿Qué órgano aprueba y difunde normas y criterios para la planeación integral de infraestructura médica?",
+    "claim": "La Coordinación de Planeación de Infraestructura Médica aprueba y difunde normas y criterios consensuados para la planeación integral de infraestructura médica.",
+    "document_gold": "supported",
+    "reference_pages": [
+      170
+    ],
+    "plan_sha256": "421708f86d5897e3a77012d7087d44c4c446eff889819044a04d9855dacff6b7",
+    "parent_sha256": "f253ab91fc5d2f4e130471c8c574558828daf4e8b1033f6bcf3b61d79fe7eff5",
+    "selected_pages": [
+      122,
+      123,
+      170,
+      171,
+      177,
+      178
+    ],
+    "delivered_bytes": 7639,
+    "evidence_bytes": 7743,
+    "ranges": [
+      {
+        "start_byte": 246145,
+        "end_byte": 246159,
+        "sha256": "c5d00a93c6dfce97d6753047537b1427b3a4ac27f9d41efdf9af87d5ba9cf402"
+      },
+      {
+        "start_byte": 246161,
+        "end_byte": 248592,
+        "sha256": "95b369b491d45a143b9a16c86e466e8a2b17bdbccbf24cc4297c2d1b73b03786"
+      },
+      {
+        "start_byte": 248594,
+        "end_byte": 248608,
+        "sha256": "b460ab2b39a7587645b14ddc58d75a8cf047fd8fc4429be5dd0748964463f95b"
+      },
+      {
+        "start_byte": 345810,
+        "end_byte": 345824,
+        "sha256": "4139b1bf8d067f51c5ac3fbead11939a850a33b4c60b6e124e6e347ea9d35f51"
+      },
+      {
+        "start_byte": 345826,
+        "end_byte": 348522,
+        "sha256": "81d0e1c030b4a2531d76728abb2c41ca8f9ef39a21328d004ecda49583932750"
+      },
+      {
+        "start_byte": 348524,
+        "end_byte": 348538,
+        "sha256": "9146998a9f956a26a8c80e69b2c7fac436cf5d0eb8b53adabd1b2ea58dc7545e"
+      },
+      {
+        "start_byte": 364014,
+        "end_byte": 364028,
+        "sha256": "03ef863d9f59b4d57e2e76d660dff06997163a409737071cd77e10d92e8426c6"
+      },
+      {
+        "start_byte": 364030,
+        "end_byte": 366458,
+        "sha256": "fd518b6cef4524ff80c9084c45ea85c05450523f764c8d174a514f2c24af8581"
+      },
+      {
+        "start_byte": 366460,
+        "end_byte": 366474,
+        "sha256": "c8d9d99c0735e826499565c41e27c325ad054f03827a7eca524396900dc25af6"
+      }
+    ],
+    "selected_content_pages": [
+      122,
+      170,
+      177
+    ],
+    "selected_pages_note": "Overlap includes standalone page markers; content pages exclude those markers.",
+    "selected_evidence_gold": "supported",
+    "criteria_origin": "producer source review; not independent adjudication"
+  },
+  {
+    "id": "equipment",
+    "question": "¿El alcance de la Coordinación Técnica de Equipamiento Médico incluye cocina y comedor?",
+    "claim": "La Coordinación Técnica de Equipamiento Médico excluye de sus funciones el equipo de cocina y comedor.",
+    "document_gold": "contradicted",
+    "reference_pages": [
+      177
+    ],
+    "plan_sha256": "481fcae1f36d1abeded4d5005306ec0e401334f9a0c6eefc5d36f4590b82e3ff",
+    "parent_sha256": "54652f2b803b2d70e4231c1acda5471a7e65990d133bca8be89845366eb20b89",
+    "selected_pages": [
+      171,
+      172,
+      177,
+      178,
+      179
+    ],
+    "delivered_bytes": 7645,
+    "evidence_bytes": 7747,
+    "ranges": [
+      {
+        "start_byte": 348524,
+        "end_byte": 348538,
+        "sha256": "9146998a9f956a26a8c80e69b2c7fac436cf5d0eb8b53adabd1b2ea58dc7545e"
+      },
+      {
+        "start_byte": 348540,
+        "end_byte": 351413,
+        "sha256": "12698a44a2920d67e4f24847360094f6719972eb7586f55035349c3cc7bb01df"
+      },
+      {
+        "start_byte": 351415,
+        "end_byte": 351429,
+        "sha256": "831a38d0805fd5853c753ef861630f80aeac67c6d84e548347de827b349f15bf"
+      },
+      {
+        "start_byte": 364014,
+        "end_byte": 364028,
+        "sha256": "03ef863d9f59b4d57e2e76d660dff06997163a409737071cd77e10d92e8426c6"
+      },
+      {
+        "start_byte": 364030,
+        "end_byte": 366458,
+        "sha256": "fd518b6cef4524ff80c9084c45ea85c05450523f764c8d174a514f2c24af8581"
+      },
+      {
+        "start_byte": 366460,
+        "end_byte": 366474,
+        "sha256": "c8d9d99c0735e826499565c41e27c325ad054f03827a7eca524396900dc25af6"
+      },
+      {
+        "start_byte": 366476,
+        "end_byte": 368750,
+        "sha256": "f97538e3ecda9844edcbc447efd67e68ce2949bd61e52e04499a113ca9044e1a"
+      },
+      {
+        "start_byte": 368752,
+        "end_byte": 368766,
+        "sha256": "e9fc5de3c766ef1c5d1bc68064f21d8777fa32b0351229d5d46c65c9678068af"
+      }
+    ],
+    "selected_content_pages": [
+      171,
+      177,
+      178
+    ],
+    "selected_pages_note": "Overlap includes standalone page markers; content pages exclude those markers.",
+    "selected_evidence_gold": "contradicted",
+    "criteria_origin": "producer source review; not independent adjudication"
+  },
+  {
+    "id": "cross_sections",
+    "question": "¿Cómo se reparten la aprobación de normas de infraestructura y la integración de criterios de adquisición de equipamiento médico?",
+    "claim": "La Coordinación de Planeación de Infraestructura Médica aprueba normas de planeación integral de infraestructura; la Coordinación Técnica de Equipamiento Médico consolida normas y criterios de adquisición de equipo médico, cocina y comedor.",
+    "document_gold": "supported",
+    "reference_pages": [
+      170,
+      177
+    ],
+    "plan_sha256": "48b9e68930c799ea66875f8f77c22faba0f184ae1717a8701e5c32abb4b526b2",
+    "parent_sha256": "8d934fac87163280a8e1c604d73f04dba3fcab3ba65dae730aa6e87dbf4d2ec4",
+    "selected_pages": [
+      146,
+      147,
+      171,
+      172,
+      177,
+      178
+    ],
+    "delivered_bytes": 8315,
+    "evidence_bytes": 8419,
+    "ranges": [
+      {
+        "start_byte": 295337,
+        "end_byte": 295351,
+        "sha256": "c7a8cd8efb0e4e2039b40ddd1648348a251f3120fc23cda0c1a7a0195a463a91"
+      },
+      {
+        "start_byte": 295353,
+        "end_byte": 298283,
+        "sha256": "5cf2df7e174d98e5a13c326f8269807ca7bf09ba79db29bbdaccc60bf9694524"
+      },
+      {
+        "start_byte": 298285,
+        "end_byte": 298299,
+        "sha256": "66f31f8347530382c85a992a7181932eb2a439a0cbf813a18c9ad9179ce52e96"
+      },
+      {
+        "start_byte": 348524,
+        "end_byte": 348538,
+        "sha256": "9146998a9f956a26a8c80e69b2c7fac436cf5d0eb8b53adabd1b2ea58dc7545e"
+      },
+      {
+        "start_byte": 348540,
+        "end_byte": 351413,
+        "sha256": "12698a44a2920d67e4f24847360094f6719972eb7586f55035349c3cc7bb01df"
+      },
+      {
+        "start_byte": 351415,
+        "end_byte": 351429,
+        "sha256": "831a38d0805fd5853c753ef861630f80aeac67c6d84e548347de827b349f15bf"
+      },
+      {
+        "start_byte": 364014,
+        "end_byte": 364028,
+        "sha256": "03ef863d9f59b4d57e2e76d660dff06997163a409737071cd77e10d92e8426c6"
+      },
+      {
+        "start_byte": 364030,
+        "end_byte": 366458,
+        "sha256": "fd518b6cef4524ff80c9084c45ea85c05450523f764c8d174a514f2c24af8581"
+      },
+      {
+        "start_byte": 366460,
+        "end_byte": 366474,
+        "sha256": "c8d9d99c0735e826499565c41e27c325ad054f03827a7eca524396900dc25af6"
+      }
+    ],
+    "selected_content_pages": [
+      146,
+      171,
+      177
+    ],
+    "selected_pages_note": "Overlap includes standalone page markers; content pages exclude those markers.",
+    "selected_evidence_gold": "insufficient",
+    "criteria_origin": "producer source review; not independent adjudication"
+  },
+  {
+    "id": "cover",
+    "question": "¿Qué fecha indica el sello de validación y registro de la portada?",
+    "claim": "El sello de validación y registro de la portada indica 19 de diciembre de 2025.",
+    "document_gold": "supported_visual_only",
+    "reference_pages": [
+      1
+    ],
+    "plan_sha256": "c6cd7c14621777698686b0646cc359834b7146189d2fd25b01c9900a81096ac9",
+    "parent_sha256": "100aad4899746641dbf2670fc0a602a53a587b10deef476f7491b484d9d089dd",
+    "selected_pages": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "delivered_bytes": 10340,
+    "evidence_bytes": 10440,
+    "ranges": [
+      {
+        "start_byte": 12942,
+        "end_byte": 12954,
+        "sha256": "f9748e04e44c48d678a5b2b44763ebdec57b91ea95276eb2df86024c3b8bfe22"
+      },
+      {
+        "start_byte": 12956,
+        "end_byte": 16288,
+        "sha256": "e65e07a8f939821c368483a58eb849275a58a691534c6d2ac5bd634ad6412d6c"
+      },
+      {
+        "start_byte": 16290,
+        "end_byte": 16302,
+        "sha256": "5072dac328d6bf1b91d7a261efbd75fcb9f397a6eab51764a27967c2275257c8"
+      },
+      {
+        "start_byte": 16304,
+        "end_byte": 19963,
+        "sha256": "699d3c56ce4bc34167ff5bf8795613add0567234a6d581eabfc7e5541052781c"
+      },
+      {
+        "start_byte": 19965,
+        "end_byte": 19977,
+        "sha256": "e29ee2b371267f28b1c8c3b8b17f5ac1a489abd16756e6a9b2097338f6f786ec"
+      },
+      {
+        "start_byte": 19979,
+        "end_byte": 23279,
+        "sha256": "8cba8ab3a84b65e531b31c3ebcb260a02d3eb0080dc813437c1ee75ccddda835"
+      },
+      {
+        "start_byte": 23281,
+        "end_byte": 23294,
+        "sha256": "2ae30cd60182979b6e30963fd16502fc1bcdf55eb208e23e1cf4c8fe26cecd6a"
+      }
+    ],
+    "selected_content_pages": [
+      7,
+      8,
+      9
+    ],
+    "selected_pages_note": "Overlap includes standalone page markers; content pages exclude those markers.",
+    "selected_evidence_gold": "insufficient",
+    "criteria_origin": "producer source review; not independent adjudication"
+  }
+]

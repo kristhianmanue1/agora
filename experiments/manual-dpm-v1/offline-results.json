@@ -1,0 +1,74 @@
+[
+  {
+    "case": "norms",
+    "derived": {
+      "status": "review_committed",
+      "review": "norms-offline-replay",
+      "sha256": "3895aebbbe05dfb0a7cbf0eb78b7e98d42aeb3dc69894d8bffffb3e63431d8f3",
+      "support": "supported",
+      "origin": "supplied_response_replay",
+      "parent": {
+        "id": "norms",
+        "sha256": "f253ab91fc5d2f4e130471c8c574558828daf4e8b1033f6bcf3b61d79fe7eff5"
+      },
+      "admission": "not_admitted"
+    },
+    "parent_unchanged": true,
+    "recovery_identical": true,
+    "provider_called": false
+  },
+  {
+    "case": "equipment",
+    "derived": {
+      "status": "review_committed",
+      "review": "equipment-offline-replay",
+      "sha256": "e481899b0027577563ccfa2b12fe3fc06b6c3e6dc96d831810516cadf7102437",
+      "support": "contradicted",
+      "origin": "supplied_response_replay",
+      "parent": {
+        "id": "equipment",
+        "sha256": "54652f2b803b2d70e4231c1acda5471a7e65990d133bca8be89845366eb20b89"
+      },
+      "admission": "not_admitted"
+    },
+    "parent_unchanged": true,
+    "recovery_identical": true,
+    "provider_called": false
+  },
+  {
+    "case": "cross_sections",
+    "derived": {
+      "status": "review_committed",
+      "review": "cross_sections-offline-replay",
+      "sha256": "957d5dc55ee89a6b4a4e6eb2aa31036129efb3a750e06f240257f296abc5f69e",
+      "support": "insufficient",
+      "origin": "supplied_response_replay",
+      "parent": {
+        "id": "cross_sections",
+        "sha256": "8d934fac87163280a8e1c604d73f04dba3fcab3ba65dae730aa6e87dbf4d2ec4"
+      },
+      "admission": "not_admitted"
+    },
+    "parent_unchanged": true,
+    "recovery_identical": true,
+    "provider_called": false
+  },
+  {
+    "case": "cover",
+    "derived": {
+      "status": "review_committed",
+      "review": "cover-offline-replay",
+      "sha256": "67459809615ca33dcac32aac9c62192d57d88e36ad2c56c6af78a4b5bce82eba",
+      "support": "insufficient",
+      "origin": "supplied_response_replay",
+      "parent": {
+        "id": "cover",
+        "sha256": "100aad4899746641dbf2670fc0a602a53a587b10deef476f7491b484d9d089dd"
+      },
+      "admission": "not_admitted"
+    },
+    "parent_unchanged": true,
+    "recovery_identical": true,
+    "provider_called": false
+  }
+]

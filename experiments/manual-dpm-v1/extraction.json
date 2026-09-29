@@ -1,0 +1,1330 @@
+{
+  "pdf_sha256": "719d6da341bff3733750f05357de50ca09fabc7c31c4354186dae8a7a3a70323",
+  "pdf_bytes": 1311822,
+  "pages": 188,
+  "text_bytes": 391299,
+  "text_chars": 382626,
+  "words": 54658,
+  "low_text_pages": [
+    1
+  ],
+  "source_sha256": "eeb7ee358c2c956e5f88dd06a8d149a3b5ba9c8cd324639a6c0337104ab986e6",
+  "page_map": [
+    {
+      "page": 1,
+      "chars": 0,
+      "words": 0,
+      "start_byte": 0,
+      "end_byte": 16
+    },
+    {
+      "page": 2,
+      "chars": 2017,
+      "words": 286,
+      "start_byte": 16,
+      "end_byte": 2120
+    },
+    {
+      "page": 3,
+      "chars": 2373,
+      "words": 323,
+      "start_byte": 2120,
+      "end_byte": 4592
+    },
+    {
+      "page": 4,
+      "chars": 1435,
+      "words": 183,
+      "start_byte": 4592,
+      "end_byte": 6089
+    },
+    {
+      "page": 5,
+      "chars": 3375,
+      "words": 506,
+      "start_byte": 6089,
+      "end_byte": 9551
+    },
+    {
+      "page": 6,
+      "chars": 3282,
+      "words": 500,
+      "start_byte": 9551,
+      "end_byte": 12940
+    },
+    {
+      "page": 7,
+      "chars": 3258,
+      "words": 490,
+      "start_byte": 12940,
+      "end_byte": 16288
+    },
+    {
+      "page": 8,
+      "chars": 3581,
+      "words": 564,
+      "start_byte": 16288,
+      "end_byte": 19963
+    },
+    {
+      "page": 9,
+      "chars": 3236,
+      "words": 448,
+      "start_byte": 19963,
+      "end_byte": 23279
+    },
+    {
+      "page": 10,
+      "chars": 530,
+      "words": 72,
+      "start_byte": 23279,
+      "end_byte": 23835
+    },
+    {
+      "page": 11,
+      "chars": 823,
+      "words": 107,
+      "start_byte": 23835,
+      "end_byte": 24692
+    },
+    {
+      "page": 12,
+      "chars": 2134,
+      "words": 380,
+      "start_byte": 24692,
+      "end_byte": 26902
+    },
+    {
+      "page": 13,
+      "chars": 1483,
+      "words": 244,
+      "start_byte": 26902,
+      "end_byte": 28437
+    },
+    {
+      "page": 14,
+      "chars": 2476,
+      "words": 342,
+      "start_byte": 28437,
+      "end_byte": 30992
+    },
+    {
+      "page": 15,
+      "chars": 2640,
+      "words": 380,
+      "start_byte": 30992,
+      "end_byte": 33701
+    },
+    {
+      "page": 16,
+      "chars": 2263,
+      "words": 325,
+      "start_byte": 33701,
+      "end_byte": 36036
+    },
+    {
+      "page": 17,
+      "chars": 676,
+      "words": 94,
+      "start_byte": 36036,
+      "end_byte": 36741
+    },
+    {
+      "page": 18,
+      "chars": 250,
+      "words": 28,
+      "start_byte": 36741,
+      "end_byte": 37014
+    },
+    {
+      "page": 19,
+      "chars": 1934,
+      "words": 287,
+      "start_byte": 37014,
+      "end_byte": 39043
+    },
+    {
+      "page": 20,
+      "chars": 715,
+      "words": 99,
+      "start_byte": 39043,
+      "end_byte": 39803
+    },
+    {
+      "page": 21,
+      "chars": 1212,
+      "words": 172,
+      "start_byte": 39803,
+      "end_byte": 41076
+    },
+    {
+      "page": 22,
+      "chars": 1243,
+      "words": 164,
+      "start_byte": 41076,
+      "end_byte": 42381
+    },
+    {
+      "page": 23,
+      "chars": 2327,
+      "words": 327,
+      "start_byte": 42381,
+      "end_byte": 44777
+    },
+    {
+      "page": 24,
+      "chars": 2533,
+      "words": 353,
+      "start_byte": 44777,
+      "end_byte": 47377
+    },
+    {
+      "page": 25,
+      "chars": 2439,
+      "words": 342,
+      "start_byte": 47377,
+      "end_byte": 49904
+    },
+    {
+      "page": 26,
+      "chars": 1830,
+      "words": 272,
+      "start_byte": 49904,
+      "end_byte": 51793
+    },
+    {
+      "page": 27,
+      "chars": 2514,
+      "words": 347,
+      "start_byte": 51793,
+      "end_byte": 54368
+    },
+    {
+      "page": 28,
+      "chars": 1544,
+      "words": 216,
+      "start_byte": 54368,
+      "end_byte": 55963
+    },
+    {
+      "page": 29,
+      "chars": 2374,
+      "words": 316,
+      "start_byte": 55963,
+      "end_byte": 58398
+    },
+    {
+      "page": 30,
+      "chars": 2505,
+      "words": 317,
+      "start_byte": 58398,
+      "end_byte": 60963
+    },
+    {
+      "page": 31,
+      "chars": 839,
+      "words": 121,
+      "start_byte": 60963,
+      "end_byte": 61843
+    },
+    {
+      "page": 32,
+      "chars": 2402,
+      "words": 306,
+      "start_byte": 61843,
+      "end_byte": 64309
+    },
+    {
+      "page": 33,
+      "chars": 596,
+      "words": 80,
+      "start_byte": 64309,
+      "end_byte": 64938
+    },
+    {
+      "page": 34,
+      "chars": 2270,
+      "words": 295,
+      "start_byte": 64938,
+      "end_byte": 67276
+    },
+    {
+      "page": 35,
+      "chars": 2234,
+      "words": 285,
+      "start_byte": 67276,
+      "end_byte": 69567
+    },
+    {
+      "page": 36,
+      "chars": 2264,
+      "words": 324,
+      "start_byte": 69567,
+      "end_byte": 71885
+    },
+    {
+      "page": 37,
+      "chars": 430,
+      "words": 62,
+      "start_byte": 71885,
+      "end_byte": 72343
+    },
+    {
+      "page": 38,
+      "chars": 2197,
+      "words": 314,
+      "start_byte": 72343,
+      "end_byte": 74587
+    },
+    {
+      "page": 39,
+      "chars": 951,
+      "words": 136,
+      "start_byte": 74587,
+      "end_byte": 75578
+    },
+    {
+      "page": 40,
+      "chars": 2716,
+      "words": 410,
+      "start_byte": 75578,
+      "end_byte": 78371
+    },
+    {
+      "page": 41,
+      "chars": 2183,
+      "words": 305,
+      "start_byte": 78371,
+      "end_byte": 80626
+    },
+    {
+      "page": 42,
+      "chars": 2644,
+      "words": 361,
+      "start_byte": 80626,
+      "end_byte": 83333
+    },
+    {
+      "page": 43,
+      "chars": 961,
+      "words": 137,
+      "start_byte": 83333,
+      "end_byte": 84333
+    },
+    {
+      "page": 44,
+      "chars": 2681,
+      "words": 367,
+      "start_byte": 84333,
+      "end_byte": 87093
+    },
+    {
+      "page": 45,
+      "chars": 1208,
+      "words": 168,
+      "start_byte": 87093,
+      "end_byte": 88343
+    },
+    {
+      "page": 46,
+      "chars": 2518,
+      "words": 352,
+      "start_byte": 88343,
+      "end_byte": 90939
+    },
+    {
+      "page": 47,
+      "chars": 1705,
+      "words": 240,
+      "start_byte": 90939,
+      "end_byte": 92689
+    },
+    {
+      "page": 48,
+      "chars": 2289,
+      "words": 323,
+      "start_byte": 92689,
+      "end_byte": 95047
+    },
+    {
+      "page": 49,
+      "chars": 1775,
+      "words": 259,
+      "start_byte": 95047,
+      "end_byte": 96872
+    },
+    {
+      "page": 50,
+      "chars": 2428,
+      "words": 349,
+      "start_byte": 96872,
+      "end_byte": 99366
+    },
+    {
+      "page": 51,
+      "chars": 296,
+      "words": 46,
+      "start_byte": 99366,
+      "end_byte": 99689
+    },
+    {
+      "page": 52,
+      "chars": 2525,
+      "words": 351,
+      "start_byte": 99689,
+      "end_byte": 102289
+    },
+    {
+      "page": 53,
+      "chars": 556,
+      "words": 82,
+      "start_byte": 102289,
+      "end_byte": 102874
+    },
+    {
+      "page": 54,
+      "chars": 2410,
+      "words": 329,
+      "start_byte": 102874,
+      "end_byte": 105358
+    },
+    {
+      "page": 55,
+      "chars": 912,
+      "words": 127,
+      "start_byte": 105358,
+      "end_byte": 106307
+    },
+    {
+      "page": 56,
+      "chars": 2687,
+      "words": 381,
+      "start_byte": 106307,
+      "end_byte": 109072
+    },
+    {
+      "page": 57,
+      "chars": 532,
+      "words": 83,
+      "start_byte": 109072,
+      "end_byte": 109636
+    },
+    {
+      "page": 58,
+      "chars": 2339,
+      "words": 359,
+      "start_byte": 109636,
+      "end_byte": 112052
+    },
+    {
+      "page": 59,
+      "chars": 2962,
+      "words": 432,
+      "start_byte": 112052,
+      "end_byte": 115101
+    },
+    {
+      "page": 60,
+      "chars": 2350,
+      "words": 337,
+      "start_byte": 115101,
+      "end_byte": 117522
+    },
+    {
+      "page": 61,
+      "chars": 1311,
+      "words": 192,
+      "start_byte": 117522,
+      "end_byte": 118885
+    },
+    {
+      "page": 62,
+      "chars": 2735,
+      "words": 392,
+      "start_byte": 118885,
+      "end_byte": 121705
+    },
+    {
+      "page": 63,
+      "chars": 2458,
+      "words": 355,
+      "start_byte": 121705,
+      "end_byte": 124235
+    },
+    {
+      "page": 64,
+      "chars": 3049,
+      "words": 445,
+      "start_byte": 124235,
+      "end_byte": 127370
+    },
+    {
+      "page": 65,
+      "chars": 2057,
+      "words": 302,
+      "start_byte": 127370,
+      "end_byte": 129492
+    },
+    {
+      "page": 66,
+      "chars": 2828,
+      "words": 415,
+      "start_byte": 129492,
+      "end_byte": 132405
+    },
+    {
+      "page": 67,
+      "chars": 2927,
+      "words": 413,
+      "start_byte": 132405,
+      "end_byte": 135422
+    },
+    {
+      "page": 68,
+      "chars": 323,
+      "words": 47,
+      "start_byte": 135422,
+      "end_byte": 135772
+    },
+    {
+      "page": 69,
+      "chars": 2738,
+      "words": 394,
+      "start_byte": 135772,
+      "end_byte": 138587
+    },
+    {
+      "page": 70,
+      "chars": 1315,
+      "words": 193,
+      "start_byte": 138587,
+      "end_byte": 139951
+    },
+    {
+      "page": 71,
+      "chars": 2741,
+      "words": 397,
+      "start_byte": 139951,
+      "end_byte": 142764
+    },
+    {
+      "page": 72,
+      "chars": 1255,
+      "words": 181,
+      "start_byte": 142764,
+      "end_byte": 144068
+    },
+    {
+      "page": 73,
+      "chars": 2521,
+      "words": 363,
+      "start_byte": 144068,
+      "end_byte": 146665
+    },
+    {
+      "page": 74,
+      "chars": 1345,
+      "words": 187,
+      "start_byte": 146665,
+      "end_byte": 148058
+    },
+    {
+      "page": 75,
+      "chars": 2366,
+      "words": 344,
+      "start_byte": 148058,
+      "end_byte": 150479
+    },
+    {
+      "page": 76,
+      "chars": 1106,
+      "words": 160,
+      "start_byte": 150479,
+      "end_byte": 151622
+    },
+    {
+      "page": 77,
+      "chars": 2394,
+      "words": 348,
+      "start_byte": 151622,
+      "end_byte": 154072
+    },
+    {
+      "page": 78,
+      "chars": 845,
+      "words": 119,
+      "start_byte": 154072,
+      "end_byte": 154949
+    },
+    {
+      "page": 79,
+      "chars": 2426,
+      "words": 359,
+      "start_byte": 154949,
+      "end_byte": 157434
+    },
+    {
+      "page": 80,
+      "chars": 584,
+      "words": 81,
+      "start_byte": 157434,
+      "end_byte": 158045
+    },
+    {
+      "page": 81,
+      "chars": 2302,
+      "words": 320,
+      "start_byte": 158045,
+      "end_byte": 160434
+    },
+    {
+      "page": 82,
+      "chars": 2548,
+      "words": 367,
+      "start_byte": 160434,
+      "end_byte": 163053
+    },
+    {
+      "page": 83,
+      "chars": 2212,
+      "words": 315,
+      "start_byte": 163053,
+      "end_byte": 165353
+    },
+    {
+      "page": 84,
+      "chars": 2232,
+      "words": 308,
+      "start_byte": 165353,
+      "end_byte": 167686
+    },
+    {
+      "page": 85,
+      "chars": 2626,
+      "words": 376,
+      "start_byte": 167686,
+      "end_byte": 170395
+    },
+    {
+      "page": 86,
+      "chars": 1378,
+      "words": 208,
+      "start_byte": 170395,
+      "end_byte": 171824
+    },
+    {
+      "page": 87,
+      "chars": 2603,
+      "words": 381,
+      "start_byte": 171824,
+      "end_byte": 174504
+    },
+    {
+      "page": 88,
+      "chars": 2814,
+      "words": 388,
+      "start_byte": 174504,
+      "end_byte": 177401
+    },
+    {
+      "page": 89,
+      "chars": 979,
+      "words": 144,
+      "start_byte": 177401,
+      "end_byte": 178422
+    },
+    {
+      "page": 90,
+      "chars": 2653,
+      "words": 393,
+      "start_byte": 178422,
+      "end_byte": 181152
+    },
+    {
+      "page": 91,
+      "chars": 2537,
+      "words": 380,
+      "start_byte": 181152,
+      "end_byte": 183769
+    },
+    {
+      "page": 92,
+      "chars": 1107,
+      "words": 163,
+      "start_byte": 183769,
+      "end_byte": 184918
+    },
+    {
+      "page": 93,
+      "chars": 2656,
+      "words": 403,
+      "start_byte": 184918,
+      "end_byte": 187632
+    },
+    {
+      "page": 94,
+      "chars": 2419,
+      "words": 362,
+      "start_byte": 187632,
+      "end_byte": 190106
+    },
+    {
+      "page": 95,
+      "chars": 2705,
+      "words": 388,
+      "start_byte": 190106,
+      "end_byte": 192890
+    },
+    {
+      "page": 96,
+      "chars": 2713,
+      "words": 425,
+      "start_byte": 192890,
+      "end_byte": 195684
+    },
+    {
+      "page": 97,
+      "chars": 2589,
+      "words": 372,
+      "start_byte": 195684,
+      "end_byte": 198332
+    },
+    {
+      "page": 98,
+      "chars": 2068,
+      "words": 306,
+      "start_byte": 198332,
+      "end_byte": 200459
+    },
+    {
+      "page": 99,
+      "chars": 2564,
+      "words": 356,
+      "start_byte": 200459,
+      "end_byte": 203115
+    },
+    {
+      "page": 100,
+      "chars": 2708,
+      "words": 371,
+      "start_byte": 203115,
+      "end_byte": 205912
+    },
+    {
+      "page": 101,
+      "chars": 1227,
+      "words": 175,
+      "start_byte": 205912,
+      "end_byte": 207188
+    },
+    {
+      "page": 102,
+      "chars": 2531,
+      "words": 335,
+      "start_byte": 207188,
+      "end_byte": 209800
+    },
+    {
+      "page": 103,
+      "chars": 2407,
+      "words": 349,
+      "start_byte": 209800,
+      "end_byte": 212283
+    },
+    {
+      "page": 104,
+      "chars": 1057,
+      "words": 147,
+      "start_byte": 212283,
+      "end_byte": 213385
+    },
+    {
+      "page": 105,
+      "chars": 2416,
+      "words": 328,
+      "start_byte": 213385,
+      "end_byte": 215893
+    },
+    {
+      "page": 106,
+      "chars": 2152,
+      "words": 310,
+      "start_byte": 215893,
+      "end_byte": 218121
+    },
+    {
+      "page": 107,
+      "chars": 2775,
+      "words": 391,
+      "start_byte": 218121,
+      "end_byte": 221000
+    },
+    {
+      "page": 108,
+      "chars": 1958,
+      "words": 270,
+      "start_byte": 221000,
+      "end_byte": 223025
+    },
+    {
+      "page": 109,
+      "chars": 2461,
+      "words": 367,
+      "start_byte": 223025,
+      "end_byte": 225567
+    },
+    {
+      "page": 110,
+      "chars": 2567,
+      "words": 347,
+      "start_byte": 225567,
+      "end_byte": 228203
+    },
+    {
+      "page": 111,
+      "chars": 706,
+      "words": 104,
+      "start_byte": 228203,
+      "end_byte": 228945
+    },
+    {
+      "page": 112,
+      "chars": 2436,
+      "words": 330,
+      "start_byte": 228945,
+      "end_byte": 231461
+    },
+    {
+      "page": 113,
+      "chars": 586,
+      "words": 83,
+      "start_byte": 231461,
+      "end_byte": 232087
+    },
+    {
+      "page": 114,
+      "chars": 2336,
+      "words": 324,
+      "start_byte": 232087,
+      "end_byte": 234511
+    },
+    {
+      "page": 115,
+      "chars": 1040,
+      "words": 148,
+      "start_byte": 234511,
+      "end_byte": 235596
+    },
+    {
+      "page": 116,
+      "chars": 2586,
+      "words": 379,
+      "start_byte": 235596,
+      "end_byte": 238281
+    },
+    {
+      "page": 117,
+      "chars": 517,
+      "words": 74,
+      "start_byte": 238281,
+      "end_byte": 238829
+    },
+    {
+      "page": 118,
+      "chars": 2663,
+      "words": 351,
+      "start_byte": 238829,
+      "end_byte": 241569
+    },
+    {
+      "page": 119,
+      "chars": 746,
+      "words": 107,
+      "start_byte": 241569,
+      "end_byte": 242354
+    },
+    {
+      "page": 120,
+      "chars": 2604,
+      "words": 347,
+      "start_byte": 242354,
+      "end_byte": 245040
+    },
+    {
+      "page": 121,
+      "chars": 1051,
+      "words": 143,
+      "start_byte": 245040,
+      "end_byte": 246143
+    },
+    {
+      "page": 122,
+      "chars": 2377,
+      "words": 336,
+      "start_byte": 246143,
+      "end_byte": 248592
+    },
+    {
+      "page": 123,
+      "chars": 1770,
+      "words": 246,
+      "start_byte": 248592,
+      "end_byte": 250424
+    },
+    {
+      "page": 124,
+      "chars": 2575,
+      "words": 371,
+      "start_byte": 250424,
+      "end_byte": 253076
+    },
+    {
+      "page": 125,
+      "chars": 703,
+      "words": 106,
+      "start_byte": 253076,
+      "end_byte": 253812
+    },
+    {
+      "page": 126,
+      "chars": 2487,
+      "words": 341,
+      "start_byte": 253812,
+      "end_byte": 256372
+    },
+    {
+      "page": 127,
+      "chars": 1010,
+      "words": 140,
+      "start_byte": 256372,
+      "end_byte": 257428
+    },
+    {
+      "page": 128,
+      "chars": 2338,
+      "words": 307,
+      "start_byte": 257428,
+      "end_byte": 259834
+    },
+    {
+      "page": 129,
+      "chars": 680,
+      "words": 97,
+      "start_byte": 259834,
+      "end_byte": 260547
+    },
+    {
+      "page": 130,
+      "chars": 2672,
+      "words": 349,
+      "start_byte": 260547,
+      "end_byte": 263280
+    },
+    {
+      "page": 131,
+      "chars": 658,
+      "words": 85,
+      "start_byte": 263280,
+      "end_byte": 263969
+    },
+    {
+      "page": 132,
+      "chars": 2216,
+      "words": 293,
+      "start_byte": 263969,
+      "end_byte": 266243
+    },
+    {
+      "page": 133,
+      "chars": 1248,
+      "words": 177,
+      "start_byte": 266243,
+      "end_byte": 267530
+    },
+    {
+      "page": 134,
+      "chars": 2492,
+      "words": 318,
+      "start_byte": 267530,
+      "end_byte": 270092
+    },
+    {
+      "page": 135,
+      "chars": 1723,
+      "words": 224,
+      "start_byte": 270092,
+      "end_byte": 271861
+    },
+    {
+      "page": 136,
+      "chars": 2752,
+      "words": 413,
+      "start_byte": 271861,
+      "end_byte": 274686
+    },
+    {
+      "page": 137,
+      "chars": 2407,
+      "words": 350,
+      "start_byte": 274686,
+      "end_byte": 277161
+    },
+    {
+      "page": 138,
+      "chars": 2419,
+      "words": 356,
+      "start_byte": 277161,
+      "end_byte": 279656
+    },
+    {
+      "page": 139,
+      "chars": 2048,
+      "words": 307,
+      "start_byte": 279656,
+      "end_byte": 281769
+    },
+    {
+      "page": 140,
+      "chars": 2835,
+      "words": 416,
+      "start_byte": 281769,
+      "end_byte": 284685
+    },
+    {
+      "page": 141,
+      "chars": 2519,
+      "words": 367,
+      "start_byte": 284685,
+      "end_byte": 287276
+    },
+    {
+      "page": 142,
+      "chars": 2515,
+      "words": 366,
+      "start_byte": 287276,
+      "end_byte": 289860
+    },
+    {
+      "page": 143,
+      "chars": 1201,
+      "words": 173,
+      "start_byte": 289860,
+      "end_byte": 291100
+    },
+    {
+      "page": 144,
+      "chars": 2417,
+      "words": 344,
+      "start_byte": 291100,
+      "end_byte": 293582
+    },
+    {
+      "page": 145,
+      "chars": 1700,
+      "words": 238,
+      "start_byte": 293582,
+      "end_byte": 295335
+    },
+    {
+      "page": 146,
+      "chars": 2868,
+      "words": 389,
+      "start_byte": 295335,
+      "end_byte": 298283
+    },
+    {
+      "page": 147,
+      "chars": 2980,
+      "words": 431,
+      "start_byte": 298283,
+      "end_byte": 301347
+    },
+    {
+      "page": 148,
+      "chars": 1607,
+      "words": 230,
+      "start_byte": 301347,
+      "end_byte": 303006
+    },
+    {
+      "page": 149,
+      "chars": 2712,
+      "words": 389,
+      "start_byte": 303006,
+      "end_byte": 305795
+    },
+    {
+      "page": 150,
+      "chars": 1464,
+      "words": 224,
+      "start_byte": 305795,
+      "end_byte": 307310
+    },
+    {
+      "page": 151,
+      "chars": 2427,
+      "words": 360,
+      "start_byte": 307310,
+      "end_byte": 309813
+    },
+    {
+      "page": 152,
+      "chars": 1309,
+      "words": 197,
+      "start_byte": 309813,
+      "end_byte": 311172
+    },
+    {
+      "page": 153,
+      "chars": 2608,
+      "words": 385,
+      "start_byte": 311172,
+      "end_byte": 313855
+    },
+    {
+      "page": 154,
+      "chars": 2010,
+      "words": 303,
+      "start_byte": 313855,
+      "end_byte": 315924
+    },
+    {
+      "page": 155,
+      "chars": 2439,
+      "words": 354,
+      "start_byte": 315924,
+      "end_byte": 318426
+    },
+    {
+      "page": 156,
+      "chars": 751,
+      "words": 106,
+      "start_byte": 318426,
+      "end_byte": 319214
+    },
+    {
+      "page": 157,
+      "chars": 2271,
+      "words": 313,
+      "start_byte": 319214,
+      "end_byte": 321554
+    },
+    {
+      "page": 158,
+      "chars": 2501,
+      "words": 338,
+      "start_byte": 321554,
+      "end_byte": 324129
+    },
+    {
+      "page": 159,
+      "chars": 2483,
+      "words": 335,
+      "start_byte": 324129,
+      "end_byte": 326697
+    },
+    {
+      "page": 160,
+      "chars": 1273,
+      "words": 183,
+      "start_byte": 326697,
+      "end_byte": 328025
+    },
+    {
+      "page": 161,
+      "chars": 2436,
+      "words": 318,
+      "start_byte": 328025,
+      "end_byte": 330526
+    },
+    {
+      "page": 162,
+      "chars": 1149,
+      "words": 159,
+      "start_byte": 330526,
+      "end_byte": 331721
+    },
+    {
+      "page": 163,
+      "chars": 2911,
+      "words": 416,
+      "start_byte": 331721,
+      "end_byte": 334714
+    },
+    {
+      "page": 164,
+      "chars": 2906,
+      "words": 421,
+      "start_byte": 334714,
+      "end_byte": 337691
+    },
+    {
+      "page": 165,
+      "chars": 892,
+      "words": 130,
+      "start_byte": 337691,
+      "end_byte": 338619
+    },
+    {
+      "page": 166,
+      "chars": 2472,
+      "words": 349,
+      "start_byte": 338619,
+      "end_byte": 341151
+    },
+    {
+      "page": 167,
+      "chars": 863,
+      "words": 125,
+      "start_byte": 341151,
+      "end_byte": 342051
+    },
+    {
+      "page": 168,
+      "chars": 2686,
+      "words": 378,
+      "start_byte": 342051,
+      "end_byte": 344795
+    },
+    {
+      "page": 169,
+      "chars": 970,
+      "words": 139,
+      "start_byte": 344795,
+      "end_byte": 345808
+    },
+    {
+      "page": 170,
+      "chars": 2647,
+      "words": 368,
+      "start_byte": 345808,
+      "end_byte": 348522
+    },
+    {
+      "page": 171,
+      "chars": 2806,
+      "words": 402,
+      "start_byte": 348522,
+      "end_byte": 351413
+    },
+    {
+      "page": 172,
+      "chars": 2628,
+      "words": 370,
+      "start_byte": 351413,
+      "end_byte": 354115
+    },
+    {
+      "page": 173,
+      "chars": 2043,
+      "words": 292,
+      "start_byte": 354115,
+      "end_byte": 356221
+    },
+    {
+      "page": 174,
+      "chars": 2923,
+      "words": 411,
+      "start_byte": 356221,
+      "end_byte": 359220
+    },
+    {
+      "page": 175,
+      "chars": 2854,
+      "words": 411,
+      "start_byte": 359220,
+      "end_byte": 362154
+    },
+    {
+      "page": 176,
+      "chars": 1797,
+      "words": 255,
+      "start_byte": 362154,
+      "end_byte": 364012
+    },
+    {
+      "page": 177,
+      "chars": 2368,
+      "words": 347,
+      "start_byte": 364012,
+      "end_byte": 366458
+    },
+    {
+      "page": 178,
+      "chars": 2221,
+      "words": 327,
+      "start_byte": 366458,
+      "end_byte": 368750
+    },
+    {
+      "page": 179,
+      "chars": 2371,
+      "words": 348,
+      "start_byte": 368750,
+      "end_byte": 371202
+    },
+    {
+      "page": 180,
+      "chars": 2471,
+      "words": 375,
+      "start_byte": 371202,
+      "end_byte": 373761
+    },
+    {
+      "page": 181,
+      "chars": 1156,
+      "words": 169,
+      "start_byte": 373761,
+      "end_byte": 374966
+    },
+    {
+      "page": 182,
+      "chars": 2851,
+      "words": 412,
+      "start_byte": 374966,
+      "end_byte": 377893
+    },
+    {
+      "page": 183,
+      "chars": 2518,
+      "words": 376,
+      "start_byte": 377893,
+      "end_byte": 380489
+    },
+    {
+      "page": 184,
+      "chars": 2711,
+      "words": 373,
+      "start_byte": 380489,
+      "end_byte": 383266
+    },
+    {
+      "page": 185,
+      "chars": 2928,
+      "words": 419,
+      "start_byte": 383266,
+      "end_byte": 386269
+    },
+    {
+      "page": 186,
+      "chars": 1689,
+      "words": 249,
+      "start_byte": 386269,
+      "end_byte": 388006
+    },
+    {
+      "page": 187,
+      "chars": 2562,
+      "words": 381,
+      "start_byte": 388006,
+      "end_byte": 390634
+    },
+    {
+      "page": 188,
+      "chars": 635,
+      "words": 90,
+      "start_byte": 390634,
+      "end_byte": 391299
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "question": "Ofrece una visión global de la estructura actual de la Dirección de Prestaciones Médicas: identifica sus unidades y las coordinaciones que dependen directamente de ella, y explica una responsabilidad principal de cada una. Distingue la estructura actual de los antecedentes históricos y señala cualquier información que no esté respaldada por los fragmentos disponibles.",
+  "required_units": [
+    "Unidad de Atención Médica",
+    "Unidad de Educación e Investigación",
+    "Unidad de Planeación e Innovación en Salud",
+    "Unidad de Infraestructura, Servicios Médicos Indirectos e Integración Sectorial"
+  ],
+  "required_direct_coordinations": [
+    "Coordinación de Proyectos Especiales en Salud",
+    "Coordinación de Servicios Administrativos"
+  ],
+  "responsibility_pages": [
+    25,
+    87,
+    109,
+    146,
+    182,
+    184
+  ],
+  "structure_page": 18,
+  "criteria_origin": "producer source review, not independent adjudication"
+}
