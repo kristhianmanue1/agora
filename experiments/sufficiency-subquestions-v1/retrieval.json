@@ -1,0 +1,332 @@
+[
+  {
+    "document_id": "1610.00479",
+    "source_sha256": "46e335f20950794080dec8d10ed82cc1688e0e745c816ced626faf998ba7c0a8",
+    "before_bytes": 3786,
+    "after_bytes": 6011,
+    "elapsed_seconds": 0.007275500000000004,
+    "ranges": [
+      [
+        532,
+        544
+      ],
+      [
+        546,
+        1701
+      ],
+      [
+        1703,
+        2058
+      ],
+      [
+        3026,
+        3566
+      ],
+      [
+        3568,
+        3985
+      ],
+      [
+        17636,
+        17647
+      ],
+      [
+        17649,
+        18829
+      ],
+      [
+        19292,
+        19890
+      ],
+      [
+        19892,
+        21001
+      ],
+      [
+        21003,
+        21637
+      ]
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "query": "What evaluation tasks and experiments are performed?",
+        "quota_bytes": 4000,
+        "candidate_status": "retrieved",
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 95,
+          "seed_paragraphs": [
+            3,
+            8,
+            38
+          ],
+          "selected_paragraphs": [
+            2,
+            3,
+            4,
+            7,
+            8,
+            37,
+            38
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 51936,
+          "selection_complete": false,
+          "search_exhaustive_for_meaning": false
+        },
+        "selected_ranges": [
+          [
+            532,
+            544
+          ],
+          [
+            546,
+            1701
+          ],
+          [
+            1703,
+            2058
+          ],
+          [
+            3026,
+            3566
+          ],
+          [
+            3568,
+            3985
+          ],
+          [
+            17636,
+            17647
+          ],
+          [
+            17649,
+            18829
+          ]
+        ],
+        "reference_ranges": [],
+        "missing_reference_ranges": [],
+        "reference_coverage": "unknown",
+        "semantic_support": "not_verified"
+      },
+      {
+        "id": "q2",
+        "query": "Which datasets or corpora are used for each evaluation task?",
+        "quota_bytes": 4000,
+        "candidate_status": "retrieved",
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 94,
+          "seed_paragraphs": [
+            3,
+            41,
+            42
+          ],
+          "selected_paragraphs": [
+            2,
+            3,
+            4,
+            40,
+            41,
+            42
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 51936,
+          "selection_complete": false,
+          "search_exhaustive_for_meaning": false
+        },
+        "selected_ranges": [
+          [
+            532,
+            544
+          ],
+          [
+            546,
+            1701
+          ],
+          [
+            1703,
+            2058
+          ],
+          [
+            19292,
+            19890
+          ],
+          [
+            19892,
+            21001
+          ],
+          [
+            21003,
+            21637
+          ]
+        ],
+        "reference_ranges": [],
+        "missing_reference_ranges": [],
+        "reference_coverage": "unknown",
+        "semantic_support": "not_verified"
+      }
+    ],
+    "global_completeness": "not_established",
+    "introduced_text_bytes": 3670,
+    "contains_denoising": false,
+    "contains_entity_evaluation": true,
+    "contains_five_languages": false
+  },
+  {
+    "document_id": "1902.08830",
+    "source_sha256": "2569f61cd7aa75871573fd424a645180d99317b98304c55ecf786f8c3334f960",
+    "before_bytes": 5254,
+    "after_bytes": 6549,
+    "elapsed_seconds": 0.008212833000000003,
+    "ranges": [
+      [
+        4107,
+        5111
+      ],
+      [
+        10113,
+        10864
+      ],
+      [
+        10866,
+        10878
+      ],
+      [
+        18273,
+        20300
+      ],
+      [
+        22022,
+        22060
+      ],
+      [
+        22062,
+        23210
+      ],
+      [
+        39721,
+        41243
+      ],
+      [
+        41245,
+        41292
+      ]
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "query": "Which languages are used for evaluation?",
+        "quota_bytes": 4000,
+        "candidate_status": "retrieved",
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 77,
+          "seed_paragraphs": [
+            5,
+            30,
+            73
+          ],
+          "selected_paragraphs": [
+            5,
+            29,
+            30,
+            73,
+            74
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 64497,
+          "selection_complete": false,
+          "search_exhaustive_for_meaning": false
+        },
+        "selected_ranges": [
+          [
+            4107,
+            5111
+          ],
+          [
+            22022,
+            22060
+          ],
+          [
+            22062,
+            23210
+          ],
+          [
+            39721,
+            41243
+          ],
+          [
+            41245,
+            41292
+          ]
+        ],
+        "reference_ranges": [],
+        "missing_reference_ranges": [],
+        "reference_coverage": "unknown",
+        "semantic_support": "not_verified"
+      },
+      {
+        "id": "q2",
+        "query": "What evaluation experiments and corpora correspond to those languages?",
+        "quota_bytes": 4000,
+        "candidate_status": "retrieved",
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 91,
+          "seed_paragraphs": [
+            5,
+            11,
+            26
+          ],
+          "selected_paragraphs": [
+            5,
+            11,
+            12,
+            26
+          ],
+          "oversized_candidates": [
+            114,
+            1,
+            9
+          ],
+          "local_scan_bytes": 64497,
+          "selection_complete": false,
+          "search_exhaustive_for_meaning": false
+        },
+        "selected_ranges": [
+          [
+            4107,
+            5111
+          ],
+          [
+            10113,
+            10864
+          ],
+          [
+            10866,
+            10878
+          ],
+          [
+            18273,
+            20300
+          ]
+        ],
+        "reference_ranges": [],
+        "missing_reference_ranges": [],
+        "reference_coverage": "unknown",
+        "semantic_support": "not_verified"
+      }
+    ],
+    "global_completeness": "not_established",
+    "introduced_text_bytes": 5786,
+    "contains_denoising": false,
+    "contains_entity_evaluation": false,
+    "contains_five_languages": true
+  }
+]

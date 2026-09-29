@@ -1,0 +1,67 @@
+[
+  {
+    "document_id": "1610.00479",
+    "before_bytes": 6011,
+    "after_bytes": 7882,
+    "additions": [
+      {
+        "paragraph": 43,
+        "start_byte": 21639,
+        "end_byte": 22568,
+        "score": 3,
+        "sha256": "46c38189f30e94d9003543a252837619267ad76b484d4aec8db2247c5c1bcca3"
+      },
+      {
+        "paragraph": 9,
+        "start_byte": 3987,
+        "end_byte": 4470,
+        "score": 1,
+        "sha256": "df744b711628c8bfff55e14289371295c41cccf8dfdccd60d0d7f31f3469af99"
+      },
+      {
+        "paragraph": 39,
+        "start_byte": 18831,
+        "end_byte": 19290,
+        "score": 0,
+        "sha256": "e4b977f74da17baed28b95d8187684fd1f6ce328722092cfb05a5f83fe40da2b"
+      }
+    ],
+    "skipped": [],
+    "contains_denoising": true,
+    "contains_entity_evaluation": true,
+    "contains_five_languages": false,
+    "existing_ranges_preserved": true
+  },
+  {
+    "document_id": "1902.08830",
+    "before_bytes": 6549,
+    "after_bytes": 7698,
+    "additions": [
+      {
+        "paragraph": 31,
+        "start_byte": 23212,
+        "end_byte": 23747,
+        "score": 4,
+        "sha256": "610797b2e0f89524fd03e4092a0516327b53946a4b15a94c4489dc9e2ae7a0f4"
+      },
+      {
+        "paragraph": 10,
+        "start_byte": 9497,
+        "end_byte": 10111,
+        "score": 2,
+        "sha256": "cf98395ce291deb86112f2094394283d084e6082576a743f6a4a1a8a5a0235b7"
+      }
+    ],
+    "skipped": [
+      4,
+      6,
+      25,
+      27,
+      72
+    ],
+    "contains_denoising": false,
+    "contains_entity_evaluation": false,
+    "contains_five_languages": true,
+    "existing_ranges_preserved": true
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "cases_sha256": "098dec26c9066b6e1dd503bf6fbe4e8542fb179bb233a3b3242138cbacb5cdfe",
+  "max_calls_per_provider": 4,
+  "retries": 0,
+  "timeout_seconds": 90
+}

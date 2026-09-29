@@ -1,0 +1,6 @@
+{
+  "status": "post-baseline development comparison, not reserved validation",
+  "rule": "Keep union; rank missing immediate seed neighbors by overlap with subquestion, descending score then document order; append those fitting shared budget; one frontier, no target-specific terms",
+  "budget_bytes": 8000,
+  "provider_calls": 0
+}

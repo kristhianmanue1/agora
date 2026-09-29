@@ -1,0 +1,17 @@
+{
+  "document_id": "1610.00479",
+  "missing_paragraph": 43,
+  "missing_bytes": 929,
+  "rank_by_question": [
+    29,
+    16
+  ],
+  "per_question_quota": 4000,
+  "remaining_by_question": [
+    330,
+    137
+  ],
+  "deduplicated_union_bytes": 6011,
+  "unused_shared_budget": 1989,
+  "interpretation": "Low lexical ranking and per-question quotas block neighbor expansion despite unused shared budget; no claim this is sole cause across documents"
+}

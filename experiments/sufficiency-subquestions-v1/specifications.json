@@ -1,0 +1,32 @@
+[
+  {
+    "schema": "agora/subquestions-input/v1-experimental",
+    "questions": [
+      {
+        "id": "q1",
+        "query": "What evaluation tasks and experiments are performed?",
+        "reference_ranges": []
+      },
+      {
+        "id": "q2",
+        "query": "Which datasets or corpora are used for each evaluation task?",
+        "reference_ranges": []
+      }
+    ]
+  },
+  {
+    "schema": "agora/subquestions-input/v1-experimental",
+    "questions": [
+      {
+        "id": "q1",
+        "query": "Which languages are used for evaluation?",
+        "reference_ranges": []
+      },
+      {
+        "id": "q2",
+        "query": "What evaluation experiments and corpora correspond to those languages?",
+        "reference_ranges": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "code_head": "2ab266516a5c43f4e272496daadb5dff54eec75b",
+  "budget_bytes": 8000,
+  "top_k": 3,
+  "strategy": "paragraphs-equal",
+  "specifications_sha256": "520e2bf8102a51083d0d787aef85e05001bd7d675c04e8e10a825aaffc48426f",
+  "criterion": "Recover previously absent evaluation while retaining known relevant content; characterize gaps; no claim of exhaustiveness",
+  "provider_policy": "Only compare reviewers if new context warrants calls; max four calls per provider, 90s, no retries"
+}

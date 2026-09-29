@@ -53,3 +53,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Recuperación real contrastada
 
 [Dos casos recuperados con Ágora](../experiments/sufficiency-real-retrieval-v1/README.md): reducción de tokens de entrada al revisor de 88,72% (Jev) y 90,54% (GLM) frente al contexto completo previo. Se recuperó el contraste entrenamiento/evaluación sin anotaciones, pero quedaron fuera párrafos de otra evaluación. No demuestra exhaustividad ni ahorro seguro end-to-end; integración decisoria sigue pendiente.
+
+## Subpreguntas: resultado de redistribución experimental
+
+[Contraste local](../experiments/sufficiency-subquestions-v1/README.md): las cuotas iguales dejaron fuera un párrafo de 929 bytes pese a 1.989 bytes libres tras deduplicar. Una ampliación experimental por vecinos lo recuperó usando 7.882/8.000 bytes y conservando rangos previos. Sin llamadas API ni cambios de producto; falta validación en casos nuevos antes de proponer estrategia optativa.
