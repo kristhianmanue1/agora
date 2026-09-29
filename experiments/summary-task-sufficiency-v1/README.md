@@ -18,7 +18,7 @@ Propuesta: distinguir evidence_sufficiency (¿la fuente permite responder?), cla
 
 Dos requests a Typesafe/Jev, cada uno con tarea, evidencia y resumen; una elección tipada sufficient/insufficient/uncertain. Modelo jev-1.13.0; dos llamadas máximo, 90 s cada una, cero reintentos. No se envían las etiquetas esperadas. No modifica defaults, admisión ni candidatos previos.
 
-`run.py` reutiliza transporte y journal de reviewer-comparison-v1, con payload y parser experimentales separados. No ejecutarlo hasta autorización explícita del conjunto nuevo a Typesafe/Jev. El precedente de revisión automática exigió autorización por payload; la de siete casos no se amplía automáticamente a estos dos.
+`run.py` reutiliza transporte y journal de reviewer-comparison-v1, con payload y parser experimentales separados. Ejecutado tras autorización explícita del Operador para estos dos casos. Dos llamadas completadas, coincidencia 2/2; véanse [resultados y límites](RESULTS.md). No repetir sobre el journal existente.
 
 ## Autorrevisión adversarial
 

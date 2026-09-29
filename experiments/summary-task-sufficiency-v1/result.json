@@ -1,0 +1,76 @@
+{
+  "schema": "agora/summary-task-sufficiency-result/v1",
+  "execution_head": "2107e3b1e7ec1734749c0d2f64579d7496f7a3a2",
+  "freeze_verified": true,
+  "provider_input_has_no_gold": true,
+  "summary": {
+    "calls": 2,
+    "errors": 0,
+    "retries": 0,
+    "exact_matches": 2,
+    "primary_pass": true,
+    "input_tokens": 1230,
+    "output_tokens": 104,
+    "elapsed_seconds_sum": 0.904
+  },
+  "records": [
+    {
+      "case_id": "positive-1",
+      "status": "completed",
+      "label": "sufficient",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "sufficient",
+            "confidence": 0.84,
+            "probabilities": {
+              "insufficient": 0.11,
+              "uncertain": 0.0,
+              "sufficient": 0.89
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 643,
+          "output_tokens": 52
+        }
+      },
+      "elapsed_seconds": 0.459,
+      "started_at": "2026-09-29T11:11:49Z",
+      "request_sha256": "5dbd9fb83e98aa4801a700d08006f576eb864b19415e459980cf803efa272b13",
+      "expected": "sufficient",
+      "match": true
+    },
+    {
+      "case_id": "benign-omission",
+      "status": "completed",
+      "label": "insufficient",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "sufficiency": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 1.0,
+            "probabilities": {
+              "sufficient": 0.0,
+              "insufficient": 1.0,
+              "uncertain": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 587,
+          "output_tokens": 52
+        }
+      },
+      "elapsed_seconds": 0.445,
+      "started_at": "2026-09-29T11:11:50Z",
+      "request_sha256": "ad89d7f6d7e7080e9cad2c488dd7fd1e108eba343dfb5fa1a81fbe5a1828842d",
+      "expected": "insufficient",
+      "match": true
+    }
+  ]
+}
