@@ -5,7 +5,7 @@ from .source import SourceError, integer
 
 def merge_ranges(ranges):
     merged = []
-    for start, end in sorted(set(ranges)):
+    for start, end in sorted(set(tuple(r) for r in ranges)):
         if merged and start <= merged[-1][1]:
             merged[-1][1] = max(end, merged[-1][1])
         else:
@@ -13,12 +13,14 @@ def merge_ranges(ranges):
     return merged
 
 
-def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1):
+def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1, strategy="paragraphs-equal"):
     """References are caller-declared byte intervals, never an answer oracle.
 
     Equal per-question quotas are deliberately conservative: no unused budget
     redistribution, and no claim of exhaustive search or semantic coverage.
     """
+    if strategy not in ('paragraphs-equal', 'functions-adaptive'):
+        raise SourceError('invalid_retrieval_strategy')
     integer(budget, 1, SEARCH_LIMIT, 'invalid_content_budget')
     integer(top_k, 1, 32, 'invalid_top_k')
     if not isinstance(specification, dict) or set(specification) != {'schema', 'questions'} or specification['schema'] != 'agora/subquestions-input/v1-experimental':
@@ -48,14 +50,18 @@ def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1
     for q in questions:
         for r in q['reference_ranges']:
             adapter.fetch(revision, [tuple(r)], content_budget=SEARCH_LIMIT)
-    quota = budget // len(questions)
-    ranges, reports = [], []
-    for q in questions:
-        selected, retrieval = lexical_ranges(full, q['query'], quota, top_k)
-        ranges.extend(selected)
-        reports.append(dict(id=q['id'], query=q['query'], quota_bytes=quota,
-                            candidate_status='retrieved' if selected else 'no_candidates_within_quota',
-                            retrieval=retrieval, selected_ranges=selected))
+    if strategy == 'functions-adaptive':
+        from .function_retrieval import select
+        ranges, reports = select(full, questions, budget, top_k, merge_ranges)
+    else:
+        quota = budget // len(questions)
+        ranges, reports = [], []
+        for q in questions:
+            selected, retrieval = lexical_ranges(full, q['query'], quota, top_k)
+            ranges.extend(selected)
+            reports.append(dict(id=q['id'], query=q['query'], quota_bytes=quota,
+                                candidate_status='retrieved' if selected else 'no_candidates_within_quota',
+                                retrieval=retrieval, selected_ranges=selected))
     combined = merge_ranges(ranges)
     envelope = adapter.fetch(revision, [tuple(r) for r in combined], content_budget=budget) if combined else None
     for q, report in zip(questions, reports):
@@ -63,9 +69,9 @@ def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1
         report.update(reference_ranges=q['reference_ranges'], missing_reference_ranges=missing,
                       reference_coverage='unknown' if not q['reference_ranges'] else 'partial' if missing else 'covered',
                       semantic_support='not_verified')
-    return dict(schema='agora/subquestions-plan/v1-experimental', source_sha256=revision,
+    return dict(schema='agora/subquestions-plan/v1-experimental' if strategy == 'paragraphs-equal' else 'agora/subquestions-plan/v2-experimental', source_sha256=revision,
                 source_id=adapter.source_id, budget_bytes=budget, top_k=top_k,
-                allocation='equal_quotas_without_redistribution', questions=reports,
+                allocation='equal_quotas_without_redistribution' if strategy == 'paragraphs-equal' else 'initial_equal_then_shared_remainder', questions=reports,
                 envelope=envelope, delivered_bytes=envelope['delivered_bytes'] if envelope else 0,
                 reference_basis='caller_declared_ranges_not_exhaustive',
                 global_completeness='not_established', semantic_support='not_verified',

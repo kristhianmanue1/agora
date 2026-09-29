@@ -38,3 +38,26 @@ En `experiments/manual-dpm-v1/subquestions-results.json`, la consulta compuesta 
 Para la consulta global, seis cuotas de 2.000 bytes no admiten las seis páginas de referencia completas (cada una supera la cuota). Se entregan candidatos por 6.403 bytes, pero las seis referencias se reportan faltantes. Es una detección útil del límite de la selección, no una solución a la síntesis global. Tampoco demuestra ausencia de todo dato relevante en los candidatos.
 
 Las subpreguntas y referencias se construyeron tras conocer el documento: esto es regresión de desarrollo, no evaluación reservada. El siguiente experimento debería comparar segmentación por funciones y reparto adaptativo bajo el mismo presupuesto, antes de gastar otra llamada global. OCR y revisión visual siguen siendo necesarios para información que no existe en el texto extraído.
+
+## Estrategia optativa por funciones
+
+Añadir `--strategy functions-adaptive` activa un plan `v2-experimental`; el valor predeterminado sigue siendo `paragraphs-equal` y produce el contrato anterior.
+
+La nueva heurística reconoce párrafos de listas numeradas (por ejemplo, `1. Aprobar...`) separados por líneas vacías, incluso con espacios. Adjunta el encabezado numerado local cuando existe y reinicia su asociación al encontrar un marcador de página. No reconstituye funciones partidas entre páginas ni certifica que toda lista numerada sea una función. Sin estructura reconocible devuelve cero candidatos; no cambia silenciosamente al algoritmo anterior.
+
+Cada subpregunta recibe una primera oportunidad con cuota igual. Después usa el sobrante común hasta `top_k` candidatos por pregunta; la unión mantiene el límite total y elimina duplicados. El orden de preguntas puede influir cuando el presupuesto no alcanza; no se garantiza asignación óptima. Las referencias no se usan para puntuar ni seleccionar.
+
+### Resultado local: mismo presupuesto y mismas subpreguntas
+
+| Caso | Párrafos, cuotas iguales | Funciones, sobrante compartido |
+|---|---|---|
+| Compuesto | 5.180 bytes, páginas 170/177 completas según referencias | 439 bytes, ambas funciones pertinentes y sus encabezados |
+| Global | 6.403 bytes, ninguna página de referencia completa | 2.152 bytes, una función y encabezado en cada sección 25/87/109/146/182/184 |
+
+La inspección del productor confirmó que los dos pasajes del caso compuesto expresan aprobación de normas y adquisición de equipamiento. En el global aparecen las seis áreas y una responsabilidad de cada una. Esto es inspección local del productor, no revisión semántica independiente ni síntesis generada. No se verificó la exhaustividad de la estructura organizativa.
+
+**Las referencias originales de páginas completas siguen parciales** en ambos casos con esta estrategia. Se conservaron intactas: llegar a una página no equivale a recuperarla entera. La nueva evidencia es cobertura de funciones concretas inspeccionadas, no aprobación del antiguo criterio de cobertura completa.
+
+Resultados reproducibles: `experiments/manual-dpm-v1/run_functions.py` y `functions-results.json`; planes con contenido permanecen en `inputs/`, fuera de Git. Cinco pruebas adicionales cubren offsets UTF-8, encabezados, presupuesto, redistribución y deduplicación. Se corrigió durante las pruebas un error al combinar intervalos representados como listas y tuplas. No hubo llamadas a proveedores.
+
+Próximo paso: conectar este plan mediante un consumidor explícito y evaluar una síntesis limitada a las funciones recuperadas. El plan mantiene `global_completeness=not_established`; ninguna reducción de bytes autoriza afirmar exhaustividad.

@@ -55,6 +55,7 @@ def parser():
         s.add_argument('--'+name,required=True)
     s.add_argument('--budget',type=int,default=12000)
     s.add_argument('--top-k',type=int,default=1)
+    s.add_argument('--strategy',choices=('paragraphs-equal','functions-adaptive'),default='paragraphs-equal')
     from .expansion_cli import add_commands
     add_commands(sub)
     return p
@@ -71,7 +72,7 @@ def run(args):
     if args.command=='retrieve-subquestions':
         from .subquestions import prepare_subquestions
         from .source import FileSourceAdapter
-        report=prepare_subquestions(FileSourceAdapter(args.source,args.source_id),args.source_sha256,read(args.spec),args.budget,args.top_k)
+        report=prepare_subquestions(FileSourceAdapter(args.source,args.source_id),args.source_sha256,read(args.spec),args.budget,args.top_k,args.strategy)
         write_new(args.out,report)
         return dict(status='prepared',output=args.out,delivered_bytes=report['delivered_bytes'],global_completeness=report['global_completeness'],questions=[{k:q[k] for k in ('id','candidate_status','reference_coverage','missing_reference_ranges')} for q in report['questions']],provider_calls=0)
     from .expansion_cli import COMMANDS, run as run_expansion
