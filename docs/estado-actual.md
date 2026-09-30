@@ -188,3 +188,17 @@ dos ejemplos presentes en otros pasajes no quedaron citados. Original intacto,
 sin promoción de defaults. Seis llamadas, 37.408 tokens. Próximo paso: reparación
 candidata de los localizadores y control de subafirmaciones; luego comparar lectura
 selectiva/completa con costes y fidelidad. No cambia la integración del ecosistema.
+
+## Reparación localizada y primera comparación de lectura
+
+[Derivado con respaldo ampliado](../experiments/citation-support-derived-v1/README.md):
+C3 conserva texto y añade tres localizadores; Jev favorece el derivado, con
+probabilidades cercanas. No es validación concluyente ni promoción automática.
+
+[Comparación en fuente nueva](../experiments/reading-paired-grouping-v1/README.md):
+5.145 frente a 34.053 bytes; 5.164 frente a 26.504 tokens contando generación y dos
+revisiones. Ambos cubren la rúbrica y reciben respaldo de Jev, pero la selección
+pierde la excepción Automotive/10-core presente en la fuente y en la respuesta
+completa. Ahorro observado sin equivalencia de calidad demostrada. Siguiente paso:
+control de condiciones/excepciones, ampliación trazable y regresión sobre este caso;
+contraste posterior en fuente nueva. Sin cambios de defaults ni integración.

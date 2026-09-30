@@ -1,0 +1,22 @@
+{
+  "cases_sha256": "ae92cb8de50b7c20ccbe7d16914040cbde0033046fb7d5b2343d0abd32e94615",
+  "max_calls": 2,
+  "expected": {
+    "a": "insufficient",
+    "b": "supported"
+  },
+  "original_candidate_sha256": "c07ec98e3d0d9f3b93011af0eb9ce223b2c87a6e5274d83653659cd0ddc7c677",
+  "original_response_sha256": "88c28840735f84b18f702cf9adaa0cc20b318e247962865add70b157591c8446",
+  "derived_candidate_sha256": "cdfe1e2b89143da5956f36e91268b579ba5937fbcb61efb0377a9212a271466c",
+  "added_ids": [
+    "ev_cb2cec6acd09b259de55311e",
+    "ev_dfcecc92c01e45473eee1e6a",
+    "ev_893fdc5c20fa9511a0264aec"
+  ],
+  "claim_index": 2,
+  "claim_text_unchanged": true,
+  "reason": "Two concrete examples plus the comparison-question reference also needed by the same unchanged claim.",
+  "retries": 0,
+  "timeout_seconds": 90,
+  "limits": "Paired known negative control; producer repair; separate-provider advice, not adjudication. No other candidate text modified."
+}

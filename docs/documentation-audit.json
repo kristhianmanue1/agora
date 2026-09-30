@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 165,
-  "bytes": 813305,
+  "documents": 167,
+  "bytes": 820475,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "f6fce87b4fbd72d41cdfb91aadb653cebabde253936653ddc7de0c204fb7603e",
-      "bytes": 21899,
+      "sha256": "f2a6960ea53e3ab42f392714546ea13c4d4753d53f57628cce82c708be764622",
+      "bytes": 22790,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -720,6 +720,14 @@
         },
         {
           "target": "../experiments/citation-grouping-heldout-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/citation-support-derived-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reading-paired-grouping-v1/README.md",
           "exists": true
         }
       ],
@@ -1237,6 +1245,19 @@
       "python_modules": []
     },
     {
+      "path": "experiments/citation-support-derived-v1/README.md",
+      "sha256": "59cc3083f5631718863549e24e1eb7dca9b8cfc55fe951787412ef0521c07bdb",
+      "bytes": 1399,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../reading-paired-grouping-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "experiments/citation-units-1000-v1/README.md",
       "sha256": "1954ffa1dcdd1cbf56bf2c736ad405dd1dd994570607953f1dcffa4df9969463",
       "bytes": 1393,
@@ -1636,6 +1657,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/reading-paired-grouping-v1/README.md",
+      "sha256": "2c7885380361c67a01af559d649fcd25770889a3c2e4b60dd9beda691fd53396",
+      "bytes": 4880,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

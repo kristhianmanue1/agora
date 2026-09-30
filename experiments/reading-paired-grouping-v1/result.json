@@ -1,0 +1,239 @@
+{
+  "status": "comparison_complete_with_retrieval_gap",
+  "rows": [
+    {
+      "arm": "selected",
+      "reading_bytes": 5145,
+      "candidate_sha256": "0c2695df7cc63dce3be8e58647230998cdfc2b53620a547641b3d55caf9a7732",
+      "structural_status": "complete",
+      "quote_bytes": 2082,
+      "coverage": {
+        "R1": "covered",
+        "R2": "covered"
+      },
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported"
+      },
+      "tokens": {
+        "generation": 2382,
+        "coverage": 1526,
+        "fidelity": 1256
+      },
+      "total_tokens": 5164,
+      "generation_prompt_tokens": 1875,
+      "elapsed_calls_seconds": 13.704,
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"They conducted experiments on 10 different datasets, consisting of 9 Amazon product review datasets covering 9 different domains and the large-scale Yelp challenge dataset on restaurant reviews.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]},{\"text\":\"Across all datasets they applied t-core preprocessing (evaluating t=5 and t=10), and for the Yelp dataset they focused on restaurants in the AZ metropolitan area, splitting each dataset into 80% training, 10% validation, and 10% testing.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 507,
+          "completion_tokens_details": {
+            "reasoning_tokens": 344
+          },
+          "prompt_tokens": 1875,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 2382
+        },
+        "response_id": "20261001043315ebe41d1ca78b4621"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 125,
+          "completion_tokens_details": {
+            "reasoning_tokens": 89
+          },
+          "prompt_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1526
+        },
+        "response_id": "202610010433269eccff0f85e146d3"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.98,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.99,
+              "insufficient": 0.01
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.96,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.97,
+              "insufficient": 0.03
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1169,
+          "output_tokens": 87
+        }
+      },
+      "coverage_result_sha256": "ea6c76deea63b74c659e3525a418280a2acb0e678728a9d91eaabfb938c9b9a3",
+      "fidelity_journal_sha256": "16bb8e7a61ff69464093582256a1d0058ad5793d9b8de15a5f6b40eb600e2d5c"
+    },
+    {
+      "arm": "full",
+      "reading_bytes": 34053,
+      "candidate_sha256": "4e94abe3d619cd3b9b8a7a3ac8343060cd182c5937d8453f64f7fdb81ca5cbb7",
+      "structural_status": "complete",
+      "quote_bytes": 4611,
+      "coverage": {
+        "R1": "covered",
+        "R2": "covered"
+      },
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported",
+        "C3": "supported",
+        "C4": "supported",
+        "missing": "supported"
+      },
+      "tokens": {
+        "generation": 13114,
+        "coverage": 2302,
+        "fidelity": 11088
+      },
+      "total_tokens": 26504,
+      "generation_prompt_tokens": 11379,
+      "elapsed_calls_seconds": 45.112,
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"They conduct experiments on 10 different datasets, comprising 9 Amazon product review datasets from 9 different domains and the large-scale Yelp challenge dataset on restaurant reviews.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\",\"ev_0e6bfe30fbc27cd7936cd250\"]},{\"text\":\"Across all datasets, preprocessing follows prior work to ensure a t-core fashion (only users and items with at least t reviews), with the two cases t=5 and t=10 evaluated; for the Yelp dataset, they follow prior work to focus on restaurants in the AZ metropolitan area.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]},{\"text\":\"For each dataset, the user-item pairs are randomly split into 80% training, 10% validation, and 10% testing, and only reviews from the training set are used when learning user and item representations.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]},{\"text\":\"On the 10-core datasets, the Automotive dataset is excluded because only very few users and items remain after applying the 10-core criterion.\",\"evidence_ids\":[\"ev_112d906af1cf2e7110ef0433\"]}],\"missing\":[\"The full list of names of the 9 Amazon product review domains is not enumerated in the passages; Table TABREF30 summarizing the domains and statistics is referenced but not provided, and only the Health and Automotive domains are named.\"]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1735,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1382
+          },
+          "prompt_tokens": 11379,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 13114
+        },
+        "response_id": "20261001043329d5682074b98943b5"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 195,
+          "completion_tokens_details": {
+            "reasoning_tokens": 167
+          },
+          "prompt_tokens": 2107,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 2302
+        },
+        "response_id": "20261001043400101adc4adc074cdb"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.8,
+            "probabilities": {
+              "insufficient": 0.13,
+              "supported": 0.87,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "insufficient": 0.01,
+              "supported": 0.99,
+              "contradicted": 0.0
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 1.0,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 1.0,
+              "insufficient": 0.0
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.96,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.97,
+              "insufficient": 0.03
+            }
+          },
+          "missing": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.79,
+            "probabilities": {
+              "contradicted": 0.03,
+              "supported": 0.86,
+              "insufficient": 0.11
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 10876,
+          "output_tokens": 212
+        }
+      },
+      "coverage_result_sha256": "343c6b50808db5985bd3bd8d527aafce860cf0d6ded141c4da61a03080d13ba1",
+      "fidelity_journal_sha256": "4648b97b99007595828ef5b26e3ce5e0ce2646cbcf2415c096426dda6bb7efa8"
+    }
+  ],
+  "http_calls": 6,
+  "total_tokens": 31668,
+  "reduction": {
+    "model_source_bytes_percent": 84.89,
+    "generator_prompt_tokens_percent": 83.52,
+    "all_model_calls_tokens_percent": 80.52
+  },
+  "posthoc_producer_finding": {
+    "classification": "source_information_absent_from_selected_context",
+    "fact": "Automotive excluded in 10-core scenario",
+    "evidence": {
+      "text": "Table TABREF32 presents the results on the 10-core datasets, from which the Automotive dataset is excluded because only very few users and items are left after applying the 10-core criterion on it. In contrast to Table TABREF31, all methods in general achieve better results in Table TABREF32, since more ratings and reviews become available for each user and item. In this case, we observe that D-ATT often outperforms MPCN. This may be because the Gumbel-Softmax pointers in MPCN make hard selections on reviews, thereby filtering out many reviews that may result in a significant loss of information. This problem is more severe when users (items) have more useful reviews, as in the 10-core scenario. Additionally, we observe that the performance gaps between AHN and the compared methods become larger. Specifically, summarizing the relative improvements of AHN over each of the review-based methods in Fig. FIGREF33, we observe that AHN generally gains more on the 10-core datasets, with absolute gains of up to $11.6\\%$ (DeepCoNN), $7.0\\%$ (D-ATT), $13.8\\%$ (MPCN), and $8.4\\%$ (HUITA). This suggests that the more reviews each user and item has, the more important it is to perform proper attention learning on relevant reviews and sentences on both the user and item sides.",
+      "start_byte": 29215,
+      "end_byte": 30497
+    },
+    "included_in_original_rubric": false,
+    "original_scores_unchanged": true,
+    "importance": "Condition changes dataset membership; producer identifies potentially material scope omission. Not independently adjudicated."
+  },
+  "promotion": "none",
+  "limits": "One newly selected source, not general performance. Reference rubric does not cover the observed exception. Local retrieval scans full file; source bytes are model-visible text. Costs cover six calls, not human setup, rubric construction or complete system lifecycle. No monetary price supplied."
+}

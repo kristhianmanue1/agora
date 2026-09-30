@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "cc6ae64e9f36911bacf7ceb09b4f2f2f8a3ebda00467d0becf62fc5e1255b198",
+  "question": "Which set of datasets do they use?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: 9 Amazon product review datasets for 9 different domains",
+      "evidence": {
+        "text": "We conducted experiments on 10 different datasets, including 9 Amazon product review datasets for 9 different domains, and the large-scale Yelp challenge dataset on restaurant reviews. Table TABREF30 summarizes the domains and statistics for these datasets. Across all datasets, we follow the existing work BIBREF3, BIBREF17 to perform preprocessing to ensure they are in a $t$-core fashion, i.e., the datasets only include users and items that have at least $t$ reviews. In our experiments, we evaluate the two cases of $t=5$ and $t=10$. For the Yelp dataset, we follow BIBREF3 to focus on restaurants in the AZ metropolitan area. For each dataset, we randomly split the user–item pairs into $80\\%$ training set, $10\\%$ validation set, and $10\\%$ testing set. When learning the representations for users and items, we only use their reviews from the training set, and none from the validation and testing sets. This ensures a practical scenario where we cannot include any future reviews into a user's (item's) history for model training.",
+        "start_byte": 24154,
+        "end_byte": 25195
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: large-scale Yelp challenge dataset on restaurant reviews",
+      "evidence": {
+        "text": "We conducted experiments on 10 different datasets, including 9 Amazon product review datasets for 9 different domains, and the large-scale Yelp challenge dataset on restaurant reviews. Table TABREF30 summarizes the domains and statistics for these datasets. Across all datasets, we follow the existing work BIBREF3, BIBREF17 to perform preprocessing to ensure they are in a $t$-core fashion, i.e., the datasets only include users and items that have at least $t$ reviews. In our experiments, we evaluate the two cases of $t=5$ and $t=10$. For the Yelp dataset, we follow BIBREF3 to focus on restaurants in the AZ metropolitan area. For each dataset, we randomly split the user–item pairs into $80\\%$ training set, $10\\%$ validation set, and $10\\%$ testing set. When learning the representations for users and items, we only use their reviews from the training set, and none from the validation and testing sets. This ensures a practical scenario where we cannot include any future reviews into a user's (item's) history for model training.",
+        "start_byte": 24154,
+        "end_byte": 25195
+      }
+    }
+  ]
+}

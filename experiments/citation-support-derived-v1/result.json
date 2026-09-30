@@ -1,0 +1,61 @@
+{
+  "status": "paired_local_repair_evaluated",
+  "rows": [
+    {
+      "id": "a",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C3": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.33,
+            "probabilities": {
+              "supported": 0.44,
+              "insufficient": 0.56,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 673,
+          "output_tokens": 48
+        }
+      },
+      "journal_sha256": "c83f8b36620edb328f3c04b18bfb714121eb7abfae227b87225c9caf5918cc70",
+      "elapsed_seconds": 0.478
+    },
+    {
+      "id": "b",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.26,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.51,
+              "insufficient": 0.49
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 760,
+          "output_tokens": 45
+        }
+      },
+      "journal_sha256": "698744c7c565af99727c2a26e7f15993d3d6a386aaf6d94d233360666c6c057f",
+      "elapsed_seconds": 0.475
+    }
+  ],
+  "quote_bytes_before": 4503,
+  "quote_bytes_after": 4811,
+  "quote_uses_before": 6,
+  "quote_uses_after": 9,
+  "http_calls": 2,
+  "total_tokens": 1526,
+  "finding": "Original insufficient; derived supported, but near-tied provider probabilities. No conclusive semantic validation or general promotion.",
+  "adjudication": "not_performed"
+}
