@@ -1,0 +1,12 @@
+{
+  "candidate_sha256": "0932eb7e83dafc28f82b86eb1166c45111048c375f863c7031e6014db1f4f266",
+  "response_sha256": "b2f82e9c42827c1664817851ba73a193f5bdc913a656ab07236a441b8313335f",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "expected": {
+    "R1": "covered",
+    "R2": "covered",
+    "R3": "covered",
+    "R4": "covered"
+  },
+  "max_calls": 1
+}

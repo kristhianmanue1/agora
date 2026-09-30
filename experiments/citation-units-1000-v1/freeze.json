@@ -1,0 +1,31 @@
+{
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "question": "What datasets are used for training and testing?",
+  "baseline_head": "026f91da4cf56c0b750599384228531e0fb667c3",
+  "source_bytes": 34003,
+  "condition": {
+    "max_unit_bytes": 1000,
+    "previous_max_unit_bytes": 4096,
+    "unit_count": 59,
+    "source_reading": "full",
+    "max_quotes_per_part": 12,
+    "max_quote_bytes_per_part": 12000,
+    "generation_tokens": 4096,
+    "review_tokens": 2048,
+    "model": "glm-5.3-flash",
+    "timeout_seconds": 90,
+    "retries": 0,
+    "max_http_calls": 2
+  },
+  "expected": {
+    "R1": "covered",
+    "R2": "covered",
+    "R3": "covered",
+    "R4": "covered"
+  },
+  "expected_origin": "Producer expectation from unchanged rubric and previous candidate; known development case, not held-out.",
+  "success": "Unmodified generated candidate passes existing structural validation and all four rubric requirements; report fidelity separately.",
+  "stop_rule": "No retry or response repair. If generation fails, skip review. No default changes.",
+  "risk": "Smaller units can split relevant context and require more citations; quote-count limit remains binding. Byte bound is conditional on satisfying 12 occurrence limit; not a semantic guarantee."
+}

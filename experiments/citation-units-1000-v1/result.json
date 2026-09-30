@@ -1,0 +1,36 @@
+{
+  "status": "generation_rejected",
+  "http_calls": 1,
+  "review_calls": 0,
+  "response": {
+    "content": "",
+    "finish_reason": "length",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 4096,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4096
+      },
+      "prompt_tokens": 9331,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 13427
+    },
+    "response_id": "202610010236408107266e588e41a4"
+  },
+  "diagnostics": [
+    {
+      "code": "generation_incomplete"
+    }
+  ],
+  "receipt": {
+    "status": "returned",
+    "http_attempts": 1,
+    "elapsed_seconds": 64.096
+  },
+  "candidate_sha256": "6798979492ce99b40e18c34e0adad058878017017a02d2c0f853ebefc0fdb813",
+  "conclusion": "No final output: finish_reason length, all 4096 completion tokens reported as reasoning. Cannot evaluate citation compliance or coverage. No default change.",
+  "next_condition": "../citation-grouping-v1"
+}

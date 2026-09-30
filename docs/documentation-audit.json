@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 162,
-  "bytes": 802673,
+  "documents": 164,
+  "bytes": 808131,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "b77321267ba02f2d685a9513e8324e0973dc6857420d103b4bf6206467ba40e8",
-      "bytes": 20583,
+      "sha256": "8e4eaf1b00827c0376651ff05d20f5271c2ffa440cb23ff4ac7554ec969cb3ad",
+      "bytes": 21244,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -712,6 +712,10 @@
         },
         {
           "target": "../experiments/rubric-candidates-derived-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/citation-grouping-v1/README.md",
           "exists": true
         }
       ],
@@ -1205,6 +1209,32 @@
       "bytes": 5342,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/citation-grouping-v1/README.md",
+      "sha256": "9d6c87a0f0629d14eb8b5b0733fcda920ea2ce1ad2e9c23c2773b1605c492c49",
+      "bytes": 3404,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../citation-units-1000-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/citation-units-1000-v1/README.md",
+      "sha256": "1954ffa1dcdd1cbf56bf2c736ad405dd1dd994570607953f1dcffa4df9969463",
+      "bytes": 1393,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../citation-grouping-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

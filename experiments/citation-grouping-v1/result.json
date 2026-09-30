@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "structural_validity": "complete",
+  "candidate_repaired": false,
+  "quote_uses": 5,
+  "quote_bytes": 6824,
+  "per_part_limit": 12000,
+  "rubric_labels": {
+    "R1": "covered",
+    "R2": "covered",
+    "R3": "covered",
+    "R4": "covered"
+  },
+  "matches_expected": true,
+  "model_status": "partial",
+  "model_missing": [
+    "The passages do not specify how the benchmark datasets were split into training and testing sets (e.g., train/test split proportions or whether the model was fine-tuned/trained on the same benchmark datasets used for evaluation)."
+  ],
+  "generation_response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The performance of the proposed hybrid (RCNN-RoBERTa) architecture is tested on four benchmark datasets containing ironic, sarcastic and metaphoric expressions.\",\"evidence_ids\":[\"ev_9f9a1f82248d3aabcf75f9b2\",\"ev_ec5465276095d4c61a5f4e00\"]},{\"text\":\"The evaluation datasets are: the dataset provided in 'Semantic Evaluation Workshop Task 3' (SemEval-2018) containing ironic tweets; Riloff's high quality sarcastic unbalanced dataset; a large dataset containing political comments from Reddit; and a sentiment analysis dataset containing tweets with various figurative language forms from 'SemEval-2015 Task 11'.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\"]},{\"text\":\"All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except the 'SemEval-2015 Task 11' dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\"]},{\"text\":\"Table TABREF14 presents results on the ironic SemEval-2018 Task 3.A dataset, Tables TABREF15 and TABREF16 summarize results on the sarcastic datasets (Reddit SARC politics and Riloff Twitter), and Table TABREF17 presents results on the SemEval 2015 Task 11 figurative-language sentiment analysis task.\",\"evidence_ids\":[\"ev_92954702e6156d889ae0607f\"]}],\"missing\":[\"The passages do not specify how the benchmark datasets were split into training and testing sets (e.g., train/test split proportions or whether the model was fine-tuned/trained on the same benchmark datasets used for evaluation).\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 1394,
+      "completion_tokens_details": {
+        "reasoning_tokens": 965
+      },
+      "prompt_tokens": 8748,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 10142
+    },
+    "response_id": "20261001023853277d1a2420184127"
+  },
+  "review_response": {
+    "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"},{\"id\":\"R4\",\"status\":\"covered\"}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 306,
+      "completion_tokens_details": {
+        "reasoning_tokens": 264
+      },
+      "prompt_tokens": 3785,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      },
+      "total_tokens": 4091
+    },
+    "response_id": "20261001023929dce3c427415040da"
+  },
+  "candidate_sha256": "0932eb7e83dafc28f82b86eb1166c45111048c375f863c7031e6014db1f4f266",
+  "review_result_sha256": "55448780170f83b7efc3d9759da416d9ba986b03f9f7057a3967110a01f1787d",
+  "effective_request_sha256": "61defc0f408b2bef8447022db090c6e92065b5e6e970bb0f82b436c105cbdc49",
+  "calls": 2,
+  "tokens": 14233,
+  "elapsed_seconds": 26.425,
+  "disposition": "requires_review",
+  "rubric_completeness": "not_established",
+  "all_conditions_calls": 3,
+  "all_conditions_tokens": 27660,
+  "all_conditions_seconds": 90.521,
+  "limits": "One development case, same-provider generator/reviewer, no semantic fidelity adjudication. Full-source reading; no savings conclusion. Previous failed condition retained. Product defaults unchanged."
+}

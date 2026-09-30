@@ -168,3 +168,13 @@ del productor. Tres llamadas contando generación, 18.963 tokens. Original recha
 intacto: éxito asistido, no autónomo. Próxima prioridad: generación que respete el
 presupuesto de citas, seguida de comparación lectura selectiva/completa en otro caso
 reservado. Sin evidencia todavía de ahorro o exhaustividad global.
+
+## Generación sin reparación: primera condición favorable
+
+[Agrupación de hechos con evidencia compartida](../experiments/citation-grouping-v1/README.md):
+candidato intacto válido, cinco usos de citas y 6.824 bytes; R1–R4 cubiertos según
+`review-rubric`. Sin cambios de límites ni defaults. La condición previa de unidades
+de 1.000 bytes agotó la salida y quedó rechazada; se conserva. Ambas condiciones:
+tres llamadas y 27.660 tokens. No acredita fiabilidad general, fidelidad independiente
+ni ahorro de lectura. Siguiente contraste: dos documentos reservados, antes de
+incorporar la instrucción a producto y comparar lectura selectiva/completa.
