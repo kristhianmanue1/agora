@@ -1,0 +1,148 @@
+{
+  "1803.08419": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "Only weak correlation is covered; BLEU reference diversity and embedding compositionality limitations are omitted and their paragraph is absent from equal context."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Covers weak correlation, many ground-truth responses for BLEU and insufficient embedding compositionality; agrees with two reference answers. Other annotation varies in detail."
+    }
+  },
+  "1911.01940": {
+    "equal": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Explicit yes, all hidden layers with dynamic weights; both benchmark answers are yes."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Explicit yes, all hidden layers with dynamic weights; both benchmark answers are yes."
+    }
+  },
+  "1802.03052": {
+    "equal": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Defines lexical overlap as shared words, as both references do."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Defines lexical overlap as shared words, as both references do."
+    }
+  },
+  "2003.11531": {
+    "equal": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Names Span-Attribute Tagging (SAT), matching both references."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Names Span-Attribute Tagging (SAT), matching both references."
+    }
+  },
+  "1909.04251": {
+    "equal": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Explicit human evaluation, matching all three yes references."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Explicit human evaluation, matching all three yes references."
+    }
+  },
+  "1707.06875": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "Lists word-overlap metrics but omits Semantic Text Similarity and readability metrics; defining paragraphs absent. Parsing score partly covered."
+    },
+    "shared": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap",
+        "generation_omission"
+      ],
+      "rationale": "Lists word-overlap metrics only; defining paragraphs for other metric groups absent. Parsing score is present in delivered conclusion but not supplied as an answer metric."
+    }
+  },
+  "1909.11706": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "Abstains relative to supplied passages; numeric SVM/RF comparison absent there but present in full source. Both references say SVM."
+    },
+    "shared": {
+      "coverage": "adequate",
+      "contributing_factors": [],
+      "rationale": "Names SVM and reports both comparisons supporting the reference answer."
+    }
+  },
+  "1909.13466": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "No training sizes in delivered passages. Full source supplies 219,777; 114,243; 89,413; over 5M. One free-form reference incorrectly says 291k; source and extractive annotation support 219,777."
+    },
+    "shared": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "No training sizes in delivered passages. Full source supplies 219,777; 114,243; 89,413; over 5M. One free-form reference incorrectly says 291k; source and extractive annotation support 219,777."
+    }
+  },
+  "2004.02214": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "Names of Chinese and English absent from delivered passages, present in source and all references."
+    },
+    "shared": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "retrieval_gap"
+      ],
+      "rationale": "Names of Chinese and English absent from delivered passages, present in source and all references."
+    }
+  },
+  "1909.02322": {
+    "equal": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "question_ambiguity",
+        "retrieval_gap",
+        "generation_omission",
+        "reviewer_completeness_discrepancy"
+      ],
+      "rationale": "References target architecture identity: Condense-Abstract / BiLSTM / LSTM. Candidate answers training procedure. Framework identity is present in context (headings in equal; explicit introduction in shared), but architecture details absent. Jev complete on equal conflicts with reference intent; raw label retained."
+    },
+    "shared": {
+      "coverage": "incomplete",
+      "contributing_factors": [
+        "question_ambiguity",
+        "retrieval_gap",
+        "generation_omission"
+      ],
+      "rationale": "References target architecture identity: Condense-Abstract / BiLSTM / LSTM. Candidate answers training procedure. Framework identity is present in context (headings in equal; explicit introduction in shared), but architecture details absent. Jev complete on equal conflicts with reference intent; raw label retained."
+    }
+  }
+}

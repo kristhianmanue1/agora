@@ -1,0 +1,1555 @@
+{
+  "schema": "agora/producer-reference-audit/v1",
+  "method": "Producer semantic comparison with external annotations and source evidence; not official QASPER score, independent adjudication or complete claim-fidelity audit",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "protected_input_hashes": {
+    "experiments/retrieval-answer-ids-v1/result.json": "db2ca9de7890d830da5adc9a54a931522326d8ee7112cdd050d63801a820cff9",
+    "experiments/retrieval-answer-ids-v1/validation.json": "81e9b456026df97c3265e564335d72620812725754a34f54e8b7f4195f9af8a4",
+    "experiments/retrieval-answer-ids-v1/inputs/review-02/cases.json": "ba459582290c107e5deae946e24d12706af2d0b7fb29a1fd09ba198ced1ecc43"
+  },
+  "summary": {
+    "candidates": 20,
+    "reference_answer_coverage": {
+      "incomplete": 10,
+      "adequate": 10
+    },
+    "jev_complete": 11,
+    "jev_complete_reference_incomplete": [
+      "i3dad0ea380"
+    ],
+    "by_method": {
+      "equal": {
+        "incomplete": 6,
+        "adequate": 4
+      },
+      "shared": {
+        "adequate": 6,
+        "incomplete": 4
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "ie8d03391aa",
+      "document_id": "1803.08419",
+      "method": "equal",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "references": [
+        {
+          "annotation_id": "1ac3ebcf2b3bf93ba00aa223fd33bef6ed493a80",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "perplexity and BLEU score are not good enough and correlate very weakly with human judgments",
+              "word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses",
+              "metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "8bf54cd3b3961f6274c0ac935831c32c4e28e9db",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "The metrics correlate very weakly with human judgements, word-overlap metrics require too many ground-truth reposnses and embedding-based metrics are insufficiently complex for modeling sentence-level compositionality in dialogue",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "d5636a22c955dfd4226efab5af79a44f71d84adf",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "As there can be multiple correct output utterances for a given input utterance there is no quantitative way to evaluate how well a model is performing.",
+              "The current evaluation methods like perplexity and BLEU score are not good enough and correlate very weakly with human judgments. ",
+              "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses."
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c7da02fa0ea9b9e9ce2f56c25ffa4b8b1e9f63838df35d78d8d3fa303c70571e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "1d8ed2e55444b2acf7701959da8e980ae6ff682032fec5bc2f66e704f8736c9e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "Only weak correlation is covered; BLEU reference diversity and embedding compositionality limitations are omitted and their paragraph is absent from equal context."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "07a48f4efd53780e857abdc25b3a89b03293de0c81775c9d69da7f47f164f97f"
+    },
+    {
+      "id": "i51a73f157c",
+      "document_id": "1803.08419",
+      "method": "shared",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "references": [
+        {
+          "annotation_id": "1ac3ebcf2b3bf93ba00aa223fd33bef6ed493a80",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "perplexity and BLEU score are not good enough and correlate very weakly with human judgments",
+              "word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses",
+              "metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "8bf54cd3b3961f6274c0ac935831c32c4e28e9db",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "The metrics correlate very weakly with human judgements, word-overlap metrics require too many ground-truth reposnses and embedding-based metrics are insufficiently complex for modeling sentence-level compositionality in dialogue",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "d5636a22c955dfd4226efab5af79a44f71d84adf",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "As there can be multiple correct output utterances for a given input utterance there is no quantitative way to evaluate how well a model is performing.",
+              "The current evaluation methods like perplexity and BLEU score are not good enough and correlate very weakly with human judgments. ",
+              "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses."
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "c7da02fa0ea9b9e9ce2f56c25ffa4b8b1e9f63838df35d78d8d3fa303c70571e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "1d8ed2e55444b2acf7701959da8e980ae6ff682032fec5bc2f66e704f8736c9e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Covers weak correlation, many ground-truth responses for BLEU and insufficient embedding compositionality; agrees with two reference answers. Other annotation varies in detail."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "5a84d97947a9c197bf93ff84aa2500a7f6d682b11b02d771f96b330d24fed6f7"
+    },
+    {
+      "id": "icb4ed86447",
+      "document_id": "1707.06875",
+      "method": "equal",
+      "question": "Which metrics were considered?",
+      "references": [
+        {
+          "annotation_id": "22151549daa1d4bd10f804e006ebd446ab8692b3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter",
+              "bleu ",
+              "rouge ",
+              "nist",
+              "lepor",
+              "cider",
+              "meteor",
+              "Semantic Text Similarity",
+              " Flesch Reading Ease ",
+              "characters per utterance (len) and per word (cpw)",
+              "words per sentence",
+              "syllables per sentence (sps) and per word (spw)",
+              "polysyllabic words per utterance (pol) and per word (ppw)",
+              "the number of misspellings (msp) and the parsing score as returned by the Stanford parser (prs)"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25f11c84fef43bf861273242ff29118f17ff0cb5c6a05de07d20f4affdccc38f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "c11d736987852f423ea2aa1b566dbc889ce9052c3c11d3a44431abbed08891b8",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "832fbf8fcc86e7ac5b58da0237530c1dab2b7a59",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter",
+              "bleu",
+              "rouge",
+              "nist",
+              "lepor",
+              "cider",
+              "meteor",
+              "Semantic Similarity (sim)",
+              "readability and grammaticality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "d77586cb751ef93da9f8b6b91ec0600b8359272f75480fe7cb5123db3caa186a",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "be89ffc0e120f77895c77f05e077140becdb5347",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter BIBREF18 , bleu BIBREF0 , rouge BIBREF19 , nist BIBREF20 , lepor BIBREF21 , cider BIBREF22 , and meteor BIBREF23",
+              "Semantic Similarity (sim)",
+              "readability and grammaticality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "d77586cb751ef93da9f8b6b91ec0600b8359272f75480fe7cb5123db3caa186a",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "Lists word-overlap metrics but omits Semantic Text Similarity and readability metrics; defining paragraphs absent. Parsing score partly covered."
+      },
+      "jev_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "97255f7a80f17f43c333d1acd2642672fa7c45b3d8054013c48e4aaacc82f1a0"
+    },
+    {
+      "id": "i09a43e0dc0",
+      "document_id": "1707.06875",
+      "method": "shared",
+      "question": "Which metrics were considered?",
+      "references": [
+        {
+          "annotation_id": "22151549daa1d4bd10f804e006ebd446ab8692b3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter",
+              "bleu ",
+              "rouge ",
+              "nist",
+              "lepor",
+              "cider",
+              "meteor",
+              "Semantic Text Similarity",
+              " Flesch Reading Ease ",
+              "characters per utterance (len) and per word (cpw)",
+              "words per sentence",
+              "syllables per sentence (sps) and per word (spw)",
+              "polysyllabic words per utterance (pol) and per word (ppw)",
+              "the number of misspellings (msp) and the parsing score as returned by the Stanford parser (prs)"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25f11c84fef43bf861273242ff29118f17ff0cb5c6a05de07d20f4affdccc38f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "c11d736987852f423ea2aa1b566dbc889ce9052c3c11d3a44431abbed08891b8",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "832fbf8fcc86e7ac5b58da0237530c1dab2b7a59",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter",
+              "bleu",
+              "rouge",
+              "nist",
+              "lepor",
+              "cider",
+              "meteor",
+              "Semantic Similarity (sim)",
+              "readability and grammaticality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "d77586cb751ef93da9f8b6b91ec0600b8359272f75480fe7cb5123db3caa186a",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "be89ffc0e120f77895c77f05e077140becdb5347",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "ter BIBREF18 , bleu BIBREF0 , rouge BIBREF19 , nist BIBREF20 , lepor BIBREF21 , cider BIBREF22 , and meteor BIBREF23",
+              "Semantic Similarity (sim)",
+              "readability and grammaticality"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "9a42949395f4f0f902af81245277ca7cf25fae92758b99bfa4f62a993ced7e6e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "c6b42305f96feb3d70cd7a7bbab90fd230982db480c8aa02f74370ce62a73d2f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "d77586cb751ef93da9f8b6b91ec0600b8359272f75480fe7cb5123db3caa186a",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap",
+          "generation_omission"
+        ],
+        "rationale": "Lists word-overlap metrics only; defining paragraphs for other metric groups absent. Parsing score is present in delivered conclusion but not supplied as an answer metric."
+      },
+      "jev_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "360c38a214bfda6e7004e86d25410db053922a086159357156e5192ff0fcf591"
+    },
+    {
+      "id": "ie61b2e0e3e",
+      "document_id": "1911.01940",
+      "method": "shared",
+      "question": "Do they use all the hidden layer representations?",
+      "references": [
+        {
+          "annotation_id": "5252422626825aa80db200d76a25d57fe97791db",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f0c987dac50afa397393ed25813f67c071fac40607167e1845217cedd7ca0a53",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "9a1809d77dde373adc81195da44c85a3f3ddeb9d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "3e9811b1000e0d6c3b4031361ffca09be4f524f975f863eb61c6512fd2bf5178",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "15ccce388d8e724dca54d41204a5f920a259a429608a2efeff7e6cd288cb7c2b",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Explicit yes, all hidden layers with dynamic weights; both benchmark answers are yes."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "5430e51a80208fc48ee3beda304b2560f78946216d39e5be625d7ade496496da"
+    },
+    {
+      "id": "i6a4ee200b4",
+      "document_id": "1911.01940",
+      "method": "equal",
+      "question": "Do they use all the hidden layer representations?",
+      "references": [
+        {
+          "annotation_id": "5252422626825aa80db200d76a25d57fe97791db",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f0c987dac50afa397393ed25813f67c071fac40607167e1845217cedd7ca0a53",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "9a1809d77dde373adc81195da44c85a3f3ddeb9d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "3e9811b1000e0d6c3b4031361ffca09be4f524f975f863eb61c6512fd2bf5178",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "15ccce388d8e724dca54d41204a5f920a259a429608a2efeff7e6cd288cb7c2b",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Explicit yes, all hidden layers with dynamic weights; both benchmark answers are yes."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "e1093d2f87c6ec2710a2437b25c10b1142e714a374343214f0753790ea26950c"
+    },
+    {
+      "id": "i8505716ef3",
+      "document_id": "1909.11706",
+      "method": "equal",
+      "question": "which had better results, the svm or the random forest model?",
+      "references": [
+        {
+          "annotation_id": "55fda8f9472d52e9ab8e38594d8884478dd17cec",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "SVM",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f3cec39055d308019329c5ab6960bda9f10ecaf3c3a51693d8308084a1d37b4f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "6f7d45e25190499feba7c660801b384e76ea8bc7",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "SVM",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f3cec39055d308019329c5ab6960bda9f10ecaf3c3a51693d8308084a1d37b4f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "Abstains relative to supplied passages; numeric SVM/RF comparison absent there but present in full source. Both references say SVM."
+      },
+      "jev_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "55ab97f87f4649b8f8d01117860e07ad5fb3a29ada033b8b0ffe5bb60215f6a4"
+    },
+    {
+      "id": "ib0b9f18321",
+      "document_id": "1909.11706",
+      "method": "shared",
+      "question": "which had better results, the svm or the random forest model?",
+      "references": [
+        {
+          "annotation_id": "55fda8f9472d52e9ab8e38594d8884478dd17cec",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "SVM",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f3cec39055d308019329c5ab6960bda9f10ecaf3c3a51693d8308084a1d37b4f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "6f7d45e25190499feba7c660801b384e76ea8bc7",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "SVM",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f3cec39055d308019329c5ab6960bda9f10ecaf3c3a51693d8308084a1d37b4f",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Names SVM and reports both comparisons supporting the reference answer."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "55f0e66c70ab411e8565ceec2adf882a6ae8ea22ab6c48364fb8a384e2a0d7c5"
+    },
+    {
+      "id": "i0e742dfa15",
+      "document_id": "1802.03052",
+      "method": "shared",
+      "question": "What does it mean for sentences to be \"lexically overlapping\"?",
+      "references": [
+        {
+          "annotation_id": "065913f7e431e24847696e9fff2bf4e48136a4dd",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "They share words.",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "245fb08e753654c2d698d2a13438488b6974c4075ac36f84126cded9cce5ee98",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "22a425238e9554b3ffb8d17d26c84dfef8a18d27",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "share words"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "245fb08e753654c2d698d2a13438488b6974c4075ac36f84126cded9cce5ee98",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Defines lexical overlap as shared words, as both references do."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "03752e4a9a89d1d3b1b5066b9db918eb6e0c80de669e415690c39407d9774fe3"
+    },
+    {
+      "id": "i51dcd2bd0f",
+      "document_id": "1802.03052",
+      "method": "equal",
+      "question": "What does it mean for sentences to be \"lexically overlapping\"?",
+      "references": [
+        {
+          "annotation_id": "065913f7e431e24847696e9fff2bf4e48136a4dd",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "They share words.",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "245fb08e753654c2d698d2a13438488b6974c4075ac36f84126cded9cce5ee98",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "22a425238e9554b3ffb8d17d26c84dfef8a18d27",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "share words"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "245fb08e753654c2d698d2a13438488b6974c4075ac36f84126cded9cce5ee98",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Defines lexical overlap as shared words, as both references do."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "fa148fb83203f4466546aaa5661ef1c3392175a1e74cad442a09b6f6dd02325a"
+    },
+    {
+      "id": "i1e29c734e8",
+      "document_id": "2003.11531",
+      "method": "equal",
+      "question": "What state-of-the-art tagging model did they use?",
+      "references": [
+        {
+          "annotation_id": "27348466331d6f81a6b08d3e2c72bf08faece73c",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "the Span-Attribute Tagging (SAT) model"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "4ca32085dcbff9efa3225c6e3e463f9a78da4b9267568819087d787ff1179a68",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "ca2c808ce8feba92943ebe99a3db77f04e76762f",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "Span-Attribute Tagging (SAT) model"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "67e722bf9a2b672aaa1a4e2eea263254e48a7663e23d0832905c28b13b10132e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Names Span-Attribute Tagging (SAT), matching both references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "2aeab199f89ea03bcf0c216942d7cd849bd3623b5c6fe22ab85c6866d1b3db48"
+    },
+    {
+      "id": "ieef161c272",
+      "document_id": "2003.11531",
+      "method": "shared",
+      "question": "What state-of-the-art tagging model did they use?",
+      "references": [
+        {
+          "annotation_id": "27348466331d6f81a6b08d3e2c72bf08faece73c",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "the Span-Attribute Tagging (SAT) model"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "4ca32085dcbff9efa3225c6e3e463f9a78da4b9267568819087d787ff1179a68",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "ca2c808ce8feba92943ebe99a3db77f04e76762f",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "Span-Attribute Tagging (SAT) model"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "67e722bf9a2b672aaa1a4e2eea263254e48a7663e23d0832905c28b13b10132e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Names Span-Attribute Tagging (SAT), matching both references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "20437b2ddd6c792462540d01bce0d1a853dde68fe5dc5cdd83aee3aa2635bced"
+    },
+    {
+      "id": "ib74d2ea638",
+      "document_id": "1909.13466",
+      "method": "shared",
+      "question": "What training set sizes do they use?",
+      "references": [
+        {
+          "annotation_id": "289275f8e2fec74f7759a034b021db5661418d2c",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "219,777",
+              "114,243",
+              "89,413",
+              "over 5M "
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "daf69ebbb0307fe9c7a4fde447f9515d613c9db52e983ea7be8da1b91c8e5246",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "38f5e6977679f827c011a96a08d8ec9e19ac81a9cdd3abca896f5ac4c865bf3d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "b181641fe2ddedb160337f49bb21a56d2e825ddba7f5bb7c127b0d452542f0be",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25841c7e437e90490355d700855ad1b146636e62f340bd39f1c6a7268ca78540",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "16f7c0be1a875334fab92b1fdd8e893ed4b5490ee1b68e99f2b651c20b3806e6",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "65d132c5d922c2b17eae797131a5d7a4ba0932e7",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "89k, 114k, 291k, 5M",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "daf69ebbb0307fe9c7a4fde447f9515d613c9db52e983ea7be8da1b91c8e5246",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "38f5e6977679f827c011a96a08d8ec9e19ac81a9cdd3abca896f5ac4c865bf3d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "b181641fe2ddedb160337f49bb21a56d2e825ddba7f5bb7c127b0d452542f0be",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25841c7e437e90490355d700855ad1b146636e62f340bd39f1c6a7268ca78540",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "16f7c0be1a875334fab92b1fdd8e893ed4b5490ee1b68e99f2b651c20b3806e6",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "No training sizes in delivered passages. Full source supplies 219,777; 114,243; 89,413; over 5M. One free-form reference incorrectly says 291k; source and extractive annotation support 219,777."
+      },
+      "jev_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "c0f7b65bc0ba49194c1185db39714884ca5261ff2824f3dcf7c24581e17309f4"
+    },
+    {
+      "id": "i14996e77e3",
+      "document_id": "1909.13466",
+      "method": "equal",
+      "question": "What training set sizes do they use?",
+      "references": [
+        {
+          "annotation_id": "289275f8e2fec74f7759a034b021db5661418d2c",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "219,777",
+              "114,243",
+              "89,413",
+              "over 5M "
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "daf69ebbb0307fe9c7a4fde447f9515d613c9db52e983ea7be8da1b91c8e5246",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "38f5e6977679f827c011a96a08d8ec9e19ac81a9cdd3abca896f5ac4c865bf3d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "b181641fe2ddedb160337f49bb21a56d2e825ddba7f5bb7c127b0d452542f0be",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25841c7e437e90490355d700855ad1b146636e62f340bd39f1c6a7268ca78540",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "16f7c0be1a875334fab92b1fdd8e893ed4b5490ee1b68e99f2b651c20b3806e6",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "65d132c5d922c2b17eae797131a5d7a4ba0932e7",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "89k, 114k, 291k, 5M",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "daf69ebbb0307fe9c7a4fde447f9515d613c9db52e983ea7be8da1b91c8e5246",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "38f5e6977679f827c011a96a08d8ec9e19ac81a9cdd3abca896f5ac4c865bf3d",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "b181641fe2ddedb160337f49bb21a56d2e825ddba7f5bb7c127b0d452542f0be",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "25841c7e437e90490355d700855ad1b146636e62f340bd39f1c6a7268ca78540",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "16f7c0be1a875334fab92b1fdd8e893ed4b5490ee1b68e99f2b651c20b3806e6",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "No training sizes in delivered passages. Full source supplies 219,777; 114,243; 89,413; over 5M. One free-form reference incorrectly says 291k; source and extractive annotation support 219,777."
+      },
+      "jev_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "a3101162d11fcdd3057d7d6a3ffbbbcfeb4760bec2af2eb1aaf06b72a2dbf18c"
+    },
+    {
+      "id": "i3dad0ea380",
+      "document_id": "1909.02322",
+      "method": "equal",
+      "question": "What is the model trained?",
+      "references": [
+        {
+          "annotation_id": "b5e0c1d93bf6d76bfb728b99b03a7eba52a3fd60",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "Condense-Abstract Framework, consisting of BiLSTM autoencoder and LSTM decoder with attention.",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "28f7fabf7e3ac4e2b5afa9c024f1dcc6aa5d682904834288c145a3ca3478af1e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "f4d2abf7f2701646c2947f7df5373c672668f502edcbce903da35f6dd19c66ee",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "cbe73220a2154f2aaa6cd9f9dd5490ea450f05413782bb2cb704997e39f4ddc4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "ec670256d13dfe5c44aa16315f816b03b7ffe456",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "BiLSTM autoencoder as the Condense model",
+              "simple LSTM decoder enhanced with attention BIBREF14 and copy mechanisms BIBREF32"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "28f7fabf7e3ac4e2b5afa9c024f1dcc6aa5d682904834288c145a3ca3478af1e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "f4d2abf7f2701646c2947f7df5373c672668f502edcbce903da35f6dd19c66ee",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "67aabebb51c62d221396fc68a1a639ab216b6d82ae6e75d6732402741f9ab58b",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "cbe73220a2154f2aaa6cd9f9dd5490ea450f05413782bb2cb704997e39f4ddc4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "question_ambiguity",
+          "retrieval_gap",
+          "generation_omission",
+          "reviewer_completeness_discrepancy"
+        ],
+        "rationale": "References target architecture identity: Condense-Abstract / BiLSTM / LSTM. Candidate answers training procedure. Framework identity is present in context (headings in equal; explicit introduction in shared), but architecture details absent. Jev complete on equal conflicts with reference intent; raw label retained."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "1deaa424ee03db35157f2ffeff37c1ef8b4028aaa79ced7f2cc25e74703af701"
+    },
+    {
+      "id": "i9f739e573d",
+      "document_id": "1909.02322",
+      "method": "shared",
+      "question": "What is the model trained?",
+      "references": [
+        {
+          "annotation_id": "b5e0c1d93bf6d76bfb728b99b03a7eba52a3fd60",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "Condense-Abstract Framework, consisting of BiLSTM autoencoder and LSTM decoder with attention.",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "28f7fabf7e3ac4e2b5afa9c024f1dcc6aa5d682904834288c145a3ca3478af1e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "f4d2abf7f2701646c2947f7df5373c672668f502edcbce903da35f6dd19c66ee",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "cbe73220a2154f2aaa6cd9f9dd5490ea450f05413782bb2cb704997e39f4ddc4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "ec670256d13dfe5c44aa16315f816b03b7ffe456",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "BiLSTM autoencoder as the Condense model",
+              "simple LSTM decoder enhanced with attention BIBREF14 and copy mechanisms BIBREF32"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "28f7fabf7e3ac4e2b5afa9c024f1dcc6aa5d682904834288c145a3ca3478af1e",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "f4d2abf7f2701646c2947f7df5373c672668f502edcbce903da35f6dd19c66ee",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            },
+            {
+              "sha256": "67aabebb51c62d221396fc68a1a639ab216b6d82ae6e75d6732402741f9ab58b",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            },
+            {
+              "sha256": "cbe73220a2154f2aaa6cd9f9dd5490ea450f05413782bb2cb704997e39f4ddc4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "question_ambiguity",
+          "retrieval_gap",
+          "generation_omission"
+        ],
+        "rationale": "References target architecture identity: Condense-Abstract / BiLSTM / LSTM. Candidate answers training procedure. Framework identity is present in context (headings in equal; explicit introduction in shared), but architecture details absent. Jev complete on equal conflicts with reference intent; raw label retained."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "61159cce7eafc12964f660d348d321913113b3bd3b4eeaca9b9d89bc6c60c368"
+    },
+    {
+      "id": "i4d71002a7d",
+      "document_id": "2004.02214",
+      "method": "shared",
+      "question": "On what two languages is experimented on?",
+      "references": [
+        {
+          "annotation_id": "35cbe2695ec1bbfa9f3af7df29b823d75a6d95c3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "Chinese and English",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "9eef91715b10afbe6b78eca7bbe86dc761ae886b",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "Chinese",
+              "English"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "b3178f884cd117ab48bd087611f6922995832f7d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "English and Chinese",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "Names of Chinese and English absent from delivered passages, present in source and all references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "0cec27500c8de95580169a67234aa0341009ae0d2d3f22897ca2cfb6e9ae2a18"
+    },
+    {
+      "id": "id4f2ea8ca6",
+      "document_id": "2004.02214",
+      "method": "equal",
+      "question": "On what two languages is experimented on?",
+      "references": [
+        {
+          "annotation_id": "35cbe2695ec1bbfa9f3af7df29b823d75a6d95c3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "Chinese and English",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "9eef91715b10afbe6b78eca7bbe86dc761ae886b",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "",
+            "extractive_spans": [
+              "Chinese",
+              "English"
+            ]
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        },
+        {
+          "annotation_id": "b3178f884cd117ab48bd087611f6922995832f7d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": null,
+            "free_form_answer": "English and Chinese",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "448e116a2c0fd5eddb87626fcbeb431ef9c2103b81e5ac8b48a42c61a27503b4",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": false
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "incomplete",
+        "contributing_factors": [
+          "retrieval_gap"
+        ],
+        "rationale": "Names of Chinese and English absent from delivered passages, present in source and all references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "omitted"
+      },
+      "candidate_sha256": "d9cc78099df5a913760471f11339d7965637d9b471e84624c248960e5d2c6d00"
+    },
+    {
+      "id": "i2dd6c8b2f2",
+      "document_id": "1909.04251",
+      "method": "equal",
+      "question": "Do humans assess the quality of the generated responses?",
+      "references": [
+        {
+          "annotation_id": "1dd207fb8b62a4d44310043c4f6d9716ae59539d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "614e5ad22f71740636465ee1c92d4acc9ff71d78",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "915b3790c00e945b6650352589bee13299c8fef3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Explicit human evaluation, matching all three yes references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "07af9e009af22ca22cf24de1f8859a2372d6702312c6f596ca549e8d3a240ce5"
+    },
+    {
+      "id": "if868d792ac",
+      "document_id": "1909.04251",
+      "method": "shared",
+      "question": "Do humans assess the quality of the generated responses?",
+      "references": [
+        {
+          "annotation_id": "1dd207fb8b62a4d44310043c4f6d9716ae59539d",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "614e5ad22f71740636465ee1c92d4acc9ff71d78",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        },
+        {
+          "annotation_id": "915b3790c00e945b6650352589bee13299c8fef3",
+          "answer": {
+            "unanswerable": false,
+            "yes_no": true,
+            "free_form_answer": "",
+            "extractive_spans": []
+          },
+          "evidence_checks": [
+            {
+              "sha256": "f34c388089679edd08fa9f4bcdd76cbcc070096bd1b308e5619d4d41c233d5d7",
+              "literal_in_full_source": true,
+              "literal_in_delivered_span": true
+            }
+          ]
+        }
+      ],
+      "producer_assessment": {
+        "coverage": "adequate",
+        "contributing_factors": [],
+        "rationale": "Explicit human evaluation, matching all three yes references."
+      },
+      "jev_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "candidate_sha256": "dd92b26da91d2f2f5039697fd4b94b055c349a37a1195678261bfda7bc912290"
+    }
+  ]
+}
