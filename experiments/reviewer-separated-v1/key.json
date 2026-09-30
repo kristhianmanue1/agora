@@ -1,0 +1,250 @@
+{
+  "original_keys": [
+    {
+      "id": "see7f153be5",
+      "original_id": "i8505716ef3",
+      "document_id": "1909.11706",
+      "method": "equal",
+      "group": "scoped_abstention",
+      "previous_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "omitted"
+    },
+    {
+      "id": "s854ef6aa31",
+      "original_id": "i14996e77e3",
+      "document_id": "1909.13466",
+      "method": "equal",
+      "group": "scoped_abstention",
+      "previous_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "omitted"
+    },
+    {
+      "id": "sd246eeadca",
+      "original_id": "ib74d2ea638",
+      "document_id": "1909.13466",
+      "method": "shared",
+      "group": "scoped_abstention",
+      "previous_labels": {
+        "fidelity": "unsupported",
+        "coverage": "omitted"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "omitted"
+    },
+    {
+      "id": "sc92531d7e2",
+      "original_id": "i3dad0ea380",
+      "document_id": "1909.02322",
+      "method": "equal",
+      "group": "ambiguous_question",
+      "previous_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "expected_fidelity": null,
+      "expected_coverage": null
+    },
+    {
+      "id": "sd6c66f2581",
+      "original_id": "i9f739e573d",
+      "document_id": "1909.02322",
+      "method": "shared",
+      "group": "ambiguous_question",
+      "previous_labels": {
+        "fidelity": "supported",
+        "coverage": "omitted"
+      },
+      "expected_fidelity": null,
+      "expected_coverage": null
+    },
+    {
+      "id": "s7685ce10d6",
+      "original_id": "ib0b9f18321",
+      "document_id": "1909.11706",
+      "method": "shared",
+      "group": "positive",
+      "previous_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "complete"
+    },
+    {
+      "id": "seb2b729668",
+      "original_id": "i1e29c734e8",
+      "document_id": "2003.11531",
+      "method": "equal",
+      "group": "positive",
+      "previous_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "complete"
+    },
+    {
+      "id": "s8d4615b29f",
+      "original_id": "i51dcd2bd0f",
+      "document_id": "1802.03052",
+      "method": "equal",
+      "group": "positive",
+      "previous_labels": {
+        "fidelity": "supported",
+        "coverage": "complete"
+      },
+      "expected_fidelity": "supported",
+      "expected_coverage": "complete"
+    },
+    {
+      "id": "s529b34c978",
+      "original_id": "ib0b9f18321",
+      "document_id": "1909.11706",
+      "method": "shared",
+      "group": "false_absence",
+      "previous_labels": null,
+      "expected_fidelity": "unsupported",
+      "expected_coverage": "omitted"
+    },
+    {
+      "id": "s0a0d866088",
+      "original_id": "i1e29c734e8",
+      "document_id": "2003.11531",
+      "method": "equal",
+      "group": "false_claim",
+      "previous_labels": null,
+      "expected_fidelity": "unsupported",
+      "expected_coverage": "omitted"
+    }
+  ],
+  "mapping": [
+    {
+      "id": "r96d58ad8428c",
+      "original_id": "sd246eeadca",
+      "task_id": "t9735dbe1de0a",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r128c685259f2",
+      "original_id": "sd246eeadca",
+      "task_id": "t9735dbe1de0a",
+      "axis": "coverage"
+    },
+    {
+      "id": "rf54729de01ae",
+      "original_id": "s8d4615b29f",
+      "task_id": "tc1229e0d3e62",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r7b65c2b057ad",
+      "original_id": "s8d4615b29f",
+      "task_id": "tc1229e0d3e62",
+      "axis": "coverage"
+    },
+    {
+      "id": "r120e55277df4",
+      "original_id": "see7f153be5",
+      "task_id": "tfd389a6f42e7",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r1a40be80c646",
+      "original_id": "see7f153be5",
+      "task_id": "tfd389a6f42e7",
+      "axis": "coverage"
+    },
+    {
+      "id": "r8fa06b743ac4",
+      "original_id": "s7685ce10d6",
+      "task_id": "tfd389a6f42e7",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r1dae24110889",
+      "original_id": "s7685ce10d6",
+      "task_id": "tfd389a6f42e7",
+      "axis": "coverage"
+    },
+    {
+      "id": "ra2e5442c0573",
+      "original_id": "s854ef6aa31",
+      "task_id": "t9735dbe1de0a",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r88808bfe107d",
+      "original_id": "s854ef6aa31",
+      "task_id": "t9735dbe1de0a",
+      "axis": "coverage"
+    },
+    {
+      "id": "re23ccdda9753",
+      "original_id": "sd6c66f2581",
+      "task_id": "t65bd45325ca3",
+      "axis": "fidelity"
+    },
+    {
+      "id": "rb165824757c3",
+      "original_id": "sd6c66f2581",
+      "task_id": "t65bd45325ca3",
+      "axis": "coverage"
+    },
+    {
+      "id": "r0ef3bc515187",
+      "original_id": "sc92531d7e2",
+      "task_id": "t65bd45325ca3",
+      "axis": "fidelity"
+    },
+    {
+      "id": "rdd3318a9b449",
+      "original_id": "sc92531d7e2",
+      "task_id": "t65bd45325ca3",
+      "axis": "coverage"
+    },
+    {
+      "id": "r8881d68b0202",
+      "original_id": "s529b34c978",
+      "task_id": "tfd389a6f42e7",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r12caeb75a16b",
+      "original_id": "s529b34c978",
+      "task_id": "tfd389a6f42e7",
+      "axis": "coverage"
+    },
+    {
+      "id": "reee0b3530367",
+      "original_id": "s0a0d866088",
+      "task_id": "t00868749100a",
+      "axis": "fidelity"
+    },
+    {
+      "id": "r4e79f180ea7b",
+      "original_id": "s0a0d866088",
+      "task_id": "t00868749100a",
+      "axis": "coverage"
+    },
+    {
+      "id": "r03ee859b1fc5",
+      "original_id": "seb2b729668",
+      "task_id": "t00868749100a",
+      "axis": "fidelity"
+    },
+    {
+      "id": "radd4bb6712df",
+      "original_id": "seb2b729668",
+      "task_id": "t00868749100a",
+      "axis": "coverage"
+    }
+  ]
+}

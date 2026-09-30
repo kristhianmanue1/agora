@@ -1,0 +1,15 @@
+{
+  "code_head": "7ad49621c722f9ae69ff1ad73432881ab16d4d24",
+  "phase_hashes": {
+    "clarity": "3591cb157b2c9ff429ef4c7b728e09ece2296debb952d864e5209ded7e9cfc51",
+    "review": "fd0a45b0e968b122d9fe65416492d79b39d87b939f11cc534c0c884c0aafc756"
+  },
+  "original_result_sha256": "832a5ec1fdd3bf9c75e066cea72b7deec0bb9d023d897d0ef773b1dcf7ba03c3",
+  "max_calls": 25,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "model": "jev-1.13.0",
+  "selection": "Same ten candidates as explicit-scopes experiment; no new generation",
+  "aggregation": "If task interpretation is not clear, final disposition requires_clarification regardless of raw coverage. Raw reviews remain unchanged. Otherwise retain separate fidelity and coverage without automatic acceptance.",
+  "limits": "Development cases, producer expectations, one draw; historical comparison is confounded by prompt and time; no product activation"
+}

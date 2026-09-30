@@ -1,0 +1,12 @@
+import json,hashlib,importlib.util
+from pathlib import Path
+B=Path(__file__).resolve().parent;load=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();f=load(B/'freeze.json');key=load(B/'key.json');assert sha(B.parent/'reviewer-scopes-v1/result.json')==f['original_result_sha256'];spec=importlib.util.spec_from_file_location('review',B/'run.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);records={};usage=[]
+for phase in ('clarity','review'):
+ assert sha(B/'inputs'/phase/'cases.json')==f['phase_hashes'][phase]
+ for c in load(B/'inputs'/phase/'cases.json'):
+  r=load(B/f'runs-{phase}'/f"{c['id']}.json");assert r['request']==m.payload('jev',c)[1];records[c['id']]=r;u=r.get('response',{}).get('usage',{});usage.append(dict(id=c['id'],phase=phase,status=r['status'],input_tokens=u.get('input_tokens'),output_tokens=u.get('output_tokens'),elapsed_seconds=r['elapsed_seconds'],model=r.get('response',{}).get('model')))
+rows=[]
+for k in key['original_keys']:
+ refs=[x for x in key['mapping'] if x['original_id']==k['id']];tid=refs[0]['task_id'];clarity=records[tid].get('label');labels={x['axis']:records[x['id']].get('label') for x in refs};rows.append(dict(k,task_id=tid,interpretation=clarity,labels=labels,expected_pair_matches=all(labels[a]==k['expected_'+a] for a in ('fidelity','coverage')) if k['expected_fidelity'] is not None else None,disposition='requires_clarification' if clarity!='clear' else 'review_recorded_not_accepted'))
+axis_matches={a:sum(x['labels'][a]==x['expected_'+a] for x in rows if x['expected_'+a] is not None) for a in ('fidelity','coverage')}
+summary=dict(axis_matches=axis_matches,completed=sum(x['status']=='completed' for x in usage),expected_pairs=sum(x['expected_pair_matches'] is not None for x in rows),matching_pairs=sum(x['expected_pair_matches'] is True for x in rows),requires_clarification=sum(x['disposition']=='requires_clarification' for x in rows),input_tokens=sum(x['input_tokens'] or 0 for x in usage),output_tokens=sum(x['output_tokens'] or 0 for x in usage),elapsed_seconds=round(sum(x['elapsed_seconds'] for x in usage),3));(B/'result.json').write_text(json.dumps(dict(summary=summary,records=rows,calls=usage,runner_sha256_observed=sha(B/'run.py'),limits=f['limits']),ensure_ascii=False,indent=2)+'\n');print(json.dumps(summary));print(json.dumps([(x['group'],x['method'],x['interpretation'],x['labels']) for x in rows]))

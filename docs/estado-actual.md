@@ -81,3 +81,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Revisión con ámbitos explícitos: mejora parcial
 
 [Ensayo de diez revisiones](../experiments/reviewer-scopes-v1/README.md): una de tres abstenciones cambia correctamente a supported + omitted; dos siguen como unsupported. Tres controles positivos y dos negativos cumplen expectativas. Misma pregunta recibe etiquetas distintas de ambigüedad; aparece además ambiguous junto a omitted pese al criterio de uncertain. Diez llamadas Jev, 93.961 tokens, sin nueva generación. No promoción: siguiente ensayo propuesto separa revisión de pasajes y suficiencia global en llamadas distintas, y fija interpretación antes de candidatos.
+
+## Revisiones separadas: no adoptar el conjunto
+
+[Ensayo separado](../experiments/reviewer-separated-v1/README.md): fidelidad sobre pasajes cumple 8/8 expectativas del productor; suficiencia frente a fuente completa sólo 5/8 y califica tres abstenciones como completas. Claridad evaluada sin fuente marca cuatro de cinco preguntas ambiguas y deriva nueve candidatos; puede reflejar referentes ausentes por diseño. 25 llamadas Jev, 99.237 tokens, sin regeneración. No promoción. Próximo paso recomendado: contrastar suficiencia con otro revisor sobre candidatos conservados y resolver desacuerdos contra fuentes, evitando más ajustes de prompt sobre la misma muestra.
