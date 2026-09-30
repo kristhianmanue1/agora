@@ -1,0 +1,102 @@
+{
+  "status": "known_regression_passed",
+  "http_calls": 3,
+  "source_bytes": 34053,
+  "initial_reading_bytes": 5145,
+  "expanded_reading_bytes": 7213,
+  "total_tokens": 8186,
+  "elapsed_seconds": 33.064,
+  "quote_bytes": 3364,
+  "coverage": {
+    "R1": "covered",
+    "R2": "covered",
+    "R3": "covered"
+  },
+  "fidelity": {
+    "C1": "supported",
+    "C2": "supported",
+    "C3": "supported"
+  },
+  "generation_response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"They conducted experiments on 10 different datasets: 9 Amazon product review datasets for 9 different domains and the large-scale Yelp challenge dataset on restaurant reviews.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]},{\"text\":\"For the Yelp dataset they focus on restaurants in the AZ metropolitan area, and across all datasets they apply t-core preprocessing (evaluating t=5 and t=10) and randomly split user-item pairs into 80% training, 10% validation, and 10% testing sets.\",\"evidence_ids\":[\"ev_846a1bf95d25dfb997432c13\"]},{\"text\":\"One of the Amazon domains included is Automotive, which is excluded from the 10-core experimental setting because only very few users and items remain after applying the 10-core criterion to it.\",\"evidence_ids\":[\"ev_112d906af1cf2e7110ef0433\"]}],\"missing\":[]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 1560,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1332
+      },
+      "prompt_tokens": 2413,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856
+      },
+      "total_tokens": 3973
+    },
+    "response_id": "20261001044023d739685609f04447"
+  },
+  "coverage_response": {
+    "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 322,
+      "completion_tokens_details": {
+        "reasoning_tokens": 285
+      },
+      "prompt_tokens": 2082,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 2404
+    },
+    "response_id": "2026100104405174b2c6f220814edc"
+  },
+  "fidelity_response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "C1": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.95,
+        "probabilities": {
+          "supported": 0.97,
+          "insufficient": 0.03,
+          "contradicted": 0.0
+        }
+      },
+      "C2": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.99,
+        "probabilities": {
+          "supported": 0.99,
+          "insufficient": 0.01,
+          "contradicted": 0.0
+        }
+      },
+      "C3": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.4,
+        "probabilities": {
+          "supported": 0.6,
+          "insufficient": 0.39,
+          "contradicted": 0.01
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 1680,
+      "output_tokens": 129
+    }
+  },
+  "candidate_sha256": "67cae11895dcfa6dc8354e309b6e2bea02ee2144efe45569b127e0969269782d",
+  "review_sha256": "77c0cdd62408b120bc6ad115a78c58d0ab48d124367262a184173da0fca1d673",
+  "fidelity_journal_sha256": "049759a9af6ccfcbb1a9f5f275111b4445d03333062264fec3cea59de9271245",
+  "historical_full_reference_tokens": 26504,
+  "observed_token_reduction_percent": 69.11,
+  "promotion": "none",
+  "limits": "Known regression, selector designed after prior omission. Frozen amended rubric includes exception; original scores unchanged. Extra paragraph selected without necessity for target. Historical full arm, no fresh paired replication. Same-model coverage and separate-provider fidelity are advice, not adjudication. No global completeness."
+}

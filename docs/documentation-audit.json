@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 167,
-  "bytes": 820475,
+  "documents": 168,
+  "bytes": 825373,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "f2a6960ea53e3ab42f392714546ea13c4d4753d53f57628cce82c708be764622",
-      "bytes": 22790,
+      "sha256": "e5d0e1d8b48daa67c2c307fcdfe37b9c43a98ed11ecf6cab7602f0387674fde2",
+      "bytes": 23520,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -728,6 +728,10 @@
         },
         {
           "target": "../experiments/reading-paired-grouping-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/condition-expansion-v1/README.md",
           "exists": true
         }
       ],
@@ -1265,6 +1269,19 @@
       "local_links": [
         {
           "target": "../citation-grouping-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/condition-expansion-v1/README.md",
+      "sha256": "f4628019529f8edc9d7d4d1805680ed84dd886aad6004bd6c24375c79e5c3c01",
+      "bytes": 4168,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../reading-paired-grouping-v1/README.md",
           "exists": true
         }
       ],

@@ -1,0 +1,79 @@
+{
+  "cases": [
+    {
+      "id": "expanded",
+      "document_id": "2001.04346",
+      "question_id": "7a84fed904acc1e0380deb6e5a2e1daacfb5907a",
+      "question": "Which set of datasets do they use?",
+      "source_sha256": "cc6ae64e9f36911bacf7ceb09b4f2f2f8a3ebda00467d0becf62fc5e1255b198",
+      "source_bytes": 34053,
+      "source_words": 5211,
+      "rubric_sha256": "c9b3afa34242e76cd61e62e7f85ff18b21c3b334f774500825307cc72c9b3ece",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "selection_rank": "1008d5d64beaee0bd50b4ce3395964c638c02a72a41a17b7fab9468a1c7e11aa",
+      "ranges": [
+        [
+          0,
+          108
+        ],
+        [
+          110,
+          1295
+        ],
+        [
+          1297,
+          1309
+        ],
+        [
+          1311,
+          2269
+        ],
+        [
+          2271,
+          3096
+        ],
+        [
+          3098,
+          4058
+        ],
+        [
+          24128,
+          24152
+        ],
+        [
+          24154,
+          25195
+        ],
+        [
+          25197,
+          25229
+        ],
+        [
+          29215,
+          30497
+        ],
+        [
+          30527,
+          31313
+        ]
+      ],
+      "reading_bytes": 7213
+    }
+  ],
+  "prompt_addendum": "Combine closely related requested facts into a concise claim when they share supporting evidence, so a shared passage need not be cited repeatedly. Prefer the smallest sufficient set of provided evidence IDs for each claim; preserve all information required by the question and all material qualifications.",
+  "selector_sha256": "02f9c0b18d67b949d9e417dd572f021d34c06d328eebfcb9aebfdca1dd822464",
+  "expansion_sha256": "dd0dde50bfb667d671f5419c090767974114a718be63fc02b7711aa518554da5",
+  "original_rubric_sha256": "af2ef124886cf366fbf16c7df54e1dc8e1297da91d169ee0e646fbc3798874bd",
+  "max_calls": 3,
+  "generation_tokens": 4096,
+  "review_tokens": 2048,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "scope": "Known regression case; selector uses source, exact question and initial ranges only. Explicit cues chosen after observing prior failure; not blind validation.",
+  "stop_rule": "No repair, retry, budget increase or case substitution. Failed generation skips review.",
+  "acceptance": "Report selection of conditional evidence separately from generation coverage and citation fidelity. No claim of global completeness."
+}

@@ -202,3 +202,14 @@ pierde la excepción Automotive/10-core presente en la fuente y en la respuesta
 completa. Ahorro observado sin equivalencia de calidad demostrada. Siguiente paso:
 control de condiciones/excepciones, ampliación trazable y regresión sobre este caso;
 contraste posterior en fuente nueva. Sin cambios de defaults ni integración.
+
+## Recuperación de condiciones: regresión conocida resuelta
+
+[Ampliación experimental](../experiments/condition-expansion-v1/README.md): selector
+léxico acotado recuperó Automotive/10-core desde pregunta y rangos iniciales, sin
+recibir rúbrica. Lectura de 5.145 a 7.213 bytes; respuesta sin reparación conserva
+la excepción, R1–R3 cubiertos y tres afirmaciones respaldadas según Jev. Tres llamadas,
+8.186 tokens. Seis pruebas offline y reproducción verificadas. Añade también un
+párrafo no necesario: heurística todavía imprecisa. Código sólo experimental,
+sin promoción a CLI/default. Próximo paso: fuente reservada, control sin excepción
+y condición fuera de presupuesto antes de decidir incorporación.

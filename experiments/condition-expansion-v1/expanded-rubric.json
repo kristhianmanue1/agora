@@ -1,0 +1,35 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "cc6ae64e9f36911bacf7ceb09b4f2f2f8a3ebda00467d0becf62fc5e1255b198",
+  "question": "Which set of datasets do they use?",
+  "provenance": "Explicit regression rubric amendment from previously observed omission; R1/R2 unchanged. Known development case, no independent adjudication.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: 9 Amazon product review datasets for 9 different domains",
+      "evidence": {
+        "text": "We conducted experiments on 10 different datasets, including 9 Amazon product review datasets for 9 different domains, and the large-scale Yelp challenge dataset on restaurant reviews. Table TABREF30 summarizes the domains and statistics for these datasets. Across all datasets, we follow the existing work BIBREF3, BIBREF17 to perform preprocessing to ensure they are in a $t$-core fashion, i.e., the datasets only include users and items that have at least $t$ reviews. In our experiments, we evaluate the two cases of $t=5$ and $t=10$. For the Yelp dataset, we follow BIBREF3 to focus on restaurants in the AZ metropolitan area. For each dataset, we randomly split the user–item pairs into $80\\%$ training set, $10\\%$ validation set, and $10\\%$ testing set. When learning the representations for users and items, we only use their reviews from the training set, and none from the validation and testing sets. This ensures a practical scenario where we cannot include any future reviews into a user's (item's) history for model training.",
+        "start_byte": 24154,
+        "end_byte": 25195
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: large-scale Yelp challenge dataset on restaurant reviews",
+      "evidence": {
+        "text": "We conducted experiments on 10 different datasets, including 9 Amazon product review datasets for 9 different domains, and the large-scale Yelp challenge dataset on restaurant reviews. Table TABREF30 summarizes the domains and statistics for these datasets. Across all datasets, we follow the existing work BIBREF3, BIBREF17 to perform preprocessing to ensure they are in a $t$-core fashion, i.e., the datasets only include users and items that have at least $t$ reviews. In our experiments, we evaluate the two cases of $t=5$ and $t=10$. For the Yelp dataset, we follow BIBREF3 to focus on restaurants in the AZ metropolitan area. For each dataset, we randomly split the user–item pairs into $80\\%$ training set, $10\\%$ validation set, and $10\\%$ testing set. When learning the representations for users and items, we only use their reviews from the training set, and none from the validation and testing sets. This ensures a practical scenario where we cannot include any future reviews into a user's (item's) history for model training.",
+        "start_byte": 24154,
+        "end_byte": 25195
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Preserve the condition that Automotive is excluded from the 10-core results because too few users/items remain.",
+      "evidence": {
+        "text": "Table TABREF32 presents the results on the 10-core datasets, from which the Automotive dataset is excluded because only very few users and items are left after applying the 10-core criterion on it. In contrast to Table TABREF31, all methods in general achieve better results in Table TABREF32, since more ratings and reviews become available for each user and item. In this case, we observe that D-ATT often outperforms MPCN. This may be because the Gumbel-Softmax pointers in MPCN make hard selections on reviews, thereby filtering out many reviews that may result in a significant loss of information. This problem is more severe when users (items) have more useful reviews, as in the 10-core scenario. Additionally, we observe that the performance gaps between AHN and the compared methods become larger. Specifically, summarizing the relative improvements of AHN over each of the review-based methods in Fig. FIGREF33, we observe that AHN generally gains more on the 10-core datasets, with absolute gains of up to $11.6\\%$ (DeepCoNN), $7.0\\%$ (D-ATT), $13.8\\%$ (MPCN), and $8.4\\%$ (HUITA). This suggests that the more reviews each user and item has, the more important it is to perform proper attention learning on relevant reviews and sentences on both the user and item sides.",
+        "start_byte": 29215,
+        "end_byte": 30497
+      }
+    }
+  ]
+}
