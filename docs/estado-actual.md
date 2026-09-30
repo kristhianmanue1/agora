@@ -137,3 +137,13 @@ de la rúbrica: posible ambigüedad entre benchmarks y preentrenamiento, con rie
 de influencia del prompt del productor. Próximo paso: crítica localizada que
 permita distinguir defecto de rúbrica de exceso del revisor, sin cambiar el caso
 original ni promover completitud global.
+
+## Crítica localizada: rúbrica conservada
+
+[Contraste localizado](../experiments/rubric-localized-v1/README.md): GLM no propuso
+defectos; Jev respaldó R1–R4 y no seleccionó un defecto o pasaje que lo demostrara,
+con incertidumbre global. Dos llamadas, 26.095 tokens. Rúbrica y rechazo originales
+intactos; un fallo de importación posterior a la respuesta GLM se resolvió mediante
+validación local sin repetir llamada. No se generaron candidatos ni se acredita
+exhaustividad. Próximo paso: candidato real y control de omisión en condición nueva,
+conservar discrepancia y evaluar cobertura respecto a la rúbrica.

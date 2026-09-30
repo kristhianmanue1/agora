@@ -1,0 +1,7 @@
+{
+  "cases_sha256": "f47bb0dfac3694226ff8bd37914a7af83cdef630a349596f9b55b43642c97d1e",
+  "max_calls": 1,
+  "prior_verdicts_hidden": true,
+  "glm_findings_absent": true,
+  "scope": "Neutral re-evaluation, not attribution of original internal rationale. Multiple question decomposition differs from original prompt; no causal claim about prompt influence."
+}

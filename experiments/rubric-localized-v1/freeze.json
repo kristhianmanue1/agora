@@ -1,0 +1,16 @@
+{
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "cases_sha256": "e721a3609f030748ea1e784b0a188988eaeaf8d7a883eb26255cefafc118de42",
+  "max_calls": {
+    "glm": 1,
+    "jev": 1
+  },
+  "max_glm_output_tokens": 4096,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "prior_label_hidden": true,
+  "candidates_absent": true,
+  "stop_rule": "No malformed-response repair, no retries, no automatic rubric edits or candidate generation. Findings require source-ID validation and separate provider assessment. New assessments cannot explain the internal cause of the original verdict.",
+  "selection": "Same original reserved case; now diagnostic development, not a second held-out case."
+}

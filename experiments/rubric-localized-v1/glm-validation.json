@@ -1,0 +1,11 @@
+{
+  "status": "valid_local_replay",
+  "original_journal_sha256": "91c56611f8929fd1c67e6504e49b10701c981118e7ee45a28c11588e922593fd",
+  "original_status": "failed",
+  "original_error": "ModuleNotFoundError",
+  "provider_finish_reason": "stop",
+  "label": "adequate",
+  "findings": [],
+  "http_calls": 0,
+  "correction": "Runner now resolves src explicitly; original journal and response unchanged. No content repair."
+}

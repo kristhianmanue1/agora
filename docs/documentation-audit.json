@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 159,
-  "bytes": 790111,
+  "documents": 160,
+  "bytes": 794372,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "ee29b53895655d30d745a5480f7ff107bbf37135a24616389693fd3dcc4a9e94",
-      "bytes": 18602,
+      "sha256": "907c618595cd1995abe9593f85c285f486378b3d8f34c42bb62f571def3981a4",
+      "bytes": 19228,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -700,6 +700,10 @@
         },
         {
           "target": "../experiments/rubric-reserved-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/rubric-localized-v1/README.md",
           "exists": true
         }
       ],
@@ -1736,6 +1740,19 @@
       "bytes": 854,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/rubric-localized-v1/README.md",
+      "sha256": "abe7732d30a75614bf7211fd448925389f5a2d4e37e5d8b185944579648b6c57",
+      "bytes": 3635,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../rubric-reserved-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

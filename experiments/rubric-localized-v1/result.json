@@ -1,0 +1,163 @@
+{
+  "status": "localized_review_complete",
+  "conclusion": "No concrete rubric defect demonstrated by these assessments; original adverse verdict remains unexplained.",
+  "rubric_changed": false,
+  "candidates_generated": 0,
+  "http_calls": 2,
+  "total_tokens": 26095,
+  "elapsed_seconds": 30.103,
+  "glm": {
+    "original_journal_status": "failed",
+    "local_validation": {
+      "status": "valid_local_replay",
+      "original_journal_sha256": "91c56611f8929fd1c67e6504e49b10701c981118e7ee45a28c11588e922593fd",
+      "original_status": "failed",
+      "original_error": "ModuleNotFoundError",
+      "provider_finish_reason": "stop",
+      "label": "adequate",
+      "findings": [],
+      "http_calls": 0,
+      "correction": "Runner now resolves src explicitly; original journal and response unchanged. No content repair."
+    },
+    "response": {
+      "id": "20261001020454d367876fc8c84ef9",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 979,
+        "completion_tokens_details": {
+          "reasoning_tokens": 961
+        },
+        "prompt_tokens": 10825,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11804
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"verdict\":\"adequate\",\"findings\":[]}",
+            "role": "assistant"
+          }
+        }
+      ]
+    },
+    "journal_sha256": "91c56611f8929fd1c67e6504e49b10701c981118e7ee45a28c11588e922593fd"
+  },
+  "jev": {
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "R1": {
+          "type": "choice",
+          "choice": "supported_required",
+          "confidence": 0.95,
+          "probabilities": {
+            "unsupported": 0.03,
+            "uncertain": 0.01,
+            "outside_scope": 0.0,
+            "supported_required": 0.96
+          }
+        },
+        "R2": {
+          "type": "choice",
+          "choice": "supported_required",
+          "confidence": 0.98,
+          "probabilities": {
+            "unsupported": 0.01,
+            "uncertain": 0.0,
+            "outside_scope": 0.0,
+            "supported_required": 0.99
+          }
+        },
+        "R3": {
+          "type": "choice",
+          "choice": "supported_required",
+          "confidence": 0.96,
+          "probabilities": {
+            "unsupported": 0.02,
+            "uncertain": 0.0,
+            "outside_scope": 0.0,
+            "supported_required": 0.98
+          }
+        },
+        "R4": {
+          "type": "choice",
+          "choice": "supported_required",
+          "confidence": 0.97,
+          "probabilities": {
+            "unsupported": 0.02,
+            "uncertain": 0.0,
+            "outside_scope": 0.0,
+            "supported_required": 0.98
+          }
+        },
+        "diagnosis": {
+          "type": "choice",
+          "choice": "none_demonstrated",
+          "confidence": 0.23,
+          "probabilities": {
+            "none_demonstrated": 0.38,
+            "scope_ambiguity": 0.21,
+            "uncertain": 0.01,
+            "unsupported_requirement": 0.13,
+            "missing_information": 0.27
+          }
+        },
+        "locator": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "S19": 0.0,
+            "S6": 0.0,
+            "S5": 0.0,
+            "S21": 0.0,
+            "S12": 0.0,
+            "S24": 0.22,
+            "S20": 0.0,
+            "S27": 0.02,
+            "S13": 0.0,
+            "S18": 0.0,
+            "S8": 0.0,
+            "S4": 0.0,
+            "S11": 0.060000000000000005,
+            "S25": 0.03,
+            "none": 0.67,
+            "S14": 0.0,
+            "S16": 0.0,
+            "S17": 0.0,
+            "S2": 0.0,
+            "S23": 0.0,
+            "S1": 0.0,
+            "S26": 0.0,
+            "S22": 0.0,
+            "S3": 0.0,
+            "S15": 0.0,
+            "S7": 0.0,
+            "S10": 0.0,
+            "S28": 0.0,
+            "S9": 0.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 13763,
+        "output_tokens": 528
+      }
+    },
+    "journal_sha256": "ab09d716d43c1881c41e53a77c225e5f2ededefd6cd988d3d5287bf724b848b1"
+  },
+  "assessment": "Producer synthesis, not operator adjudication. Provider metadata identifies reported models only.",
+  "limitations": [
+    "No candidate quality or reading savings measured.",
+    "Same case is now development, not a fresh holdout.",
+    "New prompt and question decomposition differ from original; variation cannot be causally assigned to wording.",
+    "Jev global choice had diffuse probabilities; support of each requirement does not establish exhaustiveness.",
+    "All source paragraphs included, without title and section headings.",
+    "Runner import failure corrected locally; no provider retry or response modification."
+  ],
+  "recommendation": "Keep original rubric. Next run one generated candidate and the predeclared omission control under review-rubric as a new explicit experiment condition; retain original stop and disagreement as history."
+}
