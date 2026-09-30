@@ -61,3 +61,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Validación de redistribución en documentos nuevos
 
 [Doce documentos y casos límite](../experiments/shared-neighbor-validation-v1/README.md): integridad, presupuesto y conservación aprobados; a 8.000 bytes la cobertura anotada pasa de 10/29 a 12/29, con mejora en 2/12 documentos y 20,88% más bytes recuperados. Sin llamadas API ni cambios de producto. Candidata experimental, sin justificación para reemplazar el método predeterminado.
+
+## Comparación completa iniciada, detenida por transporte
+
+[Generación y revisión pareadas](../experiments/retrieval-answer-paired-v1/README.md): cinco generaciones válidas y revisadas, tres timeouts de 90 s y parada del transporte; 16 entradas no enviadas. Sólo dos pares completos, sin evidencia suficiente para promover la redistribución. Consumo observado mínimo 53.238 tokens; cargos/uso de timeouts desconocidos. La integración permanece pendiente.

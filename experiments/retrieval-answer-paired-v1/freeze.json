@@ -1,0 +1,32 @@
+{
+  "code_head": "3f085a5c2b858225dc0fc1a730037f6e8e2c5eba",
+  "cases_sha256": "2df74c783841b9f3f047f14884f8c99aac92a687a44279ad2a6512034b68476d",
+  "sources": {
+    "1803.08419": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+    "1606.02892": "e01cc2b75fc85eb42d6956df385e4764ebc70bca79977050a9264a888105412f",
+    "1707.06875": "380fd1c8096aacaae654fdf62c6e3d4cc51974f4fa38934f19b428c9b9ad2c16",
+    "1911.01940": "84c8bc0582d004fd99cbbc02b00a38917dfb529bb46216b0b5d438bbe766b284",
+    "1909.11706": "3631d0008d6555da0bb6d31aed50a8d540d65aa1f21e0c7b3b8306bd0f484358",
+    "1802.03052": "efa54304de35ed711648b4a8ad9baa1bbe87b3db83f7c1fa61726aa9746d5a40",
+    "2003.11531": "fb5d5ae81eb37a6300f73996ec993260332f8101e86e13802731375807925162",
+    "1909.13466": "15f1fd48104a9f4c90703284ecbb058d9d34726e62255421178e9980a0db76a6",
+    "1909.02322": "ded70512a4e9a93fa09da024c606710296ec19362fa89aae5aa554fa2d7a053c",
+    "2004.02214": "15e8c8477585d3ab062496553711ae9649a9b4e071f89b30fccdc1c82ed8949d",
+    "1909.04251": "1a77a735ab2c893f6c57e2061d2ef6b05bb3c018bcdb788ea73f7e06c22f54ab",
+    "1610.07149": "910e705bdb450be013f4336afba238d90d10381c604f8702bda9cb7363ed762e"
+  },
+  "documents": 12,
+  "max_generation_calls": 24,
+  "max_review_calls": 24,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "generator": "glm-5.3-flash",
+  "reviewer": "jev-1.13.0",
+  "generation_output_tokens": 2048,
+  "profile": "existing concise-v1 in English; literal citations",
+  "budgets": 8000,
+  "temperature": 0,
+  "order": "alternate method first by document; neutral hashed ids; shuffle review order seed paired-review-v1",
+  "primary": "Compare valid answers with supported claims and no task omissions; include invalid outputs and unnecessary abstentions as failures; report paired wins/losses and total tokens by route; no promotion by majority alone",
+  "limits": "12 development documents previously used for coverage; one draw per method; Jev reviewer uncalibrated, no human adjudication; review uses full source and excludes gold/method"
+}

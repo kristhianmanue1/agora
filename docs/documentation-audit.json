@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 140,
-  "bytes": 690816,
+  "documents": 141,
+  "bytes": 696514,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "da059c3e0841a76de6f3c516bb5577cf70236e9492d8ae704e43a847020abbf1",
-      "bytes": 8457,
+      "sha256": "f07406ba66e3992d8803c7f7a119e41d5559e1945f1e4b861adc2d8a81dd02ff",
+      "bytes": 8921,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -603,6 +603,10 @@
         },
         {
           "target": "../experiments/shared-neighbor-validation-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieval-answer-paired-v1/README.md",
           "exists": true
         }
       ],
@@ -1401,6 +1405,14 @@
       "path": "experiments/repair-store-v1/RESULTS.md",
       "sha256": "74d069f17cdbfa5293de39666272b8c27c9455bcaf9e16408c9daf756ec73b14",
       "bytes": 2536,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieval-answer-paired-v1/README.md",
+      "sha256": "8ed8774f89e0f846cc758dd0b2b80a35aef759277078ba1c98a1daa0df7472f7",
+      "bytes": 5234,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
