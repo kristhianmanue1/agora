@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 142,
-  "bytes": 701790,
+  "documents": 144,
+  "bytes": 710776,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "bbdba5e2fbde871a4c19f71966d431dc732ad5d5dfa4e77338ee13aa4f1cc61b",
-      "bytes": 9376,
+      "sha256": "38906a2a545b651b470d1fede20ee85891c484a351ec637f52fa3842e9fdcffb",
+      "bytes": 10169,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -611,6 +611,10 @@
         },
         {
           "target": "../experiments/retrieval-answer-paired-v1/CONTINUATION.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieval-answer-ids-v1/RESULTS.md",
           "exists": true
         }
       ],
@@ -1409,6 +1413,31 @@
       "path": "experiments/repair-store-v1/RESULTS.md",
       "sha256": "74d069f17cdbfa5293de39666272b8c27c9455bcaf9e16408c9daf756ec73b14",
       "bytes": 2536,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieval-answer-ids-v1/README.md",
+      "sha256": "c4385468d630d927ba7bf7489414efe129d2db764df1b4c4f83633dd2a51e047",
+      "bytes": 3367,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "RESULTS.md",
+          "exists": true
+        },
+        {
+          "target": "../retrieval-answer-paired-v1/CONTINUATION.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieval-answer-ids-v1/RESULTS.md",
+      "sha256": "fdf0d335a0d5163273d892175cd5a27f261338ba197b1090abaf97be08112307",
+      "bytes": 4826,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

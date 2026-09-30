@@ -1,0 +1,8 @@
+{
+  "cases_sha256": "ba459582290c107e5deae946e24d12706af2d0b7fb29a1fd09ba198ced1ecc43",
+  "max_calls": 20,
+  "reviewer": "jev-1.13.0",
+  "retries": 0,
+  "timeout_seconds": 90,
+  "blinding": "no method, gold, sibling, retrieval ranges or IDs; full source plus resolved candidate claims and missing items"
+}

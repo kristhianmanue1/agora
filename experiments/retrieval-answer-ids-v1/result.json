@@ -1,0 +1,892 @@
+{
+  "summary": {
+    "equal": {
+      "planned": 12,
+      "attempted": 12,
+      "transport_failed": 0,
+      "valid": 10,
+      "rejected": 2,
+      "reviewed": 10,
+      "usable": 5,
+      "answer_statuses": {
+        "answered": 6,
+        "partial": 2,
+        "not_in_passages": 2
+      },
+      "generation_input_tokens": 21231,
+      "generation_output_tokens": 11401,
+      "generation_elapsed_seconds": 221.931,
+      "review_input_tokens": 76796,
+      "review_output_tokens": 925,
+      "review_elapsed_seconds": 5.17,
+      "known_tokens": 110353
+    },
+    "shared": {
+      "planned": 12,
+      "attempted": 12,
+      "transport_failed": 0,
+      "valid": 10,
+      "rejected": 2,
+      "reviewed": 10,
+      "usable": 6,
+      "answer_statuses": {
+        "answered": 6,
+        "partial": 3,
+        "not_in_passages": 1
+      },
+      "generation_input_tokens": 24248,
+      "generation_output_tokens": 12148,
+      "generation_elapsed_seconds": 244.226,
+      "review_input_tokens": 78121,
+      "review_output_tokens": 924,
+      "review_elapsed_seconds": 5.06,
+      "known_tokens": 115441
+    }
+  },
+  "pairs": [
+    {
+      "document_id": "1803.08419",
+      "same_context": false,
+      "outcome": "shared_win",
+      "previous_outcome": "both_usable"
+    },
+    {
+      "document_id": "1606.02892",
+      "same_context": false,
+      "outcome": "incomplete_pair",
+      "previous_outcome": "neither_usable"
+    },
+    {
+      "document_id": "1707.06875",
+      "same_context": false,
+      "outcome": "neither_usable",
+      "previous_outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1911.01940",
+      "same_context": false,
+      "outcome": "both_usable",
+      "previous_outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1909.11706",
+      "same_context": false,
+      "outcome": "shared_win",
+      "previous_outcome": "shared_win"
+    },
+    {
+      "document_id": "1802.03052",
+      "same_context": false,
+      "outcome": "both_usable",
+      "previous_outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "2003.11531",
+      "same_context": false,
+      "outcome": "both_usable",
+      "previous_outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1909.13466",
+      "same_context": true,
+      "outcome": "neither_usable",
+      "previous_outcome": "neither_usable"
+    },
+    {
+      "document_id": "1909.02322",
+      "same_context": false,
+      "outcome": "equal_win",
+      "previous_outcome": "both_usable"
+    },
+    {
+      "document_id": "2004.02214",
+      "same_context": true,
+      "outcome": "neither_usable",
+      "previous_outcome": "neither_usable"
+    },
+    {
+      "document_id": "1909.04251",
+      "same_context": false,
+      "outcome": "both_usable",
+      "previous_outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1610.07149",
+      "same_context": true,
+      "outcome": "incomplete_pair",
+      "previous_outcome": "both_usable"
+    }
+  ],
+  "records": [
+    {
+      "id": "ie8d03391aa",
+      "document_id": "1803.08419",
+      "question_id": "f92c344e9b1a986754277fd0f08a47dc3e5f9feb",
+      "method": "equal",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "delivered_bytes": 3711,
+      "retrieval_seconds": 0.005652541999999983,
+      "previous_id": "x9011437302",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 3,
+        "input_tokens": 1381,
+        "output_tokens": 1149,
+        "elapsed_seconds": 23.916,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 9551,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.593,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i51a73f157c",
+      "document_id": "1803.08419",
+      "question_id": "f92c344e9b1a986754277fd0f08a47dc3e5f9feb",
+      "method": "shared",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "delivered_bytes": 5679,
+      "retrieval_seconds": 0.00693779199999997,
+      "previous_id": "xbbdf0b0dc1",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 4,
+        "input_tokens": 1855,
+        "output_tokens": 916,
+        "elapsed_seconds": 16.863,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 9705,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.522,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "ia06cf918c6",
+      "document_id": "1606.02892",
+      "question_id": "2686e8d51caff9a19684e0c9984bcb5a1937d08d",
+      "method": "shared",
+      "question": "What morphological features are considered?",
+      "delivered_bytes": 4492,
+      "retrieval_seconds": 0.003970000000000001,
+      "previous_id": "xa947768b61",
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "answer_status": null,
+        "diagnostics": [
+          {
+            "code": "generation_incomplete"
+          }
+        ],
+        "reference_count": null,
+        "input_tokens": 1713,
+        "output_tokens": 2048,
+        "elapsed_seconds": 41.145,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "i69df416e31",
+      "document_id": "1606.02892",
+      "question_id": "2686e8d51caff9a19684e0c9984bcb5a1937d08d",
+      "method": "equal",
+      "question": "What morphological features are considered?",
+      "delivered_bytes": 3571,
+      "retrieval_seconds": 0.0032166670000000064,
+      "previous_id": "xaf20b49fed",
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "answer_status": null,
+        "diagnostics": [
+          {
+            "code": "generation_incomplete"
+          }
+        ],
+        "reference_count": null,
+        "input_tokens": 1468,
+        "output_tokens": 2048,
+        "elapsed_seconds": 40.964,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "icb4ed86447",
+      "document_id": "1707.06875",
+      "question_id": "97708d93bccc832ea671dc31a76dad6a121fcd60",
+      "method": "equal",
+      "question": "Which metrics were considered?",
+      "delivered_bytes": 3865,
+      "retrieval_seconds": 0.003690542000000019,
+      "previous_id": "x9d2069ab81",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "partial",
+        "diagnostics": [],
+        "reference_count": 5,
+        "input_tokens": 1702,
+        "output_tokens": 1535,
+        "elapsed_seconds": 27.627,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 7787,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.516,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i09a43e0dc0",
+      "document_id": "1707.06875",
+      "question_id": "97708d93bccc832ea671dc31a76dad6a121fcd60",
+      "method": "shared",
+      "question": "Which metrics were considered?",
+      "delivered_bytes": 5371,
+      "retrieval_seconds": 0.004476250000000015,
+      "previous_id": "xb0ff7f8ed7",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "partial",
+        "diagnostics": [],
+        "reference_count": 4,
+        "input_tokens": 2031,
+        "output_tokens": 1335,
+        "elapsed_seconds": 30.302,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 7477,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.522,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "ie61b2e0e3e",
+      "document_id": "1911.01940",
+      "question_id": "26e32f24fe0c31ef25de78935daa479534b9dd58",
+      "method": "shared",
+      "question": "Do they use all the hidden layer representations?",
+      "delivered_bytes": 6989,
+      "retrieval_seconds": 0.00348374999999998,
+      "previous_id": "x196db0ac38",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 5,
+        "input_tokens": 2480,
+        "output_tokens": 988,
+        "elapsed_seconds": 22.062,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 6115,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.482,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i6a4ee200b4",
+      "document_id": "1911.01940",
+      "question_id": "26e32f24fe0c31ef25de78935daa479534b9dd58",
+      "method": "equal",
+      "question": "Do they use all the hidden layer representations?",
+      "delivered_bytes": 5718,
+      "retrieval_seconds": 0.0028396249999999845,
+      "previous_id": "xc2eec90139",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 6,
+        "input_tokens": 2124,
+        "output_tokens": 1286,
+        "elapsed_seconds": 22.873,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 6288,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.526,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i8505716ef3",
+      "document_id": "1909.11706",
+      "question_id": "ff36168caf48161db7039e3bd4732cef31d4de99",
+      "method": "equal",
+      "question": "which had better results, the svm or the random forest model?",
+      "delivered_bytes": 3371,
+      "retrieval_seconds": 0.003071832999999996,
+      "previous_id": "xcb9232208f",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "not_in_passages",
+        "diagnostics": [],
+        "reference_count": 0,
+        "input_tokens": 1313,
+        "output_tokens": 998,
+        "elapsed_seconds": 20.438,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 5793,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.423,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "ib0b9f18321",
+      "document_id": "1909.11706",
+      "question_id": "ff36168caf48161db7039e3bd4732cef31d4de99",
+      "method": "shared",
+      "question": "which had better results, the svm or the random forest model?",
+      "delivered_bytes": 4116,
+      "retrieval_seconds": 0.0037501239999999936,
+      "previous_id": "x8024f9d3b3",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 3,
+        "input_tokens": 1519,
+        "output_tokens": 1113,
+        "elapsed_seconds": 20.782,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 6420,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.416,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i0e742dfa15",
+      "document_id": "1802.03052",
+      "question_id": "641fe5dc93611411582e6a4a0ea2d5773eaf0310",
+      "method": "shared",
+      "question": "What does it mean for sentences to be \"lexically overlapping\"?",
+      "delivered_bytes": 7034,
+      "retrieval_seconds": 0.005143666999999963,
+      "previous_id": "x9ddfdc39b7",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 2,
+        "input_tokens": 2186,
+        "output_tokens": 702,
+        "elapsed_seconds": 12.881,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7269,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.523,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i51dcd2bd0f",
+      "document_id": "1802.03052",
+      "question_id": "641fe5dc93611411582e6a4a0ea2d5773eaf0310",
+      "method": "equal",
+      "question": "What does it mean for sentences to be \"lexically overlapping\"?",
+      "delivered_bytes": 5432,
+      "retrieval_seconds": 0.004219874999999984,
+      "previous_id": "x57e3086f6a",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 1,
+        "input_tokens": 1807,
+        "output_tokens": 762,
+        "elapsed_seconds": 16.658,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 6971,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.457,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i1e29c734e8",
+      "document_id": "2003.11531",
+      "question_id": "9b6339e24f58b576143d2adf599cfc4a31fd3b0c",
+      "method": "equal",
+      "question": "What state-of-the-art tagging model did they use?",
+      "delivered_bytes": 3854,
+      "retrieval_seconds": 0.005222540999999997,
+      "previous_id": "xf1e7c743c2",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 2,
+        "input_tokens": 1412,
+        "output_tokens": 463,
+        "elapsed_seconds": 11.536,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 8878,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.637,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "ieef161c272",
+      "document_id": "2003.11531",
+      "question_id": "9b6339e24f58b576143d2adf599cfc4a31fd3b0c",
+      "method": "shared",
+      "question": "What state-of-the-art tagging model did they use?",
+      "delivered_bytes": 5428,
+      "retrieval_seconds": 0.006347040999999998,
+      "previous_id": "x8f18c29d83",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 3,
+        "input_tokens": 1804,
+        "output_tokens": 496,
+        "elapsed_seconds": 9.139,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 9040,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.52,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "ib74d2ea638",
+      "document_id": "1909.13466",
+      "question_id": "e5be900e70ea86c019efb06438ba200e11773a7c",
+      "method": "shared",
+      "question": "What training set sizes do they use?",
+      "delivered_bytes": 7691,
+      "retrieval_seconds": 0.006781375999999978,
+      "previous_id": "x1c695472d8",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "not_in_passages",
+        "diagnostics": [],
+        "reference_count": 0,
+        "input_tokens": 2434,
+        "output_tokens": 548,
+        "elapsed_seconds": 11.699,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 10224,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.52,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i14996e77e3",
+      "document_id": "1909.13466",
+      "question_id": "e5be900e70ea86c019efb06438ba200e11773a7c",
+      "method": "equal",
+      "question": "What training set sizes do they use?",
+      "delivered_bytes": 7691,
+      "retrieval_seconds": 0.005501458999999986,
+      "previous_id": "x0daa840e27",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "not_in_passages",
+        "diagnostics": [],
+        "reference_count": 0,
+        "input_tokens": 2434,
+        "output_tokens": 572,
+        "elapsed_seconds": 10.902,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 10257,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.53,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i3dad0ea380",
+      "document_id": "1909.02322",
+      "question_id": "74fcb741d29892918903702dbb145fef372d1de3",
+      "method": "equal",
+      "question": "What is the model trained?",
+      "delivered_bytes": 6611,
+      "retrieval_seconds": 0.00358987500000002,
+      "previous_id": "x67feb7b7f9",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 3,
+        "input_tokens": 2256,
+        "output_tokens": 795,
+        "elapsed_seconds": 13.862,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7385,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.511,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "i9f739e573d",
+      "document_id": "1909.02322",
+      "question_id": "74fcb741d29892918903702dbb145fef372d1de3",
+      "method": "shared",
+      "question": "What is the model trained?",
+      "delivered_bytes": 7953,
+      "retrieval_seconds": 0.004473375000000002,
+      "previous_id": "x50e55252cb",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "partial",
+        "diagnostics": [],
+        "reference_count": 4,
+        "input_tokens": 2568,
+        "output_tokens": 1503,
+        "elapsed_seconds": 29.07,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 7576,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.516,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i4d71002a7d",
+      "document_id": "2004.02214",
+      "question_id": "fcb0ac1934e2fd9f58f4b459e6853999a27844f9",
+      "method": "shared",
+      "question": "On what two languages is experimented on?",
+      "delivered_bytes": 5143,
+      "retrieval_seconds": 0.004112083000000016,
+      "previous_id": "xd9870342fe",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "partial",
+        "diagnostics": [],
+        "reference_count": 2,
+        "input_tokens": 1799,
+        "output_tokens": 746,
+        "elapsed_seconds": 14.632,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 6132,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.521,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "id4f2ea8ca6",
+      "document_id": "2004.02214",
+      "question_id": "fcb0ac1934e2fd9f58f4b459e6853999a27844f9",
+      "method": "equal",
+      "question": "On what two languages is experimented on?",
+      "delivered_bytes": 5143,
+      "retrieval_seconds": 0.00343829100000001,
+      "previous_id": "xa1451c5014",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "partial",
+        "diagnostics": [],
+        "reference_count": 2,
+        "input_tokens": 1799,
+        "output_tokens": 464,
+        "elapsed_seconds": 9.267,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 6137,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.522,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "i2dd6c8b2f2",
+      "document_id": "1909.04251",
+      "question_id": "2dba0b83fc22995f83e7ac66cc8f68bcdcc70ee9",
+      "method": "equal",
+      "question": "Do humans assess the quality of the generated responses?",
+      "delivered_bytes": 3971,
+      "retrieval_seconds": 0.003977457999999989,
+      "previous_id": "x4729a4b627",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 3,
+        "input_tokens": 1458,
+        "output_tokens": 628,
+        "elapsed_seconds": 11.699,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7749,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.455,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "if868d792ac",
+      "document_id": "1909.04251",
+      "question_id": "2dba0b83fc22995f83e7ac66cc8f68bcdcc70ee9",
+      "method": "shared",
+      "question": "Do humans assess the quality of the generated responses?",
+      "delivered_bytes": 5296,
+      "retrieval_seconds": 0.004875832999999996,
+      "previous_id": "x95b0336682",
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "answer_status": "answered",
+        "diagnostics": [],
+        "reference_count": 5,
+        "input_tokens": 1782,
+        "output_tokens": 867,
+        "elapsed_seconds": 18.845,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 8163,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.518,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "if88bfcbe10",
+      "document_id": "1610.07149",
+      "question_id": "97055ab0227ed6ac7a8eba558b94f01867bb9562",
+      "method": "shared",
+      "question": "Were human evaluations conducted?",
+      "delivered_bytes": 5752,
+      "retrieval_seconds": 0.004250500000000018,
+      "previous_id": "x83453a4e39",
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "answer_status": null,
+        "diagnostics": [
+          {
+            "code": "invalid_json"
+          }
+        ],
+        "reference_count": null,
+        "input_tokens": 2077,
+        "output_tokens": 886,
+        "elapsed_seconds": 16.806,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "ia77d9842d3",
+      "document_id": "1610.07149",
+      "question_id": "97055ab0227ed6ac7a8eba558b94f01867bb9562",
+      "method": "equal",
+      "question": "Were human evaluations conducted?",
+      "delivered_bytes": 5752,
+      "retrieval_seconds": 0.0035560420000000093,
+      "previous_id": "x1b04f7c5fb",
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "answer_status": null,
+        "diagnostics": [
+          {
+            "code": "invalid_json"
+          }
+        ],
+        "reference_count": null,
+        "input_tokens": 2077,
+        "output_tokens": 701,
+        "elapsed_seconds": 12.189,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    }
+  ],
+  "known_tokens": 225794,
+  "limitations": "Development corpus; one draw; no human adjudication. Previous concise-v1 differs in schema/prompt, so not causal evidence of ID-only benefit. No defaults changed."
+}

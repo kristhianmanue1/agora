@@ -69,3 +69,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Continuación de comparación pareada
 
 [16 entradas pendientes completadas](../experiments/retrieval-answer-paired-v1/CONTINUATION.md): todas respondieron; 11 válidas revisadas y cinco rechazos de formato/citas. Consolidado: siete pares semánticamente comparables, un caso favorable a redistribución, tres útiles en ambos y tres incompletos en ambos. Persisten tres timeouts originales sin repetir. Sin promoción; consumo conocido 176.605 tokens, con uso de timeouts desconocido.
+
+## Comparación con IDs y límite del revisor
+
+[IDs en ambas rutas](../experiments/retrieval-answer-ids-v1/RESULTS.md): 24 respuestas, 20 candidatos válidos revisados por Jev, dos truncamientos y dos JSON inválidos, sin fallos de transporte. Diez pares comparables: dos favorables a redistribución, uno a cuotas iguales, cuatro útiles en ambas y tres sin utilidad según el criterio en ambas. 225.794 tokens observados, incluida revisión completa. La autorrevisión detectó una discrepancia de Jev con la referencia QASPER sobre identidad del modelo frente a procedimiento de entrenamiento; el resultado bruto permanece intacto. Prioridad: calibrar suficiencia contra referencias externas usando los candidatos conservados, antes de promover o ampliar la muestra. Producto sin cambios.

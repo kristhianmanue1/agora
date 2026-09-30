@@ -1,0 +1,55 @@
+{
+  "audit_type": "producer adversarial inspection after scoring, not independent adjudication",
+  "positive_pairs": [
+    {
+      "document_id": "1803.08419",
+      "shared_quotes": [
+        {
+          "sha256": "e5a7c6303baf264ebd18423f42fa3333863c439165abe939ba1c6a685fee403e",
+          "in_equal": false,
+          "in_shared": true
+        },
+        {
+          "sha256": "c59592de3974ac48857a471f4e235d6cf1391024c17ba8de5827d1bea6a4814d",
+          "in_equal": true,
+          "in_shared": true
+        }
+      ]
+    },
+    {
+      "document_id": "1909.11706",
+      "shared_quotes": [
+        {
+          "sha256": "f3cec39055d308019329c5ab6960bda9f10ecaf3c3a51693d8308084a1d37b4f",
+          "in_equal": false,
+          "in_shared": true
+        }
+      ]
+    }
+  ],
+  "reviewer_discrepancy": {
+    "document_id": "1909.02322",
+    "question_id": "74fcb741d29892918903702dbb145fef372d1de3",
+    "question": "What is the model trained?",
+    "dataset_reference_answers": [
+      {
+        "free_form_answer": "Condense-Abstract Framework, consisting of BiLSTM autoencoder and LSTM decoder with attention.",
+        "extractive_spans": [],
+        "yes_no": null,
+        "unanswerable": false
+      },
+      {
+        "free_form_answer": "",
+        "extractive_spans": [
+          "BiLSTM autoencoder as the Condense model",
+          "simple LSTM decoder enhanced with attention BIBREF14 and copy mechanisms BIBREF32"
+        ],
+        "yes_no": null,
+        "unanswerable": false
+      }
+    ],
+    "observed": "Both routes answer training procedure; neither names Condense-Abstract, BiLSTM encoder and LSTM decoder. Jev labels equal complete and shared omitted.",
+    "interpretation": "Question wording is ambiguous. External reference targets model identity. Producer flags a possible false-positive completeness judgment; no independent adjudication. Raw labels and paired score unchanged.",
+    "next": "Calibrate task completeness against independent benchmark references, with gold kept out of generation and blind review."
+  }
+}
