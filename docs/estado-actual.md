@@ -97,3 +97,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Opción CLI experimental de suficiencia
 
 Disponible [review-coverage](revision-suficiencia-cli.md): selecciona una parte de candidato por IDs/literal v1/v2, verifica hashes y registra consejo de suficiencia frente a fuente completa suministrada. Replay sin red o una llamada GLM explícita, sin reintentos. Candidato y defaults preservados; siempre requires_review, sin admisión ni evaluación de fidelidad. Replay, rechazo y llamada real comprobados; suite de 470 pruebas aprobada. El informe se conserva en archivos separados, sin recuperación transaccional general. Preguntas ambiguas y adjudicación independiente siguen pendientes.
+
+## CLI contrastada con omisiones reales
+
+[Fuente de 41.578 bytes / 6.474 palabras](../experiments/coverage-cli-long-v1/README.md): dos candidatos reales conservados, omitted para el incompleto y complete para el que incluye ambas limitaciones faltantes. Se localizaron fragmentos sobre BLEU y embeddings presentes sólo en el contexto redistribuido. Dos revisiones CLI, 19.069 tokens, originales intactos y requires_review en ambos. Caso conocido de desarrollo, no escala de 188 páginas ni ahorro total probado. Siguiente paso propuesto: diagnóstico de omisiones con localizadores verificables; la CLI actual entrega sólo clasificación.

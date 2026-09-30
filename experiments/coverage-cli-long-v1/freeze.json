@@ -1,0 +1,30 @@
+{
+  "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+  "source_bytes": 41578,
+  "source_words": 6474,
+  "document_id": "1803.08419",
+  "max_calls": 2,
+  "retries": 0,
+  "candidates": [
+    {
+      "method": "equal",
+      "original_id": "ie8d03391aa",
+      "original_journal_sha256": "a8cc967b7a3a5303fcf6d429d4b0973ebda66dac82eb083eb6e6418474afd4ad",
+      "candidate_sha256": "f09e029a277558ac4840584132ced24be3d0a8344d79c535c4dcce39a464907b",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "delivered_bytes": 3711,
+      "expected_coverage": "omitted"
+    },
+    {
+      "method": "shared",
+      "original_id": "i51a73f157c",
+      "original_journal_sha256": "040a215ef92ff5365ecfa586c9b0d8a21a746f14b6c6dda4885b6f6cd3858c71",
+      "candidate_sha256": "0e7300e7e891978c7e866b2af6108aad68fc5733a920885098de60aa637db0dc",
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "delivered_bytes": 5679,
+      "expected_coverage": "complete"
+    }
+  ],
+  "expectation_origin": "prior producer reference audit; known development pair, not reserved",
+  "code_head": "e3d7dde66371857573bd1dc9ef298d8febd00964"
+}

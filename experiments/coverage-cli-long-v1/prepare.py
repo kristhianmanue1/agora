@@ -1,0 +1,10 @@
+import json,hashlib,sys,shutil,subprocess
+from pathlib import Path
+B=Path(__file__).resolve().parent;R=B.parents[1];sys.path.insert(0,str(R/'src'))
+from agora.evidence import query_evidence
+from agora.source import FileSourceAdapter
+P=B.parent/'retrieval-answer-ids-v1';O=B.parent/'retrieval-answer-paired-v1';load=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();pid='1803.08419';source=O/'inputs'/f'{pid}.txt';revision=sha(source);assert revision==load(O/'freeze.json')['sources'][pid]
+(B/'.gitignore').write_text('inputs/\nruns-*/\n');(B/'inputs').mkdir();shutil.copyfile(source,B/'inputs/source.txt');rows=[]
+for method in ('equal','shared'):
+ k=next(x for x in load(P/'key.json') if x['document_id']==pid and x['method']==method);path=P/'runs-generation'/f"{k['id']}.json";raw=load(path);choice=raw['response']['choices'][0];env=load(O/'inputs'/f"{k['previous_id']}-envelope.json");candidate=query_evidence(FileSourceAdapter(source,'qasper:'+pid),revision,k['question'],[dict(id='P1',question=k['question'])],lambda *args:dict(finish_reason=choice['finish_reason'],content=choice['message']['content']),ranges=[(s['start_byte'],s['end_byte']) for s in env['spans']],content_budget=8000,citation_mode='ids',response_language='en');assert candidate['execution_status']=='complete';out=B/'inputs'/f'{method}.json';out.write_text(json.dumps(candidate,ensure_ascii=False,indent=2)+'\n');rows.append(dict(method=method,original_id=k['id'],original_journal_sha256=sha(path),candidate_sha256=sha(out),question=k['question'],delivered_bytes=env['delivered_bytes'],expected_coverage='omitted' if method=='equal' else 'complete'))
+(B/'freeze.json').write_text(json.dumps(dict(source_sha256=revision,source_bytes=source.stat().st_size,source_words=len(source.read_text().split()),document_id=pid,max_calls=2,retries=0,candidates=rows,expectation_origin='prior producer reference audit; known development pair, not reserved',code_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()),indent=2)+'\n');print('Prepared paired real candidates by replay; no new generation')

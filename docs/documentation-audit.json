@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 151,
-  "bytes": 752841,
+  "documents": 152,
+  "bytes": 757652,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -529,8 +529,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "365a2848cfe823beb1cf0e9408172bfe7d998c37b7e011791b0bf20ce9b290e9",
-      "bytes": 14174,
+      "sha256": "0479aaf3187ec3b78594bcdb8e8118d88ce9ef2e52b4333e431f7993d3936484",
+      "bytes": 14816,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -643,6 +643,10 @@
         },
         {
           "target": "revision-suficiencia-cli.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/coverage-cli-long-v1/README.md",
           "exists": true
         }
       ],
@@ -1121,6 +1125,14 @@
       "path": "experiments/agora-skevi-v1/README.md",
       "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
       "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/coverage-cli-long-v1/README.md",
+      "sha256": "a4625bf446dc90f8726b731bfae2764237d4267b09b3291f01fc6f8ced885b1e",
+      "bytes": 4169,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

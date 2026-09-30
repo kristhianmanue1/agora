@@ -1,0 +1,11 @@
+import json,hashlib
+from pathlib import Path
+B=Path(__file__).resolve().parent;R=B.parents[1];load=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();f=load(B/'freeze.json');source=(B/'inputs/source.txt').read_text();assert sha(B/'inputs/source.txt')==f['source_sha256'];records=[]
+needles=['word-overlap metrics like BLEU simply require too many ground-truth responses','insufficiently complex for modeling sentence-level compositionality'];evidence=[]
+for needle in needles:
+ pos=source.index(needle);evidence.append(dict(text=needle,start_byte=len(source[:pos].encode()),end_byte=len(source[:pos+len(needle)].encode()),candidate_checks={}))
+for c in f['candidates']:
+ p=B/'inputs'/f"{c['method']}.json";assert sha(p)==c['candidate_sha256'];candidate=load(p);claims=[x['text'] for x in candidate['parts'][0]['claims']];env=candidate['envelope'];r=load(B/f"runs-{c['method']}"/'result.json');req=load(B/f"runs-{c['method']}"/'request.json');state=json.loads(req['user']);assert state['full_source']==source;assert r['source_sha256']==f['source_sha256'] and r['candidate_sha256']==c['candidate_sha256'];assert state['answer']['claims']==[{k:x[k] for k in ('text','quotes')} for x in candidate['parts'][0]['claims']]
+ for e in evidence:e['candidate_checks'][c['method']]=dict(in_delivered_passages=any(e['text'] in s['text'] for s in env['spans']),in_claim_text=any(e['text'].lower() in text.lower() for text in claims))
+ records.append(dict(method=c['method'],status=r['status'],coverage=r.get('coverage'),expected=c['expected_coverage'],match=r.get('coverage')==c['expected_coverage'],http_attempts=r['http_attempts'],disposition=r['disposition'],model=r.get('response',{}).get('reported_model'),usage=r.get('response',{}).get('usage'),request_sha256=r['request_sha256']))
+out=dict(source_bytes=f['source_bytes'],source_words=f['source_words'],records=records,evidence=evidence,interpretation='Producer inspection: equal omits both limitations; shared states both. Literal searches are provenance checks, not semantic adjudication.',limits='Known development pair, one full source, two model calls, no independent review. No evidence of 188-page scale or full pipeline savings.');(B/'result.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps(out))

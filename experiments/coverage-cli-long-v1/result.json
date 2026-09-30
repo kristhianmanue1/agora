@@ -1,0 +1,84 @@
+{
+  "source_bytes": 41578,
+  "source_words": 6474,
+  "records": [
+    {
+      "method": "equal",
+      "status": "complete",
+      "coverage": "omitted",
+      "expected": "omitted",
+      "match": true,
+      "http_attempts": 1,
+      "disposition": "requires_review",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1152,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1139
+        },
+        "prompt_tokens": 8724,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9876
+      },
+      "request_sha256": "965790645468640d0b94b6e4a8021a6ef0e52c1239c93d5a410659525e7d697b"
+    },
+    {
+      "method": "shared",
+      "status": "complete",
+      "coverage": "complete",
+      "expected": "complete",
+      "match": true,
+      "http_attempts": 1,
+      "disposition": "requires_review",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 338,
+        "completion_tokens_details": {
+          "reasoning_tokens": 330
+        },
+        "prompt_tokens": 8855,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9193
+      },
+      "request_sha256": "7f15c4382370b1036d716da0a47d10ae53bae3938c3f3095a4ed8fe373eb79dc"
+    }
+  ],
+  "evidence": [
+    {
+      "text": "word-overlap metrics like BLEU simply require too many ground-truth responses",
+      "start_byte": 39500,
+      "end_byte": 39577,
+      "candidate_checks": {
+        "equal": {
+          "in_delivered_passages": false,
+          "in_claim_text": false
+        },
+        "shared": {
+          "in_delivered_passages": true,
+          "in_claim_text": true
+        }
+      }
+    },
+    {
+      "text": "insufficiently complex for modeling sentence-level compositionality",
+      "start_byte": 39829,
+      "end_byte": 39896,
+      "candidate_checks": {
+        "equal": {
+          "in_delivered_passages": false,
+          "in_claim_text": false
+        },
+        "shared": {
+          "in_delivered_passages": true,
+          "in_claim_text": true
+        }
+      }
+    }
+  ],
+  "interpretation": "Producer inspection: equal omits both limitations; shared states both. Literal searches are provenance checks, not semantic adjudication.",
+  "limits": "Known development pair, one full source, two model calls, no independent review. No evidence of 188-page scale or full pipeline savings."
+}
