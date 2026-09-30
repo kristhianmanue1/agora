@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 157,
-  "bytes": 781421,
+  "documents": 158,
+  "bytes": 785970,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "98c81332f02b6e14f94354e7ebf0c932c26e5d0a8dcb5904f11ffb8c1f59bf57",
-      "bytes": 17382,
+      "sha256": "eb6e1202e0d525a233182544587782dfc9a6fba66a8faa4ce4e879d0f0834662",
+      "bytes": 17928,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -692,6 +692,10 @@
         },
         {
           "target": "../experiments/materiality-rubric-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "revision-rubrica.md",
           "exists": true
         }
       ],
@@ -1037,6 +1041,19 @@
       "bytes": 5066,
       "scope": "guidance_or_report",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/revision-rubrica.md",
+      "sha256": "bdb4cfd98c5e85fb193406c8fd5771b916aa4bc8d323e2954bbb126917174d13",
+      "bytes": 4003,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/materiality-rubric-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

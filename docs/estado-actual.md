@@ -117,3 +117,12 @@ Disponible [diagnose-omissions](diagnostico-omisiones-cli.md): propuesta separad
 ## Materialidad con requisitos explícitos
 
 [12 controles de rúbrica](../experiments/materiality-rubric-v1/README.md): 12/12 coincidencias con expectativas del productor, incluidas paráfrasis, omisiones, contradicción y cambio de detalle opcional a obligatorio al cambiar la pregunta. 10.991 tokens; dos documentos conocidos, un candidato real y controles sintéticos. Evidencia favorable a evaluar requisitos explícitos, no a descubrirlos automáticamente. Producto sin cambios. Próximo paso: rúbrica optativa versionada ligada a pregunta/fuente, con procedencia y completitud pendiente; nunca convertir conformidad a rúbrica en exhaustividad global.
+
+## Revisión optativa por rúbrica implementada
+
+Disponible [review-rubric](revision-rubrica.md): fuente, candidato y rúbrica fijados
+por SHA-256; pregunta exacta, procedencia declarada y evidencia con offsets UTF-8.
+Resultado limitado a requisitos suministrados, con exhaustividad no establecida y
+revisión requerida. 493 pruebas locales y recorrido CLI por replay con fuente real
+y respuesta sintética; cero llamadas nuevas. No cambia los revisores anteriores.
+Siguiente paso: contraste con rúbrica revisada por separado y caso reservado.
