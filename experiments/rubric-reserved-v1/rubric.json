@@ -1,0 +1,44 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "question": "What datasets are used for training and testing?",
+  "provenance": "Producer extraction from first QASPER human annotation; second annotation retained for separate review. No operator adjudication.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Identify this dataset, allowing equivalent names: SemEval-2018",
+      "evidence": {
+        "text": "To assess the performance of the proposed method we performed an exhaustive comparison with several advanced state-of-the-art methodologies along with published results. The used methodologies were appropriately implemented using the available codes and guidelines, and include: ELMo BIBREF64, USE BIBREF79, NBSVM BIBREF93, FastText BIBREF94, XLnet base cased model (XLnet) BIBREF88, BERT BIBREF18 in two setups: BERT base cased (BERT-Cased) and BERT base uncased (BERT-Uncased) models, and RoBERTa base model. The published results were acquired from the respective original publication (the reference publication is indicated in the respective tables). For the comparison we utilized benchmark datasets that include ironic, sarcastic and metaphoric expressions. Namely, we used the dataset provided in “Semantic Evaluation Workshop Task 3” (SemEval-2018) that contains ironic tweets BIBREF95; Riloff’s high quality sarcastic unbalanced dataset BIBREF96; a large dataset containing political comments from Reddit BIBREF97; and a SA dataset that contains tweets with various FL forms from “SemEval-2015 Task 11” BIBREF66. All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except from the “SemEval-2015 Task 11” dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet (refer to BIBREF0 for more details). The evaluation was made across standard five metrics namely, Accuracy (Acc), Precision (Pre), Recall (Rec), F1-score (F1), and Area Under the Receiver Operating Characteristics Curve (AUC). For the SA task the cosine similarity metric (Cos) and mean squared error (MSE) metrics are used, as proposed in the original study BIBREF66.",
+        "start_byte": 27998,
+        "end_byte": 29725
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Identify this dataset, allowing equivalent names: Riloff’s high quality sarcastic unbalanced dataset",
+      "evidence": {
+        "text": "To assess the performance of the proposed method we performed an exhaustive comparison with several advanced state-of-the-art methodologies along with published results. The used methodologies were appropriately implemented using the available codes and guidelines, and include: ELMo BIBREF64, USE BIBREF79, NBSVM BIBREF93, FastText BIBREF94, XLnet base cased model (XLnet) BIBREF88, BERT BIBREF18 in two setups: BERT base cased (BERT-Cased) and BERT base uncased (BERT-Uncased) models, and RoBERTa base model. The published results were acquired from the respective original publication (the reference publication is indicated in the respective tables). For the comparison we utilized benchmark datasets that include ironic, sarcastic and metaphoric expressions. Namely, we used the dataset provided in “Semantic Evaluation Workshop Task 3” (SemEval-2018) that contains ironic tweets BIBREF95; Riloff’s high quality sarcastic unbalanced dataset BIBREF96; a large dataset containing political comments from Reddit BIBREF97; and a SA dataset that contains tweets with various FL forms from “SemEval-2015 Task 11” BIBREF66. All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except from the “SemEval-2015 Task 11” dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet (refer to BIBREF0 for more details). The evaluation was made across standard five metrics namely, Accuracy (Acc), Precision (Pre), Recall (Rec), F1-score (F1), and Area Under the Receiver Operating Characteristics Curve (AUC). For the SA task the cosine similarity metric (Cos) and mean squared error (MSE) metrics are used, as proposed in the original study BIBREF66.",
+        "start_byte": 27998,
+        "end_byte": 29725
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Identify this dataset, allowing equivalent names: a large dataset containing political comments from Reddit",
+      "evidence": {
+        "text": "To assess the performance of the proposed method we performed an exhaustive comparison with several advanced state-of-the-art methodologies along with published results. The used methodologies were appropriately implemented using the available codes and guidelines, and include: ELMo BIBREF64, USE BIBREF79, NBSVM BIBREF93, FastText BIBREF94, XLnet base cased model (XLnet) BIBREF88, BERT BIBREF18 in two setups: BERT base cased (BERT-Cased) and BERT base uncased (BERT-Uncased) models, and RoBERTa base model. The published results were acquired from the respective original publication (the reference publication is indicated in the respective tables). For the comparison we utilized benchmark datasets that include ironic, sarcastic and metaphoric expressions. Namely, we used the dataset provided in “Semantic Evaluation Workshop Task 3” (SemEval-2018) that contains ironic tweets BIBREF95; Riloff’s high quality sarcastic unbalanced dataset BIBREF96; a large dataset containing political comments from Reddit BIBREF97; and a SA dataset that contains tweets with various FL forms from “SemEval-2015 Task 11” BIBREF66. All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except from the “SemEval-2015 Task 11” dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet (refer to BIBREF0 for more details). The evaluation was made across standard five metrics namely, Accuracy (Acc), Precision (Pre), Recall (Rec), F1-score (F1), and Area Under the Receiver Operating Characteristics Curve (AUC). For the SA task the cosine similarity metric (Cos) and mean squared error (MSE) metrics are used, as proposed in the original study BIBREF66.",
+        "start_byte": 27998,
+        "end_byte": 29725
+      }
+    },
+    {
+      "id": "R4",
+      "requirement": "Identify this dataset, allowing equivalent names: SA dataset that contains tweets with various FL forms from “SemEval-2015 Task 11”",
+      "evidence": {
+        "text": "To assess the performance of the proposed method we performed an exhaustive comparison with several advanced state-of-the-art methodologies along with published results. The used methodologies were appropriately implemented using the available codes and guidelines, and include: ELMo BIBREF64, USE BIBREF79, NBSVM BIBREF93, FastText BIBREF94, XLnet base cased model (XLnet) BIBREF88, BERT BIBREF18 in two setups: BERT base cased (BERT-Cased) and BERT base uncased (BERT-Uncased) models, and RoBERTa base model. The published results were acquired from the respective original publication (the reference publication is indicated in the respective tables). For the comparison we utilized benchmark datasets that include ironic, sarcastic and metaphoric expressions. Namely, we used the dataset provided in “Semantic Evaluation Workshop Task 3” (SemEval-2018) that contains ironic tweets BIBREF95; Riloff’s high quality sarcastic unbalanced dataset BIBREF96; a large dataset containing political comments from Reddit BIBREF97; and a SA dataset that contains tweets with various FL forms from “SemEval-2015 Task 11” BIBREF66. All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except from the “SemEval-2015 Task 11” dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet (refer to BIBREF0 for more details). The evaluation was made across standard five metrics namely, Accuracy (Acc), Precision (Pre), Recall (Rec), F1-score (F1), and Area Under the Receiver Operating Characteristics Curve (AUC). For the SA task the cosine similarity metric (Cos) and mean squared error (MSE) metrics are used, as proposed in the original study BIBREF66.",
+        "start_byte": 27998,
+        "end_byte": 29725
+      }
+    }
+  ]
+}

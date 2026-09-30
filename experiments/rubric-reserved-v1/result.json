@@ -1,0 +1,47 @@
+{
+  "status": "stopped_before_generation",
+  "stop_rule_triggered": true,
+  "document_id": "1911.10401",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "reviewer": {
+    "requested_model": "jev-1.13.0",
+    "reported_model": "jev-1.13.0",
+    "label": "deficient",
+    "rationale": "not_requested_or_returned",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "rubric": {
+          "type": "choice",
+          "choice": "deficient",
+          "confidence": 0.58,
+          "probabilities": {
+            "uncertain": 0.01,
+            "adequate": 0.27,
+            "deficient": 0.72
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 11210,
+        "output_tokens": 47
+      }
+    },
+    "elapsed_seconds": 0.534,
+    "request_sha256": "eee015b8f49997dbc49fcfcdfa5e4379d5f4cca740f76444a9371f8435f2f3fb",
+    "journal_sha256": "0ea23dac16326801e7882e3cf98f95afa852b068f09aa7470cd62ef69d4a24ec"
+  },
+  "http_calls": 1,
+  "glm_generation_calls": 0,
+  "glm_rubric_review_calls": 0,
+  "adjudication": "not_performed",
+  "candidate_created": false,
+  "independence": "Separate provider before candidate generation; producer designed rubric and review prompt. Not independent human adjudication.",
+  "limitations": [
+    "Reviewer returned deficient without identifying the defect.",
+    "Prompt explicitly mentioned pretraining versus task evaluation; possible framing influence.",
+    "Both QASPER annotations identify the four evaluation datasets. Alternative broader scope remains unresolved.",
+    "Single 34KB document, not a benchmark of very large sources or token savings."
+  ],
+  "next_step": "Request a localized critique identifying requirement ID or missing aspect with source locator; distinguish rubric defect from reviewer overreach before amending the frozen rubric."
+}

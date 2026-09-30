@@ -1,0 +1,22 @@
+{
+  "document_id": "1911.10401",
+  "question_id": "992e67f706c728bc0e534f974c1656da10e7a724",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "source_bytes": 34003,
+  "source_words": 4857,
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "review_cases_sha256": "2b7304e8af4437dba24b9b2a36ba5cd6524dc852fba199ac33dc29e214e404ca",
+  "selection_sha256": "e3df3e3c2162b8c2a75bd5715ae1d29080b8555c9a32a5e5f6e290da403f79f6",
+  "max_calls": {
+    "jev_rubric_review": 1,
+    "glm_generation": 1,
+    "glm_rubric_review": 2
+  },
+  "retries": 0,
+  "timeout_seconds": 90,
+  "review_before_candidate": true,
+  "stop_rule": "Stop before generation if rubric reviewer reports deficient or uncertain; no automatic rubric revision or reselection.",
+  "controls": "If generation valid, review unchanged candidate plus a producer-constructed answer listing only R1; latter expects R1 covered and R2-R4 missing. Freeze labels before provider results.",
+  "scope": "One previously unused local document; no claim of unseen model training data or global comprehension. No automatic promotion."
+}

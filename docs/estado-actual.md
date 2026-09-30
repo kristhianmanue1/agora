@@ -126,3 +126,14 @@ Resultado limitado a requisitos suministrados, con exhaustividad no establecida 
 revisión requerida. 493 pruebas locales y recorrido CLI por replay con fuente real
 y respuesta sintética; cero llamadas nuevas. No cambia los revisores anteriores.
 Siguiente paso: contraste con rúbrica revisada por separado y caso reservado.
+
+## Contraste reservado: discrepancia previa a generación
+
+[Primer caso reservado de rúbrica](../experiments/rubric-reserved-v1/README.md):
+Jev revisó fuente completa y requisitos antes de existir candidato y devolvió
+`deficient`, sin explicación localizada. Se cumplió la parada predefinida: una
+llamada, 11.257 tokens; ninguna generación ni evaluación GLM. No se adjudica error
+de la rúbrica: posible ambigüedad entre benchmarks y preentrenamiento, con riesgo
+de influencia del prompt del productor. Próximo paso: crítica localizada que
+permita distinguir defecto de rúbrica de exceso del revisor, sin cambiar el caso
+original ni promover completitud global.
