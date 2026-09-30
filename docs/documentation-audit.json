@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 154,
-  "bytes": 764821,
+  "documents": 155,
+  "bytes": 770058,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -520,8 +520,8 @@
     },
     {
       "path": "docs/diagnostico-omisiones-cli.md",
-      "sha256": "f8ec812e3c3461f2cbef7dc2f8919938f54c55f2af252d3efdbd7e9600565d6f",
-      "bytes": 2958,
+      "sha256": "f80947c18b7fe06a58286e3ecbdae8e0c4e6e79114a69001868b06405659c40e",
+      "bytes": 3473,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -530,6 +530,10 @@
         },
         {
           "target": "../experiments/omission-cli-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/omission-cli-budget-v2/README.md",
           "exists": true
         }
       ],
@@ -550,8 +554,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "1103539c04a1baac761784d828bb142df54c37d876824900b3450870d8e243b1",
-      "bytes": 15420,
+      "sha256": "c48e056d481a05b00ba0eb48df1a79b20f90cfdfb0e058f2fe769678dc133e55",
+      "bytes": 16121,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -672,6 +676,10 @@
         },
         {
           "target": "diagnostico-omisiones-cli.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/omission-cli-budget-v2/README.md",
           "exists": true
         }
       ],
@@ -1311,6 +1319,19 @@
       "bytes": 2348,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/omission-cli-budget-v2/README.md",
+      "sha256": "c912b50dfe4628b6a64fd3bb4fe7d2c9385529b94c8c55441d557c2618c97019",
+      "bytes": 4021,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../omission-cli-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

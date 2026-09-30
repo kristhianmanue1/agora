@@ -105,3 +105,7 @@ Disponible [review-coverage](revision-suficiencia-cli.md): selecciona una parte 
 ## Diagnóstico de omisiones experimental
 
 Disponible [diagnose-omissions](diagnostico-omisiones-cli.md): propuesta separada ligada por hashes a fuente, candidato y revisión, con IDs resueltos a citas y offsets exactos. Dos omisiones conocidas localizadas, dos propuestas adicionales sin adjudicar. El control suficiente agotó 2.048 tokens y quedó rechazado: validación semántica parcial, sin reintento ni reparación automática. Suite de 480 pruebas aprobada. Pendiente: condición explícita de presupuesto para completar el contraste de ambos candidatos; citas válidas no certifican omisión.
+
+## Diagnóstico: presupuesto explícito y control pendiente
+
+[Condición de 4.096 tokens](../experiments/omission-cli-budget-v2/README.md): ambos prompts idénticos a los anteriores; candidato incompleto produce cuatro propuestas, control suficiente termina sin truncamiento pero con JSON inválido. Su texto plantea dos faltantes adicionales cuya materialidad debe revisarse, por lo que la expectativa del control queda cuestionada sin cambiarla retrospectivamente. 26.946 tokens, dos llamadas. CLI admite --max-output-tokens 2048/4096, default intacto; 483 pruebas. Pendiente: eventual reparación como derivado explícito y adjudicación de relevancia, no más aumento automático de presupuesto.

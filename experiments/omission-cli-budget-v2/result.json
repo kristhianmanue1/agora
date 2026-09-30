@@ -1,0 +1,105 @@
+{
+  "records": [
+    {
+      "method": "equal",
+      "status": "complete",
+      "diagnosis_status": "proposed_omissions",
+      "diagnostic": null,
+      "review_disagreement": false,
+      "finish_reason": "stop",
+      "omissions": [
+        {
+          "missing": "Word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response, due to the high diversity of dialogue responses.",
+          "evidence": [
+            {
+              "id": "ev_78d851a52ccce0fe82b22cb8",
+              "start_byte": 39327,
+              "end_byte": 39909,
+              "text": "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue."
+            }
+          ],
+          "semantic_support": "not_verified",
+          "absence_from_candidate": "not_verified"
+        },
+        {
+          "missing": "Embedding-based metrics consisting of basic averages of vectors obtained through distributional semantics are insufficiently complex for modeling sentence-level compositionality in dialogue.",
+          "evidence": [
+            {
+              "id": "ev_78d851a52ccce0fe82b22cb8",
+              "start_byte": 39327,
+              "end_byte": 39909,
+              "text": "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue."
+            }
+          ],
+          "semantic_support": "not_verified",
+          "absence_from_candidate": "not_verified"
+        },
+        {
+          "missing": "There currently exists no perfect quantitative method to compare two conversational agents, and the field has to rely on measures like BLEU and perplexity that are borrowed from machine translation rather than designed for dialogue.",
+          "evidence": [
+            {
+              "id": "ev_5e62c32f84725d97bb431d44",
+              "start_byte": 4504,
+              "end_byte": 4899,
+              "text": "Despite such huge advancements in the field, the way these models are evaluated is something that needs to be dramatically altered. Currently there exists no perfect quantitative method to compare two conversational agents. The field has to rely on qualitative measures or measures like BLeU and perplexity borrowed from machine translation. In section SECREF8 we discuss this problem in detail."
+            }
+          ],
+          "semantic_support": "not_verified",
+          "absence_from_candidate": "not_verified"
+        },
+        {
+          "missing": "Because there can be multiple correct output utterances for a given input utterance, there is no quantitative way to evaluate how well a model is performing.",
+          "evidence": [
+            {
+              "id": "ev_ba3230de5c617202d51e0195",
+              "start_byte": 14385,
+              "end_byte": 15677,
+              "text": "Even though most of the modern work in the field is built on this approach there is a significant drawback to this idea. This model can theoretically never solve the problem of modelling dialogues due to various simplifications, the most important of them being the objective function that is being optimized does not capture the actual objective achieved through human communication, which is typically longer term and based on exchange of information rather than next step prediction. It is important to see that optimizing an agent to generate text based on what it sees in the two-turn conversation dataset that it is trained on does not mean that the agent would be able to generalize to human level conversation across contexts. Nevertheless in absence of a better way to capture human communication this approach laid the foundation of most of the modern advances in the field. Another problem that plagues this paper and the field in general is Evaluation. As there can be multiple correct output utterances for a given input utterance there is no quantitative way to evaluate how well a model is performing. In this paper to show the efficacy of their model the authors publish snippets of conversations across different datasets. We discuss this general problem in evaluation later."
+            }
+          ],
+          "semantic_support": "not_verified",
+          "absence_from_candidate": "not_verified"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2450,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2180
+        },
+        "prompt_tokens": 10758,
+        "prompt_tokens_details": {
+          "cached_tokens": 10752
+        },
+        "total_tokens": 13208
+      },
+      "model": "glm-5.3-flash",
+      "old_result_sha256": "949a18b2dbd1a56dc32e925296e698b4eec55d0fc0a7c0fec498382097833767",
+      "request_unchanged": true
+    },
+    {
+      "method": "shared",
+      "status": "failed",
+      "diagnosis_status": null,
+      "diagnostic": "JSONDecodeError",
+      "review_disagreement": null,
+      "finish_reason": "stop",
+      "omissions": [],
+      "usage": {
+        "completion_tokens": 2849,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2696
+        },
+        "prompt_tokens": 10889,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 13738
+      },
+      "model": "glm-5.3-flash",
+      "old_result_sha256": "813590949d2e383fefb0acf5def574dbc8fdb0d44414f557aa6a26158d029937",
+      "request_unchanged": true
+    }
+  ],
+  "known_tokens": 26946,
+  "limits": "One draw per candidate, known development pair, larger output budget but same prompts; no general causal or semantic reliability claim. Original attempts retained."
+}

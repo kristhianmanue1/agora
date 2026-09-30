@@ -11,7 +11,7 @@ python3 scripts/agora_issues.py --workspace /ruta/workspace diagnose-omissions \
   --response /ruta/respuesta.json --out /ruta/diagnostico-nuevo
 ```
 
-Sustituir `--response ...` por `--live` para una llamada explícita GLM, mediante Llavero como en la [guía de suficiencia](revision-suficiencia-cli.md). Máximo 2.048 tokens de salida y 90 s; cero reintentos. El directorio debe ser nuevo. Fuentes de hasta 160.000 bytes, candidato/revisión de hasta 8 MiB, prompt de hasta 200.000 bytes; sin truncamiento silencioso.
+Sustituir `--response ...` por `--live` para una llamada explícita GLM, mediante Llavero como en la [guía de suficiencia](revision-suficiencia-cli.md). Por defecto 2.048 tokens de salida; `--max-output-tokens 4096` permite un presupuesto explícito mayor. Timeout 90 s y cero reintentos. El presupuesto se registra en el informe y no altera el prompt. El directorio debe ser nuevo. Fuentes de hasta 160.000 bytes, candidato/revisión de hasta 8 MiB, prompt de hasta 200.000 bytes; sin truncamiento silencioso.
 
 El modelo recibe pregunta, candidato y unidades de evidencia con IDs. Devuelve:
 
@@ -28,3 +28,5 @@ Siempre disposition=requires_review. review_disagreement señala conflictos entr
 ## Estado de validación
 
 [Prueba real](../experiments/omission-cli-v1/README.md): localizó dos omisiones conocidas y propuso dos adicionales. El control con una respuesta suficiente se truncó y quedó rechazado. Por ello la validación semántica está **parcial**: aún no hay evidencia de ausencia de falsos faltantes en ese control. Diez pruebas específicas y regresión verifican mecanismos, no fiabilidad semántica.
+
+[Condición posterior de 4.096 tokens](../experiments/omission-cli-budget-v2/README.md): ya no hubo truncamiento, pero el control suficiente devolvió JSON con un carácter sobrante y quedó rechazado. Su texto propone dos posibles omisiones adicionales; la expectativa de ausencia de omisiones requiere revisión. Validación aún parcial, sin reparación automática.

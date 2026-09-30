@@ -1,0 +1,13 @@
+{
+  "max_calls": 2,
+  "retries": 0,
+  "max_output_tokens": 4096,
+  "timeout_seconds": 90,
+  "expectations": {
+    "equal": "two known limitations: BLEU diversity and embedding compositionality",
+    "shared": "no material omission expected"
+  },
+  "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+  "module_sha256": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c",
+  "origin": "known public QASPER development pair; producer expectations, not independent"
+}

@@ -41,6 +41,18 @@ class OmissionTests(unittest.TestCase):
   response=self.response();response['finish_reason']='length';(self.b/'response').write_text(json.dumps(response));r=o.run(self.a,lambda p:json.loads(Path(p).read_text()));self.assertEqual(r['diagnostic'],'generation_incomplete');self.assertIsNone(r['diagnosis_status'])
  def test_empty_diagnosis_preserves_disagreement(self):
   (self.b/'response').write_text(json.dumps(self.response(status='no_omission_found')));r=o.run(self.a,lambda p:json.loads(Path(p).read_text()));self.assertEqual(r['omission_count'],0);saved=json.loads((self.b/'out/result.json').read_text());self.assertTrue(saved['review_disagreement']);self.assertEqual(saved['disposition'],'requires_review')
+ def test_explicit_budget(self):
+  self.a.live=True;self.a.max_output_tokens=4096
+  with patch.object(o,'live_provider',return_value=self.response()) as call:r=o.run(self.a,None)
+  self.assertEqual(call.call_args.kwargs['max_tokens'],4096);self.assertEqual(json.loads((self.b/'out/result.json').read_text())['request_config']['max_tokens'],4096)
+ def test_invalid_budget_before_reservation(self):
+  self.a.max_output_tokens=4097
+  with self.assertRaises(ValueError):o.run(self.a,None)
+  self.assertFalse((self.b/'out').exists())
+ def test_default_budget_preserved(self):
+  self.a.live=True
+  with patch.object(o,'live_provider',return_value=self.response()) as call:o.run(self.a,None)
+  self.assertEqual(call.call_args.kwargs['max_tokens'],2048)
  def test_no_prior_label_in_prompt(self):
   self.assertEqual(set(json.loads(self.user)),{'task','answer','evidence_units'});self.assertNotIn('prior_coverage',self.user)
 if __name__=='__main__':unittest.main()
