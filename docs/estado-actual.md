@@ -109,3 +109,7 @@ Disponible [diagnose-omissions](diagnostico-omisiones-cli.md): propuesta separad
 ## Diagnóstico: presupuesto explícito y control pendiente
 
 [Condición de 4.096 tokens](../experiments/omission-cli-budget-v2/README.md): ambos prompts idénticos a los anteriores; candidato incompleto produce cuatro propuestas, control suficiente termina sin truncamiento pero con JSON inválido. Su texto plantea dos faltantes adicionales cuya materialidad debe revisarse, por lo que la expectativa del control queda cuestionada sin cambiarla retrospectivamente. 26.946 tokens, dos llamadas. CLI admite --max-output-tokens 2048/4096, default intacto; 483 pruebas. Pendiente: eventual reparación como derivado explícito y adjudicación de relevancia, no más aumento automático de presupuesto.
+
+## Derivado de formato y materialidad
+
+[Derivado local explícito](../experiments/omission-format-derived-v1/README.md): eliminado sólo el byte final sobrante, original rechazado intacto, replay válido sin red y dos propuestas con offsets verificados. La evaluación del productor no confirma ninguna como omisión material: una se solapa con diversidad/BLEU y otra añade contexto de origen. No es adjudicación independiente ni corrección del candidato. Prioridad siguiente: rúbrica de requisitos, paráfrasis y ampliaciones opcionales; no más incremento de tokens ni reparación automática.

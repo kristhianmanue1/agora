@@ -1,0 +1,17 @@
+{
+  "schema": "agora/explicit-format-derivation/v1-experimental",
+  "original_result_sha256": "a2fb27364b71792930816c7763ecff48f52d0f27fd2945b877b8e5b9efb743a3",
+  "original_content_sha256": "b34e32c00d2c2babd7922bff6569d8a76a773c9598e068eb563d0b8566361f1c",
+  "derived_content_sha256": "1df4bc25f880842d414194e60024cb93cf6a31a86a2570d9c741fee143d56696",
+  "derived_response_sha256": "f4eb99ab02ff69c6df83242ef0b3e1c0f6ec77b0c4330f284908ed95ca064c91",
+  "operation": {
+    "kind": "delete_exact_final_byte",
+    "offset": 648,
+    "deleted_hex": "60",
+    "bytes_removed": 1
+  },
+  "authority": "Operator approved explicit format derivative in current conversation",
+  "origin": "local_format_derivative_not_new_provider_response",
+  "semantic_adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}

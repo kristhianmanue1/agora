@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 155,
-  "bytes": 770058,
+  "documents": 156,
+  "bytes": 775012,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -520,8 +520,8 @@
     },
     {
       "path": "docs/diagnostico-omisiones-cli.md",
-      "sha256": "f80947c18b7fe06a58286e3ecbdae8e0c4e6e79114a69001868b06405659c40e",
-      "bytes": 3473,
+      "sha256": "66bf9bda2ca83d44fb0f3c4a2a7727d0b14c3170a7cac73217a91d2f70963c22",
+      "bytes": 3871,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -534,6 +534,10 @@
         },
         {
           "target": "../experiments/omission-cli-budget-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/omission-format-derived-v1/README.md",
           "exists": true
         }
       ],
@@ -554,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "c48e056d481a05b00ba0eb48df1a79b20f90cfdfb0e058f2fe769678dc133e55",
-      "bytes": 16121,
+      "sha256": "0efc0b78097bd007ca126c45935b23585af8aed00ba54206eea158bd2d83207d",
+      "bytes": 16722,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -680,6 +684,10 @@
         },
         {
           "target": "../experiments/omission-cli-budget-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/omission-format-derived-v1/README.md",
           "exists": true
         }
       ],
@@ -1345,6 +1353,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/omission-format-derived-v1/README.md",
+      "sha256": "fde123380826b0671ce1503e04f80388eadae17cc687b1bdfe58a462857b4b2d",
+      "bytes": 3955,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

@@ -1,0 +1,32 @@
+{
+  "schema": "agora/producer-materiality-assessment/v1-experimental",
+  "role": "producer self-review; not independent adjudication or operator acceptance",
+  "scope": "Two proposals in the explicitly repaired shared candidate diagnosis",
+  "reference_annotations": ["1ac3ebcf2b3bf93ba00aa223fd33bef6ed493a80", "8bf54cd3b3961f6274c0ac935831c32c4e28e9db", "d5636a22c955dfd4226efab5af79a44f71d84adf"],
+  "assessment_basis": "The first two annotations state weak human correlation, BLEU reference diversity and embedding compositionality. All three are explicit in shared. The third annotation adds the multiple-valid-responses rationale; annotations are alternatives, not a mandatory union.",
+  "findings": [
+    {
+      "proposal_index": 0,
+      "source_range": [14385, 15677],
+      "candidate_claim_index": 2,
+      "classification": "overlapping_explanation_material_omission_not_established",
+      "reason": "The candidate already explains that BLEU needs many ground-truth responses because dialogue responses are diverse. Multiple valid responses is a broader explanation of that limitation, not a clearly new missing requirement. The absolute source statement about no quantitative way should retain source attribution and not become a universal claim.",
+      "counterargument": "A reader requiring the broad evaluation limitation independent of BLEU could request this qualification explicitly. The third benchmark annotation includes it.",
+      "recommendation": "Keep as optional clarification, not automatic repair or confirmed material omission."
+    },
+    {
+      "proposal_index": 1,
+      "source_range": [4504, 4899],
+      "candidate_claim_indices": [0, 2, 3],
+      "classification": "additional_context_material_omission_not_established",
+      "reason": "No perfect metric restates the limitations already given. Borrowing metrics from machine translation adds provenance, but does not by itself specify an additional failure mechanism requested by the question. The source's borrowing statement alone does not prove every implication of rather than designed for dialogue.",
+      "counterargument": "For a question explicitly about the origin or suitability of evaluation metrics this context could be required; that is not separately requested here.",
+      "recommendation": "Do not add automatically; retain as context proposal."
+    }
+  ],
+  "conclusion": "Neither proposal is confirmed as a material omission under the core answer requirements in this producer assessment. This is not proof of exhaustive completeness or a general false-positive rate.",
+  "historical_expectation": "Preserved, not replaced: the original control expected no material omission.",
+  "candidate_modified": false,
+  "provider_calls": 0,
+  "next": "Define explicit task answer requirements and distinguish missing requirements from optional expansion before evaluating omission precision on new controls."
+}
