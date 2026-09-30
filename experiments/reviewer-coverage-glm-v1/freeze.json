@@ -1,0 +1,12 @@
+{
+  "cases_sha256": "9fd502dab9873c3e22a90fa9b7758290d7db4b69dc40161cc4f3a0d70b9343ad",
+  "previous_result_sha256": "4058118434f80fe78713735f2a40713d555ea141ea9fcfac3bc31a82b6bf7b89",
+  "max_calls": 10,
+  "model": "glm-5.3-flash",
+  "max_tokens": 2048,
+  "temperature": 0,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "scope": "same ten coverage states, original order, criteria and instructions; different provider API encoding; no reference answers or previous labels sent",
+  "limits": "known development controls, same model family as generator, no independent adjudication, historical comparison not randomized concurrent trial"
+}

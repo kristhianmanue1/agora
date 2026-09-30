@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 147,
-  "bytes": 732816,
+  "documents": 148,
+  "bytes": 739047,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "5aea1a8611b19d8a86d9ade3dead90cf3d1750415fc340e54c793de3bea9579e",
-      "bytes": 12212,
+      "sha256": "50227fc41197f041723e0581a0d55c9ca541f5f4e85d27b1d1a6d653a7a73e0a",
+      "bytes": 12802,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -627,6 +627,10 @@
         },
         {
           "target": "../experiments/reviewer-separated-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewer-coverage-glm-v1/README.md",
           "exists": true
         }
       ],
@@ -1510,6 +1514,19 @@
       "bytes": 3891,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/reviewer-coverage-glm-v1/README.md",
+      "sha256": "48d91a71e1f960dd7a21a5d7ba113fe91ced316a63d71c8342056ed3d15e7b66",
+      "bytes": 5641,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../reviewer-separated-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
