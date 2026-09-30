@@ -147,3 +147,24 @@ intactos; un fallo de importación posterior a la respuesta GLM se resolvió med
 validación local sin repetir llamada. No se generaron candidatos ni se acredita
 exhaustividad. Próximo paso: candidato real y control de omisión en condición nueva,
 conservar discrepancia y evaluar cobertura respecto a la rúbrica.
+
+## Candidato real: rechazo por citas repetidas
+
+[Prueba de candidato y control](../experiments/rubric-candidates-v1/README.md): una
+generación GLM terminó normalmente, pero expandió referencias a 15.062 bytes frente
+al límite de 12.000; cuatro unidades únicas (5.097 bytes), once usos por afirmación.
+Rechazo reproducido localmente. Se detuvo la condición según el plan: cero revisiones,
+sin cambios de límites, rúbrica o producto. Pendiente: derivado explícito con referencias
+redundantes retiradas tras verificar respaldo; después contrastarlo con el control.
+No hay todavía resultado de cobertura de esta pareja.
+
+## Comparación completada con derivado explícito
+
+[Condición derivada](../experiments/rubric-candidates-derived-v1/README.md): se retiraron
+tres referencias redundantes sin cambiar afirmaciones ni faltantes; citas de 15.062
+a 11.041 bytes. `review-rubric` detectó las tres omisiones del control y marcó los
+cuatro requisitos cubiertos en el derivado; ocho etiquetas coinciden con expectativas
+del productor. Tres llamadas contando generación, 18.963 tokens. Original rechazado
+intacto: éxito asistido, no autónomo. Próxima prioridad: generación que respete el
+presupuesto de citas, seguida de comparación lectura selectiva/completa en otro caso
+reservado. Sin evidencia todavía de ahorro o exhaustividad global.

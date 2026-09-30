@@ -1,0 +1,34 @@
+{
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "control_sha256": "4bc37b9505012e9ade3f8e341eae59cf404b0b364afc5fc0b755279c0628b50a",
+  "question": "What datasets are used for training and testing?",
+  "source_bytes": 34003,
+  "source_words": 4857,
+  "baseline_head": "786c34812d879834e5f0fa2993b5b7011d9b6a6d",
+  "max_calls": 3,
+  "generation": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 4096,
+    "source_reading": "full",
+    "citation_mode": "ids",
+    "rubric_hidden": true
+  },
+  "review": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 2048,
+    "command": "review-rubric"
+  },
+  "timeout_seconds": 90,
+  "retries": 0,
+  "control_expected": {
+    "R1": "covered",
+    "R2": "missing",
+    "R3": "missing",
+    "R4": "missing"
+  },
+  "control_risk": "Control quote includes all datasets; reviewer must score claim text, not mistake quoted background for answered information.",
+  "real_expected": "Not prelabelled; producer labels candidate against frozen requirements before dispatching reviews.",
+  "limits": "Known development case after rubric diagnosis; same provider generates and reviews, not independent adjudication. No reading reduction claim.",
+  "stop_rule": "Stop after invalid generation; no retries, no response repairs, no rubric changes. Report review failures without replacing them."
+}

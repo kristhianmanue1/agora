@@ -1,0 +1,110 @@
+{
+  "status": "comparison_complete",
+  "rows": [
+    {
+      "id": "a",
+      "kind": "synthetic_omission_control",
+      "status": "complete",
+      "expected": {
+        "R1": "covered",
+        "R2": "missing",
+        "R3": "missing",
+        "R4": "missing"
+      },
+      "actual": {
+        "R1": "covered",
+        "R2": "missing",
+        "R3": "missing",
+        "R4": "missing"
+      },
+      "match": true,
+      "result_sha256": "f9ced84ab1cb55ff6372aec3dcd2da0c617140c35f8bba8d4b2ff6ca8c820161",
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"missing\"},{\"id\":\"R3\",\"status\":\"missing\"},{\"id\":\"R4\",\"status\":\"missing\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 198,
+          "completion_tokens_details": {
+            "reasoning_tokens": 152
+          },
+          "prompt_tokens": 2457,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 2655
+        },
+        "response_id": "20261001022354821b2babf0f145b6"
+      },
+      "disposition": "requires_review",
+      "scope": "supplied_requirements_only",
+      "rubric_completeness": "not_established"
+    },
+    {
+      "id": "b",
+      "kind": "explicitly_repaired_real_candidate",
+      "status": "complete",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "covered"
+      },
+      "actual": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "covered"
+      },
+      "match": true,
+      "result_sha256": "874c6136e708718222f81f216f9c10ac3a612f85f9a4d4a534d7876a072a4406",
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"},{\"id\":\"R4\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 545,
+          "completion_tokens_details": {
+            "reasoning_tokens": 499
+          },
+          "prompt_tokens": 4782,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 5327
+        },
+        "response_id": "20261001022359e545b6de3d584808"
+      },
+      "disposition": "requires_review",
+      "scope": "supplied_requirements_only",
+      "rubric_completeness": "not_established"
+    }
+  ],
+  "matches": 2,
+  "review_calls": 2,
+  "review_tokens": 7982,
+  "total_with_generation_tokens": 18963,
+  "total_with_generation_http_calls": 3,
+  "total_with_generation_seconds": 48.721,
+  "timing_receipts": [
+    {
+      "id": "a",
+      "exit_code": 0,
+      "elapsed_seconds": 5.424
+    },
+    {
+      "id": "b",
+      "exit_code": 0,
+      "elapsed_seconds": 9.342
+    }
+  ],
+  "source_reading": "full_34003_bytes",
+  "unique_cited_bytes": 5097,
+  "original_quote_uses_bytes": 15062,
+  "derived_quote_uses_bytes": 11041,
+  "autonomous_generation_success": false,
+  "adjudication": "not_performed",
+  "limits": "Two known cases, producer expectations, same GLM family for generation and review, explicit assisted citation repair; no general recall, independent review or reading savings established."
+}

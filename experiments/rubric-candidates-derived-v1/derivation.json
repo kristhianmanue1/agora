@@ -1,0 +1,27 @@
+{
+  "original_response_sha256": "ea0bf698049a6172c9e677405fe133c50c50234cb0160bed0676a7452eaaf175",
+  "original_candidate_sha256": "c904d1c484dcf72aa5554823e4101dd63df2dcc340f8d0788765d13a71b1ab30",
+  "derived_response_sha256": "827caaeec472ef5feb523aafda9ae36079c8c15f48479dc9cb3981d73377de68",
+  "derived_candidate_sha256": "c71ea8c0e951fe06e43086e98f3f3200895f00b5e67f121ab9ac427d26ac5c09",
+  "claims_and_missing_unchanged": true,
+  "removed": [
+    {
+      "claim_index": 0,
+      "evidence_id": "ev_9f9a1f82248d3aabcf75f9b2",
+      "producer_support_assessment": "Conclusion independently establishes model comparison on four benchmarks."
+    },
+    {
+      "claim_index": 1,
+      "evidence_id": "ev_8c948faa0a382ec4d23964d9",
+      "producer_support_assessment": "Results paragraph identifies SemEval-2018 Task 3.A ironic dataset and use in comparison."
+    },
+    {
+      "claim_index": 4,
+      "evidence_id": "ev_92954702e6156d889ae0607f",
+      "producer_support_assessment": "Benchmark description directly identifies SemEval-2015 Task 11 and figurative-language tweets."
+    }
+  ],
+  "authority": "Operator authorized completing candidate/control test; bounded explicit derivation with original preserved",
+  "review_independence": "Producer source audit, not independent semantic adjudication",
+  "http_calls": 0
+}

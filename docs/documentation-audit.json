@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 160,
-  "bytes": 794372,
+  "documents": 162,
+  "bytes": 802673,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "907c618595cd1995abe9593f85c285f486378b3d8f34c42bb62f571def3981a4",
-      "bytes": 19228,
+      "sha256": "b77321267ba02f2d685a9513e8324e0973dc6857420d103b4bf6206467ba40e8",
+      "bytes": 20583,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -704,6 +704,14 @@
         },
         {
           "target": "../experiments/rubric-localized-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/rubric-candidates-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/rubric-candidates-derived-v1/README.md",
           "exists": true
         }
       ],
@@ -1740,6 +1748,32 @@
       "bytes": 854,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/rubric-candidates-derived-v1/README.md",
+      "sha256": "fc83db6ea83807324124adfd37aa3074c1ab104d5a5b0b9de7172047d282567f",
+      "bytes": 3891,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../rubric-candidates-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/rubric-candidates-v1/README.md",
+      "sha256": "c9e4f5762fc0c733bc6cd823287e2bf4b7dd88f639752cb2d85eb0cb7b141028",
+      "bytes": 3055,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../rubric-candidates-derived-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

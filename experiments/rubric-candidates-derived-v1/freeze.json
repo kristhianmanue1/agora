@@ -1,0 +1,36 @@
+{
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "question": "What datasets are used for training and testing?",
+  "max_calls": 2,
+  "max_tokens": 2048,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "cases": [
+    {
+      "id": "a",
+      "candidate": "../rubric-candidates-v1/inputs/control.json",
+      "sha256": "4bc37b9505012e9ade3f8e341eae59cf404b0b364afc5fc0b755279c0628b50a",
+      "expected": {
+        "R1": "covered",
+        "R2": "missing",
+        "R3": "missing",
+        "R4": "missing"
+      }
+    },
+    {
+      "id": "b",
+      "candidate": "inputs/derived.json",
+      "sha256": "c71ea8c0e951fe06e43086e98f3f3200895f00b5e67f121ab9ac427d26ac5c09",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "covered"
+      }
+    }
+  ],
+  "expected_origin": "Producer labels frozen before reviews; omissions by construction, real labels by source audit. Not independent adjudication.",
+  "stop_rule": "No retries, repairs or rubric edits in this condition; mismatch or failure remains in result.",
+  "limits": "Original generation rejected. Only explicit repaired candidate is tested; same-provider generation/review, known development case."
+}

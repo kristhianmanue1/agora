@@ -1,0 +1,51 @@
+{
+  "status": "stopped_on_generation_rejection",
+  "http_calls": 1,
+  "review_calls": 0,
+  "review_comparison": "not_executed",
+  "source_sha256": "25bda1ae42543221bc0be55788974990eeb198e61ecc7d261598adfdc8c036b2",
+  "rubric_sha256": "5a77adc78a3e47cba159e0bf62fedbbb1c31e170d3677a69e9f7abf9cae434f7",
+  "candidate_sha256": "c904d1c484dcf72aa5554823e4101dd63df2dcc340f8d0788765d13a71b1ab30",
+  "response_sha256": "ea0bf698049a6172c9e677405fe133c50c50234cb0160bed0676a7452eaaf175",
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The devised hybrid neural architecture's performance is tested on four benchmark datasets, and the RCNN-RoBERTa model is compared with published approaches under four different benchmark datasets.\",\"evidence_ids\":[\"ev_9f9a1f82248d3aabcf75f9b2\",\"ev_ec5465276095d4c61a5f4e00\"]},{\"text\":\"The benchmark datasets include the dataset provided in the 'Semantic Evaluation Workshop Task 3' (SemEval-2018) that contains ironic tweets, specifically the ironic dataset used in SemEval-2018 Task 3.A.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\",\"ev_92954702e6156d889ae0607f\"]},{\"text\":\"Riloff's high quality sarcastic unbalanced dataset (Riloff Twitter) is among the datasets used.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\",\"ev_92954702e6156d889ae0607f\"]},{\"text\":\"A large dataset containing political comments from Reddit (Reddit SARC politics) is among the datasets used.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\",\"ev_92954702e6156d889ae0607f\"]},{\"text\":\"A sentiment analysis dataset containing tweets with various figurative language forms from 'SemEval-2015 Task 11' is among the datasets used.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\",\"ev_92954702e6156d889ae0607f\"]},{\"text\":\"All datasets are used in a binary classification manner (i.e., irony/sarcasm vs. literal), except from the 'SemEval-2015 Task 11' dataset where the task is to predict a sentiment integer score (from -5 to 5) for each tweet.\",\"evidence_ids\":[\"ev_8c948faa0a382ec4d23964d9\"]}],\"missing\":[\"The passages do not specify the train/test splits, dataset sizes, or how the four benchmark datasets were divided between training and testing for the proposed model's experiments.\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 2283,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1751
+      },
+      "prompt_tokens": 8698,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 10981
+    },
+    "response_id": "20261001022020b48a512158db4cb6"
+  },
+  "receipt": {
+    "status": "returned",
+    "http_attempts": 1,
+    "elapsed_seconds": 33.955
+  },
+  "diagnostics": [
+    {
+      "code": "part_quote_bytes_exceeded",
+      "part_id": "P1",
+      "observed": 15062,
+      "limit": 12000
+    }
+  ],
+  "quote_accounting": {
+    "uses": 11,
+    "unique_units": 4,
+    "resolved_bytes_with_repetitions": 15062,
+    "unique_resolved_bytes": 5097,
+    "per_part_limit": 12000
+  },
+  "control": "Structurally validated locally; no model review executed",
+  "limits": "Response text names all four datasets, but candidate was rejected structurally and has no rubric verdict. Unique-byte count is diagnostic, not a replacement policy.",
+  "next_step": "New explicit derived-candidate condition: preserve all claims and missing statements, remove only redundant secondary evidence IDs with a source-support audit, record original/derived hashes, then validate and compare. Do not raise budgets or silently repair original."
+}
