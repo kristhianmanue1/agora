@@ -1,0 +1,11 @@
+{
+  "max_calls": 2,
+  "retries": 0,
+  "expectations": {
+    "equal": "two known limitations: BLEU diversity and embedding compositionality",
+    "shared": "no material omission expected"
+  },
+  "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+  "module_sha256": "fe743f57576cf854784c20579ad831a6979adbd6e34e200fca3c5ff9e3931694",
+  "origin": "known public QASPER development pair; producer expectations, not independent"
+}

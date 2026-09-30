@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 152,
-  "bytes": 757652,
+  "documents": 154,
+  "bytes": 764821,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "5031f50c43c8d07ffd603ded0899d81a670e21a181ef543e055bd59501754c70",
-      "bytes": 4530,
+      "sha256": "ca2890e5740dba65fd3999c8083262902aaf4db02f9cacf0950e9e2ff4d7e7b0",
+      "bytes": 4705,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -182,6 +182,10 @@
         },
         {
           "target": "docs/revision-suficiencia-cli.md",
+          "exists": true
+        },
+        {
+          "target": "docs/diagnostico-omisiones-cli.md",
           "exists": true
         }
       ],
@@ -515,6 +519,23 @@
       "python_modules": []
     },
     {
+      "path": "docs/diagnostico-omisiones-cli.md",
+      "sha256": "f8ec812e3c3461f2cbef7dc2f8919938f54c55f2af252d3efdbd7e9600565d6f",
+      "bytes": 2958,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "revision-suficiencia-cli.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/omission-cli-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "docs/ensayo-documento-real.md",
       "sha256": "828359b8a59c2bef7773e7024c0e801589a72485984fa3a272baee540cf89979",
       "bytes": 5480,
@@ -529,8 +550,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "0479aaf3187ec3b78594bcdb8e8118d88ce9ef2e52b4333e431f7993d3936484",
-      "bytes": 14816,
+      "sha256": "1103539c04a1baac761784d828bb142df54c37d876824900b3450870d8e243b1",
+      "bytes": 15420,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -647,6 +668,10 @@
         },
         {
           "target": "../experiments/coverage-cli-long-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "diagnostico-omisiones-cli.md",
           "exists": true
         }
       ],
@@ -1286,6 +1311,19 @@
       "bytes": 2348,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/omission-cli-v1/README.md",
+      "sha256": "730546801af0027d284a3bbc56f2baa1089e983582087648405e86e6bf4a38d2",
+      "bytes": 3432,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../../docs/diagnostico-omisiones-cli.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

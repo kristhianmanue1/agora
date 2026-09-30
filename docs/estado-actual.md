@@ -101,3 +101,7 @@ Disponible [review-coverage](revision-suficiencia-cli.md): selecciona una parte 
 ## CLI contrastada con omisiones reales
 
 [Fuente de 41.578 bytes / 6.474 palabras](../experiments/coverage-cli-long-v1/README.md): dos candidatos reales conservados, omitted para el incompleto y complete para el que incluye ambas limitaciones faltantes. Se localizaron fragmentos sobre BLEU y embeddings presentes sólo en el contexto redistribuido. Dos revisiones CLI, 19.069 tokens, originales intactos y requires_review en ambos. Caso conocido de desarrollo, no escala de 188 páginas ni ahorro total probado. Siguiente paso propuesto: diagnóstico de omisiones con localizadores verificables; la CLI actual entrega sólo clasificación.
+
+## Diagnóstico de omisiones experimental
+
+Disponible [diagnose-omissions](diagnostico-omisiones-cli.md): propuesta separada ligada por hashes a fuente, candidato y revisión, con IDs resueltos a citas y offsets exactos. Dos omisiones conocidas localizadas, dos propuestas adicionales sin adjudicar. El control suficiente agotó 2.048 tokens y quedó rechazado: validación semántica parcial, sin reintento ni reparación automática. Suite de 480 pruebas aprobada. Pendiente: condición explícita de presupuesto para completar el contraste de ambos candidatos; citas válidas no certifican omisión.
