@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "origin": "live",
+  "http_attempts": 1,
+  "coverage": "complete",
+  "disposition": "requires_review",
+  "source_sha256": "fb5d5ae81eb37a6300f73996ec993260332f8101e86e13802731375807925162",
+  "candidate_sha256": "bc7dc6653a5685b9cd090ab5e4b7624b08b3ae9dcbbe3fd1bb5f20962039ccda",
+  "implementation_sha256": "54b039dc90ca25c13dd36e0cc4c6d36cfad4cc035453c53eed46222743003eea",
+  "model": "glm-5.3-flash",
+  "usage": {
+    "completion_tokens": 162,
+    "completion_tokens_details": {
+      "reasoning_tokens": 150
+    },
+    "prompt_tokens": 8155,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8317
+  },
+  "note": "Live run before additive source_completeness metadata field; prompt and execution unchanged, final code rechecked offline."
+}

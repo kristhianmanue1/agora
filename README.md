@@ -79,3 +79,5 @@ CLI de ampliación: [preparar, inspeccionar y volver a evaluar](docs/ampliacion-
 Recuperación local: [subpreguntas y funciones](docs/subpreguntas.md).
 
 Generación conectada: [plan verificado → candidato](docs/generacion-desde-plan.md).
+
+Revisión optativa de suficiencia: [review-coverage](docs/revision-suficiencia-cli.md), con replay o una llamada GLM explícita; sin admisión automática.

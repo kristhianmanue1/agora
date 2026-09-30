@@ -1,0 +1,8 @@
+{
+  "source_sha256": "fb5d5ae81eb37a6300f73996ec993260332f8101e86e13802731375807925162",
+  "candidate_sha256": "bc7dc6653a5685b9cd090ab5e4b7624b08b3ae9dcbbe3fd1bb5f20962039ccda",
+  "question": "What state-of-the-art tagging model did they use?",
+  "origin": "real GLM generation conserved from retrieval-answer-ids-v1, materialized via query_evidence replay; no new generation",
+  "original_id": "i1e29c734e8",
+  "original_journal_sha256": "e5db845b89b62a10d1d2a307a3577f3cdc52965851f6f812ff6ac980781999f9"
+}

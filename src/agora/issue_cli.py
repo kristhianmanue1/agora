@@ -62,6 +62,8 @@ def parser():
     group=s.add_mutually_exclusive_group(required=True)
     group.add_argument('--live',action='store_true');group.add_argument('--response')
     s.add_argument('--citation-mode',choices=('literal','ids'),default='literal')
+    from .coverage_cli import add_command
+    add_command(sub)
     from .expansion_cli import add_commands
     add_commands(sub)
     return p
@@ -75,6 +77,9 @@ def run(args):
         write_new(workspace/'workspace.json',dict(schema=WORKSPACE))
         return dict(status='initialized',workspace=str(workspace))
     if read(workspace/'workspace.json')!={'schema':WORKSPACE}:raise ValueError('incompatible_workspace')
+    if args.command=='review-coverage':
+        from .coverage_cli import run as review_coverage
+        return review_coverage(args,read)
     if args.command=='generate-plan':
         from .plan_generation import run as generate_plan
         return generate_plan(args,read)
@@ -159,7 +164,7 @@ def main(argv=None):
     args=parser().parse_args(argv);os.umask(0o077)
     try:
         result=run(args)
-        code=2 if args.command=='generate-plan' and result.get('status') in ('failed','rejected') else 0
+        code=2 if args.command in ('generate-plan','review-coverage') and result.get('status') in ('failed','rejected') else 0
     except (ValueError,KeyError,TypeError,OSError,sqlite3.Error,subprocess.SubprocessError) as exc:
         # Do not echo source text, provider bodies, keys, or arbitrary exception text.
         safe=str(exc) if type(exc) is ValueError and str(exc).replace('_','').isalnum() else type(exc).__name__

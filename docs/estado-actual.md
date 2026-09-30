@@ -93,3 +93,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Batería nueva de suficiencia GLM
 
 [14 controles sobre seis documentos nuevos](../experiments/coverage-heldout-v1/README.md): 14/14 expectativas del productor, cero falsos complete y todas las llamadas terminadas. Incluye respuestas suficientes, parciales, alteradas y abstenciones necesarias/innecesarias. 90.040 tokens reportados. Corpus nuevo respecto del inventario local acotado; controles mínimos sin citas, no candidatos nuevos del generador ni adjudicación independiente. Configuración congelada, sin ajuste posterior. Próximo paso recomendado: opción experimental explícita en CLI, con informe separado de fidelidad/admisión, replay y fallos simulados antes de una ejecución real. Producto aún sin cambios.
+
+## Opción CLI experimental de suficiencia
+
+Disponible [review-coverage](revision-suficiencia-cli.md): selecciona una parte de candidato por IDs/literal v1/v2, verifica hashes y registra consejo de suficiencia frente a fuente completa suministrada. Replay sin red o una llamada GLM explícita, sin reintentos. Candidato y defaults preservados; siempre requires_review, sin admisión ni evaluación de fidelidad. Replay, rechazo y llamada real comprobados; suite de 470 pruebas aprobada. El informe se conserva en archivos separados, sin recuperación transaccional general. Preguntas ambiguas y adjudicación independiente siguen pendientes.

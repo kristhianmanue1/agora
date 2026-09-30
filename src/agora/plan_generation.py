@@ -46,10 +46,11 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
     return result
 
 
-def live_provider(system, user):
+def live_provider(system, user, *, max_tokens=8192, json_object=False):
     key=os.environ.get('ZAI_API_KEY') or os.environ.get('SKOPOS_LLM_API_KEY')
     if not key:raise ValueError('provider_key_missing')
-    payload=dict(model='glm-5.3-flash',messages=[dict(role='system',content=system),dict(role='user',content=user)],max_tokens=8192,temperature=0)
+    payload=dict(model='glm-5.3-flash',messages=[dict(role='system',content=system),dict(role='user',content=user)],max_tokens=max_tokens,temperature=0)
+    if json_object:payload["response_format"]={"type":"json_object"}
     request=urllib.request.Request(ENDPOINT,data=json.dumps(payload).encode(),headers={'Content-Type':'application/json','Authorization':'Bearer '+key})
     class NoRedirect(urllib.request.HTTPRedirectHandler):
         def redirect_request(self,*args,**kwargs):return None

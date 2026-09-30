@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 149,
-  "bytes": 746195,
+  "documents": 151,
+  "bytes": 752841,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "b441dc128b98e955bed303d7d9be53838ebd80b120e806a013d6b47a682bac1a",
-      "bytes": 4373,
+      "sha256": "5031f50c43c8d07ffd603ded0899d81a670e21a181ef543e055bd59501754c70",
+      "bytes": 4530,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -178,6 +178,10 @@
         },
         {
           "target": "docs/generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "docs/revision-suficiencia-cli.md",
           "exists": true
         }
       ],
@@ -525,8 +529,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "fa530dc152b05e7b2fa51f63d9ae52b05e334b1a30c36196f1b2c51712756070",
-      "bytes": 13531,
+      "sha256": "365a2848cfe823beb1cf0e9408172bfe7d998c37b7e011791b0bf20ce9b290e9",
+      "bytes": 14174,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -635,6 +639,10 @@
         },
         {
           "target": "../experiments/coverage-heldout-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "revision-suficiencia-cli.md",
           "exists": true
         }
       ],
@@ -996,6 +1004,23 @@
       "python_modules": []
     },
     {
+      "path": "docs/revision-suficiencia-cli.md",
+      "sha256": "6108a35a6ce408eac77ef2cba5fa04609850319c0077093c9db40355b86f65bc",
+      "bytes": 4304,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/coverage-cli-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/coverage-heldout-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "docs/seleccion-lectura.md",
       "sha256": "4d47d4ab6e653224e6ec683541251790536ae865962cb5810a9bb88b097697e4",
       "bytes": 2081,
@@ -1098,6 +1123,19 @@
       "bytes": 5342,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/coverage-cli-v1/README.md",
+      "sha256": "1770bff1101cc27c413fc7789d291ea00ab596f8d0e90c2a7ba4bfcae9636c2f",
+      "bytes": 1542,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../../docs/revision-suficiencia-cli.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
