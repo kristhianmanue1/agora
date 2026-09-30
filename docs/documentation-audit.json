@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 148,
-  "bytes": 739047,
+  "documents": 149,
+  "bytes": 746195,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "50227fc41197f041723e0581a0d55c9ca541f5f4e85d27b1d1a6d653a7a73e0a",
-      "bytes": 12802,
+      "sha256": "fa530dc152b05e7b2fa51f63d9ae52b05e334b1a30c36196f1b2c51712756070",
+      "bytes": 13531,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -631,6 +631,10 @@
         },
         {
           "target": "../experiments/reviewer-coverage-glm-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/coverage-heldout-v1/README.md",
           "exists": true
         }
       ],
@@ -1094,6 +1098,19 @@
       "bytes": 5342,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/coverage-heldout-v1/README.md",
+      "sha256": "5ae318caf5c08e37bf96858729043e0dacc6dd4756a74f9a60647dfe067c08f0",
+      "bytes": 6419,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../reviewer-coverage-glm-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

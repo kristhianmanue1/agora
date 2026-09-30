@@ -1,0 +1,14 @@
+{
+  "cases_sha256": "3d2adb0ef00e3c912e4d7a98e9d1a77f0201b3bf32f005cb38ab82645694b67c",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "configuration_sha256": "469a0f333802db6ce6399f4e3417b46554a5415deada59d6c2fb8193d5b0e098",
+  "criteria_source_sha256": "6d2f5f0428d4a9787100dd638fab898b66f5746c8ad6f56714064ce5150b8539",
+  "max_calls": 14,
+  "model": "glm-5.3-flash",
+  "max_tokens": 2048,
+  "temperature": 0,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "predeclared_threshold": "14/14 expected labels and zero false-complete necessary but not sufficient for promotion; any false complete blocks promotion. Report per group and document, not independent n=14.",
+  "limits": "Six documents absent from bounded local inventory, not guaranteed unseen in training or all history; hand-built uncited semantic controls, not production generator outputs; references inspected before predictions; no prompt tuning."
+}

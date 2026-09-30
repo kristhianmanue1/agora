@@ -1,0 +1,156 @@
+[
+  {
+    "id": "hf51c906c17d9",
+    "document_id": "1606.07947",
+    "question_id": "ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+    "group": "adequate",
+    "expected_coverage": "complete",
+    "source_sha256": "3855280091e9719923eb8a52e01f39407e2e8646faaa3d35a5a1fa25b54ca0bb",
+    "source_bytes": 24843,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "h7f0b1f56a2c4",
+    "document_id": "1606.07947",
+    "question_id": "ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+    "group": "altered",
+    "expected_coverage": "omitted",
+    "source_sha256": "3855280091e9719923eb8a52e01f39407e2e8646faaa3d35a5a1fa25b54ca0bb",
+    "source_bytes": 24843,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hb740bbb150d1",
+    "document_id": "1606.07947",
+    "question_id": "ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+    "group": "abstention",
+    "expected_coverage": "omitted",
+    "source_sha256": "3855280091e9719923eb8a52e01f39407e2e8646faaa3d35a5a1fa25b54ca0bb",
+    "source_bytes": 24843,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "h42019c6f3433",
+    "document_id": "1908.10149",
+    "question_id": "b21245212244ad7adf7d321420f2239a0f0fe56b",
+    "group": "adequate",
+    "expected_coverage": "complete",
+    "source_sha256": "02a3f9759a7aee4fe51d2116be25cce79bd4d447ace27d8c129a9ce7aa1432f4",
+    "source_bytes": 21582,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hdf8fbc71766d",
+    "document_id": "1908.10149",
+    "question_id": "b21245212244ad7adf7d321420f2239a0f0fe56b",
+    "group": "altered",
+    "expected_coverage": "omitted",
+    "source_sha256": "02a3f9759a7aee4fe51d2116be25cce79bd4d447ace27d8c129a9ce7aa1432f4",
+    "source_bytes": 21582,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "h2eed3a49c4c0",
+    "document_id": "1908.10149",
+    "question_id": "b21245212244ad7adf7d321420f2239a0f0fe56b",
+    "group": "abstention",
+    "expected_coverage": "omitted",
+    "source_sha256": "02a3f9759a7aee4fe51d2116be25cce79bd4d447ace27d8c129a9ce7aa1432f4",
+    "source_bytes": 21582,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hc8bd4c32fcea",
+    "document_id": "1805.09960",
+    "question_id": "6656a9472499331f4eda45182ea697a4d63e943c",
+    "group": "adequate",
+    "expected_coverage": "complete",
+    "source_sha256": "b6d7e9afe109b30b7a8643788626c1ad46f3ca9954560b62fb658e83b0d9a3b9",
+    "source_bytes": 25818,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hcefb5bd54831",
+    "document_id": "1805.09960",
+    "question_id": "6656a9472499331f4eda45182ea697a4d63e943c",
+    "group": "partial",
+    "expected_coverage": "omitted",
+    "source_sha256": "b6d7e9afe109b30b7a8643788626c1ad46f3ca9954560b62fb658e83b0d9a3b9",
+    "source_bytes": 25818,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hfa7e11c4c249",
+    "document_id": "1805.09960",
+    "question_id": "6656a9472499331f4eda45182ea697a4d63e943c",
+    "group": "abstention",
+    "expected_coverage": "omitted",
+    "source_sha256": "b6d7e9afe109b30b7a8643788626c1ad46f3ca9954560b62fb658e83b0d9a3b9",
+    "source_bytes": 25818,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "h25e3510ab06a",
+    "document_id": "1909.07158",
+    "question_id": "5102dc911913e9ca0311253e44fd31c73eed0a57",
+    "group": "adequate",
+    "expected_coverage": "complete",
+    "source_sha256": "e7a3fa0bb1beba5eaf5283178d483742ffe35a94cbee17fb6dc633652b0fa407",
+    "source_bytes": 24147,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hd9cf098a613a",
+    "document_id": "1909.07158",
+    "question_id": "5102dc911913e9ca0311253e44fd31c73eed0a57",
+    "group": "partial",
+    "expected_coverage": "omitted",
+    "source_sha256": "e7a3fa0bb1beba5eaf5283178d483742ffe35a94cbee17fb6dc633652b0fa407",
+    "source_bytes": 24147,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "h5dde30b9f8ad",
+    "document_id": "1909.07158",
+    "question_id": "5102dc911913e9ca0311253e44fd31c73eed0a57",
+    "group": "abstention",
+    "expected_coverage": "omitted",
+    "source_sha256": "e7a3fa0bb1beba5eaf5283178d483742ffe35a94cbee17fb6dc633652b0fa407",
+    "source_bytes": 24147,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "ha7e000db7199",
+    "document_id": "1706.02427",
+    "question_id": "c21675d8a90bda624d27e5535d1c10f08fcbc16b",
+    "group": "justified_abstention",
+    "expected_coverage": "justified_abstention",
+    "source_sha256": "e3fb402edbb72dd0decf3c38b797c70ee6827ae15d51f69c538e675dd76fa57f",
+    "source_bytes": 31340,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  },
+  {
+    "id": "hfebb927fbe7a",
+    "document_id": "2002.04745",
+    "question_id": "6073be8b88f0378cd0c4ffcad87e1327bc98b991",
+    "group": "justified_abstention",
+    "expected_coverage": "justified_abstention",
+    "source_sha256": "02d7e59cc222cd5790b6c9c3c86880336fc436d3e1cdd016dd74032ea18f376a",
+    "source_bytes": 52708,
+    "question_assessment": "producer considers task evaluable in document context; no post-response rewriting",
+    "expectation_origin": "producer-authored control compared with all QASPER annotations and full source; no independent adjudication"
+  }
+]

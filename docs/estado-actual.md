@@ -89,3 +89,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Contraste GLM de suficiencia
 
 [Mismos diez estados con GLM](../experiments/reviewer-coverage-glm-v1/README.md): 8/8 expectativas de controles frente a 5/8 de Jev; las tres abstenciones quedan correctamente como omitted. Persiste un complete discrepante con QASPER en la pregunta ambigua. Diez llamadas, 74.930 tokens reportados, sin regeneración. GLM comparte familia con el generador y no es adjudicación independiente. Candidato experimental, sin cambio predeterminado: siguiente paso propuesto, batería reservada nueva con configuración congelada y contraste contra referencias.
+
+## Batería nueva de suficiencia GLM
+
+[14 controles sobre seis documentos nuevos](../experiments/coverage-heldout-v1/README.md): 14/14 expectativas del productor, cero falsos complete y todas las llamadas terminadas. Incluye respuestas suficientes, parciales, alteradas y abstenciones necesarias/innecesarias. 90.040 tokens reportados. Corpus nuevo respecto del inventario local acotado; controles mínimos sin citas, no candidatos nuevos del generador ni adjudicación independiente. Configuración congelada, sin ajuste posterior. Próximo paso recomendado: opción experimental explícita en CLI, con informe separado de fidelidad/admisión, replay y fallos simulados antes de una ejecución real. Producto aún sin cambios.
