@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "d824d0523e004174a4f8ad35924b20c89494a27c982e4d012ce8a9ac6df0c3ed",
+  "question": "What is the caching mechanism?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: The cache language models are based on the assumption that the word in recent history are more likely to appear again",
+      "evidence": {
+        "text": "Like word classes, caching is also a common used optimization technique in LM. The cache language models are based on the assumption that the word in recent history are more likely to appear again. In cache language model, the conditional probability of a word is calculated by interpolating the output of standard language model and the probability evaluated by caching, like: INLINEFORM0 ",
+        "start_byte": 22142,
+        "end_byte": 22532
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: conditional probability of a word is calculated by interpolating the output of standard language model and the probability evaluated by caching",
+      "evidence": {
+        "text": "Like word classes, caching is also a common used optimization technique in LM. The cache language models are based on the assumption that the word in recent history are more likely to appear again. In cache language model, the conditional probability of a word is calculated by interpolating the output of standard language model and the probability evaluated by caching, like: INLINEFORM0 ",
+        "start_byte": 22142,
+        "end_byte": 22532
+      }
+    }
+  ]
+}

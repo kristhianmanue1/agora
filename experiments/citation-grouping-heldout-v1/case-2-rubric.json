@@ -1,0 +1,35 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "96f70791cd0d662cca7480207dfa472b926bd971c40417b5dca152b48efa2d7b",
+  "question": "What potential applications are demonstrated?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: for a general AI that talks with human beings without making the users feel isolated",
+      "evidence": {
+        "text": "Since the proposed approach regards the formal semantics and the task domain is not specified, we expect our study to be meaningful for a general AI that talks with human beings without making the users feel isolated. Recalling that for also humans, the reaction towards the directive and the non-directive utterance differs, our two-way approach makes sense. Along with the non-task-oriented dialog, our scheme may be useful for avoiding inadvertent ignorance of the users' will.",
+        "start_byte": 34620,
+        "end_byte": 35100
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: making up the paraphrase corpus",
+      "evidence": {
+        "text": "Beyond the application to the spoken language understanding (SLU) modules within the smart agents, our approach can be utilized in making up the paraphrase corpus or supporting the semantic web search. Along with the boosted performance of recent text generation and reconstruction algorithms, we expect a large size of the dataset is furthermore constructed and be utilized with the real-life personal agents.",
+        "start_byte": 35102,
+        "end_byte": 35512
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: supporting the semantic web search",
+      "evidence": {
+        "text": "Beyond the application to the spoken language understanding (SLU) modules within the smart agents, our approach can be utilized in making up the paraphrase corpus or supporting the semantic web search. Along with the boosted performance of recent text generation and reconstruction algorithms, we expect a large size of the dataset is furthermore constructed and be utilized with the real-life personal agents.",
+        "start_byte": 35102,
+        "end_byte": 35512
+      }
+    }
+  ]
+}

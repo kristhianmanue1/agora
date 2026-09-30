@@ -1,0 +1,277 @@
+{
+  "status": "completed_with_fidelity_finding",
+  "http_calls": 6,
+  "total_tokens": 37408,
+  "elapsed_seconds": 69.744,
+  "rows": [
+    {
+      "id": "case-1",
+      "document_id": "1708.07252",
+      "source_bytes": 40528,
+      "structural_status": "complete",
+      "candidate_sha256": "be685661e1c9ef68a1b4ebe7df76521cf685a41896be83d775aef9280bd125a4",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"Caching is a common optimization technique in language modeling, and cache language models are based on the assumption that words in the recent history are more likely to appear again.\",\"evidence_ids\":[\"ev_7786402dad1a8affdd62bd34\"]},{\"text\":\"In a cache language model, the conditional probability of a word is calculated by interpolating the output of the standard language model and the probability evaluated using caching, where the interpolation weight is a constant (INLINEFORM2, with INLINEFORM3).\",\"evidence_ids\":[\"ev_7786402dad1a8affdd62bd34\",\"ev_aeaa62f4230ebf58e54b49d2\"]},{\"text\":\"BIBREF28 combined FNNLM with a cache model to enhance FNNLM performance in speech recognition; the cache model is formed from the previous context using the Kronecker delta, a cache length (the number of previous words taken as cache), and a coefficient that depends on the distance between the previous word and the target word; a cache model with forgetting can be obtained by lowering the coefficient linearly or exponentially with respect to that distance, and a class cache model determines the probability of the target word given the last recent word classes; both word-based and class cache models can be defined as a kind of unigram language model built from the previous context, making this caching technique an approach to combine a neural network language model with a unigram model.\",\"evidence_ids\":[\"ev_74d47aed016b42f0c7027c18\",\"ev_3da9c268fc38319a21e5226c\"]},{\"text\":\"Another type of caching has been proposed as a speed-up technique for RNNLMs: its main idea is to store the outputs and states of language models for future prediction given the same contextual history; in BIBREF32 four caches were implemented with hash lookup tables storing key and value pairs: probability and word sequence; history and its corresponding hidden state vector; history and the denominator of the softmax function for classes; and history, class index and the denominator of the softmax function for words; around a 50-fold speed-up was reported in speech recognition, but it only works for prediction and cannot be applied during training.\",\"evidence_ids\":[\"ev_63160c2942dd5d357b98bc11\"]},{\"text\":\"Inspired by the first caching technique, the paper tested initializing the RNN initial states with the last states of the direct previous sentence in the same article (instead of a constant vector), expecting lower perplexity because more previous context is taken into account through the internal states; however, this caching technique did not work as expected and the perplexity even increased slightly, possibly because the Brown Corpus is too small and more data is needed to evaluate this technique.\",\"evidence_ids\":[\"ev_a46557fdd81558854f8f4ec7\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1861,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1224
+          },
+          "prompt_tokens": 11157,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 13018
+        },
+        "response_id": "202610010414118da8a5e171464814"
+      },
+      "generation_receipt": {
+        "status": "returned",
+        "http_calls": 1,
+        "elapsed_seconds": 27.034
+      },
+      "quote_uses": 7,
+      "quote_bytes": 3582,
+      "coverage": {
+        "R1": "covered",
+        "R2": "covered"
+      },
+      "expected": {
+        "R1": "covered",
+        "R2": "covered"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 208,
+          "completion_tokens_details": {
+            "reasoning_tokens": 180
+          },
+          "prompt_tokens": 1740,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1948
+        },
+        "response_id": "20261001041439bca6b5d0e2ec4986"
+      },
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported",
+        "C3": "supported",
+        "C4": "supported",
+        "C5": "supported"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.67,
+            "probabilities": {
+              "insufficient": 0.22,
+              "contradicted": 0.0,
+              "supported": 0.78
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.28,
+            "probabilities": {
+              "insufficient": 0.47,
+              "contradicted": 0.01,
+              "supported": 0.52
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.52,
+            "probabilities": {
+              "insufficient": 0.32,
+              "contradicted": 0.0,
+              "supported": 0.68
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.75,
+            "probabilities": {
+              "insufficient": 0.17,
+              "contradicted": 0.0,
+              "supported": 0.83
+            }
+          },
+          "C5": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.56,
+            "probabilities": {
+              "insufficient": 0.28,
+              "contradicted": 0.01,
+              "supported": 0.71
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2290,
+          "output_tokens": 213
+        }
+      },
+      "coverage_result_sha256": "4bc6061ba8a54eed803a49aa09de8e39d450e392077c659c3519e13a3e74b730",
+      "fidelity_journal_sha256": "d0f464e771ef1938ba6d619f6a5de8af85100bf1605ac8b27b134316c4fd2847"
+    },
+    {
+      "id": "case-2",
+      "document_id": "1912.00342",
+      "source_bytes": 37526,
+      "structural_status": "complete",
+      "candidate_sha256": "c07ec98e3d0d9f3b93011af0eb9ce223b2c87a6e5274d83653659cd0ddc7c677",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"The paper demonstrates the potential applications of the corpus generation method and the dataset built for extracting intent arguments of non-canonical directives.\",\"evidence_ids\":[\"ev_4aec2c618116f88d781b98a1\"]},{\"text\":\"Beyond application to spoken language understanding (SLU) modules within smart agents, the approach can be utilized in making up the paraphrase corpus or supporting the semantic web search, and the dataset is expected to be constructed at larger size and utilized with real-life personal agents.\",\"evidence_ids\":[\"ev_96777b1c8bc61f6082a4530d\"]},{\"text\":\"The demonstrated formalization (e.g., rendering a prohibition as an intent argument like 'not to swim in an onsen') is expected to be useful for a real-life command to social robots, and the treatment of comparison questions is expected to be meaningful as smart agents become more human-like; additionally, the nominalization of wh-related features (e.g., 'the amount of today's snowfall') may help NLU modules efficiently answer information-seeking questions that are not in a canonical form.\",\"evidence_ids\":[\"ev_0554da0d6ba0f5dbf2b4d8c8\"]},{\"text\":\"Since the proposed approach regards formal semantics with no specified task domain, the study is expected to be meaningful for a general AI that talks with human beings without making users feel isolated, and along with non-task-oriented dialog the scheme may be useful for avoiding inadvertent ignorance of the users' will.\",\"evidence_ids\":[\"ev_193c175fe0c64bdbbd73bda3\"]},{\"text\":\"Using the proposed concept, the implementation of automatic question/command generation and a sentence similarity test is also possible.\",\"evidence_ids\":[\"ev_fbc644ffda3810944712f015\"]},{\"text\":\"The structured sentence annotation scheme is proposed to help enrich human-like conversation with artificial intelligence (AI).\",\"evidence_ids\":[\"ev_eabb7787f836eb7e71032fca\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 2289,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1757
+          },
+          "prompt_tokens": 12975,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 15264
+        },
+        "response_id": "202610010414439f546085fe32412c"
+      },
+      "generation_receipt": {
+        "status": "returned",
+        "http_calls": 1,
+        "elapsed_seconds": 32.651
+      },
+      "quote_uses": 6,
+      "quote_bytes": 4503,
+      "coverage": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 254,
+          "completion_tokens_details": {
+            "reasoning_tokens": 217
+          },
+          "prompt_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 2032
+        },
+        "response_id": "20261001041515c5cc01e141754c09"
+      },
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported",
+        "C3": "insufficient",
+        "C4": "supported",
+        "C5": "supported",
+        "C6": "supported"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.29,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.47,
+              "supported": 0.53
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.66,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.22,
+              "supported": 0.78
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.29,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.53,
+              "supported": 0.47
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.6,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.27,
+              "supported": 0.73
+            }
+          },
+          "C5": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.7,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.2,
+              "supported": 0.8
+            }
+          },
+          "C6": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.68,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.21,
+              "supported": 0.79
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2385,
+          "output_tokens": 258
+        }
+      },
+      "coverage_result_sha256": "8d94e2dc1c5ea2f265c6971cc4eb604ceaabd72f9ef09e1acc23962402fa7a7a",
+      "fidelity_journal_sha256": "99baba0ea20235730af83ea84554d4f7ec509e0c3326162066cfadba3639dc17"
+    }
+  ],
+  "product_changes": false,
+  "promotion": "not_promoted",
+  "finding": "Case 2 C3 cites a general applications paragraph but introduces two concrete examples located in other source units. True-in-source is not the same as established-by-attached-evidence.",
+  "limits": "Two locally reserved cases; producer rubrics from benchmark annotations; GLM coverage and separate Jev fidelity advice, no human adjudication. No control arm for causal attribution, no selective reading savings."
+}

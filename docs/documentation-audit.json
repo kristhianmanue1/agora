@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 164,
-  "bytes": 808131,
+  "documents": 165,
+  "bytes": 813305,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "8e4eaf1b00827c0376651ff05d20f5271c2ffa440cb23ff4ac7554ec969cb3ad",
-      "bytes": 21244,
+      "sha256": "f6fce87b4fbd72d41cdfb91aadb653cebabde253936653ddc7de0c204fb7603e",
+      "bytes": 21899,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -716,6 +716,10 @@
         },
         {
           "target": "../experiments/citation-grouping-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/citation-grouping-heldout-v1/README.md",
           "exists": true
         }
       ],
@@ -1207,6 +1211,14 @@
       "path": "experiments/agora-skevi-v1/README.md",
       "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
       "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/citation-grouping-heldout-v1/README.md",
+      "sha256": "fc7bd6e65c16f2ab35257499ea5804f1a0973a60f83efde9bb36fc783b6adc13",
+      "bytes": 4519,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

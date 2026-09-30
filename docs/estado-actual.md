@@ -178,3 +178,13 @@ de 1.000 bytes agotó la salida y quedó rechazada; se conserva. Ambas condicion
 tres llamadas y 27.660 tokens. No acredita fiabilidad general, fidelidad independiente
 ni ahorro de lectura. Siguiente contraste: dos documentos reservados, antes de
 incorporar la instrucción a producto y comparar lectura selectiva/completa.
+
+## Agrupación en dos casos reservados: respaldo aún parcial
+
+[Contraste reservado](../experiments/citation-grouping-heldout-v1/README.md): dos
+respuestas válidas sin reparación, citas de 3.582 y 4.503 bytes y todas las obligaciones
+de las rúbricas cubiertas. Jev encontró una afirmación con respaldo insuficiente:
+dos ejemplos presentes en otros pasajes no quedaron citados. Original intacto,
+sin promoción de defaults. Seis llamadas, 37.408 tokens. Próximo paso: reparación
+candidata de los localizadores y control de subafirmaciones; luego comparar lectura
+selectiva/completa con costes y fidelidad. No cambia la integración del ecosistema.
