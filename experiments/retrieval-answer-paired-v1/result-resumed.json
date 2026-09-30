@@ -1,0 +1,770 @@
+{
+  "status": "continuation_recorded",
+  "summary": {
+    "equal": {
+      "planned": 12,
+      "attempted": 12,
+      "not_run": 0,
+      "failed": 1,
+      "valid": 8,
+      "usable_observed": 3,
+      "abstained": 3,
+      "reviewed": 8,
+      "generation_input_tokens_observed": 20836,
+      "generation_output_tokens_observed": 7566,
+      "generation_elapsed_seconds_observed": 251.22,
+      "review_input_tokens_observed": 58609,
+      "review_output_tokens_observed": 741,
+      "review_elapsed_seconds_observed": 3.33,
+      "known_tokens": 87752
+    },
+    "shared": {
+      "planned": 12,
+      "attempted": 12,
+      "not_run": 0,
+      "failed": 2,
+      "valid": 8,
+      "usable_observed": 5,
+      "abstained": 2,
+      "reviewed": 8,
+      "generation_input_tokens_observed": 21096,
+      "generation_output_tokens_observed": 7996,
+      "generation_elapsed_seconds_observed": 339.393,
+      "review_input_tokens_observed": 58845,
+      "review_output_tokens_observed": 739,
+      "review_elapsed_seconds_observed": 3.383,
+      "known_tokens": 88676
+    }
+  },
+  "pairs": [
+    {
+      "document_id": "1803.08419",
+      "same_context": false,
+      "outcome": "both_usable"
+    },
+    {
+      "document_id": "1606.02892",
+      "same_context": false,
+      "outcome": "neither_usable"
+    },
+    {
+      "document_id": "1707.06875",
+      "same_context": false,
+      "outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1911.01940",
+      "same_context": false,
+      "outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1909.11706",
+      "same_context": false,
+      "outcome": "shared_win"
+    },
+    {
+      "document_id": "1802.03052",
+      "same_context": false,
+      "outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "2003.11531",
+      "same_context": false,
+      "outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1909.13466",
+      "same_context": true,
+      "outcome": "neither_usable"
+    },
+    {
+      "document_id": "1909.02322",
+      "same_context": false,
+      "outcome": "both_usable"
+    },
+    {
+      "document_id": "2004.02214",
+      "same_context": true,
+      "outcome": "neither_usable"
+    },
+    {
+      "document_id": "1909.04251",
+      "same_context": false,
+      "outcome": "incomplete_pair"
+    },
+    {
+      "document_id": "1610.07149",
+      "same_context": true,
+      "outcome": "both_usable"
+    }
+  ],
+  "records": [
+    {
+      "id": "x9011437302",
+      "document_id": "1803.08419",
+      "method": "equal",
+      "delivered_bytes": 3711,
+      "retrieval_seconds": 0.005652541999999983,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 1621,
+        "output_tokens": 559,
+        "elapsed_seconds": 8.744,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 9324,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.348,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "xbbdf0b0dc1",
+      "document_id": "1803.08419",
+      "method": "shared",
+      "delivered_bytes": 5679,
+      "retrieval_seconds": 0.00693779199999997,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2029,
+        "output_tokens": 1227,
+        "elapsed_seconds": 15.141,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 9482,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.461,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "xa947768b61",
+      "document_id": "1606.02892",
+      "method": "shared",
+      "delivered_bytes": 4492,
+      "retrieval_seconds": 0.003970000000000001,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 1886,
+        "output_tokens": 1721,
+        "elapsed_seconds": 23.454,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 6054,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.392,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "xaf20b49fed",
+      "document_id": "1606.02892",
+      "method": "equal",
+      "delivered_bytes": 3571,
+      "retrieval_seconds": 0.0032166670000000064,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 1664,
+        "output_tokens": 1591,
+        "elapsed_seconds": 24.863,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 6013,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.405,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "x9d2069ab81",
+      "document_id": "1707.06875",
+      "method": "equal",
+      "delivered_bytes": 3865,
+      "retrieval_seconds": 0.003690542000000019,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 1775,
+        "output_tokens": 716,
+        "elapsed_seconds": 10.183,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 7113,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.298,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "xb0ff7f8ed7",
+      "document_id": "1707.06875",
+      "method": "shared",
+      "delivered_bytes": 5371,
+      "retrieval_seconds": 0.004476250000000015,
+      "generation": {
+        "status": "failed",
+        "valid": false,
+        "diagnostic": "transport_failure",
+        "answer_status": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_seconds": 90.088,
+        "error": "timeout",
+        "model": null
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "x196db0ac38",
+      "document_id": "1911.01940",
+      "method": "shared",
+      "delivered_bytes": 6989,
+      "retrieval_seconds": 0.00348374999999998,
+      "generation": {
+        "status": "failed",
+        "valid": false,
+        "diagnostic": "transport_failure",
+        "answer_status": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_seconds": 90.099,
+        "error": "timeout",
+        "model": null
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "xc2eec90139",
+      "document_id": "1911.01940",
+      "method": "equal",
+      "delivered_bytes": 5718,
+      "retrieval_seconds": 0.0028396249999999845,
+      "generation": {
+        "status": "failed",
+        "valid": false,
+        "diagnostic": "transport_failure",
+        "answer_status": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "elapsed_seconds": 90.089,
+        "error": "timeout",
+        "model": null
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "xcb9232208f",
+      "document_id": "1909.11706",
+      "method": "equal",
+      "delivered_bytes": 3371,
+      "retrieval_seconds": 0.003071832999999996,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "not_in_document",
+        "input_tokens": 1529,
+        "output_tokens": 368,
+        "elapsed_seconds": 12.818,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 5813,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.524,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "x8024f9d3b3",
+      "document_id": "1909.11706",
+      "method": "shared",
+      "delivered_bytes": 4116,
+      "retrieval_seconds": 0.0037501239999999936,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 1711,
+        "output_tokens": 494,
+        "elapsed_seconds": 8.902,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 5942,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.416,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "x9ddfdc39b7",
+      "document_id": "1802.03052",
+      "method": "shared",
+      "delivered_bytes": 7034,
+      "retrieval_seconds": 0.005143666999999963,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2299,
+        "output_tokens": 535,
+        "elapsed_seconds": 13.375,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7060,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.395,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "x57e3086f6a",
+      "document_id": "1802.03052",
+      "method": "equal",
+      "delivered_bytes": 5432,
+      "retrieval_seconds": 0.004219874999999984,
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "diagnostic": "answer_quote_mismatch",
+        "answer_status": null,
+        "input_tokens": 1963,
+        "output_tokens": 428,
+        "elapsed_seconds": 7.733,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "xf1e7c743c2",
+      "document_id": "2003.11531",
+      "method": "equal",
+      "delivered_bytes": 3854,
+      "retrieval_seconds": 0.005222540999999997,
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "diagnostic": "invalid_concise_answer_shape",
+        "answer_status": null,
+        "input_tokens": 1631,
+        "output_tokens": 551,
+        "elapsed_seconds": 17.223,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "x8f18c29d83",
+      "document_id": "2003.11531",
+      "method": "shared",
+      "delivered_bytes": 5428,
+      "retrieval_seconds": 0.006347040999999998,
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "diagnostic": "answer_quote_mismatch",
+        "answer_status": null,
+        "input_tokens": 1975,
+        "output_tokens": 250,
+        "elapsed_seconds": 5.54,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "x1c695472d8",
+      "document_id": "1909.13466",
+      "method": "shared",
+      "delivered_bytes": 7691,
+      "retrieval_seconds": 0.006781375999999978,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "not_in_document",
+        "input_tokens": 2563,
+        "output_tokens": 364,
+        "elapsed_seconds": 9.898,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 10258,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.495,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "x0daa840e27",
+      "document_id": "1909.13466",
+      "method": "equal",
+      "delivered_bytes": 7691,
+      "retrieval_seconds": 0.005501458999999986,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "not_in_document",
+        "input_tokens": 2563,
+        "output_tokens": 313,
+        "elapsed_seconds": 8.513,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 10241,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.472,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "x67feb7b7f9",
+      "document_id": "1909.02322",
+      "method": "equal",
+      "delivered_bytes": 6611,
+      "retrieval_seconds": 0.00358987500000002,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2355,
+        "output_tokens": 1094,
+        "elapsed_seconds": 24.101,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7071,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.411,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "x50e55252cb",
+      "document_id": "1909.02322",
+      "method": "shared",
+      "delivered_bytes": 7953,
+      "retrieval_seconds": 0.004473375000000002,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2620,
+        "output_tokens": 512,
+        "elapsed_seconds": 10.729,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7070,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.481,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "xd9870342fe",
+      "document_id": "2004.02214",
+      "method": "shared",
+      "delivered_bytes": 5143,
+      "retrieval_seconds": 0.004112083000000016,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "not_in_document",
+        "input_tokens": 1919,
+        "output_tokens": 379,
+        "elapsed_seconds": 18.113,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 5916,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.32,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "xa1451c5014",
+      "document_id": "2004.02214",
+      "method": "equal",
+      "delivered_bytes": 5143,
+      "retrieval_seconds": 0.00343829100000001,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "not_in_document",
+        "input_tokens": 1919,
+        "output_tokens": 409,
+        "elapsed_seconds": 14.242,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "unsupported",
+          "coverage": "omitted"
+        },
+        "input_tokens": 5912,
+        "output_tokens": 93,
+        "elapsed_seconds": 0.437,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": false
+    },
+    {
+      "id": "x4729a4b627",
+      "document_id": "1909.04251",
+      "method": "equal",
+      "delivered_bytes": 3971,
+      "retrieval_seconds": 0.003977457999999989,
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "diagnostic": "answer_quote_mismatch",
+        "answer_status": null,
+        "input_tokens": 1677,
+        "output_tokens": 641,
+        "elapsed_seconds": 15.922,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "x95b0336682",
+      "document_id": "1909.04251",
+      "method": "shared",
+      "delivered_bytes": 5296,
+      "retrieval_seconds": 0.004875832999999996,
+      "generation": {
+        "status": "completed",
+        "valid": false,
+        "diagnostic": "answer_quote_mismatch",
+        "answer_status": null,
+        "input_tokens": 1955,
+        "output_tokens": 638,
+        "elapsed_seconds": 12.915,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": null,
+      "usable_by_reviewer": null
+    },
+    {
+      "id": "x83453a4e39",
+      "document_id": "1610.07149",
+      "method": "shared",
+      "delivered_bytes": 5752,
+      "retrieval_seconds": 0.004250500000000018,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2139,
+        "output_tokens": 1876,
+        "elapsed_seconds": 41.139,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7063,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.423,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    },
+    {
+      "id": "x1b04f7c5fb",
+      "document_id": "1610.07149",
+      "method": "equal",
+      "delivered_bytes": 5752,
+      "retrieval_seconds": 0.0035560420000000093,
+      "generation": {
+        "status": "completed",
+        "valid": true,
+        "diagnostic": null,
+        "answer_status": "answer",
+        "input_tokens": 2139,
+        "output_tokens": 896,
+        "elapsed_seconds": 16.789,
+        "error": null,
+        "model": "glm-5.3-flash"
+      },
+      "review": {
+        "status": "completed",
+        "labels": {
+          "fidelity": "supported",
+          "coverage": "complete"
+        },
+        "input_tokens": 7122,
+        "output_tokens": 92,
+        "elapsed_seconds": 0.435,
+        "model": "jev-1.13.0"
+      },
+      "usable_by_reviewer": true
+    }
+  ],
+  "prior_journals_unchanged": true,
+  "no_repeated_generation_ids": true,
+  "health": {
+    "status": "completed",
+    "started_at": "2026-09-30T03:52:44Z",
+    "timeout_seconds": 20,
+    "retries": 0,
+    "model_requested": "glm-5.3-flash",
+    "model_reported": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 94,
+      "completion_tokens_details": {
+        "reasoning_tokens": 83
+      },
+      "prompt_tokens": 83,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 177
+    },
+    "finish_reason": "stop",
+    "elapsed_seconds": 2.775
+  },
+  "known_tokens_total": 176605,
+  "unknown_generation_usage_calls": 3,
+  "generation_not_run": 0,
+  "limits": "No retries; timeout usage unknown; Jev judgments not human adjudication; mixed execution dates; one draw per method"
+}

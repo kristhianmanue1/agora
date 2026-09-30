@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 141,
-  "bytes": 696514,
+  "documents": 142,
+  "bytes": 701790,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -525,8 +525,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "f07406ba66e3992d8803c7f7a119e41d5559e1945f1e4b861adc2d8a81dd02ff",
-      "bytes": 8921,
+      "sha256": "bbdba5e2fbde871a4c19f71966d431dc732ad5d5dfa4e77338ee13aa4f1cc61b",
+      "bytes": 9376,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -607,6 +607,10 @@
         },
         {
           "target": "../experiments/retrieval-answer-paired-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieval-answer-paired-v1/CONTINUATION.md",
           "exists": true
         }
       ],
@@ -1410,11 +1414,24 @@
       "python_modules": []
     },
     {
-      "path": "experiments/retrieval-answer-paired-v1/README.md",
-      "sha256": "8ed8774f89e0f846cc758dd0b2b80a35aef759277078ba1c98a1daa0df7472f7",
-      "bytes": 5234,
+      "path": "experiments/retrieval-answer-paired-v1/CONTINUATION.md",
+      "sha256": "e89302de7d35abaa04164b0b3957d44e602069e118a633d49900dcf93dd65c95",
+      "bytes": 4577,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieval-answer-paired-v1/README.md",
+      "sha256": "f0dab6e64da4a6e96988c8bdf4e459cc136ddbb3112a20e3c05cd25f66ba9d8a",
+      "bytes": 5478,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "CONTINUATION.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {

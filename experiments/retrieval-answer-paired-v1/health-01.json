@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "started_at": "2026-09-30T03:52:44Z",
+  "timeout_seconds": 20,
+  "retries": 0,
+  "model_requested": "glm-5.3-flash",
+  "model_reported": "glm-5.3-flash",
+  "usage": {
+    "completion_tokens": 94,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 83,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 177
+  },
+  "finish_reason": "stop",
+  "elapsed_seconds": 2.775
+}

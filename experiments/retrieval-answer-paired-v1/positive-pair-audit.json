@@ -1,0 +1,16 @@
+{
+  "document_id": "1909.11706",
+  "audit": "producer inspection, not independent adjudication",
+  "findings": [
+    {
+      "quote_sha256": "0a45511acb165d2844d490a93a9f49559907e380636503cc16581e9991039578",
+      "present_in_equal": false,
+      "present_in_shared": true
+    },
+    {
+      "quote_sha256": "15f513e3f8492c02ae039697716f927b1bd1a3a558573e5dd2062afb6e153e6a",
+      "present_in_equal": false,
+      "present_in_shared": true
+    }
+  ]
+}

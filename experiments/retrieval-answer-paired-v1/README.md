@@ -1,6 +1,8 @@
 # Comparación pareada de recuperación, generación y revisión
 
-## Estado: parcial por parada de transporte
+## Fotografía histórica: primera etapa detenida por transporte
+
+La continuación posterior completó los 16 envíos pendientes sin repetir solicitudes previas. Estado consolidado y decisión: [CONTINUATION.md](CONTINUATION.md). Este informe conserva los resultados de la primera etapa.
 
 Se planificaron 12 pares (24 generaciones GLM) sobre los 12 documentos del piloto de cobertura, con presupuesto 8.000 bytes. No son documentos nuevos reservados: ya fueron usados para evaluar recuperación. Se intentaron ocho generaciones: cinco llegaron y pasaron validación de forma y citas, tres agotaron 90 segundos. El transporte heredado paró al tercer error. Dieciséis generaciones no se ejecutaron y no se repitió ninguna solicitud.
 

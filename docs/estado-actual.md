@@ -64,4 +64,8 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 
 ## Comparación completa iniciada, detenida por transporte
 
-[Generación y revisión pareadas](../experiments/retrieval-answer-paired-v1/README.md): cinco generaciones válidas y revisadas, tres timeouts de 90 s y parada del transporte; 16 entradas no enviadas. Sólo dos pares completos, sin evidencia suficiente para promover la redistribución. Consumo observado mínimo 53.238 tokens; cargos/uso de timeouts desconocidos. La integración permanece pendiente.
+[Generación y revisión pareadas](../experiments/retrieval-answer-paired-v1/README.md): cinco generaciones válidas y revisadas, tres timeouts de 90 s y parada del transporte; 16 entradas no enviadas. En la primera etapa sólo hubo dos pares completos. Consumo observado mínimo 53.238 tokens; cargos/uso de timeouts desconocidos. La integración permanece pendiente.
+
+## Continuación de comparación pareada
+
+[16 entradas pendientes completadas](../experiments/retrieval-answer-paired-v1/CONTINUATION.md): todas respondieron; 11 válidas revisadas y cinco rechazos de formato/citas. Consolidado: siete pares semánticamente comparables, un caso favorable a redistribución, tres útiles en ambos y tres incompletos en ambos. Persisten tres timeouts originales sin repetir. Sin promoción; consumo conocido 176.605 tokens, con uso de timeouts desconocido.
