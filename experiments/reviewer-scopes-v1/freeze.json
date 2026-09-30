@@ -1,0 +1,12 @@
+{
+  "code_head": "e473831a4751c583b17e1ad01b6badf81bdc346e",
+  "cases_sha256": "05000cf56d92d0b2da74a22236544db74403d0288b5021197695fae1d87df088",
+  "original_result_sha256": "db2ca9de7890d830da5adc9a54a931522326d8ee7112cdd050d63801a820cff9",
+  "max_calls": 10,
+  "model": "jev-1.13.0",
+  "timeout_seconds": 90,
+  "retries": 0,
+  "selection": "3 scoped abstentions, both ambiguous candidates, 3 positive candidates, 2 synthetic negative controls",
+  "blinding": "neutral IDs shuffled; no method, group, reference answers, prior labels, expectations or sibling response",
+  "limits": "development cases selected after prior failures; producer labels, no independent adjudication; no controlled rerun of old prompt; new criteria and evidence shape; one draw; no promotion"
+}

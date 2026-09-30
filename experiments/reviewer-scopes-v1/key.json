@@ -1,0 +1,126 @@
+[
+  {
+    "id": "see7f153be5",
+    "original_id": "i8505716ef3",
+    "document_id": "1909.11706",
+    "method": "equal",
+    "group": "scoped_abstention",
+    "previous_labels": {
+      "fidelity": "unsupported",
+      "coverage": "omitted"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "omitted"
+  },
+  {
+    "id": "s854ef6aa31",
+    "original_id": "i14996e77e3",
+    "document_id": "1909.13466",
+    "method": "equal",
+    "group": "scoped_abstention",
+    "previous_labels": {
+      "fidelity": "unsupported",
+      "coverage": "omitted"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "omitted"
+  },
+  {
+    "id": "sd246eeadca",
+    "original_id": "ib74d2ea638",
+    "document_id": "1909.13466",
+    "method": "shared",
+    "group": "scoped_abstention",
+    "previous_labels": {
+      "fidelity": "unsupported",
+      "coverage": "omitted"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "omitted"
+  },
+  {
+    "id": "sc92531d7e2",
+    "original_id": "i3dad0ea380",
+    "document_id": "1909.02322",
+    "method": "equal",
+    "group": "ambiguous_question",
+    "previous_labels": {
+      "fidelity": "supported",
+      "coverage": "complete"
+    },
+    "expected_fidelity": null,
+    "expected_coverage": null
+  },
+  {
+    "id": "sd6c66f2581",
+    "original_id": "i9f739e573d",
+    "document_id": "1909.02322",
+    "method": "shared",
+    "group": "ambiguous_question",
+    "previous_labels": {
+      "fidelity": "supported",
+      "coverage": "omitted"
+    },
+    "expected_fidelity": null,
+    "expected_coverage": null
+  },
+  {
+    "id": "s7685ce10d6",
+    "original_id": "ib0b9f18321",
+    "document_id": "1909.11706",
+    "method": "shared",
+    "group": "positive",
+    "previous_labels": {
+      "fidelity": "supported",
+      "coverage": "complete"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "seb2b729668",
+    "original_id": "i1e29c734e8",
+    "document_id": "2003.11531",
+    "method": "equal",
+    "group": "positive",
+    "previous_labels": {
+      "fidelity": "supported",
+      "coverage": "complete"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "s8d4615b29f",
+    "original_id": "i51dcd2bd0f",
+    "document_id": "1802.03052",
+    "method": "equal",
+    "group": "positive",
+    "previous_labels": {
+      "fidelity": "supported",
+      "coverage": "complete"
+    },
+    "expected_fidelity": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "s529b34c978",
+    "original_id": "ib0b9f18321",
+    "document_id": "1909.11706",
+    "method": "shared",
+    "group": "false_absence",
+    "previous_labels": null,
+    "expected_fidelity": "unsupported",
+    "expected_coverage": "omitted"
+  },
+  {
+    "id": "s0a0d866088",
+    "original_id": "i1e29c734e8",
+    "document_id": "2003.11531",
+    "method": "equal",
+    "group": "false_claim",
+    "previous_labels": null,
+    "expected_fidelity": "unsupported",
+    "expected_coverage": "omitted"
+  }
+]

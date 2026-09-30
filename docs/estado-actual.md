@@ -77,3 +77,7 @@ La aclaración solicitada por el Operador corrige la descripción operativa; no 
 ## Contraste con referencias externas
 
 [Auditoría de los 20 candidatos conservados](../experiments/retrieval-reference-audit-v1/README.md): el productor encuentra diez con cobertura adecuada y diez incompletos frente a referencias QASPER contrastadas con fuente. Un complete de Jev discrepa con la intención del benchmark; una referencia QASPER contiene a su vez una cifra discordante con el texto fuente. Hay huecos de recuperación, omisiones y un riesgo de confundir ausencia en pasajes con ausencia en la fuente completa. No es adjudicación independiente. Siguiente prioridad: evaluar el revisor con ambos alcances explícitos, conservando etiquetas anteriores. Sin nuevas llamadas ni cambios de producto en este contraste.
+
+## Revisión con ámbitos explícitos: mejora parcial
+
+[Ensayo de diez revisiones](../experiments/reviewer-scopes-v1/README.md): una de tres abstenciones cambia correctamente a supported + omitted; dos siguen como unsupported. Tres controles positivos y dos negativos cumplen expectativas. Misma pregunta recibe etiquetas distintas de ambigüedad; aparece además ambiguous junto a omitted pese al criterio de uncertain. Diez llamadas Jev, 93.961 tokens, sin nueva generación. No promoción: siguiente ensayo propuesto separa revisión de pasajes y suficiencia global en llamadas distintas, y fija interpretación antes de candidatos.
