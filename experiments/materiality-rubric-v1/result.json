@@ -1,0 +1,279 @@
+{
+  "summary": {
+    "planned": 12,
+    "completed": 12,
+    "valid": 12,
+    "exact_matches": 12,
+    "false_covered": 0,
+    "input_tokens": 8252,
+    "output_tokens": 2739,
+    "elapsed_seconds": 58.601
+  },
+  "records": [
+    {
+      "id": "m7d94f22162f1",
+      "group": "real_candidate",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 844,
+      "output_tokens": 232,
+      "elapsed_seconds": 4.03,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "mc7dbf5744be4",
+      "group": "paraphrase",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 754,
+      "output_tokens": 371,
+      "elapsed_seconds": 7.751,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m32adf282a69b",
+      "group": "missing_compositionality",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "missing"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "missing"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 741,
+      "output_tokens": 424,
+      "elapsed_seconds": 8.072,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m7cef9aa092c0",
+      "group": "optional_only",
+      "expected": {
+        "R1": "missing",
+        "R2": "missing",
+        "R3": "missing"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "missing",
+        "R2": "missing",
+        "R3": "missing"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 727,
+      "output_tokens": 156,
+      "elapsed_seconds": 4.497,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m456cf73c569b",
+      "group": "contradiction",
+      "expected": {
+        "R1": "contradicted",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "contradicted",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 754,
+      "output_tokens": 250,
+      "elapsed_seconds": 4.196,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m42c6e16240c7",
+      "group": "optional_added",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 764,
+      "output_tokens": 242,
+      "elapsed_seconds": 4.765,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m8dcde3469acd",
+      "group": "origin_now_required",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "missing"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "missing"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 870,
+      "output_tokens": 308,
+      "elapsed_seconds": 5.654,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "ma8acb2734def",
+      "group": "origin_satisfied",
+      "expected": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "R1": "covered",
+        "R2": "covered",
+        "R3": "covered",
+        "R4": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 880,
+      "output_tokens": 237,
+      "elapsed_seconds": 4.945,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m9d8bbe01245d",
+      "group": "pruning_paraphrase",
+      "expected": {
+        "P1": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "P1": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 481,
+      "output_tokens": 117,
+      "elapsed_seconds": 2.653,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "mdef4d1eae09c",
+      "group": "pruning_wrong",
+      "expected": {
+        "P1": "contradicted"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "P1": "contradicted"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 479,
+      "output_tokens": 129,
+      "elapsed_seconds": 3.39,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "md8282bd2c9b1",
+      "group": "pruning_absent",
+      "expected": {
+        "P1": "missing"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "P1": "missing"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 474,
+      "output_tokens": 133,
+      "elapsed_seconds": 4.754,
+      "model": "glm-5.3-flash"
+    },
+    {
+      "id": "m3981fd7c5b0f",
+      "group": "pruning_optional",
+      "expected": {
+        "P1": "covered"
+      },
+      "origin": "producer predeclared expectation; no independent adjudication",
+      "status": "completed",
+      "valid": true,
+      "observed": {
+        "P1": "covered"
+      },
+      "exact_match": true,
+      "false_covered": [],
+      "input_tokens": 484,
+      "output_tokens": 140,
+      "elapsed_seconds": 3.894,
+      "model": "glm-5.3-flash"
+    }
+  ],
+  "limits": "Producer-authored rubric and labels; no independent adjudication; requirement text intentionally supplied, expected labels hidden."
+}

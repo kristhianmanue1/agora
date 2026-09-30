@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 156,
-  "bytes": 775012,
+  "documents": 157,
+  "bytes": 781421,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -558,8 +558,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "0efc0b78097bd007ca126c45935b23585af8aed00ba54206eea158bd2d83207d",
-      "bytes": 16722,
+      "sha256": "98c81332f02b6e14f94354e7ebf0c932c26e5d0a8dcb5904f11ffb8c1f59bf57",
+      "bytes": 17382,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -688,6 +688,10 @@
         },
         {
           "target": "../experiments/omission-format-derived-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/materiality-rubric-v1/README.md",
           "exists": true
         }
       ],
@@ -1319,6 +1323,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/materiality-rubric-v1/README.md",
+      "sha256": "5bc07fc1c57c7c58a364324218b8e498810ac6c7725c53f0fbba6afbd0a7face",
+      "bytes": 5749,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

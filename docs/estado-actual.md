@@ -113,3 +113,7 @@ Disponible [diagnose-omissions](diagnostico-omisiones-cli.md): propuesta separad
 ## Derivado de formato y materialidad
 
 [Derivado local explícito](../experiments/omission-format-derived-v1/README.md): eliminado sólo el byte final sobrante, original rechazado intacto, replay válido sin red y dos propuestas con offsets verificados. La evaluación del productor no confirma ninguna como omisión material: una se solapa con diversidad/BLEU y otra añade contexto de origen. No es adjudicación independiente ni corrección del candidato. Prioridad siguiente: rúbrica de requisitos, paráfrasis y ampliaciones opcionales; no más incremento de tokens ni reparación automática.
+
+## Materialidad con requisitos explícitos
+
+[12 controles de rúbrica](../experiments/materiality-rubric-v1/README.md): 12/12 coincidencias con expectativas del productor, incluidas paráfrasis, omisiones, contradicción y cambio de detalle opcional a obligatorio al cambiar la pregunta. 10.991 tokens; dos documentos conocidos, un candidato real y controles sintéticos. Evidencia favorable a evaluar requisitos explícitos, no a descubrirlos automáticamente. Producto sin cambios. Próximo paso: rúbrica optativa versionada ligada a pregunta/fuente, con procedencia y completitud pendiente; nunca convertir conformidad a rúbrica en exhaustividad global.

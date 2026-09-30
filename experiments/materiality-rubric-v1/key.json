@@ -1,0 +1,116 @@
+[
+  {
+    "id": "m7d94f22162f1",
+    "group": "real_candidate",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "mc7dbf5744be4",
+    "group": "paraphrase",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m32adf282a69b",
+    "group": "missing_compositionality",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "missing"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m7cef9aa092c0",
+    "group": "optional_only",
+    "expected": {
+      "R1": "missing",
+      "R2": "missing",
+      "R3": "missing"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m456cf73c569b",
+    "group": "contradiction",
+    "expected": {
+      "R1": "contradicted",
+      "R2": "covered",
+      "R3": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m42c6e16240c7",
+    "group": "optional_added",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m8dcde3469acd",
+    "group": "origin_now_required",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "covered",
+      "R4": "missing"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "ma8acb2734def",
+    "group": "origin_satisfied",
+    "expected": {
+      "R1": "covered",
+      "R2": "covered",
+      "R3": "covered",
+      "R4": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m9d8bbe01245d",
+    "group": "pruning_paraphrase",
+    "expected": {
+      "P1": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "mdef4d1eae09c",
+    "group": "pruning_wrong",
+    "expected": {
+      "P1": "contradicted"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "md8282bd2c9b1",
+    "group": "pruning_absent",
+    "expected": {
+      "P1": "missing"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  },
+  {
+    "id": "m3981fd7c5b0f",
+    "group": "pruning_optional",
+    "expected": {
+      "P1": "covered"
+    },
+    "origin": "producer predeclared expectation; no independent adjudication"
+  }
+]

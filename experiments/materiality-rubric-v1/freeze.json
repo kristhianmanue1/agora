@@ -1,0 +1,13 @@
+{
+  "cases_sha256": "a24abd4beb2c81b93677ba418b54f1a9c40dcca1a742b1e163044b5cd8ff85bf",
+  "key_sha256": "bbd8520490d2e8ea7518f79f973cbf853eebb708e6fe8120aa33ac20b34dbe87",
+  "rubric_sha256": "4a5e29a5c451790bdcb3c56722ff662729edfcf6e233b4639bfb27d25ab506af",
+  "model": "glm-5.3-flash",
+  "max_calls": 12,
+  "max_tokens": 2048,
+  "temperature": 0,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "primary": "Report exact requirement labels per case; any missing obligation accepted as covered blocks promotion; no post-hoc rubric edits",
+  "limits": "Producer-authored rubric and labels; no independent adjudication; requirement text intentionally supplied, expected labels hidden."
+}

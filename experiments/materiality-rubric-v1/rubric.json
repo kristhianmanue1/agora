@@ -1,0 +1,57 @@
+{
+  "status": "experimental_producer_rubric_not_operator_adjudication",
+  "source_sha256": "092985a45bfc0b94c1de7ea4a7c99711c8d6750e9c1f53dd5349195201cfd2f7",
+  "task": "What are the limitations of the currently used quantitative metrics? e.g. why are they not good?",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Explain weak correlation of perplexity/BLEU with human judgments.",
+      "evidence": {
+        "text": "Evaluating conversational agents is an open research problem in the field. With the inclusion of emotion component in the modern conversation agents, evaluating such models has become even more complex.The current evaluation methods like perplexity and BLEU score are not good enough and correlate very weakly with human judgments. In the paper by Liu et al, 2016 BIBREF31 , the authors discuss about how not to evaluate the dialogue system. They provide quantitative and qualitative results highlighting specific weaknesses in existing metrics and provide recommendations for the future development of better automatic evaluation metrics for dialogue systems.",
+        "start_byte": 38665,
+        "end_byte": 39325
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Explain that diverse valid dialogue responses require many references for BLEU/word overlap.",
+      "evidence": {
+        "text": "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue.",
+        "start_byte": 39327,
+        "end_byte": 39909
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Explain insufficient sentence compositionality in embedding metrics based on vector averages.",
+      "evidence": {
+        "text": "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue.",
+        "start_byte": 39327,
+        "end_byte": 39909
+      }
+    }
+  ],
+  "optional_context": [
+    "Metric origins unless asked explicitly",
+    "Broader multiple-valid-responses rationale when already covered by response diversity"
+  ],
+  "scope_change": {
+    "id": "R4",
+    "requirement": "Identify machine translation as the origin from which BLEU and perplexity were borrowed.",
+    "evidence": {
+      "text": "Despite such huge advancements in the field, the way these models are evaluated is something that needs to be dramatically altered. Currently there exists no perfect quantitative method to compare two conversational agents. The field has to rely on qualitative measures or measures like BLeU and perplexity borrowed from machine translation. In section SECREF8 we discuss this problem in detail.",
+      "start_byte": 4504,
+      "end_byte": 4899
+    }
+  },
+  "transfer_requirements": [
+    {
+      "id": "P1",
+      "requirement": "Identify pruning by removing weights with the lowest absolute values.",
+      "evidence": {
+        "text": "We therefore focus next on reducing the memory footprint of the student models further through weight pruning. Weight pruning for NMT was recently investigated by See2016, who found that up to INLINEFORM0 of the parameters in a large NMT model can be pruned with little loss in performance. We take our best English INLINEFORM1 German student model ( INLINEFORM2 Seq-KD INLINEFORM3 Seq-Inter) and prune INLINEFORM4 of the parameters by removing the weights with the lowest absolute values. We then retrain the pruned model on Seq-KD data with a learning rate of INLINEFORM5 and fine-tune towards Seq-Inter data with a learning rate of INLINEFORM6 . As observed by See2016, retraining proved to be crucial. The results are shown in Table 3."
+      }
+    }
+  ],
+  "limits": "Rubric may be incomplete; this tests compliance with explicit requirements, not autonomous requirement discovery. Known public documents, synthetic controls and one real candidate."
+}
