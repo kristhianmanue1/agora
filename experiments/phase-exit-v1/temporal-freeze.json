@@ -1,0 +1,14 @@
+{
+  "runner_sha256": "6776291550d84481e492ba2eca746f38569abba6a8b99cb416c2dc8585747c55",
+  "candidate_sha256": "13d0a9449a71d848eea935c77b3794b55c45050b0c0cf12da895c3b82548278e",
+  "expected": {
+    "T_0": "supported",
+    "T_1": "contradicted",
+    "T_2": "insufficient",
+    "T_3": "insufficient"
+  },
+  "provenance": "Producer-authored labels fixed before call; not independently adjudicated",
+  "max_http_calls": 1,
+  "retries": 0,
+  "stop": "Retain all outcomes; do not tune or repeat to obtain agreement"
+}

@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 185,
-  "bytes": 892219,
+  "documents": 186,
+  "bytes": 898624,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "c4c5c72e269a92f8e584d5490219a5f22562c77fca49d596b22e9daa667670ca",
-      "bytes": 34531,
+      "sha256": "c0a19cfa46791df21cc3a2b4cc717be041d3fa107da7973b87c9b2bce539c81f",
+      "bytes": 35747,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -801,6 +801,10 @@
         {
           "target": "../experiments/pending-resolution-v1/README.md",
           "exists": true
+        },
+        {
+          "target": "../experiments/phase-exit-v1/README.md",
+          "exists": true
         }
       ],
       "python_modules": []
@@ -937,8 +941,8 @@
     },
     {
       "path": "docs/lectura-revisada-cli.md",
-      "sha256": "cdc2bbd29ab80a1ca66b71240db150e8aac03c1acf490df1e590cba6d60bf7c1",
-      "bytes": 5167,
+      "sha256": "61bcf9b7abb9669c1907a45099d8ecccb79f4aab46cd0a7c9eda7b1ac411147e",
+      "bytes": 6876,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -947,6 +951,10 @@
         },
         {
           "target": "../experiments/scoped-generalization-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/phase-exit-v1/README.md",
           "exists": true
         }
       ],
@@ -1762,6 +1770,14 @@
       "path": "experiments/pending-resolution-v1/README.md",
       "sha256": "692ba727eac02662b9261b97bf68926b63df9fd9dd5e3fdc33102c29cdc6f07f",
       "bytes": 3546,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/phase-exit-v1/README.md",
+      "sha256": "05dba74669df80b24fe5b231ed30a24cb1bd0e2bfd8653743f8476b76c6daadf",
+      "bytes": 3480,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

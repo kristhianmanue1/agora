@@ -33,6 +33,8 @@ def parser():
     p=argparse.ArgumentParser(description='Pendientes y derivados trazables. Experimental; no admisión automática.')
     p.add_argument('--workspace',type=Path,required=True)
     sub=p.add_subparsers(dest='command',required=True)
+    from .structured_plan import add_command as add_structured
+    add_structured(sub)
     sub.add_parser('init',help='Crear workspace nuevo; nunca migrar uno existente.')
     s=sub.add_parser('seed',help='Incorporar evaluación inicial suministrada explícitamente.')
     s.add_argument('--issue',required=True);s.add_argument('--input',type=Path,required=True);s.add_argument('--response',type=Path,required=True)
@@ -118,6 +120,9 @@ def run(args):
     if args.command=='generate-plan':
         from .plan_generation import run as generate_plan
         return generate_plan(args,read)
+    if args.command=='retrieve-structured':
+        from .structured_plan import run as structured
+        return structured(args,read,write_new)
     if args.command=='retrieve-subquestions':
         from .subquestions import prepare_subquestions
         from .source import FileSourceAdapter

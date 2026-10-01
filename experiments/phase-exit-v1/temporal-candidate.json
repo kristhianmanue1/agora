@@ -1,0 +1,43 @@
+{
+  "execution_status": "complete",
+  "fixture_origin": "Synthetic reviewer input assembled by the experiment author; not generated or admitted memory",
+  "parts": [
+    {
+      "id": "T",
+      "claims": [
+        {
+          "text": "At 09:15, Wednesday replaces Tuesday according to the supplied record.",
+          "quotes": [
+            "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}\n"
+          ]
+        },
+        {
+          "text": "At 09:15, Tuesday remains the date according to the supplied record.",
+          "quotes": [
+            "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}\n"
+          ]
+        },
+        {
+          "text": "Wednesday is guaranteed to remain the final date even after the supplied record ends.",
+          "quotes": [
+            "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}\n"
+          ]
+        },
+        {
+          "text": "The date was changed to Thursday after 09:15.",
+          "quotes": [
+            "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}\n"
+          ]
+        }
+      ],
+      "missing": []
+    }
+  ],
+  "envelope": {
+    "spans": [
+      {
+        "text": "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}\n"
+      }
+    ]
+  }
+}

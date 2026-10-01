@@ -1,0 +1,87 @@
+{
+  "rows": [
+    {
+      "id": "recovery-induced-v1/case-1",
+      "baseline": 0,
+      "structured": 1,
+      "references": 1,
+      "bytes": 6453
+    },
+    {
+      "id": "recovery-induced-v1/case-2",
+      "baseline": 0,
+      "structured": 3,
+      "references": 3,
+      "bytes": 7437
+    },
+    {
+      "id": "recovery-heldout-v1/case-1",
+      "baseline": 1,
+      "structured": 1,
+      "references": 1,
+      "bytes": 12771
+    },
+    {
+      "id": "recovery-heldout-v1/case-2",
+      "baseline": 1,
+      "structured": 1,
+      "references": 1,
+      "bytes": 9272
+    },
+    {
+      "id": "reserved/case-1",
+      "baseline": 1,
+      "structured": 2,
+      "references": 2,
+      "bytes": 6832
+    },
+    {
+      "id": "reserved/case-2",
+      "baseline": 1,
+      "structured": 1,
+      "references": 1,
+      "bytes": 9326
+    },
+    {
+      "id": "case-1",
+      "baseline": 0,
+      "structured": 0,
+      "references": 1,
+      "bytes": 18025
+    },
+    {
+      "id": "case-2",
+      "baseline": 0,
+      "structured": 1,
+      "references": 2,
+      "bytes": 12587
+    }
+  ],
+  "baseline_ranges_preserved": true,
+  "provider_calls": 0,
+  "scope": "Known development cases, current product baseline top-k 3, 20000 bytes; range recall is not semantic accuracy",
+  "temporal": {
+    "expected": {
+      "T_0": "supported",
+      "T_1": "contradicted",
+      "T_2": "insufficient",
+      "T_3": "insufficient"
+    },
+    "observed": {
+      "T_0": "insufficient",
+      "T_1": "insufficient",
+      "T_2": "insufficient",
+      "T_3": "insufficient"
+    },
+    "matches": 2,
+    "controls": 4,
+    "http_calls": 1,
+    "tokens": 1250,
+    "independent_adjudication": false
+  },
+  "implementation_hashes": {
+    "structured_plan.py": "93abee9a4605b7881d309ef35fea4ba7410092ee54ed2cdf301b66e014a1d8f1",
+    "structure_selection.py": "e08519fee487caf5c3959620e137159a56ed88f8fdbf1f7942638800258b41cb",
+    "plan_generation.py": "d91fa366fc21de2eff01a26084012dade63a85eee964baf44322396d9368809c"
+  }
+}

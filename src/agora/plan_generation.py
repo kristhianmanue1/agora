@@ -18,12 +18,16 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
     plan = json.loads(plan_bytes, object_pairs_hook=unique_object)
     strategies = {'agora/subquestions-plan/v1-experimental':'paragraphs-equal',
                   'agora/subquestions-plan/v2-experimental':'functions-adaptive'}
-    if plan.get('schema') not in strategies:
+    from .structured_plan import VERSION as STRUCTURED,prepare as prepare_structured
+    if plan.get('schema') not in (*strategies,STRUCTURED):
         raise ValueError('unsupported_subquestions_plan')
     adapter = FileSourceAdapter(source, plan['source_id'])
     spec = dict(schema='agora/subquestions-input/v1-experimental',questions=[
         {k:q[k] for k in ('id','query','reference_ranges')} for q in plan['questions']])
-    rebuilt = prepare_subquestions(adapter,plan['source_sha256'],spec,plan['budget_bytes'],plan['top_k'],strategies[plan['schema']])
+    if plan['schema']==STRUCTURED:
+        rebuilt=prepare_structured(adapter,plan['source_sha256'],spec,plan['structure'],plan['budget_bytes'],plan['top_k'])
+    else:
+        rebuilt = prepare_subquestions(adapter,plan['source_sha256'],spec,plan['budget_bytes'],plan['top_k'],strategies[plan['schema']])
     # JSON arrays deserialize as lists; compare in the serialized contract domain.
     if json.loads(json.dumps(rebuilt)) != plan:
         raise ValueError('plan_reproduction_mismatch')
@@ -74,7 +78,7 @@ def run(args, read):
         if attempts:raise ValueError('request_budget_exceeded')
         attempts+=1
         return live_provider(system,user) if args.live else response
-    modules=('plan_generation.py','subquestions.py','function_retrieval.py','passages.py','source.py','query.py','transform.py','evidence.py','evidence_ids.py','routed_query.py')
+    modules=('structured_plan.py','structure_selection.py','qasper.py','plan_generation.py','subquestions.py','function_retrieval.py','passages.py','source.py','query.py','transform.py','evidence.py','evidence_ids.py','routed_query.py')
     hashes={n:digest(Path(__file__).with_name(n).read_bytes()) for n in modules}
     try:
         result=generate(args.source,Path(args.plan).read_bytes(),args.expected_plan_sha256,args.question,provider,args.citation_mode)

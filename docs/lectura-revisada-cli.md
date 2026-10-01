@@ -91,3 +91,32 @@ son texto UTF-8; no se añadió parser semántico JSONL ni extracción PDF/Word.
 [fuentes nuevas y formatos](../experiments/scoped-generalization-v1/README.md).
 Se corrigió también la comparación de planes léxicos serializados: la reconstrucción
 se normaliza a arrays JSON, manteniendo comparación de todos los campos y hashes.
+
+## Opción implementada: enriquecimiento por estructura QASPER
+
+`retrieve-structured` conserva la selección léxica y añade pasajes por encabezados
+/listas dentro del mismo presupuesto. Sigue siendo experimental y no reemplaza
+`retrieve-subquestions`. Consume una sola pregunta en el mismo formato de `--spec`.
+El archivo `--structure` contiene exclusivamente `title`, `abstract`, `full_text`;
+cada sección tiene `section_name` y `paragraphs`. No admite `qas` ni respuestas de
+referencia. Su renderizado debe coincidir byte a byte con la fuente UTF-8 fijada.
+No es un extractor general de PDF/Word ni de estructura de reuniones.
+
+```bash
+python3 scripts/agora_issues.py --workspace WORKSPACE retrieve-structured \
+  --source SOURCE.txt --source-id DOCUMENT_ID --source-sha256 SOURCE_SHA256 \
+  --spec QUESTION.json --structure STRUCTURE.json \
+  --structure-sha256 STRUCTURE_FILE_SHA256 --budget 20000 --top-k 3 \
+  --out PLAN.json
+```
+
+Los nombres en mayúsculas son valores que debe proporcionar el llamador. La huella
+`--structure-sha256` corresponde a los bytes del archivo. El plan guarda además la
+huella de su representación estructural canónica: ambas huellas pueden diferir.
+El plan resultante usa v3-structured-experimental y se pasa al comando existente
+`generate-plan` con su hash; éste reconstruye selección y evidencia antes de cualquier
+llamada. Después se emplean las revisiones y reading-route de esta guía. Preparar el
+plan no llama proveedores; generar requiere `--live` explícito o `--response` replay.
+
+[Resultados y cierre de fase](../experiments/phase-exit-v1/README.md). Se conservan
+rangos previos; eso no garantiza relevancia, respuesta completa ni fidelidad semántica.

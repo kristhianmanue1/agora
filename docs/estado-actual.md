@@ -377,3 +377,21 @@ al límite sobre posibles cambios posteriores. La inspección recomienda respond
 «miércoles según el registro hasta las 09:15» y separar esa respuesta de su límite
 temporal. No se aplicó reparación ni se sustituyó el dictamen original. Sigue
 pendiente adjudicación independiente; el ensayo no cambia producto ni defaults.
+
+### Cierre técnico de esta fase y capacidad incorporada al producto
+
+[Último bloque acotado](../experiments/phase-exit-v1/README.md): la CLI dispone de
+`retrieve-structured`, conectado a `generate-plan` mediante contrato v3 experimental.
+Valida estructura contra fuente, conserva el baseline y añade rangos bajo presupuesto.
+No depende de código experimental externo ni sustituye contratos/defaults existentes.
+Contra el baseline del producto mejora referencias en cuatro de ocho casos conocidos;
+seis casos reúnen todas las referencias. No equivale a exactitud semántica ni
+validación reservada. Los controles temporales Jev coincidieron en 2/4 etiquetas del
+productor: limitación explícita, sin promoción. Una llamada, 1.250 tokens.
+
+Cierre técnico recomendado de estas iteraciones: usar lo implementado en piloto
+supervisado y conservar límites, sin más ajustes automáticos del mismo benchmark.
+Verificación: 525 pruebas pasaron, incluido el recorrido CLI con generación replay;
+no se ejecutó generación live con el nuevo selector. La aceptación pertenece al
+Operador. Otra fase debe fijar objetivo, presupuesto y
+salida propios; el motor completo no tiene una fecha de terminación acordada.
