@@ -282,3 +282,14 @@ pasaron; cero llamadas. La rúbrica de modelos omite GPT-2/XLNet mencionados en 
 propia evidencia: no basta para demostrar completitud. Sin promoción ni cambios
 productivos. Próximo paso propuesto: listas/encabezados y relaciones de sección,
 con evaluación separada de la suficiencia de las rúbricas antes de volver a API.
+
+## Estructura documental: recuperación mejor, pero no universal
+
+[Comparación offline en cuatro casos conocidos](../experiments/structure-retrieval-v1/README.md):
+encabezados + listas recuperan los párrafos omitidos en los dos fallos (1/1 y 3/3),
+pero pierden los aciertos del baseline en otros dos casos (0/1 y 0/1). Misma cota
+12.000 bytes; cero llamadas, cuatro tests y reproducción pasaron. Se usó estructura
+QASPER disponible, no extracción general desde PDF. Sin promoción ni cambios de
+producto. Próximo candidato: combinar recuperación léxica y estructural bajo un
+presupuesto común, comprobar regresiones y luego fuentes nuevas; no elegir por
+etiquetas retrospectivas ni declarar suficiencia semántica a partir de rangos.

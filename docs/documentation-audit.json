@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 176,
-  "bytes": 855796,
+  "documents": 177,
+  "bytes": 859696,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "b149a0aac30163daa7520b80f3c30f38dfad3f70093d0dc4b037dca0fa0dcb06",
-      "bytes": 28186,
+      "sha256": "df78c009948f35c8e927ca8ddab9d3d18d494fb1a2ec3e0129405248096a2056",
+      "bytes": 28930,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -764,6 +764,10 @@
         },
         {
           "target": "../experiments/retrieval-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/structure-retrieval-v1/README.md",
           "exists": true
         }
       ],
@@ -2035,6 +2039,14 @@
       "path": "experiments/split-comparison-v2/README.md",
       "sha256": "4c365ee3f18f4534f5923de8adb5e02caf11875b3ba10c84936c8ede8956424d",
       "bytes": 1229,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/structure-retrieval-v1/README.md",
+      "sha256": "088b603f1163819bfa7a21f9041922c2ba527a48201449a38c8146acbf6ffbca",
+      "bytes": 3156,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
