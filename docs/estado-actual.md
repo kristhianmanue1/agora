@@ -224,3 +224,14 @@ presupuesto preserva límites. Seis llamadas, 16.266 tokens; sin tuning ni repar
 Próximo incremento: propuesta de recuperación adicional ante cobertura incompleta,
 buscando definiciones y condiciones con presupuesto y parada explícitos. Sin cambios
 de CLI/defaults ni integraciones del ecosistema.
+
+## Propuesta explícita de recuperación disponible
+
+[CLI coverage-plan](recuperacion-cobertura.md) conecta una revisión de rúbrica
+incompleta con una propuesta de pasajes adicionales, preservando contexto y hashes,
+con presupuesto total y parada explícita. No llama a modelos ni admite memoria.
+[Regresión conocida](../experiments/coverage-recovery-v1/README.md): recupera ΔG/ΔS,
+de 5.162 a 9.439 bytes dentro de 12.000. El pasaje anotado de BLEU sigue fuera:
+no hay declaración de cobertura completa ni nueva respuesta evaluada. Próximo paso:
+consumidor explícito para generar un derivado desde la propuesta y evaluarlo; luego
+validación reservada. El contrato no es intercambiable con `generate-plan`.

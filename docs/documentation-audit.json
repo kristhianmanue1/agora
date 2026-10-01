@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 169,
-  "bytes": 831274,
+  "documents": 171,
+  "bytes": 836769,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "ca2890e5740dba65fd3999c8083262902aaf4db02f9cacf0950e9e2ff4d7e7b0",
-      "bytes": 4705,
+      "sha256": "af96d064095f8831c5592d7846058cbf931b2423ec02717e1467be2c5127c57a",
+      "bytes": 4809,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -186,6 +186,10 @@
         },
         {
           "target": "docs/diagnostico-omisiones-cli.md",
+          "exists": true
+        },
+        {
+          "target": "docs/recuperacion-cobertura.md",
           "exists": true
         }
       ],
@@ -558,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "1baf1cb451e4a5ef372ad82774fb4f4552bbc905b7245a0c2caddacfc4f174f5",
-      "bytes": 24242,
+      "sha256": "e94eb7ac77de49eae7836e2e1e90282268153c1e74e4d153f271641e59024161",
+      "bytes": 24958,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -736,6 +740,14 @@
         },
         {
           "target": "../experiments/condition-expansion-heldout-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "recuperacion-cobertura.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/coverage-recovery-v1/README.md",
           "exists": true
         }
       ],
@@ -992,6 +1004,19 @@
         },
         {
           "target": "../experiments/retrieved-expansion-v1/result-01.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/recuperacion-cobertura.md",
+      "sha256": "ef0581305f591a20bf4eeceb353cd66f4cbf5cdc686e42ad1126ef8af043949d",
+      "bytes": 3068,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/coverage-recovery-v1/README.md",
           "exists": true
         }
       ],
@@ -1331,6 +1356,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/coverage-recovery-v1/README.md",
+      "sha256": "b0f29ba5a3b1ec50f0a353afb32df9f4cc7053f37933f4c90a9929345ab340e5",
+      "bytes": 1607,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

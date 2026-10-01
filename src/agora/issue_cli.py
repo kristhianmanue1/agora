@@ -62,6 +62,8 @@ def parser():
     group=s.add_mutually_exclusive_group(required=True)
     group.add_argument('--live',action='store_true');group.add_argument('--response')
     s.add_argument('--citation-mode',choices=('literal','ids'),default='literal')
+    from .coverage_recovery import add_command as add_coverage_plan
+    add_coverage_plan(sub)
     from .rubric_cli import add_command as add_rubric
     add_rubric(sub)
     from .omission_cli import add_command as add_omissions
@@ -81,6 +83,9 @@ def run(args):
         write_new(workspace/'workspace.json',dict(schema=WORKSPACE))
         return dict(status='initialized',workspace=str(workspace))
     if read(workspace/'workspace.json')!={'schema':WORKSPACE}:raise ValueError('incompatible_workspace')
+    if args.command=='coverage-plan':
+        from .coverage_recovery import run as coverage_plan
+        return coverage_plan(args,write_new)
     if args.command=='review-rubric':
         from .rubric_cli import run as review_rubric
         return review_rubric(args,read)

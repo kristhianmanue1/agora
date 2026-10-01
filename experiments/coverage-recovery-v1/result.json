@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "scope": "known regression; retrieved evidence only, no new answer",
+  "hashes": {
+    "source": "31dba657ba7a6803e2c90b9e47670ef86f5cd8205bd8a787334f8293d526e096",
+    "candidate": "10e216bc88bd0d58a17602b6e882ad9ad56b2727a286d7ddeb5c228a8bc50de5",
+    "rubric": "11b4f8aa240ec6e0bfb349e6048a0d8da67cf1e51615f1dd828556861d340e61",
+    "review": "ca5d27730438dbde82b462f8149545ccabbd31d0c3b92c3d75daba08e977dc08"
+  },
+  "missing_ids": [
+    "R2",
+    "R3"
+  ],
+  "initial_bytes": 5162,
+  "delivered_bytes": 9439,
+  "new_bytes": 4277,
+  "budget": 12000,
+  "queries": [
+    "metrics"
+  ],
+  "following_paragraphs": 3,
+  "evidence_in_context": {
+    "R1": true,
+    "R2": true,
+    "R3": true,
+    "R4": false
+  },
+  "provider_calls": 0,
+  "original_files_unchanged": true,
+  "exclusive_output": true,
+  "implementation_sha256": "83c40b7df68fc523812041123de63ad3ef6e07121da9b73c0ce1240fe7dc1664"
+}

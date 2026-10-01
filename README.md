@@ -82,3 +82,5 @@ Generación conectada: [plan verificado → candidato](docs/generacion-desde-pla
 
 Revisión optativa de suficiencia: [review-coverage](docs/revision-suficiencia-cli.md), con replay o una llamada GLM explícita; sin admisión automática.
 Diagnóstico optativo posterior: [diagnose-omissions](docs/diagnostico-omisiones-cli.md), propuestas con localizadores de evidencia y validación semántica todavía parcial.
+
+Recuperación ante omisiones: [propuesta acotada desde una revisión](docs/recuperacion-cobertura.md).
