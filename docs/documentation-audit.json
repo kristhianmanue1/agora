@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 175,
-  "bytes": 851505,
+  "documents": 176,
+  "bytes": 855796,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "035ea207683b0e3db6e6d4bf0496825e1e2224ae09561007f268cf007da8937c",
-      "bytes": 27360,
+      "sha256": "b149a0aac30163daa7520b80f3c30f38dfad3f70093d0dc4b037dca0fa0dcb06",
+      "bytes": 28186,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -760,6 +760,10 @@
         },
         {
           "target": "../experiments/recovery-induced-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/retrieval-comparison-v1/README.md",
           "exists": true
         }
       ],
@@ -1846,6 +1850,14 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/retrieval-comparison-v1/README.md",
+      "sha256": "72fcb676f60c2092a37f8cea82f8ad34a8de35854c242db521aec492ea12472a",
+      "bytes": 3465,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

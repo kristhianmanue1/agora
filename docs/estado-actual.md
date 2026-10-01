@@ -270,3 +270,15 @@ de ambos contextos. Seis llamadas, 17.611 tokens; reproducción offline verifica
 sin reintentos ni promoción. C6 anterior tiene contraste contextual documentado,
 no adjudicación independiente. Siguiente: comparar recuperación offline separando
 los fallos de selección, formato y presupuesto del revisor antes de otra condición.
+
+## Comparación offline: el cuello de botella sigue en selección
+
+[Cuatro variantes a igual presupuesto](../experiments/retrieval-comparison-v1/README.md)
+no recuperan los párrafos anotados de los dos casos conocidos. El párrafo de modelos
+queda en puesto léxico 29; las líneas de validación cruzada no comparten términos con
+la pregunta. Limpiar palabras frecuentes y ampliar por sección desde las mismas
+coincidencias no resuelve estos casos. Cuatro tests y reproducción del baseline
+pasaron; cero llamadas. La rúbrica de modelos omite GPT-2/XLNet mencionados en su
+propia evidencia: no basta para demostrar completitud. Sin promoción ni cambios
+productivos. Próximo paso propuesto: listas/encabezados y relaciones de sección,
+con evaluación separada de la suficiencia de las rúbricas antes de volver a API.

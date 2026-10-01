@@ -1,0 +1,655 @@
+{
+  "status": "comparison_complete",
+  "rows": [
+    {
+      "query": "Which pre-trained language models are used?",
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          14411,
+          15310
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          15392,
+          15772
+        ],
+        [
+          15774,
+          16433
+        ],
+        [
+          16435,
+          17305
+        ]
+      ],
+      "bytes": 9548,
+      "initial_ranges": [
+        [
+          0,
+          58
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          8,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          9,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 33907,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-1",
+      "variant": "exact-paragraphs",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 1
+    },
+    {
+      "query": "pre trained language models",
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          2994,
+          3122
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ]
+      ],
+      "bytes": 6737,
+      "initial_ranges": [
+        [
+          0,
+          58
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 49,
+        "seed_paragraphs": [
+          1,
+          4,
+          8
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 33907,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-1",
+      "variant": "filtered-paragraphs",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 1
+    },
+    {
+      "query": "Which pre-trained language models are used?",
+      "ranges": [
+        [
+          0,
+          6763
+        ],
+        [
+          14356,
+          17307
+        ]
+      ],
+      "bytes": 9714,
+      "initial_ranges": [
+        [
+          0,
+          58
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          8,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          9,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 33907,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-1",
+      "variant": "exact-sections",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 1
+    },
+    {
+      "query": "pre trained language models",
+      "ranges": [
+        [
+          0,
+          6763
+        ]
+      ],
+      "bytes": 6763,
+      "initial_ranges": [
+        [
+          0,
+          58
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 49,
+        "seed_paragraphs": [
+          1,
+          4,
+          8
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 33907,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-1",
+      "variant": "filtered-sections",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 1
+    },
+    {
+      "query": "Which three variants of cross-validation are examined?",
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          18039,
+          18698
+        ]
+      ],
+      "bytes": 9650,
+      "initial_ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          3,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 38789,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-2",
+      "variant": "exact-paragraphs",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 3
+    },
+    {
+      "query": "three variants cross validation examined",
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          18039,
+          18698
+        ]
+      ],
+      "bytes": 9650,
+      "initial_ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 29,
+        "seed_paragraphs": [
+          1,
+          3,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 38789,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-2",
+      "variant": "filtered-paragraphs",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 3
+    },
+    {
+      "query": "Which three variants of cross-validation are examined?",
+      "ranges": [
+        [
+          0,
+          7498
+        ],
+        [
+          13897,
+          15744
+        ]
+      ],
+      "bytes": 9345,
+      "initial_ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "skipped_ranges": [
+        [
+          15729,
+          19184
+        ]
+      ],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          3,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 38789,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-2",
+      "variant": "exact-sections",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 3
+    },
+    {
+      "query": "three variants cross validation examined",
+      "ranges": [
+        [
+          0,
+          7498
+        ],
+        [
+          13897,
+          15744
+        ]
+      ],
+      "bytes": 9345,
+      "initial_ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "skipped_ranges": [
+        [
+          15729,
+          19184
+        ]
+      ],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 29,
+        "seed_paragraphs": [
+          1,
+          3,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 38789,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      },
+      "case_id": "case-2",
+      "variant": "filtered-sections",
+      "reference_requirements": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "covered_unique_reference_paragraphs": 0,
+      "total_unique_reference_paragraphs": 3
+    }
+  ],
+  "provider_calls": 0,
+  "semantic_completeness": "not_evaluated",
+  "scope": "Known failures, development comparison only; exact annotated paragraph coverage is not answer quality",
+  "decision": "No automatic default promotion"
+}

@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "id": "case-1",
+      "document_id": "2004.02105",
+      "question": "Which pre-trained language models are used?",
+      "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+      "rubric_sha256": "1d6e4c0c43cda6acdeb3f19fdcd3d37f2de9cb4a2181b2c70c2a7ba794720d61",
+      "initial_bytes": 58,
+      "source_path": "experiments/recovery-induced-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-1-rubric.json",
+      "prior_proposal": "experiments/recovery-induced-v1/runs/case-1/proposal.json"
+    },
+    {
+      "id": "case-2",
+      "document_id": "1803.05160",
+      "question": "Which three variants of cross-validation are examined?",
+      "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+      "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+      "initial_bytes": 68,
+      "source_path": "experiments/recovery-induced-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-2-rubric.json",
+      "prior_proposal": "experiments/recovery-induced-v1/runs/case-2/proposal.json"
+    }
+  ],
+  "budget": 12000,
+  "top_k": 3,
+  "following": 3,
+  "variants": [
+    "exact-paragraphs",
+    "filtered-paragraphs",
+    "exact-sections",
+    "filtered-sections"
+  ],
+  "section_policy": "Whole touched sections in source order if they fit; then seed passage fallback",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "selector_sha256": "d2fbaf0c2b550383acf11aa9a2d4f8ebd3b1c8764a4711b78b3aa85c09fe3dfd",
+  "runner_sha256": "717cce9121e92cd3afcec023e967ec43f05ba08b1fddc83f8596095749c642d1",
+  "stop_rule": "Execute all four variants once; no changes after scores; no model calls or promotion",
+  "scope": "Known-case offline comparison, not held-out validation",
+  "mechanical_amendment": "Rename selectors.py to retrieval_variants.py to avoid Python standard library name collision; no algorithm or parameter changes. Initial freeze retained."
+}
