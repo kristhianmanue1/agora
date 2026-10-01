@@ -1,0 +1,698 @@
+{
+  "cases": [
+    {
+      "document_id": "1901.05389",
+      "question": "What baseline model is used?",
+      "source_sha256": "74c587db0a182b08314d38447e56289f22ff81f3ca21ea3d0be069b76889f934",
+      "rubric_sha256": "5f1ee2b72fdb4ec369dfa8aeb62c928c7ef856e41aed514616dc865b733cd60e",
+      "id": "case-1",
+      "source_path": "experiments/recovery-heldout-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-heldout-v1/case-1-rubric.json",
+      "partition": "known",
+      "origin_case": "recovery-heldout-v1/case-1",
+      "stages": [
+        {
+          "budget": 8000,
+          "ranges": [
+            [
+              0,
+              83
+            ],
+            [
+              5777,
+              5790
+            ],
+            [
+              5792,
+              6276
+            ],
+            [
+              6987,
+              8813
+            ],
+            [
+              18117,
+              18152
+            ],
+            [
+              18154,
+              18713
+            ],
+            [
+              18715,
+              19367
+            ],
+            [
+              19369,
+              20613
+            ],
+            [
+              20615,
+              21678
+            ],
+            [
+              21680,
+              22352
+            ],
+            [
+              22354,
+              22371
+            ],
+            [
+              23350,
+              23369
+            ],
+            [
+              23371,
+              24036
+            ],
+            [
+              25273,
+              25614
+            ],
+            [
+              26879,
+              26886
+            ]
+          ],
+          "bytes": 7680
+        },
+        {
+          "budget": 12000,
+          "ranges": [
+            [
+              0,
+              83
+            ],
+            [
+              5777,
+              5790
+            ],
+            [
+              5792,
+              6276
+            ],
+            [
+              6278,
+              6985
+            ],
+            [
+              6987,
+              8813
+            ],
+            [
+              18117,
+              18152
+            ],
+            [
+              18154,
+              18713
+            ],
+            [
+              18715,
+              19367
+            ],
+            [
+              19369,
+              20613
+            ],
+            [
+              20615,
+              21678
+            ],
+            [
+              21680,
+              22352
+            ],
+            [
+              22354,
+              22371
+            ],
+            [
+              22373,
+              22744
+            ],
+            [
+              23350,
+              23369
+            ],
+            [
+              23371,
+              24036
+            ],
+            [
+              24038,
+              25271
+            ],
+            [
+              25273,
+              25614
+            ],
+            [
+              25616,
+              26877
+            ],
+            [
+              26879,
+              26886
+            ],
+            [
+              28799,
+              29162
+            ],
+            [
+              29164,
+              29287
+            ]
+          ],
+          "bytes": 11738
+        },
+        {
+          "budget": 20000,
+          "ranges": [
+            [
+              0,
+              83
+            ],
+            [
+              5777,
+              5790
+            ],
+            [
+              5792,
+              6276
+            ],
+            [
+              6278,
+              6985
+            ],
+            [
+              6987,
+              8813
+            ],
+            [
+              18117,
+              18152
+            ],
+            [
+              18154,
+              18713
+            ],
+            [
+              18715,
+              19367
+            ],
+            [
+              19369,
+              20613
+            ],
+            [
+              20615,
+              21678
+            ],
+            [
+              21680,
+              22352
+            ],
+            [
+              22354,
+              22371
+            ],
+            [
+              22373,
+              22744
+            ],
+            [
+              23350,
+              23369
+            ],
+            [
+              23371,
+              24036
+            ],
+            [
+              24038,
+              25271
+            ],
+            [
+              25273,
+              25614
+            ],
+            [
+              25616,
+              26877
+            ],
+            [
+              26879,
+              26886
+            ],
+            [
+              26888,
+              27914
+            ],
+            [
+              27916,
+              28797
+            ],
+            [
+              28799,
+              29162
+            ],
+            [
+              29164,
+              29287
+            ],
+            [
+              29289,
+              30760
+            ]
+          ],
+          "bytes": 15116
+        }
+      ]
+    },
+    {
+      "document_id": "1709.06365",
+      "question": "Which data augmentation techniques do they use?",
+      "source_sha256": "03b287726f6f1d1147fdc203fa860c5333c3d1a6024ae5ec168ec1236258708a",
+      "rubric_sha256": "27f1d90b81c917553a8afe227c93af484335c9b357654c10bec20d9f4f4384cf",
+      "id": "case-2",
+      "partition": "reserved_local",
+      "source_path": "experiments/staged-retrieval-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/staged-retrieval-v1/case-1-rubric.json",
+      "origin_case": "reserved/case-1",
+      "stages": [
+        {
+          "budget": 8000,
+          "ranges": [
+            [
+              0,
+              69
+            ],
+            [
+              71,
+              1226
+            ],
+            [
+              1228,
+              1240
+            ],
+            [
+              1242,
+              2114
+            ],
+            [
+              2116,
+              2656
+            ],
+            [
+              2658,
+              3591
+            ],
+            [
+              14557,
+              14566
+            ],
+            [
+              14568,
+              15272
+            ],
+            [
+              15274,
+              15482
+            ],
+            [
+              15484,
+              15515
+            ],
+            [
+              15517,
+              16156
+            ],
+            [
+              17121,
+              17361
+            ],
+            [
+              17363,
+              17475
+            ],
+            [
+              17477,
+              18110
+            ],
+            [
+              18112,
+              18140
+            ],
+            [
+              18142,
+              18176
+            ],
+            [
+              18400,
+              19139
+            ],
+            [
+              37304,
+              37314
+            ],
+            [
+              38331,
+              38346
+            ],
+            [
+              38348,
+              38519
+            ]
+          ],
+          "bytes": 7154
+        },
+        {
+          "budget": 12000,
+          "ranges": [
+            [
+              0,
+              69
+            ],
+            [
+              71,
+              1226
+            ],
+            [
+              1228,
+              1240
+            ],
+            [
+              1242,
+              2114
+            ],
+            [
+              2116,
+              2656
+            ],
+            [
+              2658,
+              3591
+            ],
+            [
+              14557,
+              14566
+            ],
+            [
+              14568,
+              15272
+            ],
+            [
+              15274,
+              15482
+            ],
+            [
+              15484,
+              15515
+            ],
+            [
+              15517,
+              16156
+            ],
+            [
+              16158,
+              17119
+            ],
+            [
+              17121,
+              17361
+            ],
+            [
+              17363,
+              17475
+            ],
+            [
+              17477,
+              18110
+            ],
+            [
+              18112,
+              18140
+            ],
+            [
+              18142,
+              18176
+            ],
+            [
+              18178,
+              18398
+            ],
+            [
+              18400,
+              19139
+            ],
+            [
+              37304,
+              37314
+            ],
+            [
+              37316,
+              38329
+            ],
+            [
+              38331,
+              38346
+            ],
+            [
+              38348,
+              38519
+            ]
+          ],
+          "bytes": 9348
+        }
+      ]
+    },
+    {
+      "document_id": "1909.09070",
+      "question": "What supervised baselines did they compare with?",
+      "source_sha256": "d18e5fd2313978eda8c6d287e9a68ecb0c0adfd393e661e2e37e039513ba229e",
+      "rubric_sha256": "ed9151d1693469aa09b9de40733adba04521f66e9a0320ef681dac6cec05f96a",
+      "id": "case-3",
+      "partition": "reserved_local",
+      "source_path": "experiments/staged-retrieval-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/staged-retrieval-v1/case-2-rubric.json",
+      "origin_case": "reserved/case-2",
+      "stages": [
+        {
+          "budget": 8000,
+          "ranges": [
+            [
+              0,
+              75
+            ],
+            [
+              77,
+              1093
+            ],
+            [
+              1095,
+              1107
+            ],
+            [
+              1109,
+              1670
+            ],
+            [
+              1672,
+              2242
+            ],
+            [
+              2244,
+              2299
+            ],
+            [
+              14071,
+              14106
+            ],
+            [
+              14108,
+              14172
+            ],
+            [
+              14174,
+              14645
+            ],
+            [
+              14647,
+              15092
+            ],
+            [
+              15094,
+              15334
+            ],
+            [
+              15336,
+              15576
+            ],
+            [
+              15578,
+              15636
+            ],
+            [
+              15638,
+              15694
+            ],
+            [
+              15696,
+              16306
+            ],
+            [
+              16308,
+              16954
+            ],
+            [
+              16956,
+              17642
+            ],
+            [
+              17644,
+              18124
+            ],
+            [
+              18126,
+              18456
+            ],
+            [
+              22489,
+              22549
+            ],
+            [
+              23216,
+              24443
+            ]
+          ],
+          "bytes": 7937
+        },
+        {
+          "budget": 12000,
+          "ranges": [
+            [
+              0,
+              75
+            ],
+            [
+              77,
+              1093
+            ],
+            [
+              1095,
+              1107
+            ],
+            [
+              1109,
+              1670
+            ],
+            [
+              1672,
+              2242
+            ],
+            [
+              2244,
+              2299
+            ],
+            [
+              14071,
+              14106
+            ],
+            [
+              14108,
+              14172
+            ],
+            [
+              14174,
+              14645
+            ],
+            [
+              14647,
+              15092
+            ],
+            [
+              15094,
+              15334
+            ],
+            [
+              15336,
+              15576
+            ],
+            [
+              15578,
+              15636
+            ],
+            [
+              15638,
+              15694
+            ],
+            [
+              15696,
+              16306
+            ],
+            [
+              16308,
+              16954
+            ],
+            [
+              16956,
+              17642
+            ],
+            [
+              17644,
+              18124
+            ],
+            [
+              18126,
+              18456
+            ],
+            [
+              18458,
+              19063
+            ],
+            [
+              19065,
+              19462
+            ],
+            [
+              22489,
+              22549
+            ],
+            [
+              22551,
+              23214
+            ],
+            [
+              23216,
+              24443
+            ],
+            [
+              24445,
+              25355
+            ]
+          ],
+          "bytes": 10512
+        }
+      ]
+    }
+  ],
+  "max_calls": 21,
+  "max_stages_per_case": 3,
+  "max_glm_output_tokens_per_case": 18432,
+  "generation_max_tokens": 4096,
+  "review_max_tokens": 2048,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "implementations": {
+    "experiments/reviewed-stages-v1/policy.py": "5710425bf7bb65b110b8f02b45df24881381a0f17f844f28bdaa5095352ff6bb",
+    "experiments/reviewed-stages-v1/worker.py": "340ccdd094306c4e029ccd94d6ba8fb467aaa39a6aadc2a2a947a4c4e4b4d951",
+    "experiments/reviewed-stages-v1/run.py": "0b6c0dca5dc4bb2ec619b0ad3f8f73df167986eeabe7340b2c37cb5c445dfa9f",
+    "experiments/reading-paired-grouping-v1/run_jev.py": "e50098243fded1c3cb3968b309640c6b1c6762eb8e0e3abaa2a898820a874d7a",
+    "experiments/reviewer-comparison-v1/run.py": "a0063c942a76c9f2c38cce5a3877e72539d858275cd7db2156779f99d1a4ab05"
+  },
+  "stop_rule": "Invalid/inconclusive/conflicting outcome stops for inspection; missing coverage plus supported citations advances; all supplied requirements covered plus supported citations yields candidate for explicit review, never acceptance",
+  "scope": "Three known retrieval cases; two have not had generation in previous staged experiment; no independent adjudication",
+  "total_provider_token_cap": "No cross-provider total-token enforcement; fixed GLM output ceilings, bounded inputs, choice-only Jev and max calls; actual usage reported"
+}

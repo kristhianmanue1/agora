@@ -324,3 +324,19 @@ nuevas. Cinco tests/replay pasaron; cero llamadas. La parada usa candidatos de t
 las etapas calculados previamente y no demuestra suficiencia semántica ni ahorro
 local. Sin integración/defaults. Próximo recorrido: revisión explícita de cobertura
 y fidelidad entre etapas, presupuesto acumulado y salida de insuficiencia.
+
+## Etapa actual: validación del recorrido con revisores, aún piloto
+
+[Revisiones entre etapas](../experiments/reviewed-stages-v1/README.md): tres casos,
+siete llamadas y 18.930 tokens. Uno exige inspección de cobertura, otro falla formato,
+y uno queda como candidato para revisión explícita. Ninguno avanzó a segunda lectura;
+la transición sólo tiene pruebas sintéticas en este ensayo. Seis tests y replay
+pasaron. No hay aceptación automática, integración nueva en CLI ni memoria admitida.
+
+El bloqueo principal ahora es distinguir ausencia en contexto parcial, omisión de
+respuesta y contradicción real: el revisor etiquetó como contradicción una declaración
+de falta limitada a los pasajes. Prioridad: contrastar esa interpretación con controles
+y luego probar una ampliación real. Después integrar el recorrido en la CLI y validar
+fuentes nuevas/otras estructuras. Catálogo, consolidación general y contratos de
+integración con otros componentes siguen fuera de este incremento. Los ensayos no
+certifican el motor completo ni el objetivo general de leer menos sin perder lo importante.

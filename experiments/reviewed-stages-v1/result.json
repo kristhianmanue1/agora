@@ -1,0 +1,320 @@
+{
+  "status": "complete_not_promoted",
+  "rows": [
+    {
+      "case_id": "case-1",
+      "document_id": "1901.05389",
+      "stage": 0,
+      "budget": 8000,
+      "reading_bytes": 7680,
+      "decision": {
+        "decision": "requires_coverage_inspection",
+        "candidate_sha256": "46f4f326e7e5852d9ea255f4b6fad912d93b78c0b00289e0dcd31ccc4d9515f5",
+        "memory_admission": "not_performed"
+      },
+      "http_calls": 3,
+      "total_reported_tokens": 7049,
+      "generation_status": "complete",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "not_in_passages",
+          "claims": [],
+          "missing": [
+            "The baseline model used in the study is not identified in any provided passage.",
+            "No provided unit explicitly names a baseline model used for comparison in the SES inference task; the Gaussian Processes reference in the related works describes prior work by Lampos et al. and is background, not a baseline of this study.",
+            "The passages describe components such as a ResNet50 land-use classifier and a word2vec embedding model, but do not state which, if any, served as a baseline model."
+          ]
+        }
+      ],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "contradicted"
+        },
+        {
+          "id": "R2",
+          "status": "contradicted"
+        }
+      ],
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"contradicted\"},{\"id\":\"R2\",\"status\":\"contradicted\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 336,
+          "completion_tokens_details": {
+            "reasoning_tokens": 296
+          },
+          "prompt_tokens": 828,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1164
+        },
+        "response_id": "20261002062257e09ba65ef1a64e95"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "missing": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.8,
+            "probabilities": {
+              "contradicted": 0.02,
+              "supported": 0.87,
+              "insufficient": 0.11
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2181,
+          "output_tokens": 44
+        }
+      },
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"not_in_passages\",\"claims\":[],\"missing\":[\"The baseline model used in the study is not identified in any provided passage.\",\"No provided unit explicitly names a baseline model used for comparison in the SES inference task; the Gaussian Processes reference in the related works describes prior work by Lampos et al. and is background, not a baseline of this study.\",\"The passages describe components such as a ResNet50 land-use classifier and a word2vec embedding model, but do not state which, if any, served as a baseline model.\"]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1147,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1023
+          },
+          "prompt_tokens": 2513,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3660
+        },
+        "response_id": "20261002062240db1226b17a8a4177"
+      },
+      "candidate_sha256": "46f4f326e7e5852d9ea255f4b6fad912d93b78c0b00289e0dcd31ccc4d9515f5"
+    },
+    {
+      "case_id": "case-2",
+      "document_id": "1709.06365",
+      "stage": 0,
+      "budget": 8000,
+      "reading_bytes": 7154,
+      "decision": {
+        "decision": "stop_invalid_generation",
+        "candidate_sha256": "2d2c867e193c3f5abb324c3114744c63e62d422bf2c6c5e3e848ce8a1844cac7",
+        "memory_admission": "not_performed"
+      },
+      "http_calls": 1,
+      "total_reported_tokens": 4243,
+      "generation_status": "rejected",
+      "parts": null,
+      "coverage_status": null,
+      "requirements": null,
+      "coverage_response": null,
+      "fidelity_response": null,
+      "generation_response": {
+        "content": "\n{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"MetaLDA uses two data augmentation techniques, i.e., the introduction of auxiliary variables, and with these techniques MetaLDA admits the local conjugacy and a close-form Gibbs sampling algorithm can be derived.\",\"evidence_ids\":[\"ev_e861433d14f9354729d9a102\"]},{\"text\":\"The authors state that with two data argumentation techniques they can derive an efficient Gibbs sampling algorithm, which benefits from the fully local conjugacy of the model.\",\"evidence_ids\":[\"ev_41f064631bdf2ca56c922754\"]},{\"text\":\"One of the augmentations is the introduction of a set of Beta random variables as auxiliary variables: Gamma ratio 1 in the collapsed likelihood can be augmented with these Beta random variables, after which the augmentation is simplified to a single term and auxiliary variables are introduced.\",\"evidence_ids\":[\"ev_0b544745812371bcc822f2e9\",\"ev_4eae8c3236980f374a2c47aa\"]},{\"text\":\"With the data augmentation techniques, the posterior is transformed into a form that is conjugate to the gamma prior of the lambda parameter, so a straightforward gamma-based sampling strategy is obtained.\",\"evidence_ids\":[\"ev_fe20867538ab08981bf88cb9\"]}],\"missing\":[\"The specific identity or name of the second of the two data augmentation techniques is not established in the provided passages.\"]}}\n",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1442,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1115
+          },
+          "prompt_tokens": 2801,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 4243
+        },
+        "response_id": "2026100206230431902d363d1c4bd1"
+      },
+      "candidate_sha256": "2d2c867e193c3f5abb324c3114744c63e62d422bf2c6c5e3e848ce8a1844cac7"
+    },
+    {
+      "case_id": "case-3",
+      "document_id": "1909.09070",
+      "stage": 0,
+      "budget": 8000,
+      "reading_bytes": 7937,
+      "decision": {
+        "decision": "candidate_ready_for_explicit_review",
+        "candidate_sha256": "45f2432ff6d5f21ae579bc6239b1781bc450cc1463f7224642d0394eaaa02c48",
+        "memory_admission": "not_performed"
+      },
+      "http_calls": 3,
+      "total_reported_tokens": 7638,
+      "generation_status": "complete",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "They compared the performance of the FCC task against two supervised baselines, which were trained on a classification task against the SciGraph taxonomy.",
+              "quotes": [
+                "We evaluate our method in the task it was trained to solve: determining whether a figure and a caption correspond. We also compare the performance of the FCC task against two supervised baselines, training them on a classification task against the SciGraph taxonomy. For such baselines we first train the vision and language networks independently and then combine them. The feature extraction parts of both networks are the same as described in section SECREF6. On top of them, we attach a fully connected layer with 128 neurons and ReLU activation and a softmax layer, with as many neurons as target classes."
+              ],
+              "evidence_ids": [
+                "ev_a00498dab04f011b0d2b306e"
+              ]
+            },
+            {
+              "text": "For the supervised baselines, the vision and language networks were first trained independently and then combined, with a fully connected layer of 128 neurons and ReLU activation plus a softmax layer with as many neurons as target classes attached on top of the same feature extraction parts.",
+              "quotes": [
+                "We evaluate our method in the task it was trained to solve: determining whether a figure and a caption correspond. We also compare the performance of the FCC task against two supervised baselines, training them on a classification task against the SciGraph taxonomy. For such baselines we first train the vision and language networks independently and then combine them. The feature extraction parts of both networks are the same as described in section SECREF6. On top of them, we attach a fully connected layer with 128 neurons and ReLU activation and a softmax layer, with as many neurons as target classes."
+              ],
+              "evidence_ids": [
+                "ev_a00498dab04f011b0d2b306e"
+              ]
+            },
+            {
+              "text": "The first supervised baseline, the direct combination baseline, computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks, with a positive result if it exceeds a heuristically fixed threshold of 0.325.",
+              "quotes": [
+                "The direct combination baseline computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a threshold, which we heuristically fixed on 0.325, the result is positive. The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section SECREF6, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method."
+              ],
+              "evidence_ids": [
+                "ev_8ca521e7cbd5c9bd23f14945"
+              ]
+            },
+            {
+              "text": "The second supervised baseline, the supervised pre-training baseline, freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture, and trains the FCC task on the fully connected layers; the paper describes it as the most similar supervised approach to their method.",
+              "quotes": [
+                "The direct combination baseline computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a threshold, which we heuristically fixed on 0.325, the result is positive. The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section SECREF6, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method."
+              ],
+              "evidence_ids": [
+                "ev_8ca521e7cbd5c9bd23f14945"
+              ]
+            },
+            {
+              "text": "The supervised baselines used certain configurations trained on the intersection between SemScholar and Springer Nature's SciGraph, a corpus of 80K papers and 82K figures.",
+              "quotes": [
+                "Springer Nature's SciGraph contains 7M scientific publications organized in 22 scientific fields or categories. Since SciGraph does not provide a link to the PDF of the publication, we selected the intersection with SemScholar, producing a smaller corpus of 80K papers (in addition to the 1M papers from SemScholar mentioned above) and 82K figures that we used for training certain FCC configurations and supervised baselines (section SECREF14)."
+              ],
+              "evidence_ids": [
+                "ev_edb1e8fac6f8d72324e45d72"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 183,
+          "completion_tokens_details": {
+            "reasoning_tokens": 159
+          },
+          "prompt_tokens": 1420,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 1603
+        },
+        "response_id": "202610020623417262073690f14c02"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.83,
+            "probabilities": {
+              "insufficient": 0.11,
+              "contradicted": 0.0,
+              "supported": 0.89
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.95,
+            "probabilities": {
+              "insufficient": 0.03,
+              "contradicted": 0.0,
+              "supported": 0.97
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.85,
+            "probabilities": {
+              "insufficient": 0.1,
+              "contradicted": 0.01,
+              "supported": 0.89
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.92,
+            "probabilities": {
+              "insufficient": 0.05,
+              "contradicted": 0.0,
+              "supported": 0.95
+            }
+          },
+          "C5": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.54,
+            "probabilities": {
+              "insufficient": 0.28,
+              "contradicted": 0.02,
+              "supported": 0.7
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1907,
+          "output_tokens": 213
+        }
+      },
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"They compared the performance of the FCC task against two supervised baselines, which were trained on a classification task against the SciGraph taxonomy.\",\"evidence_ids\":[\"ev_a00498dab04f011b0d2b306e\"]},{\"text\":\"For the supervised baselines, the vision and language networks were first trained independently and then combined, with a fully connected layer of 128 neurons and ReLU activation plus a softmax layer with as many neurons as target classes attached on top of the same feature extraction parts.\",\"evidence_ids\":[\"ev_a00498dab04f011b0d2b306e\"]},{\"text\":\"The first supervised baseline, the direct combination baseline, computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks, with a positive result if it exceeds a heuristically fixed threshold of 0.325.\",\"evidence_ids\":[\"ev_8ca521e7cbd5c9bd23f14945\"]},{\"text\":\"The second supervised baseline, the supervised pre-training baseline, freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture, and trains the FCC task on the fully connected layers; the paper describes it as the most similar supervised approach to their method.\",\"evidence_ids\":[\"ev_8ca521e7cbd5c9bd23f14945\"]},{\"text\":\"The supervised baselines used certain configurations trained on the intersection between SemScholar and Springer Nature's SciGraph, a corpus of 80K papers and 82K figures.\",\"evidence_ids\":[\"ev_edb1e8fac6f8d72324e45d72\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1148,
+          "completion_tokens_details": {
+            "reasoning_tokens": 775
+          },
+          "prompt_tokens": 2767,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 3915
+        },
+        "response_id": "2026100206232683ca494b49bd45fd"
+      },
+      "candidate_sha256": "45f2432ff6d5f21ae579bc6239b1781bc450cc1463f7224642d0394eaaa02c48"
+    }
+  ],
+  "http_calls": 7,
+  "total_reported_tokens": 18930,
+  "monetary_cost": "not_measured",
+  "replay_verified": true,
+  "memory_admission": "not_performed",
+  "scope": "Experimental review routing on three cases, not product integration or independent adjudication"
+}

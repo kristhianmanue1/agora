@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 180,
-  "bytes": 871979,
+  "documents": 181,
+  "bytes": 876566,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "fb2e258927e33a2fdb105a57a10d9b27727ef8a226ebbab18d00380d9665e571",
-      "bytes": 30975,
+      "sha256": "e52b3554a749c07fea91d0a91ef760bbb48d189fac384a9396ef6936aa87eaa6",
+      "bytes": 32089,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -780,6 +780,10 @@
         },
         {
           "target": "../experiments/staged-retrieval-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/reviewed-stages-v1/README.md",
           "exists": true
         }
       ],
@@ -1909,6 +1913,14 @@
       "path": "experiments/retrieved-expansion-v1/README.md",
       "sha256": "6c241458ace5a1dd60e4452b637efea84f2f055e343111eee41c3265bccada85",
       "bytes": 1362,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/reviewed-stages-v1/README.md",
+      "sha256": "9d3e10a4203317ca4d21ea04936c4bd4d317951f780b7631ab0b22bde8458e78",
+      "bytes": 3473,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
