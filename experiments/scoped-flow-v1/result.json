@@ -1,0 +1,312 @@
+{
+  "status": "transition_demonstrated",
+  "controls": [
+    {
+      "id": "scoped-absence",
+      "expected": "missing",
+      "actual": [
+        {
+          "id": "R1",
+          "status": "missing"
+        }
+      ],
+      "matches": true,
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 179,
+          "completion_tokens_details": {
+            "reasoning_tokens": 160
+          },
+          "prompt_tokens": 452,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 631
+        },
+        "response_id": "20261002063057a25c491031b54a01"
+      },
+      "result_sha256": "4a43b98c8090a10708f74511a87b3e0875a0e02a856f389904309cf2841b2a3d"
+    },
+    {
+      "id": "omission",
+      "expected": "missing",
+      "actual": [
+        {
+          "id": "R1",
+          "status": "missing"
+        }
+      ],
+      "matches": true,
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 72,
+          "completion_tokens_details": {
+            "reasoning_tokens": 55
+          },
+          "prompt_tokens": 461,
+          "prompt_tokens_details": {
+            "cached_tokens": 192
+          },
+          "total_tokens": 533
+        },
+        "response_id": "20261002063102763df04e6b1447fd"
+      },
+      "result_sha256": "2155f1c593f38c0392482ee52b015ef0402772ce0b5166934fdeab538b177d41"
+    },
+    {
+      "id": "contradiction",
+      "expected": "contradicted",
+      "actual": [
+        {
+          "id": "R1",
+          "status": "contradicted"
+        }
+      ],
+      "matches": true,
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"contradicted\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 159,
+          "completion_tokens_details": {
+            "reasoning_tokens": 138
+          },
+          "prompt_tokens": 465,
+          "prompt_tokens_details": {
+            "cached_tokens": 192
+          },
+          "total_tokens": 624
+        },
+        "response_id": "2026100206310440779ce704594244"
+      },
+      "result_sha256": "bced55dc5975e995c65521e6446460df52723c9194ea6ccffea8098b2ddf540e"
+    },
+    {
+      "id": "covered",
+      "expected": "covered",
+      "actual": [
+        {
+          "id": "R1",
+          "status": "covered"
+        }
+      ],
+      "matches": true,
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 418,
+          "completion_tokens_details": {
+            "reasoning_tokens": 399
+          },
+          "prompt_tokens": 465,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 883
+        },
+        "response_id": "2026100206310896b694c424214400"
+      },
+      "result_sha256": "98c34eda2ef2611fb153a7ef27437162f05f41c592ab91a5fe7805b5dbf02f65"
+    },
+    {
+      "id": "global-denial",
+      "expected": "contradicted",
+      "actual": [
+        {
+          "id": "R1",
+          "status": "contradicted"
+        }
+      ],
+      "matches": true,
+      "response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"contradicted\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 395,
+          "completion_tokens_details": {
+            "reasoning_tokens": 374
+          },
+          "prompt_tokens": 468,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 863
+        },
+        "response_id": "202610020631166c93f54196644b38"
+      },
+      "result_sha256": "720771e7fef05decec2b97bdedfa4f7479c5f451f0f30ffef38a011ead1e89be"
+    }
+  ],
+  "first": {
+    "route": {
+      "gaps": [
+        {
+          "id": "R1",
+          "reference_in_read_context": false,
+          "kind": "reference_not_in_read_context"
+        },
+        {
+          "id": "R2",
+          "reference_in_read_context": false,
+          "kind": "reference_not_in_read_context"
+        }
+      ],
+      "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+      "schema": "agora/reading-route/v1-experimental",
+      "decision": "expand",
+      "candidate_sha256": "46f4f326e7e5852d9ea255f4b6fad912d93b78c0b00289e0dcd31ccc4d9515f5",
+      "review_sha256": "3473e8b0c2ddbdeecf620288023670c0f95b9ff928a7c3e51e2249e48a20c9e9",
+      "fidelity_sha256": "2e6bc5a46e86ecea588636bdc4747f9de7ce0592f06f158ebb0e02077aa83373",
+      "can_expand_basis": "caller_declared",
+      "memory_admission": "not_performed",
+      "provider_calls": 0
+    },
+    "requirements": [
+      {
+        "id": "R1",
+        "status": "missing"
+      },
+      {
+        "id": "R2",
+        "status": "missing"
+      }
+    ],
+    "fidelity": "supported",
+    "coverage_response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"},{\"id\":\"R2\",\"status\":\"missing\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 679,
+        "completion_tokens_details": {
+          "reasoning_tokens": 655
+        },
+        "prompt_tokens": 2484,
+        "prompt_tokens_details": {
+          "cached_tokens": 192
+        },
+        "total_tokens": 3163
+      },
+      "response_id": "2026100206325166877ad7314d4c2a"
+    },
+    "fidelity_response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "missing": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.66,
+          "probabilities": {
+            "insufficient": 0.22,
+            "supported": 0.77,
+            "contradicted": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 2103,
+        "output_tokens": 44
+      }
+    },
+    "http_calls": 2,
+    "tokens": 5310
+  },
+  "second": {
+    "route": {
+      "gaps": [],
+      "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+      "schema": "agora/reading-route/v1-experimental",
+      "decision": "candidate_ready_for_explicit_review",
+      "candidate_sha256": "f339dc1fc7f57a3a92a3a94268bd1420f83a2c8ba100e6a81264149cd34d2759",
+      "review_sha256": "2f89727b64b9c226ebefd39d95a038ebf6e013b26533b353ac741e54ce4f76d8",
+      "fidelity_sha256": "5ebe96244f561dc91a2234216bf7baf27c02543889888681bb9dc80b9e36f437",
+      "can_expand_basis": "caller_declared",
+      "memory_admission": "not_performed",
+      "provider_calls": 0
+    },
+    "requirements": [
+      {
+        "id": "R1",
+        "status": "covered"
+      },
+      {
+        "id": "R2",
+        "status": "covered"
+      }
+    ],
+    "fidelity": "supported",
+    "coverage_response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 156,
+        "completion_tokens_details": {
+          "reasoning_tokens": 128
+        },
+        "prompt_tokens": 4239,
+        "prompt_tokens_details": {
+          "cached_tokens": 320
+        },
+        "total_tokens": 4395
+      },
+      "response_id": "202610020633112ea86cf31cb3476c"
+    },
+    "fidelity_response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "P1_0": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.87,
+          "probabilities": {
+            "insufficient": 0.09,
+            "contradicted": 0.0,
+            "supported": 0.91
+          }
+        },
+        "P1_1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.86,
+          "probabilities": {
+            "insufficient": 0.09,
+            "contradicted": 0.0,
+            "supported": 0.91
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1121,
+        "output_tokens": 91
+      }
+    },
+    "http_calls": 2,
+    "tokens": 5607
+  },
+  "initial_bytes": 7680,
+  "expanded_bytes": 14409,
+  "candidate_sha256": "f339dc1fc7f57a3a92a3a94268bd1420f83a2c8ba100e6a81264149cd34d2759",
+  "original_unchanged": true,
+  "replay_verified": true,
+  "http_calls": 10,
+  "total_reported_tokens": 18964,
+  "memory_admission": "not_performed"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "64bb2209f98b56e5140bf683bd8094d763c2078fd473eae657d638c5fc9acccc",
+  "question": "When is deployment and what triggers rollback?",
+  "provenance": "New synthetic fixture, producer labels; no real meeting or operational instruction",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "The deployment window is Tuesday at 10:00 UTC.",
+      "evidence": {
+        "text": "The deployment window is Tuesday at 10:00 UTC.",
+        "start_byte": 29,
+        "end_byte": 75
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Rollback requires an error rate above 2% for ten minutes.",
+      "evidence": {
+        "text": "Rollback requires an error rate above 2% for ten minutes.",
+        "start_byte": 89,
+        "end_byte": 146
+      }
+    }
+  ]
+}

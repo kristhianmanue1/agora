@@ -79,3 +79,5 @@ envían al generador. La validez estructural no demuestra fidelidad ni cobertura
 
 La revisión posterior sigue siendo explícita: `review-rubric` usa el candidato nuevo
 y su hash; la fidelidad se contrasta por separado. `generate-plan` conserva su contrato.
+
+Para decidir explícitamente si ampliar: [recorrido con revisiones vinculadas](lectura-revisada-cli.md).

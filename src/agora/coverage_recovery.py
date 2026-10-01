@@ -13,9 +13,12 @@ def build(source,candidate_bytes,rubric_bytes,review_bytes,args):
  _,requirements=rubric.prepare(source,candidate_bytes,rubric_bytes,args)
  prior=json.loads(review_bytes,object_pairs_hook=unique_object)
  if not isinstance(prior,dict):raise ValueError('invalid_review')
- if prior.get('schema')!=rubric.VERSION or prior.get('status')!='complete':raise ValueError('invalid_review')
+ if prior.get('schema') not in (rubric.VERSION,'agora/rubric-review/v2-scoped-experimental') or prior.get('status')!='complete':raise ValueError('invalid_review')
  for key in ('source_sha256','candidate_sha256','rubric_sha256','part_id','question'):
   if prior.get(key)!=getattr(args,key):raise ValueError('review_binding_mismatch')
+ if prior['schema']=='agora/rubric-review/v2-scoped-experimental':
+  from .scoped_rubric import prepare as prepare_scoped
+  prepare_scoped(source,candidate_bytes,rubric_bytes,args)
  labels=rubric.assess(prior['response'],[r['id'] for r in requirements['requirements']])
  if labels!=prior.get('requirements'):raise ValueError('review_response_mismatch')
  if type(args.budget) is not int or not 1<=args.budget<=160000 or type(args.top_k) is not int or not 1<=args.top_k<=8 or type(args.following) is not int or not 0<=args.following<=3:raise ValueError('invalid_recovery_budget')

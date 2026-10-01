@@ -1,0 +1,17 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+  "question": "What is the final date and what changed?",
+  "provenance": "New synthetic fixture, producer labels; no real meeting or operational instruction",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Correction: Wednesday; Tuesday is cancelled.",
+      "evidence": {
+        "text": "Correction: Wednesday; Tuesday is cancelled.",
+        "start_byte": 119,
+        "end_byte": 163
+      }
+    }
+  ]
+}

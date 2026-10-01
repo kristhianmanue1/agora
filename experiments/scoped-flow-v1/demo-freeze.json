@@ -1,0 +1,15 @@
+{
+  "source": "experiments/recovery-heldout-v1/inputs/case-1.txt",
+  "source_sha256": "74c587db0a182b08314d38447e56289f22ff81f3ca21ea3d0be069b76889f934",
+  "rubric": "experiments/recovery-heldout-v1/case-1-rubric.json",
+  "rubric_sha256": "5f1ee2b72fdb4ec369dfa8aeb62c928c7ef856e41aed514616dc865b733cd60e",
+  "candidate": "experiments/reviewed-stages-v1/runs/case-1/0/candidate.json",
+  "candidate_sha256": "46f4f326e7e5852d9ea255f4b6fad912d93b78c0b00289e0dcd31ccc4d9515f5",
+  "question": "What baseline model is used?",
+  "max_calls": 5,
+  "recovery_budget": 20000,
+  "generation_tokens": 4096,
+  "review_tokens": 2048,
+  "retries": 0,
+  "scope": "Known regression; no changes to previous candidate or reviews"
+}

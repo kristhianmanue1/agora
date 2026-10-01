@@ -1,0 +1,530 @@
+{
+  "status": "complete_mixed_outcomes",
+  "rows": [
+    {
+      "id": "case-1",
+      "format": "QASPER rendered text",
+      "candidate_sha256": "c13c7d646e7613d72b44e4d8e58468074f025353045715176299e5b828271a2e",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"Los autores evalúan las representaciones obtenidas mediante dos medidas intrínsecas, además de una tarea extrínseca de segmentación y clustering de palabras no supervisada.\",\"evidence_ids\":[\"ev_3bde34aa3c06b375d624222f\"]},{\"text\":\"Las dos medidas intrínsecas utilizadas son las medidas same-different y la tarea de discriminabilidad de fonos ABX (ABX phone discriminability task).\",\"evidence_ids\":[\"ev_995e5fef23d54aca4d94fefb\"]},{\"text\":\"La tarea ABX evalúa la discriminabilidad fonémica mediante pares mínimos (trillizos de tres fonemas donde el fonema central difiere, como 'bihn' y 'behn'), y se calcula una tasa de error ABX promediando sobre hablantes y fonemas, distinguiendo la tasa de error within-speaker (los tres trillizos del mismo hablante) y la tasa de error cross-speaker (el tercero de un hablante distinto).\",\"evidence_ids\":[\"ev_995e5fef23d54aca4d94fefb\"]},{\"text\":\"La tarea same-different compara siempre palabras completas y evalúa directamente qué tan buenas son las representaciones para distinguir si dos emisiones corresponden a la misma palabra o no.\",\"evidence_ids\":[\"ev_0682aca9091cca407bf4f3e7\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 854,
+          "completion_tokens_details": {
+            "reasoning_tokens": 512
+          },
+          "prompt_tokens": 2406,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3260
+        },
+        "response_id": "2026100206354352783cff76db4be3"
+      },
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "Los autores evalúan las representaciones obtenidas mediante dos medidas intrínsecas, además de una tarea extrínseca de segmentación y clustering de palabras no supervisada.",
+              "quotes": [
+                "Unsupervised subword modeling aims to learn low-level representations of speech audio in\"zero-resource\"settings: that is, without using transcriptions or other resources from the target language (such as text corpora or pronunciation dictionaries). A good representation should capture phonetic content and abstract away from other types of variability, such as speaker differences and channel noise. Previous work in this area has primarily focused on learning from target language data only, and has been evaluated only intrinsically. Here we directly compare multiple methods, including some that use only target language speech data and some that use transcribed speech from other (non-target) languages, and we evaluate using two intrinsic measures as well as on a downstream unsupervised word segmentation and clustering task. We find that combining two existing target-language-only methods yields better features than either method alone. Nevertheless, even better results are obtained by extracting target language bottleneck features using a model trained on other languages. Cross-lingual training using just one other language is enough to provide this benefit, but multilingual training helps even more. In addition to these results, which hold across both intrinsic measures and the extrinsic task, we discuss the qualitative differences between the different types of learned features."
+              ],
+              "evidence_ids": [
+                "ev_3bde34aa3c06b375d624222f"
+              ]
+            },
+            {
+              "text": "Las dos medidas intrínsecas utilizadas son las medidas same-different y la tarea de discriminabilidad de fonos ABX (ABX phone discriminability task).",
+              "quotes": [
+                "For training the cae on the Buckeye English and Xitsonga corpora, we use the same sets of utd pairs as in BIBREF23 , which were discovered from fdlp features. We evaluate using both the same-different measures from above, as well as the ABX phone discriminability task BIBREF40 used in the zrsc and other recent work BIBREF0 , BIBREF1 . The ABX task evaluates phoneme discriminability using minimal pairs: sequences of three phonemes where the central phoneme differs between the two sequences INLINEFORM0 and INLINEFORM1 in the pair, such as b ih n and b eh n. Feature representations are then evaluated on how well they can identify a third triplet INLINEFORM2 as having the same phoneme sequence as either INLINEFORM3 or INLINEFORM4 . See BIBREF0 , BIBREF1 for details on how the scores are computed and averaged over speakers and phonemes to obtain the final ABX error rate. One usually distinguishes between the within-speaker error rate where all three triplets belong to the same speaker, and the cross-speaker error rate where INLINEFORM5 and INLINEFORM6 are from the same and INLINEFORM7 from a different speaker."
+              ],
+              "evidence_ids": [
+                "ev_995e5fef23d54aca4d94fefb"
+              ]
+            },
+            {
+              "text": "La tarea ABX evalúa la discriminabilidad fonémica mediante pares mínimos (trillizos de tres fonemas donde el fonema central difiere, como 'bihn' y 'behn'), y se calcula una tasa de error ABX promediando sobre hablantes y fonemas, distinguiendo la tasa de error within-speaker (los tres trillizos del mismo hablante) y la tasa de error cross-speaker (el tercero de un hablante distinto).",
+              "quotes": [
+                "For training the cae on the Buckeye English and Xitsonga corpora, we use the same sets of utd pairs as in BIBREF23 , which were discovered from fdlp features. We evaluate using both the same-different measures from above, as well as the ABX phone discriminability task BIBREF40 used in the zrsc and other recent work BIBREF0 , BIBREF1 . The ABX task evaluates phoneme discriminability using minimal pairs: sequences of three phonemes where the central phoneme differs between the two sequences INLINEFORM0 and INLINEFORM1 in the pair, such as b ih n and b eh n. Feature representations are then evaluated on how well they can identify a third triplet INLINEFORM2 as having the same phoneme sequence as either INLINEFORM3 or INLINEFORM4 . See BIBREF0 , BIBREF1 for details on how the scores are computed and averaged over speakers and phonemes to obtain the final ABX error rate. One usually distinguishes between the within-speaker error rate where all three triplets belong to the same speaker, and the cross-speaker error rate where INLINEFORM5 and INLINEFORM6 are from the same and INLINEFORM7 from a different speaker."
+              ],
+              "evidence_ids": [
+                "ev_995e5fef23d54aca4d94fefb"
+              ]
+            },
+            {
+              "text": "La tarea same-different compara siempre palabras completas y evalúa directamente qué tan buenas son las representaciones para distinguir si dos emisiones corresponden a la misma palabra o no.",
+              "quotes": [
+                "The ABX evaluation includes all such minimal pair phoneme triplets of the evaluation corpus. These pairs therefore rarely correspond to full words, making it a somewhat abstract task whose results may be difficult to interpret when summarizing it as a single final metric. ABX can however be very suitable for more fine-grained analysis of speech phenomena by including only specific phonetic contrasts in the evaluation BIBREF41 . In contrast, the same-different task always compares whole words and directly evaluates how good feature representations are at telling whether two utterances are the same word or not. Thus it has an immediate link to applications like spoken term detection and it allows easier error analysis. It is also faster to prepare the same-different evaluation set and run the evaluation. We wish to verify that the ABX and same-different measures correlate well, to better compare studies that use only one of them and to allow choosing the task that is more appropriate for the situation at hand."
+              ],
+              "evidence_ids": [
+                "ev_0682aca9091cca407bf4f3e7"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "reading_bytes": 7614,
+      "route": {
+        "gaps": [],
+        "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+        "schema": "agora/reading-route/v1-experimental",
+        "decision": "candidate_ready_for_explicit_review",
+        "candidate_sha256": "c13c7d646e7613d72b44e4d8e58468074f025353045715176299e5b828271a2e",
+        "review_sha256": "2f11a64117c60f5246c8503c58d8e532ace83bdab96fca15ec17d0f216e0a7b9",
+        "fidelity_sha256": "a762325fc43a8689d3c32adeab91f8ffbfff7c1d8ffb7f5ece9f161f69c3ecbf",
+        "can_expand_basis": "caller_declared",
+        "memory_admission": "not_performed",
+        "provider_calls": 0
+      },
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "fidelity": "supported",
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 328,
+          "completion_tokens_details": {
+            "reasoning_tokens": 300
+          },
+          "prompt_tokens": 3652,
+          "prompt_tokens_details": {
+            "cached_tokens": 320
+          },
+          "total_tokens": 3980
+        },
+        "response_id": "20261002063556c321bfa17cba4698"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "P1_0": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.7,
+            "probabilities": {
+              "supported": 0.8,
+              "insufficient": 0.11,
+              "contradicted": 0.09
+            }
+          },
+          "P1_1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.6,
+            "probabilities": {
+              "supported": 0.73,
+              "insufficient": 0.13,
+              "contradicted": 0.14
+            }
+          },
+          "P1_2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.64,
+            "probabilities": {
+              "supported": 0.76,
+              "insufficient": 0.12,
+              "contradicted": 0.12
+            }
+          },
+          "P1_3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.69,
+            "probabilities": {
+              "supported": 0.79,
+              "insufficient": 0.12,
+              "contradicted": 0.09
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2054,
+          "output_tokens": 179
+        }
+      },
+      "http_calls": 3,
+      "tokens": 9473
+    },
+    {
+      "id": "case-2",
+      "format": "QASPER rendered text",
+      "candidate_sha256": "040a0180e22d777617f55104bf9ef09a15ee8b54ceb46aba5592237b9db75a11",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"not_in_passages\",\"claims\":[],\"missing\":[\"Los fragmentos suministrados no mencionan el nombre de ningún conjunto de datos VQA utilizado para evaluar la tarea.\",\"Los fragmentos solo indican que se adopta ConceptNet como base de conocimiento externa y que los autores generan automáticamente una colección propia de pares pregunta-respuesta más desafiantes como benchmark, pero no identifican conjuntos de datos VQA con nombre empleados en la evaluación.\"]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 938,
+          "completion_tokens_details": {
+            "reasoning_tokens": 829
+          },
+          "prompt_tokens": 2686,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3624
+        },
+        "response_id": "20261002063602bc5aa2e6f9ee416b"
+      },
+      "parts": [
+        {
+          "id": "P1",
+          "status": "not_in_passages",
+          "claims": [],
+          "missing": [
+            "Los fragmentos suministrados no mencionan el nombre de ningún conjunto de datos VQA utilizado para evaluar la tarea.",
+            "Los fragmentos solo indican que se adopta ConceptNet como base de conocimiento externa y que los autores generan automáticamente una colección propia de pares pregunta-respuesta más desafiantes como benchmark, pero no identifican conjuntos de datos VQA con nombre empleados en la evaluación."
+          ]
+        }
+      ],
+      "reading_bytes": 9334,
+      "route": {
+        "gaps": [
+          {
+            "id": "R1",
+            "reference_in_read_context": false,
+            "kind": "reference_not_in_read_context"
+          }
+        ],
+        "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+        "schema": "agora/reading-route/v1-experimental",
+        "decision": "insufficient_evidence",
+        "candidate_sha256": "040a0180e22d777617f55104bf9ef09a15ee8b54ceb46aba5592237b9db75a11",
+        "review_sha256": "6a4ec512647ba9a6173bc3644118b57ff5a14cab060d6b1bc16d29b1a4f0372c",
+        "fidelity_sha256": "4739954dacb33233e63dac23f21e6c530081330d4cfdfd7743f997f9fbc1ffd3",
+        "can_expand_basis": "caller_declared",
+        "memory_admission": "not_performed",
+        "provider_calls": 0
+      },
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "missing"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "fidelity": "supported",
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 455,
+          "completion_tokens_details": {
+            "reasoning_tokens": 431
+          },
+          "prompt_tokens": 2577,
+          "prompt_tokens_details": {
+            "cached_tokens": 320
+          },
+          "total_tokens": 3032
+        },
+        "response_id": "20261002063618525bc58e05d34758"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "missing": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.46,
+            "probabilities": {
+              "insufficient": 0.29,
+              "supported": 0.65,
+              "contradicted": 0.06
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2329,
+          "output_tokens": 44
+        }
+      },
+      "http_calls": 3,
+      "tokens": 9029
+    },
+    {
+      "id": "markdown",
+      "format": ".md raw UTF-8",
+      "candidate_sha256": "3346da93877490fd41a4c7c3fec3b6ecb9f82de3c806f0a1f9784a8a71e3d244",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"La ventana de despliegue es el martes a las 10:00 UTC.\",\"evidence_ids\":[\"ev_1f8d2200e1af6cf788b91103\"]},{\"text\":\"El rollback se activa cuando la tasa de error supera el 2% durante diez minutos.\",\"evidence_ids\":[\"ev_16999b57663792a490cce5bc\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 499,
+          "completion_tokens_details": {
+            "reasoning_tokens": 390
+          },
+          "prompt_tokens": 604,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 1103
+        },
+        "response_id": "202610020636274edd45edc05d4f24"
+      },
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "La ventana de despliegue es el martes a las 10:00 UTC.",
+              "quotes": [
+                "## Window\nThe deployment window is Tuesday at 10:00 UTC."
+              ],
+              "evidence_ids": [
+                "ev_1f8d2200e1af6cf788b91103"
+              ]
+            },
+            {
+              "text": "El rollback se activa cuando la tasa de error supera el 2% durante diez minutos.",
+              "quotes": [
+                "## Rollback\nRollback requires an error rate above 2% for ten minutes."
+              ],
+              "evidence_ids": [
+                "ev_16999b57663792a490cce5bc"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "reading_bytes": 143,
+      "route": {
+        "gaps": [],
+        "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+        "schema": "agora/reading-route/v1-experimental",
+        "decision": "candidate_ready_for_explicit_review",
+        "candidate_sha256": "3346da93877490fd41a4c7c3fec3b6ecb9f82de3c806f0a1f9784a8a71e3d244",
+        "review_sha256": "40ee16a97e7f227e31932b08c60613a6b555d3f848a08760888ae1206204e684",
+        "fidelity_sha256": "31f0a7de1fcdb12c6d2b93c436d34a8670a7be0356e9165da085a4b7e00c9685",
+        "can_expand_basis": "caller_declared",
+        "memory_admission": "not_performed",
+        "provider_calls": 0
+      },
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "fidelity": "supported",
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 125,
+          "completion_tokens_details": {
+            "reasoning_tokens": 97
+          },
+          "prompt_tokens": 628,
+          "prompt_tokens_details": {
+            "cached_tokens": 320
+          },
+          "total_tokens": 753
+        },
+        "response_id": "2026100206363654fb5d7cac754b25"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "P1_0": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.9,
+            "probabilities": {
+              "insufficient": 0.06,
+              "contradicted": 0.0,
+              "supported": 0.94
+            }
+          },
+          "P1_1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.9,
+            "probabilities": {
+              "insufficient": 0.07,
+              "contradicted": 0.0,
+              "supported": 0.93
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 614,
+          "output_tokens": 91
+        }
+      },
+      "http_calls": 3,
+      "tokens": 2561
+    },
+    {
+      "id": "jsonl",
+      "format": ".jsonl raw UTF-8",
+      "candidate_sha256": "7adb8fec10b6107898bdd7af96e26e362b496bfa51242fb802f7972b208e0a71",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"El coordinador indicó a las 09:00 una fecha preliminar (draft): el martes.\",\"evidence_ids\":[\"ev_e98b6f4729eaae675cf373a7\"]},{\"text\":\"A las 09:15 el coordinador corrigió la fecha a miércoles y canceló el martes; lo que cambió fue que el martes quedó anulado y sustituido por el miércoles.\",\"evidence_ids\":[\"ev_e98b6f4729eaae675cf373a7\"]}],\"missing\":[\"Los fragmentos no establecen si hubo cambios posteriores a las 09:15, por lo que no puede confirmarse más allá de lo suministrado que el miércoles sea la fecha definitiva final\"]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 859,
+          "completion_tokens_details": {
+            "reasoning_tokens": 684
+          },
+          "prompt_tokens": 546,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 1405
+        },
+        "response_id": "20261002063639cd3897b4c7774624"
+      },
+      "parts": [
+        {
+          "id": "P1",
+          "status": "partial",
+          "claims": [
+            {
+              "text": "El coordinador indicó a las 09:00 una fecha preliminar (draft): el martes.",
+              "quotes": [
+                "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}"
+              ],
+              "evidence_ids": [
+                "ev_e98b6f4729eaae675cf373a7"
+              ]
+            },
+            {
+              "text": "A las 09:15 el coordinador corrigió la fecha a miércoles y canceló el martes; lo que cambió fue que el martes quedó anulado y sustituido por el miércoles.",
+              "quotes": [
+                "{\"time\":\"09:00\",\"speaker\":\"Coordinator\",\"text\":\"Draft date: Tuesday.\"}\n{\"time\":\"09:15\",\"speaker\":\"Coordinator\",\"text\":\"Correction: Wednesday; Tuesday is cancelled.\"}"
+              ],
+              "evidence_ids": [
+                "ev_e98b6f4729eaae675cf373a7"
+              ]
+            }
+          ],
+          "missing": [
+            "Los fragmentos no establecen si hubo cambios posteriores a las 09:15, por lo que no puede confirmarse más allá de lo suministrado que el miércoles sea la fecha definitiva final"
+          ]
+        }
+      ],
+      "reading_bytes": 166,
+      "route": {
+        "gaps": [],
+        "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+        "schema": "agora/reading-route/v1-experimental",
+        "decision": "requires_fidelity_inspection",
+        "candidate_sha256": "7adb8fec10b6107898bdd7af96e26e362b496bfa51242fb802f7972b208e0a71",
+        "review_sha256": "9ebbf10298cf8e1383d574154c8409931d7de1212922836b6411f5afde3d713a",
+        "fidelity_sha256": "a0926575ba3ea60746cb173311e84e7a166d163101a575ba675dc411f7429a38",
+        "can_expand_basis": "caller_declared",
+        "memory_admission": "not_performed",
+        "provider_calls": 0
+      },
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        }
+      ],
+      "fidelity": "requires_review",
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 392,
+          "completion_tokens_details": {
+            "reasoning_tokens": 377
+          },
+          "prompt_tokens": 694,
+          "prompt_tokens_details": {
+            "cached_tokens": 320
+          },
+          "total_tokens": 1086
+        },
+        "response_id": "20261002063656e3c3fcc1070c41b3"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "P1_0": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.43,
+            "probabilities": {
+              "insufficient": 0.37,
+              "supported": 0.62,
+              "contradicted": 0.01
+            }
+          },
+          "P1_1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.44,
+            "probabilities": {
+              "insufficient": 0.36,
+              "supported": 0.63,
+              "contradicted": 0.01
+            }
+          },
+          "missing": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.4,
+            "probabilities": {
+              "insufficient": 0.6,
+              "supported": 0.39,
+              "contradicted": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 919,
+          "output_tokens": 135
+        }
+      },
+      "http_calls": 3,
+      "tokens": 3545
+    }
+  ],
+  "http_calls": 12,
+  "total_reported_tokens": 24608,
+  "replay_verified": true,
+  "initial_cli_defect_attempts": 4,
+  "initial_cli_defect_http_calls": 0,
+  "monetary_cost": "not_measured",
+  "scope": "Two locally new QASPER documents plus new synthetic Markdown and JSONL; raw UTF-8, not PDF/Word parsing"
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "scoped-absence",
+    "expected": "missing",
+    "actual": [
+      {
+        "id": "R1",
+        "status": "missing"
+      }
+    ],
+    "matches": true,
+    "response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 179,
+        "completion_tokens_details": {
+          "reasoning_tokens": 160
+        },
+        "prompt_tokens": 452,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        },
+        "total_tokens": 631
+      },
+      "response_id": "20261002063057a25c491031b54a01"
+    },
+    "result_sha256": "4a43b98c8090a10708f74511a87b3e0875a0e02a856f389904309cf2841b2a3d"
+  },
+  {
+    "id": "omission",
+    "expected": "missing",
+    "actual": [
+      {
+        "id": "R1",
+        "status": "missing"
+      }
+    ],
+    "matches": true,
+    "response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 72,
+        "completion_tokens_details": {
+          "reasoning_tokens": 55
+        },
+        "prompt_tokens": 461,
+        "prompt_tokens_details": {
+          "cached_tokens": 192
+        },
+        "total_tokens": 533
+      },
+      "response_id": "20261002063102763df04e6b1447fd"
+    },
+    "result_sha256": "2155f1c593f38c0392482ee52b015ef0402772ce0b5166934fdeab538b177d41"
+  },
+  {
+    "id": "contradiction",
+    "expected": "contradicted",
+    "actual": [
+      {
+        "id": "R1",
+        "status": "contradicted"
+      }
+    ],
+    "matches": true,
+    "response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"contradicted\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 159,
+        "completion_tokens_details": {
+          "reasoning_tokens": 138
+        },
+        "prompt_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 192
+        },
+        "total_tokens": 624
+      },
+      "response_id": "2026100206310440779ce704594244"
+    },
+    "result_sha256": "bced55dc5975e995c65521e6446460df52723c9194ea6ccffea8098b2ddf540e"
+  },
+  {
+    "id": "covered",
+    "expected": "covered",
+    "actual": [
+      {
+        "id": "R1",
+        "status": "covered"
+      }
+    ],
+    "matches": true,
+    "response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 418,
+        "completion_tokens_details": {
+          "reasoning_tokens": 399
+        },
+        "prompt_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "total_tokens": 883
+      },
+      "response_id": "2026100206310896b694c424214400"
+    },
+    "result_sha256": "98c34eda2ef2611fb153a7ef27437162f05f41c592ab91a5fe7805b5dbf02f65"
+  },
+  {
+    "id": "global-denial",
+    "expected": "contradicted",
+    "actual": [
+      {
+        "id": "R1",
+        "status": "contradicted"
+      }
+    ],
+    "matches": true,
+    "response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"contradicted\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 395,
+        "completion_tokens_details": {
+          "reasoning_tokens": 374
+        },
+        "prompt_tokens": 468,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "total_tokens": 863
+      },
+      "response_id": "202610020631166c93f54196644b38"
+    },
+    "result_sha256": "720771e7fef05decec2b97bdedfa4f7479c5f451f0f30ffef38a011ead1e89be"
+  }
+]

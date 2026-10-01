@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 181,
-  "bytes": 876566,
+  "documents": 184,
+  "bytes": 887710,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "af96d064095f8831c5592d7846058cbf931b2423ec02717e1467be2c5127c57a",
-      "bytes": 4809,
+      "sha256": "749419be71d7ba8201dca6ccf44ef53c354c73ecd09251d1b255139181bd1a88",
+      "bytes": 4916,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -190,6 +190,10 @@
         },
         {
           "target": "docs/recuperacion-cobertura.md",
+          "exists": true
+        },
+        {
+          "target": "docs/lectura-revisada-cli.md",
           "exists": true
         }
       ],
@@ -562,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "e52b3554a749c07fea91d0a91ef760bbb48d189fac384a9396ef6936aa87eaa6",
-      "bytes": 32089,
+      "sha256": "a4b8674cce55a7ebdca6fa2f16dd99bca05f1d889b34c3cef90c0fed5c48083b",
+      "bytes": 33568,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -783,7 +787,15 @@
           "exists": true
         },
         {
-          "target": "../experiments/reviewed-stages-v1/README.md",
+          "target": "lectura-revisada-cli.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/scoped-flow-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/scoped-generalization-v1/README.md",
           "exists": true
         }
       ],
@@ -920,6 +932,23 @@
       "python_modules": []
     },
     {
+      "path": "docs/lectura-revisada-cli.md",
+      "sha256": "cdc2bbd29ab80a1ca66b71240db150e8aac03c1acf490df1e590cba6d60bf7c1",
+      "bytes": 5167,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/scoped-flow-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/scoped-generalization-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "docs/pendientes-cli.md",
       "sha256": "d5f58f418a3d6cafb8150fbb99e83cf62b1652cc87cfb3be5cd97c85942212a2",
       "bytes": 5785,
@@ -1047,12 +1076,16 @@
     },
     {
       "path": "docs/recuperacion-cobertura.md",
-      "sha256": "f07b0f3fc11e6bc67c724498c3773dab82b86e01cc53f56e61b7c70f980f2b74",
-      "bytes": 4551,
+      "sha256": "9d34b96fa9e11f79b0685848f0a904f8a870f539dc38c5b68dd5f565f6fbd33d",
+      "bytes": 4657,
       "scope": "guidance_or_report",
       "local_links": [
         {
           "target": "../experiments/coverage-recovery-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "lectura-revisada-cli.md",
           "exists": true
         }
       ],
@@ -2031,6 +2064,22 @@
       "path": "experiments/rubric-reserved-v1/README.md",
       "sha256": "46b0c888ddd32be8422a132cbd6bc0ff68862ad54b83b0550010d8faf5961177",
       "bytes": 3467,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/scoped-flow-v1/README.md",
+      "sha256": "fc0f5cf47b537c098180b1b41e7677924625d9453a367c212e5784653aede790",
+      "bytes": 1728,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/scoped-generalization-v1/README.md",
+      "sha256": "7a592d3a79944ed9963705f6b0187d3edb1e44427364e209b020205d233fd7fb",
+      "bytes": 2557,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

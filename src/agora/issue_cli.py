@@ -68,6 +68,12 @@ def parser():
     add_recovery_generation(sub)
     from .rubric_cli import add_command as add_rubric
     add_rubric(sub)
+    from .scoped_rubric import add_command as add_scoped_rubric
+    add_scoped_rubric(sub)
+    from .fidelity_cli import add_command as add_fidelity
+    add_fidelity(sub)
+    from .reading_route import add_command as add_reading_route
+    add_reading_route(sub)
     from .omission_cli import add_command as add_omissions
     add_omissions(sub)
     from .coverage_cli import add_command
@@ -91,6 +97,15 @@ def run(args):
     if args.command=='coverage-plan':
         from .coverage_recovery import run as coverage_plan
         return coverage_plan(args,write_new)
+    if args.command=='reading-route':
+        from .reading_route import run as route
+        return route(args,write_new)
+    if args.command=='review-fidelity':
+        from .fidelity_cli import run as fidelity
+        return fidelity(args,read)
+    if args.command=='review-rubric-scoped':
+        from .scoped_rubric import run as review_scoped
+        return review_scoped(args,read)
     if args.command=='review-rubric':
         from .rubric_cli import run as review_rubric
         return review_rubric(args,read)
@@ -184,7 +199,7 @@ def main(argv=None):
     args=parser().parse_args(argv);os.umask(0o077)
     try:
         result=run(args)
-        code=2 if args.command in ('generate-plan','generate-recovery','review-coverage','diagnose-omissions','review-rubric') and result.get('status') in ('failed','rejected') else 0
+        code=2 if args.command in ('generate-plan','generate-recovery','review-coverage','diagnose-omissions','review-rubric','review-rubric-scoped','review-fidelity') and result.get('status') in ('failed','rejected') else 0
     except (ValueError,KeyError,TypeError,OSError,sqlite3.Error,subprocess.SubprocessError) as exc:
         # Do not echo source text, provider bodies, keys, or arbitrary exception text.
         safe=str(exc) if type(exc) is ValueError and str(exc).replace('_','').isalnum() else type(exc).__name__

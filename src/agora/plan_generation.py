@@ -24,7 +24,8 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
     spec = dict(schema='agora/subquestions-input/v1-experimental',questions=[
         {k:q[k] for k in ('id','query','reference_ranges')} for q in plan['questions']])
     rebuilt = prepare_subquestions(adapter,plan['source_sha256'],spec,plan['budget_bytes'],plan['top_k'],strategies[plan['schema']])
-    if rebuilt != plan:
+    # JSON arrays deserialize as lists; compare in the serialized contract domain.
+    if json.loads(json.dumps(rebuilt)) != plan:
         raise ValueError('plan_reproduction_mismatch')
     if not plan['envelope']:
         return dict(execution_status='complete',answer_status='no_supplied_evidence',provider_calls=0,

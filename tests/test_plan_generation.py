@@ -25,6 +25,14 @@ class PlanGenerationTests(unittest.TestCase):
         self.plan['envelope']['spans'][0]['text']='fake'
         with self.assertRaises(ValueError):self.invoke()
         self.assertFalse(self.calls)
+    def test_lexical_plan_serialized_roundtrip(self):
+        spec=dict(schema='agora/subquestions-input/v1-experimental',questions=[dict(id='a',query='Approve',reference_ranges=[])])
+        self.plan=prepare_subquestions(FileSourceAdapter(self.path,'x'),digest(self.raw),spec,100,1)
+        self.assertEqual(self.invoke()['execution_status'],'complete')
+        self.plan['questions'][0]['selected_ranges'][0]=(0,1)
+        calls=len(self.calls)
+        with self.assertRaises(ValueError):self.invoke()
+        self.assertEqual(len(self.calls),calls)
     def test_source_change_rejected(self):
         self.path.write_bytes(self.raw+b'x')
         with self.assertRaises(ValueError):self.invoke()

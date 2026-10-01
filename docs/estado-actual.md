@@ -325,18 +325,40 @@ las etapas calculados previamente y no demuestra suficiencia semántica ni ahorr
 local. Sin integración/defaults. Próximo recorrido: revisión explícita de cobertura
 y fidelidad entre etapas, presupuesto acumulado y salida de insuficiencia.
 
-## Etapa actual: validación del recorrido con revisores, aún piloto
+## Etapa actual: recorrido explícito integrado, todavía piloto
 
-[Revisiones entre etapas](../experiments/reviewed-stages-v1/README.md): tres casos,
-siete llamadas y 18.930 tokens. Uno exige inspección de cobertura, otro falla formato,
-y uno queda como candidato para revisión explícita. Ninguno avanzó a segunda lectura;
-la transición sólo tiene pruebas sintéticas en este ensayo. Seis tests y replay
-pasaron. No hay aceptación automática, integración nueva en CLI ni memoria admitida.
+La [CLI de lectura revisada](lectura-revisada-cli.md) permite revisar cobertura
+con contexto, revisar fidelidad y determinar la siguiente acción con archivos
+vinculados por hash. Conserva el revisor anterior; la revisión contextual utiliza
+una versión experimental explícita. No admite memoria ni ejecuta vigilancia.
 
-El bloqueo principal ahora es distinguir ausencia en contexto parcial, omisión de
-respuesta y contradicción real: el revisor etiquetó como contradicción una declaración
-de falta limitada a los pasajes. Prioridad: contrastar esa interpretación con controles
-y luego probar una ampliación real. Después integrar el recorrido en la CLI y validar
-fuentes nuevas/otras estructuras. Catálogo, consolidación general y contratos de
-integración con otros componentes siguen fuera de este incremento. Los ensayos no
-certifican el motor completo ni el objetivo general de leer menos sin perder lo importante.
+[Distinción y segunda lectura](../experiments/scoped-flow-v1/README.md): cinco
+controles de ausencia contextual, omisión y contradicción recibieron las etiquetas
+esperadas. Son controles del productor, sin adjudicación independiente. En un caso
+real previamente detenido, la ruta pasó de información faltante a ampliación:
+7.680 → 14.409 bytes, después 2/2 requisitos cubiertos y fidelidad respaldada por
+Jev. El candidato original se conserva; el derivado queda para revisión explícita.
+Diez llamadas, 18.964 tokens reportados; reproducción verificada.
+
+[Fuentes nuevas y formatos](../experiments/scoped-generalization-v1/README.md): dos
+documentos QASPER reservados localmente (40.772 y 37.439 bytes), un Markdown y un
+JSONL sintéticos. Dos resultados quedaron como candidatos para revisión, uno con
+evidencia insuficiente y otro con inspección de fidelidad requerida pese a cubrir
+la rúbrica. Markdown y JSONL se leen como texto UTF-8; esto no demuestra extracción
+PDF/Word ni interpretación general de formatos. Doce llamadas, 24.608 tokens;
+reproducción verificada. Los cuatro rechazos anteriores a HTTP por comparación de
+tuplas/listas se conservan: se corrigió la reproducción JSON de planes y se probó
+la nueva condición por separado, sin reintentar llamadas al proveedor.
+
+Verificación del incremento: 520 pruebas automatizadas pasaron. Total experimental:
+22 llamadas y 43.572 tokens reportados, sin reintentos de proveedor; precio monetario
+no medido. Estos resultados no prueban ahorro general ni ausencia de omisiones.
+La clasificación de omisiones usa rangos de referencias suministradas: no descarta
+evidencia equivalente en otras partes. Las cotas son por llamada; no existe un
+presupuesto acumulado persistente entre comandos manuales.
+
+Siguiente etapa recomendada: adjudicar los desacuerdos con etiquetas independientes,
+ampliar fuentes reservadas y medir omisiones y coste total contra lectura completa.
+Después evaluar extracción de otros formatos preservando localizadores. Catálogo,
+consolidación y admisión gobernada, e integración contractual con Skopos y AN-KLA,
+siguen pendientes del producto completo; no bloquean este recorrido independiente.

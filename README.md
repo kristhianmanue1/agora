@@ -84,3 +84,5 @@ Revisión optativa de suficiencia: [review-coverage](docs/revision-suficiencia-c
 Diagnóstico optativo posterior: [diagnose-omissions](docs/diagnostico-omisiones-cli.md), propuestas con localizadores de evidencia y validación semántica todavía parcial.
 
 Recuperación ante omisiones: [propuesta acotada desde una revisión](docs/recuperacion-cobertura.md).
+
+Recorrido revisado: [cobertura por alcance, fidelidad y siguiente lectura](docs/lectura-revisada-cli.md).

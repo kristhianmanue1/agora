@@ -1,0 +1,17 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+  "question": "What is the deadline?",
+  "provenance": "Producer synthetic control, fixed labels before execution",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Identify the deadline.",
+      "evidence": {
+        "text": "The deadline is Friday.",
+        "start_byte": 17,
+        "end_byte": 40
+      }
+    }
+  ]
+}

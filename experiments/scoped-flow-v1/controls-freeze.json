@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "id": "scoped-absence",
+      "source": "experiments/scoped-flow-v1/inputs/control.txt",
+      "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+      "question": "What is the deadline?",
+      "candidate": "experiments/scoped-flow-v1/inputs/scoped-absence.json",
+      "candidate_sha256": "7e20d1de20fba6b72a78047b0852ca609126e670100157165694fa3cc489827f",
+      "rubric": "experiments/scoped-flow-v1/control-rubric.json",
+      "rubric_sha256": "dd92ceebd9c9327bbdfe03265ac752571289633178f5a13210d5b40ecf2cfd6c",
+      "expected": "missing"
+    },
+    {
+      "id": "omission",
+      "source": "experiments/scoped-flow-v1/inputs/control.txt",
+      "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+      "question": "What is the deadline?",
+      "candidate": "experiments/scoped-flow-v1/inputs/omission.json",
+      "candidate_sha256": "d5b0a601d7c2329ff3d9de00edc68a1f9d0d692dfd39111907c2e03ad34df838",
+      "rubric": "experiments/scoped-flow-v1/control-rubric.json",
+      "rubric_sha256": "dd92ceebd9c9327bbdfe03265ac752571289633178f5a13210d5b40ecf2cfd6c",
+      "expected": "missing"
+    },
+    {
+      "id": "contradiction",
+      "source": "experiments/scoped-flow-v1/inputs/control.txt",
+      "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+      "question": "What is the deadline?",
+      "candidate": "experiments/scoped-flow-v1/inputs/contradiction.json",
+      "candidate_sha256": "fec5bed9dc6179f42bc79f4655c38f542d538fa8625f3739e986f3c673505da5",
+      "rubric": "experiments/scoped-flow-v1/control-rubric.json",
+      "rubric_sha256": "dd92ceebd9c9327bbdfe03265ac752571289633178f5a13210d5b40ecf2cfd6c",
+      "expected": "contradicted"
+    },
+    {
+      "id": "covered",
+      "source": "experiments/scoped-flow-v1/inputs/control.txt",
+      "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+      "question": "What is the deadline?",
+      "candidate": "experiments/scoped-flow-v1/inputs/covered.json",
+      "candidate_sha256": "0844cfa90892ea1b41c80ec2f2b953a457c97515882de54ff86b60726c772749",
+      "rubric": "experiments/scoped-flow-v1/control-rubric.json",
+      "rubric_sha256": "dd92ceebd9c9327bbdfe03265ac752571289633178f5a13210d5b40ecf2cfd6c",
+      "expected": "covered"
+    },
+    {
+      "id": "global-denial",
+      "source": "experiments/scoped-flow-v1/inputs/control.txt",
+      "source_sha256": "f9eff14da10cd0df1c0e67fc947eeeefb2efcbdcae0dcbae480bb5fb2b111909",
+      "question": "What is the deadline?",
+      "candidate": "experiments/scoped-flow-v1/inputs/global-denial.json",
+      "candidate_sha256": "bf6c25277850c48e5b27f17091143657c920249c4b6e888c21dca82e62507a05",
+      "rubric": "experiments/scoped-flow-v1/control-rubric.json",
+      "rubric_sha256": "dd92ceebd9c9327bbdfe03265ac752571289633178f5a13210d5b40ecf2cfd6c",
+      "expected": "contradicted"
+    }
+  ],
+  "max_calls": 5,
+  "max_tokens": 2048,
+  "retries": 0,
+  "stop_rule": "No editing or retrying controls after response; preserve all labels"
+}

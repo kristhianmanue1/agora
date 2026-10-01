@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+  "question": "What VQA datasets are used for evaluating this task? ",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: Visual7W",
+      "evidence": {
+        "text": "In this section, we conduct extensive experiments to evaluate performance of our proposed model, and compare it with its variants and the alternative methods. We specifically implement the evaluation on a public benchmark dataset (Visual7W) BIBREF7 for the close-domain VQA task, and also generate numerous arbitrary question-answers pairs automatically to evaluate the performance on open-domain VQA. In this section, we first briefly review the dataset and the implementation details, and then report the performance of our proposed method comparing with several baseline models on both close-domain and open-domain VQA tasks.",
+        "start_byte": 26275,
+        "end_byte": 26903
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: a collection of open-domain visual question-answer pairs",
+      "evidence": {
+        "text": "We train and evaluate our model on a public available large-scale visual question answering datasets, the Visual7W dataset BIBREF7 , due to the diversity of question types. Besides, since there is no public available open-domain VQA dataset for evaluation now, we automatically build a collection of open-domain visual question-answer pairs to examine the potentiality of our model for answering open-domain visual questions.",
+        "start_byte": 26915,
+        "end_byte": 27340
+      }
+    }
+  ]
+}

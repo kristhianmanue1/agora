@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "df55042752ff9c3ceb9a570ccd6e0163e5b574ed61a2f0fae1dbe7031280859d",
+  "question": "Which intrisic measures do they use do evaluate obtained representations?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: same-different",
+      "evidence": {
+        "text": "The results above were presented as part of an earlier conference version of this paper BIBREF3 . Here, we expand upon that work in several ways. First, we include new results on the corpora and evaluation measures used in the zrsc, to allow more direct comparisons with other work. In doing so, we also provide the first set of results on identical systems evaluated using both the same-different and ABX evaluation measures. This permits the two measures themselves to be better compared. Finally, we provide both a qualitative analysis of the differences between the different features we extract, and a quantitative evaluation on the downstream target-language task of unsupervised full-coverage speech segmentation and clustering using the system of BIBREF4 . This is the first time that multilingual features are used in such a system, which performs a complete segmentation of input speech into hypothesized words. As in our intrinsic evaluations, we find that the multilingual bnfs consistently outperform the best unsupervised cae features, which in turn outperform or do similarly to MFCCs.",
+        "start_byte": 5697,
+        "end_byte": 6797
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: ABX evaluation measures",
+      "evidence": {
+        "text": "The results above were presented as part of an earlier conference version of this paper BIBREF3 . Here, we expand upon that work in several ways. First, we include new results on the corpora and evaluation measures used in the zrsc, to allow more direct comparisons with other work. In doing so, we also provide the first set of results on identical systems evaluated using both the same-different and ABX evaluation measures. This permits the two measures themselves to be better compared. Finally, we provide both a qualitative analysis of the differences between the different features we extract, and a quantitative evaluation on the downstream target-language task of unsupervised full-coverage speech segmentation and clustering using the system of BIBREF4 . This is the first time that multilingual features are used in such a system, which performs a complete segmentation of input speech into hypothesized words. As in our intrinsic evaluations, we find that the multilingual bnfs consistently outperform the best unsupervised cae features, which in turn outperform or do similarly to MFCCs.",
+        "start_byte": 5697,
+        "end_byte": 6797
+      }
+    }
+  ]
+}
