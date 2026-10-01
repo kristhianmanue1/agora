@@ -1,0 +1,166 @@
+{
+  "origin": "Producer-defined synthetic controls; expectations concern task relevance, not merely regex matches",
+  "results": [
+    {
+      "id": "no_exception",
+      "source": "Datasets Alpha and Beta.\n\nDatasets contain labeled reviews.",
+      "expected_added": false,
+      "actual_added": false,
+      "matches": true,
+      "report": {
+        "schema": "agora/condition-expansion/v1-experimental",
+        "ranges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "initial_bytes": 24,
+        "delivered_bytes": 24,
+        "added": [],
+        "skipped": [],
+        "matching_candidates": 0,
+        "question_anchors": [
+          "dataset"
+        ],
+        "local_scan_bytes": 59,
+        "semantic_completeness": "not_established",
+        "method": "question-overlap-and-explicit-exception-cues",
+        "max_added": 2,
+        "total_budget": 1000
+      }
+    },
+    {
+      "id": "positive_exception",
+      "source": "Datasets Alpha and Beta.\n\nDataset Beta is excluded in setting X.",
+      "expected_added": true,
+      "actual_added": true,
+      "matches": true,
+      "report": {
+        "schema": "agora/condition-expansion/v1-experimental",
+        "ranges": [
+          [
+            0,
+            24
+          ],
+          [
+            26,
+            64
+          ]
+        ],
+        "initial_bytes": 24,
+        "delivered_bytes": 62,
+        "added": [
+          {
+            "start_byte": 26,
+            "end_byte": 64,
+            "question_overlap": [
+              "dataset"
+            ],
+            "context_overlap_count": 2,
+            "cues": [
+              "excluded"
+            ]
+          }
+        ],
+        "skipped": [],
+        "matching_candidates": 1,
+        "question_anchors": [
+          "dataset"
+        ],
+        "local_scan_bytes": 64,
+        "semantic_completeness": "not_established",
+        "method": "question-overlap-and-explicit-exception-cues",
+        "max_added": 2,
+        "total_budget": 1000
+      }
+    },
+    {
+      "id": "insufficient_budget",
+      "source": "Datasets Alpha and Beta.\n\nDataset Beta is excluded in setting X.",
+      "expected_added": false,
+      "actual_added": false,
+      "matches": true,
+      "report": {
+        "schema": "agora/condition-expansion/v1-experimental",
+        "ranges": [
+          [
+            0,
+            24
+          ]
+        ],
+        "initial_bytes": 24,
+        "delivered_bytes": 24,
+        "added": [],
+        "skipped": [
+          {
+            "start_byte": 26,
+            "end_byte": 64,
+            "question_overlap": [
+              "dataset"
+            ],
+            "context_overlap_count": 2,
+            "cues": [
+              "excluded"
+            ],
+            "reason": "budget"
+          }
+        ],
+        "matching_candidates": 1,
+        "question_anchors": [
+          "dataset"
+        ],
+        "local_scan_bytes": 64,
+        "semantic_completeness": "not_established",
+        "method": "question-overlap-and-explicit-exception-cues",
+        "max_added": 2,
+        "total_budget": 24
+      }
+    },
+    {
+      "id": "irrelevant_only",
+      "source": "Datasets Alpha and Beta.\n\nDataset documentation uses only blue font.",
+      "expected_added": false,
+      "actual_added": true,
+      "matches": false,
+      "report": {
+        "schema": "agora/condition-expansion/v1-experimental",
+        "ranges": [
+          [
+            0,
+            24
+          ],
+          [
+            26,
+            68
+          ]
+        ],
+        "initial_bytes": 24,
+        "delivered_bytes": 66,
+        "added": [
+          {
+            "start_byte": 26,
+            "end_byte": 68,
+            "question_overlap": [
+              "dataset"
+            ],
+            "context_overlap_count": 1,
+            "cues": [
+              "only"
+            ]
+          }
+        ],
+        "skipped": [],
+        "matching_candidates": 1,
+        "question_anchors": [
+          "dataset"
+        ],
+        "local_scan_bytes": 68,
+        "semantic_completeness": "not_established",
+        "method": "question-overlap-and-explicit-exception-cues",
+        "max_added": 2,
+        "total_budget": 1000
+      }
+    }
+  ]
+}

@@ -213,3 +213,14 @@ la excepción, R1–R3 cubiertos y tres afirmaciones respaldadas según Jev. Tre
 párrafo no necesario: heurística todavía imprecisa. Código sólo experimental,
 sin promoción a CLI/default. Próximo paso: fuente reservada, control sin excepción
 y condición fuera de presupuesto antes de decidir incorporación.
+
+## Ampliación en fuente reservada: no se promueve
+
+[Validación en métricas de sesgo](../experiments/condition-expansion-heldout-v1/README.md):
+la heurística congelada mejora de 1/4 a 2/4 requisitos, pero deja fuera las definiciones
+de ΔG y ΔS. Candidatos válidos y afirmaciones respaldadas según Jev no equivalen a
+respuesta suficiente. Control sintético revela falso positivo por “only”; control de
+presupuesto preserva límites. Seis llamadas, 16.266 tokens; sin tuning ni reparación.
+Próximo incremento: propuesta de recuperación adicional ante cobertura incompleta,
+buscando definiciones y condiciones con presupuesto y parada explícitos. Sin cambios
+de CLI/defaults ni integraciones del ecosistema.

@@ -1,0 +1,404 @@
+{
+  "status": "validation_complete_not_promoted",
+  "rows": [
+    {
+      "arm": "initial",
+      "reading_bytes": 3735,
+      "structural_status": "complete",
+      "coverage": {
+        "R1": "missing",
+        "R2": "missing",
+        "R3": "missing",
+        "R4": "covered"
+      },
+      "covered_count": 1,
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported",
+        "C3": "supported",
+        "C4": "supported"
+      },
+      "total_tokens": 8414,
+      "elapsed_seconds": 38.966,
+      "quote_bytes": 5908,
+      "candidate_sha256": "2202eae295c227a6a58ec08033c482339711829643a5765dd49c0bdb9a0bc233",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"The WinoMT challenge set (Stanovsky et al, 2019) is used to measure gender bias in Neural Machine Translation directly.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\"]},{\"text\":\"Bias reduction is evaluated by performance on WinoMT, where the proposed lattice-rescoring scheme outperforms all systems evaluated in Stanovsky et al (2019) on WinoMT.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\"]},{\"text\":\"General test set BLEU is used as a companion metric to verify that bias reduction is achieved with no degradation of general translation quality.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\"]},{\"text\":\"Elastic Weight Consolidation during adaptation allows a performance trade-off between general translation quality and bias reduction, indicating both quality and bias are tracked as evaluation dimensions.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 2062,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1796
+          },
+          "prompt_tokens": 1531,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3593
+        },
+        "response_id": "2026100112071009619c58824f4e75"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"},{\"id\":\"R2\",\"status\":\"missing\"},{\"id\":\"R3\",\"status\":\"missing\"},{\"id\":\"R4\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 542,
+          "completion_tokens_details": {
+            "reasoning_tokens": 496
+          },
+          "prompt_tokens": 1896,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 2438
+        },
+        "response_id": "20261001120741ed65ee759b2a4b81"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.85,
+            "probabilities": {
+              "supported": 0.9,
+              "insufficient": 0.1,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.77,
+            "probabilities": {
+              "supported": 0.85,
+              "insufficient": 0.15,
+              "contradicted": 0.0
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.81,
+            "probabilities": {
+              "supported": 0.88,
+              "insufficient": 0.12,
+              "contradicted": 0.0
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.41,
+            "probabilities": {
+              "supported": 0.61,
+              "insufficient": 0.39,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 2212,
+          "output_tokens": 171
+        }
+      },
+      "review_sha256": "24f580e03416ded5f5a7c60f412f1f04ca038f41dac262755e62ab15b6452879",
+      "fidelity_sha256": "5994b0afd1b800f72ff196d1d0bcd7615b0a299f17d359e11c4c82f72e3aabdf"
+    },
+    {
+      "arm": "expanded",
+      "reading_bytes": 5162,
+      "structural_status": "complete",
+      "coverage": {
+        "R1": "covered",
+        "R2": "missing",
+        "R3": "missing",
+        "R4": "covered"
+      },
+      "covered_count": 2,
+      "fidelity": {
+        "C1": "supported",
+        "C2": "supported",
+        "C3": "supported"
+      },
+      "total_tokens": 7852,
+      "elapsed_seconds": 38.709,
+      "quote_bytes": 4381,
+      "candidate_sha256": "10e216bc88bd0d58a17602b6e882ad9ad56b2727a286d7ddeb5c228a8bc50de5",
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"Gender bias in NMT is measured directly using the WinoMT challenge set, which permits automatic bias evaluation for translation from English to eight target languages with grammatical gender.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\",\"ev_534800da6cee8921558f9a36\"]},{\"text\":\"WinoMT accuracy is used as the metric for evaluating gender bias, e.g., comparing baseline en-de accuracy ranges with the narrow accuracy ranges obtained after rescoring.\",\"evidence_ids\":[\"ev_868333d43efaa923742d9064\"]},{\"text\":\"General test set BLEU is used as a control metric to verify that bias reduction causes no degradation of general translation quality, rather than measuring bias itself.\",\"evidence_ids\":[\"ev_3a0e254c4448f67b3c91273f\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1614,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1393
+          },
+          "prompt_tokens": 1888,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 3502
+        },
+        "response_id": "20261001120749c8d597c25824458f"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"missing\"},{\"id\":\"R3\",\"status\":\"missing\"},{\"id\":\"R4\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 883,
+          "completion_tokens_details": {
+            "reasoning_tokens": 841
+          },
+          "prompt_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 2474
+        },
+        "response_id": "2026100112081458f261c128c14d56"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.93,
+            "probabilities": {
+              "supported": 0.96,
+              "insufficient": 0.04,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.45,
+            "probabilities": {
+              "supported": 0.64,
+              "insufficient": 0.36,
+              "contradicted": 0.0
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.58,
+            "probabilities": {
+              "supported": 0.72,
+              "insufficient": 0.28,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1747,
+          "output_tokens": 129
+        }
+      },
+      "review_sha256": "ca5d27730438dbde82b462f8149545ccabbd31d0c3b92c3d75daba08e977dc08",
+      "fidelity_sha256": "197f2dec5f586db7b7a2630386f29aa42199bd57b5b111842d9124acec1c949b"
+    }
+  ],
+  "http_calls": 6,
+  "total_tokens": 16266,
+  "elapsed_seconds": 77.675,
+  "controls": {
+    "origin": "Producer-defined synthetic controls; expectations concern task relevance, not merely regex matches",
+    "results": [
+      {
+        "id": "no_exception",
+        "source": "Datasets Alpha and Beta.\n\nDatasets contain labeled reviews.",
+        "expected_added": false,
+        "actual_added": false,
+        "matches": true,
+        "report": {
+          "schema": "agora/condition-expansion/v1-experimental",
+          "ranges": [
+            [
+              0,
+              24
+            ]
+          ],
+          "initial_bytes": 24,
+          "delivered_bytes": 24,
+          "added": [],
+          "skipped": [],
+          "matching_candidates": 0,
+          "question_anchors": [
+            "dataset"
+          ],
+          "local_scan_bytes": 59,
+          "semantic_completeness": "not_established",
+          "method": "question-overlap-and-explicit-exception-cues",
+          "max_added": 2,
+          "total_budget": 1000
+        }
+      },
+      {
+        "id": "positive_exception",
+        "source": "Datasets Alpha and Beta.\n\nDataset Beta is excluded in setting X.",
+        "expected_added": true,
+        "actual_added": true,
+        "matches": true,
+        "report": {
+          "schema": "agora/condition-expansion/v1-experimental",
+          "ranges": [
+            [
+              0,
+              24
+            ],
+            [
+              26,
+              64
+            ]
+          ],
+          "initial_bytes": 24,
+          "delivered_bytes": 62,
+          "added": [
+            {
+              "start_byte": 26,
+              "end_byte": 64,
+              "question_overlap": [
+                "dataset"
+              ],
+              "context_overlap_count": 2,
+              "cues": [
+                "excluded"
+              ]
+            }
+          ],
+          "skipped": [],
+          "matching_candidates": 1,
+          "question_anchors": [
+            "dataset"
+          ],
+          "local_scan_bytes": 64,
+          "semantic_completeness": "not_established",
+          "method": "question-overlap-and-explicit-exception-cues",
+          "max_added": 2,
+          "total_budget": 1000
+        }
+      },
+      {
+        "id": "insufficient_budget",
+        "source": "Datasets Alpha and Beta.\n\nDataset Beta is excluded in setting X.",
+        "expected_added": false,
+        "actual_added": false,
+        "matches": true,
+        "report": {
+          "schema": "agora/condition-expansion/v1-experimental",
+          "ranges": [
+            [
+              0,
+              24
+            ]
+          ],
+          "initial_bytes": 24,
+          "delivered_bytes": 24,
+          "added": [],
+          "skipped": [
+            {
+              "start_byte": 26,
+              "end_byte": 64,
+              "question_overlap": [
+                "dataset"
+              ],
+              "context_overlap_count": 2,
+              "cues": [
+                "excluded"
+              ],
+              "reason": "budget"
+            }
+          ],
+          "matching_candidates": 1,
+          "question_anchors": [
+            "dataset"
+          ],
+          "local_scan_bytes": 64,
+          "semantic_completeness": "not_established",
+          "method": "question-overlap-and-explicit-exception-cues",
+          "max_added": 2,
+          "total_budget": 24
+        }
+      },
+      {
+        "id": "irrelevant_only",
+        "source": "Datasets Alpha and Beta.\n\nDataset documentation uses only blue font.",
+        "expected_added": false,
+        "actual_added": true,
+        "matches": false,
+        "report": {
+          "schema": "agora/condition-expansion/v1-experimental",
+          "ranges": [
+            [
+              0,
+              24
+            ],
+            [
+              26,
+              68
+            ]
+          ],
+          "initial_bytes": 24,
+          "delivered_bytes": 66,
+          "added": [
+            {
+              "start_byte": 26,
+              "end_byte": 68,
+              "question_overlap": [
+                "dataset"
+              ],
+              "context_overlap_count": 1,
+              "cues": [
+                "only"
+              ]
+            }
+          ],
+          "skipped": [],
+          "matching_candidates": 1,
+          "question_anchors": [
+            "dataset"
+          ],
+          "local_scan_bytes": 68,
+          "semantic_completeness": "not_established",
+          "method": "question-overlap-and-explicit-exception-cues",
+          "max_added": 2,
+          "total_budget": 1000
+        }
+      }
+    ]
+  },
+  "remaining_gaps": [
+    {
+      "requirement_id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: $\\mathbf {\\Delta G}$",
+      "evidence": {
+        "text": "$\\mathbf {\\Delta G}$ – difference in $F_1$ score between the set of sentences with masculine entities and the set with feminine entities.",
+        "start_byte": 11191,
+        "end_byte": 11330
+      }
+    },
+    {
+      "requirement_id": "R3",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: $\\mathbf {\\Delta S}$",
+      "evidence": {
+        "text": "$\\mathbf {\\Delta S}$ – difference in accuracy between the set of sentences with pro-stereotypical (`pro') entities and those with anti-stereotypical (`anti') entities, as determined by BIBREF5 using US labour statistics. For example, the `pro' set contains male doctors and female nurses, while `anti' contains female doctors and male nurses.",
+        "start_byte": 11332,
+        "end_byte": 11676
+      }
+    }
+  ],
+  "decision": "Do not promote default: only 2/4 reference requirements covered, and irrelevant-only synthetic control causes expansion.",
+  "diagnosis": "The source reference paragraphs for Delta G and Delta S are outside both delivered contexts; supported assertions do not establish completeness.",
+  "limitations": "One locally held-out eligible document, no general rates. Producer rubrics and synthetic controls. Same-provider coverage and separate-provider fidelity are advisory; no human adjudication. No failed outcome removed or repaired."
+}

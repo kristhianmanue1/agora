@@ -1,0 +1,44 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "31dba657ba7a6803e2c90b9e47670ef86f5cd8205bd8a787334f8293d526e096",
+  "question": "What metrics are used to measure bias reduction?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: Accuracy",
+      "evidence": {
+        "text": "Accuracy – percentage of hypotheses with the correctly gendered primary entity.",
+        "start_byte": 11108,
+        "end_byte": 11189
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: $\\mathbf {\\Delta G}$",
+      "evidence": {
+        "text": "$\\mathbf {\\Delta G}$ – difference in $F_1$ score between the set of sentences with masculine entities and the set with feminine entities.",
+        "start_byte": 11191,
+        "end_byte": 11330
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: $\\mathbf {\\Delta S}$",
+      "evidence": {
+        "text": "$\\mathbf {\\Delta S}$ – difference in accuracy between the set of sentences with pro-stereotypical (`pro') entities and those with anti-stereotypical (`anti') entities, as determined by BIBREF5 using US labour statistics. For example, the `pro' set contains male doctors and female nurses, while `anti' contains female doctors and male nurses.",
+        "start_byte": 11332,
+        "end_byte": 11676
+      }
+    },
+    {
+      "id": "R4",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: BLEU",
+      "evidence": {
+        "text": "Finally, we wish to reduce gender bias without reducing translation performance. We report BLEU BIBREF22 on separate, general test sets for each language pair. WinoMT is designed to work without target language references, and so it is not possible to measure translation performance on this set by measures such as BLEU.",
+        "start_byte": 12878,
+        "end_byte": 13199
+      }
+    }
+  ]
+}
