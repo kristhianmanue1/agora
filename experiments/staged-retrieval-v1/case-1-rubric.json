@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "03b287726f6f1d1147fdc203fa860c5333c3d1a6024ae5ec168ec1236258708a",
+  "question": "Which data augmentation techniques do they use?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: augmented with a set of Beta random variables",
+      "evidence": {
+        "text": "To sample INLINEFORM0 , we first marginalise out INLINEFORM1 in the right part of Eq. ( SECREF4 ) with the Dirichlet multinomial conjugacy: +rCl+x* d=1D (d,)(d, + md,)Gamma ratio 1 k=1K (d,k + md,k)(d,k)Gamma ratio 2 where INLINEFORM2 , INLINEFORM3 , and INLINEFORM4 is the gamma function. Gamma ratio 1 in Eq. ( SECREF17 ) can be augmented with a set of Beta random variables INLINEFORM5 as: +rCl+x* (d,)(d, + md,)Gamma ratio 1 qd qdd,-1 (1-qd)md,-1 where for each document INLINEFORM6 , INLINEFORM7 . Given a set of INLINEFORM8 for all the documents, Gamma ratio 1 can be approximated by the product of INLINEFORM9 , i.e., INLINEFORM10 .",
+        "start_byte": 15517,
+        "end_byte": 16156
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: auxiliary variable",
+      "evidence": {
+        "text": "Unlike most existing methods, our way of incorporating the meta information facilitates the derivation of an efficient Gibbs sampling algorithm. With two data augmentation techniques (i.e., the introduction of auxiliary variables), MetaLDA admits the local conjugacy and a close-form Gibbs sampling algorithm can be derived. Note that MetaLDA incorporates the meta information on the Dirichlet priors, so we can still use LDA's collapsed Gibbs sampling algorithm for the topic assignment INLINEFORM0 . Moreover, Step UID12 and UID9 show that one only needs to consider the non-zero entries of INLINEFORM1 and INLINEFORM2 in computing the full conditionals, which further reduces the inference complexity.",
+        "start_byte": 14568,
+        "end_byte": 15272
+      }
+    }
+  ]
+}

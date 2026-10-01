@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "document_id": "2004.02105",
+      "question": "Which pre-trained language models are used?",
+      "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+      "rubric_sha256": "1d6e4c0c43cda6acdeb3f19fdcd3d37f2de9cb4a2181b2c70c2a7ba794720d61",
+      "id": "recovery-induced-v1/case-1",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-1-rubric.json",
+      "partition": "known"
+    },
+    {
+      "document_id": "1803.05160",
+      "question": "Which three variants of cross-validation are examined?",
+      "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+      "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+      "id": "recovery-induced-v1/case-2",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-2-rubric.json",
+      "partition": "known"
+    },
+    {
+      "document_id": "1901.05389",
+      "question": "What baseline model is used?",
+      "source_sha256": "74c587db0a182b08314d38447e56289f22ff81f3ca21ea3d0be069b76889f934",
+      "rubric_sha256": "5f1ee2b72fdb4ec369dfa8aeb62c928c7ef856e41aed514616dc865b733cd60e",
+      "id": "recovery-heldout-v1/case-1",
+      "source_path": "experiments/recovery-heldout-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-heldout-v1/case-1-rubric.json",
+      "partition": "known"
+    },
+    {
+      "document_id": "1909.00871",
+      "question": "What was the previous state of the art for bias mitigation?",
+      "source_sha256": "3581191e243b5e97109f74e32fae52a46354554d2958cf5a81ce680ec697dc01",
+      "rubric_sha256": "fe79cefa10d93ed75b9fcafb120e239f1bc8a025746ab9305d5caad919531f8b",
+      "id": "recovery-heldout-v1/case-2",
+      "source_path": "experiments/recovery-heldout-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-heldout-v1/case-2-rubric.json",
+      "partition": "known"
+    },
+    {
+      "document_id": "1709.06365",
+      "question": "Which data augmentation techniques do they use?",
+      "source_sha256": "03b287726f6f1d1147fdc203fa860c5333c3d1a6024ae5ec168ec1236258708a",
+      "rubric_sha256": "27f1d90b81c917553a8afe227c93af484335c9b357654c10bec20d9f4f4384cf",
+      "id": "reserved/case-1",
+      "partition": "reserved_local",
+      "source_path": "experiments/staged-retrieval-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/staged-retrieval-v1/case-1-rubric.json"
+    },
+    {
+      "document_id": "1909.09070",
+      "question": "What supervised baselines did they compare with?",
+      "source_sha256": "d18e5fd2313978eda8c6d287e9a68ecb0c0adfd393e661e2e37e039513ba229e",
+      "rubric_sha256": "ed9151d1693469aa09b9de40733adba04521f66e9a0320ef681dac6cec05f96a",
+      "id": "reserved/case-2",
+      "partition": "reserved_local",
+      "source_path": "experiments/staged-retrieval-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/staged-retrieval-v1/case-2-rubric.json"
+    }
+  ],
+  "budgets": [
+    8000,
+    12000,
+    20000,
+    32000
+  ],
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "implementations": {
+    "experiments/staged-retrieval-v1/stages.py": "fa5f0411f249a30ad48d5a33bdb3af7a3548adb0b4ef10151ed1ec9c97d0975c",
+    "experiments/staged-retrieval-v1/run.py": "3da37ec45eaf46c65941cd9858fee73636622ffc06a57b2d8337b44df9480b9b",
+    "experiments/hybrid-retrieval-v1/fusion.py": "bfe174f138e8bd6eedbf12a0ba4f2bcf8b8828068f3ddda2d95b194df51ef50a",
+    "experiments/structure-retrieval-v1/structure.py": "5e2fac53be51451221ae79002577aaedaa38b328d6c1c853b9f14891e749d63a",
+    "experiments/retrieval-comparison-v1/retrieval_variants.py": "d2fbaf0c2b550383acf11aa9a2d4f8ebd3b1c8764a4711b78b3aa85c09fe3dfd"
+  },
+  "stop_rule": "Preserve previous ranges; carry skipped ranges; stop only when no scheduled future or skipped candidate adds bytes, or final budget reached. Never semantic acceptance.",
+  "scope": "Precomputed offline candidates; stop knows remaining scheduled sets, not future external evidence; no model calls"
+}

@@ -314,3 +314,13 @@ cubierta y respaldo Jev, uno rechazado por formato; sin reintentos. 16 llamadas,
 Tres tests y replay pasaron. Sin cambio de defaults: no hay óptimo general probado.
 Siguiente propuesta: ampliación por etapas conservando rangos, con parada cuando no
 haya ganancia; validar después en fuentes nuevas y rúbricas suficientes.
+
+## Ampliación conservadora por etapas: ensayo offline con fuentes nuevas
+
+[Acumulación de rangos](../experiments/staged-retrieval-v1/README.md) conserva lecturas
+previas y respeta 8/12/20/32 KB. Los cuatro controles alcanzan sus párrafos anotados;
+dos fuentes nuevas también, ambas ya desde 8 KB. No prueban reparación de omisiones
+nuevas. Cinco tests/replay pasaron; cero llamadas. La parada usa candidatos de todas
+las etapas calculados previamente y no demuestra suficiencia semántica ni ahorro
+local. Sin integración/defaults. Próximo recorrido: revisión explícita de cobertura
+y fidelidad entre etapas, presupuesto acumulado y salida de insuficiencia.

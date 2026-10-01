@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "d18e5fd2313978eda8c6d287e9a68ecb0c0adfd393e661e2e37e039513ba229e",
+  "question": "What supervised baselines did they compare with?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: direct combination",
+      "evidence": {
+        "text": "The direct combination baseline computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a threshold, which we heuristically fixed on 0.325, the result is positive. The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section SECREF6, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method.",
+        "start_byte": 16308,
+        "end_byte": 16954
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: supervised pre-training",
+      "evidence": {
+        "text": "The direct combination baseline computes the figure-caption correspondence through the scalar product between the softmax outputs of both networks. If it exceeds a threshold, which we heuristically fixed on 0.325, the result is positive. The supervised pre-training baseline freezes the weights of the feature extraction trunks from the two trained networks, assembles them in the FCC architecture as shown in section SECREF6, and trains the FCC task on the fully connected layers. While direct combination provides a notion of the agreement between the two branches, supervised pre-training is the most similar supervised approach to our method.",
+        "start_byte": 16308,
+        "end_byte": 16954
+      }
+    }
+  ]
+}
