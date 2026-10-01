@@ -293,3 +293,13 @@ QASPER disponible, no extracción general desde PDF. Sin promoción ni cambios d
 producto. Próximo candidato: combinar recuperación léxica y estructural bajo un
 presupuesto común, comprobar regresiones y luego fuentes nuevas; no elegir por
 etiquetas retrospectivas ni declarar suficiencia semántica a partir de rangos.
+
+## Fusión a presupuesto fijo: tres casos cubiertos, una regresión
+
+[Combinación offline congelada](../experiments/hybrid-retrieval-v1/README.md):
+recupera todos los párrafos anotados en tres de cuatro casos conocidos; pierde el
+párrafo de modelos de referencia que el baseline conservaba. Son 1.026 bytes omitidos
+con sólo 262 libres. Cinco tests y reproducción pasaron; cero llamadas, sin cambios
+de producto ni promoción. Próxima condición propuesta: preservar baseline y añadir
+estructura con presupuesto restante, declarando insuficiencia cuando no cabe; después
+casos nuevos. No confundir conservación de rangos con fiabilidad semántica.

@@ -1,0 +1,26 @@
+{
+  "case_id": "recovery-heldout-v1/case-1",
+  "annotated_range": [
+    26888,
+    27914
+  ],
+  "annotated_bytes": 1026,
+  "missing_annotated_bytes": 1026,
+  "selected_bytes": 11738,
+  "remaining_budget": 262,
+  "skipped_ranges": [
+    [
+      26888,
+      27914
+    ],
+    [
+      27916,
+      28797
+    ],
+    [
+      29289,
+      30760
+    ]
+  ],
+  "conclusion": "Hybrid lost a baseline reference paragraph; fixed allocation and source-order ranges are not a relevance guarantee. No selector tuning applied."
+}

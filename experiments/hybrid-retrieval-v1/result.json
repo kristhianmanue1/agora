@@ -1,0 +1,1406 @@
+{
+  "status": "complete_not_promoted",
+  "provider_calls": 0,
+  "scope": "Four known documents; development test, not new holdout",
+  "rows": [
+    {
+      "case_id": "recovery-induced-v1/case-1",
+      "mode": "baseline",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "query": "Which pre-trained language models are used?",
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          14411,
+          15310
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          15392,
+          15772
+        ],
+        [
+          15774,
+          16433
+        ],
+        [
+          16435,
+          17305
+        ]
+      ],
+      "bytes": 9548,
+      "initial_ranges": [
+        [
+          0,
+          58
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          8,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          9,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 33907,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      }
+    },
+    {
+      "case_id": "recovery-induced-v1/case-1",
+      "mode": "headings",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ],
+      "bytes": 2726,
+      "sections": [
+        {
+          "section_index": 10,
+          "title": "Domain Data Selection with Pretrained Language Models",
+          "score": 10,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 1572
+        },
+        {
+          "section_index": 21,
+          "title": "Appendix ::: Language Model Finetuning",
+          "score": 10,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 263
+        },
+        {
+          "section_index": 3,
+          "title": "Emerging Domain Clusters in Pretrained Language Models ::: Models and Baselines",
+          "score": 6,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 833
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-induced-v1/case-1",
+      "mode": "headings-lists",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ],
+      "bytes": 2726,
+      "sections": [
+        {
+          "section_index": 10,
+          "title": "Domain Data Selection with Pretrained Language Models",
+          "score": 14,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 1572
+        },
+        {
+          "section_index": 21,
+          "title": "Appendix ::: Language Model Finetuning",
+          "score": 11,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 263
+        },
+        {
+          "section_index": 3,
+          "title": "Emerging Domain Clusters in Pretrained Language Models ::: Models and Baselines",
+          "score": 7,
+          "list_paragraphs": [],
+          "quota": 3980,
+          "selected_bytes": 833
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-induced-v1/case-1",
+      "mode": "hybrid",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          14411,
+          15310
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          15392,
+          15772
+        ],
+        [
+          15774,
+          16433
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ],
+      "bytes": 11346,
+      "quota_per_channel": 5971,
+      "first_pass_added_bytes": [
+        5838,
+        2668
+      ],
+      "skipped_ranges": [
+        [
+          16435,
+          17305
+        ]
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-induced-v1/case-2",
+      "mode": "baseline",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 3,
+      "query": "Which three variants of cross-validation are examined?",
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          18039,
+          18698
+        ]
+      ],
+      "bytes": 9650,
+      "initial_ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 56,
+        "seed_paragraphs": [
+          1,
+          3,
+          26
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          25,
+          26,
+          27
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 38789,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      }
+    },
+    {
+      "case_id": "recovery-induced-v1/case-2",
+      "mode": "headings",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 3,
+      "ranges": [
+        [
+          0,
+          68
+        ]
+      ],
+      "bytes": 68,
+      "sections": [],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-induced-v1/case-2",
+      "mode": "headings-lists",
+      "covered_paragraphs": 3,
+      "reference_paragraphs": 3,
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          13897,
+          13920
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          23798,
+          23819
+        ],
+        [
+          23821,
+          24353
+        ],
+        [
+          24355,
+          24845
+        ],
+        [
+          24847,
+          25299
+        ],
+        [
+          25301,
+          25356
+        ],
+        [
+          25358,
+          25420
+        ],
+        [
+          25422,
+          25497
+        ],
+        [
+          25499,
+          25993
+        ],
+        [
+          25995,
+          26064
+        ],
+        [
+          26066,
+          26135
+        ],
+        [
+          26137,
+          26246
+        ]
+      ],
+      "bytes": 5870,
+      "sections": [
+        {
+          "section_index": 7,
+          "title": "Estimation procedures",
+          "score": 7,
+          "list_paragraphs": [
+            3,
+            4
+          ],
+          "quota": 3977,
+          "selected_bytes": 2428
+        },
+        {
+          "section_index": 0,
+          "title": "Abstract",
+          "score": 4,
+          "list_paragraphs": [],
+          "quota": 3977,
+          "selected_bytes": 1548
+        },
+        {
+          "section_index": 3,
+          "title": "Methods and experiments",
+          "score": 4,
+          "list_paragraphs": [],
+          "quota": 3977,
+          "selected_bytes": 1826
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-induced-v1/case-2",
+      "mode": "hybrid",
+      "covered_paragraphs": 3,
+      "reference_paragraphs": 3,
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13897,
+          13920
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          23798,
+          23819
+        ],
+        [
+          23821,
+          24353
+        ],
+        [
+          24355,
+          24845
+        ],
+        [
+          24847,
+          25299
+        ],
+        [
+          25301,
+          25356
+        ],
+        [
+          25358,
+          25420
+        ],
+        [
+          25422,
+          25497
+        ],
+        [
+          25499,
+          25993
+        ],
+        [
+          25995,
+          26064
+        ],
+        [
+          26066,
+          26135
+        ],
+        [
+          26137,
+          26246
+        ]
+      ],
+      "bytes": 11442,
+      "quota_per_channel": 5966,
+      "first_pass_added_bytes": [
+        5842,
+        3243
+      ],
+      "skipped_ranges": [
+        [
+          18039,
+          18698
+        ]
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-1",
+      "mode": "baseline",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "query": "What baseline model is used?",
+      "ranges": [
+        [
+          0,
+          83
+        ],
+        [
+          18715,
+          19367
+        ],
+        [
+          19369,
+          20613
+        ],
+        [
+          20615,
+          21678
+        ],
+        [
+          21680,
+          22352
+        ],
+        [
+          22354,
+          22371
+        ],
+        [
+          22373,
+          22744
+        ],
+        [
+          23350,
+          23369
+        ],
+        [
+          23371,
+          24036
+        ],
+        [
+          24038,
+          25271
+        ],
+        [
+          25273,
+          25614
+        ],
+        [
+          25616,
+          26877
+        ],
+        [
+          26879,
+          26886
+        ],
+        [
+          26888,
+          27914
+        ],
+        [
+          27916,
+          28797
+        ],
+        [
+          28799,
+          29162
+        ],
+        [
+          29164,
+          29287
+        ],
+        [
+          29289,
+          30760
+        ]
+      ],
+      "bytes": 11492,
+      "initial_ranges": [
+        [
+          0,
+          83
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 18,
+        "seed_paragraphs": [
+          30,
+          38,
+          43
+        ],
+        "selected_paragraphs": [
+          29,
+          30,
+          31,
+          37,
+          38,
+          39,
+          42,
+          43,
+          44
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 35980,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      }
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-1",
+      "mode": "headings",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          83
+        ]
+      ],
+      "bytes": 83,
+      "sections": [],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-1",
+      "mode": "headings-lists",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          83
+        ],
+        [
+          5777,
+          5790
+        ],
+        [
+          5792,
+          6276
+        ],
+        [
+          6278,
+          6985
+        ],
+        [
+          6987,
+          8813
+        ],
+        [
+          18117,
+          18152
+        ],
+        [
+          18154,
+          18713
+        ],
+        [
+          18715,
+          19367
+        ],
+        [
+          19369,
+          20613
+        ],
+        [
+          20615,
+          21678
+        ],
+        [
+          23350,
+          23369
+        ],
+        [
+          23371,
+          24036
+        ],
+        [
+          24038,
+          25271
+        ],
+        [
+          25273,
+          25614
+        ],
+        [
+          25616,
+          26877
+        ]
+      ],
+      "bytes": 10185,
+      "sections": [
+        {
+          "section_index": 1,
+          "title": "Related works",
+          "score": 1,
+          "list_paragraphs": [],
+          "quota": 3972,
+          "selected_bytes": 3030
+        },
+        {
+          "section_index": 6,
+          "title": "Expert annotated home location data",
+          "score": 1,
+          "list_paragraphs": [],
+          "quota": 3972,
+          "selected_bytes": 3553
+        },
+        {
+          "section_index": 9,
+          "title": "Linguistic features",
+          "score": 1,
+          "list_paragraphs": [],
+          "quota": 3972,
+          "selected_bytes": 3519
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-1",
+      "mode": "hybrid",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          83
+        ],
+        [
+          5777,
+          5790
+        ],
+        [
+          5792,
+          6276
+        ],
+        [
+          6278,
+          6985
+        ],
+        [
+          6987,
+          8813
+        ],
+        [
+          18117,
+          18152
+        ],
+        [
+          18154,
+          18713
+        ],
+        [
+          18715,
+          19367
+        ],
+        [
+          19369,
+          20613
+        ],
+        [
+          20615,
+          21678
+        ],
+        [
+          21680,
+          22352
+        ],
+        [
+          22354,
+          22371
+        ],
+        [
+          22373,
+          22744
+        ],
+        [
+          23350,
+          23369
+        ],
+        [
+          23371,
+          24036
+        ],
+        [
+          24038,
+          25271
+        ],
+        [
+          25273,
+          25614
+        ],
+        [
+          25616,
+          26877
+        ],
+        [
+          26879,
+          26886
+        ],
+        [
+          28799,
+          29162
+        ],
+        [
+          29164,
+          29287
+        ]
+      ],
+      "bytes": 11738,
+      "quota_per_channel": 5958,
+      "first_pass_added_bytes": [
+        5943,
+        5226
+      ],
+      "skipped_ranges": [
+        [
+          26888,
+          27914
+        ],
+        [
+          27916,
+          28797
+        ],
+        [
+          29289,
+          30760
+        ]
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-2",
+      "mode": "baseline",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "query": "What was the previous state of the art for bias mitigation?",
+      "ranges": [
+        [
+          0,
+          93
+        ],
+        [
+          95,
+          1394
+        ],
+        [
+          1396,
+          1408
+        ],
+        [
+          1410,
+          1928
+        ],
+        [
+          1930,
+          3128
+        ],
+        [
+          3130,
+          4119
+        ],
+        [
+          4121,
+          4133
+        ],
+        [
+          4135,
+          4435
+        ],
+        [
+          4437,
+          4478
+        ],
+        [
+          24720,
+          24730
+        ],
+        [
+          24732,
+          25806
+        ],
+        [
+          25808,
+          26609
+        ],
+        [
+          26611,
+          27761
+        ],
+        [
+          27763,
+          27807
+        ],
+        [
+          27809,
+          27973
+        ]
+      ],
+      "bytes": 7705,
+      "initial_ranges": [
+        [
+          0,
+          93
+        ]
+      ],
+      "skipped_ranges": [],
+      "retrieval": {
+        "method": "lexical-paragraph-overlap/v0.1",
+        "top_k": 3,
+        "matching_paragraphs": 55,
+        "seed_paragraphs": [
+          1,
+          4,
+          56
+        ],
+        "selected_paragraphs": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          55,
+          56,
+          57
+        ],
+        "oversized_candidates": [],
+        "local_scan_bytes": 30272,
+        "selection_complete": false,
+        "search_exhaustive_for_meaning": false
+      }
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-2",
+      "mode": "headings",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          93
+        ],
+        [
+          15650,
+          15684
+        ],
+        [
+          15686,
+          16431
+        ],
+        [
+          16433,
+          16469
+        ],
+        [
+          16471,
+          17284
+        ],
+        [
+          17286,
+          17724
+        ],
+        [
+          19469,
+          19492
+        ],
+        [
+          19494,
+          19806
+        ],
+        [
+          19808,
+          20685
+        ]
+      ],
+      "bytes": 3371,
+      "sections": [
+        {
+          "section_index": 8,
+          "title": "Experimental Setup ::: Direct bias",
+          "score": 5,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 779
+        },
+        {
+          "section_index": 9,
+          "title": "Experimental Setup ::: Indirect bias",
+          "score": 5,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 1287
+        },
+        {
+          "section_index": 13,
+          "title": "Results ::: Direct bias",
+          "score": 5,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 1212
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-2",
+      "mode": "headings-lists",
+      "covered_paragraphs": 0,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          93
+        ],
+        [
+          15650,
+          15684
+        ],
+        [
+          15686,
+          16431
+        ],
+        [
+          16433,
+          16469
+        ],
+        [
+          16471,
+          17284
+        ],
+        [
+          17286,
+          17724
+        ],
+        [
+          19469,
+          19492
+        ],
+        [
+          19494,
+          19806
+        ],
+        [
+          19808,
+          20685
+        ]
+      ],
+      "bytes": 3371,
+      "sections": [
+        {
+          "section_index": 8,
+          "title": "Experimental Setup ::: Direct bias",
+          "score": 7,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 779
+        },
+        {
+          "section_index": 9,
+          "title": "Experimental Setup ::: Indirect bias",
+          "score": 7,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 1287
+        },
+        {
+          "section_index": 13,
+          "title": "Results ::: Direct bias",
+          "score": 6,
+          "list_paragraphs": [],
+          "quota": 3969,
+          "selected_bytes": 1212
+        }
+      ],
+      "semantic_completeness": "not_established"
+    },
+    {
+      "case_id": "recovery-heldout-v1/case-2",
+      "mode": "hybrid",
+      "covered_paragraphs": 1,
+      "reference_paragraphs": 1,
+      "ranges": [
+        [
+          0,
+          93
+        ],
+        [
+          95,
+          1394
+        ],
+        [
+          1396,
+          1408
+        ],
+        [
+          1410,
+          1928
+        ],
+        [
+          1930,
+          3128
+        ],
+        [
+          3130,
+          4119
+        ],
+        [
+          4121,
+          4133
+        ],
+        [
+          4135,
+          4435
+        ],
+        [
+          4437,
+          4478
+        ],
+        [
+          15650,
+          15684
+        ],
+        [
+          15686,
+          16431
+        ],
+        [
+          16433,
+          16469
+        ],
+        [
+          16471,
+          17284
+        ],
+        [
+          17286,
+          17724
+        ],
+        [
+          19469,
+          19492
+        ],
+        [
+          19494,
+          19806
+        ],
+        [
+          19808,
+          20685
+        ],
+        [
+          24720,
+          24730
+        ],
+        [
+          24732,
+          25806
+        ],
+        [
+          25808,
+          26609
+        ],
+        [
+          26611,
+          27761
+        ],
+        [
+          27763,
+          27807
+        ],
+        [
+          27809,
+          27973
+        ]
+      ],
+      "bytes": 10983,
+      "quota_per_channel": 5953,
+      "first_pass_added_bytes": [
+        5661,
+        3278
+      ],
+      "skipped_ranges": [],
+      "semantic_completeness": "not_established"
+    }
+  ]
+}
