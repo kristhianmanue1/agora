@@ -247,3 +247,14 @@ ellas con probabilidades cercanas a insuficiencia. 9.439 bytes, tres llamadas,
 Es una regresión conocida, sin promoción a estrategia predeterminada. Próximo paso:
 validación en casos nuevos con controles y parámetros fijados; revisar afirmaciones
 limítrofes. El motor completo de memoria y las integraciones siguen pendientes.
+
+## Batería nueva: parada correcta y discrepancia de fidelidad
+
+[Dos documentos reservados localmente](../experiments/recovery-heldout-v1/README.md):
+ambos cubren 2/2 requisitos según GLM, por lo que `coverage-plan` no amplía.
+Jev respalda 6/7 afirmaciones; C6 del segundo caso queda insufficient, sin explicación
+causal en el formato de respuesta. Se conservan afirmación y cita para adjudicación.
+Seis llamadas, 16.508 tokens reportados; controles y reconstrucción local pasaron.
+No hubo activaciones reales de recuperación: su generalización sigue sin comprobarse.
+Próximo paso: adjudicar la discrepancia y preparar, por separado, un reto de omisiones
+controladas con protocolo previo. Sin cambios de producto ni promoción de defaults.

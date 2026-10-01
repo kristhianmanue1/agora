@@ -1,0 +1,11 @@
+{
+  "origin": "Existing producer-defined synthetic controls, not semantic adjudication",
+  "tests": [
+    "test_covered_is_not_global_completeness",
+    "test_budget_and_initial_context",
+    "test_uncertain_or_contradicted_stops_before_search"
+  ],
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0
+}

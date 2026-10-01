@@ -1,0 +1,235 @@
+{
+  "status": "completed_not_promoted",
+  "rows": [
+    {
+      "id": "case-1",
+      "document_id": "1901.05389",
+      "source_bytes": 35980,
+      "reading_bytes": 7153,
+      "candidate_sha256": "4550a21d91351c94d4773e76f88b5002d04412ab000b73ae7694039b44cbb4b8",
+      "review_sha256": "3a3fa9713a4880ca2ce3e14ed5944f4894136311d9ca32e711516427c3265168",
+      "proposal_sha256": "3b4c44d26baab14cd0a00d25d049e37a3f051fd816be8de274ebee208363b119",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "proposal_status": "no_expansion",
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.81,
+            "probabilities": {
+              "insufficient": 0.12,
+              "supported": 0.88,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 683,
+          "output_tokens": 45
+        }
+      },
+      "http_calls": 3,
+      "total_reported_tokens": 4672,
+      "claims": [
+        {
+          "text": "For the socioeconomic class discrimination task, the primary model is XGBoost, and to evaluate its performance it was benchmarked against more standard ensemble learning algorithms used as baselines, namely AdaBoost and Random Forest.",
+          "quotes": [
+            "In order to assess the degree to which linguistic features can be used for discriminating users by their socioeconomic class, we trained with these feature sets different learning algorithms. Namely, we used the XGBoost algorithm BIBREF43 , an implementation of the gradient-boosted decision trees for this task. Training a decision tree learning algorithm involves the generation of a series of rules, split points or nodes ordered in a tree-like structure enabling the prediction of a target output value based on the values of the input features. More specifically, XGBoost, as an ensemble technique, is trained by sequentially adding a high number of individually weak but complementary classifiers to produce a robust estimator: each new model is built to be maximally correlated with the negative gradient of the loss function associated with the model assembly BIBREF44 . To evaluate the performance of this method we benchmarked it against more standard ensemble learning algorithms such as AdaBoost and Random Forest."
+          ],
+          "evidence_ids": [
+            "ev_ab30d4dcb6c5cf25e7e6c77e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case-2",
+      "document_id": "1909.00871",
+      "source_bytes": 30272,
+      "reading_bytes": 7320,
+      "candidate_sha256": "ca45bf95ac92443be888e605df73495b22f0b63e763b8f27040dd9e8bb511549",
+      "review_sha256": "1981e5ca7692edbca123502305c9cf13d2f2d939ee5da64882a8f5884e4bf008",
+      "proposal_sha256": "2c4ade00eae54251401cc87b56e56a3d9cb9659db53c88b6a2df8e6602d1f350",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        }
+      ],
+      "proposal_status": "no_expansion",
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.7,
+            "probabilities": {
+              "contradicted": 0.01,
+              "insufficient": 0.18,
+              "supported": 0.81
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.49,
+            "probabilities": {
+              "contradicted": 0.12,
+              "insufficient": 0.22,
+              "supported": 0.66
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.76,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.16,
+              "supported": 0.84
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "contradicted": 0.01,
+              "insufficient": 0.02,
+              "supported": 0.97
+            }
+          },
+          "C5": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.82,
+            "probabilities": {
+              "contradicted": 0.05,
+              "insufficient": 0.07,
+              "supported": 0.88
+            }
+          },
+          "C6": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 0.42,
+            "probabilities": {
+              "contradicted": 0.01,
+              "insufficient": 0.61,
+              "supported": 0.38
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 3873,
+          "output_tokens": 258
+        }
+      },
+      "http_calls": 3,
+      "total_reported_tokens": 11836,
+      "claims": [
+        {
+          "text": "The previous state-of-the-art bias mitigation techniques were two methods, WED and CDA, which the authors replicated on two large corpora, Wikipedia and the English Gigaword.",
+          "quotes": [
+            "We have replicated two state-of-the-art bias mitigation techniques, WED and CDA, on two large corpora, Wikipedia and the English Gigaword. In our empirical comparison, we found that although both methods mitigate direct gender bias and maintain the interpretability of the space, WED failed to maintain a robust representation of gender (the best variants had an error rate of 23% average when drawing non-biased analogies, suggesting that too much gender information was removed). A new variant of CDA we propose (the Names Intervention) is the only to successfully mitigate indirect gender bias: following its application, previously biased words are significantly less clustered according to gender, with an average of 49% reduction in cluster purity when clustering the most biased words. We also proposed Counterfactual Data Substitution, which generally performed better than the CDA equivalents, was notably quicker to compute (as Word2Vec is linear in corpus size), and in theory allows for multiple intervention layers without a corpus becoming exponentially large."
+          ],
+          "evidence_ids": [
+            "ev_0cdb73d6aee9722ff798d176"
+          ]
+        },
+        {
+          "text": "Previous mitigation attempts relied on the operationalisation of gender bias as a projection over a linear subspace; the alternative approach was Counterfactual Data Augmentation (CDA), in which a corpus is duplicated and augmented to remove bias, e.g. by swapping all inherently-gendered words in the copy.",
+          "quotes": [
+            "This paper treats gender bias latent in word embeddings. Previous mitigation attempts rely on the operationalisation of gender bias as a projection over a linear subspace. An alternative approach is Counterfactual Data Augmentation (CDA), in which a corpus is duplicated and augmented to remove bias, e.g. by swapping all inherently-gendered words in the copy. We perform an empirical comparison of these approaches on the English Gigaword and Wikipedia, and find that whilst both successfully reduce direct bias and perform well in tasks which quantify embedding quality, CDA variants outperform projection-based methods at the task of drawing non-biased gender analogies by an average of 19% across both corpora. We propose two improvements to CDA: Counterfactual Data Substitution (CDS), a variant of CDA in which potentially biased text is randomly substituted to avoid duplication, and the Names Intervention, a novel name-pairing technique that vastly increases the number of words being treated. CDA/S with the Names Intervention is the only approach which is able to mitigate indirect gender bias: following debiasing, previously biased words are significantly less clustered according to gender (cluster purity is reduced by 49%), thus improving on the state-of-the-art for bias mitigation."
+          ],
+          "evidence_ids": [
+            "ev_e5a0968562f8c1164c8054d7"
+          ]
+        },
+        {
+          "text": "The projection-based state-of-the-art method, introduced by Bolukbasi et al., rests on the gender subspace hypothesis that a linear subspace B contains (most of) the gender bias in the embedding space, and it captures B using gender-definitional pairs (e.g., man–woman and husband–wife) to compute an empirical covariance matrix, debiasing with simple techniques from linear algebra.",
+          "quotes": [
+            "One popular method for the mitigation of gender bias, introduced by DBLP:conf/nips/BolukbasiCZSK16, measures the genderedness of words by the extent to which they point in a gender direction. Suppose we embed our words into $\\mathbb {R}^d$. The fundamental assumption is that there exists a linear subspace $B \\subset \\mathbb {R}^d$ that contains (most of) the gender bias in the space of word embeddings. (Note that $B$ is a direction when it is a single vector.) We term this assumption the gender subspace hypothesis. Thus, by basic linear algebra, we may decompose any word vector $\\mathbf {v}\\in \\mathbb {R}^d$ as the sum of the projections onto the bias subspace and its complement: $\\mathbf {v}= \\mathbf {v}_{B} + \\mathbf {v}_{\\perp B}$. The (implicit) operationalisation of gender bias under this hypothesis is, then, the magnitiude of the bias vector $||\\mathbf {v}_{B}||_2$.",
+            "To capture $B$, BIBREF1 first construct two sets, ${\\cal D}_{\\textit {male}}$ and ${\\cal D}_{\\textit {female}}$ containing the male- and female-oriented pairs, using a set of gender-definitional pairs, e.g., man–woman and husband–wife. They then define ${\\cal D}= {\\cal D}_{\\textit {male}}\\cup {\\cal D}_{\\textit {female}}$ as the union of the two sets. They compute the empirical covariance matrix",
+            "By operationalising gender bias in word embeddings as a linear subspace, DBLP:conf/nips/BolukbasiCZSK16 are able to debias with simple techniques from linear algebra. Their method successfully mitigates [author=simone,color=blue!40,size=,fancyline,caption=,]does not particularly like boldfacing for emphasis, but can live with.direct bias: man is no longer more similar to computer programmer in vector space than woman. However, the structure of gender bias in vector space remains largely intact, and the new vectors still evince indirect bias: associations which result from gender bias between not explicitly gendered words, for example a possible association between football and business resulting from their mutual association with explicitly masculine words BIBREF4. In this paper we continue the work of BIBREF4, and show that another paradigm for gender bias mitigation proposed by BIBREF5, Counterfactual Data Augmentation (CDA), is also unable to mitigate indirect bias. We also show, using a new test we describe (non-biased gender analogies), that WED might be removing too much gender information, casting further doubt on its operationalisation of gender bias as a linear subspace."
+          ],
+          "evidence_ids": [
+            "ev_83deb817eb37697339b42da8",
+            "ev_e907d97ecbd698bbdedb0bbd",
+            "ev_6665dc97cebb99822ea8b817"
+          ]
+        },
+        {
+          "text": "The projection-based method (WED) successfully mitigates direct bias, but the structure of gender bias in vector space remains largely intact and the new vectors still evince indirect bias; the paper also shows that WED might be removing too much gender information, and in the replication the best WED variants had an error rate of 23% average when drawing non-biased analogies.",
+          "quotes": [
+            "By operationalising gender bias in word embeddings as a linear subspace, DBLP:conf/nips/BolukbasiCZSK16 are able to debias with simple techniques from linear algebra. Their method successfully mitigates [author=simone,color=blue!40,size=,fancyline,caption=,]does not particularly like boldfacing for emphasis, but can live with.direct bias: man is no longer more similar to computer programmer in vector space than woman. However, the structure of gender bias in vector space remains largely intact, and the new vectors still evince indirect bias: associations which result from gender bias between not explicitly gendered words, for example a possible association between football and business resulting from their mutual association with explicitly masculine words BIBREF4. In this paper we continue the work of BIBREF4, and show that another paradigm for gender bias mitigation proposed by BIBREF5, Counterfactual Data Augmentation (CDA), is also unable to mitigate indirect bias. We also show, using a new test we describe (non-biased gender analogies), that WED might be removing too much gender information, casting further doubt on its operationalisation of gender bias as a linear subspace.",
+            "We have replicated two state-of-the-art bias mitigation techniques, WED and CDA, on two large corpora, Wikipedia and the English Gigaword. In our empirical comparison, we found that although both methods mitigate direct gender bias and maintain the interpretability of the space, WED failed to maintain a robust representation of gender (the best variants had an error rate of 23% average when drawing non-biased analogies, suggesting that too much gender information was removed). A new variant of CDA we propose (the Names Intervention) is the only to successfully mitigate indirect gender bias: following its application, previously biased words are significantly less clustered according to gender, with an average of 49% reduction in cluster purity when clustering the most biased words. We also proposed Counterfactual Data Substitution, which generally performed better than the CDA equivalents, was notably quicker to compute (as Word2Vec is linear in corpus size), and in theory allows for multiple intervention layers without a corpus becoming exponentially large."
+          ],
+          "evidence_ids": [
+            "ev_6665dc97cebb99822ea8b817",
+            "ev_0cdb73d6aee9722ff798d176"
+          ]
+        },
+        {
+          "text": "The other state-of-the-art approach, Counterfactual Data Augmentation (CDA), was also unable to mitigate indirect gender bias, although in the empirical comparison both WED and CDA mitigated direct gender bias and maintained the interpretability of the space.",
+          "quotes": [
+            "By operationalising gender bias in word embeddings as a linear subspace, DBLP:conf/nips/BolukbasiCZSK16 are able to debias with simple techniques from linear algebra. Their method successfully mitigates [author=simone,color=blue!40,size=,fancyline,caption=,]does not particularly like boldfacing for emphasis, but can live with.direct bias: man is no longer more similar to computer programmer in vector space than woman. However, the structure of gender bias in vector space remains largely intact, and the new vectors still evince indirect bias: associations which result from gender bias between not explicitly gendered words, for example a possible association between football and business resulting from their mutual association with explicitly masculine words BIBREF4. In this paper we continue the work of BIBREF4, and show that another paradigm for gender bias mitigation proposed by BIBREF5, Counterfactual Data Augmentation (CDA), is also unable to mitigate indirect bias. We also show, using a new test we describe (non-biased gender analogies), that WED might be removing too much gender information, casting further doubt on its operationalisation of gender bias as a linear subspace.",
+            "We have replicated two state-of-the-art bias mitigation techniques, WED and CDA, on two large corpora, Wikipedia and the English Gigaword. In our empirical comparison, we found that although both methods mitigate direct gender bias and maintain the interpretability of the space, WED failed to maintain a robust representation of gender (the best variants had an error rate of 23% average when drawing non-biased analogies, suggesting that too much gender information was removed). A new variant of CDA we propose (the Names Intervention) is the only to successfully mitigate indirect gender bias: following its application, previously biased words are significantly less clustered according to gender, with an average of 49% reduction in cluster purity when clustering the most biased words. We also proposed Counterfactual Data Substitution, which generally performed better than the CDA equivalents, was notably quicker to compute (as Word2Vec is linear in corpus size), and in theory allows for multiple intervention layers without a corpus becoming exponentially large."
+          ],
+          "evidence_ids": [
+            "ev_6665dc97cebb99822ea8b817",
+            "ev_0cdb73d6aee9722ff798d176"
+          ]
+        },
+        {
+          "text": "A fundamental limitation of all the prior methods compared (including the state-of-the-art WED and CDA) was their reliance on predefined lists of gender words, in particular of pairs, which imposes a gender binary and can be counterproductive for terms like manager that have become gender-neutral.",
+          "quotes": [
+            "A fundamental limitation of all the methods compared is their reliance on predefined lists of gender words, in particular of pairs. BIBREF5's pairs of manager::manageress and murderer::murderess may be counterproductive, as their augmentation method perpetuates a male reading of manager, which has become gender-neutral over time. Other issues arise from differences in spelling (e.g. mum vs. mom) and morphology (e.g. his vs. her and hers). Biologically-rooted terms like breastfeed or uterus do not lend themselves to pairing either. The strict use of pairings also imposes a gender binary, and as a result non-binary identities are all but ignored in the bias mitigation literature. [author=rowan,color=green!40,size=,fancyline,caption=,]added this para back in and chopped it up a bit, look okay?"
+          ],
+          "evidence_ids": [
+            "ev_c5ecdee8c4f9211f56bac4c0"
+          ]
+        }
+      ]
+    }
+  ],
+  "http_calls": 6,
+  "total_reported_tokens": 16508,
+  "controls": {
+    "origin": "Existing producer-defined synthetic controls, not semantic adjudication",
+    "tests": [
+      "test_covered_is_not_global_completeness",
+      "test_budget_and_initial_context",
+      "test_uncertain_or_contradicted_stops_before_search"
+    ],
+    "tests_run": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  "unresolved": [
+    {
+      "case_id": "case-2",
+      "claim_id": "C6"
+    }
+  ],
+  "scope": "Two locally unseen documents; zero live recovery triggers; no estimate of recovery efficacy",
+  "total_latency": "not_measured",
+  "monetary_cost": "not_measured",
+  "decision": "Keep fidelity and coverage separate; do not accept case-2 automatically; preserve original and request adjudication of C6"
+}

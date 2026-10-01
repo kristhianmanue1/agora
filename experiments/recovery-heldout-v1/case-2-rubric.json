@@ -1,0 +1,26 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "3581191e243b5e97109f74e32fae52a46354554d2958cf5a81ce680ec697dc01",
+  "question": "What was the previous state of the art for bias mitigation?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: WED",
+      "evidence": {
+        "text": "We have replicated two state-of-the-art bias mitigation techniques, WED and CDA, on two large corpora, Wikipedia and the English Gigaword. In our empirical comparison, we found that although both methods mitigate direct gender bias and maintain the interpretability of the space, WED failed to maintain a robust representation of gender (the best variants had an error rate of 23% average when drawing non-biased analogies, suggesting that too much gender information was removed). A new variant of CDA we propose (the Names Intervention) is the only to successfully mitigate indirect gender bias: following its application, previously biased words are significantly less clustered according to gender, with an average of 49% reduction in cluster purity when clustering the most biased words. We also proposed Counterfactual Data Substitution, which generally performed better than the CDA equivalents, was notably quicker to compute (as Word2Vec is linear in corpus size), and in theory allows for multiple intervention layers without a corpus becoming exponentially large.",
+        "start_byte": 24732,
+        "end_byte": 25806
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: CDA",
+      "evidence": {
+        "text": "We have replicated two state-of-the-art bias mitigation techniques, WED and CDA, on two large corpora, Wikipedia and the English Gigaword. In our empirical comparison, we found that although both methods mitigate direct gender bias and maintain the interpretability of the space, WED failed to maintain a robust representation of gender (the best variants had an error rate of 23% average when drawing non-biased analogies, suggesting that too much gender information was removed). A new variant of CDA we propose (the Names Intervention) is the only to successfully mitigate indirect gender bias: following its application, previously biased words are significantly less clustered according to gender, with an average of 49% reduction in cluster purity when clustering the most biased words. We also proposed Counterfactual Data Substitution, which generally performed better than the CDA equivalents, was notably quicker to compute (as Word2Vec is linear in corpus size), and in theory allows for multiple intervention layers without a corpus becoming exponentially large.",
+        "start_byte": 24732,
+        "end_byte": 25806
+      }
+    }
+  ]
+}
