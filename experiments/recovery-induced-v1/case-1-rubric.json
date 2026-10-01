@@ -1,0 +1,35 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+  "question": "Which pre-trained language models are used?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: BERT",
+      "evidence": {
+        "text": "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters.",
+        "start_byte": 7794,
+        "end_byte": 8548
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: DistilBERT",
+      "evidence": {
+        "text": "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters.",
+        "start_byte": 7794,
+        "end_byte": 8548
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: RoBERTa",
+      "evidence": {
+        "text": "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters.",
+        "start_byte": 7794,
+        "end_byte": 8548
+      }
+    }
+  ]
+}

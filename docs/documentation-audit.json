@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 173,
-  "bytes": 845522,
+  "documents": 175,
+  "bytes": 851505,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "cc68439730ca675634d8475c29a348f8cd2d637fac98d0557a4fb55de6530825",
-      "bytes": 26529,
+      "sha256": "035ea207683b0e3db6e6d4bf0496825e1e2224ae09561007f268cf007da8937c",
+      "bytes": 27360,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -756,6 +756,10 @@
         },
         {
           "target": "../experiments/recovery-heldout-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/recovery-induced-v1/README.md",
           "exists": true
         }
       ],
@@ -1757,6 +1761,27 @@
       "path": "experiments/recovery-heldout-v1/README.md",
       "sha256": "7ed6c6c4a3ce6a2f1a39fda40a8ff6654e70a3880fdebec0a5670a6a3a15618f",
       "bytes": 3425,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/recovery-induced-v1/README.md",
+      "sha256": "ccea74a1c10ce6a91ad19b7c90c24c6de1afb311d61bbdf1e45d7270784ce3e5",
+      "bytes": 3316,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "c6-review.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/recovery-induced-v1/c6-review.md",
+      "sha256": "48850b58029951846b06185ec74ff77b9f7981268250eaa548579ac2f7ce3e49",
+      "bytes": 1836,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

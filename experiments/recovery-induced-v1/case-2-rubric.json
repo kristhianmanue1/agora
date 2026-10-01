@@ -1,0 +1,35 @@
+{
+  "schema": "agora/task-rubric/v1-experimental",
+  "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+  "question": "Which three variants of cross-validation are examined?",
+  "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: 10-fold, stratified, blocked;",
+      "evidence": {
+        "text": "xval(9:1, strat, block) - 10-fold, stratified, blocked;",
+        "start_byte": 25301,
+        "end_byte": 25356
+      }
+    },
+    {
+      "id": "R2",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: 10-fold, not stratified, blocked;",
+      "evidence": {
+        "text": "xval(9:1, no-strat, block) - 10-fold, not stratified, blocked;",
+        "start_byte": 25358,
+        "end_byte": 25420
+      }
+    },
+    {
+      "id": "R3",
+      "requirement": "Include this reference-answer information, allowing equivalent phrasing: 10-fold, stratified, random selection of examples.",
+      "evidence": {
+        "text": "xval(9:1, strat, rand) - 10-fold, stratified, random selection of examples.",
+        "start_byte": 25422,
+        "end_byte": 25497
+      }
+    }
+  ]
+}

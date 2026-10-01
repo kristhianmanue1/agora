@@ -258,3 +258,15 @@ Seis llamadas, 16.508 tokens reportados; controles y reconstrucción local pasar
 No hubo activaciones reales de recuperación: su generalización sigue sin comprobarse.
 Próximo paso: adjudicar la discrepancia y preparar, por separado, un reto de omisiones
 controladas con protocolo previo. Sin cambios de producto ni promoción de defaults.
+
+## Reto inducido: recuperación activada, sin cierre satisfactorio
+
+[Dos fuentes nuevas con semillas sintéticas](../experiments/recovery-induced-v1/README.md):
+las omisiones activan propuestas de 9.548 y 9.650 bytes. Primer candidato rechazado
+por texto posterior al JSON; segundo válido y parcial, pero revisión de cobertura
+agotada (2.048 tokens, contenido vacío). Jev respalda lo dicho por el segundo,
+sin demostrar que cubra la pregunta. Los pasajes exactos de la rúbrica quedan fuera
+de ambos contextos. Seis llamadas, 17.611 tokens; reproducción offline verificada,
+sin reintentos ni promoción. C6 anterior tiene contraste contextual documentado,
+no adjudicación independiente. Siguiente: comparar recuperación offline separando
+los fallos de selección, formato y presupuesto del revisor antes de otra condición.

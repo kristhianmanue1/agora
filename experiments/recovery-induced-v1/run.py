@@ -1,0 +1,26 @@
+import json,sys,hashlib,time
+from pathlib import Path
+from types import SimpleNamespace
+B=Path(__file__).resolve().parent;R=B.parents[1];sys.path.insert(0,str(R/'src'))
+from agora.issue_cli import main
+from agora.source import FileSourceAdapter
+from agora.subquestions import prepare_subquestions
+from agora.evidence import query_evidence
+from agora.plan_generation import live_provider
+load=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def dump(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n')
+f=load(B/'freeze.json');assert sha(Path(__file__))==f['runner_sha256']
+root=B/'runs';root.mkdir(exist_ok=False);cli=['--workspace',str(B/'inputs/workspace')];assert main(cli+['init'])==0
+for case in f['cases']:
+ cid=case['id'];out=root/cid;out.mkdir();source=B/'inputs'/f'{cid}.txt';rubric=B/f'{cid}-rubric.json';assert sha(source)==case['source_sha256'] and sha(rubric)==case['rubric_sha256']
+ candidate=json.loads((B/'inputs'/f'{cid}-seed.json').read_text());assert sha(B/'inputs'/f'{cid}-seed.json')==case['seed_sha256'];dump(out/'candidate.json',candidate)
+ common=['--source',str(source),'--source-sha256',sha(source),'--rubric',str(rubric),'--rubric-sha256',sha(rubric),'--part-id','P1','--question',case['question']]
+ parent=['--candidate',str(out/'candidate.json'),'--candidate-sha256',sha(out/'candidate.json')]
+ if main(cli+['review-rubric']+common+parent+['--live','--out',str(out/'review-initial')]):continue
+ review=out/'review-initial/result.json';review_args=['--review',str(review),'--review-sha256',sha(review)]
+ proposal=out/'proposal.json'
+ if main(cli+['coverage-plan']+common+parent+review_args+['--query',case['question'],'--query-origin','Exact original question, frozen before generation','--budget','12000','--top-k','3','--following','3','--out',str(proposal)]):continue
+ if load(proposal)['status']!='proposed':continue
+ if main(cli+['generate-recovery']+common+parent+review_args+['--proposal',str(proposal),'--proposal-sha256',sha(proposal),'--response-language','en','--live','--out',str(out/'derived')]):continue
+ derived=out/'derived/result.json'
+ main(cli+['review-rubric']+common+['--candidate',str(derived),'--candidate-sha256',sha(derived),'--live','--out',str(out/'review-derived')])

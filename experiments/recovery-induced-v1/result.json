@@ -1,0 +1,225 @@
+{
+  "status": "completed_no_end_to_end_success",
+  "scope": "Two new local documents, induced empty-answer fixture with first paragraph only; not natural omission frequency",
+  "rows": [
+    {
+      "id": "case-1",
+      "document_id": "2004.02105",
+      "initial_bytes": 58,
+      "reading_bytes": 9548,
+      "generation_status": "rejected",
+      "diagnostics": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "rubric_evidence_in_context": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "coverage_review": null,
+      "fidelity_response": null,
+      "candidate_sha256": "4ffd66b5a25327501974e5d4f126557c66dc4be577e398f24065c42b3ec8c760",
+      "response_sha256": "9f9c359bff8e668551be6a2cd550caeeadec447641af9df82bc596e4c26059a8",
+      "parts": null,
+      "generation_response": {
+        "content": "\n{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The work proposes to use recent, highly successful self-supervised pre-trained language models, such as BERT (devlin-etal-2019-bert) and RoBERTa (liu2019roberta), for domain data selection.\",\"evidence_ids\":[\"ev_d461d28f5dc3848d32fad144\"]},{\"text\":\"The authors test their hypothesis across several large, publicly-available pretrained LMs, exploring both masked-language-models (MLMs) and auto-regressive LMs.\",\"evidence_ids\":[\"ev_a338d60d9937d3a6a5ee46fd\"]}],\"missing\":[\"The specific names and versions of all pre-trained language models used in the experiments (including which auto-regressive LM was tested) are not stated in the provided passages.\"]},{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The work proposes to use recent, highly successful self-supervised pre-trained language models, such as BERT (devlin-etal-2019-bert) and RoBERTa (liu2019roberta), for domain data selection.\",\"evidence_ids\":[\"ev_d461d28f5dc3848d32fad144\"]},{\"text\":\"The authors test their hypothesis across several large, publicly-available pretrained LMs, exploring both masked-language-models (MLMs) and auto-regressive LMs.\",\"evidence_ids\":[\"ev_a338d60d9937d3a6a5ee46fd\"]}],\"missing\":[\"The specific names and versions of all pre-trained language models used in the experiments (including which auto-regressive LM was tested) are not stated in the provided passages.\"]}]}\n\n\nNote: the JSON above contains an unintended duplication of the part; the valid answer is the single-part structure below.\n\n\n{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The work proposes to use recent, highly successful self-supervised pre-trained language models, such as BERT (devlin-etal-2019-bert) and RoBERTa (liu2019roberta), for domain data selection.\",\"evidence_ids\":[\"ev_d461d28f5dc3848d32fad144\"]},{\"text\":\"The authors test their hypothesis across several large, publicly-available pretrained LMs, exploring both masked-language-models (MLMs) and auto-regressive LMs.\",\"evidence_ids\":[\"ev_a338d60d9937d3a6a5ee46fd\"]}],\"missing\":[\"The specific names and versions of all pre-trained language models used in the experiments (including which auto-regressive LM was tested) are not stated in the provided passages.\"]}]}\n",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1493,
+          "completion_tokens_details": {
+            "reasoning_tokens": 911
+          },
+          "prompt_tokens": 3029,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 4522
+        },
+        "response_id": "20261002023232f83e2a96757a4f3d"
+      },
+      "initial_review_sha256": "3f114d21c385b90f9abe6ec5ffd647181788e726295c3d5baabcaf31ecc12a2c",
+      "proposal_sha256": "75dcbd8f9cc4acd0afc7041da481e6e4cb190c9a1525756941768d4249811a18"
+    },
+    {
+      "id": "case-2",
+      "document_id": "1803.05160",
+      "initial_bytes": 68,
+      "reading_bytes": 9650,
+      "generation_status": "complete",
+      "diagnostics": [],
+      "rubric_evidence_in_context": {
+        "R1": false,
+        "R2": false,
+        "R3": false
+      },
+      "coverage_review": {
+        "schema": "agora/rubric-review/v1-experimental",
+        "status": "failed",
+        "origin": "live",
+        "http_attempts": 1,
+        "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+        "candidate_sha256": "d12396621379db2cea9390d18b2036d17baaa779c9cc72716cb64633c2c92696",
+        "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+        "part_id": "P1",
+        "question": "Which three variants of cross-validation are examined?",
+        "question_sha256": "0318899436b8e70789875bd3666c835f95367d9c0a127352d6aeb4dbede286e8",
+        "disposition": "requires_review",
+        "scope": "supplied_requirements_only",
+        "rubric_completeness": "not_established",
+        "source_completeness": "not_established",
+        "semantic_support": "not_verified",
+        "adjudication": "not_performed",
+        "memory_admission": "not_performed",
+        "implementation_sha256": "2fb12dd4f49d2d4ed04e39d4ecf94d4bddfb6a813da3dde48bd04103494a7f79",
+        "request_config": {
+          "model": "glm-5.3-flash",
+          "max_tokens": 2048,
+          "temperature": 0,
+          "timeout_seconds": 90,
+          "retries": 0
+        },
+        "provenance": "Producer extraction from first human QASPER annotation, frozen before generation; not independently adjudicated.",
+        "provenance_status": "caller_declared_not_verified",
+        "request_sha256": "e249cf7b02faf2462abfc2c86a933703cae56d07661110318b94cc3f2043a9ad",
+        "response": {
+          "content": "",
+          "finish_reason": "length",
+          "requested_model": "glm-5.3-flash",
+          "reported_model": "glm-5.3-flash",
+          "usage": {
+            "completion_tokens": 2048,
+            "completion_tokens_details": {
+              "reasoning_tokens": 2048
+            },
+            "prompt_tokens": 1426,
+            "prompt_tokens_details": {
+              "cached_tokens": 256
+            },
+            "total_tokens": 3474
+          },
+          "response_id": "2026100202331299d3990a9a5a437b"
+        },
+        "diagnostic": "generation_incomplete"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.86,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.09,
+              "supported": 0.91
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.95,
+            "probabilities": {
+              "insufficient": 0.04,
+              "contradicted": 0.0,
+              "supported": 0.96
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.77,
+            "probabilities": {
+              "contradicted": 0.0,
+              "insufficient": 0.15,
+              "supported": 0.85
+            }
+          },
+          "missing": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.79,
+            "probabilities": {
+              "insufficient": 0.1,
+              "contradicted": 0.04,
+              "supported": 0.86
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 3798,
+          "output_tokens": 170
+        }
+      },
+      "candidate_sha256": "d12396621379db2cea9390d18b2036d17baaa779c9cc72716cb64633c2c92696",
+      "response_sha256": "9bd85f7da55c44772d20bdec9024fea3d505f5a613fd7136ac0a3868143926e0",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "partial",
+          "claims": [
+            {
+              "text": "The study empirically compares six different estimation procedures, three of which are variants of cross-validation.",
+              "quotes": [
+                "Social media are becoming an increasingly important source of information about the public mood regarding issues such as elections, Brexit, stock market, etc. In this paper we focus on sentiment classification of Twitter data. Construction of sentiment classifiers is a standard text mining task, but here we address the question of how to properly evaluate them as there is no settled way to do so. Sentiment classes are ordered and unbalanced, and Twitter produces a stream of time-ordered data. The problem we address concerns the procedures used to obtain reliable estimates of performance measures, and whether the temporal ordering of the training and test data matters. We collected a large set of 1.5 million tweets in 13 European languages. We created 138 sentiment models and out-of-sample datasets, which are used as a gold standard for evaluations. The corresponding 138 in-sample datasets are used to empirically compare six different estimation procedures: three variants of cross-validation, and three variants of sequential validation (where test set always follows the training set). We find no significant difference between the best cross-validation and sequential validation. However, we observe that all cross-validation variants tend to overestimate the performance, while the sequential methods tend to underestimate it. Standard cross-validation with random selection of examples is significantly worse than the blocked cross-validation, and should not be used to evaluate classifiers in time-ordered data scenarios."
+              ],
+              "evidence_ids": [
+                "ev_d877a60075c6258a813134d6"
+              ]
+            },
+            {
+              "text": "Standard cross-validation with random selection of examples is one of the cross-validation variants examined, and it is found to be significantly worse than the blocked cross-validation.",
+              "quotes": [
+                "Social media are becoming an increasingly important source of information about the public mood regarding issues such as elections, Brexit, stock market, etc. In this paper we focus on sentiment classification of Twitter data. Construction of sentiment classifiers is a standard text mining task, but here we address the question of how to properly evaluate them as there is no settled way to do so. Sentiment classes are ordered and unbalanced, and Twitter produces a stream of time-ordered data. The problem we address concerns the procedures used to obtain reliable estimates of performance measures, and whether the temporal ordering of the training and test data matters. We collected a large set of 1.5 million tweets in 13 European languages. We created 138 sentiment models and out-of-sample datasets, which are used as a gold standard for evaluations. The corresponding 138 in-sample datasets are used to empirically compare six different estimation procedures: three variants of cross-validation, and three variants of sequential validation (where test set always follows the training set). We find no significant difference between the best cross-validation and sequential validation. However, we observe that all cross-validation variants tend to overestimate the performance, while the sequential methods tend to underestimate it. Standard cross-validation with random selection of examples is significantly worse than the blocked cross-validation, and should not be used to evaluate classifiers in time-ordered data scenarios."
+              ],
+              "evidence_ids": [
+                "ev_d877a60075c6258a813134d6"
+              ]
+            },
+            {
+              "text": "Blocked cross-validation is one of the cross-validation variants examined.",
+              "quotes": [
+                "Social media are becoming an increasingly important source of information about the public mood regarding issues such as elections, Brexit, stock market, etc. In this paper we focus on sentiment classification of Twitter data. Construction of sentiment classifiers is a standard text mining task, but here we address the question of how to properly evaluate them as there is no settled way to do so. Sentiment classes are ordered and unbalanced, and Twitter produces a stream of time-ordered data. The problem we address concerns the procedures used to obtain reliable estimates of performance measures, and whether the temporal ordering of the training and test data matters. We collected a large set of 1.5 million tweets in 13 European languages. We created 138 sentiment models and out-of-sample datasets, which are used as a gold standard for evaluations. The corresponding 138 in-sample datasets are used to empirically compare six different estimation procedures: three variants of cross-validation, and three variants of sequential validation (where test set always follows the training set). We find no significant difference between the best cross-validation and sequential validation. However, we observe that all cross-validation variants tend to overestimate the performance, while the sequential methods tend to underestimate it. Standard cross-validation with random selection of examples is significantly worse than the blocked cross-validation, and should not be used to evaluate classifiers in time-ordered data scenarios."
+              ],
+              "evidence_ids": [
+                "ev_d877a60075c6258a813134d6"
+              ]
+            }
+          ],
+          "missing": [
+            "The name of the third cross-validation variant is not provided in the passages.",
+            "An explicit enumeration of all three cross-validation variants is not given; the passages only mention 'three variants of cross-validation' without naming them."
+          ]
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"The study empirically compares six different estimation procedures, three of which are variants of cross-validation.\",\"evidence_ids\":[\"ev_d877a60075c6258a813134d6\"]},{\"text\":\"Standard cross-validation with random selection of examples is one of the cross-validation variants examined, and it is found to be significantly worse than the blocked cross-validation.\",\"evidence_ids\":[\"ev_d877a60075c6258a813134d6\"]},{\"text\":\"Blocked cross-validation is one of the cross-validation variants examined.\",\"evidence_ids\":[\"ev_d877a60075c6258a813134d6\"]}],\"missing\":[\"The name of the third cross-validation variant is not provided in the passages.\",\"An explicit enumeration of all three cross-validation variants is not given; the passages only mention 'three variants of cross-validation' without naming them.\"]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1003,
+          "completion_tokens_details": {
+            "reasoning_tokens": 799
+          },
+          "prompt_tokens": 2728,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3731
+        },
+        "response_id": "2026100202325668f69fda0c304977"
+      },
+      "initial_review_sha256": "8f13c84388d9cbb626120f3fd711d8e033bc6cc6c8b57272294fbf3419e0861a",
+      "proposal_sha256": "57b0d6b5481373c5bcec2cd6bb1d4bd5800281dd3ba8c6e38999b3bed184fd27"
+    }
+  ],
+  "http_calls": 6,
+  "total_reported_tokens": 17611,
+  "retries": 0,
+  "replay_verified": true,
+  "decision": "No promotion; preserve format rejection and incomplete coverage review. Design a separate condition before any retry or changed budget."
+}
