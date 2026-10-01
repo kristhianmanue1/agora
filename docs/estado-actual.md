@@ -235,3 +235,15 @@ de 5.162 a 9.439 bytes dentro de 12.000. El pasaje anotado de BLEU sigue fuera:
 no hay declaración de cobertura completa ni nueva respuesta evaluada. Próximo paso:
 consumidor explícito para generar un derivado desde la propuesta y evaluarlo; luego
 validación reservada. El contrato no es intercambiable con `generate-plan`.
+
+## Generación explícita desde recuperación verificada
+
+`generate-recovery` reconstruye la propuesta y verifica entradas antes de una única
+llamada. Conserva candidato padre, revisión, propuesta y respuesta derivada por hash.
+[Recorrido real](../experiments/recovery-generation-v1/README.md): ΔG/ΔS incorporados,
+4/4 requisitos cubiertos según GLM y 7/7 afirmaciones respaldadas según Jev, una de
+ellas con probabilidades cercanas a insuficiencia. 9.439 bytes, tres llamadas,
+10.260 tokens reportados. 508 tests del producto; reproducción local verificada.
+Es una regresión conocida, sin promoción a estrategia predeterminada. Próximo paso:
+validación en casos nuevos con controles y parámetros fijados; revisar afirmaciones
+limítrofes. El motor completo de memoria y las integraciones siguen pendientes.

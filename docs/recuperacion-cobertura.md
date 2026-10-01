@@ -43,12 +43,39 @@ no verdad, autenticidad del revisor ni adjudicación independiente. Fuentes hast
 160.000 bytes en esta CLI; no es todavía la solución para fuentes arbitrariamente grandes.
 
 La propuesta **no es entrada compatible con `generate-plan`**: éste verifica otro
-contrato. Conectarla al generador requiere un consumidor explícito que verifique
-identidad, límites y procedencia antes de producir un candidato derivado. No cambiar
-el schema para eludir esa comprobación.
+contrato. El consumidor `generate-recovery` descrito abajo verifica identidad, límites y
+procedencia antes de producir un candidato derivado. No cambiar el schema para
+eludir esa comprobación.
 
 ## Evidencia
 
 [Regresión local](../experiments/coverage-recovery-v1/README.md): las definiciones
 omitidas de ΔG y ΔS se recuperan. No se ejecutó generación posterior ni una prueba
 ciega; no hay promoción de parámetros predeterminados.
+
+## Generar un candidato derivado
+
+`generate-recovery` consume explícitamente esta propuesta. Requiere los mismos
+argumentos `--source`, `--candidate`, `--rubric`, `--review`, sus cuatro hashes,
+`--part-id` y `--question`, además de:
+
+```text
+--proposal /ruta/proposal.json --proposal-sha256 HASH_PROPUESTA
+--response-language en --live --out /ruta/directorio-nuevo
+```
+
+Para reproducción sin red, sustituir `--live` por `--response /ruta/response.json`.
+La implementación reconstruye la propuesta con el recuperador vigente y exige
+igualdad exacta, incluido su hash de implementación. Rechaza versiones incompatibles,
+propuestas modificadas y estados distintos de `proposed` antes de llamar al modelo.
+
+La salida conserva request, respuesta del proveedor y candidato con los hashes del
+padre, revisión y propuesta. Reserva un directorio nuevo; nunca reutiliza uno existente.
+Registra `attempted` antes de llamar: una interrupción puede dejar ese estado, que no
+prueba éxito ni fracaso remoto. No hay reintento automático. El límite es una llamada
+GLM, 4.096 tokens de salida y 90 segundos; la entrada usa sólo los rangos reconstruidos,
+citas por ID y un límite de prompt de 100.000 bytes. Los requisitos de la rúbrica no se
+envían al generador. La validez estructural no demuestra fidelidad ni cobertura.
+
+La revisión posterior sigue siendo explícita: `review-rubric` usa el candidato nuevo
+y su hash; la fidelidad se contrasta por separado. `generate-plan` conserva su contrato.

@@ -1,0 +1,16 @@
+{
+  "inputs": {
+    "source": "31dba657ba7a6803e2c90b9e47670ef86f5cd8205bd8a787334f8293d526e096",
+    "candidate": "10e216bc88bd0d58a17602b6e882ad9ad56b2727a286d7ddeb5c228a8bc50de5",
+    "rubric": "11b4f8aa240ec6e0bfb349e6048a0d8da67cf1e51615f1dd828556861d340e61",
+    "review": "ca5d27730438dbde82b462f8149545ccabbd31d0c3b92c3d75daba08e977dc08"
+  },
+  "proposal_sha256": "4f5cc8ef849d116e8a476dda78a42bdc594ceee6d5074ea2dee95a031bfa7aa0",
+  "max_generation_calls": 1,
+  "max_review_calls": 1,
+  "generation_tokens": 4096,
+  "review_tokens": 2048,
+  "retries": 0,
+  "scope": "Known-case regression; no promotion; no prompt addendum",
+  "response_language": "en"
+}

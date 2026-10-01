@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 171,
-  "bytes": 836769,
+  "documents": 172,
+  "bytes": 841347,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "e94eb7ac77de49eae7836e2e1e90282268153c1e74e4d153f271641e59024161",
-      "bytes": 24958,
+      "sha256": "1b81bf74c009b00d260af0f0dec163b2dc597c514a4978df896f35926b0dd26e",
+      "bytes": 25779,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -748,6 +748,10 @@
         },
         {
           "target": "../experiments/coverage-recovery-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/recovery-generation-v1/README.md",
           "exists": true
         }
       ],
@@ -1011,8 +1015,8 @@
     },
     {
       "path": "docs/recuperacion-cobertura.md",
-      "sha256": "ef0581305f591a20bf4eeceb353cd66f4cbf5cdc686e42ad1126ef8af043949d",
-      "bytes": 3068,
+      "sha256": "f07b0f3fc11e6bc67c724498c3773dab82b86e01cc53f56e61b7c70f980f2b74",
+      "bytes": 4551,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1733,6 +1737,14 @@
       "path": "experiments/real-document-v1/README.md",
       "sha256": "3d04e765f62683788b1dfa26c18f5c0bb30943aca9fff7a00913cd6da70de764",
       "bytes": 1266,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/recovery-generation-v1/README.md",
+      "sha256": "3d6fa1101def770821b3bb5dddda917bbefd58d5173bdbcc87f445ea8b49bb4a",
+      "bytes": 2274,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

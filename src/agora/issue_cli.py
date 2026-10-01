@@ -64,6 +64,8 @@ def parser():
     s.add_argument('--citation-mode',choices=('literal','ids'),default='literal')
     from .coverage_recovery import add_command as add_coverage_plan
     add_coverage_plan(sub)
+    from .recovery_generation import add_command as add_recovery_generation
+    add_recovery_generation(sub)
     from .rubric_cli import add_command as add_rubric
     add_rubric(sub)
     from .omission_cli import add_command as add_omissions
@@ -83,6 +85,9 @@ def run(args):
         write_new(workspace/'workspace.json',dict(schema=WORKSPACE))
         return dict(status='initialized',workspace=str(workspace))
     if read(workspace/'workspace.json')!={'schema':WORKSPACE}:raise ValueError('incompatible_workspace')
+    if args.command=='generate-recovery':
+        from .recovery_generation import run as generate_recovery
+        return generate_recovery(args,read)
     if args.command=='coverage-plan':
         from .coverage_recovery import run as coverage_plan
         return coverage_plan(args,write_new)
@@ -179,7 +184,7 @@ def main(argv=None):
     args=parser().parse_args(argv);os.umask(0o077)
     try:
         result=run(args)
-        code=2 if args.command in ('generate-plan','review-coverage','diagnose-omissions','review-rubric') and result.get('status') in ('failed','rejected') else 0
+        code=2 if args.command in ('generate-plan','generate-recovery','review-coverage','diagnose-omissions','review-rubric') and result.get('status') in ('failed','rejected') else 0
     except (ValueError,KeyError,TypeError,OSError,sqlite3.Error,subprocess.SubprocessError) as exc:
         # Do not echo source text, provider bodies, keys, or arbitrary exception text.
         safe=str(exc) if type(exc) is ValueError and str(exc).replace('_','').isalnum() else type(exc).__name__

@@ -1,0 +1,111 @@
+{
+  "status": "pass",
+  "scope": "known regression, not held-out validation",
+  "candidate_sha256": "26a52d771bdff8f480447e590a8293cb91bcc339f39f58f8388ead868bd37922",
+  "review_sha256": "c14dc33159e48d48f3586743bc91e7c3fca1a3c3373821c64beebbf4c0bf9baa",
+  "fidelity_sha256": "6bae25c5544b5d7b6e78f85ad65bb6713e4e89fa3a626ebe6b8a766dc2c7ed97",
+  "context_bytes": 9439,
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "covered"
+    },
+    {
+      "id": "R2",
+      "status": "covered"
+    },
+    {
+      "id": "R3",
+      "status": "covered"
+    },
+    {
+      "id": "R4",
+      "status": "covered"
+    }
+  ],
+  "fidelity": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "C1": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.91,
+        "probabilities": {
+          "insufficient": 0.06,
+          "supported": 0.94,
+          "contradicted": 0.0
+        }
+      },
+      "C2": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.85,
+        "probabilities": {
+          "insufficient": 0.1,
+          "supported": 0.9,
+          "contradicted": 0.0
+        }
+      },
+      "C3": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.94,
+        "probabilities": {
+          "insufficient": 0.04,
+          "supported": 0.96,
+          "contradicted": 0.0
+        }
+      },
+      "C4": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.82,
+        "probabilities": {
+          "insufficient": 0.11,
+          "supported": 0.88,
+          "contradicted": 0.01
+        }
+      },
+      "C5": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.43,
+        "probabilities": {
+          "supported": 0.62,
+          "insufficient": 0.35,
+          "contradicted": 0.03
+        }
+      },
+      "C6": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.83,
+        "probabilities": {
+          "insufficient": 0.11,
+          "supported": 0.89,
+          "contradicted": 0.0
+        }
+      },
+      "C7": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.3,
+        "probabilities": {
+          "insufficient": 0.46,
+          "supported": 0.53,
+          "contradicted": 0.01
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 2608,
+      "output_tokens": 297
+    }
+  },
+  "http_calls": 3,
+  "total_reported_tokens": 10260,
+  "original_inputs_unchanged": true,
+  "replay_verified": true,
+  "latency_total": "not_measured",
+  "monetary_cost": "not_measured"
+}
