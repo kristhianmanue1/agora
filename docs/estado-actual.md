@@ -362,3 +362,18 @@ ampliar fuentes reservadas y medir omisiones y coste total contra lectura comple
 Después evaluar extracción de otros formatos preservando localizadores. Catálogo,
 consolidación y admisión gobernada, e integración contractual con Skopos y AN-KLA,
 siguen pendientes del producto completo; no bloquean este recorrido independiente.
+
+### Seguimiento: los dos pendientes tienen causas distintas
+
+[Diagnóstico reproducible](../experiments/pending-resolution-v1/README.md): dos
+anotaciones humanas preexistentes respaldan que la respuesta QASPER incluye
+Visual7W; no es una fuente sin respuesta. La segunda lectura de 9.334 → 13.168 bytes
+no recuperó ese nombre. Resultado: 1/2 requisitos cubiertos, fidelidad respaldada,
+insuficiencia conservada. Tres llamadas, 13.074 tokens; reproducción offline pasó.
+Se requiere mejorar la selección, no asumir que más párrafos bastan.
+
+En JSONL ambas afirmaciones estaban respaldadas; el desacuerdo afecta únicamente
+al límite sobre posibles cambios posteriores. La inspección recomienda responder
+«miércoles según el registro hasta las 09:15» y separar esa respuesta de su límite
+temporal. No se aplicó reparación ni se sustituyó el dictamen original. Sigue
+pendiente adjudicación independiente; el ensayo no cambia producto ni defaults.

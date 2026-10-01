@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 184,
-  "bytes": 887710,
+  "documents": 185,
+  "bytes": 892219,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "a4b8674cce55a7ebdca6fa2f16dd99bca05f1d889b34c3cef90c0fed5c48083b",
-      "bytes": 33568,
+      "sha256": "c4c5c72e269a92f8e584d5490219a5f22562c77fca49d596b22e9daa667670ca",
+      "bytes": 34531,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -796,6 +796,10 @@
         },
         {
           "target": "../experiments/scoped-generalization-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/pending-resolution-v1/README.md",
           "exists": true
         }
       ],
@@ -1750,6 +1754,14 @@
       "path": "experiments/passage-comparison-v1/protocol.md",
       "sha256": "af62e7992981410f625f09f093a889d6d3d3eca60bcdf52bc06646a31ef7508c",
       "bytes": 2321,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/pending-resolution-v1/README.md",
+      "sha256": "692ba727eac02662b9261b97bf68926b63df9fd9dd5e3fdc33102c29cdc6f07f",
+      "bytes": 3546,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

@@ -1,0 +1,24 @@
+{
+  "schema": "agora/pending-resolution/v1-experimental",
+  "base_commit": "4b279d076e17914b8a75398b6c81f1c0913b2a8e",
+  "question": "What VQA datasets are used for evaluating this task? ",
+  "bindings": {
+    "experiments/scoped-generalization-v1/inputs/case-2.txt": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+    "experiments/scoped-generalization-v1/inputs/case-2-annotations.json": "27580306a2901c7eb98feb3169d2bc74256a28302a2e5067e114fdd068b1966a",
+    "experiments/scoped-generalization-v1/case-2-rubric.json": "c4e741fbc5872a0f0fcd005f1876d0ede11c297fbda49b78675b9332acb7661d",
+    "experiments/scoped-generalization-v1/runs-fixed/case-2/generation/result.json": "040a0180e22d777617f55104bf9ef09a15ee8b54ceb46aba5592237b9db75a11",
+    "experiments/scoped-generalization-v1/runs-fixed/case-2/coverage/result.json": "6a4ec512647ba9a6173bc3644118b57ff5a14cab060d6b1bc16d29b1a4f0372c",
+    "experiments/scoped-generalization-v1/runs-fixed/case-2/fidelity/result.json": "4739954dacb33233e63dac23f21e6c530081330d4cfdfd7743f997f9fbc1ffd3",
+    "experiments/scoped-generalization-v1/inputs/jsonl.jsonl": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+    "experiments/scoped-generalization-v1/runs-fixed/jsonl/generation/result.json": "7adb8fec10b6107898bdd7af96e26e362b496bfa51242fb802f7972b208e0a71",
+    "experiments/scoped-generalization-v1/runs-fixed/jsonl/fidelity/result.json": "a0926575ba3ea60746cb173311e84e7a166d163101a575ba675dc411f7429a38"
+  },
+  "runner_sha256": "59dfe70edc473b1cf47ca76154f7af7630d62c7c483a741f3fb037b51330ed63",
+  "max_http_calls": 3,
+  "retries": 0,
+  "budget_bytes": 20000,
+  "top_k": 4,
+  "following": 3,
+  "scope": "Retrospective diagnostic of two known failures, not held-out evaluation; original question only for retrieval; JSONL inspected without provider",
+  "adjudication": "No new independent adjudication; QASPER includes two pre-existing human annotations"
+}

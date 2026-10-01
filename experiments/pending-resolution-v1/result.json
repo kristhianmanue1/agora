@@ -1,0 +1,166 @@
+{
+  "schema": "agora/pending-resolution/v1-experimental",
+  "scope": "Retrospective diagnostic of two known failures, not held-out evaluation; original question only for retrieval; JSONL inspected without provider",
+  "replay_verified": true,
+  "qasper": {
+    "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+    "external_annotations": [
+      {
+        "annotation_id": "498ec7b92121482d063ed7a0ae6cc1b257247f93",
+        "answer": [
+          "Visual7W",
+          "a collection of open-domain visual question-answer pairs"
+        ],
+        "evidence_matches_source": true
+      },
+      {
+        "annotation_id": "be5693b24f636cbcd18ee5e4f4fea7e6a588c40e",
+        "answer": "Visual7W and an automatically constructed open-domain VQA dataset",
+        "evidence_matches_source": true
+      }
+    ],
+    "annotation_limit": "Pre-existing human annotations; original rubric used first annotation. No blind new adjudication.",
+    "initial_bytes": 9334,
+    "expanded_bytes": 13168,
+    "reference_presence": [
+      {
+        "id": "R1",
+        "in_expanded_context": false
+      },
+      {
+        "id": "R2",
+        "in_expanded_context": false
+      }
+    ],
+    "visual7w_in_initial": false,
+    "visual7w_in_expanded": false,
+    "parts": [
+      {
+        "id": "P1",
+        "status": "not_in_passages",
+        "claims": [],
+        "missing": [
+          "Los pasajes proporcionados no mencionan ningún nombre específico de conjunto de datos VQA utilizado para evaluar la tarea de respuesta a preguntas visuales en los experimentos del artículo.",
+          "Los pasajes solo aluden de forma genérica a 'the current VQA dataset' y a una colección propia de pares pregunta-respuesta producida automáticamente como posible benchmark, pero sin identificar los nombres de los datasets VQA empleados en la evaluación."
+        ]
+      }
+    ],
+    "generation_response": {
+      "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"not_in_passages\",\"claims\":[],\"missing\":[\"Los pasajes proporcionados no mencionan ningún nombre específico de conjunto de datos VQA utilizado para evaluar la tarea de respuesta a preguntas visuales en los experimentos del artículo.\",\"Los pasajes solo aluden de forma genérica a 'the current VQA dataset' y a una colección propia de pares pregunta-respuesta producida automáticamente como posible benchmark, pero sin identificar los nombres de los datasets VQA empleados en la evaluación.\"]}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1795,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1677
+        },
+        "prompt_tokens": 3690,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5485
+      },
+      "response_id": "20261002070316ee87898cdab5484e"
+    },
+    "route": {
+      "gaps": [
+        {
+          "id": "R1",
+          "reference_in_read_context": false,
+          "kind": "reference_not_in_read_context"
+        }
+      ],
+      "gap_basis": "Exact supplied reference ranges; equivalent evidence elsewhere not assessed",
+      "schema": "agora/reading-route/v1-experimental",
+      "decision": "insufficient_evidence",
+      "candidate_sha256": "267b6957cb04e89dc5cb1a7e0bb6324b85b955ff4c5a3c93f06b189c9455b67d",
+      "review_sha256": "211a1df2b952459bc7a6ed3e4a2fd9e79f17ac3c2c01d9bc46ac4a8e42da04c9",
+      "fidelity_sha256": "6e9352b5ed886d0b5c7529e226c5b65e39cfda7bb66f1d99cdcb16e8ff9a84e1",
+      "can_expand_basis": "caller_declared",
+      "memory_admission": "not_performed",
+      "provider_calls": 0
+    },
+    "requirements": [
+      {
+        "id": "R1",
+        "status": "missing"
+      },
+      {
+        "id": "R2",
+        "status": "covered"
+      }
+    ],
+    "fidelity": "supported",
+    "coverage_response": {
+      "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"missing\"},{\"id\":\"R2\",\"status\":\"covered\"}]}",
+      "finish_reason": "stop",
+      "requested_model": "glm-5.3-flash",
+      "reported_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1214,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1186
+        },
+        "prompt_tokens": 3283,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        },
+        "total_tokens": 4497
+      },
+      "response_id": "20261002070346c9721acdfaf84642"
+    },
+    "fidelity_response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "missing": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.4,
+          "probabilities": {
+            "insufficient": 0.21,
+            "supported": 0.59,
+            "contradicted": 0.2
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 3048,
+        "output_tokens": 44
+      }
+    },
+    "http_calls": 2,
+    "tokens": 7589
+  },
+  "jsonl": {
+    "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+    "source_records": [
+      {
+        "time": "09:00",
+        "speaker": "Coordinator",
+        "text": "Draft date: Tuesday."
+      },
+      {
+        "time": "09:15",
+        "speaker": "Coordinator",
+        "text": "Correction: Wednesday; Tuesday is cancelled."
+      }
+    ],
+    "original_missing": [
+      "Los fragmentos no establecen si hubo cambios posteriores a las 09:15, por lo que no puede confirmarse más allá de lo suministrado que el miércoles sea la fecha definitiva final"
+    ],
+    "original_route": "requires_fidelity_inspection",
+    "observed_labels": {
+      "P1_0": "supported",
+      "P1_1": "supported",
+      "missing": "insufficient"
+    },
+    "technical_assessment": "Wednesday supersedes Tuesday within the observed record. Lack of later records is a scope limitation, not proof that later changes did or did not occur.",
+    "recommended_answer": "Según el registro disponible hasta las 09:15, la fecha es miércoles; sustituye al martes, que fue cancelado.",
+    "assessment_status": "Same-session source inspection, not independent adjudication; original artifacts and route unchanged",
+    "http_calls": 0
+  },
+  "memory_admission": "not_performed",
+  "http_calls": 3,
+  "total_reported_tokens": 13074
+}
