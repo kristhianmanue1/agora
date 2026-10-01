@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 178,
-  "bytes": 863054,
+  "documents": 179,
+  "bytes": 867958,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -562,8 +562,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "e639c113eaa978c4562afc77c8f9fb504ae501a94ff04e4e37b741c665e1e6f8",
-      "bytes": 29588,
+      "sha256": "379cfd6acddedae99ad113493c424b0643d54985dd48a93fd577254b90efb7f4",
+      "bytes": 30307,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -772,6 +772,10 @@
         },
         {
           "target": "../experiments/hybrid-retrieval-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/budget-sweep-v1/README.md",
           "exists": true
         }
       ],
@@ -1276,6 +1280,14 @@
       "path": "experiments/agora-skevi-v1/README.md",
       "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
       "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/budget-sweep-v1/README.md",
+      "sha256": "34d76421fa574007d48b23c4d620f150f68fd799f9923170066db40acc8f4e30",
+      "bytes": 4185,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

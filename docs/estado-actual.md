@@ -303,3 +303,14 @@ con sólo 262 libres. Cinco tests y reproducción pasaron; cero llamadas, sin ca
 de producto ni promoción. Próxima condición propuesta: preservar baseline y añadir
 estructura con presupuesto restante, declarando insuficiencia cuando no cabe; después
 casos nuevos. No confundir conservación de rangos con fiabilidad semántica.
+
+## Presupuestos comparados: 12.000 no es un óptimo
+
+[Barrido 8/12/20/32 KB](../experiments/budget-sweep-v1/README.md): el híbrido recupera
+los párrafos anotados de 2/4, 3/4, 4/4 y 4/4 casos conocidos. 20 y 32 generan las
+mismas selecciones. Contraste real en dos casos: cinco candidatos válidos con rúbrica
+cubierta y respaldo Jev, uno rechazado por formato; sin reintentos. 16 llamadas,
+39.225 tokens, 102,080 s acumulados de ejecuciones; precio monetario no medido.
+Tres tests y replay pasaron. Sin cambio de defaults: no hay óptimo general probado.
+Siguiente propuesta: ampliación por etapas conservando rangos, con parada cuando no
+haya ganancia; validar después en fuentes nuevas y rúbricas suficientes.

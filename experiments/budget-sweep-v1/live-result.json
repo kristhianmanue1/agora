@@ -1,0 +1,1014 @@
+{
+  "status": "complete_not_promoted",
+  "rows": [
+    {
+      "id": "case-1-8000",
+      "budget": 8000,
+      "reading_bytes": 7883,
+      "generation_status": "complete",
+      "generation_diagnostics": [],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        },
+        {
+          "id": "R3",
+          "status": "covered"
+        }
+      ],
+      "fidelity_status": "completed",
+      "fidelity_answers": {
+        "C1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.94,
+          "probabilities": {
+            "insufficient": 0.04,
+            "supported": 0.96,
+            "contradicted": 0.0
+          }
+        },
+        "C2": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.99,
+          "probabilities": {
+            "insufficient": 0.01,
+            "supported": 0.99,
+            "contradicted": 0.0
+          }
+        },
+        "C3": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.84,
+          "probabilities": {
+            "insufficient": 0.07,
+            "supported": 0.9,
+            "contradicted": 0.03
+          }
+        },
+        "C4": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.52,
+          "probabilities": {
+            "insufficient": 0.31,
+            "supported": 0.68,
+            "contradicted": 0.01
+          }
+        }
+      },
+      "generation_usage": {
+        "completion_tokens": 754,
+        "completion_tokens_details": {
+          "reasoning_tokens": 511
+        },
+        "prompt_tokens": 2718,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3472
+      },
+      "total_reported_tokens": 7432,
+      "elapsed_seconds": 17.106,
+      "http_calls": 3,
+      "candidate_sha256": "a9445bc2e55cac277ba6f4e9e0d673f301af96f8355ee43de2aa91e7e0bed8ed",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "For MLM-based models, the pre-trained language models used are BERT, DistilBERT and RoBERTa, in both the base and large versions.",
+              "quotes": [
+                "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters."
+              ],
+              "evidence_ids": [
+                "ev_72c97aacf10a7a76a0758ab3"
+              ]
+            },
+            {
+              "text": "For autoregressive models, the pre-trained language models used are GPT-2 and XLNet.",
+              "quotes": [
+                "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters."
+              ],
+              "evidence_ids": [
+                "ev_72c97aacf10a7a76a0758ab3"
+              ]
+            },
+            {
+              "text": "In all cases the implementations from the HuggingFace Transformers toolkit are used for the pre-trained language models.",
+              "quotes": [
+                "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters."
+              ],
+              "evidence_ids": [
+                "ev_72c97aacf10a7a76a0758ab3"
+              ]
+            },
+            {
+              "text": "The paper proposes using self-supervised pre-trained language models such as BERT (devlin-etal-2019-bert) and RoBERTa (liu2019roberta) for domain data selection.",
+              "quotes": [
+                "Domain data selection is the task of selecting the most appropriate data for a domain from a large corpus given a smaller set of in-domain data BIBREF4, BIBREF5, BIBREF6, BIBREF7. In this work, we propose to use the recent, highly successful self-supervised pre-trained language models, e.g. devlin-etal-2019-bert,liu2019roberta for domain data selection. As pretrained LMs demonstrate state-of-the-art performance across many NLP tasks after being trained on massive amounts of data, we hypothesize that the robust representations they learn can be useful for mapping sentences to domains in an unsupervised, data-driven approach. We show that these models indeed learn to cluster sentence representations to domains without further supervision (e.g. Figure FIGREF2), and quantify this phenomenon by fitting Gaussian Mixture Models (GMMs) to the learned representations and measuring the purity of the resulting unsupervised clustering. We then propose methods to leverage these emergent domain clusters for domain data selection in two ways:"
+              ],
+              "evidence_ids": [
+                "ev_d811079e180f92e879dafbc8"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"For MLM-based models, the pre-trained language models used are BERT, DistilBERT and RoBERTa, in both the base and large versions.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"For autoregressive models, the pre-trained language models used are GPT-2 and XLNet.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"In all cases the implementations from the HuggingFace Transformers toolkit are used for the pre-trained language models.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"The paper proposes using self-supervised pre-trained language models such as BERT (devlin-etal-2019-bert) and RoBERTa (liu2019roberta) for domain data selection.\",\"evidence_ids\":[\"ev_d811079e180f92e879dafbc8\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 754,
+          "completion_tokens_details": {
+            "reasoning_tokens": 511
+          },
+          "prompt_tokens": 2718,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 3472
+        },
+        "response_id": "2026100205044478f121bcf9ec4c7f"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 156,
+          "completion_tokens_details": {
+            "reasoning_tokens": 119
+          },
+          "prompt_tokens": 1809,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1965
+        },
+        "response_id": "20261002050457a74c9eb1741a4a6b"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.94,
+            "probabilities": {
+              "insufficient": 0.04,
+              "supported": 0.96,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.99,
+            "probabilities": {
+              "insufficient": 0.01,
+              "supported": 0.99,
+              "contradicted": 0.0
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.84,
+            "probabilities": {
+              "insufficient": 0.07,
+              "supported": 0.9,
+              "contradicted": 0.03
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.52,
+            "probabilities": {
+              "insufficient": 0.31,
+              "supported": 0.68,
+              "contradicted": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1824,
+          "output_tokens": 171
+        }
+      }
+    },
+    {
+      "id": "case-1-12000",
+      "budget": 12000,
+      "reading_bytes": 11346,
+      "generation_status": "complete",
+      "generation_diagnostics": [],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        },
+        {
+          "id": "R3",
+          "status": "covered"
+        }
+      ],
+      "fidelity_status": "completed",
+      "fidelity_answers": {
+        "C1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.97,
+          "probabilities": {
+            "supported": 0.98,
+            "insufficient": 0.02,
+            "contradicted": 0.0
+          }
+        },
+        "C2": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.97,
+          "probabilities": {
+            "supported": 0.98,
+            "insufficient": 0.02,
+            "contradicted": 0.0
+          }
+        }
+      },
+      "generation_usage": {
+        "completion_tokens": 680,
+        "completion_tokens_details": {
+          "reasoning_tokens": 545
+        },
+        "prompt_tokens": 3643,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        },
+        "total_tokens": 4323
+      },
+      "total_reported_tokens": 6907,
+      "elapsed_seconds": 14.601,
+      "http_calls": 3,
+      "candidate_sha256": "51dba6beaf713b04a6a4bfca1704f588e648b3b637373663802d79e7e56696b1",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "For MLM-based models, the study uses BERT, DistilBERT, and RoBERTa (in both the base and large versions).",
+              "quotes": [
+                "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters."
+              ],
+              "evidence_ids": [
+                "ev_72c97aacf10a7a76a0758ab3"
+              ]
+            },
+            {
+              "text": "For autoregressive models, the study uses GPT-2 and XLNet, in all cases using implementations from the HuggingFace Transformers toolkit.",
+              "quotes": [
+                "For MLM-based models we use BERT BIBREF10, DistilBERT BIBREF18 and RoBERTa BIBREF11 (in both the base and large versions). For autoregressive models we use GPT-2 BIBREF19 and XLNet BIBREF20. In all cases we use the implementations from the HuggingFace Transformers toolkit BIBREF21. We also evaluated three additional, simpler baselines. The first is using representations from word2vec BIBREF22, where we average-pooled the word vectors for the tokens that were present in the model vocabulary. The second is using Latent Dirichlet Allocation (LDA, BIBREF23), which is a classic approach to unsupervised clustering of text. We also report results for a baseline which assigns sentences by sampling randomly from a uniform distribution over the clusters."
+              ],
+              "evidence_ids": [
+                "ev_72c97aacf10a7a76a0758ab3"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"For MLM-based models, the study uses BERT, DistilBERT, and RoBERTa (in both the base and large versions).\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"For autoregressive models, the study uses GPT-2 and XLNet, in all cases using implementations from the HuggingFace Transformers toolkit.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 680,
+          "completion_tokens_details": {
+            "reasoning_tokens": 545
+          },
+          "prompt_tokens": 3643,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 4323
+        },
+        "response_id": "2026100205050188a8fed150e04e2a"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 129,
+          "completion_tokens_details": {
+            "reasoning_tokens": 92
+          },
+          "prompt_tokens": 1339,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 1468
+        },
+        "response_id": "202610020505125b530098061440a6"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "supported": 0.98,
+              "insufficient": 0.02,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "supported": 0.98,
+              "insufficient": 0.02,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1029,
+          "output_tokens": 87
+        }
+      }
+    },
+    {
+      "id": "case-1-20000",
+      "budget": 20000,
+      "reading_bytes": 12216,
+      "generation_status": "rejected",
+      "generation_diagnostics": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "coverage_status": "not_run",
+      "requirements": null,
+      "fidelity_status": "not_run",
+      "fidelity_answers": null,
+      "generation_usage": {
+        "completion_tokens": 1065,
+        "completion_tokens_details": {
+          "reasoning_tokens": 846
+        },
+        "prompt_tokens": 3855,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "total_tokens": 4920
+      },
+      "total_reported_tokens": 4920,
+      "elapsed_seconds": 15.757,
+      "http_calls": 1,
+      "candidate_sha256": "f6ebe962b98f215f7cc7ad75fa0ab435a303288bb85350b0503f808b1762871f",
+      "parts": null,
+      "generation_response": {
+        "content": "\n{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"For MLM-based models the study uses BERT, DistilBERT and RoBERTa (in both the base and large versions).\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"For autoregressive models the study uses GPT-2 and XLNet.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"In all cases the study uses implementations from the HuggingFace Transformers toolkit.\",\"evidence_ids\":[\"ev_72c97aacf10a7a76a0758ab3\"]},{\"text\":\"The hypothesis about domain clustering was tested across several large, publicly-available pretrained LMs, exploring both masked-language-models (MLMs) and auto-regressive LMs.\",\"evidence_ids\":[\"ev_c130303e6bea6299bd24f7f3\"]}],\"missing\":[]}`}\n",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1065,
+          "completion_tokens_details": {
+            "reasoning_tokens": 846
+          },
+          "prompt_tokens": 3855,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          },
+          "total_tokens": 4920
+        },
+        "response_id": "20261002050515423420e6bc0c4534"
+      },
+      "coverage_response": null,
+      "fidelity_response": null
+    },
+    {
+      "id": "case-2-8000",
+      "budget": 8000,
+      "reading_bytes": 7789,
+      "generation_status": "complete",
+      "generation_diagnostics": [],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        },
+        {
+          "id": "R3",
+          "status": "covered"
+        }
+      ],
+      "fidelity_status": "completed",
+      "fidelity_answers": {
+        "C1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.88,
+          "probabilities": {
+            "insufficient": 0.08,
+            "supported": 0.92,
+            "contradicted": 0.0
+          }
+        },
+        "C2": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.8,
+          "probabilities": {
+            "insufficient": 0.13,
+            "supported": 0.87,
+            "contradicted": 0.0
+          }
+        },
+        "C3": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.86,
+          "probabilities": {
+            "insufficient": 0.09,
+            "supported": 0.91,
+            "contradicted": 0.0
+          }
+        },
+        "C4": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.64,
+          "probabilities": {
+            "insufficient": 0.24,
+            "supported": 0.76,
+            "contradicted": 0.0
+          }
+        }
+      },
+      "generation_usage": {
+        "completion_tokens": 1262,
+        "completion_tokens_details": {
+          "reasoning_tokens": 984
+        },
+        "prompt_tokens": 2694,
+        "prompt_tokens_details": {
+          "cached_tokens": 64
+        },
+        "total_tokens": 3956
+      },
+      "total_reported_tokens": 6403,
+      "elapsed_seconds": 20.714,
+      "http_calls": 3,
+      "candidate_sha256": "f72475e0dcfc91a2cebd8bbd85d8626f814db96ca0644f2bd6b5380d030d4ab4",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "One examined cross-validation variant is xval(9:1, strat, block), which is 10-fold, stratified, blocked cross-validation.",
+              "quotes": [
+                "xval(9:1, strat, block) - 10-fold, stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_c532e17496ac2aae39e3e55e"
+              ]
+            },
+            {
+              "text": "One examined cross-validation variant is xval(9:1, no-strat, block), which is 10-fold, not stratified, blocked cross-validation.",
+              "quotes": [
+                "xval(9:1, no-strat, block) - 10-fold, not stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_d2c25e1f9cb40498919d75bd"
+              ]
+            },
+            {
+              "text": "One examined cross-validation variant is xval(9:1, strat, rand), which is 10-fold, stratified, with random selection of examples.",
+              "quotes": [
+                "xval(9:1, strat, rand) - 10-fold, stratified, random selection of examples."
+              ],
+              "evidence_ids": [
+                "ev_881a6925136ca158d0e5e5d3"
+              ]
+            },
+            {
+              "text": "The cross-validation variants examined are all 10-fold with a training:test set ratio of 9:1, comparing stratified versus not stratified fold partitioning and blocked versus standard random selection of examples, where the blocked form uses folds that are blocks of consecutive tweets.",
+              "quotes": [
+                "First, we apply 10-fold cross-validation where the training:test set ratio is always 9:1. Cross-validation is stratified when the fold partitioning is not completely random, but each fold has roughly the same class distribution. We also compare standard random selection of examples to the blocked form of cross-validation BIBREF16 , BIBREF11 , where each fold is a block of consecutive tweets. We use the following abbreviations for cross-validations:"
+              ],
+              "evidence_ids": [
+                "ev_1f1b9f698eeae598ab51cb46"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"One examined cross-validation variant is xval(9:1, strat, block), which is 10-fold, stratified, blocked cross-validation.\",\"evidence_ids\":[\"ev_c532e17496ac2aae39e3e55e\"]},{\"text\":\"One examined cross-validation variant is xval(9:1, no-strat, block), which is 10-fold, not stratified, blocked cross-validation.\",\"evidence_ids\":[\"ev_d2c25e1f9cb40498919d75bd\"]},{\"text\":\"One examined cross-validation variant is xval(9:1, strat, rand), which is 10-fold, stratified, with random selection of examples.\",\"evidence_ids\":[\"ev_881a6925136ca158d0e5e5d3\"]},{\"text\":\"The cross-validation variants examined are all 10-fold with a training:test set ratio of 9:1, comparing stratified versus not stratified fold partitioning and blocked versus standard random selection of examples, where the blocked form uses folds that are blocks of consecutive tweets.\",\"evidence_ids\":[\"ev_1f1b9f698eeae598ab51cb46\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 1262,
+          "completion_tokens_details": {
+            "reasoning_tokens": 984
+          },
+          "prompt_tokens": 2694,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 3956
+        },
+        "response_id": "2026100205053153b007b336144aa0"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 201,
+          "completion_tokens_details": {
+            "reasoning_tokens": 152
+          },
+          "prompt_tokens": 826,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 1027
+        },
+        "response_id": "2026100205054890ef1c85422d4516"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.88,
+            "probabilities": {
+              "insufficient": 0.08,
+              "supported": 0.92,
+              "contradicted": 0.0
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.8,
+            "probabilities": {
+              "insufficient": 0.13,
+              "supported": 0.87,
+              "contradicted": 0.0
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.86,
+            "probabilities": {
+              "insufficient": 0.09,
+              "supported": 0.91,
+              "contradicted": 0.0
+            }
+          },
+          "C4": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.64,
+            "probabilities": {
+              "insufficient": 0.24,
+              "supported": 0.76,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1249,
+          "output_tokens": 171
+        }
+      }
+    },
+    {
+      "id": "case-2-12000",
+      "budget": 12000,
+      "reading_bytes": 11442,
+      "generation_status": "complete",
+      "generation_diagnostics": [],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        },
+        {
+          "id": "R3",
+          "status": "covered"
+        }
+      ],
+      "fidelity_status": "completed",
+      "fidelity_answers": {
+        "C1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.84,
+          "probabilities": {
+            "insufficient": 0.11,
+            "contradicted": 0.0,
+            "supported": 0.89
+          }
+        },
+        "C2": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.82,
+          "probabilities": {
+            "insufficient": 0.12,
+            "contradicted": 0.0,
+            "supported": 0.88
+          }
+        },
+        "C3": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.84,
+          "probabilities": {
+            "insufficient": 0.1,
+            "contradicted": 0.01,
+            "supported": 0.89
+          }
+        }
+      },
+      "generation_usage": {
+        "completion_tokens": 737,
+        "completion_tokens_details": {
+          "reasoning_tokens": 532
+        },
+        "prompt_tokens": 3519,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "total_tokens": 4256
+      },
+      "total_reported_tokens": 6296,
+      "elapsed_seconds": 15.938,
+      "http_calls": 3,
+      "candidate_sha256": "6cb6a95891404f12af8cab041a0c095ad381b6b09ee8df50801fef4bd50f256a",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "The study examines the cross-validation variant xval(9:1, strat, block), i.e., 10-fold, stratified, blocked cross-validation.",
+              "quotes": [
+                "xval(9:1, strat, block) - 10-fold, stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_c532e17496ac2aae39e3e55e"
+              ]
+            },
+            {
+              "text": "The study examines the cross-validation variant xval(9:1, no-strat, block), i.e., 10-fold, not stratified, blocked cross-validation.",
+              "quotes": [
+                "xval(9:1, no-strat, block) - 10-fold, not stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_d2c25e1f9cb40498919d75bd"
+              ]
+            },
+            {
+              "text": "The study examines the cross-validation variant xval(9:1, strat, rand), i.e., 10-fold, stratified cross-validation with random selection of examples.",
+              "quotes": [
+                "xval(9:1, strat, rand) - 10-fold, stratified, random selection of examples."
+              ],
+              "evidence_ids": [
+                "ev_881a6925136ca158d0e5e5d3"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"The study examines the cross-validation variant xval(9:1, strat, block), i.e., 10-fold, stratified, blocked cross-validation.\",\"evidence_ids\":[\"ev_c532e17496ac2aae39e3e55e\"]},{\"text\":\"The study examines the cross-validation variant xval(9:1, no-strat, block), i.e., 10-fold, not stratified, blocked cross-validation.\",\"evidence_ids\":[\"ev_d2c25e1f9cb40498919d75bd\"]},{\"text\":\"The study examines the cross-validation variant xval(9:1, strat, rand), i.e., 10-fold, stratified cross-validation with random selection of examples.\",\"evidence_ids\":[\"ev_881a6925136ca158d0e5e5d3\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 737,
+          "completion_tokens_details": {
+            "reasoning_tokens": 532
+          },
+          "prompt_tokens": 3519,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 4256
+        },
+        "response_id": "20261002050551eff8aea2181d4097"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 297,
+          "completion_tokens_details": {
+            "reasoning_tokens": 264
+          },
+          "prompt_tokens": 677,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "total_tokens": 974
+        },
+        "response_id": "20261002050602ad56d0fcc0fc4040"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.84,
+            "probabilities": {
+              "insufficient": 0.11,
+              "contradicted": 0.0,
+              "supported": 0.89
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.82,
+            "probabilities": {
+              "insufficient": 0.12,
+              "contradicted": 0.0,
+              "supported": 0.88
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.84,
+            "probabilities": {
+              "insufficient": 0.1,
+              "contradicted": 0.01,
+              "supported": 0.89
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 937,
+          "output_tokens": 129
+        }
+      }
+    },
+    {
+      "id": "case-2-20000",
+      "budget": 20000,
+      "reading_bytes": 12101,
+      "generation_status": "complete",
+      "generation_diagnostics": [],
+      "coverage_status": "complete",
+      "requirements": [
+        {
+          "id": "R1",
+          "status": "covered"
+        },
+        {
+          "id": "R2",
+          "status": "covered"
+        },
+        {
+          "id": "R3",
+          "status": "covered"
+        }
+      ],
+      "fidelity_status": "completed",
+      "fidelity_answers": {
+        "C1": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.97,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.98,
+            "insufficient": 0.02
+          }
+        },
+        "C2": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.86,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.91,
+            "insufficient": 0.09
+          }
+        },
+        "C3": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.92,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.95,
+            "insufficient": 0.05
+          }
+        }
+      },
+      "generation_usage": {
+        "completion_tokens": 998,
+        "completion_tokens_details": {
+          "reasoning_tokens": 714
+        },
+        "prompt_tokens": 3688,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "total_tokens": 4686
+      },
+      "total_reported_tokens": 7267,
+      "elapsed_seconds": 17.964,
+      "http_calls": 3,
+      "candidate_sha256": "8cfbbf512e633d9d04e9b55f6946b6efd47208b7beb08e77d92ab75d0680c6fc",
+      "parts": [
+        {
+          "id": "P1",
+          "status": "answered",
+          "claims": [
+            {
+              "text": "The study examines 10-fold cross-validation with stratified, blocked folds (training:test ratio 9:1), abbreviated xval(9:1, strat, block), where each fold is a block of consecutive tweets.",
+              "quotes": [
+                "First, we apply 10-fold cross-validation where the training:test set ratio is always 9:1. Cross-validation is stratified when the fold partitioning is not completely random, but each fold has roughly the same class distribution. We also compare standard random selection of examples to the blocked form of cross-validation BIBREF16 , BIBREF11 , where each fold is a block of consecutive tweets. We use the following abbreviations for cross-validations:",
+                "xval(9:1, strat, block) - 10-fold, stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_1f1b9f698eeae598ab51cb46",
+                "ev_c532e17496ac2aae39e3e55e"
+              ]
+            },
+            {
+              "text": "The study examines 10-fold cross-validation with non-stratified, blocked folds (training:test ratio 9:1), abbreviated xval(9:1, no-strat, block).",
+              "quotes": [
+                "First, we apply 10-fold cross-validation where the training:test set ratio is always 9:1. Cross-validation is stratified when the fold partitioning is not completely random, but each fold has roughly the same class distribution. We also compare standard random selection of examples to the blocked form of cross-validation BIBREF16 , BIBREF11 , where each fold is a block of consecutive tweets. We use the following abbreviations for cross-validations:",
+                "xval(9:1, no-strat, block) - 10-fold, not stratified, blocked;"
+              ],
+              "evidence_ids": [
+                "ev_1f1b9f698eeae598ab51cb46",
+                "ev_d2c25e1f9cb40498919d75bd"
+              ]
+            },
+            {
+              "text": "The study examines 10-fold cross-validation with stratified folds and random selection of examples (training:test ratio 9:1), abbreviated xval(9:1, strat, rand).",
+              "quotes": [
+                "First, we apply 10-fold cross-validation where the training:test set ratio is always 9:1. Cross-validation is stratified when the fold partitioning is not completely random, but each fold has roughly the same class distribution. We also compare standard random selection of examples to the blocked form of cross-validation BIBREF16 , BIBREF11 , where each fold is a block of consecutive tweets. We use the following abbreviations for cross-validations:",
+                "xval(9:1, strat, rand) - 10-fold, stratified, random selection of examples."
+              ],
+              "evidence_ids": [
+                "ev_1f1b9f698eeae598ab51cb46",
+                "ev_881a6925136ca158d0e5e5d3"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ],
+      "generation_response": {
+        "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"The study examines 10-fold cross-validation with stratified, blocked folds (training:test ratio 9:1), abbreviated xval(9:1, strat, block), where each fold is a block of consecutive tweets.\",\"evidence_ids\":[\"ev_1f1b9f698eeae598ab51cb46\",\"ev_c532e17496ac2aae39e3e55e\"]},{\"text\":\"The study examines 10-fold cross-validation with non-stratified, blocked folds (training:test ratio 9:1), abbreviated xval(9:1, no-strat, block).\",\"evidence_ids\":[\"ev_1f1b9f698eeae598ab51cb46\",\"ev_d2c25e1f9cb40498919d75bd\"]},{\"text\":\"The study examines 10-fold cross-validation with stratified folds and random selection of examples (training:test ratio 9:1), abbreviated xval(9:1, strat, rand).\",\"evidence_ids\":[\"ev_1f1b9f698eeae598ab51cb46\",\"ev_881a6925136ca158d0e5e5d3\"]}],\"missing\":[]}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 998,
+          "completion_tokens_details": {
+            "reasoning_tokens": 714
+          },
+          "prompt_tokens": 3688,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "total_tokens": 4686
+        },
+        "response_id": "20261002050607d5bb5f86aa7846c5"
+      },
+      "coverage_response": {
+        "content": "{\"requirements\":[{\"id\":\"R1\",\"status\":\"covered\"},{\"id\":\"R2\",\"status\":\"covered\"},{\"id\":\"R3\",\"status\":\"covered\"}]}",
+        "finish_reason": "stop",
+        "requested_model": "glm-5.3-flash",
+        "reported_model": "glm-5.3-flash",
+        "usage": {
+          "completion_tokens": 203,
+          "completion_tokens_details": {
+            "reasoning_tokens": 170
+          },
+          "prompt_tokens": 981,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "total_tokens": 1184
+        },
+        "response_id": "2026100205062137667bf25ce34705"
+      },
+      "fidelity_response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "C1": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.97,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.98,
+              "insufficient": 0.02
+            }
+          },
+          "C2": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.86,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.91,
+              "insufficient": 0.09
+            }
+          },
+          "C3": {
+            "type": "choice",
+            "choice": "supported",
+            "confidence": 0.92,
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 0.95,
+              "insufficient": 0.05
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1268,
+          "output_tokens": 129
+        }
+      }
+    }
+  ],
+  "aliases": [
+    {
+      "case": "recovery-induced-v1/case-1",
+      "budget": 32000,
+      "reuse": "case-1-20000"
+    },
+    {
+      "case": "recovery-induced-v1/case-2",
+      "budget": 32000,
+      "reuse": "case-2-20000"
+    }
+  ],
+  "http_calls": 16,
+  "total_reported_tokens": 39225,
+  "elapsed_seconds": 102.08,
+  "monetary_cost": "not_measured",
+  "scope": "Known cases, one draw per distinct context; no statistical optimum; coverage rubric incomplete for case 1",
+  "replay_verified": true
+}

@@ -1,0 +1,662 @@
+{
+  "cases": [
+    {
+      "document_id": "2004.02105",
+      "question": "Which pre-trained language models are used?",
+      "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+      "rubric_sha256": "1d6e4c0c43cda6acdeb3f19fdcd3d37f2de9cb4a2181b2c70c2a7ba794720d61",
+      "id": "case-1-8000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-1-rubric.json",
+      "budget": 8000,
+      "reading_bytes": 7883,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ]
+    },
+    {
+      "document_id": "2004.02105",
+      "question": "Which pre-trained language models are used?",
+      "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+      "rubric_sha256": "1d6e4c0c43cda6acdeb3f19fdcd3d37f2de9cb4a2181b2c70c2a7ba794720d61",
+      "id": "case-1-12000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-1-rubric.json",
+      "budget": 12000,
+      "reading_bytes": 11346,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          14411,
+          15310
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          15392,
+          15772
+        ],
+        [
+          15774,
+          16433
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ]
+    },
+    {
+      "document_id": "2004.02105",
+      "question": "Which pre-trained language models are used?",
+      "source_sha256": "c8a172dd6f0ef9c45c6e43c9fc3fa5b70f396351e3d6f3b677f10cb3c3131e9e",
+      "rubric_sha256": "1d6e4c0c43cda6acdeb3f19fdcd3d37f2de9cb4a2181b2c70c2a7ba794720d61",
+      "id": "case-1-20000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-1.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-1-rubric.json",
+      "budget": 20000,
+      "reading_bytes": 12216,
+      "ranges": [
+        [
+          0,
+          58
+        ],
+        [
+          60,
+          951
+        ],
+        [
+          953,
+          965
+        ],
+        [
+          967,
+          1843
+        ],
+        [
+          1845,
+          2888
+        ],
+        [
+          2890,
+          2992
+        ],
+        [
+          3124,
+          3903
+        ],
+        [
+          3905,
+          4851
+        ],
+        [
+          4853,
+          4922
+        ],
+        [
+          4924,
+          5605
+        ],
+        [
+          5607,
+          6451
+        ],
+        [
+          6453,
+          6761
+        ],
+        [
+          7713,
+          7792
+        ],
+        [
+          7794,
+          8548
+        ],
+        [
+          14356,
+          14409
+        ],
+        [
+          14411,
+          15310
+        ],
+        [
+          15312,
+          15390
+        ],
+        [
+          15392,
+          15772
+        ],
+        [
+          15774,
+          16433
+        ],
+        [
+          16435,
+          17305
+        ],
+        [
+          20335,
+          20388
+        ],
+        [
+          20390,
+          21290
+        ],
+        [
+          21292,
+          21911
+        ],
+        [
+          33127,
+          33165
+        ],
+        [
+          33167,
+          33392
+        ]
+      ]
+    },
+    {
+      "document_id": "1803.05160",
+      "question": "Which three variants of cross-validation are examined?",
+      "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+      "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+      "id": "case-2-8000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-2-rubric.json",
+      "budget": 8000,
+      "reading_bytes": 7789,
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13897,
+          13920
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          23798,
+          23819
+        ],
+        [
+          23821,
+          24353
+        ],
+        [
+          24355,
+          24845
+        ],
+        [
+          24847,
+          25299
+        ],
+        [
+          25301,
+          25356
+        ],
+        [
+          25358,
+          25420
+        ],
+        [
+          25422,
+          25497
+        ],
+        [
+          25995,
+          26064
+        ],
+        [
+          26066,
+          26135
+        ],
+        [
+          26137,
+          26246
+        ]
+      ]
+    },
+    {
+      "document_id": "1803.05160",
+      "question": "Which three variants of cross-validation are examined?",
+      "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+      "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+      "id": "case-2-12000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-2-rubric.json",
+      "budget": 12000,
+      "reading_bytes": 11442,
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13897,
+          13920
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          23798,
+          23819
+        ],
+        [
+          23821,
+          24353
+        ],
+        [
+          24355,
+          24845
+        ],
+        [
+          24847,
+          25299
+        ],
+        [
+          25301,
+          25356
+        ],
+        [
+          25358,
+          25420
+        ],
+        [
+          25422,
+          25497
+        ],
+        [
+          25499,
+          25993
+        ],
+        [
+          25995,
+          26064
+        ],
+        [
+          26066,
+          26135
+        ],
+        [
+          26137,
+          26246
+        ]
+      ]
+    },
+    {
+      "document_id": "1803.05160",
+      "question": "Which three variants of cross-validation are examined?",
+      "source_sha256": "ac4745fe5534b092d3237966ea8752259d8e293887cea890f58b841218bcc70a",
+      "rubric_sha256": "e654af94b4651a8fbc4cbcc6e66cf797215d102c5ab9932a40443fcacd6d553c",
+      "id": "case-2-20000",
+      "source_path": "experiments/recovery-induced-v1/inputs/case-2.txt",
+      "rubric_path": "experiments/recovery-induced-v1/case-2-rubric.json",
+      "budget": 20000,
+      "reading_bytes": 12101,
+      "ranges": [
+        [
+          0,
+          68
+        ],
+        [
+          70,
+          1610
+        ],
+        [
+          1612,
+          1620
+        ],
+        [
+          1622,
+          3162
+        ],
+        [
+          3164,
+          3176
+        ],
+        [
+          3178,
+          3654
+        ],
+        [
+          3656,
+          4526
+        ],
+        [
+          4528,
+          4898
+        ],
+        [
+          13897,
+          13920
+        ],
+        [
+          13922,
+          14933
+        ],
+        [
+          14935,
+          15727
+        ],
+        [
+          15729,
+          15744
+        ],
+        [
+          15746,
+          16635
+        ],
+        [
+          16637,
+          18037
+        ],
+        [
+          18039,
+          18698
+        ],
+        [
+          23798,
+          23819
+        ],
+        [
+          23821,
+          24353
+        ],
+        [
+          24355,
+          24845
+        ],
+        [
+          24847,
+          25299
+        ],
+        [
+          25301,
+          25356
+        ],
+        [
+          25358,
+          25420
+        ],
+        [
+          25422,
+          25497
+        ],
+        [
+          25499,
+          25993
+        ],
+        [
+          25995,
+          26064
+        ],
+        [
+          26066,
+          26135
+        ],
+        [
+          26137,
+          26246
+        ]
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "case": "recovery-induced-v1/case-1",
+      "budget": 32000,
+      "reuse": "case-1-20000"
+    },
+    {
+      "case": "recovery-induced-v1/case-2",
+      "budget": 32000,
+      "reuse": "case-2-20000"
+    }
+  ],
+  "max_calls": 18,
+  "generation_tokens": 4096,
+  "review_tokens": 2048,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "runner_sha256": "1fb81334d2d96b0015f50beebc6afd5f3115dfe9726ee4edcdeb8e2a851df510",
+  "stop_rule": "One call per phase/context; no tuning or repair; identical contexts share one execution, not independent repeats",
+  "rubric_limit": "Case 1 omits GPT-2 and XLNet; existing rubric remains frozen"
+}
