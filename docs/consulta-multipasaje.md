@@ -158,3 +158,11 @@ certifica soporte semántico. Sin el flag se conservan v0.1/v0.2. El código de 
 cero indica finalización de la operación, no aceptación de la respuesta.
 
 [Ensayo de recuperación y límites](../experiments/scope-vigency-repair-v1/README.md).
+
+### Desde la CLI de pendientes
+
+El comando `generate-plan` también admite `--scope-guard`, tanto con
+`--citation-mode literal` como `--citation-mode ids`. Muestra `requires_expansion`,
+`reading_budget_bytes` del plan verificado y la política de ampliación explícita.
+La ausencia de pasajes no dispara una llamada ni demuestra ausencia documental.
+No se inicia automáticamente reading-route ni generate-recovery.

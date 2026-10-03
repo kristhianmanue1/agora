@@ -10,7 +10,7 @@ from .transform import unique_object
 from .__main__ import ENDPOINT
 
 
-def generate(source, plan_bytes, expected_hash, question, provider, citation_mode="literal"):
+def generate(source, plan_bytes, expected_hash, question, provider, citation_mode="literal", *, scope_guard=False):
     if citation_mode not in ("literal", "ids"):
         raise ValueError("invalid_citation_mode")
     if len(plan_bytes) > 8*1024*1024 or digest(plan_bytes) != expected_hash:
@@ -32,8 +32,14 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
     if json.loads(json.dumps(rebuilt)) != plan:
         raise ValueError('plan_reproduction_mismatch')
     if not plan['envelope']:
-        return dict(execution_status='complete',answer_status='no_supplied_evidence',provider_calls=0,
-                    plan_sha256=expected_hash,global_completeness='not_established',memory_admission='not_performed')
+        result = dict(execution_status='complete',answer_status='no_supplied_evidence',provider_calls=0,
+                      plan_sha256=expected_hash,global_completeness='not_established',memory_admission='not_performed')
+        if scope_guard:
+            result.update(scope_contract='agora/reading-scope/v1',answer_scope='no_supplied_evidence',
+                          requires_expansion=True,document_absence_established=False,
+                          reading_budget_bytes=plan['budget_bytes'],
+                          expansion_policy='explicit_review_and_budget_required')
+        return result
     ranges = [(s['start_byte'],s['end_byte']) for s in plan['envelope']['spans']]
     scoped_question = ('Responde sólo sobre los fragmentos suministrados. La selección es parcial; '
                        'no presentes la respuesta como exhaustiva del documento.\n'+question)
@@ -44,10 +50,19 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
             content_budget=plan['budget_bytes'],prompt_budget=65536,citation_mode='ids')
     else:
         result = query_passages(adapter,plan['source_sha256'],scoped_question,provider,'reference',
-                                ranges=ranges,content_budget=plan['budget_bytes'],prompt_budget=65536)
+                                ranges=ranges,content_budget=plan['budget_bytes'],prompt_budget=65536,scope_guard=scope_guard)
     result.update(plan_sha256=expected_hash,plan_schema=plan['schema'],
                   global_completeness='not_established',answer_scope='selected_passages_only',
                   reference_coverage=[{k:q[k] for k in ('id','reference_coverage','missing_reference_ranges')} for q in plan['questions']])
+    if scope_guard:
+        partial = plan['envelope']['coverage'] != 'full'
+        result.update(scope_contract='agora/reading-scope/v1',
+                      answer_scope='selected_passages' if partial else 'full_source',
+                      requires_expansion=partial, document_absence_established=False,
+                      reading_budget_bytes=plan['budget_bytes'],
+                      expansion_policy='explicit_review_and_budget_required')
+        if partial and result.get('execution_status') == 'complete' and result.get('answer_status') in ('candidate','candidate_partial'):
+            result['answer_status'] = 'candidate_requires_expansion'
     return result
 
 
@@ -81,13 +96,15 @@ def run(args, read):
     modules=('structured_plan.py','structure_selection.py','qasper.py','plan_generation.py','subquestions.py','function_retrieval.py','passages.py','source.py','query.py','transform.py','evidence.py','evidence_ids.py','routed_query.py')
     hashes={n:digest(Path(__file__).with_name(n).read_bytes()) for n in modules}
     try:
-        result=generate(args.source,Path(args.plan).read_bytes(),args.expected_plan_sha256,args.question,provider,args.citation_mode)
+        result=generate(args.source,Path(args.plan).read_bytes(),args.expected_plan_sha256,args.question,provider,args.citation_mode,scope_guard=getattr(args,'scope_guard',False))
     except (ValueError,KeyError,TypeError,OSError) as exc:
         result=dict(execution_status='rejected',diagnostic=type(exc).__name__)
     result.update(execution_origin=origin,http_attempts=attempts if args.live else 0,
                   request_config=dict(citation_mode=args.citation_mode,model='glm-5.3-flash',max_output_tokens=8192,timeout_seconds=90,max_calls=1),
                   implementation_hashes=hashes)
+    if getattr(args,'scope_guard',False):result['request_config']['scope_guard']=True
     result['implementation_unchanged']=hashes=={n:digest(Path(__file__).with_name(n).read_bytes()) for n in modules}
     if not result['implementation_unchanged']:result.update(execution_status='rejected',diagnostic='implementation_changed_during_run')
     (out/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-    return dict(status=result['execution_status'],answer_status=result.get('answer_status'),diagnostic=result.get('diagnostic'),diagnostics=result.get('diagnostics',[]),http_attempts=result['http_attempts'],output=str(out/'result.json'))
+    return dict(status=result['execution_status'],answer_status=result.get('answer_status'),diagnostic=result.get('diagnostic'),diagnostics=result.get('diagnostics',[]),http_attempts=result['http_attempts'],output=str(out/'result.json'),
+                **({k:result[k] for k in ('requires_expansion','reading_budget_bytes','expansion_policy') if k in result} if getattr(args,'scope_guard',False) else {}))

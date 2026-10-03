@@ -1,0 +1,74 @@
+[
+  {
+    "mode": "literal",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/krisnova/www/aria/agora/scripts/agora_issues.py",
+      "--workspace",
+      "/tmp/agora-plan-scope-cli-v1/workspace",
+      "generate-plan",
+      "--source",
+      "/tmp/agora-plan-scope-cli-v1/source.txt",
+      "--plan",
+      "/tmp/agora-plan-scope-cli-v1/plan.json",
+      "--expected-plan-sha256",
+      "216fddfcf5d69626baedb48ac1f8a580f7e477e3a4cde49a1ee67dd18b429965",
+      "--question",
+      "What is approved?",
+      "--response",
+      "/tmp/agora-plan-scope-cli-v1/literal-response.json",
+      "--citation-mode",
+      "literal",
+      "--scope-guard",
+      "--out",
+      "/tmp/agora-plan-scope-cli-v1/literal"
+    ],
+    "output": {
+      "status": "complete",
+      "answer_status": "candidate_requires_expansion",
+      "diagnostic": null,
+      "diagnostics": [],
+      "http_attempts": 0,
+      "output": "/tmp/agora-plan-scope-cli-v1/literal/result.json",
+      "requires_expansion": true,
+      "reading_budget_bytes": 100,
+      "expansion_policy": "explicit_review_and_budget_required"
+    }
+  },
+  {
+    "mode": "ids",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/krisnova/www/aria/agora/scripts/agora_issues.py",
+      "--workspace",
+      "/tmp/agora-plan-scope-cli-v1/workspace",
+      "generate-plan",
+      "--source",
+      "/tmp/agora-plan-scope-cli-v1/source.txt",
+      "--plan",
+      "/tmp/agora-plan-scope-cli-v1/plan.json",
+      "--expected-plan-sha256",
+      "216fddfcf5d69626baedb48ac1f8a580f7e477e3a4cde49a1ee67dd18b429965",
+      "--question",
+      "What is approved?",
+      "--response",
+      "/tmp/agora-plan-scope-cli-v1/ids-response.json",
+      "--citation-mode",
+      "ids",
+      "--scope-guard",
+      "--out",
+      "/tmp/agora-plan-scope-cli-v1/ids"
+    ],
+    "output": {
+      "status": "complete",
+      "answer_status": "candidate_requires_expansion",
+      "diagnostic": null,
+      "diagnostics": [],
+      "http_attempts": 0,
+      "output": "/tmp/agora-plan-scope-cli-v1/ids/result.json",
+      "requires_expansion": true,
+      "reading_budget_bytes": 100,
+      "expansion_policy": "explicit_review_and_budget_required"
+    }
+  }
+]

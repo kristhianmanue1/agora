@@ -1,0 +1,35 @@
+{
+  "base_commit": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+  "scope": "Current local candidate files, tested in disposable copy with existing MemOS runtime dependencies plus temporary validation tools",
+  "tested_files": [
+    {
+      "path": "src/memos/graph_dbs/neo4j_community.py",
+      "sha256": "8858b98f5dccabc3071c97613b5ef65650b292d15a797f7c8b9d327ca31ea5c6"
+    },
+    {
+      "path": "src/memos/mem_feedback/feedback.py",
+      "sha256": "62c45c398fe5da85f20286790a9f58dfe2b1661ad9f2035d7768f93ce9906670"
+    },
+    {
+      "path": "tests/graph_dbs/test_neo4j_keyword_feedback.py",
+      "sha256": "70c0fd6b720b381f698833070f0e082e9311032e06107b9082e5e0a73174b485"
+    },
+    {
+      "path": "tests/mem_feedback/test_targeted_feedback_route.py",
+      "sha256": "d6068b233b69145e300d1e3f43cf194daf5d59cde34bdfb33d600fddc86587bd"
+    }
+  ],
+  "format_exit_code": 0,
+  "pytest_passed": 55,
+  "pytest_skipped": 3,
+  "skip_reason": "Neo4j integration tests not enabled",
+  "warning": "asyncio_mode configuration unrecognized because plugin autoload disabled",
+  "tools": {
+    "pytest": "8.4.2",
+    "pytest_asyncio": "0.23.8",
+    "ruff": "0.11.13",
+    "poetry": "2.5.1"
+  },
+  "published": false,
+  "service_restarted": false
+}

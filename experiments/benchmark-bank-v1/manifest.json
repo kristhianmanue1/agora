@@ -1,0 +1,65 @@
+{
+  "schema": "aria/benchmark-evidence-bank/v1",
+  "artifacts": [
+    {
+      "path": "experiments/memos-long-reserved-v1/cases.json",
+      "sha256": "4e875991a0731eda87c624391ff29153c78597f28024f9da0ba00ee27c7f7df1"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v1/freeze.json",
+      "sha256": "bbb21f3f495e836bc542e6e97b7b45cc2e4c4884729b634614dfb4d1af5dca12"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v1/comparison.json",
+      "sha256": "df49087bbc173d61d94514a2e9582ee93f7a4724f01d9d3f202001f69e97bc44"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v1/memos-usage.json",
+      "sha256": "1710071c7ce6c0bf37fb0e43a5c7a32eb4dcf12cd961e89542dce66f0a42cb0a"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v1/assessment.json",
+      "sha256": "6ec86b0cb6da1c486fa2fdc4aa691d43584f47ea378a3d1186fcaee9f4d6116d"
+    },
+    {
+      "path": "experiments/scope-vigency-repair-v1/result.json",
+      "sha256": "e6c83fa3b76c04d56cec322383385c4f59d683e836c55a6dfb01626f896f9b4c"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/plan-cli-result.json",
+      "sha256": "8aea4b83c77e1bf8fda9edf25769b2d8f0a78fb2d25fefd1025f3a9f72bebfec"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/memos-validation.json",
+      "sha256": "accc7277f7537a2d06155dd328a9886217ce567055fc1fbbf477f59097a74b01"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/validation-tools.txt",
+      "sha256": "122af638b4a8569c5fa8213cfcc8bd1d9b2f43be22a13314ec1635ee1e45c7fb"
+    },
+    {
+      "path": "experiments/ankla-transitions-v1/result.json",
+      "sha256": "3a693cde8ae35b98ef16a9b61d6421fcf5f423dee8b6c6dc5bdfcfee232de273"
+    },
+    {
+      "path": "experiments/ankla-memos-v1/result.json",
+      "sha256": "c07eedc33204331660f793e02f569e7ee7a5690f374b793f84922cd80fe312f3"
+    },
+    {
+      "path": "experiments/memos-skopos-agora-v1/result.json",
+      "sha256": "23f9702ae7629c60eba489ce6af467e2601b5266b49b1b6978d59ffb08a165b2"
+    }
+  ],
+  "expected_accounting": {
+    "cases": 4,
+    "memos_http_records": 14,
+    "memos_observed_tokens": 35353,
+    "agora_observed_tokens": 15780,
+    "agora_rejected": 2
+  },
+  "limits": [
+    "Local integrity relative to this manifest, not authenticity against a malicious manifest editor",
+    "Observed LLM tokens, not full monetary or infrastructure cost",
+    "Producer semantic labels, not independently certified truth"
+  ]
+}

@@ -491,3 +491,15 @@ Se corrige el diagnóstico anterior de MemOS: el filtro debe usar
 control inverso sólo archivados. Chat respondió miércoles y fecha desconocida.
 No hubo nuevo parche MemOS ni reinicio de 9696; los dos arreglos previos continúan
 locales, pendientes de gates completos. No tratar búsqueda sin filtro como vigente.
+
+### Banco verificable y scope-guard en generate-plan
+
+[Base del banco](../experiments/benchmark-bank-v1/README.md): generate-plan incorpora
+--scope-guard para citas literales e IDs y expone presupuesto verificado y necesidad
+de ampliar. Dos recorridos CLI con respuestas conservadas pasan sin HTTP.
+verify_benchmark_evidence.py comprueba hashes, denominadores y tokens de la campaña
+conservada; no certifica semántica ni costes no observados.
+
+Herramientas instaladas en entorno temporal autorizado: make format pasó en copia
+desechable de MemOS, pytest dirigido 55 passed / 3 integración Neo4j skipped. Se
+aplicó sólo formato a archivos propios. Parches locales sin publicar ni promover.

@@ -64,6 +64,7 @@ def parser():
     group=s.add_mutually_exclusive_group(required=True)
     group.add_argument('--live',action='store_true');group.add_argument('--response')
     s.add_argument('--citation-mode',choices=('literal','ids'),default='literal')
+    s.add_argument('--scope-guard',action='store_true',help='Exigir revisión/ampliación explícita antes de cerrar una lectura parcial.')
     from .coverage_recovery import add_command as add_coverage_plan
     add_coverage_plan(sub)
     from .recovery_generation import add_command as add_recovery_generation
