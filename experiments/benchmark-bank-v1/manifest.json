@@ -380,6 +380,26 @@
     {
       "path": "experiments/selection-comparison-v1/run.py",
       "sha256": "efe7aa624ae6728d5485ea234c1b5f562216dd36b270a60923b14df95dfed173"
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/README.md",
+      "sha256": "7f33805d1bc679f7de1dc5df9eb000e64e1e0630742b0d9bc1cfbb2ce0ad68e3"
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/freeze.json",
+      "sha256": "7da21700985565ed68b79082b0f83a407f428cfe11778d3c0e6665d938759c91"
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/ranking.json",
+      "sha256": "845f7436375d5d6280a92946fc008d0dfbcb24ea8f01a4e35385eca0a01f970d"
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/result.json",
+      "sha256": "171d4a5d1c7abb682c6d24063506cc37bb1ed081df5369f99a2814f4143a703a"
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/run.py",
+      "sha256": "31d0457952ec4aad4399979f36fa69455b2c45a9cda396ff3347cb89a217ddf1"
     }
   ],
   "expected_accounting": {

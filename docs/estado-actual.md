@@ -550,3 +550,13 @@ cero candidatos; traducción inglesa recupera como máximo 2/4 párrafos del pla
 manual, con 11.010 bytes entregados. No basta ampliar presupuesto. Próxima prueba:
 subpreguntas explícitas en idioma de fuente separadas de instrucciones de respuesta.
 Sin cambio de código, promoción automática ni comparación nueva con MemOS.
+
+
+### Subpreguntas: mejora limitada, ranking aún insuficiente
+
+[Prueba local](../experiments/subquestion-comparison-v1/README.md): separar dos
+preguntas inglesas recupera el etiquetado con 5.000 bytes, pero no supera 2/4
+párrafos manuales. Arquitectura/predicción quedan en posiciones 11/12 para la
+consulta de predicción. Ocho condiciones, cero llamadas API, sin cambio de producto.
+Próxima intervención propuesta: ranking optativo con filtrado de palabras frecuentes
+y ponderación discriminativa, evaluado sin ampliar presupuestos para forzar un pase.

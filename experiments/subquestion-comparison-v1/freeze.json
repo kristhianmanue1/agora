@@ -1,0 +1,86 @@
+{
+  "frozen_at": "2026-10-03T18:15:58.123931+00:00",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "manual_plan_sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214",
+  "code_commit": "86f951426211b17b9b765e18da30565f1be396aa",
+  "method": "paragraphs-equal; references withheld from selector",
+  "conditions": [
+    {
+      "id": "single-clean-5000-3",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3
+    },
+    {
+      "id": "single-clean-5000-6",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6
+    },
+    {
+      "id": "single-clean-12000-3",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3
+    },
+    {
+      "id": "single-clean-12000-6",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6
+    },
+    {
+      "id": "split-two-5000-3",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3
+    },
+    {
+      "id": "split-two-5000-6",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6
+    },
+    {
+      "id": "split-two-12000-3",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3
+    },
+    {
+      "id": "split-two-12000-6",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6
+    }
+  ],
+  "scope": "known-case diagnostic; producer-authored queries; no model or automatic translation"
+}

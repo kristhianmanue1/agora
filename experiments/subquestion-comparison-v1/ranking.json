@@ -1,0 +1,153 @@
+[
+  {
+    "query": "How were human satisfaction labels collected, rated, mapped and excluded?",
+    "reference_ranks": [
+      {
+        "range": [
+          12584,
+          13161
+        ],
+        "containing_paragraph": [
+          12563,
+          13161
+        ],
+        "rank": 6,
+        "overlap": 3,
+        "matched_terms": [
+          "and",
+          "human",
+          "satisfaction"
+        ]
+      },
+      {
+        "range": [
+          13163,
+          13748
+        ],
+        "containing_paragraph": [
+          13163,
+          13748
+        ],
+        "rank": 4,
+        "overlap": 4,
+        "matched_terms": [
+          "and",
+          "collected",
+          "mapped",
+          "were"
+        ]
+      },
+      {
+        "range": [
+          14773,
+          15968
+        ],
+        "containing_paragraph": [
+          14754,
+          15968
+        ],
+        "rank": 17,
+        "overlap": 2,
+        "matched_terms": [
+          "and",
+          "satisfaction"
+        ]
+      },
+      {
+        "range": [
+          15970,
+          16837
+        ],
+        "containing_paragraph": [
+          15970,
+          16837
+        ],
+        "rank": 18,
+        "overlap": 2,
+        "matched_terms": [
+          "and",
+          "satisfaction"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "How does the trained model predict satisfaction from dialogue context?",
+    "reference_ranks": [
+      {
+        "range": [
+          12584,
+          13161
+        ],
+        "containing_paragraph": [
+          12563,
+          13161
+        ],
+        "rank": 5,
+        "overlap": 6,
+        "matched_terms": [
+          "context",
+          "dialogue",
+          "from",
+          "predict",
+          "satisfaction",
+          "the"
+        ]
+      },
+      {
+        "range": [
+          13163,
+          13748
+        ],
+        "containing_paragraph": [
+          13163,
+          13748
+        ],
+        "rank": 34,
+        "overlap": 2,
+        "matched_terms": [
+          "dialogue",
+          "the"
+        ]
+      },
+      {
+        "range": [
+          14773,
+          15968
+        ],
+        "containing_paragraph": [
+          14754,
+          15968
+        ],
+        "rank": 11,
+        "overlap": 5,
+        "matched_terms": [
+          "dialogue",
+          "from",
+          "model",
+          "satisfaction",
+          "the"
+        ]
+      },
+      {
+        "range": [
+          15970,
+          16837
+        ],
+        "containing_paragraph": [
+          15970,
+          16837
+        ],
+        "rank": 12,
+        "overlap": 5,
+        "matched_terms": [
+          "context",
+          "dialogue",
+          "model",
+          "satisfaction",
+          "the"
+        ]
+      }
+    ]
+  }
+]
