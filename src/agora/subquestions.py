@@ -19,7 +19,7 @@ def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1
     Equal per-question quotas are deliberately conservative: no unused budget
     redistribution, and no claim of exhaustive search or semantic coverage.
     """
-    if strategy not in ('paragraphs-equal', 'functions-adaptive'):
+    if strategy not in ('paragraphs-equal', 'functions-adaptive', 'paragraphs-idf'):
         raise SourceError('invalid_retrieval_strategy')
     integer(budget, 1, SEARCH_LIMIT, 'invalid_content_budget')
     integer(top_k, 1, 32, 'invalid_top_k')
@@ -57,7 +57,7 @@ def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1
         quota = budget // len(questions)
         ranges, reports = [], []
         for q in questions:
-            selected, retrieval = lexical_ranges(full, q['query'], quota, top_k)
+            selected, retrieval = lexical_ranges(full, q['query'], quota, top_k, ranking='idf' if strategy == 'paragraphs-idf' else 'overlap')
             ranges.extend(selected)
             reports.append(dict(id=q['id'], query=q['query'], quota_bytes=quota,
                                 candidate_status='retrieved' if selected else 'no_candidates_within_quota',
@@ -69,9 +69,9 @@ def prepare_subquestions(adapter, revision, specification, budget=12000, top_k=1
         report.update(reference_ranges=q['reference_ranges'], missing_reference_ranges=missing,
                       reference_coverage='unknown' if not q['reference_ranges'] else 'partial' if missing else 'covered',
                       semantic_support='not_verified')
-    return dict(schema='agora/subquestions-plan/v1-experimental' if strategy == 'paragraphs-equal' else 'agora/subquestions-plan/v2-experimental', source_sha256=revision,
+    return dict(schema={'paragraphs-equal':'agora/subquestions-plan/v1-experimental', 'functions-adaptive':'agora/subquestions-plan/v2-experimental', 'paragraphs-idf':'agora/subquestions-plan/v4-idf-experimental'}[strategy], source_sha256=revision,
                 source_id=adapter.source_id, budget_bytes=budget, top_k=top_k,
-                allocation='equal_quotas_without_redistribution' if strategy == 'paragraphs-equal' else 'initial_equal_then_shared_remainder', questions=reports,
+                allocation='equal_quotas_without_redistribution' if strategy != 'functions-adaptive' else 'initial_equal_then_shared_remainder', questions=reports,
                 envelope=envelope, delivered_bytes=envelope['delivered_bytes'] if envelope else 0,
                 reference_basis='caller_declared_ranges_not_exhaustive',
                 global_completeness='not_established', semantic_support='not_verified',

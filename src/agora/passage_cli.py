@@ -35,7 +35,7 @@ def main():
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=False)
     attempts = 0
-    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py", "evidence.py", "evidence_ids.py", "passage_view.py")
+    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py", "evidence.py", "evidence_ids.py", "passage_view.py", "weighted_terms.py")
     initial_hashes = {name: digest(Path(__file__).with_name(name).read_bytes()) for name in modules}
 
     def provider(system, user):

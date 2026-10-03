@@ -262,3 +262,13 @@ antes del proveedor. El control de alcance está siempre activo para este contra
 [Ejemplo completo reproducible](../experiments/explicit-plan-v1/README.md).
 No equivale a selección automática ni prueba de suficiencia semántica. Mostrar el
 resultado con `agora.passage_view` conserva juntos respuesta, faltantes y alcance.
+
+
+## Ranking alternativo optativo para subpreguntas
+
+`retrieve-subquestions --strategy paragraphs-idf` usa coincidencias exactas con
+filtrado de palabras frecuentes inglesas y ponderación IDF por párrafo. Mantiene
+las cuotas y expansión a vecinos; no traduce ni realiza búsqueda semántica.
+Genera `agora/subquestions-plan/v4-idf-experimental`, reproducible por `generate-plan`.
+`paragraphs-equal` sigue predeterminado y los contratos anteriores no cambian.
+[Algoritmo, comparación y límites](../experiments/idf-comparison-v1/README.md).

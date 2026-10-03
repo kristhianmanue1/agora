@@ -59,7 +59,7 @@ def parser():
         s.add_argument('--'+name,required=True)
     s.add_argument('--budget',type=int,default=12000)
     s.add_argument('--top-k',type=int,default=1)
-    s.add_argument('--strategy',choices=('paragraphs-equal','functions-adaptive'),default='paragraphs-equal')
+    s.add_argument('--strategy',choices=('paragraphs-equal','functions-adaptive','paragraphs-idf'),default='paragraphs-equal')
     s=sub.add_parser('generate-plan',help='Generar candidato limitado a un plan de subpreguntas verificado.')
     for name in ('source','plan','expected-plan-sha256','question','out'):
         s.add_argument('--'+name,required=True)

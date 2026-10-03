@@ -1,0 +1,224 @@
+{
+  "frozen_at": "2026-10-03T18:27:29.750511+00:00",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "manual_plan_sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214",
+  "code_commit": "86f951426211b17b9b765e18da30565f1be396aa",
+  "method": "paragraphs-equal; references withheld from selector",
+  "conditions": [
+    {
+      "id": "single-clean-5000-3-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "single-clean-5000-3-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "single-clean-5000-6-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "single-clean-5000-6-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "single-clean-12000-3-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "single-clean-12000-3-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "single-clean-12000-6-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "single-clean-12000-6-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "split-two-5000-3-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "split-two-5000-3-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "split-two-5000-6-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "split-two-5000-6-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "split-two-12000-3-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "split-two-12000-3-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "split-two-12000-6-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "split-two-12000-6-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "es-5000-paragraphs-equal",
+      "mode": "spanish",
+      "queries": [
+        "\u00bfC\u00f3mo se recogieron las etiquetas humanas de satisfacci\u00f3n, qu\u00e9 escala se us\u00f3 y qu\u00e9 mapeos o exclusiones est\u00e1n documentados? Distingue esto del mecanismo de predicci\u00f3n entrenado. Responde en espa\u00f1ol. Si una f\u00f3rmula falta, decl\u00e1rala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminaci\u00f3n o mediante expresiones como \u00ablos restantes\u00bb. Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "es-5000-paragraphs-idf",
+      "mode": "spanish",
+      "queries": [
+        "\u00bfC\u00f3mo se recogieron las etiquetas humanas de satisfacci\u00f3n, qu\u00e9 escala se us\u00f3 y qu\u00e9 mapeos o exclusiones est\u00e1n documentados? Distingue esto del mecanismo de predicci\u00f3n entrenado. Responde en espa\u00f1ol. Si una f\u00f3rmula falta, decl\u00e1rala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminaci\u00f3n o mediante expresiones como \u00ablos restantes\u00bb. Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    },
+    {
+      "id": "es-12000-paragraphs-equal",
+      "mode": "spanish",
+      "queries": [
+        "\u00bfC\u00f3mo se recogieron las etiquetas humanas de satisfacci\u00f3n, qu\u00e9 escala se us\u00f3 y qu\u00e9 mapeos o exclusiones est\u00e1n documentados? Distingue esto del mecanismo de predicci\u00f3n entrenado. Responde en espa\u00f1ol. Si una f\u00f3rmula falta, decl\u00e1rala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminaci\u00f3n o mediante expresiones como \u00ablos restantes\u00bb. Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal"
+    },
+    {
+      "id": "es-12000-paragraphs-idf",
+      "mode": "spanish",
+      "queries": [
+        "\u00bfC\u00f3mo se recogieron las etiquetas humanas de satisfacci\u00f3n, qu\u00e9 escala se us\u00f3 y qu\u00e9 mapeos o exclusiones est\u00e1n documentados? Distingue esto del mecanismo de predicci\u00f3n entrenado. Responde en espa\u00f1ol. Si una f\u00f3rmula falta, decl\u00e1rala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminaci\u00f3n o mediante expresiones como \u00ablos restantes\u00bb. Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf"
+    }
+  ],
+  "scope": "known-case diagnostic; producer-authored queries; no model or automatic translation",
+  "algorithm": "sum unique exact-match IDF: log((N+1)/(df+1))+1; EN stop set; no stemming, translation, tuning or length normalization",
+  "implementation_hashes": {
+    "weighted_terms.py": "efd190e55ffce5844d2cf90db51c476154f4995124cda8ac6b59b0d4dc142378",
+    "passages.py": "cb0823f9fad05b0e4780e0f49da23462ea353a39947a3d9325200e4fd25750d0",
+    "subquestions.py": "436ad18fdb7a796dba8fa776e14b5dcfabfecd755645cf93252c118278060c53"
+  }
+}

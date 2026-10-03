@@ -1,0 +1,2405 @@
+{
+  "schema": "aria/idf-comparison/v1",
+  "conditions": [
+    {
+      "id": "single-clean-5000-3-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4708,
+      "bytes_outside_manual_reference": 4708,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ]
+      ],
+      "seconds": 0.00437683400000001,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-5000-3-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4826,
+      "bytes_outside_manual_reference": 4826,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.006101374999999992,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-5000-6-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 577,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 1,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4968,
+      "bytes_outside_manual_reference": 4391,
+      "selected_ranges": [
+        [
+          3236,
+          4245
+        ],
+        [
+          5274,
+          6034
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.003547207999999996,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              3236,
+              4245
+            ],
+            [
+              5274,
+              6034
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-5000-6-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 577,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 1,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4952,
+      "bytes_outside_manual_reference": 4375,
+      "selected_ranges": [
+        [
+          3236,
+          4245
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          22101,
+          23350
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.006048666999999994,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              3236,
+              4245
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              22101,
+              23350
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-12000-3-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 5315,
+      "bytes_outside_manual_reference": 5315,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ]
+      ],
+      "seconds": 0.0034055000000000057,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-12000-3-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 6786,
+      "bytes_outside_manual_reference": 6786,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          24020,
+          24567
+        ],
+        [
+          24569,
+          25461
+        ],
+        [
+          25463,
+          25764
+        ]
+      ],
+      "seconds": 0.00564295799999999,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              24020,
+              24567
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-12000-6-paragraphs-equal",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 10897,
+      "bytes_outside_manual_reference": 9735,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          1010,
+          2062
+        ],
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          11960,
+          12561
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          24020,
+          24567
+        ],
+        [
+          24569,
+          25461
+        ],
+        [
+          25463,
+          25764
+        ]
+      ],
+      "seconds": 0.003709667,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              1010,
+              2062
+            ],
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              11960,
+              12561
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              24020,
+              24567
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-clean-12000-6-paragraphs-idf",
+      "mode": "single-clean",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 11823,
+      "bytes_outside_manual_reference": 10661,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          1010,
+          2062
+        ],
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          11960,
+          12561
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          21546,
+          22099
+        ],
+        [
+          22101,
+          23350
+        ],
+        [
+          23352,
+          23593
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.005634625000000004,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              1010,
+              2062
+            ],
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              11960,
+              12561
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              21546,
+              22099
+            ],
+            [
+              22101,
+              23350
+            ],
+            [
+              23352,
+              23593
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-5000-3-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 585,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 1,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4748,
+      "bytes_outside_manual_reference": 4163,
+      "selected_ranges": [
+        [
+          66,
+          1008
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          16839,
+          17342
+        ]
+      ],
+      "seconds": 0.006235292000000017,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 2500,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              13163,
+              13748
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              66,
+              1008
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              16839,
+              17342
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-5000-3-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4943,
+      "bytes_outside_manual_reference": 3781,
+      "selected_ranges": [
+        [
+          3236,
+          4245
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          14097,
+          14752
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.011403791999999996,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 2500,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              8124,
+              9328
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              14097,
+              14752
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              3236,
+              4245
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-5000-6-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 585,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 1,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4928,
+      "bytes_outside_manual_reference": 4343,
+      "selected_ranges": [
+        [
+          66,
+          1008
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4865,
+          5045
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          16839,
+          17342
+        ]
+      ],
+      "seconds": 0.006301416999999976,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 2500,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              4865,
+              5045
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              13163,
+              13748
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              66,
+              1008
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              16839,
+              17342
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-5000-6-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4943,
+      "bytes_outside_manual_reference": 3781,
+      "selected_ranges": [
+        [
+          3236,
+          4245
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          14097,
+          14752
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.010792083000000008,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 2500,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              8124,
+              9328
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              14097,
+              14752
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              3236,
+              4245
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-12000-3-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 9886,
+      "bytes_outside_manual_reference": 8724,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          1010,
+          2062
+        ],
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          5047,
+          5272
+        ],
+        [
+          5274,
+          6034
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          13750,
+          14095
+        ]
+      ],
+      "seconds": 0.0064438750000000156,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 6000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              13750,
+              14095
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              1010,
+              2062
+            ],
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              5047,
+              5272
+            ],
+            [
+              5274,
+              6034
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-12000-3-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 3,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 10372,
+      "bytes_outside_manual_reference": 9210,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          1010,
+          2062
+        ],
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          13750,
+          14095
+        ],
+        [
+          24020,
+          24567
+        ],
+        [
+          24569,
+          25461
+        ],
+        [
+          25463,
+          25764
+        ]
+      ],
+      "seconds": 0.010137000000000007,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 6000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              13750,
+              14095
+            ],
+            [
+              24020,
+              24567
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              1010,
+              2062
+            ],
+            [
+              2064,
+              3234
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-12000-6-paragraphs-equal",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 11168,
+      "bytes_outside_manual_reference": 10006,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          1010,
+          2062
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          5274,
+          6034
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          10433,
+          10849
+        ],
+        [
+          10851,
+          11958
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          14097,
+          14752
+        ],
+        [
+          16839,
+          17342
+        ],
+        [
+          24569,
+          25461
+        ]
+      ],
+      "seconds": 0.006435957999999992,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 6000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              9330,
+              9937
+            ],
+            [
+              10433,
+              10849
+            ],
+            [
+              10851,
+              11958
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              14097,
+              14752
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              1010,
+              2062
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              5274,
+              6034
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              16839,
+              17342
+            ],
+            [
+              24569,
+              25461
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "split-two-12000-6-paragraphs-idf",
+      "mode": "split-two",
+      "queries": [
+        "How were human satisfaction labels collected, rated, mapped and excluded?",
+        "How does the trained model predict satisfaction from dialogue context?"
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 8560,
+      "bytes_outside_manual_reference": 7398,
+      "selected_ranges": [
+        [
+          0,
+          64
+        ],
+        [
+          66,
+          1008
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          5047,
+          5272
+        ],
+        [
+          5274,
+          6034
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          14097,
+          14752
+        ],
+        [
+          24569,
+          25461
+        ],
+        [
+          25463,
+          25764
+        ]
+      ],
+      "seconds": 0.010174458999999997,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 6000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": [
+            [
+              3236,
+              4245
+            ],
+            [
+              4247,
+              4798
+            ],
+            [
+              7346,
+              7615
+            ],
+            [
+              7617,
+              8122
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              13163,
+              13748
+            ],
+            [
+              14097,
+              14752
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        },
+        {
+          "id": "P2",
+          "selected_ranges": [
+            [
+              0,
+              64
+            ],
+            [
+              66,
+              1008
+            ],
+            [
+              3236,
+              4245
+            ],
+            [
+              5047,
+              5272
+            ],
+            [
+              5274,
+              6034
+            ],
+            [
+              8124,
+              9328
+            ],
+            [
+              12563,
+              13161
+            ],
+            [
+              24569,
+              25461
+            ],
+            [
+              25463,
+              25764
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-5000-paragraphs-equal",
+      "mode": "spanish",
+      "queries": [
+        "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.0034556250000000177,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": []
+        }
+      ]
+    },
+    {
+      "id": "es-5000-paragraphs-idf",
+      "mode": "spanish",
+      "queries": [
+        "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 5000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.005296999999999996,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 5000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": []
+        }
+      ]
+    },
+    {
+      "id": "es-12000-paragraphs-equal",
+      "mode": "spanish",
+      "queries": [
+        "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-equal",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.003073791999999992,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": []
+        }
+      ]
+    },
+    {
+      "id": "es-12000-paragraphs-idf",
+      "mode": "spanish",
+      "queries": [
+        "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco."
+      ],
+      "budget": 12000,
+      "top_k": 6,
+      "strategy": "paragraphs-idf",
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.005141042000000012,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557,
+      "quota_per_question": 12000,
+      "per_question": [
+        {
+          "id": "P1",
+          "selected_ranges": []
+        }
+      ]
+    }
+  ],
+  "http_attempts": 0,
+  "manual_reference_bytes": 3224,
+  "reference_basis": "producer-selected paragraphs, not exhaustive ground truth",
+  "positive_control": "manual ranges recover 4/4",
+  "negative_control": "empty ranges recover 0/4",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "code_hashes": {
+    "weighted_terms.py": "efd190e55ffce5844d2cf90db51c476154f4995124cda8ac6b59b0d4dc142378",
+    "passages.py": "cb0823f9fad05b0e4780e0f49da23462ea353a39947a3d9325200e4fd25750d0",
+    "subquestions.py": "436ad18fdb7a796dba8fa776e14b5dcfabfecd755645cf93252c118278060c53",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f"
+  }
+}

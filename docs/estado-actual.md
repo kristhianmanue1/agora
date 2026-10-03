@@ -560,3 +560,12 @@ párrafos manuales. Arquitectura/predicción quedan en posiciones 11/12 para la
 consulta de predicción. Ocho condiciones, cero llamadas API, sin cambio de producto.
 Próxima intervención propuesta: ranking optativo con filtrado de palabras frecuentes
 y ponderación discriminativa, evaluado sin ampliar presupuestos para forzar un pase.
+
+
+### Ranking IDF experimental disponible
+
+Se implementó `paragraphs-idf` optativo, con contrato de plan v4 y reproducción
+verificada. 560 tests pasan. En 20 condiciones locales mejora de 1/4 a 2/4 párrafos
+con dos subpreguntas y 5.000 bytes, pero no supera 2/4 ni resuelve español sobre
+fuente inglesa. Sin llamadas a modelos, sin promoción del predeterminado.
+[Expediente y limitaciones](../experiments/idf-comparison-v1/README.md).

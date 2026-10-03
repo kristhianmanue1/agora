@@ -14,13 +14,15 @@ def terms(text):
     return {word for word in re.findall(r'\w+', text.casefold()) if len(word) > 2 and word not in STOP}
 
 
-def lexical_ranges(envelope, question, budget, top_k=3):
+def lexical_ranges(envelope, question, budget, top_k=3, *, ranking="overlap"):
     """Paragraph matches with adjacent paragraph expansion if the budget allows.
 
     Empty retrieval is a search outcome, never proof of absence in the source.
     """
     integer(budget, 1, SEARCH_LIMIT, 'invalid_content_budget')
     integer(top_k, 1, 32, 'invalid_top_k')
+    if ranking not in ('overlap', 'idf'):
+        raise SourceError('invalid_paragraph_ranking')
     text = envelope['spans'][0]['text']
     paragraphs = []
     full = text.encode("utf-8")
@@ -35,6 +37,10 @@ def lexical_ranges(envelope, question, budget, top_k=3):
             start = full.find(raw, offset)
             paragraphs.append((start, start + len(raw), len(terms(block) & query_terms)))
             offset = start + len(raw)
+    if ranking == 'idf':
+        from .weighted_terms import scores
+        values = scores([full[a:b].decode('utf-8') for a,b,_ in paragraphs], question)
+        paragraphs = [(a,b,score) for (a,b,_),score in zip(paragraphs,values)]
     ranked = sorted((i for i, p in enumerate(paragraphs) if p[2]),
                     key=lambda i: (-paragraphs[i][2], paragraphs[i][0]))
     selected = set()
@@ -58,7 +64,7 @@ def lexical_ranges(envelope, question, budget, top_k=3):
                     selected.add(neighbor)
                     used += size
     ranges = [(paragraphs[i][0], paragraphs[i][1]) for i in sorted(selected)]
-    return ranges, {'method': 'lexical-paragraph-overlap/v0.1', 'top_k': top_k,
+    return ranges, {'method': ('lexical-paragraph-idf/v0.1' if ranking == 'idf' else 'lexical-paragraph-overlap/v0.1'), 'top_k': top_k,
                     'matching_paragraphs': len(ranked), 'seed_paragraphs': seeds,
                     'selected_paragraphs': sorted(selected), 'oversized_candidates': skipped,
                     'local_scan_bytes': envelope['source']['source_bytes'],

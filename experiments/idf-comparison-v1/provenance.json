@@ -1,0 +1,7 @@
+{
+  "base_commit": "38de6b8ae6e5bf53d41b54c905e9cd5fc7c83dd1",
+  "tested_tree": "base plus opt-in IDF implementation identified by freeze implementation_hashes",
+  "correction": "freeze.code_commit was inherited from the previous campaign and is historical; it does not identify the code tested here",
+  "tests_passed": 560,
+  "cli_smoke": "retrieve-subquestions --strategy paragraphs-idf produced v4 plan with 4943 bytes and zero provider calls"
+}
