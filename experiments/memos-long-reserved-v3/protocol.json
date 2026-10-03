@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-03T13:52:59.205810+00:00",
+  "review_has_started": false,
+  "files": {
+    "run_agora.py": "e686286c47b162ca00a848de2cc7c9d854fa30ce620366daffd66ef5e78c4e41",
+    "run_memos.py": "78dee5a8e03db0023732f4bd6d97e2df6f377d0ef2ba1fd1c9e6c1bd41d05319",
+    "review.py": "5211fadeaa55233ea39436a0ef6e958fd817e262bac451769fa8659b74312a18"
+  },
+  "note": "Reviewer script fixed before inspecting generated answers; shared full source, source support, global coverage and question clarity; no gold or producer labels in review payloads."
+}

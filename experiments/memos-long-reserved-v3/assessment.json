@@ -1,0 +1,21 @@
+{
+  "authority": "producer comparison, not independent adjudication",
+  "cases": [
+    {
+      "id": "1901.05415-q1",
+      "finding": "Both omit crowdworker rating collection described by human references. They explain model prediction instead. Jev rates both complete; unresolved interpretation/coverage disagreement, not automatic acceptance."
+    },
+    {
+      "id": "1901.05415-q2",
+      "finding": "Question ambiguous: human references separately target dialogue accuracy and satisfaction-classifier F1. MemOS includes 9.4 points/31%; Agora includes 0.28/0.42 F1 and declares partial reading. Jev marks ambiguity, but still supplies complete/omitted coverage choices; do not use those as a settled winner. Agora selected passages lack 9.4/31%, so a global-source support judgement must not silently reinterpret its scoped absence statement."
+    },
+    {
+      "id": "1905.10039-q1",
+      "finding": "Both omit requested evaluation detail. Full source defines outline exact match, boundary exact match and Rouge-1; subscripts are placeholders. Agora selected 3/5 reference paragraphs but did not supply both exact-match meanings. MemOS answers that metric details are unavailable in its memory."
+    },
+    {
+      "id": "1905.10039-q2",
+      "finding": "MemOS supplies major baseline families but then invents a separation between HiStGen paper and WIKIOG paper, which the supplied single paper does not support. Jev marks supported/complete, so its positive label is insufficient to certify the entire answer. Human reference lists vary in granularity; Agora lacks names in its selected context."
+    }
+  ]
+}

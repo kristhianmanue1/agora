@@ -136,6 +136,58 @@
     {
       "path": "experiments/comparative-matrix-v1/matrix.json",
       "sha256": "69171e621e7f0753310981e8b3675ae54ad518e4c69eb0f6180a16056dd0c932"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/agora-receipts.json",
+      "sha256": "96a172c888f2923c714299bef52b4f4d0e0e9efc45424ac3bc5e95c2e5fdd189"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/assessment.json",
+      "sha256": "1fd7f98515e9b718480f6491764eabea8752a95272a7aecce5b0b514ae55a1d8"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/blind-key.json",
+      "sha256": "8e1f5aa304517ddc7560ce8cbfd71b88041d93fb7285ca0ad3ef2dada4f56fec"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/cases.json",
+      "sha256": "96466d4937f7b319cbe8f919fc850a66559748f3cbcec50797cecf404b901f13"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/comparison.json",
+      "sha256": "14e35b43bbe3e0b427c21c0cdffd9b83df8e5dd98de9ed84ebb213cd49d6201d"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/freeze.json",
+      "sha256": "3858b9ef623aeea71c2622e308a53b64592e4b2ae64b5590aa16316f42c8a812"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/http-receipts.json",
+      "sha256": "6f3cfcbcbe98610d2f6ab17869839f52f51df4231c514a7aeb7f021f48c30fa4"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/memos-usage.json",
+      "sha256": "584ac866348e2ab4211e27e54c01ed07dba4ff2490d6ca929c012bdba76c2847"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/protocol.json",
+      "sha256": "9a93a1e4bfbab5bac803873751a83b92ac84f25471a5a5341643512767bc595d"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/references.json",
+      "sha256": "409e765b96d063ee8fed2edf0154bff0fbf0f38ab86eb16ac1d9233ab35d9ee5"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/result.json",
+      "sha256": "e85a287bb3c9a2be7de9749293bb2c602419fd7a2bb17c290d55b0f96e67890c"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/review-labels.json",
+      "sha256": "9ddae9535812d02d30e19916b814bfe2e543df7aa56cf5d928e43e88bf86a0b4"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/review-results.json",
+      "sha256": "3045af4a9ed9abebc72575da26832dbc2ce3237d770b7b49f282eee4bed6a1f9"
     }
   ],
   "expected_accounting": {

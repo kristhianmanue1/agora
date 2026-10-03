@@ -1,0 +1,34 @@
+{
+  "r2383d83c92": {
+    "case_id": "1901.05415-q1",
+    "producer": "agora"
+  },
+  "rbd8ac4f1b7": {
+    "case_id": "1901.05415-q1",
+    "producer": "memos"
+  },
+  "re94fb761b0": {
+    "case_id": "1901.05415-q2",
+    "producer": "agora"
+  },
+  "r34ec6f6b36": {
+    "case_id": "1901.05415-q2",
+    "producer": "memos"
+  },
+  "rc923de123b": {
+    "case_id": "1905.10039-q1",
+    "producer": "agora"
+  },
+  "r682c5f1be5": {
+    "case_id": "1905.10039-q1",
+    "producer": "memos"
+  },
+  "rc7b65eafad": {
+    "case_id": "1905.10039-q2",
+    "producer": "agora"
+  },
+  "r94f067b4c6": {
+    "case_id": "1905.10039-q2",
+    "producer": "memos"
+  }
+}

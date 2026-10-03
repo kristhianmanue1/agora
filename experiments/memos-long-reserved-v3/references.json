@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1901.05415-q1",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          " Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). "
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          "via crowdsourcing"
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1901.05415-q2",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          " an increase of up to 9.4 accuracy points, a 31% improvement."
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "FLOAT SELECTED: Table 6: The accuracy of various models and baselines on the original PERSONACHAT test set.",
+          "Our main result, reported in Table TABREF16 , is that utilizing the deployment examples improves accuracy on the Dialogue task regardless of the number of available supervised (HH) Dialogue examples. The boost in quality is naturally most pronounced when the HH Dialogue training set is small (i.e., where the learning curve is steepest), yielding an increase of up to 9.4 accuracy points, a 31% improvement. However, even when the entire PersonaChat dataset of 131k examples is used—a much larger dataset than what is available for most dialogue tasks—adding deployment examples is still able to provide an additional 1.6 points of accuracy on what is otherwise a very flat region of the learning curve. It is interesting to note that the two types of deployment examples appear to provide complementary signal, with models performing best when they use both example types, despite them coming from the same conversations. We also calculated hit rates with 10,000 candidates (instead of 20), a setup more similar to the interactive setting where there may be many candidates that could be valid responses. In that setting, models trained with the deployment examples continue to outperform their HH-only counterparts by significant margins (see Appendix SECREF8 )."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          " the trained classifier significantly outperforms both the uncertainty-based methods and our original regular expression, by as much as 0.28 and 0.42 F1 points, respectively"
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "As shown by Table TABREF22 , even with only 1k training examples (the amount we used for the experiments in Section SECREF18 ), the trained classifier significantly outperforms both the uncertainty-based methods and our original regular expression, by as much as 0.28 and 0.42 F1 points, respectively."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1905.10039-q1",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "EM-outline, EM-sec, Rouge",
+        "yes_no": null,
+        "evidence": [
+          "EM INLINEFORM0 : evaluates the overall accuracy of the generated outline based on exact matching. That is, if both the predicted section boundaries and the generated section headings in a document exactly match with the ground-truth, we treat the document as a positive sample. Otherwise the document is a negative sample.",
+          "EM INLINEFORM0 : evaluates the accuracy of the section boundary prediction based on exact matching. Namely, if the predicted section boundaries in a document exactly match with the ground-truth, we treat the document as a positive sample. Otherwise the document is a negative sample."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "EMoutline, EMsec, Rougehead",
+        "yes_no": null,
+        "evidence": [
+          "FLOAT SELECTED: Table 3: Model analysis of our HiStGen model under the automatic evaluation. Two-tailed t-tests demonstrate the improvements of HiStGen to the variants are statistically significant (‡ indicates p-value < 0.01)."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          "EM INLINEFORM0 ",
+          "EM INLINEFORM0",
+          "Rouge INLINEFORM0"
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "To measure the quality of outline generated by our model and the baselines, we employ three automatic metrics, namely",
+          "[leftmargin=*]",
+          "EM INLINEFORM0 : evaluates the overall accuracy of the generated outline based on exact matching. That is, if both the predicted section boundaries and the generated section headings in a document exactly match with the ground-truth, we treat the document as a positive sample. Otherwise the document is a negative sample.",
+          "EM INLINEFORM0 : evaluates the accuracy of the section boundary prediction based on exact matching. Namely, if the predicted section boundaries in a document exactly match with the ground-truth, we treat the document as a positive sample. Otherwise the document is a negative sample.",
+          "Rouge INLINEFORM0 evaluates the similarities between generated headings and referenced headings only for the correctly predicted sections. Specifically, we employ Rouge-1 BIBREF39 to measure the uni-gram recall on the reference headings."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1905.10039-q2",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "IG CRF+GHD",
+        "yes_no": null,
+        "evidence": [
+          "FLOAT SELECTED: Table 4: Comparisons between our HiStGen and step-wise baselines in terms of EMoutline (%)."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "HiStGen_P, HiStGen_S, HiStGen_H, HiStGen_R, HiStGen_PSHR, IGCRF+TextRank, IGCRF+TopicRank, IGCRF+Hier, IGCRF+GHD, IGGPD+TextRank, IGGPD+TopicRank, IGGPD+Hier, IGGPD+GHD, GATextRank, GATopicRank, GAHier, GAGHD",
+        "yes_no": null,
+        "evidence": [
+          "FLOAT SELECTED: Table 3: Model analysis of our HiStGen model under the automatic evaluation. Two-tailed t-tests demonstrate the improvements of HiStGen to the variants are statistically significant (‡ indicates p-value < 0.01).",
+          "FLOAT SELECTED: Table 4: Comparisons between our HiStGen and step-wise baselines in terms of EMoutline (%)."
+        ]
+      }
+    ]
+  }
+]

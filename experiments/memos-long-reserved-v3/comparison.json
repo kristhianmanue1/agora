@@ -1,0 +1,361 @@
+[
+  {
+    "id": "1901.05415-q1",
+    "question": "how is user satisfaction estimated?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Según los pasajes seleccionados (no el documento completo), la satisfacción del usuario se estima mediante una tarea auxiliar de predicción: además de la tarea principal de Diálogo, el chatbot se entrena para predecir la satisfacción de su interlocutor con sus respuestas. En cada turno, durante el despliegue, el agente observa el contexto (el historial de la conversación) y lo usa para predecir la satisfacción de su compañero; si la puntuación de satisfacción supera un umbral especificado, extrae un nuevo ejemplo de Diálogo Humano-Bot, y si el usuario parece insatisfecho, solicita retroalimentación. La tasa de ejemplos nuevos se ajusta subiendo o bajando ese umbral de satisfacción. Arquitecturalmente, la tarea de Satisfacción usa parámetros de modelo separados de las tareas de Diálogo y Retroalimentación.",
+    "agora_usage": {
+      "completion_tokens": 844,
+      "completion_tokens_details": {
+        "reasoning_tokens": 302
+      },
+      "prompt_tokens": 2679,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3523
+    },
+    "agora_citations": [
+      {
+        "quote": "As our agent engages in conversation, it also estimates user satisfaction in its responses.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 411,
+            "end_byte": 502
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Concretely, in addition to being trained on the primary Dialogue task, the agent is trained to predict its speaking partner's satisfaction with its responses.",
+        "matches": [
+          {
+            "passage": 5,
+            "start_byte": 3422,
+            "end_byte": 3580
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "the dialogue agent is trained on two tasks—Dialogue (next utterance prediction, or what should I say next?) and Satisfaction (how satisfied is my speaking partner with my responses?)—using whatever supervised training data is available",
+        "matches": [
+          {
+            "passage": 11,
+            "start_byte": 7745,
+            "end_byte": 7984
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Each turn, the agent observes the context INLINEFORM0 (i.e., the conversation history) and uses it to predict its next utterance INLINEFORM1 and its partner's satisfaction INLINEFORM2 .",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 8256,
+            "end_byte": 8441
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "If the satisfaction score is above a specified threshold INLINEFORM3 , the agent extracts a new Human-Bot (HB) Dialogue example using the previous context INLINEFORM4 and the human's response INLINEFORM5 and continues the conversation.",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 8442,
+            "end_byte": 8677
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "If, however, the user seems unsatisfied with its previous response INLINEFORM6 , the agent requests feedback with a question INLINEFORM7",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 8678,
+            "end_byte": 8814
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "The rate at which new Dialogue or Feedback examples are collected can be adjusted by raising or lowering the satisfaction threshold INLINEFORM9 (we use INLINEFORM10 ).",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 9038,
+            "end_byte": 9205
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Whenever the user's estimated satisfaction is below a specified threshold, the chatbot responds “Oops! Sorry. What should I have said instead?”.",
+        "matches": [
+          {
+            "passage": 15,
+            "start_byte": 14157,
+            "end_byte": 14305
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "using separate model parameters for the Satisfaction task",
+        "matches": [
+          {
+            "passage": 16,
+            "start_byte": 15449,
+            "end_byte": 15506
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 10891,
+    "source_bytes": 45557,
+    "gold_text_evidence_count": 1,
+    "gold_evidence_in_full_source": 1,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "Según el paper que compartiste, la satisfacción del usuario se estima de la siguiente manera:\n\n**Mecanismo principal:**\n- El chatbot se entrena con una tarea principal de Diálogo (predicción de la siguiente intervención) más una **tarea auxiliar de Satisfacción**, cuyo objetivo es predecir la satisfacción del interlocutor en cada turno (hecho 2).\n- Esta estimación se usa de forma práctica: cuando la satisfacción estimada supera un umbral, las respuestas del usuario se convierten en ejemplos de entrenamiento de Diálogo Humano-Bot que el agente imita; cuando el agente considera que cometió un error, pide retroalimentación (\"Oops! Sorry. What should I have said instead?\") y esa respuesta del usuario se usa para entrenar la tarea auxiliar de Feedback (hecho 2).\n\n**Rendimiento del clasificador:**\n- El clasificador de satisfacción entrenado superó a métodos basados en la incertidumbre del modelo por hasta 0.28 F1 y a un enfoque basado en expresiones regulares por 0.42 F1 en la detección de insatisfacción del usuario (hecho 1).\n\n**Arquitectura:**\n- Los modelos del paper emplean arquitecturas Transformer implementadas en PyTorch dentro del framework ParlAI, con embeddings fastText (hecho 2), aunque la evidencia disponible no especifica de forma explícita si esto aplica de manera idéntica al modelo de satisfacción en particular.\n\n**Información no disponible:**\nLos datos que tengo no detallan cómo se recolectaron las etiquetas de satisfacción para entrenar el clasificador, qué características específicas usa como entrada, ni cuál es el valor exacto del umbral de decisión. Si necesitas esos detalles, habría que consultar las secciones correspondientes del paper directamente.",
+    "memos_retrieved_memories": [
+      "According to the paper the user shared, adding deployment examples improved Dialogue accuracy regardless of supervised data size: up to 9.4 accuracy points (a 31% improvement) with small Human-Human training sets, and an additional 1.6 points even with the full 131k PersonaChat dataset. About 20k Feedback examples benefited the agent roughly as much as 60k Human-Bot Dialogue examples; the best model achieved 46.3 accuracy on Dialogue and 68.4 on Feedback; 'fresher' feedback collected in stages yielded statistically significant larger gains (about 0.4 points); excluding dissatisfied responses from Human-Bot examples avoided a 1.2-point drop; and the trained satisfaction classifier outperformed model-uncertainty-based methods by up to 0.28 F1 and a regular-expression approach by 0.42 F1 on detecting user dissatisfaction.",
+      "The paper the user shared on October 3, 2026 describes a self-feeding chatbot trained on a primary Dialogue task (next utterance prediction) plus an auxiliary Satisfaction task (predicting the speaking partner's satisfaction). When the estimated satisfaction is above a threshold, the user's responses become Human-Bot Dialogue training examples to imitate; when the agent believes it made a mistake, it asks 'Oops! Sorry. What should I have said instead?' and the user's feedback becomes a training example for an auxiliary Feedback task. The models use Transformer architectures implemented in PyTorch within the ParlAI framework with fastText embeddings, and the datasets and models are available via ParlAI.",
+      "The user appears to be interested in NLP and dialogue systems research, particularly lifelong/continual learning, natural-language feedback, and self-improving chatbots, as evidenced by sharing a detailed research paper on self-feeding chatbots on October 3, 2026.",
+      "On October 3, 2026 at 7:51 AM, the user shared the full text of the academic paper 'Learning from Dialogue after Deployment: Feed Yourself, Chatbot!'. The paper proposes the 'self-feeding chatbot,' a dialogue agent that extracts new training examples from the conversations it participates in after deployment, and validates the approach on the PersonaChat chit-chat dataset with over 131k training examples, showing performance improvements regardless of the amount of traditional supervision."
+    ]
+  },
+  {
+    "id": "1901.05415-q2",
+    "question": "by how much did performance improve?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Dentro de los pasajes proporcionados, la mejora del rendimiento del chatbot al aprender del diálogo solo se describe cualitativamente: se indica que 'mejora significativamente el rendimiento', sin cuantificar cuánto. La única cifra explícita de mejora en estos pasajes corresponde a otra actividad: con solo 1k ejemplos de entrenamiento, el clasificador entrenado supera a los métodos basados en incertidumbre por hasta 0.28 puntos F1 y a la expresión regular original por hasta 0.42 puntos F1.",
+    "agora_usage": {
+      "completion_tokens": 2852,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2585
+      },
+      "prompt_tokens": 2373,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 5225
+    },
+    "agora_citations": [
+      {
+        "quote": "we find that learning from dialogue with a self-feeding chatbot significantly improves performance, regardless of the amount of traditional supervision",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 856,
+            "end_byte": 1007
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "finding empirically that regardless of the number of available supervised examples, the dialogue ability of the chatbot is always improved by adding the automatically extracted examples of either type, and improves the most by adding both",
+        "matches": [
+          {
+            "passage": 6,
+            "start_byte": 4559,
+            "end_byte": 4797
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "even with only 1k training examples (the amount we used for the experiments in Section SECREF18 ), the trained classifier significantly outperforms both the uncertainty-based methods and our original regular expression, by as much as 0.28 and 0.42 F1 points, respectively",
+        "matches": [
+          {
+            "passage": 13,
+            "start_byte": 25492,
+            "end_byte": 25763
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 9347,
+    "source_bytes": 45557,
+    "gold_text_evidence_count": 2,
+    "gold_evidence_in_full_source": 2,
+    "gold_evidence_in_agora_selection": 1,
+    "memos_answer": "Según el artículo que compartiste el 3 de octubre de 2026 (*Learning from Dialogue after Deployment: Feed Yourself, Chatbot!*), la mejora en el rendimiento fue la siguiente:\n\n- **Con conjuntos pequeños de entrenamiento Humano-Humano:** añadir ejemplos de despliegue mejoró la precisión en la tarea de Diálogo en hasta **9,4 puntos** de precisión, lo que equivale a una **mejora del 31%**.\n- **Con el conjunto completo de datos (131k ejemplos de PersonaChat):** se obtuvo una **mejora adicional de 1,6 puntos**, demostrando que el enfoque aporta beneficios incluso con supervisión abundante.\n\nDatos adicionales sobre el rendimiento reportado en el artículo:\n\n- Aproximadamente 20k ejemplos de *Feedback* beneficiaron al agente aproximadamente tanto como 60k ejemplos de Diálogo Humano-Bot.\n- El mejor modelo logró **46,3 de precisión en Diálogo** y **68,4 en Feedback**.\n- El feedback \"más fresco\" (recolectado por etapas) produjo ganancias estadísticamente significativas adicionales de unos **0,4 puntos**.\n\nTen en cuenta que estas cifras corresponden únicamente a las tareas de Diálogo y Satisfaction/Feedback evaluadas en el artículo sobre el conjunto PersonaChat; el material compartido no reporta mejoras en otras tareas o conjuntos de datos, por lo que no puedo afirmar nada al respecto.",
+    "memos_retrieved_memories": [
+      "According to the paper the user shared, adding deployment examples improved Dialogue accuracy regardless of supervised data size: up to 9.4 accuracy points (a 31% improvement) with small Human-Human training sets, and an additional 1.6 points even with the full 131k PersonaChat dataset. About 20k Feedback examples benefited the agent roughly as much as 60k Human-Bot Dialogue examples; the best model achieved 46.3 accuracy on Dialogue and 68.4 on Feedback; 'fresher' feedback collected in stages yielded statistically significant larger gains (about 0.4 points); excluding dissatisfied responses from Human-Bot examples avoided a 1.2-point drop; and the trained satisfaction classifier outperformed model-uncertainty-based methods by up to 0.28 F1 and a regular-expression approach by 0.42 F1 on detecting user dissatisfaction.",
+      "On October 3, 2026 at 7:51 AM, the user shared the full text of the academic paper 'Learning from Dialogue after Deployment: Feed Yourself, Chatbot!'. The paper proposes the 'self-feeding chatbot,' a dialogue agent that extracts new training examples from the conversations it participates in after deployment, and validates the approach on the PersonaChat chit-chat dataset with over 131k training examples, showing performance improvements regardless of the amount of traditional supervision.",
+      "The paper the user shared on October 3, 2026 describes a self-feeding chatbot trained on a primary Dialogue task (next utterance prediction) plus an auxiliary Satisfaction task (predicting the speaking partner's satisfaction). When the estimated satisfaction is above a threshold, the user's responses become Human-Bot Dialogue training examples to imitate; when the agent believes it made a mistake, it asks 'Oops! Sorry. What should I have said instead?' and the user's feedback becomes a training example for an auxiliary Feedback task. The models use Transformer architectures implemented in PyTorch within the ParlAI framework with fastText embeddings, and the datasets and models are available via ParlAI.",
+      "The user appears to be interested in NLP and dialogue systems research, particularly lifelong/continual learning, natural-language feedback, and self-improving chatbots, as evidenced by sharing a detailed research paper on self-feeding chatbots on October 3, 2026."
+    ]
+  },
+  {
+    "id": "1905.10039-q1",
+    "question": "what evaluation metrics were used?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Según los pasajes proporcionados, se emplearon tres métricas automáticas para medir la calidad de los esquemas (outlines) generados por el modelo y los baselines. De ellas, solo Rouge-1 se identifica explícitamente: mide el recall de uni-gramas sobre los encabezados de referencia y evalúa la similitud entre encabezados generados y de referencia únicamente para las secciones correctamente predichas. En los análisis de resultados también se hace referencia a la métrica EM (exact match). El nombre de las otras dos métricas no aparece en los pasajes proporcionados, ya que el enunciado 'tres métricas automáticas, a saber' queda truncado en la lista; esto indica ausencia en estos pasajes, no en la fuente completa.",
+    "agora_usage": {
+      "completion_tokens": 1332,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1021
+      },
+      "prompt_tokens": 2538,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3870
+    },
+    "agora_citations": [
+      {
+        "quote": "To measure the quality of outline generated by our model and the baselines, we employ three automatic metrics, namely",
+        "matches": [
+          {
+            "passage": 10,
+            "start_byte": 32253,
+            "end_byte": 32370
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Rouge INLINEFORM0 evaluates the similarities between generated headings and referenced headings only for the correctly predicted sections.",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 32997,
+            "end_byte": 33135
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Specifically, we employ Rouge-1 BIBREF39 to measure the uni-gram recall on the reference headings.",
+        "matches": [
+          {
+            "passage": 12,
+            "start_byte": 33136,
+            "end_byte": 33234
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "the performance of INLINEFORM0 in terms of EM INLINEFORM1 has a significant drop as compared with INLINEFORM2",
+        "matches": [
+          {
+            "passage": 13,
+            "start_byte": 33460,
+            "end_byte": 33569
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "the relative improvement of INLINEFORM19 over INLINEFORM20 is about INLINEFORM21 in terms of EM INLINEFORM22 on the mixture set",
+        "matches": [
+          {
+            "passage": 14,
+            "start_byte": 35720,
+            "end_byte": 35847
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 10468,
+    "source_bytes": 41435,
+    "gold_text_evidence_count": 5,
+    "gold_evidence_in_full_source": 5,
+    "gold_evidence_in_agora_selection": 3,
+    "memos_answer": "No dispongo de esa información en los datos que se me han proporcionado.\n\nLo que sí consta sobre la evaluación del artículo que compartiste es lo siguiente:\n\n- El modelo propuesto, HiStGen, fue comparado contra baselines del estado del arte en generación secuencial, incluyendo métodos paso a paso de tipo IG y GA con CRF, GPD, TextRank, TopicRank, Hier y GHD, mostrando mejoras significativas sobre ellos (Fuente 3).\n- La evaluación se realizó sobre el conjunto de datos WIKIOG, con más de 1.75 millones de pares documento-esquema construidos a partir de artículos de Wikipedia en inglés, en las categorías de celebridades, ciudades y música (Fuente 1).\n\nSin embargo, **las métricas de evaluación específicas** (por ejemplo, si se usaron métricas tipo ROUGE, exactitud, F1 u otras) **no aparecen en la información disponible**, por lo que no puedo indicarlas sin riesgo de inventar datos. Si puedes compartir la sección del artículo donde se describen los experimentos o las métricas, con gusto te las explico en detalle.",
+    "memos_retrieved_memories": [
+      "The paper shared by the user introduces WIKIOG, a public benchmark dataset of over 1.75 million document-outline pairs built from English Wikipedia articles under the 'celebrity', 'cities', and 'music' categories, created to study and evaluate the Outline Generation task. The paper also notes future work on extending the model to produce hierarchical (multi-level) outlines for documents.",
+      "By sharing a detailed research paper on outline generation at 7:53 AM on October 3, 2026, the user demonstrated an active interest in NLP research topics such as document understanding, structured prediction, text summarization, and neural text generation models.",
+      "The paper the user shared proposes HiStGen, a hierarchical structured neural generation model that captures three levels of coherence (between context paragraphs, between a section and its heading, and between context headings). It employs a Markov paragraph dependency mechanism for section boundary identification, a section-aware attention mechanism for section-heading coherence, and a Markov heading dependency mechanism plus a review mechanism for consistent, non-duplicate headings. Experiments showed HiStGen significantly outperformed state-of-the-art sequential generation baselines (including IG and GA step-wise methods with CRF, GPD, TextRank, TopicRank, Hier, and GHD).",
+      "On October 3, 2026 at 7:53 AM, the user shared the full text of an academic paper titled 'Outline Generation: Understanding the Inherent Content Structure of Documents'. The paper introduces the Outline Generation (OG) task, which aims to unveil the inherent content structure of multi-paragraph documents by identifying potential sections and generating corresponding section headings. The task is framed as a novel structured summarization problem and formulated as a hierarchical structured prediction problem (first predicting section boundaries, then generating section headings)."
+    ]
+  },
+  {
+    "id": "1905.10039-q2",
+    "question": "what state of the art models did they compare with?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Según los pasajes suministrados, los autores compararon su modelo (HiStGen) con 'varios modelos secuenciales de generación estado del arte' (state-of-the-art sequential generation models), y los resultados empíricos mostraron que su método superó significativamente a todos los baselines. Sin embargo, los nombres específicos de los modelos comparados no aparecen legibles en estos pasajes: en el estudio de caso los baselines se referencian mediante marcadores de fórmula rotos (INLINEFORM0, INLINEFORM1, etc.). El único modelo nombrado explícitamente es CRF, mencionado en el estudio de caso en relación con la predicción de límites de sección. Este alcance se limita a los pasajes suministrados; las tablas de resultados y la sección de baselines detallada no están incluidas aquí, por lo que no puede confirmarse la lista completa de modelos.",
+    "agora_usage": {
+      "completion_tokens": 1385,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1041
+      },
+      "prompt_tokens": 2925,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "total_tokens": 4310
+    },
+    "agora_citations": [
+      {
+        "quote": "Experimental results on our benchmark dataset demonstrate that our model can significantly outperform several state-of-the-art sequential generation models for the OG task.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 1719,
+            "end_byte": 1891
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "For evaluation, we compare with several state-of-the-art methods to verify the effectiveness of our model. Empirical results demonstrate that outline generation for capturing the inherent content structure is feasible and our proposed method can outperform all the baselines significantly.",
+        "matches": [
+          {
+            "passage": 5,
+            "start_byte": 7445,
+            "end_byte": 7734
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "We show the identified sections and generated headings from our model as well as that from the baseline model INLINEFORM0 .",
+        "matches": [
+          {
+            "passage": 16,
+            "start_byte": 39078,
+            "end_byte": 39201
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "The results show that using current paragraph representation and context label dependency, CRF may not be able to make correct section boundary prediction.",
+        "matches": [
+          {
+            "passage": 16,
+            "start_byte": 39364,
+            "end_byte": 39519
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 11925,
+    "source_bytes": 41435,
+    "gold_text_evidence_count": 0,
+    "gold_evidence_in_full_source": 0,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "Según la evidencia disponible, la comparación con modelos estado del arte está documentada para el trabajo de **HiStGen**. En ese estudio, HiStGen se comparó con baselines secuenciales de generación estado del arte, incluyendo:\n\n- Métodos paso a paso (step-wise) **IG** y **GA**, combinados con **CRF**\n- **GPD**\n- **TextRank**\n- **TopicRank**\n- **Hier**\n- **GHD**\n\nLos experimentos mostraron que HiStGen superó significativamente a todos estos baselines [2].\n\nSi tu pregunta se refiere al **paper del dataset WIKIOG**, debo señalar que la información proporcionada no especifica con qué modelos se compararon en ese trabajo; solo indica que el dataset de más de 1,75 millones de pares documento-esquema fue creado para estudiar y evaluar la tarea de Outline Generation, y que el trabajo futuro contempla extender el modelo para producir esquemas jerárquicos de múltiples niveles [1]. No tengo evidencia para afirmar qué baselines usó ese paper, por lo que no puedo inventar esa información.\n\n¿Podrías confirmar a cuál de los dos trabajos te refieres, para poder darte una respuesta más precisa?",
+    "memos_retrieved_memories": [
+      "The paper shared by the user introduces WIKIOG, a public benchmark dataset of over 1.75 million document-outline pairs built from English Wikipedia articles under the 'celebrity', 'cities', and 'music' categories, created to study and evaluate the Outline Generation task. The paper also notes future work on extending the model to produce hierarchical (multi-level) outlines for documents.",
+      "The paper the user shared proposes HiStGen, a hierarchical structured neural generation model that captures three levels of coherence (between context paragraphs, between a section and its heading, and between context headings). It employs a Markov paragraph dependency mechanism for section boundary identification, a section-aware attention mechanism for section-heading coherence, and a Markov heading dependency mechanism plus a review mechanism for consistent, non-duplicate headings. Experiments showed HiStGen significantly outperformed state-of-the-art sequential generation baselines (including IG and GA step-wise methods with CRF, GPD, TextRank, TopicRank, Hier, and GHD).",
+      "By sharing a detailed research paper on outline generation at 7:53 AM on October 3, 2026, the user demonstrated an active interest in NLP research topics such as document understanding, structured prediction, text summarization, and neural text generation models.",
+      "On October 3, 2026 at 7:53 AM, the user shared the full text of an academic paper titled 'Outline Generation: Understanding the Inherent Content Structure of Documents'. The paper introduces the Outline Generation (OG) task, which aims to unveil the inherent content structure of multi-paragraph documents by identifying potential sections and generating corresponding section headings. The task is framed as a novel structured summarization problem and formulated as a hierarchical structured prediction problem (first predicting section boundaries, then generating section headings)."
+    ]
+  }
+]

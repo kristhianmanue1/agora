@@ -1,0 +1,246 @@
+[
+  {
+    "document_id": "1901.05415",
+    "status": "complete",
+    "http_attempts": 1,
+    "request_sha256": "c59ecfb960c25666ea34853b79a945e0514bfe64ca0bd30f9ea829fa1b031f0a",
+    "model_requested": "jev-1.13.0",
+    "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "r34ec6f6b36_support": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.8,
+          "probabilities": {
+            "supported": 0.87,
+            "uncertain": 0.0,
+            "unsupported": 0.13
+          }
+        },
+        "r34ec6f6b36_coverage": {
+          "type": "choice",
+          "choice": "complete",
+          "confidence": 0.86,
+          "probabilities": {
+            "uncertain": 0.06,
+            "justified_abstention": 0.0,
+            "complete": 0.9,
+            "omitted": 0.04
+          }
+        },
+        "r2383d83c92_coverage": {
+          "type": "choice",
+          "choice": "complete",
+          "confidence": 0.79,
+          "probabilities": {
+            "uncertain": 0.01,
+            "justified_abstention": 0.0,
+            "complete": 0.85,
+            "omitted": 0.14
+          }
+        },
+        "rbd8ac4f1b7_support": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.4,
+          "probabilities": {
+            "unsupported": 0.39,
+            "uncertain": 0.01,
+            "supported": 0.6
+          }
+        },
+        "1901_05415_q1_clarity": {
+          "type": "choice",
+          "choice": "clear",
+          "confidence": 0.88,
+          "probabilities": {
+            "uncertain": 0.0,
+            "ambiguous": 0.08,
+            "clear": 0.92
+          }
+        },
+        "re94fb761b0_support": {
+          "type": "choice",
+          "choice": "unsupported",
+          "confidence": 0.94,
+          "probabilities": {
+            "unsupported": 0.96,
+            "uncertain": 0.0,
+            "supported": 0.04
+          }
+        },
+        "1901_05415_q2_clarity": {
+          "type": "choice",
+          "choice": "ambiguous",
+          "confidence": 0.76,
+          "probabilities": {
+            "uncertain": 0.0,
+            "ambiguous": 0.84,
+            "clear": 0.16
+          }
+        },
+        "r2383d83c92_support": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.97,
+          "probabilities": {
+            "supported": 0.98,
+            "uncertain": 0.0,
+            "unsupported": 0.02
+          }
+        },
+        "rbd8ac4f1b7_coverage": {
+          "type": "choice",
+          "choice": "complete",
+          "confidence": 0.4,
+          "probabilities": {
+            "uncertain": 0.01,
+            "justified_abstention": 0.01,
+            "complete": 0.54,
+            "omitted": 0.44
+          }
+        },
+        "re94fb761b0_coverage": {
+          "type": "choice",
+          "choice": "omitted",
+          "confidence": 0.99,
+          "probabilities": {
+            "uncertain": 0.0,
+            "justified_abstention": 0.0,
+            "complete": 0.0,
+            "omitted": 1.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 13664,
+        "output_tokens": 544
+      }
+    },
+    "seconds": 0.45268674998078495
+  },
+  {
+    "document_id": "1905.10039",
+    "status": "complete",
+    "http_attempts": 1,
+    "request_sha256": "4a6d9216068f3b20248eeec99a4ddff847c5ba0e1b7b5786cfc1dfec777e3c6e",
+    "model_requested": "jev-1.13.0",
+    "source_sha256": "2f7106c7ba2835e0c5f6abf6432f5124defd0ab94837696c2282b0703c31a951",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "rc923de123b_support": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.38,
+          "probabilities": {
+            "unsupported": 0.41,
+            "supported": 0.58,
+            "uncertain": 0.01
+          }
+        },
+        "rc923de123b_coverage": {
+          "type": "choice",
+          "choice": "omitted",
+          "confidence": 0.68,
+          "probabilities": {
+            "justified_abstention": 0.02,
+            "omitted": 0.76,
+            "uncertain": 0.0,
+            "complete": 0.22
+          }
+        },
+        "r682c5f1be5_support": {
+          "type": "choice",
+          "choice": "unsupported",
+          "confidence": 0.87,
+          "probabilities": {
+            "unsupported": 0.92,
+            "uncertain": 0.0,
+            "supported": 0.08
+          }
+        },
+        "r682c5f1be5_coverage": {
+          "type": "choice",
+          "choice": "omitted",
+          "confidence": 0.97,
+          "probabilities": {
+            "justified_abstention": 0.02,
+            "omitted": 0.98,
+            "uncertain": 0.0,
+            "complete": 0.0
+          }
+        },
+        "1905_10039_q1_clarity": {
+          "type": "choice",
+          "choice": "clear",
+          "confidence": 0.99,
+          "probabilities": {
+            "uncertain": 0.0,
+            "ambiguous": 0.01,
+            "clear": 0.99
+          }
+        },
+        "rc7b65eafad_support": {
+          "type": "choice",
+          "choice": "unsupported",
+          "confidence": 0.58,
+          "probabilities": {
+            "unsupported": 0.72,
+            "supported": 0.27,
+            "uncertain": 0.01
+          }
+        },
+        "rc7b65eafad_coverage": {
+          "type": "choice",
+          "choice": "omitted",
+          "confidence": 0.92,
+          "probabilities": {
+            "justified_abstention": 0.01,
+            "omitted": 0.94,
+            "uncertain": 0.01,
+            "complete": 0.04
+          }
+        },
+        "r94f067b4c6_support": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.6,
+          "probabilities": {
+            "unsupported": 0.25,
+            "supported": 0.74,
+            "uncertain": 0.01
+          }
+        },
+        "r94f067b4c6_coverage": {
+          "type": "choice",
+          "choice": "complete",
+          "confidence": 0.69,
+          "probabilities": {
+            "justified_abstention": 0.01,
+            "omitted": 0.11,
+            "uncertain": 0.11,
+            "complete": 0.77
+          }
+        },
+        "1905_10039_q2_clarity": {
+          "type": "choice",
+          "choice": "clear",
+          "confidence": 0.52,
+          "probabilities": {
+            "uncertain": 0.0,
+            "clear": 0.68,
+            "ambiguous": 0.32
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 11896,
+        "output_tokens": 542
+      }
+    },
+    "seconds": 0.3678160000126809
+  }
+]

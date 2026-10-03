@@ -121,3 +121,14 @@ Las revisiones Git por sí solas no identifican esos cambios, por eso refresh.js
 conserva el estado observado y los hashes pertinentes. El manifiesto del banco
 verifica integridad relativa a sus hashes, no verdad semántica ni autenticidad
 frente a quien pueda editar a la vez datos y manifiesto.
+
+## Evidencia posterior: campaña v3
+
+Se ejecutó `../memos-long-reserved-v3/`: dos documentos nuevos, cuatro preguntas,
+respuestas en español para ambos sistemas y revisión Jev con nombres ocultos.
+MemOS consumió 31 038 tokens de ingestión/consultas, Ágora 16 928 y la revisión
+conjunta 26 646. No se agregan a los resultados anteriores como una muestra homogénea.
+Se observaron omisiones y discrepancias entre Jev, etiquetas humanas e inspección
+del productor. La matriz de capacidades sigue vigente dentro de su alcance; esta
+nueva evidencia no acredita ganador global ni revisor suficientemente fiable para
+aceptación automática. Detalle, casos y límites en el expediente v3.

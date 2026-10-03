@@ -1,0 +1,118 @@
+[
+  {
+    "case_id": "1901.05415-q2",
+    "producer": "memos",
+    "axis": "support",
+    "choice": "supported"
+  },
+  {
+    "case_id": "1901.05415-q2",
+    "producer": "memos",
+    "axis": "coverage",
+    "choice": "complete"
+  },
+  {
+    "case_id": "1901.05415-q1",
+    "producer": "agora",
+    "axis": "coverage",
+    "choice": "complete"
+  },
+  {
+    "case_id": "1901.05415-q1",
+    "producer": "memos",
+    "axis": "support",
+    "choice": "supported"
+  },
+  {
+    "question_key": "1901_05415_q1",
+    "axis": "clarity",
+    "choice": "clear"
+  },
+  {
+    "case_id": "1901.05415-q2",
+    "producer": "agora",
+    "axis": "support",
+    "choice": "unsupported"
+  },
+  {
+    "question_key": "1901_05415_q2",
+    "axis": "clarity",
+    "choice": "ambiguous"
+  },
+  {
+    "case_id": "1901.05415-q1",
+    "producer": "agora",
+    "axis": "support",
+    "choice": "supported"
+  },
+  {
+    "case_id": "1901.05415-q1",
+    "producer": "memos",
+    "axis": "coverage",
+    "choice": "complete"
+  },
+  {
+    "case_id": "1901.05415-q2",
+    "producer": "agora",
+    "axis": "coverage",
+    "choice": "omitted"
+  },
+  {
+    "case_id": "1905.10039-q1",
+    "producer": "agora",
+    "axis": "support",
+    "choice": "supported"
+  },
+  {
+    "case_id": "1905.10039-q1",
+    "producer": "agora",
+    "axis": "coverage",
+    "choice": "omitted"
+  },
+  {
+    "case_id": "1905.10039-q1",
+    "producer": "memos",
+    "axis": "support",
+    "choice": "unsupported"
+  },
+  {
+    "case_id": "1905.10039-q1",
+    "producer": "memos",
+    "axis": "coverage",
+    "choice": "omitted"
+  },
+  {
+    "question_key": "1905_10039_q1",
+    "axis": "clarity",
+    "choice": "clear"
+  },
+  {
+    "case_id": "1905.10039-q2",
+    "producer": "agora",
+    "axis": "support",
+    "choice": "unsupported"
+  },
+  {
+    "case_id": "1905.10039-q2",
+    "producer": "agora",
+    "axis": "coverage",
+    "choice": "omitted"
+  },
+  {
+    "case_id": "1905.10039-q2",
+    "producer": "memos",
+    "axis": "support",
+    "choice": "supported"
+  },
+  {
+    "case_id": "1905.10039-q2",
+    "producer": "memos",
+    "axis": "coverage",
+    "choice": "complete"
+  },
+  {
+    "question_key": "1905_10039_q2",
+    "axis": "clarity",
+    "choice": "clear"
+  }
+]
