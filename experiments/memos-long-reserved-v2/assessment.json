@@ -1,0 +1,32 @@
+{
+  "schema": "aria/producer-assessment/v1",
+  "independent": false,
+  "reference": "Frozen QASPER annotations plus full source; not provided to generators",
+  "cases": [
+    {
+      "id": "1612.03762-q1",
+      "reference": "All three QASPER annotators answer yes; one cites daily-practice testing with preliminary qualitative results. Other supplied evidence is weaker for a human time-savings claim.",
+      "agora": "Critical omission: daily-use testing paragraph not retrieved. Broad initial no needs qualification. Precision/recall pairs reversed in answer, despite correct literal quotation.",
+      "memos": "Critical omission: daily-use testing not in six retrieved memories. No controlled time trial is a narrower defensible claim but does not answer the broader question adequately.",
+      "required_distinction": "Reported qualitative daily-use testing versus controlled measurement of time saved; do not conflate."
+    },
+    {
+      "id": "1612.03762-q2",
+      "reference": "Three annotators answer no explicit hypothesis.",
+      "agora": "Abstention, not a positive claim of source absence. Partial context cannot establish global absence.",
+      "memos": "Central answer agrees with annotations; marks additional vocabulary explanation as inference. This agreement does not independently validate every additional detail."
+    },
+    {
+      "id": "1801.05617-q1",
+      "reference": "Unoptimized linear-kernel SVM with word n-grams and keyword vocabulary system.",
+      "agora": "Retrieval omission: exact supporting paragraph is in full source but not selected; abstains.",
+      "memos": "Upstream ingestion failure left zero memories; abstains without evidence."
+    },
+    {
+      "id": "1801.05617-q2",
+      "reference": "Yes; Kappa agreement reported for both corpora.",
+      "agora": "Central answer agrees and cites source. Remains candidate_requires_expansion; unresolved INLINEFORM placeholders in extracted source must not be interpreted as numbers.",
+      "memos": "Upstream ingestion failure left zero memories; abstains without evidence."
+    }
+  ]
+}

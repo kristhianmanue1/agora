@@ -1,0 +1,210 @@
+[
+  {
+    "id": "1612.03762-q1",
+    "question": "Did they test the idea that the system reduces the time needed to encode ADR reports on real pharmacologists? ",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "No, según estos pasajes no se describe una prueba de la reducción de tiempo con farmacólogos reales. Lo que se reporta como prueba fue una comparación automatizada entre revisiones humanas y las de MagiCoder sobre un conjunto de unos 4500 informes revisados manualmente, midiendo precisión y recall (86%/88% en descripciones cortas; 64%/63% en descripciones medias-largas, hasta 255 caracteres). La afirmación de que MagiCoder reduce el tiempo requerido para codificar informes de RAM se presenta como una observación práctica ('From a practical point of view'), basada en que los farmacólogos solo deben revisar y validar los términos propuestos en lugar de elegir entre los ~70K términos de bajo nivel de MedDRA, pero el texto no describe ningún experimento que haya medido ese ahorro de tiempo con farmacólogos reales. Nota de alcance: estos pasajes no constituyen el documento completo; que no se encuentre aquí significa que no aparece en estos pasajes, no necesariamente en toda la fuente.",
+    "agora_usage": {
+      "completion_tokens": 1166,
+      "completion_tokens_details": {
+        "reasoning_tokens": 768
+      },
+      "prompt_tokens": 2845,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 4011
+    },
+    "agora_citations": [
+      {
+        "quote": "We tested it on a large dataset of about 4500 manually revised reports, by performing an automated comparison between human and MagiCoder revisions.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 823,
+            "end_byte": 971
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "on short descriptions, an average recall of $86\\%$ and an average precision of $88\\%$; on medium-long descriptions (up to 255 characters), an average recall of $64\\%$ and an average precision of $63\\%$.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 1028,
+            "end_byte": 1230
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "From a practical point of view, MagiCoder reduces the time required for encoding ADR reports. Pharmacologists have simply to review and validate the MagiCoder terms proposed by the application, instead of choosing the right terms among the 70K low level terms of MedDRA.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 1231,
+            "end_byte": 1501
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 11771,
+    "source_bytes": 68958,
+    "gold_text_evidence_count": 6,
+    "gold_evidence_in_full_source": 6,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "Based on the paper, no — the evaluation described did not involve testing time savings with real pharmacologists.\n\nWhat the authors actually evaluated was the algorithm's automated performance: they ran MagiCoder on a dataset of about 4,445 manually revised ADR reports from the Italian region Veneto (received and validated in 2014, accessed via the VigiSegn data warehouse) and measured recall and precision at the MedDRA Preferred Term level — 86% recall and 88% precision on short descriptions, and 64% recall and 63% precision on medium-long descriptions (up to 255 characters). This is a retrospective, computational benchmark against already-encoded reports, not a user study measuring how long pharmacologists take to encode reports with versus without the tool (Fact 4).\n\nThe claim that the system \"cuts encoding time\" appears in the paper as a design rationale and expected benefit rather than an empirically measured outcome: the argument is that supervisors using the 'Autocodifica in MedDRA' button in VigiFarmaco only need to review and validate up to six proposed candidate terms instead of searching among roughly 70,000 MedDRA LLTs themselves (Fact 1). Similarly, the \"less than a second\" figure mentioned in the paper refers to the system's computational response time being designed to be fast for the user, not to a measured reduction in human encoding time (Fact 6).\n\nI should note the limits of what I can confirm: based on the paper as shared, no controlled trial or timed study with pharmacologists is described, and the future-work section (Fact 5) does not list such a user study either. If the paper contained a small usability discussion beyond these points, that information is not present in the evidence available to me, so I cannot confirm or deny it.",
+    "memos_retrieved_memories": [
+      "The paper the user shared on October 3, 2026 explains that MagiCoder is implemented as a plug-in for VigiFarmaco, the Italian web application for online spontaneous ADR reporting. Pharmacovigilance supervisors press an 'Autocodifica in MedDRA' (MedDRA auto-encoding) button and receive up to six candidate MedDRA terms, which they can refuse, change, or validate. This reduces the pharmacologists' task from choosing terms among roughly 70,000 MedDRA LLTs to reviewing and validating automatically proposed terms, cutting encoding time and improving the quality of subsequent data analysis. Online reports had grown to 30% of total Italian reports.",
+      "The paper shared by the user on October 3, 2026 situates MagiCoder within the Italian pharmacovigilance system: about 320 local healthcare structures each have a qualified person responsible for collecting suspected ADR reports and sending them to the National Network of Pharmacovigilance (RNF) within seven days; reports are analysed by local pharmacovigilance centres and the Italian Drug Agency (AIFA) and forwarded to Eudravigilance and VigiBase. The number of Italian ADR reports grew from approximately 10,000 in 2006 to around 60,000 in 2014, making manual MedDRA encoding burdensome. MedDRA contains about 70,000–75,000 LLTs, is organized hierarchically (SOC, HLGT, HLT, PT, LLT), is multiaxial, and is updated twice a year (in March and September).",
+      "On October 3, 2026 at 06:35 AM, the user shared the full text of an academic paper titled 'From narrative descriptions to MedDRA: automagically encoding adverse drug reactions'. The paper presents MagiCoder, a Natural Language Processing algorithm proposed for the automatic encoding of free-text adverse drug reaction (ADR) descriptions into MedDRA terms, originally developed for the Italian pharmacovigilance language but based on a general approach independent of language or term dictionary.",
+      "According to the paper the user shared on October 3, 2026, MagiCoder was tested on a large dataset of about 4,500 manually revised ADR reports (4,445 reports received, revised and validated in 2014 for the Italian region Veneto, accessed through the VigiSegn data warehouse built on the Pentaho business intelligence suite). On short descriptions it achieved an average recall of 86% and average precision of 88%; on medium-long descriptions (up to 255 characters), recall was 64% and precision 63%. Performance dropped drastically on very long descriptions, but these represented less than 0.3% of the whole set. Results were computed at the Preferred Term (PT) level of MedDRA.",
+      "The paper the user read on October 3, 2026 outlines ongoing and future work for MagiCoder: adding a MedDRA-thesaurus of about 1,300 'pseudo-LLTs' (generated from frequently occurring Italian nouns such as 'aumento', 'diminuzione', 'riduzione' and their adjectival forms), which improved performance on longer description classes, whereas using a general Italian thesaurus of synonyms had degraded performance by about 24%; detecting negation connectives (found in only 162 of 4,445 reports) and alerting reviewers; managing orthographical errors via an ad hoc medical spell checker; and testing MagiCoder on the English MedDRA and on other dictionaries such as ICD-9, WHO-ART, and SNOMED CT, as well as applying it to drug information leaflets and social media for ADR detection.",
+      "The MagiCoder paper read by the user on October 3, 2026 describes an unsupervised NLP algorithm requiring no training, with computational complexity linear in the size of the narrative input and the terminology. Its five phases are: (1) building hash-table meta-dictionaries of the words composing MedDRA Low Level Terms (LLTs); (2) preprocessing via tokenization, stop-word removal, and stemming (the authors adopted the 'light' stemmer used in Apache Lucene, which improved performance versus a more aggressive Italian stemmer); (3) a word-by-word linear scan where each word 'votes' for LLTs it belongs to; (4) weighting voted terms with four criteria (unrecognized word portion, stemming usage flag, pair distance, coverage spread); and (5) sorting and releasing winning terms using an ordered-phrases heuristic and a maximal-set-of-voters criterium. The user-facing interaction was designed to take less than a second."
+    ]
+  },
+  {
+    "id": "1612.03762-q2",
+    "question": "Do the authors offer a hypothesis as to why the system performs better on short descriptions than longer ones?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "",
+    "agora_usage": {
+      "completion_tokens": 809,
+      "completion_tokens_details": {
+        "reasoning_tokens": 779
+      },
+      "prompt_tokens": 2854,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3663
+    },
+    "agora_citations": [],
+    "selected_bytes": 11901,
+    "source_bytes": 68958,
+    "gold_text_evidence_count": 2,
+    "gold_evidence_in_full_source": 2,
+    "gold_evidence_in_agora_selection": 1,
+    "memos_answer": "Based on the paper text you shared, the authors do not offer an explicit, stated hypothesis for why performance degrades on longer descriptions—the results are simply reported (86% recall / 88% precision on short descriptions vs. 64% recall / 63% precision on medium-long descriptions up to 255 characters, with drastic further drops on very long descriptions, which made up less than 0.3% of the dataset) (Fact 1).\n\nThat said, the paper's future-work section contains an implicit indication of at least one cause the authors identified: longer descriptions frequently contain common Italian nouns such as \"aumento,\" \"diminuzione,\" and \"riduzione\" (and their adjectival forms) that are not directly represented among MedDRA LLT words. The authors proposed adding a MedDRA-thesaurus of about 1,300 such \"pseudo-LLTs,\" and this improved performance on the longer description classes—which suggests they recognized that vocabulary not covered by the LLT-based meta-dictionaries was contributing to the failures on longer text (Fact 4).\n\nTwo caveats: first, this is an inference from the authors' remediation efforts rather than a hypothesis they state outright; the paper text you shared does not include an explicit explanation of the length-related performance drop. Second, any further mechanistic explanation (e.g., how extra unrelated words might affect the word-voting and weighting stages) is not present in the provided material, so I cannot confirm whether the authors discussed it.",
+    "memos_retrieved_memories": [
+      "According to the paper the user shared on October 3, 2026, MagiCoder was tested on a large dataset of about 4,500 manually revised ADR reports (4,445 reports received, revised and validated in 2014 for the Italian region Veneto, accessed through the VigiSegn data warehouse built on the Pentaho business intelligence suite). On short descriptions it achieved an average recall of 86% and average precision of 88%; on medium-long descriptions (up to 255 characters), recall was 64% and precision 63%. Performance dropped drastically on very long descriptions, but these represented less than 0.3% of the whole set. Results were computed at the Preferred Term (PT) level of MedDRA.",
+      "The MagiCoder paper read by the user on October 3, 2026 describes an unsupervised NLP algorithm requiring no training, with computational complexity linear in the size of the narrative input and the terminology. Its five phases are: (1) building hash-table meta-dictionaries of the words composing MedDRA Low Level Terms (LLTs); (2) preprocessing via tokenization, stop-word removal, and stemming (the authors adopted the 'light' stemmer used in Apache Lucene, which improved performance versus a more aggressive Italian stemmer); (3) a word-by-word linear scan where each word 'votes' for LLTs it belongs to; (4) weighting voted terms with four criteria (unrecognized word portion, stemming usage flag, pair distance, coverage spread); and (5) sorting and releasing winning terms using an ordered-phrases heuristic and a maximal-set-of-voters criterium. The user-facing interaction was designed to take less than a second.",
+      "The paper the user shared on October 3, 2026 explains that MagiCoder is implemented as a plug-in for VigiFarmaco, the Italian web application for online spontaneous ADR reporting. Pharmacovigilance supervisors press an 'Autocodifica in MedDRA' (MedDRA auto-encoding) button and receive up to six candidate MedDRA terms, which they can refuse, change, or validate. This reduces the pharmacologists' task from choosing terms among roughly 70,000 MedDRA LLTs to reviewing and validating automatically proposed terms, cutting encoding time and improving the quality of subsequent data analysis. Online reports had grown to 30% of total Italian reports.",
+      "The paper the user read on October 3, 2026 outlines ongoing and future work for MagiCoder: adding a MedDRA-thesaurus of about 1,300 'pseudo-LLTs' (generated from frequently occurring Italian nouns such as 'aumento', 'diminuzione', 'riduzione' and their adjectival forms), which improved performance on longer description classes, whereas using a general Italian thesaurus of synonyms had degraded performance by about 24%; detecting negation connectives (found in only 162 of 4,445 reports) and alerting reviewers; managing orthographical errors via an ad hoc medical spell checker; and testing MagiCoder on the English MedDRA and on other dictionaries such as ICD-9, WHO-ART, and SNOMED CT, as well as applying it to drug information leaflets and social media for ADR detection.",
+      "On October 3, 2026 at 06:35 AM, the user shared the full text of an academic paper titled 'From narrative descriptions to MedDRA: automagically encoding adverse drug reactions'. The paper presents MagiCoder, a Natural Language Processing algorithm proposed for the automatic encoding of free-text adverse drug reaction (ADR) descriptions into MedDRA terms, originally developed for the Italian pharmacovigilance language but based on a general approach independent of language or term dictionary.",
+      "The paper shared by the user on October 3, 2026 situates MagiCoder within the Italian pharmacovigilance system: about 320 local healthcare structures each have a qualified person responsible for collecting suspected ADR reports and sending them to the National Network of Pharmacovigilance (RNF) within seven days; reports are analysed by local pharmacovigilance centres and the Italian Drug Agency (AIFA) and forwarded to Eudravigilance and VigiBase. The number of Italian ADR reports grew from approximately 10,000 in 2006 to around 60,000 in 2014, making manual MedDRA encoding burdensome. MedDRA contains about 70,000–75,000 LLTs, is organized hierarchically (SOC, HLGT, HLT, PT, LLT), is multiaxial, and is updated twice a year (in March and September)."
+    ]
+  },
+  {
+    "id": "1801.05617-q1",
+    "question": "What are their baselines?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "",
+    "agora_usage": {
+      "completion_tokens": 391,
+      "completion_tokens_details": {
+        "reasoning_tokens": 369
+      },
+      "prompt_tokens": 2722,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "total_tokens": 3113
+    },
+    "agora_citations": [],
+    "selected_bytes": 10729,
+    "source_bytes": 45390,
+    "gold_text_evidence_count": 1,
+    "gold_evidence_in_full_source": 1,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "I'm unable to answer this question because no evidence or context has been supplied in our conversation. I don't know:\n\n1. **Who or what \"their\" refers to** — there is no prior context establishing which people, systems, models, or organizations you're asking about.\n2. **What baselines you mean** — the term could refer to experimental control conditions, performance benchmarks, survey baselines, or many other things.\n\nIf you can share the relevant documents or clarify which subject you're asking about (e.g., \"the baselines used in [paper/study/system]\"), I'll gladly extract the baseline information from that evidence and cite it directly.",
+    "memos_retrieved_memories": []
+  },
+  {
+    "id": "1801.05617-q2",
+    "question": "Do they report the annotation agreement?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Sí, el documento reporta el acuerdo de anotación (inter-annotator agreement). Para demostrar la validez de las directrices se calcularon puntuaciones de acuerdo con Kappa sobre un subconjunto de cada corpus: para el corpus en neerlandés (2 anotadores) se usó la Kappa de Cohen y para el corpus en inglés (INLINEFORM0 2 anotadores) la Kappa de Fleiss; las puntuaciones Kappa para la identificación de ciberacoso fueron 0.69 (neerlandés) y 0.59 (inglés). Además, para las categorías más finas, el acuerdo inter-anotador en inglés varía de 'fair' a 'sustancial', excepto para difamación, y en neerlandés es de 'fair' a 'sustancial', excepto para 'curse' y difamación. Respuesta basada únicamente en los pasajes suministrados (reading_scope: selected_passages).",
+    "agora_usage": {
+      "completion_tokens": 987,
+      "completion_tokens_details": {
+        "reasoning_tokens": 538
+      },
+      "prompt_tokens": 2018,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "total_tokens": 3005
+    },
+    "agora_citations": [
+      {
+        "quote": "To demonstrate the validity of our guidelines, inter-annotator agreement scores were calculated using Kappa on a subset of each corpus.",
+        "matches": [
+          {
+            "passage": 14,
+            "start_byte": 26472,
+            "end_byte": 26607
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Inter-rater agreement for Dutch (2 raters) is calculated using Cohen's Kappa BIBREF53 . Fleiss' Kappa BIBREF54 is used for the English corpus ( INLINEFORM0 2 raters).",
+        "matches": [
+          {
+            "passage": 14,
+            "start_byte": 26608,
+            "end_byte": 26774
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Kappa scores for the identification of cyberbullying are INLINEFORM1 = 0.69 (Dutch) and INLINEFORM2 = 0.59 (English).",
+        "matches": [
+          {
+            "passage": 14,
+            "start_byte": 26775,
+            "end_byte": 26892
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "As shown in Table TABREF35 , inter-annotator agreement for the identification of the more fine-grained categories for English varies from fair to substantial BIBREF55 , except for defamation, which appears to be more difficult to recognise.",
+        "matches": [
+          {
+            "passage": 15,
+            "start_byte": 26894,
+            "end_byte": 27134
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "For Dutch, the inter-annotator agreement is fair to substantial, except for curse and defamation.",
+        "matches": [
+          {
+            "passage": 15,
+            "start_byte": 27212,
+            "end_byte": 27309
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 7406,
+    "source_bytes": 45390,
+    "gold_text_evidence_count": 1,
+    "gold_evidence_in_full_source": 1,
+    "gold_evidence_in_agora_selection": 1,
+    "memos_answer": "I don't have any document or source material to review, so I can't determine whether annotation agreement is reported. Your question refers to \"they,\" but no paper, study, or text has been supplied in this conversation.\n\nIf you share the document (or relevant excerpts from it), I can check whether the authors report annotation agreement measures — such as inter-annotator agreement statistics (e.g., Cohen's kappa, Krippendorff's alpha, or percentage agreement) — and cite the specific passages where this information appears or note its absence.",
+    "memos_retrieved_memories": []
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "1612.03762-q1",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "Let us now conclude this section by sketching the analysis of the computational complexity of MagiCoder.",
+          "Finally, to derive the best solutions actually requires INLINEFORM0 steps. The ordered-phrases criterium requires INLINEFORM1 ; the maximal set of voters criterium takes INLINEFORM2 time units.",
+          "Thus, we conclude that MagiCoder requires in the worst case INLINEFORM0 computational steps. We again highlight that this is a (very) worst case scenario, while in average it performs quite better. Moreover, we did not take into account that each phase works on a subset of terms of the previous phase, and the size of these subset rapidly decreases in common application.",
+          "the selection phase works only on voted terms, thus, in common applications, on a subset of the original dictionary."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "To evaluate MagiCoder performances, we developed a benchmark, which automatically compares MagiCoder behavior with human encoding on already manually revised and validated ADR reports."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "We are testing MagiCoder performances in the daily pharmacovigilance activities. Preliminary qualitative results show that MagiCoder drastically reduces the amount of work required for the revision of a report, allowing the pharmacovigilance stakeholders to provide high quality data about suspected ADRs."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1612.03762-q2",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": false,
+        "evidence": []
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": false,
+        "evidence": [
+          "MagiCoder behaves very well on very short descriptions (class 1) and on short ones (class 2). Recall and precision remain greater than 50% up to class 4. Notice that very long descriptions (class 5), on which performances drastically decrease, represent a negligible percentage of the whole set (less than 0.3%). Some remarks are mandatory. It is worth noting that this test simply estimates how much, for each report, the MagiCoder behavior is similar to the manual work, without considering the effective quality of the manual encoding. Clearly, as a set of official reports, revised and sent to RNF, we assume to deal with an high-quality encoding: notwithstanding, some errors in the human encoding possibly occur. Moreover, the query we perform to compare manual and automatic encoding is, obviously, quantitative. For each VigiSegn report, the query is able to detect common retrieved terms and terms returned either by the human expert or by MagiCoder. It is not able to fairly test redundancy errors: human experts make some encoding choices in order to avoid repetitions. Thus, an LLT INLINEFORM0 returned by MagiCoder that has not been selected by the expert because redundant is not truly a false positive. As a significative counterpart, as previously said, we notice that some reports contain slightly human omissions/errors. This suggest the evidence that we are underestimating MagiCoder performances. See the next section for some simple but significative examples.",
+          "Class 5, which enjoys a particular advantage from the introduction of the pseudo-LLTs, represents a small slice of the set of reports. Notwithstanding, these cases are very arduous to address, and we have, at least, a good evidence of the validity of our approach."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": false,
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "1801.05617-q1",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          "an unoptimised linear-kernel SVM",
+          "a keyword-based system that marks posts as positive for cyberbullying if they contain a word from existing vocabulary lists composed by aggressive language and profanity terms"
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "The optimised models are evaluated against two baseline systems: i) an unoptimised linear-kernel SVM (configured with default parameter settings) based on word INLINEFORM0 -grams only and, ii) a keyword-based system that marks posts as positive for cyberbullying if they contain a word from existing vocabulary lists composed by aggressive language and profanity terms."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [
+          "unoptimised linear-kernel SVM",
+          "keyword-based system"
+        ],
+        "free_form_answer": "",
+        "yes_no": null,
+        "evidence": [
+          "The optimised models are evaluated against two baseline systems: i) an unoptimised linear-kernel SVM (configured with default parameter settings) based on word INLINEFORM0 -grams only and, ii) a keyword-based system that marks posts as positive for cyberbullying if they contain a word from existing vocabulary lists composed by aggressive language and profanity terms."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "Linear-kernel SVM based on word n-grams, vocabulary-based classifier.",
+        "yes_no": null,
+        "evidence": [
+          "The optimised models are evaluated against two baseline systems: i) an unoptimised linear-kernel SVM (configured with default parameter settings) based on word INLINEFORM0 -grams only and, ii) a keyword-based system that marks posts as positive for cyberbullying if they contain a word from existing vocabulary lists composed by aggressive language and profanity terms."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1801.05617-q2",
+    "answers": [
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "FLOAT SELECTED: Table 2. Inter-annotator agreement on the fine-grained categories related to cyberbullying."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "The English and Dutch corpora were independently annotated for cyberbullying by trained linguists. All were Dutch native speakers and English second-language speakers. To demonstrate the validity of our guidelines, inter-annotator agreement scores were calculated using Kappa on a subset of each corpus. Inter-rater agreement for Dutch (2 raters) is calculated using Cohen's Kappa BIBREF53 . Fleiss' Kappa BIBREF54 is used for the English corpus ( INLINEFORM0 2 raters). Kappa scores for the identification of cyberbullying are INLINEFORM1 = 0.69 (Dutch) and INLINEFORM2 = 0.59 (English)."
+        ]
+      },
+      {
+        "unanswerable": false,
+        "extractive_spans": [],
+        "free_form_answer": "",
+        "yes_no": true,
+        "evidence": [
+          "The English and Dutch corpora were independently annotated for cyberbullying by trained linguists. All were Dutch native speakers and English second-language speakers. To demonstrate the validity of our guidelines, inter-annotator agreement scores were calculated using Kappa on a subset of each corpus. Inter-rater agreement for Dutch (2 raters) is calculated using Cohen's Kappa BIBREF53 . Fleiss' Kappa BIBREF54 is used for the English corpus ( INLINEFORM0 2 raters). Kappa scores for the identification of cyberbullying are INLINEFORM1 = 0.69 (Dutch) and INLINEFORM2 = 0.59 (English)."
+        ]
+      }
+    ]
+  }
+]

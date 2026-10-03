@@ -68,6 +68,58 @@
     {
       "path": "experiments/memos-long-reserved-v2/freeze.json",
       "sha256": "fcb4a95888e317def3feb6213aa1fc8bbd2cfd71c9c923bef95dc5e4cd5e60e5"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/comparison.json",
+      "sha256": "e3752d62f37df228910c98e436c9faa70d9c74f63db558c6f5a42da81edf1d77"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/memos-usage.json",
+      "sha256": "a2d4fd2da71bb8b963db03c7299f34ceae858aeab3884f4dd54902649b1edf5c"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/parser-probe.json",
+      "sha256": "b48e92f642bcdbde5ae25fd33171799caeab3373f9e840beb424a6ab467c8a17"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/extraction-candidate.json",
+      "sha256": "27b623638fa95a01600e48322867bf6f6259f7c43516393799a84911c3520883"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/http-receipts.json",
+      "sha256": "6c5a618b7f233679365bd2cf5eb5fc6b0963c20857967f09dcdfa21021e44cb8"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/agora-receipts.json",
+      "sha256": "15c44c12f286eefa45ac861ac8d40428d867005b648d7a25994bd4b886b3cf4c"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/result.json",
+      "sha256": "fdb71bd8ebef05a3ab7d28f8a2500e6c29e432e9fd65b31834004b395bacec31"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/assessment.json",
+      "sha256": "22e691d8bc3bb58b0dedbdb0f36b954aee6e3989a38186feec835c90011a5513"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/references.json",
+      "sha256": "4147a625dfefb4c7cd1b864f120924677c80e9f3b3bb787c638baf7d366b727d"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/run_agora.py",
+      "sha256": "83234c847d510d7d05d0a14f612580ba853a88c4a37e548cfe0fee3a109a3253"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/run_memos.py",
+      "sha256": "0f58a015ffaca185cb9eaad215760b21a589fcfafaf2f70d112890c19f87aa42"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/probe_parser.py",
+      "sha256": "0c33393b5717baa9279166f71563f48bfb30675db89b2db5cc7a95e2309b6954"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/score.py",
+      "sha256": "8973694cb2ebef70fbb23005d8b7c609d448d2ecd87eae6263f056c6cec1871f"
     }
   ],
   "expected_accounting": {

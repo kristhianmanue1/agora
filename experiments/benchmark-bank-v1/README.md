@@ -96,5 +96,8 @@ Los cuatro archivos candidatos coinciden con los hashes de la validación anteri
 Evidencia y ejecutor: `neo4j-integration/`. Esto prueba el adaptador Neo4j nativo,
 no toda la ruta Community + Qdrant ni todo MemOS. Cero llamadas a modelos.
 
-La siguiente campaña está congelada en `../memos-long-reserved-v2/` y **todavía
-no ejecutada**. Conserva por separado los resultados históricos de esta base.
+La campaña `../memos-long-reserved-v2/` se ejecutó después de congelarse. Su
+resultado contiene cuatro preguntas, ingestión vacía en MemOS y omisiones en ambos.
+Los nuevos hashes están incorporados; la contabilidad expected_accounting del
+verificador sigue correspondiendo al bloque histórico v1. V2 conserva recibos y
+subtotales separados: no deben sumarse como si fueran el mismo conjunto.

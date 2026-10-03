@@ -1,0 +1,174 @@
+[
+  {
+    "id": "1612.03762-q1",
+    "execution_status": "complete",
+    "answer_status": "candidate_requires_expansion",
+    "http_attempts": 1,
+    "request_config": {
+      "model": "glm-5.3-flash",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_calls": 1,
+      "temperature": 0
+    },
+    "implementation_hashes": {
+      "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+      "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+      "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+      "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+      "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+      "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+    },
+    "implementation_unchanged": true,
+    "answer_scope": "selected_passages",
+    "requires_expansion": true,
+    "document_absence_established": false,
+    "response": {
+      "response_id": "202610032036115bfe24ce13744b11",
+      "reported_model": "glm-5.3-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1166,
+        "completion_tokens_details": {
+          "reasoning_tokens": 768
+        },
+        "prompt_tokens": 2845,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4011
+      }
+    },
+    "raw_local_sha256": "b0253836bc185cdcfe39c050197cf6d05dd5fb9745e1235ac5917d83fc05e1e9",
+    "seconds": 19.071664541959763
+  },
+  {
+    "id": "1612.03762-q2",
+    "execution_status": "complete",
+    "answer_status": "not_found_in_supplied_material",
+    "http_attempts": 1,
+    "request_config": {
+      "model": "glm-5.3-flash",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_calls": 1,
+      "temperature": 0
+    },
+    "implementation_hashes": {
+      "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+      "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+      "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+      "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+      "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+      "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+    },
+    "implementation_unchanged": true,
+    "answer_scope": "selected_passages",
+    "requires_expansion": true,
+    "document_absence_established": false,
+    "response": {
+      "response_id": "202610032036307a1d657a742740ee",
+      "reported_model": "glm-5.3-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 809,
+        "completion_tokens_details": {
+          "reasoning_tokens": 779
+        },
+        "prompt_tokens": 2854,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3663
+      }
+    },
+    "raw_local_sha256": "524b25a0a1590cce78f5c364ad3e2d660b18266c3e27616d69d070bdb3d6f8ba",
+    "seconds": 14.557599875028245
+  },
+  {
+    "id": "1801.05617-q1",
+    "execution_status": "complete",
+    "answer_status": "not_found_in_supplied_material",
+    "http_attempts": 1,
+    "request_config": {
+      "model": "glm-5.3-flash",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_calls": 1,
+      "temperature": 0
+    },
+    "implementation_hashes": {
+      "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+      "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+      "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+      "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+      "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+      "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+    },
+    "implementation_unchanged": true,
+    "answer_scope": "selected_passages",
+    "requires_expansion": true,
+    "document_absence_established": false,
+    "response": {
+      "response_id": "202610032036442250949d8df1418d",
+      "reported_model": "glm-5.3-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 391,
+        "completion_tokens_details": {
+          "reasoning_tokens": 369
+        },
+        "prompt_tokens": 2722,
+        "prompt_tokens_details": {
+          "cached_tokens": 320
+        },
+        "total_tokens": 3113
+      }
+    },
+    "raw_local_sha256": "81bd692b2eb6316cde6db1c56b8d43cd8368d92e18f972161b5b58ef2e1a3a23",
+    "seconds": 8.560143333976157
+  },
+  {
+    "id": "1801.05617-q2",
+    "execution_status": "complete",
+    "answer_status": "candidate_requires_expansion",
+    "http_attempts": 1,
+    "request_config": {
+      "model": "glm-5.3-flash",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_calls": 1,
+      "temperature": 0
+    },
+    "implementation_hashes": {
+      "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+      "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+      "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+      "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+      "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+      "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+    },
+    "implementation_unchanged": true,
+    "answer_scope": "selected_passages",
+    "requires_expansion": true,
+    "document_absence_established": false,
+    "response": {
+      "response_id": "20261003203653cfdd5cba70854495",
+      "reported_model": "glm-5.3-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 987,
+        "completion_tokens_details": {
+          "reasoning_tokens": 538
+        },
+        "prompt_tokens": 2018,
+        "prompt_tokens_details": {
+          "cached_tokens": 320
+        },
+        "total_tokens": 3005
+      }
+    },
+    "raw_local_sha256": "76932730be8176d64df05ce86bd6d8141f7861814ec08625efcbeb1a142547c2",
+    "seconds": 13.882209041970782
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "schema": "aria/comparative-result/v1",
+  "observed_at": "2026-10-03T12:43:07.807702+00:00",
+  "freeze_sha256": "fcb4a95888e317def3feb6213aa1fc8bbd2cfd71c9c923bef95dc5e4cd5e60e5",
+  "execution_status": "completed_with_observed_failures",
+  "cases": 4,
+  "memos_http_records": 14,
+  "memos_llm_receipts": 6,
+  "memos_ingestion_tokens": 33560,
+  "memos_query_tokens": 5291,
+  "agora_tokens": 13792,
+  "memos_ingestion_seconds": 103.6252665,
+  "memos_query_seconds": 59.181327294,
+  "agora_query_seconds": 56.07161679293495,
+  "memos_stored_memories_by_source": {
+    "1612.03762": 6,
+    "1801.05617": 0
+  },
+  "agora_candidate_requires_expansion": 2,
+  "agora_abstentions": 2,
+  "memos_abstentions": 2,
+  "provider_retries": 0,
+  "monetary_cost": null,
+  "infrastructure_cost": null,
+  "independent_adjudication": false,
+  "normal_memos_service_restarted": false,
+  "lab_service_stopped": true,
+  "implementation_note": "Agora source unchanged from frozen 7a00352; MemOS four candidate hashes checked before run. No product edits in this campaign. Internal extraction settings differ from answer settings; 4096 is the chat-answer cap, not an internal MemOS extraction cap.",
+  "method_limits": [
+    "Two documents / four questions; no general ranking",
+    "Different retrieval and prompts; Agora answers in Spanish, MemOS in English",
+    "Observed provider-reported tokens include reasoning; infrastructure and embeddings not monetized",
+    "Absence cannot be proven from selected passages",
+    "Three human annotations per question; producer assessment, no independent adjudication",
+    "Exact paragraph containment is diagnostic, not semantic recall",
+    "No second-reading calls in this campaign"
+  ]
+}

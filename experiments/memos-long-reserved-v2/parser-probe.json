@@ -1,0 +1,12 @@
+{
+  "actual_finish_reason": "stop",
+  "actual_content_sha256": "6d8d01656ea8073f1467b123844fbc95c2c691dc1dbdf0eb39cbee3c9a864d04",
+  "actual_parser_return": {},
+  "synthetic_valid_return": {
+    "summary": "synthetic"
+  },
+  "synthetic_trailing_comma_return": {},
+  "provider_calls": 0,
+  "diagnosis": "Trailing comma in generated JSON; parser returns empty mapping without raising; API reports success with zero memories",
+  "product_changed": false
+}
