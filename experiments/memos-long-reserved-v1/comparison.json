@@ -1,0 +1,203 @@
+[
+  {
+    "id": "1601.03313-q1",
+    "question": "how did they measure grammatical correctness?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "Según el documento, la calidad de los discursos generados (incluida la corrección gramatical) se evaluó mediante un enfoque manual y uno automatizado; en la evaluación experimental, los discursos mostraron una calidad muy alta en cuanto a corrección gramatical y transiciones entre oraciones. El documento no da más detalles específicos sobre cómo se midió la corrección gramatical.",
+    "agora_usage": {
+      "completion_tokens": 1122,
+      "completion_tokens_details": {
+        "reasoning_tokens": 937
+      },
+      "prompt_tokens": 2734,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3856
+    },
+    "agora_citations": [
+      {
+        "quote": "Furthermore, we present a manual and an automated approach to evaluate the quality of generated speeches. In an experimental evaluation generated speeches have shown very high quality in terms of grammatical correctness and sentence transitions.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 775,
+            "end_byte": 1020
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Furthermore, we have presented different methods to evaluate the quality of generated texts. In an experimental evaluation our system performed very well. In particular, the grammatical correctness and the sentence transitions of most speeches were very good.",
+        "matches": [
+          {
+            "passage": 10,
+            "start_byte": 25886,
+            "end_byte": 26145
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 11633,
+    "source_bytes": 45163,
+    "gold_text_evidence_count": 1,
+    "gold_evidence_in_full_source": 1,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "According to the report shared on October 2, 2026, grammatical correctness was measured in two ways:\n\n**Manual evaluation:**\n- The ten generated speeches (five for class DN, five for class RY) were manually evaluated on several criteria, each scored on a 0–3 scale, with a maximum total of 12 points across all criteria.\n- Grammatical correctness (together with sentence transitions) averaged **2.3 out of 3**, which was among the strongest results — the total scores across speeches ranged from 5 to 10, averaging 8.1, with speech content scoring lowest.\n\n**Automatic evaluation:**\n- An automatic evaluation was also conducted and \"largely confirmed\" the manual results, indicating that grammar and transitions were very good while content consistency was weaker.\n\n**What is not specified in the available information:**\n- The exact method used in the automatic evaluation (e.g., whether perplexity or another metric was applied to assess grammar).\n- How many evaluators performed the manual scoring, or who they were.\n- The full list of evaluation criteria beyond grammatical correctness, sentence transitions, and speech content.\n\nIf you need these specifics, they would have to come from the original report itself, as the details available to me do not cover them.",
+    "memos_retrieved_memories": [
+      "The report shared by the user on October 2, 2026 describes speech generation based on 6-gram probabilities from a class-specific language model, combined with a topic model that uses a Justeson&Katz POS tag filter, a significance score, and topic coverage ranking (top 3 topic terms), with a weighting factor of 0.5 balancing both models. In the experiment, ten speeches were generated (five for class DN, five for class RY). Manual evaluation on criteria scored 0–3 (maximum 12) yielded total scores of 5–10 with an average of 8.1; grammatical correctness and sentence transitions averaged 2.3 out of 3, while speech content scored lowest, suggesting the topic model needs improvement. The automatic evaluation largely confirmed these results: grammar and transitions were very good, content consistency was weaker.",
+      "At 11:36 PM on October 2, 2026, the user shared a complete report titled 'Political Speech Generation'. The report presents a system that can generate political speeches for a desired political party, allowing specification of whether a speech should express a supportive or opposing opinion. The system combines several state-of-the-art NLP methods, including n-grams, the Justeson&Katz POS tag filter, recurrent neural networks, and latent Dirichlet allocation (LDA). Word sequences are generated from two underlying models: a language model that ensures grammatical correctness and a topic model that aims for textual consistency. The report's goal is to generate speeches indistinguishable from hand-written ones.",
+      "By sharing a detailed technical report on political speech generation on October 2, 2026, the user demonstrated interest in natural language processing, statistical language models, topic modeling, and natural language generation. The report notes that all source code is available on GitHub and explicitly encourages others to use, modify, and extend it, and suggests the approach could be adapted to summarize texts about the same topic from different sources, such as multiple newspapers reporting on the same event.",
+      "According to the report the user shared on October 2, 2026, the models were trained on the Convote dataset, which contains 3,857 speech segments from 53 US Congressional floor debates from the year 2005, labeled by party and vote. Preprocessing removed single-sentence speeches and HTML tags, corrected punctuation, inserted start/end tokens, and divided all speeches into four classes based on the combination of political party and opinion, with classes RY and DN containing the majority of the speeches.",
+      "The report the user shared on October 2, 2026 documents three alternative approaches that were tried and abandoned: (1) Recurrent Neural Networks as language models — trained for 100 epochs (~14 hours) with 50 hidden layers, one-hot-encoded vectors, cross-entropy loss, SGD and BPTT, but most generated sentences were grammatically incorrect; (2) LDA as topic model following Lau et al. with 53 topics — although some results were meaningful, most extracted topics were generic and uninformative; (3) a sentence-based approach concatenating whole training sentences using structural (POS tag) and textual (trigram) similarity — grammatically correct but difficult to connect sentences reasonably. The word-based n-gram approach proved more promising and was kept."
+    ]
+  },
+  {
+    "id": "1601.03313-q2",
+    "question": "how was quality of sentence transition measured?",
+    "agora_status": "rejected",
+    "agora_diagnostic": "answer_generation_incomplete",
+    "agora_answer": null,
+    "agora_usage": {
+      "completion_tokens": 2048,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1714
+      },
+      "prompt_tokens": 2521,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 4569
+    },
+    "agora_citations": [],
+    "selected_bytes": 10245,
+    "source_bytes": 45163,
+    "gold_text_evidence_count": 2,
+    "gold_evidence_in_full_source": 2,
+    "gold_evidence_in_agora_selection": 1,
+    "memos_answer": "Based on the report you shared, sentence transition quality was measured in two ways:\n\n1. **Manual evaluation on a 0–3 scale.** The generated speeches were evaluated manually on several criteria, each scored from 0 to 3 (with a combined maximum of 12). Within this scheme, sentence transitions (alongside grammatical correctness) averaged 2.3 out of 3 — a strong result, especially compared to speech content, which scored lowest and suggested the topic model needed improvement. Overall totals across all criteria ranged from 5 to 10, with an average of 8.1 (Fact Memory 1).\n\n2. **Automatic evaluation as confirmation.** The automatic evaluation \"largely confirmed\" the manual results, indicating that grammar and transitions were very good while content consistency was weaker (Fact Memory 1).\n\n**What is not specified in the provided evidence:** the exact automatic metric used to assess transitions, how many evaluators performed the manual scoring, or the precise rating rubric/anchors for the 0–3 scale. That level of detail is not included in the supplied facts, so I can't confirm it.",
+    "memos_retrieved_memories": [
+      "The report shared by the user on October 2, 2026 describes speech generation based on 6-gram probabilities from a class-specific language model, combined with a topic model that uses a Justeson&Katz POS tag filter, a significance score, and topic coverage ranking (top 3 topic terms), with a weighting factor of 0.5 balancing both models. In the experiment, ten speeches were generated (five for class DN, five for class RY). Manual evaluation on criteria scored 0–3 (maximum 12) yielded total scores of 5–10 with an average of 8.1; grammatical correctness and sentence transitions averaged 2.3 out of 3, while speech content scored lowest, suggesting the topic model needs improvement. The automatic evaluation largely confirmed these results: grammar and transitions were very good, content consistency was weaker.",
+      "By sharing a detailed technical report on political speech generation on October 2, 2026, the user demonstrated interest in natural language processing, statistical language models, topic modeling, and natural language generation. The report notes that all source code is available on GitHub and explicitly encourages others to use, modify, and extend it, and suggests the approach could be adapted to summarize texts about the same topic from different sources, such as multiple newspapers reporting on the same event.",
+      "At 11:36 PM on October 2, 2026, the user shared a complete report titled 'Political Speech Generation'. The report presents a system that can generate political speeches for a desired political party, allowing specification of whether a speech should express a supportive or opposing opinion. The system combines several state-of-the-art NLP methods, including n-grams, the Justeson&Katz POS tag filter, recurrent neural networks, and latent Dirichlet allocation (LDA). Word sequences are generated from two underlying models: a language model that ensures grammatical correctness and a topic model that aims for textual consistency. The report's goal is to generate speeches indistinguishable from hand-written ones.",
+      "The report the user shared on October 2, 2026 documents three alternative approaches that were tried and abandoned: (1) Recurrent Neural Networks as language models — trained for 100 epochs (~14 hours) with 50 hidden layers, one-hot-encoded vectors, cross-entropy loss, SGD and BPTT, but most generated sentences were grammatically incorrect; (2) LDA as topic model following Lau et al. with 53 topics — although some results were meaningful, most extracted topics were generic and uninformative; (3) a sentence-based approach concatenating whole training sentences using structural (POS tag) and textual (trigram) similarity — grammatically correct but difficult to connect sentences reasonably. The word-based n-gram approach proved more promising and was kept.",
+      "According to the report the user shared on October 2, 2026, the models were trained on the Convote dataset, which contains 3,857 speech segments from 53 US Congressional floor debates from the year 2005, labeled by party and vote. Preprocessing removed single-sentence speeches and HTML tags, corrected punctuation, inserted start/end tokens, and divided all speeches into four classes based on the combination of political party and opinion, with classes RY and DN containing the majority of the speeches."
+    ]
+  },
+  {
+    "id": "1602.07563-q1",
+    "question": "What evidence is presented that humans perceive the sentiment classes as ordered?",
+    "agora_status": "rejected",
+    "agora_diagnostic": "answer_generation_incomplete",
+    "agora_answer": null,
+    "agora_usage": {
+      "completion_tokens": 2048,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1544
+      },
+      "prompt_tokens": 1967,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 4015
+    },
+    "agora_citations": [],
+    "selected_bytes": 7688,
+    "source_bytes": 63243,
+    "gold_text_evidence_count": 1,
+    "gold_evidence_in_full_source": 1,
+    "gold_evidence_in_agora_selection": 1,
+    "memos_answer": "The paper's finding that humans treat the three sentiment classes (negative, neutral, positive) as **ordered** rather than nominal categories is described as strong evidence supporting an ordinal interpretation of the labels. This ordered perception is what justifies the paper's use of order-aware evaluation measures — specifically Krippendorff's Alpha-interval and F1 — as well as order-aware classification models such as TwoPlaneSVMbin [1].\n\nThe empirical basis for this comes from the paper's annotation agreement analysis: about 15% of the 1.6+ million labeled tweets were intentionally annotated twice, allowing the authors to measure self- and inter-annotator agreement across 83 native-speaker annotators [4]. Patterns in these agreement measurements are what revealed the ordinal structure of the classes [1].\n\nHowever, the specific details of the evidence — for example, the exact statistical tests used or the precise confusion patterns between adjacent versus non-adjacent classes — are not included in the information I have available, so I cannot describe those specifics without inventing details.",
+    "memos_retrieved_memories": [
+      "A notable finding in the paper the user shared is strong evidence that human annotators perceive the three sentiment classes (negative, neutral, positive) as ordered rather than nominal categories, which justifies using order-aware evaluation measures (Krippendorff's Alpha-interval and F1) and order-aware classification models such as TwoPlaneSVMbin.",
+      "The paper the user shared on October 2, 2026 concludes that the quality of sentiment classification models depends much more on the quality and size of the training data than on the type of model trained; there is no statistically significant difference between the performance of the top classification models (SVM-based variants, with TwoPlaneSVMbin selected for analysis); and model performance approaches the inter-annotator agreement once the training set is sufficiently large, making annotator agreement an approximate upper bound on classifier performance.",
+      "By sharing a detailed academic paper on multilingual Twitter sentiment classification late at night on October 2, 2026, the user demonstrated an active interest in sentiment analysis, natural language processing, and research on how human annotation quality affects machine learning model performance.",
+      "At 11:38 PM on October 2, 2026, the user shared the full text of an academic paper titled 'Multilingual Twitter Sentiment Classification: The Role of Human Annotators'. The paper analyzes over 1.6 million manually labeled tweets in 13 European languages (collected between April 2013 and February 2015) to examine the limits of automated Twitter sentiment classification. The labeling effort involved 83 native-speaker annotators and an estimated 38 person-months of work, with about 15% of tweets intentionally annotated twice to measure self- and inter-annotator agreement.",
+      "The paper the user shared recommends regularly monitoring self- and inter-annotator agreements to improve training datasets, promptly excluding low-quality annotators (e.g., those with self-agreement below ~0.6), increasing the proportion of duplicated annotations from 15% to 20%, and routing extreme disagreements to a 'master' annotator. It also provides rule-of-thumb quantities: around 20,000 high-quality annotations already give reasonable performance, while roughly 100,000 annotations are needed to approach peak performance near the inter-annotator agreement."
+    ]
+  },
+  {
+    "id": "1602.07563-q2",
+    "question": "What size of dataset is sufficiently large for the model performance to approach the inter-annotator agreement?",
+    "agora_status": "complete",
+    "agora_diagnostic": null,
+    "agora_answer": "The document does not state a single universal dataset size; it only says the model performance approaches the inter-annotator agreement when the training set is sufficiently large. In the specific cases reported, the Serbian classifier reached the (low) inter-annotator agreement at 70,000 tweets, while for English even a relatively large training set of around 90,000 labeled tweets still left a performance gap, with more annotations needed to approach the inter-annotator agreement (Russian at ~90,000 and Slovak at ~60,000 also needed more data).",
+    "agora_usage": {
+      "completion_tokens": 825,
+      "completion_tokens_details": {
+        "reasoning_tokens": 572
+      },
+      "prompt_tokens": 2515,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3340
+    },
+    "agora_citations": [
+      {
+        "quote": "We show that the model performance approaches the inter-annotator agreement when the size of the training set is sufficiently large.",
+        "matches": [
+          {
+            "passage": 2,
+            "start_byte": 733,
+            "end_byte": 865
+          },
+          {
+            "passage": 3,
+            "start_byte": 1835,
+            "end_byte": 1967
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "The Serbian classifier reaches the inter-annotator agreement (albeit low) at 70,000 tweets.",
+        "matches": [
+          {
+            "passage": 10,
+            "start_byte": 22272,
+            "end_byte": 22363
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "Despite the relatively large training set (around 90,000 labeled tweets) there is still a performance gap and even more annotations are needed to approach the inter-annotator agreement.",
+        "matches": [
+          {
+            "passage": 8,
+            "start_byte": 17112,
+            "end_byte": 17297
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      },
+      {
+        "quote": "The size of the labeled sets for Russian is around 90,000, for Slovak around 60,000, and we argue that more training data is needed to further improve the performance.",
+        "matches": [
+          {
+            "passage": 9,
+            "start_byte": 17617,
+            "end_byte": 17784
+          }
+        ],
+        "match_policy": "first_occurrence_per_passage"
+      }
+    ],
+    "selected_bytes": 9625,
+    "source_bytes": 63243,
+    "gold_text_evidence_count": 2,
+    "gold_evidence_in_full_source": 2,
+    "gold_evidence_in_agora_selection": 0,
+    "memos_answer": "According to the paper you shared, roughly **100,000 annotations** are needed for model performance to approach peak performance near the inter-annotator agreement [Fact 1]. The paper presents this as a rule-of-thumb quantity rather than an exact threshold.\n\nFor context, the paper also notes that a smaller training set of around **20,000 high-quality annotations** already yields reasonable performance, though not yet at the level of the inter-annotator agreement [Fact 1].\n\nThis aligns with the paper's broader conclusion that model performance approaches the inter-annotator agreement once the training set is sufficiently large — which is why the paper treats annotator agreement as an approximate upper bound on classifier performance [Fact 2].\n\nOne caveat: these figures come from this specific study (over 1.6 million labeled tweets across 13 European languages [Fact 3]), so they should be understood as empirical guidelines from that context rather than universal constants.",
+    "memos_retrieved_memories": [
+      "The paper the user shared recommends regularly monitoring self- and inter-annotator agreements to improve training datasets, promptly excluding low-quality annotators (e.g., those with self-agreement below ~0.6), increasing the proportion of duplicated annotations from 15% to 20%, and routing extreme disagreements to a 'master' annotator. It also provides rule-of-thumb quantities: around 20,000 high-quality annotations already give reasonable performance, while roughly 100,000 annotations are needed to approach peak performance near the inter-annotator agreement.",
+      "The paper the user shared on October 2, 2026 concludes that the quality of sentiment classification models depends much more on the quality and size of the training data than on the type of model trained; there is no statistically significant difference between the performance of the top classification models (SVM-based variants, with TwoPlaneSVMbin selected for analysis); and model performance approaches the inter-annotator agreement once the training set is sufficiently large, making annotator agreement an approximate upper bound on classifier performance.",
+      "At 11:38 PM on October 2, 2026, the user shared the full text of an academic paper titled 'Multilingual Twitter Sentiment Classification: The Role of Human Annotators'. The paper analyzes over 1.6 million manually labeled tweets in 13 European languages (collected between April 2013 and February 2015) to examine the limits of automated Twitter sentiment classification. The labeling effort involved 83 native-speaker annotators and an estimated 38 person-months of work, with about 15% of tweets intentionally annotated twice to measure self- and inter-annotator agreement.",
+      "A notable finding in the paper the user shared is strong evidence that human annotators perceive the three sentiment classes (negative, neutral, positive) as ordered rather than nominal categories, which justifies using order-aware evaluation measures (Krippendorff's Alpha-interval and F1) and order-aware classification models such as TwoPlaneSVMbin.",
+      "By sharing a detailed academic paper on multilingual Twitter sentiment classification late at night on October 2, 2026, the user demonstrated an active interest in sentiment analysis, natural language processing, and research on how human annotation quality affects machine learning model performance."
+    ]
+  }
+]

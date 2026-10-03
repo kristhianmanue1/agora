@@ -1,0 +1,57 @@
+diff --git a/src/memos/graph_dbs/neo4j_community.py b/src/memos/graph_dbs/neo4j_community.py
+index b5c92f40..c6b862dc 100644
+--- a/src/memos/graph_dbs/neo4j_community.py
++++ b/src/memos/graph_dbs/neo4j_community.py
+@@ -465,6 +465,38 @@ class Neo4jCommunityGraphDB(Neo4jGraphDB):
+ 
+         return filtered_results
+ 
++    def search_by_keywords_like(
++        self, query: str, user_name: str | None = None, filter: dict | None = None
++    ) -> list[dict]:
++        """Recall active memories for keyword feedback within one explicit cube.
++
++        SQL LIKE wildcards (% and _) map to regex; all other characters are
++        literal. Values remain Cypher parameters, including caller filters.
++        This is a scoped scan, not a full-text index or a cross-cube search.
++        """
++        user_name = user_name or self.config.user_name
++        if not user_name:
++            raise ValueError("keyword_feedback_requires_cube")
++        if not isinstance(query, str) or not query:
++            raise ValueError("keyword_feedback_requires_pattern")
++        pattern = "(?s)" + "".join(
++            ".*" if char == "%" else "." if char == "_" else re.escape(char)
++            for char in query
++        )
++        conditions = [
++            "n.user_name = $user_name",
++            "coalesce(n.status, 'activated') = 'activated'",
++            "n.memory =~ $pattern",
++        ]
++        params = {"user_name": user_name, "pattern": pattern}
++        if filter:
++            extra, values = self._build_filter_conditions_cypher(filter, node_alias="n")
++            conditions.extend(extra)
++            params.update(values)
++        statement = "MATCH (n:Memory) WHERE " + " AND ".join(conditions) + " RETURN n.id AS id"
++        with self.driver.session(database=self.db_name) as session:
++            return [dict(row) for row in session.run(statement, **params)]
++
+     def search_by_fulltext(
+         self,
+         query_words: list[str],
+diff --git a/src/memos/mem_feedback/feedback.py b/src/memos/mem_feedback/feedback.py
+index 28f495af..df234349 100644
+--- a/src/memos/mem_feedback/feedback.py
++++ b/src/memos/mem_feedback/feedback.py
+@@ -1121,6 +1121,9 @@ class MemFeedback(BaseMemFeedback):
+             kwp_judge = self._keyword_replace_judgement(feedback_content)
+             if (
+                 kwp_judge
++                # Explicit targets require semantic updates, not a filename-scoped
++                # global replacement that ignores retrieved_memory_ids.
++                and not kwargs.get("retrieved_memory_ids")
+                 and kwp_judge["if_keyword_replace"].lower() == "true"
+                 and kwp_judge.get("original", "NONE") != "NONE"
+                 and kwp_judge.get("target", "NONE") != "NONE"

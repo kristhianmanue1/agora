@@ -1,0 +1,25 @@
+{
+  "method": "Producer assessment against QASPER annotations and source, after prompts/configuration were frozen. No independent reviewer; no tuning/reruns. Core support is not full factual perfection.",
+  "labels": {
+    "1601.03313-q1": {
+      "agora": "critical_omission",
+      "memos": "critical_omission",
+      "reason": "Both omit POS-tag sequence matching and manual fallback. The evidence exists in the source; Agora selected none of the gold paragraph."
+    },
+    "1601.03313-q2": {
+      "agora": "rejected_incomplete",
+      "memos": "core_supported",
+      "reason": "MemOS reports manual 0-3 scoring; Agora hits output-token cap. Detailed table rubric is not assessed."
+    },
+    "1602.07563-q1": {
+      "agora": "rejected_incomplete",
+      "memos": "critical_omission",
+      "reason": "MemOS omits the 18% agreement gain and measure comparison. Agora retrieved the gold paragraph but exhausted output tokens."
+    },
+    "1602.07563-q2": {
+      "agora": "critical_omission",
+      "memos": "core_supported",
+      "reason": "Gold contains alternatives: about 100000 annotations and Polish 150000 example. MemOS includes the former with caveat. Agora omits both and discusses other language examples."
+    }
+  }
+}

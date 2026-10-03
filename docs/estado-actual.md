@@ -463,3 +463,17 @@ en la contradicción. Corrección dentro del texto no prueba actualización por 
 31 tests dirigidos pasaron; 10 solicitudes MemOS y dos generaciones Ágora. Sin
 comparación de coste total, generalización, MongoDB vivo ni integración nueva.
 Los componentes cubren funciones distintas; no hay evidencia para sustituirlos.
+
+### Feedback MemOS reparado parcialmente y bloque largo reservado
+
+[Informe](../experiments/memos-long-reserved-v1/README.md): se identificaron método
+Neo4j ausente y ruta de feedback que perdía IDs explícitos. Dos parches locales
+sin publicar en MemOS; cuatro regresiones pasan. La instancia temporal aplicó
+corrección y archivó anteriores, pero search devolvió archivados aun con filtro
+activo. Fidelidad temporal y recuperación vigente siguen pendientes.
+
+Dos artículos QASPER de 45/63 KB, cuatro preguntas: MemOS recuperó dos respuestas
+centrales y omitió detalles críticos en dos; Ágora produjo dos candidatos con omisión
+y rechazó dos salidas incompletas. 35353 tokens MemOS (30135 ingestión + 5218 consulta)
+frente a 15780 Ágora; embeddings/infraestructura/dinero no medidos. Sin promoción,
+sin ganador general y sin ajustes posteriores a las respuestas.

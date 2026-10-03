@@ -1,0 +1,293 @@
+{
+  "04-feedback": {
+    "http": 200,
+    "seconds": 33.788695125000004,
+    "path": "/product/feedback",
+    "request": {
+      "user_id": "root",
+      "writable_cube_ids": [
+        "agora-transition-d5bee807a562"
+      ],
+      "session_id": "agora-transition-d5bee807a562",
+      "history": [
+        {
+          "role": "user",
+          "content": "Synthetic project Cedar: the approved review meeting is on Tuesday. No calendar date has been specified."
+        },
+        {
+          "role": "assistant",
+          "content": "The approved Cedar review meeting is on Tuesday."
+        }
+      ],
+      "retrieved_memory_ids": [
+        "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+        "1d6eaa42-c0c6-4999-bced-639591decfd5"
+      ],
+      "feedback_content": "Correction authorized for synthetic project Cedar: the approved review meeting is now Wednesday, replacing Tuesday. No calendar date is supplied. Preserve the old statement as historical only.",
+      "async_mode": "sync",
+      "corrected_answer": false,
+      "info": {
+        "fixture": true
+      }
+    },
+    "response": {
+      "code": 200,
+      "message": "Memory feedback successfully",
+      "data": [
+        {
+          "answer": "",
+          "record": {
+            "add": [],
+            "update": [
+              {
+                "id": "a2fb9ec6-e534-42cc-b26c-c06483cdc5b3",
+                "text": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending. The approved review meeting for Synthetic project Cedar is now on Wednesday, replacing the previously stated Tuesday; no calendar date is supplied for the meeting, and the old Tuesday statement is preserved as historical only.",
+                "source_doc_id": null,
+                "archived_id": "1d6eaa42-c0c6-4999-bced-639591decfd5",
+                "origin_memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending."
+              },
+              {
+                "id": "2b3e3f7b-d43c-4d4f-be92-d0a2c5414b9f",
+                "text": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending. The approved review meeting for Synthetic project Cedar is now on Wednesday, replacing the previously stated Tuesday; no calendar date is supplied for the meeting, and the old Tuesday statement is preserved as historical only.",
+                "source_doc_id": null,
+                "archived_id": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                "origin_memory": "As of October 2, 2026, the user was tracking the status of the Synthetic project Cedar's review meeting and was aware that, although the meeting had been approved for a Tuesday, no calendar date had been specified. This suggests the user may need to follow up to confirm or finalize the exact date of the review meeting."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "07-search-active": {
+    "path": "/product/search",
+    "request": {
+      "user_id": "root",
+      "readable_cube_ids": [
+        "agora-transition-d5bee807a562"
+      ],
+      "session_id": "agora-transition-d5bee807a562",
+      "query": "What is the currently approved day for the Cedar review meeting?",
+      "relativity": 0.1,
+      "top_k": 10,
+      "include_preference": false,
+      "search_tool_memory": false,
+      "search_skill_memory": false,
+      "chat_history": [],
+      "internet_search": false,
+      "filter": {
+        "status": "activated"
+      }
+    },
+    "status": "returned",
+    "http": 200,
+    "response": {
+      "code": 200,
+      "message": "Search completed successfully",
+      "data": {
+        "text_mem": [
+          {
+            "cube_id": "agora-transition-d5bee807a562",
+            "memories": [
+              {
+                "id": "1d6eaa42-c0c6-4999-bced-639591decfd5",
+                "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending.",
+                "metadata": {
+                  "user_id": "root",
+                  "session_id": "agora-transition-d5bee807a562",
+                  "status": "archived",
+                  "is_fast": null,
+                  "evolve_to": [],
+                  "version": 1,
+                  "history": [],
+                  "working_binding": "1d6eaa42-c0c6-4999-bced-639591decfd5",
+                  "type": "fact",
+                  "key": "Cedar project review meeting scheduled for Tuesday",
+                  "confidence": 0.99,
+                  "source": null,
+                  "tags": [
+                    "Synthetic project Cedar",
+                    "review meeting",
+                    "scheduling",
+                    "unconfirmed date",
+                    "project"
+                  ],
+                  "visibility": null,
+                  "updated_at": "2026-10-02T23:35:22.000692000+00:00",
+                  "info": null,
+                  "internal_info": null,
+                  "covered_history": null,
+                  "memory_type": "LongTermMemory",
+                  "sources": [
+                    {
+                      "type": "chat",
+                      "role": "user",
+                      "chat_time": "11:34 PM on 02 October, 2026",
+                      "message_id": null,
+                      "content": "Synthetic project Cedar: the approved review meeting is on Tuesday. No calendar date has been specified.",
+                      "doc_path": null,
+                      "file_info": null,
+                      "image_info": null,
+                      "lang": "en"
+                    }
+                  ],
+                  "embedding": [],
+                  "created_at": "2026-10-02T23:35:21.968518000+00:00",
+                  "usage": [],
+                  "background": "On the night of October 2, 2026 at 11:34 PM, the user reported an update about the Synthetic project Cedar: the review meeting has been approved and is set for a Tuesday. However, no specific calendar date has been specified for the meeting yet. Since October 2, 2026 fell on a Friday, the referenced Tuesday most plausibly points to October 6, 2026, though the exact date remains unconfirmed. The user appears to be actively tracking the progress of project Cedar's review process and is aware that the scheduling details are still incomplete. This indicates that the user likely needs to follow up with the relevant parties to confirm or finalize the precise date of the approved review meeting, reflecting an ongoing involvement in the project's coordination and timeline management.",
+                  "file_ids": [],
+                  "relativity": 0.7947791392480155,
+                  "delete_time": "",
+                  "vector_sync": "success",
+                  "fixture": true,
+                  "delete_record_id": "",
+                  "ref_id": "[1d6eaa42]",
+                  "id": "1d6eaa42-c0c6-4999-bced-639591decfd5",
+                  "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending."
+                },
+                "ref_id": "[1d6eaa42]"
+              },
+              {
+                "id": "2b3e3f7b-d43c-4d4f-be92-d0a2c5414b9f",
+                "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending. The approved review meeting for Synthetic project Cedar is now on Wednesday, replacing the previously stated Tuesday; no calendar date is supplied for the meeting, and the old Tuesday statement is preserved as historical only.",
+                "metadata": {
+                  "user_id": "root",
+                  "session_id": "agora-transition-d5bee807a562",
+                  "status": "activated",
+                  "is_fast": null,
+                  "evolve_to": [],
+                  "version": 1,
+                  "history": [],
+                  "working_binding": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                  "type": "fact",
+                  "key": "Cedar review meeting",
+                  "confidence": 0.99,
+                  "source": null,
+                  "tags": [
+                    "Cedar",
+                    "review meeting",
+                    "schedule correction"
+                  ],
+                  "visibility": null,
+                  "updated_at": "2026-10-02T23:35:55.740796000+00:00",
+                  "info": null,
+                  "internal_info": null,
+                  "covered_history": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                  "memory_type": "WorkingMemory",
+                  "sources": [
+                    {
+                      "type": "doc",
+                      "role": null,
+                      "chat_time": null,
+                      "message_id": null,
+                      "content": "\"{\\\"type\\\": \\\"feedback\\\", \\\"role\\\": \\\"user\\\", \\\"chat_time\\\": \\\"2026-10-02T23:35:22.139504\\\", \\\"content\\\": \\\"Correction authorized for synthetic project Cedar: the approved review meeting is now Wednesday, replacing Tuesday. No calendar date is supplied. Preserve the old statement as historical only.\\\"}\"",
+                      "doc_path": null,
+                      "file_info": null,
+                      "image_info": null
+                    }
+                  ],
+                  "embedding": [],
+                  "created_at": "2026-10-02T23:35:55.740296000+00:00",
+                  "usage": [],
+                  "background": "[Feedback update background]: [{'content': 'Synthetic project Cedar: the approved review meeting is on Tuesday. No calendar date has been specified.', 'role': 'user'}, {'role': 'assistant', 'content': 'The approved Cedar review meeting is on Tuesday.'}]\nUser feedback: Correction authorized for synthetic project Cedar: the approved review meeting is now Wednesday, replacing Tuesday. No calendar date is supplied. Preserve the old statement as historical only.",
+                  "file_ids": [],
+                  "relativity": 0.7922818885247284,
+                  "delete_time": "",
+                  "vector_sync": "success",
+                  "fixture": true,
+                  "delete_record_id": "",
+                  "ref_id": "[2b3e3f7b]",
+                  "id": "2b3e3f7b-d43c-4d4f-be92-d0a2c5414b9f",
+                  "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending. The approved review meeting for Synthetic project Cedar is now on Wednesday, replacing the previously stated Tuesday; no calendar date is supplied for the meeting, and the old Tuesday statement is preserved as historical only."
+                },
+                "ref_id": "[2b3e3f7b]"
+              },
+              {
+                "id": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                "memory": "As of October 2, 2026, the user was tracking the status of the Synthetic project Cedar's review meeting and was aware that, although the meeting had been approved for a Tuesday, no calendar date had been specified. This suggests the user may need to follow up to confirm or finalize the exact date of the review meeting.",
+                "metadata": {
+                  "user_id": "root",
+                  "session_id": "agora-transition-d5bee807a562",
+                  "status": "archived",
+                  "is_fast": null,
+                  "evolve_to": [],
+                  "version": 1,
+                  "history": [],
+                  "working_binding": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                  "type": "fact",
+                  "key": "Pending date confirmation for Cedar review meeting",
+                  "confidence": 0.99,
+                  "source": null,
+                  "tags": [
+                    "follow-up",
+                    "date confirmation",
+                    "project Cedar",
+                    "planning"
+                  ],
+                  "visibility": null,
+                  "updated_at": "2026-10-02T23:35:22.000753000+00:00",
+                  "info": null,
+                  "internal_info": null,
+                  "covered_history": null,
+                  "memory_type": "UserMemory",
+                  "sources": [
+                    {
+                      "type": "chat",
+                      "role": "user",
+                      "chat_time": "11:34 PM on 02 October, 2026",
+                      "message_id": null,
+                      "content": "Synthetic project Cedar: the approved review meeting is on Tuesday. No calendar date has been specified.",
+                      "doc_path": null,
+                      "file_info": null,
+                      "image_info": null,
+                      "lang": "en"
+                    }
+                  ],
+                  "embedding": [],
+                  "created_at": "2026-10-02T23:35:21.998123000+00:00",
+                  "usage": [],
+                  "background": "On the night of October 2, 2026 at 11:34 PM, the user reported an update about the Synthetic project Cedar: the review meeting has been approved and is set for a Tuesday. However, no specific calendar date has been specified for the meeting yet. Since October 2, 2026 fell on a Friday, the referenced Tuesday most plausibly points to October 6, 2026, though the exact date remains unconfirmed. The user appears to be actively tracking the progress of project Cedar's review process and is aware that the scheduling details are still incomplete. This indicates that the user likely needs to follow up with the relevant parties to confirm or finalize the precise date of the approved review meeting, reflecting an ongoing involvement in the project's coordination and timeline management.",
+                  "file_ids": [],
+                  "relativity": 0.7777608905611784,
+                  "delete_time": "",
+                  "vector_sync": "success",
+                  "fixture": true,
+                  "delete_record_id": "",
+                  "ref_id": "[bf022c0d]",
+                  "id": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+                  "memory": "As of October 2, 2026, the user was tracking the status of the Synthetic project Cedar's review meeting and was aware that, although the meeting had been approved for a Tuesday, no calendar date had been specified. This suggests the user may need to follow up to confirm or finalize the exact date of the review meeting."
+                },
+                "ref_id": "[bf022c0d]"
+              }
+            ]
+          }
+        ],
+        "act_mem": [],
+        "para_mem": [],
+        "pref_mem": [
+          {
+            "cube_id": "agora-transition-d5bee807a562",
+            "memories": [],
+            "total_nodes": 0
+          }
+        ],
+        "pref_note": "",
+        "tool_mem": [
+          {
+            "cube_id": "agora-transition-d5bee807a562",
+            "memories": [],
+            "total_nodes": 0
+          }
+        ],
+        "skill_mem": [
+          {
+            "cube_id": "agora-transition-d5bee807a562",
+            "memories": [],
+            "total_nodes": 0
+          }
+        ]
+      }
+    },
+    "seconds": 0.09673500000000002
+  }
+}

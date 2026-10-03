@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1601.03313",
+    "source": "1601.03313.txt",
+    "bytes": 45163,
+    "sha256": "97b04b39f8c2b7fdfd8541dc7b269f08191d072c73381a4247967fae22762e29",
+    "questions": [
+      {
+        "id": "1601.03313-q1",
+        "question": "how did they measure grammatical correctness?",
+        "question_id": "e6204daf4efeb752fdbd5c26e179efcb8ddd2807"
+      },
+      {
+        "id": "1601.03313-q2",
+        "question": "how was quality of sentence transition measured?",
+        "question_id": "95c3907c5e8f57f239f3b031b1e41f19ff77924a"
+      }
+    ]
+  },
+  {
+    "id": "1602.07563",
+    "source": "1602.07563.txt",
+    "bytes": 63243,
+    "sha256": "05eeb85d15e39f83001294c1d0bbdf205c5f3e519f42e598a53a3640a2fafa32",
+    "questions": [
+      {
+        "id": "1602.07563-q1",
+        "question": "What evidence is presented that humans perceive the sentiment classes as ordered?",
+        "question_id": "c5ea4da3c760ba89194ad807bc1ef60e1761429f"
+      },
+      {
+        "id": "1602.07563-q2",
+        "question": "What size of dataset is sufficiently large for the model performance to approach the inter-annotator agreement?",
+        "question_id": "4a093a9af4903a59057a4372ac1b01603467ca58"
+      }
+    ]
+  }
+]
