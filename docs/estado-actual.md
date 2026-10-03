@@ -596,3 +596,9 @@ no respuesta nueva de modelo. [Expediente](../experiments/structured-handoff-v1/
  parcial, revisada sólo por el productor. Sin admisión ni promoción general.
 El recorrido del caso conocido queda demostrado; el siguiente trabajo corresponde
 al fallo en documentos nuevos, no a repetir indefinidamente el mismo caso.
+
+## Diagnóstico de comparación streaming (2026-10-03)
+
+[Diagnóstico y revisión Jev](../experiments/streaming-diagnosis-v1/README.md): la fuente respalda una línea base de **oraciones completas**, sin establecer entrada de documento completo. Una anotación apunta a detección de límites, otra tarea. Jev coincide en esos dos límites y supera dos controles de alcance, pero discrepa con el productor sobre la suficiencia de la primera anotación. Se conservan etiquetas originales y desacuerdo; no hay adjudicación automática.
+
+Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los métodos automáticos previos recuperan 0/3 o 1/3 de esos párrafos: persiste un fallo de recuperación. El plan manual no es una mejora automática ni ahorro demostrado. Una llamada Jev, 11.811 tokens observados; sin GLM en este diagnóstico. El caso deja de ser reservado. Siguiente paso: evaluar recuperación de comparaciones que conecte identidad de línea base, granularidad y resultados, con regla fijada antes de probar casos nuevos.

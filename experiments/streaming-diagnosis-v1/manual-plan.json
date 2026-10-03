@@ -1,0 +1,65 @@
+{
+  "schema": "agora/explicit-passage-plan/v1",
+  "source_id": "1907.12984",
+  "source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+  "question": "¿Se compara el sistema con una línea base de traducción de oraciones completas? Distingue ese alcance de disponer del documento completo; conserva cualquier límite de la evidencia.",
+  "ranges": [
+    [
+      6902,
+      7329
+    ],
+    [
+      21915,
+      21997
+    ],
+    [
+      22731,
+      22937
+    ]
+  ],
+  "budget_bytes": 5000,
+  "envelope": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "1907.12984",
+      "revision": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+      "revision_kind": "sha256",
+      "source_bytes": 47134,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "spans": [
+      {
+        "start_byte": 6902,
+        "end_byte": 7329,
+        "sha256": "95d62fb9fbb08b3fb1b91915f6e4ed92009127f790c28c9606fdf80127f48746",
+        "text": "For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity."
+      },
+      {
+        "start_byte": 21915,
+        "end_byte": 21997,
+        "sha256": "3d20a10fab01a482f40c7e15852fb6a5c93336a6e7548dc60714522cd5f68e0f",
+        "text": "baseline: A standard Transformer based model with big version of hyper parameters."
+      },
+      {
+        "start_byte": 22731,
+        "end_byte": 22937,
+        "sha256": "69cca4802d1fa1bc8cbd31bec0a949fad2110f2dbe163a3195ca95af2bd90856",
+        "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model."
+      }
+    ],
+    "delivered_bytes": 715,
+    "integrity": "matches_requested_revision",
+    "coverage": "partial",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "selection_method": "caller_selected_ranges",
+  "selection_verified": false,
+  "global_completeness": "not_established",
+  "memory_admission": "not_performed"
+}

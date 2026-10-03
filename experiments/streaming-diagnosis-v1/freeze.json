@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-10-03T22:12:07.700410+00:00",
+  "request_sha256": "c5a9116cd8fda97dd076a94642107b878d575c742d91bee3065d20f34da53e8c",
+  "source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+  "max_calls": 1,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "reviewer": "jev-1.13.0; separate provider, advisory, not independent adjudication",
+  "producer_expectations": {
+    "A_evidence": "partial",
+    "B_evidence": "different_task",
+    "paper_scope": "sentence",
+    "C": "unsupported",
+    "D": "supported"
+  },
+  "annotation_authors_and_gold_labels_sent": false
+}

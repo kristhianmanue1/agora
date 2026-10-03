@@ -488,6 +488,42 @@
     {
       "path": "experiments/structured-live-v1/view.json",
       "sha256": "65611f5414887b2c339fe384f774456eed65ced14bf2b97ecd95d569ec35bb00"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/README.md",
+      "sha256": "af4f02ade06a362f0a113530997e51a57a9002101f1a8952fae3f8284560250d"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/diagnosis.json",
+      "sha256": "5e24d32cce598d0df6fd322d033ff639e6258b9a5f809df73032ba919e2d45b7"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/freeze.json",
+      "sha256": "10664b76bab849aa5f25b2dcdcda08a741900ddbfaeafd7eceb24ef51600c722"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/manual-plan.json",
+      "sha256": "148627fdc6fdaa0c7b57c3f565c69e70b8711807ac1d3fafee62b4eeae143d34"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/prepare.py",
+      "sha256": "f658091389dc67b4c769d3ff1e9472f0390f811ed0e3d291d4313429b5f8ce64"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/request.json",
+      "sha256": "c5a9116cd8fda97dd076a94642107b878d575c742d91bee3065d20f34da53e8c"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/review.json",
+      "sha256": "e4bf37d23b75e690763c5b51516a1940845407d62fbe17cec0f802c8fe47131e"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/review.py",
+      "sha256": "9978c4883d8d46577687103c108e67118b4a833969ffc4f138d4efb89cbe7c1f"
+    },
+    {
+      "path": "experiments/streaming-diagnosis-v1/verify.py",
+      "sha256": "4563dc4716bdf4b88ca8dcc830ba60a6686490a8fe5c1a1af277529536855785"
     }
   ],
   "expected_accounting": {

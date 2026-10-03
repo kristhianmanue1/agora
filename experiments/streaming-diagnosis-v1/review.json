@@ -1,0 +1,67 @@
+{
+  "http_attempts": 1,
+  "status": "complete",
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "C": {
+        "type": "choice",
+        "choice": "unsupported",
+        "confidence": 0.87,
+        "probabilities": {
+          "supported": 0.04,
+          "uncertain": 0.05,
+          "unsupported": 0.91
+        }
+      },
+      "D": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 0.46,
+        "probabilities": {
+          "supported": 0.65,
+          "uncertain": 0.1,
+          "unsupported": 0.25
+        }
+      },
+      "A_evidence": {
+        "type": "choice",
+        "choice": "supports",
+        "confidence": 0.68,
+        "probabilities": {
+          "supports": 0.76,
+          "different_task": 0.0,
+          "uncertain": 0.02,
+          "partial": 0.22
+        }
+      },
+      "B_evidence": {
+        "type": "choice",
+        "choice": "different_task",
+        "confidence": 0.98,
+        "probabilities": {
+          "supports": 0.0,
+          "different_task": 0.99,
+          "uncertain": 0.0,
+          "partial": 0.01
+        }
+      },
+      "paper_scope": {
+        "type": "choice",
+        "choice": "sentence",
+        "confidence": 1.0,
+        "probabilities": {
+          "uncertain": 0.0,
+          "document": 0.0,
+          "sentence": 1.0,
+          "neither": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 11591,
+      "output_tokens": 220
+    }
+  },
+  "seconds": 0.31528545811306685
+}

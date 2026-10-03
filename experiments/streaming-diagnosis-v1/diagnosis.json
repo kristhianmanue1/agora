@@ -1,0 +1,107 @@
+{
+  "manual_selection": true,
+  "not_held_out_anymore": true,
+  "chain": [
+    {
+      "text": "For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.",
+      "start_byte": 6902,
+      "end_byte": 7329
+    },
+    {
+      "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+      "start_byte": 21915,
+      "end_byte": 21997
+    },
+    {
+      "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+      "start_byte": 22731,
+      "end_byte": 22937
+    }
+  ],
+  "manual_bytes": 715,
+  "prior_selection_coverage": [
+    {
+      "method": "overlap",
+      "budget": 5000,
+      "delivered_bytes": 4997,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "idf",
+      "budget": 5000,
+      "delivered_bytes": 4981,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "headings",
+      "budget": 5000,
+      "delivered_bytes": 74,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "headings-lists",
+      "budget": 5000,
+      "delivered_bytes": 4554,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "method": "overlap",
+      "budget": 12000,
+      "delivered_bytes": 10415,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "idf",
+      "budget": 12000,
+      "delivered_bytes": 10590,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "headings",
+      "budget": 12000,
+      "delivered_bytes": 74,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "method": "headings-lists",
+      "budget": 12000,
+      "delivered_bytes": 9162,
+      "evidence_chain_coverage": [
+        false,
+        false,
+        true
+      ]
+    }
+  ],
+  "label_status": "original annotations unchanged; proposed review only",
+  "producer_interpretation": "Evidence supports full-sentence baseline comparison; do not infer full-document input.",
+  "review_disagreement": "Producer expected A partial; Jev marked supports. Both classify B as another task and full-paper scope as sentence."
+}
