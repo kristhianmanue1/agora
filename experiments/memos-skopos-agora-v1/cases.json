@@ -1,0 +1,14 @@
+[
+  {
+    "id": "conflict",
+    "text": "Synthetic project Juniper. Alice states that the delivery is approved for Tuesday.\n\nBob states that the same delivery is approved for Wednesday. Neither statement supersedes the other. The coordinator has not resolved this conflict.\n\nNo budget amount or budget owner is provided.",
+    "question": "What is the approved delivery day, budget amount and budget owner for project Juniper?",
+    "expected": "Preserve Tuesday versus Wednesday as unresolved; amount and owner unknown."
+  },
+  {
+    "id": "correction",
+    "text": "Synthetic project Maple. Earlier record: delivery was approved for Tuesday.\n\nExplicit correction from the coordinator: Wednesday replaces Tuesday as the approved delivery day. No calendar date, month or year is provided.\n\nPriya is the delivery owner. Budget approval remains pending.",
+    "question": "What is the currently approved delivery day and exact calendar date, who owns delivery, and is the budget approved for project Maple?",
+    "expected": "Wednesday replaces Tuesday; no calendar date; Priya owns delivery; budget pending."
+  }
+]

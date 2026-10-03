@@ -1,0 +1,286 @@
+{
+  "versions": {
+    "agora": "26b53fb3cf7290d0e7efafb255b3f9aa0fe37994",
+    "skopos": "5773dbd8b6440f8ddb44d334f56f7fb98fa91ad0",
+    "memos": "a7367d07e55db61099f7b4e2c1108bc5831a24f3"
+  },
+  "cases": [
+    {
+      "id": "conflict",
+      "source_bytes": 279,
+      "source_sha256": "286a61a9cd9a6838235ea0e73324e8c09078e29e8f0f0272544425276fe7a944",
+      "expected": "Preserve Tuesday versus Wednesday as unresolved; amount and owner unknown.",
+      "skopos": {
+        "exact_content": true,
+        "fragment_hash_matches": true,
+        "seconds": 0.007661708000000003,
+        "turn_id": "codex-cli:conflict:conflict",
+        "offset_start": 0,
+        "offset_end": 526
+      },
+      "agora": {
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 3,
+          "seed_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "selected_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 279,
+          "selection_complete": true,
+          "search_exhaustive_for_meaning": false
+        },
+        "exact_spans": true,
+        "changed_source_rejected": true,
+        "execution_status": "complete",
+        "answer_status": "candidate",
+        "answer": "Para el proyecto Juniper existe un conflicto no resuelto sobre el día de entrega aprobado: Alice afirma que la entrega está aprobada para el martes (Tuesday), mientras que Bob afirma que la misma entrega está aprobada para el miércoles (Wednesday). Ninguna declaración reemplaza a la otra y el coordinador no ha resuelto este conflicto. Respecto al presupuesto, no se proporciona ningún monto de presupuesto ni responsable del presupuesto.",
+        "citations": [
+          {
+            "quote": "Alice states that the delivery is approved for Tuesday.",
+            "matches": [
+              {
+                "passage": 1,
+                "start_byte": 27,
+                "end_byte": 82
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "Bob states that the same delivery is approved for Wednesday.",
+            "matches": [
+              {
+                "passage": 2,
+                "start_byte": 84,
+                "end_byte": 144
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "Neither statement supersedes the other.",
+            "matches": [
+              {
+                "passage": 2,
+                "start_byte": 145,
+                "end_byte": 184
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "The coordinator has not resolved this conflict.",
+            "matches": [
+              {
+                "passage": 2,
+                "start_byte": 185,
+                "end_byte": 232
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "No budget amount or budget owner is provided.",
+            "matches": [
+              {
+                "passage": 3,
+                "start_byte": 234,
+                "end_byte": 279
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 468,
+          "completion_tokens_details": {
+            "reasoning_tokens": 309
+          },
+          "prompt_tokens": 458,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 926
+        },
+        "reported_model": "glm-5.3-flash",
+        "generation_seconds": 8.215283750000001
+      },
+      "memos": {
+        "memory_count": 3,
+        "search_count": 3,
+        "memories": [
+          "As of October 2, 2026, the user noted that for the synthetic project Juniper, no budget amount and no budget owner had been provided, leaving both the budget details and the delivery date approval unresolved.",
+          "As of October 2, 2026, the user was aware that the coordinator of the synthetic project Juniper had not yet resolved the conflicting delivery approval dates given by Alice (Tuesday) and Bob (Wednesday). The user was tracking this unresolved issue.",
+          "At 11:15 PM on October 2, 2026, the user reported a scheduling conflict on the synthetic project 'Juniper': Alice stated that the delivery was approved for Tuesday (likely October 6, 2026, exact date unclear), while Bob stated that the same delivery was approved for Wednesday (likely October 7, 2026, exact date unclear). Neither statement supersedes the other, and the coordinator had not resolved this conflict as of the time of the message."
+        ],
+        "original_source_retained_in_all_memories": true,
+        "answer": "Based on the available information for project Juniper:\n\n**Delivery day:** Unresolved — there is a conflicting approval. Alice stated the delivery was approved for Tuesday (likely October 6, 2026, exact date unclear), while Bob stated it was approved for Wednesday (likely October 7, 2026, exact date unclear). Neither statement supersedes the other, and the coordinator had not resolved this conflict as of the last update (11:15 PM, October 2, 2026).\n\n**Budget amount:** Not provided. No budget amount has been given for project Juniper.\n\n**Budget owner:** Not provided. No budget owner has been identified for project Juniper.\n\nAll three items — the approved delivery day, budget amount, and budget owner — remain unresolved.",
+        "call_seconds": {
+          "create": 0.029975666999999998,
+          "add": 29.559463708,
+          "all": 0.04400270799999717,
+          "search": 0.08255587500000061,
+          "chat": 5.010985874999999
+        }
+      }
+    },
+    {
+      "id": "correction",
+      "source_bytes": 283,
+      "source_sha256": "b1f0f025a595ca454fdda18ce4aaf57a1695472ab8802a8e5d2ace6af3f48a31",
+      "expected": "Wednesday replaces Tuesday; no calendar date; Priya owns delivery; budget pending.",
+      "skopos": {
+        "exact_content": true,
+        "fragment_hash_matches": true,
+        "seconds": 0.0004174159999976723,
+        "turn_id": "codex-cli:correction:correction",
+        "offset_start": 0,
+        "offset_end": 532
+      },
+      "agora": {
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 3,
+          "seed_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "selected_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 283,
+          "selection_complete": true,
+          "search_exhaustive_for_meaning": false
+        },
+        "exact_spans": true,
+        "changed_source_rejected": true,
+        "execution_status": "complete",
+        "answer_status": "candidate",
+        "answer": "El día de entrega aprobado actualmente para el proyecto Maple es el miércoles, según la corrección explícita del coordinador que reemplaza al martes (aprobado en el registro anterior). No se proporciona ninguna fecha de calendario exacta: se indica que no se da fecha, mes ni año. Priya es la propietaria de la entrega. La aprobación del presupuesto sigue pendiente, es decir, el presupuesto aún no está aprobado.",
+        "citations": [
+          {
+            "quote": "Earlier record: delivery was approved for Tuesday.",
+            "matches": [
+              {
+                "passage": 1,
+                "start_byte": 25,
+                "end_byte": 75
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "Explicit correction from the coordinator: Wednesday replaces Tuesday as the approved delivery day.",
+            "matches": [
+              {
+                "passage": 2,
+                "start_byte": 77,
+                "end_byte": 175
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "No calendar date, month or year is provided.",
+            "matches": [
+              {
+                "passage": 2,
+                "start_byte": 176,
+                "end_byte": 220
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "Priya is the delivery owner.",
+            "matches": [
+              {
+                "passage": 3,
+                "start_byte": 222,
+                "end_byte": 250
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          },
+          {
+            "quote": "Budget approval remains pending.",
+            "matches": [
+              {
+                "passage": 3,
+                "start_byte": 251,
+                "end_byte": 283
+              }
+            ],
+            "match_policy": "first_occurrence_per_passage"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 741,
+          "completion_tokens_details": {
+            "reasoning_tokens": 580
+          },
+          "prompt_tokens": 473,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1214
+        },
+        "reported_model": "glm-5.3-flash",
+        "generation_seconds": 14.317306249999998
+      },
+      "memos": {
+        "memory_count": 3,
+        "search_count": 3,
+        "memories": [
+          "As of October 2, 2026 at 11:16 PM, the budget approval for project Maple remains pending.",
+          "Priya is the delivery owner for project Maple, as noted by the user on October 2, 2026.",
+          "For project Maple, the approved delivery day was earlier recorded as Tuesday, but the coordinator explicitly corrected this, stating that Wednesday replaces Tuesday as the approved delivery day. No calendar date, month, or year was provided for the delivery, so the exact delivery date remains unclear. The user recorded this correction on October 2, 2026 at 11:16 PM; the time when the correction itself was issued is unclear."
+        ],
+        "original_source_retained_in_all_memories": true,
+        "answer": "**Project Maple status:**\n\n- **Approved delivery day:** Wednesday. This was explicitly corrected by the coordinator, replacing the previously recorded Tuesday.\n- **Exact calendar date:** Not available. No calendar date, month, or year was provided for the delivery, so the exact delivery date remains unclear.\n- **Delivery owner:** Priya.\n- **Budget approval:** Still pending, as of October 2, 2026 at 11:16 PM.",
+        "call_seconds": {
+          "create": 0.011708374999997773,
+          "add": 30.668403040999998,
+          "all": 0.03868633300000113,
+          "search": 0.07148779099999558,
+          "chat": 33.03856904199999
+        }
+      }
+    }
+  ],
+  "raw_hashes": {
+    "conflict-chat.json": "5dcd316a1c8ce8f53577823a9915d46169cd1ffd5b6ed1c799abcb577c6a40bf",
+    "correction-chat.json": "d8caf2b4a9879ddee1396c85d6b5c8b5575228875f8ceabefc368a0ce7d9933f",
+    "correction-local.json": "c5c975c5ddc0e121e9eb8502f0946745d064a0e25abfb2346c7a51c7fffadfcb",
+    "conflict-agora-timing.json": "55f803ca2fa843911838475c88c1695b13c1fe255f4b3afe6499f166e48d9392",
+    "conflict-search.json": "7d58550d2b179a88f0c1ff65f2d2912c6f626f2e93d0e5c1c213fb738dd1e7d6",
+    "correction-search.json": "a9a040ff9bb3625b07c812787402b80acf096adc56b38762f6bdec92c1ba23ad",
+    "correction-add.json": "8ad1b45f6e6c3ff873cb2186a75c0dbe0f01f0077f465814c7689bf7a5ead126",
+    "conflict-local.json": "2b01cc5db3020ae69afab5c843f875dd3552109bdf855e72940645526dffac39",
+    "conflict-add.json": "63c30374c465b61be18ba0eb385a572f699a8ddc3d594c5c2778a05df5a9706a",
+    "correction-agora-timing-v2.json": "3cb09b056ac65c4bfed040fd9b0d6e7e059944b0643e21d6969b5874fa6cc172",
+    "cases.json": "d0378bc55b0ab99892d6a5fe767e9b1ddc4b4d5c51902026dd2c3beb05a12895",
+    "conflict-agora-timing-v2.json": "f9cf3fa1d6c21b648d9f69abd21aaff2c4bbd9008e2d9e38405c2b714554c8cc",
+    "correction-create.json": "d14badb69de898e7af1729cfe4a10dbdcb24c89393c066b5f95bffcf0f51d963",
+    "correction-all.json": "55cd771aa6427d9c9ca49308950300ecfc6e610db049b34ade861fb60ebcc98f",
+    "conflict-all.json": "27432a2b03ae11e00d97208831f42fd214b3d519ca2f0dcb4e2228d444b370fb",
+    "conflict-create.json": "84cbc2f4ce82f9b48da86f6e56a9d0896bc87f99c0360844e547596fc512a3ce",
+    "correction-agora-live-v2/result.json": "c57033f3dcf6428769093582af17b254d34da34bfe273a7f937dc296c505576e",
+    "conflict-agora-live-v2/result.json": "af05913e6397332911d1e7309506ac160027cf563adf05d507cb56c4f614cee8",
+    "conflict-agora-live/result.json": "0b62addbce573ea7f085601d58317b1b752103154bfd37eac3a21c64d9237d6f"
+  }
+}

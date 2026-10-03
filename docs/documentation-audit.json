@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 190,
-  "bytes": 921213,
+  "documents": 191,
+  "bytes": 928095,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "ed245e3a14b21d2b0a6f8bbc599b42e513fcfd139036d38f00d94aa2833af12a",
-      "bytes": 39368,
+      "sha256": "baf63a39e6e82dfaa488c1fe4a00a8db9fa5bf4caae6a544eda33c2c142d48c7",
+      "bytes": 40097,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -820,6 +820,10 @@
         },
         {
           "target": "../experiments/memos-transitions-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/memos-skopos-agora-v1/README.md",
           "exists": true
         }
       ],
@@ -1632,6 +1636,14 @@
       "path": "experiments/memos-comparison-v1/README.md",
       "sha256": "0ee77df7e248b0c3d47ce9d32c00d6983cd7ec06b6a77792af0347f27edd915f",
       "bytes": 4545,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/memos-skopos-agora-v1/README.md",
+      "sha256": "303909331dae4e9f661ddca03b78262521335c252ef2e887f65d6bb553648471",
+      "bytes": 6153,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

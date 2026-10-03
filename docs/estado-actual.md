@@ -451,3 +451,15 @@ Existen serialización y hooks de versión, sin equivalencia transaccional demos
 No se ejecutó restauración sobre el grafo compartido ni se atribuyó bloqueo a una
 respuesta del chat. Próximo paso: diagnóstico acotado de feedback y control positivo
 de actualización antes de cualquier integración.
+
+### MemOS, Skopos y Ágora: comparación de funciones
+
+[Dos casos sintéticos](../experiments/memos-skopos-agora-v1/README.md): Skopos
+conservó texto/sello mediante su parser Codex; Ágora recuperó párrafos exactos,
+rechazó fuente alterada y produjo dos respuestas candidatas con cinco citas cada una.
+MemOS conservó fuentes en metadatos y contenido central, pero añadió fechas probables
+en la contradicción. Corrección dentro del texto no prueba actualización por feedback.
+
+31 tests dirigidos pasaron; 10 solicitudes MemOS y dos generaciones Ágora. Sin
+comparación de coste total, generalización, MongoDB vivo ni integración nueva.
+Los componentes cubren funciones distintas; no hay evidencia para sustituirlos.
