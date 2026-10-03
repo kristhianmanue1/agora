@@ -20,6 +20,7 @@ válido no demuestran por sí solos que una afirmación sea verdadera o completa
 - Revisión experimental por afirmación y detalle, con adjudicación separada.
 - CLI de pendientes: preparación, evaluación, inspección, recuperación y reparación
   explícita separada. [Recorrido reproducible](docs/pendientes-cli.md).
+- [Relaciones candidatas](docs/relaciones-candidatas.md) con IDs y huecos explícitos.
 - Baterías locales y protocolos QASPER, AttrScore y controles sintéticos.
 
 El adaptador local funciona sin Skopos ni AN-KLA. No hay sincronización de sus

@@ -614,3 +614,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Revisión de relaciones candidatas (2026-10-03)
 
 [Piloto Jev](../experiments/relation-review-v1/README.md): ocho controles sintéticos y dos afirmaciones sobre la cadena manual del caso streaming. Coincidencia exacta 7/10 con etiquetas del productor; respaldo frente a otros estados 10/10. Tres rechazos confunden evidencia insuficiente con contradicción (tarea, versión y alcance documento/oración). Una llamada real: 3.375 tokens. No demuestra extracción de relaciones ni recuperación automática. Sin promoción o integración decisoria: se requiere conservar IDs de evidencia y distinguir huecos de evidencia antes de afirmar contradicción.
+
+## Relaciones candidatas implementadas (2026-10-03)
+
+[Módulo y CLI optativa](relaciones-candidatas.md): units, template y validate enlazan sistema, tarea, versión, entrada y evaluación a pasajes por ID y SHA. Separan huecos estructurales de revisión semántica pendiente; nunca admiten automáticamente. Seis pruebas nuevas y 569 pruebas de regresión aprobadas. Sin APIs. Conexión con generador/revisor y extracción automática pendientes.
