@@ -7,6 +7,7 @@ import urllib.request
 from .__main__ import ENDPOINT, token_limit, timeout_limit
 from .source import FileSourceAdapter, digest, parse_range
 from .passages import query_passages
+from .passage_view import display
 
 
 def main():
@@ -34,7 +35,7 @@ def main():
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=False)
     attempts = 0
-    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py", "evidence.py", "evidence_ids.py")
+    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py", "evidence.py", "evidence_ids.py", "passage_view.py")
     initial_hashes = {name: digest(Path(__file__).with_name(name).read_bytes()) for name in modules}
 
     def provider(system, user):
@@ -91,7 +92,7 @@ def main():
     if initial_hashes != final_hashes:
         result.update(execution_status='rejected', diagnostic='implementation_changed_during_run')
     (args.out / 'result.json').write_text(json.dumps(result, ensure_ascii=True, indent=2) + '\n')
-    print(json.dumps({k: result.get(k) for k in ('execution_status', 'answer_status', 'http_attempts')}))
+    print(json.dumps(display(result), ensure_ascii=True))
     return 0 if result['execution_status'] == 'complete' else 2
 
 

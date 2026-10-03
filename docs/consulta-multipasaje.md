@@ -210,3 +210,37 @@ GLM-5.3/Flash y no permite desactivar su razonamiento:
 El límite `--max-output-tokens` también puede consumirse en razonamiento; acotar
 los caracteres de respuesta no basta para evitar truncamientos. La prueba adicional
 con `low` se conserva aparte de los intentos con la configuración predeterminada.
+
+
+## Presentación conjunta e inspección sin proveedor
+
+La salida JSON de `agora.passage_cli` conserva `execution_status`, `answer_status`
+y `http_attempts`, y añade una vista `agora/passage-display/v1` con `answer`,
+`missing`, `answer_scope`, `requires_expansion`, estado de revisión y advertencias.
+Los consumidores deben presentar respuesta y faltantes juntos. `result.json`
+conserva el contrato original y la evidencia completa; no se modifica para renderizar.
+Los consumidores que exigían exactamente las tres claves antiguas de stdout deben
+adaptarse a los campos adicionales de la vista; no hay cambio del archivo result.
+
+Para inspeccionar un resultado ya guardado, sin credencial ni llamada al proveedor:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m agora.passage_view \
+  experiments/focused-label-v1/repair/default-receipt.json
+```
+
+La inspección muestra también ruta y SHA-256 del archivo leído. El hash identifica
+los bytes observados, no certifica autenticidad ni fidelidad. La vista no cambia
+estados, revisa semántica, amplía lecturas ni admite memoria. El código de salida 0
+del inspector significa que mostró el archivo, incluso si éste contiene un rechazo.
+
+En resultados anteriores sin `missing`, la vista muestra `null` y explica que los
+faltantes no están declarados; nunca transforma eso en `[]`. Alcance desconocido
+permanece `unknown`, y flags desconocidos permanecen `null`. Las ejecuciones fallidas
+o rechazadas muestran su diagnóstico; no rescatan el texto del proveedor como
+respuesta candidata. El comando rechaza JSON ambiguo con claves duplicadas y
+archivos mayores de 16 MiB. Los datos guardados continúan siendo datos no verificados.
+
+Validación del 2026-10-03: 548 pruebas locales pasan, incluyendo el receipt real de
+fórmula faltante, compatibilidad aditiva, ausencia desconocida y rechazo sin rescate.
+Cero llamadas externas en esta validación.

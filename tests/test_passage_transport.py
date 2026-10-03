@@ -18,8 +18,15 @@ class PassageTransportTests(unittest.TestCase):
             if effort:argv+=['--reasoning-effort',effort]
             response={'model':'glm-5.3-flash','choices':[{'finish_reason':'stop','message':{'content':json.dumps({'parts':[{'id':'P1','status':'answer','answer':'Se excluye 2.','quotes':['La nota 2 se excluye.']}]})}}]}
             opener=MagicMock();opener.open.return_value.__enter__.return_value.read.return_value=json.dumps(response).encode()
-            with patch('sys.argv',argv),patch.dict(os.environ,{'ZAI_API_KEY':'fixture-secret'}),patch('urllib.request.build_opener',return_value=opener),contextlib.redirect_stdout(io.StringIO()):
+            output=io.StringIO()
+            with patch('sys.argv',argv),patch.dict(os.environ,{'ZAI_API_KEY':'fixture-secret'}),patch('urllib.request.build_opener',return_value=opener),contextlib.redirect_stdout(output):
                 self.assertEqual(main(),0)
+            shown=json.loads(output.getvalue())
+            self.assertEqual(shown['answer'],'Se excluye 2.')
+            self.assertIn('missing',shown)
+            self.assertIsNone(shown['missing'])
+            self.assertIn('answer_scope',shown)
+            self.assertEqual(shown['semantic_support'],'not_verified')
             sent=json.loads(opener.open.call_args.args[0].data)
             config=json.loads((root/'out/result.json').read_text())['request_config']
             if effort:

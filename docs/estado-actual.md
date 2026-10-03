@@ -521,3 +521,13 @@ tokens), dos respuestas estructuralmente válidas rechazadas por el productor y 
 reparación final que conserva el dato faltante. Sin cambio de código ni aceptación
 automática. La candidata mantiene alcance parcial; mostrar `missing` junto a
 `answer` es necesario para no ocultar el límite. No es nueva comparación MemOS.
+
+
+### Respuesta, faltantes y alcance visibles en la CLI
+
+`passage_cli` muestra juntos respuesta, `missing`, alcance y necesidad de ampliar.
+`python3 -m agora.passage_view <result.json>` permite inspección local sin proveedor,
+con hash del archivo y advertencia de que mostrar no equivale a verificar. Los
+resultados históricos no se alteran y los rechazos no se presentan como candidatos.
+548 tests pasan; validado con el caso real de fórmula faltante sin llamadas API.
+Guía y compatibilidad de stdout: [consulta multipasaje](consulta-multipasaje.md).

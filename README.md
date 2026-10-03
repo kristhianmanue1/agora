@@ -13,6 +13,8 @@ válido no demuestran por sí solos que una afirmación sea verdadera o completa
   revisión SHA-256 y localizadores.
 - Consulta de varios pasajes, recorrido acotado y selección explícita entre
   fuente completa y evidencia retenida.
+- Inspección local de resultados: respuesta, faltantes y alcance juntos mediante
+  `python3 -m agora.passage_view <result.json>`.
 - Respuestas por aspectos, afirmaciones con citas literales o identificadores,
   presupuestos y estados que distinguen falta de evidencia y fallo de ejecución.
 - Revisión experimental por afirmación y detalle, con adjudicación separada.
