@@ -1,0 +1,200 @@
+{
+  "activation": {
+    "started_at": "2026-10-03T13:22:45.725824+00:00",
+    "old_pid": 14492,
+    "port": 9696,
+    "cwd": "/Users/krisnova/www/aria/llavero",
+    "data_deleted": false,
+    "launched_pid": 45982,
+    "health": {
+      "status": "healthy",
+      "service": "memos",
+      "version": "1.0.1"
+    },
+    "listener_pid": "45982",
+    "finished_at": "2026-10-03T13:22:54.921266+00:00",
+    "repair_files": [
+      {
+        "path": "src/memos/mem_reader/utils.py",
+        "sha256": "07cd1ebadef88b88fd7ecce29b4e28ebfef52cc4f66eaa8ced39e407ec666521"
+      },
+      {
+        "path": "tests/mem_reader/test_json_trailing_comma.py",
+        "sha256": "4920241f5df577512114543df18e90254987dbb3b87ebddc49d20938e036152d"
+      }
+    ],
+    "pre_activation_tests_passed": 75
+  },
+  "budget": {
+    "purpose": "regression of previously seen source; not held out",
+    "max_http_requests": 7,
+    "max_answer_tokens": 4096,
+    "timeout_seconds": 180,
+    "retries": 0,
+    "questions": 2,
+    "source_sha256": "15c413b09cd626f72317689000ecc17cbe4905577ef630a292cdcad8c4abf017"
+  },
+  "http_records": [
+    {
+      "file": "1801.05617-add.json",
+      "trace": "long-d40ca99d58704eb4bb9e855d7f1e6e64",
+      "path": "/product/add",
+      "status": "returned",
+      "http": 200,
+      "seconds": 47.930671875,
+      "returned_items": 5,
+      "retrieved_memory_count": null
+    },
+    {
+      "file": "1801.05617-all.json",
+      "trace": "long-fc135113467044959feb88016f2f460b",
+      "path": "/product/get_all",
+      "status": "returned",
+      "http": 200,
+      "seconds": 0.04960691600000189,
+      "returned_items": 1,
+      "retrieved_memory_count": 5
+    },
+    {
+      "file": "1801.05617-create.json",
+      "trace": "long-aa97115628094a78ba872e106cabb2fa",
+      "path": "/product/create_cube",
+      "status": "returned",
+      "http": 200,
+      "seconds": 0.017449084000000004,
+      "returned_items": null,
+      "retrieved_memory_count": null
+    },
+    {
+      "file": "1801.05617-q1-chat.json",
+      "trace": "long-ce91bf20e01f497e9fe0c81f917571b0",
+      "path": "/product/chat/complete",
+      "status": "returned",
+      "http": 200,
+      "seconds": 42.796780749999996,
+      "returned_items": null,
+      "retrieved_memory_count": null
+    },
+    {
+      "file": "1801.05617-q1-search.json",
+      "trace": "long-36d88bf11d114abdbec9d79891485f5e",
+      "path": "/product/search",
+      "status": "returned",
+      "http": 200,
+      "seconds": 0.17398975000000405,
+      "returned_items": null,
+      "retrieved_memory_count": 5
+    },
+    {
+      "file": "1801.05617-q2-chat.json",
+      "trace": "long-a341eefce7704aa3b1d6e60ee5d202c1",
+      "path": "/product/chat/complete",
+      "status": "returned",
+      "http": 200,
+      "seconds": 11.192449292000006,
+      "returned_items": null,
+      "retrieved_memory_count": null
+    },
+    {
+      "file": "1801.05617-q2-search.json",
+      "trace": "long-2d3332c8e9d542deb8afa9d701f960bc",
+      "path": "/product/search",
+      "status": "returned",
+      "http": 200,
+      "seconds": 0.19397099999999057,
+      "returned_items": null,
+      "retrieved_memory_count": 5
+    }
+  ],
+  "llm_receipts": [
+    {
+      "trace": "long-d40ca99d58704eb4bb9e855d7f1e6e64",
+      "file": "1801.05617-add.json",
+      "id": "20261003212343caa7fc8e2e984b16",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 3008,
+        "prompt_tokens": 10526,
+        "total_tokens": 13534,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 1827,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "trace": "long-ce91bf20e01f497e9fe0c81f917571b0",
+      "file": "1801.05617-q1-chat.json",
+      "id": "2026100321243079cb20087b7b468a",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 321,
+        "prompt_tokens": 445,
+        "total_tokens": 766,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 174,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "trace": "long-a341eefce7704aa3b1d6e60ee5d202c1",
+      "file": "1801.05617-q2-chat.json",
+      "id": "20261003212513ed7f26c499d44f4a",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 529,
+        "prompt_tokens": 387,
+        "total_tokens": 916,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 369,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "live_trailing_comma_repairs": [],
+  "answers": [
+    {
+      "file": "1801.05617-q1-chat.json",
+      "answer": "According to the paper you shared on October 3, 2026, the optimised classifiers were evaluated against two baselines:\n\n1. **A keyword baseline** – a simple approach based on matching keywords.\n2. **An unoptimised unigram SVM baseline** – a support vector machine using only unigram features, without the joint grid search over feature types and hyperparameters used for the main system.\n\nThe optimised classifiers considerably outperformed both of these baselines (Fact Memories 2 and 3).\n\nPlease note: my available evidence does not include further details about these baselines, such as the specific keyword list used, the exact performance numbers the baselines achieved, or how the keyword baseline was constructed."
+    },
+    {
+      "file": "1801.05617-q2-chat.json",
+      "answer": "Yes. According to the paper you shared on October 3, 2026, the authors report inter-annotator agreement measured with Cohen's Kappa:\n\n- **Dutch corpus:** Kappa = 0.69\n- **English corpus:** Kappa = 0.59\n\nThe annotation was carried out with the Brat tool by trained Dutch-native linguists, and the reported Kappa values indicate that annotating cyberbullying content is non-trivial — agreement was moderate rather than high for this task [Fact 1].\n\nNote that the supplied evidence only records these overall Kappa values; it does not mention whether the paper breaks agreement down per annotation category (e.g., threats vs. insults vs. defenses), so I can't confirm any per-category agreement figures."
+    }
+  ],
+  "total_observed_tokens": 15216,
+  "semantic_review": "producer; known reference answers; not independent",
+  "cube_id": "agora-long-1801-05617-a219385e",
+  "assessment": {
+    "operational": "Passed bounded regression: five stored memories, both searches return five, both chats contain context",
+    "baseline_question": "Central answer supported: keyword baseline and unoptimized unigram SVM",
+    "agreement_question": "Central yes and numeric values supported; unsupported Cohen attribution for English contradicts source Fleiss",
+    "live_patch_branch_exercised": false,
+    "causal_limit": "Fresh LLM extraction produced valid JSON; live success cannot be attributed solely to parser repair. Previous stored-response replay exercised repair and recovered five items.",
+    "remaining": "Other malformed responses may still become empty successes; no universal repair or semantic certification",
+    "reinstall_performed": false,
+    "model_reported": [
+      "glm-5.3-flash"
+    ]
+  }
+}

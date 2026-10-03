@@ -120,6 +120,14 @@
     {
       "path": "experiments/memos-long-reserved-v2/score.py",
       "sha256": "8973694cb2ebef70fbb23005d8b7c609d448d2ecd87eae6263f056c6cec1871f"
+    },
+    {
+      "path": "experiments/memos-activation-v1/result.json",
+      "sha256": "ca1a51be19355df86b8211fd1ba7e35a04c6faf9e5691eb4d9a59e4201160710"
+    },
+    {
+      "path": "experiments/memos-activation-v1/parser-validation.json",
+      "sha256": "f809e37ccb8c35df7be4ccc790fe3c7cae93321d07ade000c347a51b810f6220"
     }
   ],
   "expected_accounting": {
