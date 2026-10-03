@@ -16,6 +16,9 @@ def generate(source, plan_bytes, expected_hash, question, provider, citation_mod
     if len(plan_bytes) > 8*1024*1024 or digest(plan_bytes) != expected_hash:
         raise ValueError('plan_hash_or_size_mismatch')
     plan = json.loads(plan_bytes, object_pairs_hook=unique_object)
+    from .explicit_plan import VERSION as EXPLICIT, generate as generate_explicit
+    if plan.get('schema') == EXPLICIT:
+        return generate_explicit(source, plan, expected_hash, question, provider, citation_mode)
     strategies = {'agora/subquestions-plan/v1-experimental':'paragraphs-equal',
                   'agora/subquestions-plan/v2-experimental':'functions-adaptive'}
     from .structured_plan import VERSION as STRUCTURED,prepare as prepare_structured
@@ -93,7 +96,7 @@ def run(args, read):
         if attempts:raise ValueError('request_budget_exceeded')
         attempts+=1
         return live_provider(system,user) if args.live else response
-    modules=('structured_plan.py','structure_selection.py','qasper.py','plan_generation.py','subquestions.py','function_retrieval.py','passages.py','source.py','query.py','transform.py','evidence.py','evidence_ids.py','routed_query.py')
+    modules=('explicit_plan.py','structured_plan.py','structure_selection.py','qasper.py','plan_generation.py','subquestions.py','function_retrieval.py','passages.py','source.py','query.py','transform.py','evidence.py','evidence_ids.py','routed_query.py')
     hashes={n:digest(Path(__file__).with_name(n).read_bytes()) for n in modules}
     try:
         result=generate(args.source,Path(args.plan).read_bytes(),args.expected_plan_sha256,args.question,provider,args.citation_mode,scope_guard=getattr(args,'scope_guard',False))

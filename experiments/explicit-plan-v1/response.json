@@ -1,0 +1,18 @@
+{
+  "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"Las etiquetas se recogieron por crowdsourcing: los trabajadores chatearon con el agente de diálogo base y asignaron una valoración del 1 al 5 a la calidad de cada respuesta del agente; esas valoraciones numéricas solo se pidieron al recopilar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Mapeos y exclusiones documentados: los contextos con valoración 1 se mapearon a la clase negativa (insatisfecho) y los contextos con valoración 2 se descartaron para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"La tarea de satisfacción es binaria, con etiquetas que van de insatisfecho a satisfecho, y su objetivo es predecir si el interlocutor está satisfecho con la calidad de la conversación actual.\",\"evidence_ids\":[\"ev_3d3f0eace53f08df3858f201\"]},{\"text\":\"Mecanismo de predicción entrenado (distinto de la recogida de etiquetas): el contexto se codifica con un Transformer y una capa lineal final en la cabeza de tarea lo convierte en una predicción escalar de satisfacción; la tarea de satisfacción usa parámetros de modelo separados, a diferencia de las tareas de Diálogo y Retroalimentación.\",\"evidence_ids\":[\"ev_c864d1d576ae617ca781c270\",\"ev_f1aad37cec05939ce7b75d3c\"]}],\"missing\":[\"Las valoraciones mapeadas a la clase positiva (satisfecho) aparecen en el pasaje como un marcador de fórmula (INLINEFORM0), por lo que el rango o conjunto exacto de valoraciones asignadas a la clase positiva no está establecido en los pasajes proporcionados y no se reconstruye por eliminación.\"]}]}",
+  "finish_reason": "stop",
+  "requested_model": "glm-5.3-flash",
+  "reported_model": "glm-5.3-flash",
+  "response_id": "20261004011019aa55d2e42af14e2b",
+  "usage": {
+    "completion_tokens": 2172,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1680
+    },
+    "prompt_tokens": 1419,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3591
+  }
+}

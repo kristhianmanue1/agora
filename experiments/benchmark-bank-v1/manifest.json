@@ -340,6 +340,30 @@
     {
       "path": "experiments/focused-label-v1/verify.py",
       "sha256": "e874f7b90f33037a4b98b494d0da23f8fa62e310cdb66dae408a99329031f439"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/README.md",
+      "sha256": "c680f8dce12cedf9ae524c23d21b83da9be7211388eff375bed0de37f74de71e"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/plan.json",
+      "sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/replay.py",
+      "sha256": "f3eae895d27008b5b9c2fd03f84e046e03a8c3cda103e5e0163e603704e0c7f1"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/response.json",
+      "sha256": "b6f8bb76dba85a7ef4e70f14f4d36cf4b65801beb83b3e4846103e3491896c3f"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/result.json",
+      "sha256": "885471637a6ae6625c5b7bd3db9d922a60e17eb5a32ea2d10b2ae7a6549b6c8d"
+    },
+    {
+      "path": "experiments/explicit-plan-v1/verification.json",
+      "sha256": "3b80ab2e5510cde5c8b283a35468dd85c20163f99508a95bf9db800ff70769a1"
     }
   ],
   "expected_accounting": {

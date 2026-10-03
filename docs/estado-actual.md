@@ -531,3 +531,12 @@ con hash del archivo y advertencia de que mostrar no equivale a verificar. Los
 resultados históricos no se alteran y los rechazos no se presentan como candidatos.
 548 tests pasan; validado con el caso real de fórmula faltante sin llamadas API.
 Guía y compatibilidad de stdout: [consulta multipasaje](consulta-multipasaje.md).
+
+
+### Plan explícito reproducible de pasajes
+
+`plan-passages` fija rangos manuales, fuente y pregunta; `generate-plan` los
+reconstruye antes de usar un proveedor o respuesta guardada. El caso de fórmula
+faltante se reprodujo por CLI sin HTTP, conservando respuesta, faltantes y alcance
+parcial. 554 tests pasan. [Expediente](../experiments/explicit-plan-v1/README.md).
+Esto habilita repetición controlada; todavía no demuestra selección automática.

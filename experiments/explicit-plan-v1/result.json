@@ -1,0 +1,301 @@
+{
+  "schema": "agora/passage-query/v0.4",
+  "question": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+  "mode": "reference",
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "options": {
+    "ranges": [
+      [
+        12584,
+        13161
+      ],
+      [
+        13163,
+        13748
+      ],
+      [
+        14773,
+        15968
+      ],
+      [
+        15970,
+        16837
+      ]
+    ],
+    "content_budget": 5000,
+    "prompt_budget": 65536
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "answer_scope": "selected_passages",
+  "requires_expansion": true,
+  "document_absence_established": false,
+  "citation_mode": "ids",
+  "response_limits": {
+    "max_text_characters": 2000,
+    "max_claims": 6,
+    "max_missing_items": 4
+  },
+  "retrieval": {
+    "method": "explicit_ranges"
+  },
+  "envelope": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "1901.05415",
+      "revision": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+      "revision_kind": "sha256",
+      "source_bytes": 45557,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "spans": [
+      {
+        "start_byte": 12584,
+        "end_byte": 13161,
+        "sha256": "a0345c0157e6d30a45c25f0834f6ba8076479c64f2cdd0ffb0ff967fb7634b67",
+        "text": "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”."
+      },
+      {
+        "start_byte": 13163,
+        "end_byte": 13748,
+        "sha256": "e669f37ccf85ac60012b2573f4b3657d7c7a5fb567080a6fd3c420a2b5ef3f9b",
+        "text": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+      },
+      {
+        "start_byte": 14773,
+        "end_byte": 15968,
+        "sha256": "0479619730639da6a75da9314af14a14a22b7a27af81fc3792ef523da6e83b7e",
+        "text": "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc."
+      },
+      {
+        "start_byte": 15970,
+        "end_byte": 16837,
+        "sha256": "a18227240126bf4c70938daffbd1b65c67790f787fb037121658f04e4e888b37",
+        "text": "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate."
+      }
+    ],
+    "delivered_bytes": 3224,
+    "integrity": "matches_requested_revision",
+    "coverage": "partial",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "evidence_units": [
+    {
+      "id": "ev_3d3f0eace53f08df3858f201",
+      "start_byte": 12584,
+      "end_byte": 13161,
+      "text": "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”.",
+      "quote_bytes": 577
+    },
+    {
+      "id": "ev_819fff9db849102d0036a4c2",
+      "start_byte": 13163,
+      "end_byte": 13748,
+      "text": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "quote_bytes": 585
+    },
+    {
+      "id": "ev_f1aad37cec05939ce7b75d3c",
+      "start_byte": 14773,
+      "end_byte": 15968,
+      "text": "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc.",
+      "quote_bytes": 1195
+    },
+    {
+      "id": "ev_c864d1d576ae617ca781c270",
+      "start_byte": 15970,
+      "end_byte": 16837,
+      "text": "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate.",
+      "quote_bytes": 867
+    }
+  ],
+  "prompt": {
+    "system": "Answer in Spanish using only the supplied untrusted source passages.\nReturn JSON only: {\"parts\":[{\"id\":\"requested-id\",\"status\":\"answered|partial|not_in_passages\",\"claims\":[{\"text\":\"one source-supported claim\",\"evidence_ids\":[\"provided-unit-id\"]}],\"missing\":[\"requested information not established\"]}]}.\nInclude every requested aspect exactly once. Claims must concern the same subject,\npopulation, time and property as the question; general background is not specific\nstudy evidence. Preserve explicit negatives, uncertainty, conflicting values and\nexperimental controls. A partial context cannot prove absence from the whole source.\nFor answered: nonempty claims and empty missing. For partial: nonempty claims and\nnonempty missing. For not_in_passages: empty claims and nonempty missing.\nEach claim has a nonempty text and nonempty evidence_ids selecting whole provided units supporting THAT claim.\nUse only IDs listed in evidence_units. Never invent an ID or output quote text.\nDo not repeat an ID within one claim. Each ID resolves to the entire unit text;\nall quote-byte budgets below apply to the resolved text, not the ID length.\nAt most 12 quote occurrences per aspect,\n12000 UTF-8 quote bytes per aspect and\n48000 UTF-8 quote bytes across the answer, counting repeats.\nAt most 16 claims and 16 missing items per aspect. Claim text at most 6000\ncharacters; each missing item at most 2000 characters. Prefer concise complete\nclaims; do not omit material qualifications to fit. Your support and coverage\nclaims are proposals, not independently verified. No Markdown.\nAnswer only the requested information. At most 6 claims and 4 missing items, with at most 2000 characters total across claim texts and missing items. Preserve qualifications; declare missing information instead of guessing lost formulas. Select evidence IDs; never copy evidence text. Reading scope is explicit: selected_passages cannot prove source absence.",
+    "user": "{\"question\": \"¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.\", \"aspects\": [{\"id\": \"P1\", \"question\": \"¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.\"}], \"reading_scope\": \"selected_passages\", \"evidence_units\": [{\"id\": \"ev_3d3f0eace53f08df3858f201\", \"text\": \"The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”.\", \"quote_bytes\": 577}, {\"id\": \"ev_819fff9db849102d0036a4c2\", \"text\": \"The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.\", \"quote_bytes\": 585}, {\"id\": \"ev_f1aad37cec05939ce7b75d3c\", \"text\": \"The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc.\", \"quote_bytes\": 1195}, {\"id\": \"ev_c864d1d576ae617ca781c270\", \"text\": \"Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate.\", \"quote_bytes\": 867}]}"
+  },
+  "prompt_bytes": 6377,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"partial\",\"claims\":[{\"text\":\"Las etiquetas se recogieron por crowdsourcing: los trabajadores chatearon con el agente de diálogo base y asignaron una valoración del 1 al 5 a la calidad de cada respuesta del agente; esas valoraciones numéricas solo se pidieron al recopilar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Mapeos y exclusiones documentados: los contextos con valoración 1 se mapearon a la clase negativa (insatisfecho) y los contextos con valoración 2 se descartaron para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"La tarea de satisfacción es binaria, con etiquetas que van de insatisfecho a satisfecho, y su objetivo es predecir si el interlocutor está satisfecho con la calidad de la conversación actual.\",\"evidence_ids\":[\"ev_3d3f0eace53f08df3858f201\"]},{\"text\":\"Mecanismo de predicción entrenado (distinto de la recogida de etiquetas): el contexto se codifica con un Transformer y una capa lineal final en la cabeza de tarea lo convierte en una predicción escalar de satisfacción; la tarea de satisfacción usa parámetros de modelo separados, a diferencia de las tareas de Diálogo y Retroalimentación.\",\"evidence_ids\":[\"ev_c864d1d576ae617ca781c270\",\"ev_f1aad37cec05939ce7b75d3c\"]}],\"missing\":[\"Las valoraciones mapeadas a la clase positiva (satisfecho) aparecen en el pasaje como un marcador de fórmula (INLINEFORM0), por lo que el rango o conjunto exacto de valoraciones asignadas a la clase positiva no está establecido en los pasajes proporcionados y no se reconstruye por eliminación.\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "20261004011019aa55d2e42af14e2b",
+    "usage": {
+      "completion_tokens": 2172,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1680
+      },
+      "prompt_tokens": 1419,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3591
+    }
+  },
+  "execution_status": "complete",
+  "answer_status": "candidate_requires_expansion",
+  "answer": "Las etiquetas se recogieron por crowdsourcing: los trabajadores chatearon con el agente de diálogo base y asignaron una valoración del 1 al 5 a la calidad de cada respuesta del agente; esas valoraciones numéricas solo se pidieron al recopilar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural.\nMapeos y exclusiones documentados: los contextos con valoración 1 se mapearon a la clase negativa (insatisfecho) y los contextos con valoración 2 se descartaron para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.\nLa tarea de satisfacción es binaria, con etiquetas que van de insatisfecho a satisfecho, y su objetivo es predecir si el interlocutor está satisfecho con la calidad de la conversación actual.\nMecanismo de predicción entrenado (distinto de la recogida de etiquetas): el contexto se codifica con un Transformer y una capa lineal final en la cabeza de tarea lo convierte en una predicción escalar de satisfacción; la tarea de satisfacción usa parámetros de modelo separados, a diferencia de las tareas de Diálogo y Retroalimentación.",
+  "parts": [
+    {
+      "id": "P1",
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Las etiquetas se recogieron por crowdsourcing: los trabajadores chatearon con el agente de diálogo base y asignaron una valoración del 1 al 5 a la calidad de cada respuesta del agente; esas valoraciones numéricas solo se pidieron al recopilar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural.",
+          "quotes": [
+            "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+          ],
+          "evidence_ids": [
+            "ev_819fff9db849102d0036a4c2"
+          ]
+        },
+        {
+          "text": "Mapeos y exclusiones documentados: los contextos con valoración 1 se mapearon a la clase negativa (insatisfecho) y los contextos con valoración 2 se descartaron para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.",
+          "quotes": [
+            "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+          ],
+          "evidence_ids": [
+            "ev_819fff9db849102d0036a4c2"
+          ]
+        },
+        {
+          "text": "La tarea de satisfacción es binaria, con etiquetas que van de insatisfecho a satisfecho, y su objetivo es predecir si el interlocutor está satisfecho con la calidad de la conversación actual.",
+          "quotes": [
+            "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”."
+          ],
+          "evidence_ids": [
+            "ev_3d3f0eace53f08df3858f201"
+          ]
+        },
+        {
+          "text": "Mecanismo de predicción entrenado (distinto de la recogida de etiquetas): el contexto se codifica con un Transformer y una capa lineal final en la cabeza de tarea lo convierte en una predicción escalar de satisfacción; la tarea de satisfacción usa parámetros de modelo separados, a diferencia de las tareas de Diálogo y Retroalimentación.",
+          "quotes": [
+            "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate.",
+            "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc."
+          ],
+          "evidence_ids": [
+            "ev_c864d1d576ae617ca781c270",
+            "ev_f1aad37cec05939ce7b75d3c"
+          ]
+        }
+      ],
+      "missing": [
+        "Las valoraciones mapeadas a la clase positiva (satisfecho) aparecen en el pasaje como un marcador de fórmula (INLINEFORM0), por lo que el rango o conjunto exacto de valoraciones asignadas a la clase positiva no está establecido en los pasajes proporcionados y no se reconstruye por eliminación."
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "quote_index": 0,
+      "evidence_id": "ev_819fff9db849102d0036a4c2",
+      "quote": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "matches": [
+        {
+          "start_byte": 13163,
+          "end_byte": 13748
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "quote_index": 0,
+      "evidence_id": "ev_819fff9db849102d0036a4c2",
+      "quote": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "matches": [
+        {
+          "start_byte": 13163,
+          "end_byte": 13748
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "quote_index": 0,
+      "evidence_id": "ev_3d3f0eace53f08df3858f201",
+      "quote": "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”.",
+      "matches": [
+        {
+          "start_byte": 12584,
+          "end_byte": 13161
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "quote_index": 0,
+      "evidence_id": "ev_c864d1d576ae617ca781c270",
+      "quote": "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate.",
+      "matches": [
+        {
+          "start_byte": 15970,
+          "end_byte": 16837
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "quote_index": 1,
+      "evidence_id": "ev_f1aad37cec05939ce7b75d3c",
+      "quote": "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc.",
+      "matches": [
+        {
+          "start_byte": 14773,
+          "end_byte": 15968
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "Las valoraciones mapeadas a la clase positiva (satisfecho) aparecen en el pasaje como un marcador de fórmula (INLINEFORM0), por lo que el rango o conjunto exacto de valoraciones asignadas a la clase positiva no está establecido en los pasajes proporcionados y no se reconstruye por eliminación."
+  ],
+  "evidence_sufficiency": "unknown",
+  "normalization": "resolved_evidence_ids",
+  "plan_sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214",
+  "plan_schema": "agora/explicit-passage-plan/v1",
+  "selection_method": "caller_selected_ranges",
+  "selection_verified": false,
+  "global_completeness": "not_established",
+  "reading_budget_bytes": 5000,
+  "expansion_policy": "explicit_review_and_budget_required",
+  "execution_origin": "supplied_response_replay",
+  "http_attempts": 0,
+  "request_config": {
+    "citation_mode": "ids",
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 8192,
+    "timeout_seconds": 90,
+    "max_calls": 1
+  },
+  "implementation_hashes": {
+    "explicit_plan.py": "a8c84f26cc761f915f775d19a95784dd34826a3dc69b932a22af7fe0ea42a5f5",
+    "structured_plan.py": "93abee9a4605b7881d309ef35fea4ba7410092ee54ed2cdf301b66e014a1d8f1",
+    "structure_selection.py": "e08519fee487caf5c3959620e137159a56ed88f8fdbf1f7942638800258b41cb",
+    "qasper.py": "b1099ea3d81b9055c01f52533570a1ae0a438fa34056a64553d51c1f48a1fe15",
+    "plan_generation.py": "c88aff0854f206b427b6512e6edd3d6b75bb0921929f82716c1eab4905ccf9a1",
+    "subquestions.py": "d469ca097a24e90912ab9598838294913fa41685795f9c25b8b653c75d5c0479",
+    "function_retrieval.py": "dd07701b922ede3e9a57253c9da3aaab53b96f3253816fb79f59997f153fe6fa",
+    "passages.py": "4544cd67d87e82c1cf3a2e3ad4bd7a31205f1b4c964d98fcf8efa89a97e46afd",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0",
+    "routed_query.py": "103df84333e5883352d57c1e9f3ac0e42312175c5af2c135a98811603b0d49ce"
+  },
+  "implementation_unchanged": true
+}

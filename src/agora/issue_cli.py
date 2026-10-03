@@ -35,6 +35,8 @@ def parser():
     sub=p.add_subparsers(dest='command',required=True)
     from .structured_plan import add_command as add_structured
     add_structured(sub)
+    from .explicit_plan import add_command as add_explicit
+    add_explicit(sub)
     sub.add_parser('init',help='Crear workspace nuevo; nunca migrar uno existente.')
     s=sub.add_parser('seed',help='Incorporar evaluación inicial suministrada explícitamente.')
     s.add_argument('--issue',required=True);s.add_argument('--input',type=Path,required=True);s.add_argument('--response',type=Path,required=True)
@@ -118,6 +120,9 @@ def run(args):
     if args.command=='review-coverage':
         from .coverage_cli import run as review_coverage
         return review_coverage(args,read)
+    if args.command=='plan-passages':
+        from .explicit_plan import run as explicit_plan
+        return explicit_plan(args,write_new)
     if args.command=='generate-plan':
         from .plan_generation import run as generate_plan
         return generate_plan(args,read)

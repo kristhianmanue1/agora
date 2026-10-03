@@ -244,3 +244,21 @@ archivos mayores de 16 MiB. Los datos guardados continúan siendo datos no verif
 Validación del 2026-10-03: 548 pruebas locales pasan, incluyendo el receipt real de
 fórmula faltante, compatibilidad aditiva, ausencia desconocida y rechazo sin rescate.
 Cero llamadas externas en esta validación.
+
+
+## Plan de pasajes elegidos explícitamente
+
+`agora_issues.py --workspace <workspace> plan-passages` prepara el contrato
+`agora/explicit-passage-plan/v1`. Requiere `--source`, `--source-id`,
+`--source-sha256`, `--question`, uno o varios `--range START:END`, `--budget`
+y `--out`. El workspace se crea previamente con `init`. No llama al proveedor.
+
+`generate-plan` admite este plan mediante los argumentos existentes: `--source`,
+`--plan`, `--expected-plan-sha256`, la misma `--question`, `--citation-mode ids`
+y `--response` para replay (o `--live` sólo por decisión explícita). El plan liga
+la pregunta; cambiarla, alterar fuente o inconsistencia interna produce rechazo
+antes del proveedor. El control de alcance está siempre activo para este contrato.
+
+[Ejemplo completo reproducible](../experiments/explicit-plan-v1/README.md).
+No equivale a selección automática ni prueba de suficiencia semántica. Mostrar el
+resultado con `agora.passage_view` conserva juntos respuesta, faltantes y alcance.

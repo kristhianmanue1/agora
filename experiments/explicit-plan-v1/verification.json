@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tests_passed": 554,
+  "http_attempts": 0,
+  "provider_usage_is_historical": true,
+  "plan_sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214",
+  "answer_status": "candidate_requires_expansion",
+  "missing_preserved": true,
+  "answer_preserved": true,
+  "selection_verified": false,
+  "independent_semantic_review": false
+}
