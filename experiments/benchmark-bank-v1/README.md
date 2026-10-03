@@ -85,3 +85,16 @@ incorporar independencia de evaluación y más documentos, con presupuesto fijad
 
 Validación final Ágora: 533 tests, OK. El verificador del banco pasó sobre los
 artefactos incluidos. Sin revisión independiente ni afirmación de madurez general.
+
+## Continuación: integración Neo4j ejecutada
+
+Se repitió el conjunto seleccionado con Neo4j 5.26.6 desechable: **58 passed,
+0 skipped**, con un aviso de cierre del driver. Se habilitaron las tres pruebas
+antes omitidas. El contenedor sólo expuso Bolt en localhost:17687, usó datos
+temporales y fue eliminado con salida 0. No se reinició el servicio habitual.
+Los cuatro archivos candidatos coinciden con los hashes de la validación anterior.
+Evidencia y ejecutor: `neo4j-integration/`. Esto prueba el adaptador Neo4j nativo,
+no toda la ruta Community + Qdrant ni todo MemOS. Cero llamadas a modelos.
+
+La siguiente campaña está congelada en `../memos-long-reserved-v2/` y **todavía
+no ejecutada**. Conserva por separado los resultados históricos de esta base.

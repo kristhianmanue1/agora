@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1612.03762",
+    "source": "1612.03762.txt",
+    "bytes": 68958,
+    "sha256": "32c83a79be986be331e1fb4692b82fed1de9b2fc24c73b9effb4f83cfdbdf960",
+    "questions": [
+      {
+        "id": "1612.03762-q1",
+        "question": "Did they test the idea that the system reduces the time needed to encode ADR reports on real pharmacologists? ",
+        "question_id": "95af7aaea3ce9dab4cf64e2229ce9b98381dd050"
+      },
+      {
+        "id": "1612.03762-q2",
+        "question": "Do the authors offer a hypothesis as to why the system performs better on short descriptions than longer ones?",
+        "question_id": "ab37ae82e38f64d3fa95782f2c791488f26cd43f"
+      }
+    ]
+  },
+  {
+    "id": "1801.05617",
+    "source": "1801.05617.txt",
+    "bytes": 45390,
+    "sha256": "15c413b09cd626f72317689000ecc17cbe4905577ef630a292cdcad8c4abf017",
+    "questions": [
+      {
+        "id": "1801.05617-q1",
+        "question": "What are their baselines?",
+        "question_id": "458e5ed506883bfec6623102ec9f43c071f0616f"
+      },
+      {
+        "id": "1801.05617-q2",
+        "question": "Do they report the annotation agreement?",
+        "question_id": "85ab5f773b297bcf48a274634d402a35e1d57446"
+      }
+    ]
+  }
+]

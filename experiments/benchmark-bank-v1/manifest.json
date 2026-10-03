@@ -48,6 +48,26 @@
     {
       "path": "experiments/memos-skopos-agora-v1/result.json",
       "sha256": "23f9702ae7629c60eba489ce6af467e2601b5266b49b1b6978d59ffb08a165b2"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/neo4j-integration/result.json",
+      "sha256": "760a60637b21497576ea52e88adeae1e4b1f6be40e1b7eeff8d87db84a6a3bb1"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/neo4j-integration/pytest.log",
+      "sha256": "2c6884905b3679bcffe105995cf64cbc487021ef55931921b52126aaad84c3ac"
+    },
+    {
+      "path": "experiments/benchmark-bank-v1/neo4j-integration/run_validation.py",
+      "sha256": "1cc5e6e89804d543109142c15f07e36557e7e67ab7e9df54bc37103555f06ff7"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/cases.json",
+      "sha256": "65b301ae1d46f95d2d55257e8cbd675fc4ef50c7a35ee4130ab5aa57e609b8c1"
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/freeze.json",
+      "sha256": "fcb4a95888e317def3feb6213aa1fc8bbd2cfd71c9c923bef95dc5e4cd5e60e5"
     }
   ],
   "expected_accounting": {

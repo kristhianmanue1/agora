@@ -1,0 +1,8 @@
+..........................................................               [100%]
+=============================== warnings summary ===============================
+tests/graph_dbs/test_neo4j_vector_search.py::TestNeo4jPreFilterIntegration::test_scores_are_positive
+  /Users/krisnova/www/memOs/.venv/lib/python3.11/site-packages/neo4j/_sync/driver.py:547: DeprecationWarning: Relying on Driver's destructor to close the session is deprecated. Please make sure to close the session. Use it as a context (`with` statement) or make sure to call `.close()` explicitly. Future versions of the driver will not close drivers automatically.
+    _deprecation_warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+58 passed, 1 warning in 12.22s
