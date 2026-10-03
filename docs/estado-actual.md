@@ -626,3 +626,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Recorrido con el documento real: reparación y límite de versión
 
 [Ensayo trazable](../experiments/relation-real-v1/README.md): tres pasajes manuales del artículo 1907.12984, ligados mediante mapa de offsets a una fuente derivada de 719 bytes. GLM produjo JSON con un carácter extra; se conservó el rechazo y se reparó explícitamente sólo ese carácter, sin nueva generación. Jev marcó seis juicios supported, sin admisión. Total observado: 6.969 tokens. Queda ambigüedad: el campo version recibió una configuración de hiperparámetros, no una versión de software establecida. Debe precisarse el contrato antes de ampliar la campaña. No se demostró recuperación automática.
+
+## Contrato de relaciones v2 optativo
+
+[Contrato y uso](relaciones-candidatas.md): software_version separado de model_configuration; v1 sigue disponible sin reinterpretación ni migración silenciosa. Validación/revisión leen el schema del candidato. [Prueba real de desarrollo](../experiments/relation-version-v2/README.md): versión desconocida y configuración citada correctamente separadas; entrada también desconocida, por lo que el caso sigue incompleto. Una generación GLM y una revisión Jev, 7.137 tokens, sin reparación. Regresión completa: 581 pruebas aprobadas, incluidas cinco nuevas. No se demuestra fiabilidad semántica general ni recuperación automática.

@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-10-03T23:48:31.307522+00:00",
+  "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+  "source_id": "1907.12984-manual-chain",
+  "contract": "v2",
+  "max_generator_calls": 1,
+  "max_reviewer_calls": 1,
+  "retries": 0,
+  "producer_expectation": "software_version unknown; big hyperparameters only in model_configuration",
+  "scope": "known manual development chain; not independent adjudication"
+}

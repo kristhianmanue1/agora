@@ -93,3 +93,32 @@ total observado 4.644; los reasoning tokens de GLM ya están incluidos.
 Regresión completa: 576 pruebas aprobadas. La reproducción offline de ambas
 operaciones también pasó. [Evidencia](../experiments/relation-flow-smoke-v1/README.md).
 Esto valida conexión, no recuperación automática ni fiabilidad semántica general.
+
+## Contrato v2: versión y configuración separadas
+
+Optativo: `template --contract-version v2` en `agora_relations.py` y
+`generate --contract-version v2` en `agora_relation_run.py`. Sin el argumento
+se conserva v1. `validate` y `review` leen la versión del candidato; no aceptan
+un argumento que la reinterprete.
+
+`agora/relation-candidate/v2` sustituye el campo ambiguo `version` por:
+
+- `software_version`: identificador explícito de release o revisión del software.
+- `model_configuration`: arquitectura, variante, tamaño o hiperparámetros.
+
+Los otros campos, IDs y procedencia permanecen. `text: null` y lista de IDs vacía
+representan desconocido; no se transforma una configuración conocida en versión
+conocida. Ni siquiera la frase literal “big version of hyper parameters” establece
+una release. Tampoco se exige que toda fuente publique una versión de software:
+el hueco se conserva y no equivale a ausencia probada o fallo de extracción.
+
+Las salidas v2 usan `agora/relation-assessment/v2` y
+`agora/relation-workflow/v2`; el revisor devuelve siete juicios, incluido el enlace.
+V1 conserva sus seis juicios y la semántica histórica de `version`. No existe
+migración automática: crear un candidato v2 exige volver a clasificar la evidencia.
+Cambiar sólo el identificador de schema de un candidato v1 se rechaza.
+
+Esta separación es contractual y de prompts. El validador comprueba estructura,
+fuente y pertenencia de referencias; no detecta por sí solo toda asignación
+semántica incorrecta. Una configuración escrita deliberadamente en
+software_version con una cita válida permanece sin verificar y sin admisión.

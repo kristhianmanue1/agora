@@ -1,0 +1,43 @@
+{
+  "schema": "agora/relation-candidate/v2",
+  "source_id": "1907.12984-manual-chain",
+  "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+  "fields": {
+    "system": {
+      "text": "baseline: A standard Transformer based model",
+      "evidence_ids": [
+        "ev_a309af6d19d449c02f8df908"
+      ]
+    },
+    "task": {
+      "text": "translation",
+      "evidence_ids": [
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    },
+    "software_version": {
+      "text": null,
+      "evidence_ids": []
+    },
+    "model_configuration": {
+      "text": "big version of hyper parameters",
+      "evidence_ids": [
+        "ev_a309af6d19d449c02f8df908"
+      ]
+    },
+    "input": {
+      "text": null,
+      "evidence_ids": []
+    },
+    "evaluation": {
+      "text": "compare the translation quality as well as latency",
+      "evidence_ids": [
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    }
+  },
+  "relation_evidence_ids": [
+    "ev_a309af6d19d449c02f8df908",
+    "ev_88d2fb258bead3931f7d4deb"
+  ]
+}

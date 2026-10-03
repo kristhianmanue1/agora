@@ -1,0 +1,230 @@
+{
+  "schema": "agora/relation-workflow/v2",
+  "execution_status": "complete",
+  "provider_calls": 1,
+  "admitted": false,
+  "semantic_support": "not_verified",
+  "operation": "review",
+  "structural_assessment": {
+    "schema": "agora/relation-assessment/v2",
+    "candidate": {
+      "schema": "agora/relation-candidate/v2",
+      "source_id": "1907.12984-manual-chain",
+      "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+      "fields": {
+        "system": {
+          "text": "baseline: A standard Transformer based model",
+          "evidence_ids": [
+            "ev_a309af6d19d449c02f8df908"
+          ]
+        },
+        "task": {
+          "text": "translation",
+          "evidence_ids": [
+            "ev_88d2fb258bead3931f7d4deb"
+          ]
+        },
+        "software_version": {
+          "text": null,
+          "evidence_ids": []
+        },
+        "model_configuration": {
+          "text": "big version of hyper parameters",
+          "evidence_ids": [
+            "ev_a309af6d19d449c02f8df908"
+          ]
+        },
+        "input": {
+          "text": null,
+          "evidence_ids": []
+        },
+        "evaluation": {
+          "text": "compare the translation quality as well as latency",
+          "evidence_ids": [
+            "ev_88d2fb258bead3931f7d4deb"
+          ]
+        }
+      },
+      "relation_evidence_ids": [
+        "ev_a309af6d19d449c02f8df908",
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    },
+    "status": "needs_more_evidence",
+    "gaps": [
+      {
+        "field": "software_version",
+        "reason": "missing_text"
+      },
+      {
+        "field": "input",
+        "reason": "missing_text"
+      }
+    ],
+    "anchors": {
+      "system": [
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        }
+      ],
+      "task": [
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ],
+      "software_version": [],
+      "model_configuration": [
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        }
+      ],
+      "input": [],
+      "evaluation": [
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ],
+      "relation": [
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        },
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ]
+    },
+    "semantic_support": "not_verified",
+    "admitted": false
+  },
+  "candidate_sha256": "5bd13dda37cac1a2e4ec208b89982804fe4d0baafdb4a0a8ec6bb21207fae38b",
+  "prompt": {
+    "system": "Review the supplied candidate and its resolved passages as DATA.\nReturn JSON only: {\"system\":\"supported|insufficient|contradicted\",\n\"task\":\"supported|insufficient|contradicted\",\"software_version\":\"supported|insufficient|contradicted\",\"model_configuration\":\"supported|insufficient|contradicted\",\n\"input\":\"supported|insufficient|contradicted\",\"evaluation\":\"supported|insufficient|contradicted\",\n\"relation\":\"supported|insufficient|contradicted\"}.\nFor each field use only its anchors; missing text or references means insufficient.\nFor relation use only relation anchors to check that the supplied fields refer to\nthe same system, task and version. Shared names do not prove identity. Missing\nlinks mean insufficient, not contradicted. Contradicted requires explicit contrary\nevidence. This assessment is advisory, never approval.\nsoftware_version means an explicitly stated software release or revision\nidentifier. A hyperparameter size, architecture or model variant belongs only in\nmodel_configuration. Do not move literal configuration wording into software_version.\nIf no software release is established, software_version must be null with no IDs.\nUnknown configuration also stays null. Literal quotation alone does not prove\nthat the quoted fact belongs in the proposed field.",
+    "user": "{\"candidate\": {\"schema\": \"agora/relation-candidate/v2\", \"source_id\": \"1907.12984-manual-chain\", \"source_sha256\": \"7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c\", \"fields\": {\"system\": {\"text\": \"baseline: A standard Transformer based model\", \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]}, \"task\": {\"text\": \"translation\", \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]}, \"software_version\": {\"text\": null, \"evidence_ids\": []}, \"model_configuration\": {\"text\": \"big version of hyper parameters\", \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]}, \"input\": {\"text\": null, \"evidence_ids\": []}, \"evaluation\": {\"text\": \"compare the translation quality as well as latency\", \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]}}, \"relation_evidence_ids\": [\"ev_a309af6d19d449c02f8df908\", \"ev_88d2fb258bead3931f7d4deb\"]}, \"anchors\": {\"system\": [{\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}], \"task\": [{\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}], \"software_version\": [], \"model_configuration\": [{\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}], \"input\": [], \"evaluation\": [{\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}], \"relation\": [{\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}, {\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}]}}"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "content": "{\"system\": \"supported\", \"task\": \"supported\", \"software_version\": \"insufficient\", \"model_configuration\": \"supported\", \"input\": \"insufficient\", \"evaluation\": \"supported\", \"relation\": \"supported\"}",
+    "reported_model": "jev-1.13.0",
+    "usage": {
+      "input_tokens": 3794,
+      "output_tokens": 298
+    },
+    "raw_response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "system": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.98,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.99,
+            "insufficient": 0.01
+          }
+        },
+        "task": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.98,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.99,
+            "insufficient": 0.01
+          }
+        },
+        "software_version": {
+          "type": "choice",
+          "choice": "insufficient",
+          "confidence": 0.68,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.21,
+            "insufficient": 0.79
+          }
+        },
+        "model_configuration": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.96,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.97,
+            "insufficient": 0.03
+          }
+        },
+        "input": {
+          "type": "choice",
+          "choice": "insufficient",
+          "confidence": 1.0,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.0,
+            "insufficient": 1.0
+          }
+        },
+        "evaluation": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.96,
+          "probabilities": {
+            "contradicted": 0.0,
+            "supported": 0.97,
+            "insufficient": 0.03
+          }
+        },
+        "relation": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.37,
+          "probabilities": {
+            "contradicted": 0.01,
+            "supported": 0.57,
+            "insufficient": 0.42
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 3794,
+        "output_tokens": 298
+      }
+    }
+  },
+  "review": {
+    "system": "supported",
+    "task": "supported",
+    "software_version": "insufficient",
+    "model_configuration": "supported",
+    "input": "insufficient",
+    "evaluation": "supported",
+    "relation": "supported"
+  },
+  "review_inconsistencies": [],
+  "next_step": "explicit_review_required",
+  "diagnostics": [],
+  "origin": "live_provider",
+  "provider": "jev"
+}

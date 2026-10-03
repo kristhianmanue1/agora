@@ -15,7 +15,10 @@ def main():
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--source-id', required=True)
     parser.add_argument('--candidate', type=Path)
+    parser.add_argument('--contract-version', choices=['v1','v2'])
     args = parser.parse_args()
+    if args.contract_version and args.action != 'template':
+        parser.error('--contract-version applies only to template; validate uses candidate schema')
     if (args.action == 'validate') != (args.candidate is not None):
         parser.error('--candidate is required only for validate')
     try:
@@ -24,7 +27,7 @@ def main():
         if args.action == 'units':
             result = evidence(raw, args.source_id)
         elif args.action == 'template':
-            result = template(raw, args.source_id)
+            result = template(raw, args.source_id, contract_version=args.contract_version or "v1")
         else:
             with args.candidate.open('rb') as stream:
                 content = stream.read(1024 * 1024 + 1)

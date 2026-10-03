@@ -26,7 +26,10 @@ def main():
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--response',type=Path)
     mode.add_argument('--live',choices=['glm','jev'])
+    parser.add_argument('--contract-version',choices=['v1','v2'])
     args=parser.parse_args()
+    if args.contract_version and args.action!='generate':
+        parser.error('--contract-version applies only to generate; review uses candidate schema')
     if args.action=='generate' and (not args.question or args.candidate or args.live=='jev'):
         parser.error('generate requires --question, no --candidate; live generator is glm')
     if args.action=='review' and (not args.candidate or args.question):
@@ -43,7 +46,7 @@ def main():
             if args.response:return response
             if args.live=='jev':return jev_provider(system,user)
             return live_provider(system,user,max_tokens=4096,json_object=True)
-        result=run(raw,args.source_id,args.expected_sha256,provider,question=args.question,candidate=candidate)
+        result=run(raw,args.source_id,args.expected_sha256,provider,question=args.question,candidate=candidate,contract_version=args.contract_version or "v1")
         result.update(origin=marker['origin'],provider=args.live)
         (args.out/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
         # Output candidate only after successful structural validation; original is in result.

@@ -704,6 +704,34 @@
     {
       "path": "experiments/relation-real-v1/verify.py",
       "sha256": "d675226c72aa38a8dd9339e39c77cbef19af7cc1b1a301f5c091d0c55ae240c0"
+    },
+    {
+      "path": "experiments/relation-version-v2/README.md",
+      "sha256": "3e0bf6ae1201cba5072aeb1a746a8ca5f2583fe826b0a2b7633ecb6ad2c36df1"
+    },
+    {
+      "path": "experiments/relation-version-v2/freeze.json",
+      "sha256": "5796a6b5949e43f8284db06b81d5147534f30bfad906e647ce1820e36f60e1bc"
+    },
+    {
+      "path": "experiments/relation-version-v2/generation/candidate.json",
+      "sha256": "4f7e102d908d4ed134df215b43f978ff6e17cc47d2683f4ed5b91fba5469a0de"
+    },
+    {
+      "path": "experiments/relation-version-v2/generation/result.json",
+      "sha256": "df544fa3041f7cd0b2eb809fef00cfa0d85233bbf40b79410d87041fa293956d"
+    },
+    {
+      "path": "experiments/relation-version-v2/review/result.json",
+      "sha256": "760115e0c4c4f196b2fd76e8a848b8e16de5feb2fadfcb1f39efb1bec96b86d1"
+    },
+    {
+      "path": "experiments/relation-version-v2/source.txt",
+      "sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c"
+    },
+    {
+      "path": "experiments/relation-version-v2/verify.py",
+      "sha256": "da0ca287a89db676fccdd798e16afce7360b1df983f8a724d7005df8ba537435"
     }
   ],
   "expected_accounting": {

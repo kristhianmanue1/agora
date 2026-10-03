@@ -5,6 +5,15 @@ from .evidence_ids import build_units
 
 FIELDS = ('system', 'task', 'version', 'input', 'evaluation')
 SCHEMA = 'agora/relation-candidate/v1'
+FIELDS_V2 = ('system', 'task', 'software_version', 'model_configuration', 'input', 'evaluation')
+
+
+def fields_for(schema):
+    if schema == SCHEMA:
+        return FIELDS
+    if schema == 'agora/relation-candidate/v2':
+        return FIELDS_V2
+    raise ValueError('unsupported_schema')
 
 
 def evidence(raw, source_id):
@@ -17,10 +26,12 @@ def evidence(raw, source_id):
     return {'source_id': source_id, 'source_sha256': revision, 'units': units}
 
 
-def template(raw, source_id):
+def template(raw, source_id, *, contract_version="v1"):
     bundle = evidence(raw, source_id)
-    return {'schema': SCHEMA, 'source_id': source_id, 'source_sha256': bundle['source_sha256'],
-            'fields': {field: {'text': None, 'evidence_ids': []} for field in FIELDS},
+    schema = 'agora/relation-candidate/' + contract_version
+    names = fields_for(schema)
+    return {'schema': schema, 'source_id': source_id, 'source_sha256': bundle['source_sha256'],
+            'fields': {field: {'text': None, 'evidence_ids': []} for field in names},
             'relation_evidence_ids': []}
 
 
@@ -29,12 +40,11 @@ def validate(raw, source_id, candidate):
     bundle = evidence(raw, source_id)
     if type(candidate) is not dict or set(candidate) != {'schema', 'source_id', 'source_sha256', 'fields', 'relation_evidence_ids'}:
         raise ValueError('invalid_candidate_shape')
-    if candidate['schema'] != SCHEMA:
-        raise ValueError('unsupported_schema')
+    names = fields_for(candidate['schema'])
     if candidate['source_id'] != source_id or candidate['source_sha256'] != bundle['source_sha256']:
         raise ValueError('source_identity_mismatch')
     fields = candidate['fields']
-    if type(fields) is not dict or set(fields) != set(FIELDS):
+    if type(fields) is not dict or set(fields) != set(names):
         raise ValueError('invalid_fields')
     units = {unit['id']: unit for unit in bundle['units']}
 
@@ -65,7 +75,7 @@ def validate(raw, source_id, candidate):
     anchors['relation'] = resolve(candidate['relation_evidence_ids'])
     if not anchors['relation']:
         gaps.append({'field': 'relation', 'reason': 'missing_link_evidence'})
-    return {'schema': 'agora/relation-assessment/v1', 'candidate': copy.deepcopy(candidate),
+    return {'schema': 'agora/relation-assessment/' + candidate['schema'].rsplit('/', 1)[1], 'candidate': copy.deepcopy(candidate),
             'status': 'needs_more_evidence' if gaps else 'requires_semantic_review',
             'gaps': gaps, 'anchors': anchors, 'semantic_support': 'not_verified',
             'admitted': False}
