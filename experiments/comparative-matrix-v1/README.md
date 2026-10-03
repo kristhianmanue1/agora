@@ -132,3 +132,12 @@ Se observaron omisiones y discrepancias entre Jev, etiquetas humanas e inspecci�
 del productor. La matriz de capacidades sigue vigente dentro de su alcance; esta
 nueva evidencia no acredita ganador global ni revisor suficientemente fiable para
 aceptación automática. Detalle, casos y límites en el expediente v3.
+
+## Seguimiento: segunda lectura y controles
+
+`../refinement-v1/` conserva cuatro segundas lecturas: dos candidatos mejorados y
+dos rechazos (truncamiento y cita alterada), por 45 829 tokens adicionales. Jev
+coincidió con las etiquetas del productor en 22/24 decisiones de seis controles
+repetidos en dos órdenes; confundió respaldo con cobertura dos veces. No hubo
+nuevas llamadas MemOS ni promoción automática del revisor. Véanse límites y
+coste acumulado en ese expediente; v3 permanece intacto.

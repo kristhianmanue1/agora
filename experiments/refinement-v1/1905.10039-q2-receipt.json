@@ -1,0 +1,192 @@
+{
+  "schema": "agora/passage-query/v0.3",
+  "question": "what state of the art models did they compare with?",
+  "mode": "source",
+  "source_id": "1905.10039",
+  "source_sha256": "2f7106c7ba2835e0c5f6abf6432f5124defd0ab94837696c2282b0703c31a951",
+  "options": {
+    "content_budget": 100000,
+    "prompt_budget": 131072,
+    "top_k": 6
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "answer_scope": "full_source",
+  "requires_expansion": false,
+  "document_absence_established": false,
+  "prompt_bytes": 43498,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answer\",\"answer\":\"En el artículo se indica que compararon su modelo HiStGen con varios métodos state-of-the-art organizados como baselines paso a paso. Para la identificación de secciones emplearon el modelo de etiquetado secuencial CRF (conditional random field) y el mecanismo de dependencia global de párrafos (GPD). Para la generación de encabezados emplearon tanto métodos extractivos (TextRank, un método basado en grafos inspirado en PageRank, y TopicRank, que representa el documento como un grafo completo con una representación tópica) como generativos (Hier, que usa una estructura de codificador jerárquico con atención consciente de sección, y GHD, que extiende Hier con un mecanismo de dependencia global de encabezados). Combinando estos dos pasos obtuvieron ocho métodos IG (First-Identify-then-Generate) y, aplicando TextRank, TopicRank, Hier y GHD sobre los párrafos, cuatro métodos GA (First-Generate-then-Aggregate). Además, emplearon variantes degradadas de su propio modelo HiStGen como ablation, incluyendo una reducida a un modelo jerárquico secuencial a secuencial vanilla. Los autores reportan que su modelo superó significativamente a estos modelos de generación secuencial state-of-the-art en la tarea OG.\",\"quotes\":[\"our model can significantly outperform several state-of-the-art sequential generation models for the OG task.\",\"Conditional random field (CRF) is a well-known sequential labeling model.\",\"Global paragraph dependency mechanism (GPD) considers all the context paragraphs in a document, not just the previous and successive paragraph as in our Markov paragraph dependency mechanism, to predict the section boundary label for a target paragraph.\",\"TextRank BIBREF18 is a graph-based method inspired by the PageRank algorithm.\",\"TopicRank BIBREF20 represents a document as a complete graph depending on a topical representation of the document.\",\"Hier BIBREF36 takes the section as input using a hierarchical encoder structure (words form paragraph, paragraphs form section) and employs the section-aware attention (described in Section UID22 ) in the decoding phase.\",\"GHD further employs a global heading dependency mech- anism based on the Hier, where all the previous generated headings are taken into account to initialize the hidden state of the current decoder, not just the previous one as in our Markov heading dependency mechanism.\",\"For the heading generation step, we employ both extractive (TextRank and TopicRank) and generative (Hier and GHD) methods over the detected sections\",\"HiStGen INLINEFORM0 removes all the mechanisms and reduces to a vanilla hierarchical sequence-to-sequence generation model.\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "20261003233843c6231c2be58e42bc",
+    "usage": {
+      "completion_tokens": 1456,
+      "completion_tokens_details": {
+        "reasoning_tokens": 878
+      },
+      "prompt_tokens": 8630,
+      "prompt_tokens_details": {
+        "cached_tokens": 320
+      },
+      "total_tokens": 10086
+    }
+  },
+  "execution_status": "complete",
+  "answer_status": "candidate",
+  "answer": "En el artículo se indica que compararon su modelo HiStGen con varios métodos state-of-the-art organizados como baselines paso a paso. Para la identificación de secciones emplearon el modelo de etiquetado secuencial CRF (conditional random field) y el mecanismo de dependencia global de párrafos (GPD). Para la generación de encabezados emplearon tanto métodos extractivos (TextRank, un método basado en grafos inspirado en PageRank, y TopicRank, que representa el documento como un grafo completo con una representación tópica) como generativos (Hier, que usa una estructura de codificador jerárquico con atención consciente de sección, y GHD, que extiende Hier con un mecanismo de dependencia global de encabezados). Combinando estos dos pasos obtuvieron ocho métodos IG (First-Identify-then-Generate) y, aplicando TextRank, TopicRank, Hier y GHD sobre los párrafos, cuatro métodos GA (First-Generate-then-Aggregate). Además, emplearon variantes degradadas de su propio modelo HiStGen como ablation, incluyendo una reducida a un modelo jerárquico secuencial a secuencial vanilla. Los autores reportan que su modelo superó significativamente a estos modelos de generación secuencial state-of-the-art en la tarea OG.",
+  "citations": [
+    {
+      "quote": "our model can significantly outperform several state-of-the-art sequential generation models for the OG task.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 1782,
+          "end_byte": 1891
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "Conditional random field (CRF) is a well-known sequential labeling model.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30048,
+          "end_byte": 30121
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "Global paragraph dependency mechanism (GPD) considers all the context paragraphs in a document, not just the previous and successive paragraph as in our Markov paragraph dependency mechanism, to predict the section boundary label for a target paragraph.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30369,
+          "end_byte": 30622
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "TextRank BIBREF18 is a graph-based method inspired by the PageRank algorithm.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30791,
+          "end_byte": 30868
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "TopicRank BIBREF20 represents a document as a complete graph depending on a topical representation of the document.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30870,
+          "end_byte": 30985
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "Hier BIBREF36 takes the section as input using a hierarchical encoder structure (words form paragraph, paragraphs form section) and employs the section-aware attention (described in Section UID22 ) in the decoding phase.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30987,
+          "end_byte": 31207
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "GHD further employs a global heading dependency mech- anism based on the Hier, where all the previous generated headings are taken into account to initialize the hidden state of the current decoder, not just the previous one as in our Markov heading dependency mechanism.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 31209,
+          "end_byte": 31480
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "For the heading generation step, we employ both extractive (TextRank and TopicRank) and generative (Hier and GHD) methods over the detected sections",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 30624,
+          "end_byte": 30772
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    },
+    {
+      "quote": "HiStGen INLINEFORM0 removes all the mechanisms and reduces to a vanilla hierarchical sequence-to-sequence generation model.",
+      "matches": [
+        {
+          "passage": 1,
+          "start_byte": 29519,
+          "end_byte": 29642
+        }
+      ],
+      "match_policy": "first_occurrence_per_passage"
+    }
+  ],
+  "normalization": "none",
+  "evidence_sufficiency": "unknown",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_calls": 1,
+    "temperature": 0
+  },
+  "implementation_hashes": {
+    "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+    "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+  },
+  "implementation_unchanged": true,
+  "source_envelope_metadata": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "1905.10039",
+      "revision": "2f7106c7ba2835e0c5f6abf6432f5124defd0ab94837696c2282b0703c31a951",
+      "revision_kind": "sha256",
+      "source_bytes": 41435,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "delivered_bytes": 41435,
+    "integrity": "matches_requested_revision",
+    "coverage": "full",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "spans": [
+    {
+      "start_byte": 0,
+      "end_byte": 41435,
+      "sha256": "2f7106c7ba2835e0c5f6abf6432f5124defd0ab94837696c2282b0703c31a951"
+    }
+  ],
+  "timing": {
+    "seconds": 20.872688874951564,
+    "exit_code": 0
+  }
+}

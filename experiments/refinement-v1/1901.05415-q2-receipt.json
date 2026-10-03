@@ -1,0 +1,88 @@
+{
+  "schema": "agora/passage-query/v0.3",
+  "question": "Report separately (a) the dialogue accuracy improvement from deployment data for small and full training sets, and (b) the satisfaction-classifier F1 gains over uncertainty-based and regex baselines. Preserve units and comparison conditions.",
+  "mode": "source",
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "options": {
+    "content_budget": 100000,
+    "prompt_budget": 131072,
+    "top_k": 6
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "answer_scope": "full_source",
+  "requires_expansion": false,
+  "document_absence_established": false,
+  "prompt_bytes": 47938,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answer\",\"answer\":\"(a) Mejora de exactitud (accuracy) del Dialogue task al añadir ejemplos de despliegue: con un conjunto de entrenamiento HH pequeño, el incremento es de hasta 9.4 puntos de exactitud (accuracy points), lo que equivale a una mejora del 31%; con el dataset completo de PersonaChat (131k ejemplos), añadir ejemplos de despliegue aún aporta 1.6 puntos adicionales de exactitud en una región muy plana de la curva de aprendizaje. (b) Ganancias de F1 del clasificador de satisfacción (F1 máximo sobre el test set de Satisfaction): incluso con solo 1k ejemplos de entrenamiento, el clasificador entrenado supera significativamente a los métodos basados en incertidumbre (uncertainty-based) por hasta 0.28 puntos de F1, y a la expresión regular original (regex) por hasta 0.42 puntos de F1, respectivamente.\",\"quotes\":[\"yielding an increase of up to 9.4 accuracy points, a 31% improvement. However, even when the entire PersonaChat dataset of 131k examples is used—a much larger dataset than what is available for most dialogue tasks—adding deployment examples is still able to provide an additional 1.6 points of accuracy on what is otherwise a very flat region of the learning curve.\",\"Table TABREF22 reports the maximum F1 scores achieved by each method on the Satisfaction test set.\",\"even with only 1k training examples (the amount we used for the experiments in Section SECREF18), the trained classifier significantly outperforms both the uncertainty-based methods and our original regular expression, by as much as 0.28 and 0.42 F1 points, respectively.\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "202610032338130af49950b5ea4b39",
+    "usage": {
+      "completion_tokens": 900,
+      "completion_tokens_details": {
+        "reasoning_tokens": 511
+      },
+      "prompt_tokens": 10580,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 11480
+    }
+  },
+  "execution_status": "rejected",
+  "diagnostic": "answer_quote_mismatch",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_calls": 1,
+    "temperature": 0
+  },
+  "implementation_hashes": {
+    "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+    "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+  },
+  "implementation_unchanged": true,
+  "source_envelope_metadata": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "1901.05415",
+      "revision": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+      "revision_kind": "sha256",
+      "source_bytes": 45557,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "delivered_bytes": 45557,
+    "integrity": "matches_requested_revision",
+    "coverage": "full",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "spans": [
+    {
+      "start_byte": 0,
+      "end_byte": 45557,
+      "sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985"
+    }
+  ],
+  "timing": {
+    "seconds": 13.308030707994476,
+    "exit_code": 2
+  }
+}

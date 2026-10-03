@@ -1,0 +1,88 @@
+{
+  "schema": "agora/passage-query/v0.3",
+  "question": "How were the satisfaction training labels collected from human evaluators, what rating scale was used, and how were ratings mapped or excluded? Separately distinguish this from the trained prediction mechanism. Do not reconstruct missing formula text.",
+  "mode": "source",
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "options": {
+    "content_budget": 100000,
+    "prompt_budget": 131072,
+    "top_k": 6
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "answer_scope": "full_source",
+  "requires_expansion": false,
+  "document_absence_established": false,
+  "prompt_bytes": 47958,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answer\",\"answer\":\"Recolección de las etiquetas: el conjunto de datos de la tarea de Satisfacción se recolectó mediante crowdsourcing. Los trabajadores chatearon con el agente de diálogo base (baseline) y asignaron una calificación del 1 al 5 sobre la calidad de cada respuesta del agente, indicando la calificación al final de sus propias respuestas. En las muestras de conversaciones, la escala se describe como de 1 (muy mala) a 5 (muy buena). Se recolectaron 2.5k ejemplos de Satisfacción (divididos en 1k de entrenamiento, 500 de validación y 1k de prueba) y, posteriormente, 40k ejemplos adicionales de entrenamiento de Satisfacción para el estudio de la curva de aprendizaje. Mapeo y exclusión: los contextos con calificación 1 se mapearon a la clase negativa (insatisfecho); las calificaciones indicadas por una expresión en línea que el texto deja sin especificar (INLINEFORM0) se mapearon a la clase positiva (satisfecho); y los contextos con calificación 2 se descartaron para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio. Estas calificaciones numéricas solo se solicitaron al recolectar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural. Mecanismo de predicción entrenado (distinto de la recolección de etiquetas): la Satisfacción es una tarea auxiliar entrenada para predecir si el interlocutor está satisfecho con la conversación; el modelo usa parámetros separados de las tareas de Dialogue y Feedback, codifica el contexto con un Transformer y una capa lineal final en la cabeza de la tarea lo convierte en la predicción escalar de satisfacción. El documento señala que es difícil estimar la satisfacción solo a partir de la respuesta del bot, pero mucho más fácil usando la respuesta humana. Durante el despliegue, cada turno el agente predice la satisfacción de su compañero y, si la puntuación supera un umbral (cuyo valor aparece como expresión en línea no especificada, INLINEFORM10), extrae un ejemplo HB de Dialogue; si parece insatisfecho, pide retroalimentación. Como comparación del mecanismo entrenado, el clasificador entrenado superó significativamente a los métodos basados en incertidumbre y a la expresión regular original por hasta 0.28 y 0.42 puntos F1, respectivamente. No se reconstruye el texto faltante de las fórmulas (p. ej., el límite superior de calificaciones de la clase positiva ni el valor del umbral).\",\"quotes\":[\"The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses.\",\"Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set.\",\"Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.\",\"The environment for collecting Satisfaction ratings was very similar to the deployment environment, with the exception that workers were required to give a rating 1-5 on the quality of each response given by the chatbot at the end of their own responses.\",\"Users were asked to rate each bot response on a scale from 1 (very bad) to 5 (very good).\",\"This agent was deployed",
+    "finish_reason": "length",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "202610032337131f7e346d8dcd49df",
+    "usage": {
+      "completion_tokens": 4096,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3276
+      },
+      "prompt_tokens": 10578,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 14674
+    }
+  },
+  "execution_status": "rejected",
+  "diagnostic": "answer_generation_incomplete",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_calls": 1,
+    "temperature": 0
+  },
+  "implementation_hashes": {
+    "passages.py": "cdedffb83705035f63411c12dedf916b678bdef7ea2d0a9baffc89c9687e918e",
+    "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+  },
+  "implementation_unchanged": true,
+  "source_envelope_metadata": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "1901.05415",
+      "revision": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+      "revision_kind": "sha256",
+      "source_bytes": 45557,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "delivered_bytes": 45557,
+    "integrity": "matches_requested_revision",
+    "coverage": "full",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "spans": [
+    {
+      "start_byte": 0,
+      "end_byte": 45557,
+      "sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985"
+    }
+  ],
+  "timing": {
+    "seconds": 59.86850691703148,
+    "exit_code": 2
+  }
+}

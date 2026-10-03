@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cee784cedac",
+    "source": "Crowdworkers rated each chatbot response from 1 to 5. Rating 1 became dissatisfied; ratings 3 to 5 became satisfied; rating 2 was excluded. A separate classifier then predicted satisfaction from dialogue context.",
+    "question": "Who assigned training labels, which scale and mapping were used, and what was excluded?",
+    "answer": "Evaluadores humanos asignaron notas de 1 a 5. El 1 indica insatisfacción, 3 a 5 satisfacción y el 2 se excluye.",
+    "expected_support": "supported",
+    "expected_coverage": "complete",
+    "family": "label_collection"
+  },
+  {
+    "id": "cab1f4ec152",
+    "source": "The study reports recall 86% and precision 88%. Agreement uses Cohen kappa for Dutch (0.69) and Fleiss kappa for English (0.59).",
+    "question": "State the recall, precision, and agreement method and value for each language.",
+    "answer": "La exhaustividad es 88% y la precisión 86%. Se usa Cohen para neerlandés (0.69) y para inglés (0.59).",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "family": "metric_assignment"
+  },
+  {
+    "id": "c32c24cdd57",
+    "source": "The study reports recall 86% and precision 88%. Agreement uses Cohen kappa for Dutch (0.69) and Fleiss kappa for English (0.59).",
+    "question": "State the recall, precision, and agreement method and value for each language.",
+    "answer": "La exhaustividad es 86% y la precisión 88%. Se usa Cohen para neerlandés (0.69) y Fleiss para inglés (0.59).",
+    "expected_support": "supported",
+    "expected_coverage": "complete",
+    "family": "metric_assignment"
+  },
+  {
+    "id": "c398b6bdb38",
+    "source": "This single paper introduces the WIKIOG dataset and the HiStGen model. It compares HiStGen against a keyword baseline. No second paper is described.",
+    "question": "What dataset and model does this paper introduce, and against what baseline?",
+    "answer": "Un primer artículo introduce WIKIOG. Un segundo artículo introduce HiStGen y lo compara con palabras clave.",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "family": "paper_identity"
+  },
+  {
+    "id": "c2ffdae0e93",
+    "source": "Crowdworkers rated each chatbot response from 1 to 5. Rating 1 became dissatisfied; ratings 3 to 5 became satisfied; rating 2 was excluded. A separate classifier then predicted satisfaction from dialogue context.",
+    "question": "Who assigned training labels, which scale and mapping were used, and what was excluded?",
+    "answer": "Un clasificador predice la satisfacción usando el contexto del diálogo.",
+    "expected_support": "supported",
+    "expected_coverage": "omitted",
+    "family": "label_collection"
+  },
+  {
+    "id": "c932c9b3e49",
+    "source": "This single paper introduces the WIKIOG dataset and the HiStGen model. It compares HiStGen against a keyword baseline. No second paper is described.",
+    "question": "What dataset and model does this paper introduce, and against what baseline?",
+    "answer": "Este único artículo introduce WIKIOG y HiStGen, comparado con una línea base de palabras clave.",
+    "expected_support": "supported",
+    "expected_coverage": "complete",
+    "family": "paper_identity"
+  }
+]

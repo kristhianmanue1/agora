@@ -188,6 +188,66 @@
     {
       "path": "experiments/memos-long-reserved-v3/review-results.json",
       "sha256": "3045af4a9ed9abebc72575da26832dbc2ce3237d770b7b49f282eee4bed6a1f9"
+    },
+    {
+      "path": "experiments/refinement-v1/1901.05415-q1-receipt.json",
+      "sha256": "f543e3ead689e3f343a40fa442554d846a7c5ee9b95cd3eb143744118a4acbed"
+    },
+    {
+      "path": "experiments/refinement-v1/1901.05415-q2-receipt.json",
+      "sha256": "a789c9b193f1368cdae58e2abb49cfd25c8be490b9e27abd184c96769bda7ef9"
+    },
+    {
+      "path": "experiments/refinement-v1/1905.10039-q1-receipt.json",
+      "sha256": "bf6468673d8ff146186d6614e947be46e173d2a7da2a840f1754ef575f150ba8"
+    },
+    {
+      "path": "experiments/refinement-v1/1905.10039-q2-receipt.json",
+      "sha256": "7b4e94c5ea4e2744dccecca58ccab1aa4af2a2c3951501bbf8a255a148318276"
+    },
+    {
+      "path": "experiments/refinement-v1/README.md",
+      "sha256": "54539c51eed50a49dd7f2dbc29f55ee68d63aadb4a807ae9107ab6063d720b16"
+    },
+    {
+      "path": "experiments/refinement-v1/cases.json",
+      "sha256": "ed21579bb2cb23aba854888ae71eee49bff1ddc7721a08cffc21e5340dc72c00"
+    },
+    {
+      "path": "experiments/refinement-v1/controls.json",
+      "sha256": "d0df6865e13d006f365ebcfbc6d0c910f1127d9a851dc7df6faa14fd73ea81d8"
+    },
+    {
+      "path": "experiments/refinement-v1/freeze.json",
+      "sha256": "7a2a00719d7295478bb377ed626a6ba6bb6b8411688744eca4e35c24dd3534b5"
+    },
+    {
+      "path": "experiments/refinement-v1/jev-0-request.json",
+      "sha256": "b6341a38a909874c92d41eab745d71282310b956e88086d121256f304a0d464c"
+    },
+    {
+      "path": "experiments/refinement-v1/jev-0-result.json",
+      "sha256": "94d87e271f83fdb5a9695603a4ab6d97c34cb30d0dd9bef22c618786947393d2"
+    },
+    {
+      "path": "experiments/refinement-v1/jev-1-request.json",
+      "sha256": "d87f73c6ebc24b5af1116c1d33425e3537f5b589c36c35d95e298d6548cd46d1"
+    },
+    {
+      "path": "experiments/refinement-v1/jev-1-result.json",
+      "sha256": "a5d0c368db732141ecab3746ecfa9ab65e0b9a4f04d6e77c3d63f27d13a6f4ed"
+    },
+    {
+      "path": "experiments/refinement-v1/result.json",
+      "sha256": "3ba43e7ab2567d016d51e941d1f228a159eac3cad79cc49500ffea2c6b962036"
+    },
+    {
+      "path": "experiments/refinement-v1/run_agora.py",
+      "sha256": "16970502423d2bbda338f885bc711f27aeebcff4d808065ae19c4f3d9a8935a4"
+    },
+    {
+      "path": "experiments/refinement-v1/run_jev.py",
+      "sha256": "d0f50b95048065fa6e8752ea367d4c0cd531ef3a7af6c0c4fc8830604b1b5d2e"
     }
   ],
   "expected_accounting": {

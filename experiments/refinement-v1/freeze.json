@@ -1,0 +1,22 @@
+{
+  "schema": "aria/refinement-campaign/v1",
+  "frozen_at": "2026-10-03T15:36:00.091297+00:00",
+  "purpose": "known-case regression, not reserved benchmark",
+  "cases_sha256": "ed21579bb2cb23aba854888ae71eee49bff1ddc7721a08cffc21e5340dc72c00",
+  "controls_sha256": "d0df6865e13d006f365ebcfbc6d0c910f1127d9a851dc7df6faa14fd73ea81d8",
+  "agora_max_calls": 4,
+  "jev_max_calls": 2,
+  "retries": 0,
+  "source_budget_bytes": 100000,
+  "prompt_budget_bytes": 131072,
+  "answer_max_tokens": 4096,
+  "agora_timeout_seconds": 180,
+  "jev_timeout_seconds": 90,
+  "answer_language": "Spanish",
+  "agora_model": "glm-5.3-flash",
+  "jev_model": "jev-1.13.0",
+  "jev_control_order": "forward then reversed; no expected labels sent",
+  "evaluation": "Producer-authored synthetic controls; Jev separate provider, not independent human adjudication",
+  "causal_limit": "First two questions reformulated plus full reading; other two retain original questions with full reading. Not a one-variable causal comparison for first two.",
+  "acceptance": "Record all outcomes; no automatic promotion even if controls all pass"
+}

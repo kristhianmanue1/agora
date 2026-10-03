@@ -1,0 +1,281 @@
+{
+  "schema": "aria/refinement-result/v1",
+  "observed_at": "2026-10-03T15:43:11.075553+00:00",
+  "agora_cases": [
+    {
+      "case": "1901.05415-q1",
+      "status": "rejected",
+      "diagnostic": "answer_generation_incomplete",
+      "tokens": 14674,
+      "seconds": 59.86850691703148,
+      "assessment": "rejected",
+      "producer_note": "Truncated JSON at output limit; readable fragment distinguishes crowdsourcing and prediction and preserves missing positive-rating formula. Not an accepted answer."
+    },
+    {
+      "case": "1901.05415-q2",
+      "status": "rejected",
+      "diagnostic": "answer_quote_mismatch",
+      "tokens": 11480,
+      "seconds": 13.308030707994476,
+      "assessment": "rejected",
+      "producer_note": "Recovers both performance targets in raw response, but third quote changes SECREF18 spacing; rejected citation mismatch. Semantic plausibility does not override rejection."
+    },
+    {
+      "case": "1905.10039-q1",
+      "status": "complete",
+      "diagnostic": null,
+      "tokens": 9589,
+      "seconds": 17.31370979093481,
+      "assessment": "improved_candidate",
+      "producer_note": "Recovers three metric definitions and Rouge-1, without inventing missing subscripts. Producer source inspection, no separate semantic adjudication."
+    },
+    {
+      "case": "1905.10039-q2",
+      "status": "complete",
+      "diagnostic": null,
+      "tokens": 10086,
+      "seconds": 20.872688874951564,
+      "assessment": "improved_candidate_with_limit",
+      "producer_note": "Recovers CRF/GPD, TextRank/TopicRank/Hier/GHD, eight IG and four GA combinations. Ablation variant names remain unspecified in extracted source. No exhaustive named-variant claim."
+    }
+  ],
+  "agora_additional_tokens": 45829,
+  "agora_v3_tokens": 16928,
+  "agora_combined_tokens": 62757,
+  "agora_additional_seconds": 111.36293629091233,
+  "agora_http_attempts": 4,
+  "jev_control_tokens": 7006,
+  "jev_http_attempts": 2,
+  "jev_checks": [
+    {
+      "order": 0,
+      "control": "cee784cedac",
+      "family": "label_collection",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "cee784cedac",
+      "family": "label_collection",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "cab1f4ec152",
+      "family": "metric_assignment",
+      "axis": "support",
+      "expected": "unsupported",
+      "observed": "unsupported",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "cab1f4ec152",
+      "family": "metric_assignment",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c32c24cdd57",
+      "family": "metric_assignment",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c32c24cdd57",
+      "family": "metric_assignment",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c398b6bdb38",
+      "family": "paper_identity",
+      "axis": "support",
+      "expected": "unsupported",
+      "observed": "unsupported",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c398b6bdb38",
+      "family": "paper_identity",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c2ffdae0e93",
+      "family": "label_collection",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "unsupported",
+      "match": false
+    },
+    {
+      "order": 0,
+      "control": "c2ffdae0e93",
+      "family": "label_collection",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c932c9b3e49",
+      "family": "paper_identity",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 0,
+      "control": "c932c9b3e49",
+      "family": "paper_identity",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "cee784cedac",
+      "family": "label_collection",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "cee784cedac",
+      "family": "label_collection",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "cab1f4ec152",
+      "family": "metric_assignment",
+      "axis": "support",
+      "expected": "unsupported",
+      "observed": "unsupported",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "cab1f4ec152",
+      "family": "metric_assignment",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c32c24cdd57",
+      "family": "metric_assignment",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c32c24cdd57",
+      "family": "metric_assignment",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c398b6bdb38",
+      "family": "paper_identity",
+      "axis": "support",
+      "expected": "unsupported",
+      "observed": "unsupported",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c398b6bdb38",
+      "family": "paper_identity",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c2ffdae0e93",
+      "family": "label_collection",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "unsupported",
+      "match": false
+    },
+    {
+      "order": 1,
+      "control": "c2ffdae0e93",
+      "family": "label_collection",
+      "axis": "coverage",
+      "expected": "omitted",
+      "observed": "omitted",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c932c9b3e49",
+      "family": "paper_identity",
+      "axis": "support",
+      "expected": "supported",
+      "observed": "supported",
+      "match": true
+    },
+    {
+      "order": 1,
+      "control": "c932c9b3e49",
+      "family": "paper_identity",
+      "axis": "coverage",
+      "expected": "complete",
+      "observed": "complete",
+      "match": true
+    }
+  ],
+  "jev_matches": 22,
+  "jev_decisions": 24,
+  "distinct_controls": 6,
+  "orders": 2,
+  "independent_human_review": false,
+  "code_changed": false,
+  "memos_calls": 0,
+  "limits": [
+    "Known-case regression, not held-out validation",
+    "First two cases change question and context",
+    "Two accepted candidates, two rejections; no automatic repair",
+    "No monetary, embedding or infrastructure cost estimate",
+    "Jev controls are separate from new Agora answers"
+  ]
+}
