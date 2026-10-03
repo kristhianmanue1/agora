@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 187,
-  "bytes": 904174,
+  "documents": 188,
+  "bytes": 910136,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "bc49325e18f07d9e7ff88cac772fd312aeb7f1131c9857664cbd8e03f78c2aeb",
-      "bytes": 36752,
+      "sha256": "910851e6353c18b1d39d57866f427dfaffc7b83f58c619847fce9c25e30fc768",
+      "bytes": 37642,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -808,6 +808,10 @@
         },
         {
           "target": "../experiments/memos-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/ankla-memos-v1/README.md",
           "exists": true
         }
       ],
@@ -1337,6 +1341,14 @@
       "path": "experiments/agora-skevi-v1/README.md",
       "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
       "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ankla-memos-v1/README.md",
+      "sha256": "73e3af191c62f2609abe7a8796142aad2783f07b713bd8f0b027f8d6e51ab0ee",
+      "bytes": 5072,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

@@ -1,0 +1,20 @@
+{
+  "fixtures_sha256": "fd1ac8889155d917d75bb364c1b9fac3a5ee1b2aec8413413863373cccf45a2f",
+  "runner_sha256": "787492047651d0f1d9ac4c1da1a23d625cca96f4026c0105ce12275b3875d033",
+  "ankla_runner_sha256": "9574c21add359140f2a042dae73aa634bfe07c1472dc068f661c2a5cb9c14539",
+  "cubes": {
+    "record-resume": "ankla-compare-record-resume-34a0ce7c",
+    "record-correction": "ankla-compare-record-correction-97ab456e",
+    "record-ambiguity": "ankla-compare-record-ambiguity-80a9e8a4",
+    "record-proposal": "ankla-compare-record-proposal-dcc0540d",
+    "source-resume": "ankla-compare-source-resume-5d4f5338",
+    "source-correction": "ankla-compare-source-correction-c8f05f21",
+    "source-ambiguity": "ankla-compare-source-ambiguity-de30dd4f",
+    "source-proposal": "ankla-compare-source-proposal-2a427655"
+  },
+  "max_http_requests": 32,
+  "retries": 0,
+  "ankla_version": "0.1.0b24",
+  "scope": "Four synthetic cases in two input conditions; AN-KLA retrieves stored input without LLM, MemOS applies extraction even to explicit records. Not identical stored representations or equal provider cost.",
+  "stop": "One run, no tuning after outcomes; no claim of authorization enforcement from semantic answers"
+}

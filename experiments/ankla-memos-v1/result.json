@@ -1,0 +1,406 @@
+{
+  "status": "complete_native_path_diagnostic",
+  "rows": [
+    {
+      "case": "resume",
+      "condition": "record",
+      "expected": [
+        "validate import pipeline",
+        "parser checks passed",
+        "test duplicate handling",
+        "incomplete"
+      ],
+      "ankla": {
+        "revision": "sha256:5fdfb43d8ecdd288fc81d1d6273e1b28d344bca39bb455036c00582de9b863fc",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 4,
+        "used_bytes": 623,
+        "render": "Task Cedar. Objective: validate the import pipeline. Last confirmed result: parser checks passed. Next step: test duplicate handling. Overall status: incomplete; no release approved."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-record-resume-34a0ce7c",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "82dd583d-8e5b-483a-b595-d42f8d263b39",
+            "text": "As of 10:31 PM on October 2, 2026, the user reported the status of Task Cedar, whose objective is to validate the import pipeline. The last confirmed result was that the parser checks passed. The overall status of the task was incomplete, and no release had been approved.",
+            "type": "LongTermMemory"
+          },
+          {
+            "id": "6461bad0-51eb-4ff2-abef-7face947f77d",
+            "text": "As of October 2, 2026, the user planned to test duplicate handling as the next step in Task Cedar, the task focused on validating the import pipeline.",
+            "type": "UserMemory"
+          }
+        ],
+        "answer": "**Task Cedar** (based on reported facts as of October 2, 2026):\n\n- **Objective:** Validate the import pipeline.\n- **Last confirmed result:** The parser checks passed. The overall task status was incomplete, and no release had been approved.\n- **Next step:** Testing duplicate handling — this was the user's *plan* as of October 2, 2026, not a confirmed or completed step.\n\nNote: The task remained incomplete as of that date, with no release approval.",
+        "ingestion_seconds": 17.239,
+        "search_seconds": 0.076,
+        "chat_seconds": 5.605
+      }
+    },
+    {
+      "case": "correction",
+      "condition": "record",
+      "expected": [
+        "Wednesday",
+        "Tuesday cancelled",
+        "no invented calendar date"
+      ],
+      "ankla": {
+        "revision": "sha256:5fdfb43d8ecdd288fc81d1d6273e1b28d344bca39bb455036c00582de9b863fc",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 4,
+        "used_bytes": 623,
+        "render": "Schedule correction: Wednesday replaces Tuesday. Tuesday is cancelled. Latest observed correction at 09:15. Calendar date and later changes are unknown."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-record-correction-97ab456e",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "d5598b4d-e0cc-4296-9513-b969d44de699",
+            "text": "On October 2, 2026 at 10:31 PM, the user reported a schedule correction: the Tuesday schedule was cancelled and replaced by the Wednesday schedule. The latest observed correction was at 09:15 (most likely 9:15 AM on October 2, 2026, though the exact date of this observation is not entirely clear).",
+            "type": "UserMemory"
+          },
+          {
+            "id": "28264f11-9175-41a9-904e-5228d5ce6bb8",
+            "text": "As of the user's message on October 2, 2026 at 10:31 PM, the calendar date to which the schedule change (Tuesday cancelled, replaced by Wednesday) applies was unknown, and any changes occurring after the 09:15 correction were also unknown. This reflects the user's awareness that the schedule information was incomplete.",
+            "type": "LongTermMemory"
+          }
+        ],
+        "answer": "**Latest observed correction:** 09:15 — most likely 9:15 AM on October 2, 2026, though the exact date of this observation is not entirely clear.\n\n**What changed:** The Tuesday schedule was cancelled and replaced by the Wednesday schedule.\n\n**Important caveats:**\n- The calendar date to which this change applies was unknown as of the report at 10:31 PM on October 2, 2026.\n- Any changes occurring after the 09:15 correction were also unknown, so the schedule information was incomplete.",
+        "ingestion_seconds": 21.144,
+        "search_seconds": 0.072,
+        "chat_seconds": 7.445
+      }
+    },
+    {
+      "case": "ambiguity",
+      "condition": "record",
+      "expected": [
+        "owner unresolved",
+        "amount not provided",
+        "no approval established"
+      ],
+      "ankla": {
+        "revision": "sha256:5fdfb43d8ecdd288fc81d1d6273e1b28d344bca39bb455036c00582de9b863fc",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 4,
+        "used_bytes": 623,
+        "render": "Budget review: owner is unresolved between Alex and Sam. Amount is not provided. Decision pending; do not assign an owner or amount."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-record-ambiguity-80a9e8a4",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "a9bad58d-3e81-4609-a58a-4ce660e87098",
+            "text": "As of 10:32 PM on October 2, 2026, the user recorded that a budget review has an unresolved owner, with responsibility still undecided between Alex and Sam. The budget amount has not been provided, and the overall decision remains pending as of that date.",
+            "type": "LongTermMemory"
+          },
+          {
+            "id": "c38cf011-4bfe-40ba-a539-7d169b6aa0a6",
+            "text": "On October 2, 2026 at 10:32 PM, the user explicitly decided not to assign an owner or an amount for the budget review while the decision is pending, meaning neither Alex nor Sam should be designated as owner and no amount should be recorded until the matter is resolved.",
+            "type": "UserMemory"
+          }
+        ],
+        "answer": "Based on the recorded facts (as of October 2, 2026, 10:32 PM):\n\n- **Responsible person:** Undecided. Responsibility was still being considered between Alex and Sam, and no owner was assigned. You explicitly decided not to designate either Alex or Sam while the decision remains pending.\n- **Approved amount:** No amount was approved or recorded. The budget amount was never provided, and you decided not to record one until the matter is resolved.\n\nIn short: nothing has been approved yet — both the ownership and the amount remain pending, with no owner designated and no amount recorded as of the timestamp above.",
+        "ingestion_seconds": 20.793,
+        "search_seconds": 0.083,
+        "chat_seconds": 8.683
+      }
+    },
+    {
+      "case": "proposal",
+      "condition": "record",
+      "expected": [
+        "not approved",
+        "request review",
+        "no execution authority"
+      ],
+      "ankla": {
+        "revision": "sha256:5fdfb43d8ecdd288fc81d1d6273e1b28d344bca39bb455036c00582de9b863fc",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 4,
+        "used_bytes": 623,
+        "render": "Deployment change: proposal to move production to cluster B. Status: proposed, not approved. No deployment is authorized. Next step: request operator review."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-record-proposal-dcc0540d",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "9e548bf8-8b6c-481a-837d-1c14881229d2",
+            "text": "As of October 2, 2026, the user planned to request an operator review as the next step for the proposed deployment change to move production to cluster B, since no deployment could proceed without approval.",
+            "type": "UserMemory"
+          },
+          {
+            "id": "a5835566-310f-4570-9d07-70f4327bda63",
+            "text": "On October 2, 2026 at 10:32 PM, the user recorded a deployment change proposal to move production to cluster B. As of that time, the proposal's status was 'proposed, not approved,' and the user explicitly noted that no deployment was authorized.",
+            "type": "LongTermMemory"
+          }
+        ],
+        "answer": "**Approval status:** No. As of the latest recorded entry (October 2, 2026, 10:32 PM), the change to move production to cluster B had a status of \"proposed, not approved,\" and it was explicitly noted that no deployment was authorized.\n\n**Next step:** As of October 2, 2026, the planned next step was to request an operator review, since no deployment could proceed without approval.\n\nNote: This reflects the recorded state as of those dates; I have no evidence of any approval occurring since then.",
+        "ingestion_seconds": 19.833,
+        "search_seconds": 0.086,
+        "chat_seconds": 8.494
+      }
+    },
+    {
+      "case": "resume",
+      "condition": "source",
+      "expected": [
+        "validate import pipeline",
+        "parser checks passed",
+        "test duplicate handling",
+        "incomplete"
+      ],
+      "ankla": {
+        "revision": "sha256:94828879f218a502b53bb8cef8f37f2a2c6469bfbeb38466f43bef5910fd178a",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 3,
+        "used_bytes": 461,
+        "render": "Task Cedar conversation: We are validating the import pipeline. The parser checks passed today. We still need to test duplicate handling. Do not call the task complete or release it."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-source-resume-5d4f5338",
+        "add_returned_count": 0,
+        "memories": [],
+        "answer": "I have no supplied evidence about \"Task Cedar\" — nothing in this conversation describes it. So, from the evidence available:\n\n- **Objective:** Not stated in any supplied evidence.\n- **Last confirmed result:** None — I have no record of any result, confirmed or otherwise.\n- **Next step:** Not stated.\n\nIf you can share the relevant document, note, or message where Task Cedar is described, I can extract these details from it.",
+        "ingestion_seconds": 22.526,
+        "search_seconds": 0.083,
+        "chat_seconds": 7.438
+      }
+    },
+    {
+      "case": "correction",
+      "condition": "source",
+      "expected": [
+        "Wednesday",
+        "Tuesday cancelled",
+        "no invented calendar date"
+      ],
+      "ankla": {
+        "revision": "sha256:94828879f218a502b53bb8cef8f37f2a2c6469bfbeb38466f43bef5910fd178a",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 3,
+        "used_bytes": 461,
+        "render": "09:00 Coordinator: Schedule draft is Tuesday.\n09:15 Coordinator: Correction: Wednesday; Tuesday is cancelled."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-source-correction-c8f05f21",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "cd816c24-b334-431e-8233-486da9e2a6c8",
+            "text": "On October 2, 2026 at 09:15, the Coordinator issued a correction to the earlier 09:00 message: the schedule draft is now set for Wednesday (likely October 7, 2026, exact date not explicitly confirmed), and the Tuesday session is cancelled. The user acknowledged this updated schedule when relaying it at 10:33 PM on the same day.",
+            "type": "LongTermMemory"
+          },
+          {
+            "id": "94cb1ad5-7869-437e-8154-059bbf39c155",
+            "text": "On October 2, 2026, the user received and relayed a message from a Coordinator sent at 09:00 stating that the schedule draft is set for Tuesday (likely October 6, 2026, though the exact date was not explicitly confirmed).",
+            "type": "LongTermMemory"
+          }
+        ],
+        "answer": "Latest observed: **Wednesday** for the schedule draft — likely **October 7, 2026**, though the exact date was not explicitly confirmed.\n\nWhat changed: the Coordinator’s **09:15 correction** on October 2 superseded the earlier **09:00 message** that had said **Tuesday** (likely October 6). Under the correction, the **Tuesday session is cancelled**.",
+        "ingestion_seconds": 23.525,
+        "search_seconds": 0.114,
+        "chat_seconds": 10.255
+      }
+    },
+    {
+      "case": "ambiguity",
+      "condition": "source",
+      "expected": [
+        "owner unresolved",
+        "amount not provided",
+        "no approval established"
+      ],
+      "ankla": {
+        "revision": "sha256:94828879f218a502b53bb8cef8f37f2a2c6469bfbeb38466f43bef5910fd178a",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 3,
+        "used_bytes": 394,
+        "render": "Budget review conversation: Alex or Sam might own this; we have not decided who. Nobody has supplied an amount yet."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-source-ambiguity-de30dd4f",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "063da849-0fa4-4f1e-8cad-5aeaa194bc39",
+            "text": "At 10:34 PM on October 2, 2026, the user noted that a budget review conversation needs to take place. As of that time, ownership of this conversation was still undecided — either Alex or Sam might own it, but the user had not yet determined who would be responsible.",
+            "type": "UserMemory"
+          },
+          {
+            "id": "020932a8-3b5d-45e0-9302-1da9a27765eb",
+            "text": "As of 10:34 PM on October 2, 2026, nobody had supplied a budget amount for the upcoming budget review conversation that the user raised, meaning the key figure to be reviewed was still missing.",
+            "type": "LongTermMemory"
+          }
+        ],
+        "answer": "As of 10:34 PM on October 2, 2026, both of these are still unknown:\n\n- **Responsible person:** Ownership of the budget review conversation had not yet been decided — either Alex or Sam might own it, but no determination had been made.\n- **Amount:** No budget amount had been supplied for the review, so no figure was approved or even proposed at that point.\n\nI can't confirm who is responsible or what amount was approved, because neither had been established in the available information.",
+        "ingestion_seconds": 32.374,
+        "search_seconds": 0.086,
+        "chat_seconds": 5.606
+      }
+    },
+    {
+      "case": "proposal",
+      "condition": "source",
+      "expected": [
+        "not approved",
+        "request review",
+        "no execution authority"
+      ],
+      "ankla": {
+        "revision": "sha256:94828879f218a502b53bb8cef8f37f2a2c6469bfbeb38466f43bef5910fd178a",
+        "profile": "scan-fallback/v1",
+        "target_rank": 1,
+        "text_exact": true,
+        "returned_records": 3,
+        "used_bytes": 461,
+        "render": "Deployment change conversation: I propose moving production to cluster B. This is only a proposal. The operator has not approved it; request review before any deployment."
+      },
+      "memos": {
+        "cube_id": "ankla-compare-source-proposal-2a427655",
+        "add_returned_count": 2,
+        "memories": [
+          {
+            "id": "bb11fa34-6545-4b3d-b6c0-97f707ab2e96",
+            "text": "As of October 2, 2026, the user's proposal to move production to cluster B had not been approved by the operator. The user requested that a review be conducted before any deployment takes place, indicating the deployment remains on hold pending approval and review.",
+            "type": "UserMemory"
+          },
+          {
+            "id": "b09b366c-ee40-4dae-9c7a-3ada89b1e245",
+            "text": "On October 2, 2026 at 10:34 PM, during a deployment change conversation, the user proposed moving production to cluster B. The user explicitly stated that this was only a proposal and not a confirmed action.",
+            "type": "LongTermMemory"
+          }
+        ],
+        "answer": "**Is it approved?** No — not as of the recorded facts. As of October 2, 2026, the proposal to move production to cluster B had **not been approved** by the operator. The move was explicitly stated to be a **proposal only, not a confirmed action**.\n\n**What should happen next?**\n- A **review must be conducted before any deployment takes place** — this was requested as a precondition.\n- The deployment remains **on hold pending approval and review**.\n\n**Important caveats:**\n- These facts are bounded to October 2, 2026 (including the proposal at 10:34 PM that day). Whether approval or the review has occurred since then is unknown from the available evidence.\n- No one has been identified as the approver or reviewer beyond \"the operator.\"\n- The proposal itself carries no authorization to act — moving forward with deployment should not occur until review is completed and approval is explicitly granted.",
+        "ingestion_seconds": 24.058,
+        "search_seconds": 0.083,
+        "chat_seconds": 13.736
+      }
+    }
+  ],
+  "http_requests": 32,
+  "ankla_external_provider_calls": 0,
+  "memos_internal_provider_calls": "not_measured",
+  "memos_tokens_and_cost": "not_measured",
+  "offline_verified": true,
+  "limits": [
+    "Different native operations: AN-KLA returns stored text; MemOS extracts and generates. Not a head-to-head generation benchmark.",
+    "AN-KLA store has four records per condition; MemOS scopes each case to its own cube. Ranking/noise and isolation are not comparable.",
+    "No supersede/refute/checkpoint transition or actual execution-enforcement test performed. Correction is supplied within one input.",
+    "Model-derived synthetic summaries, no privileged authority or real approval asserted.",
+    "Known synthetic producer labels; no independent adjudication."
+  ],
+  "artifact_hashes": {
+    "runs/ankla/record/ambiguity-authority.json": "471bc4e1dca6e0c08dddd021836b764c34638ed14870a52e8256822a388b04a9",
+    "runs/ankla/record/ambiguity-commit.json": "f5b5fec30e46519026a97d430672c2a2882d1be14be7efd12d65112bd8200df6",
+    "runs/ankla/record/ambiguity-plan.json": "2e7a3e76ea950c5519bca6f6a8753c5842f091253289b6829124fef061621936",
+    "runs/ankla/record/ambiguity-planning.json": "84ff41175817fde6fcb247d6e3fd0a3e5eb589bb1ef6e3b82524c57494079801",
+    "runs/ankla/record/ambiguity-proposal.json": "6da2d9703a26655664eedd6cc8401d2ba7ed62afb2533d47c2a4a296df43f77e",
+    "runs/ankla/record/ambiguity-retrieve.json": "dc4cbe7fb0ac8e9f7cf15276e1d7af72583ba30aaccbe6d4d6c1e4b65d25a568",
+    "runs/ankla/record/ambiguity-status.json": "faee8db127699375fda260fac18a4017a0a76d130137a14929abddb49dcd7f69",
+    "runs/ankla/record/correction-authority.json": "08f71edbe7ae7091e336064b2e4277c6654212467be17a660153ff6f500c5b18",
+    "runs/ankla/record/correction-commit.json": "5244a792e7736277c224e8c2f48846d29448bd6a85a9e489dce9823c16202a83",
+    "runs/ankla/record/correction-plan.json": "ff6bba84b21229d7b7a36c47dfa98df5e942c7154850fcb3baf95b22bad31053",
+    "runs/ankla/record/correction-planning.json": "2b6e1ebc3920be12c8a1a3150b131e94f4298a13015960f7a14cf34bb9b59fa3",
+    "runs/ankla/record/correction-proposal.json": "905bce921eaeb2e3b3b857bd6ed9c8bea4bc1390d6ebd4652e425210d102ddcd",
+    "runs/ankla/record/correction-retrieve.json": "3ae2d4aa617282bf747fc320442b6cb37d2f775ad4dbf6bd40d08ae8c25e0c30",
+    "runs/ankla/record/correction-status.json": "eb4f0b58052a6b554ee422bef583b17e1285519fce7fca95c7678807d6262db2",
+    "runs/ankla/record/init.json": "6d1f1839351eb850016726d5fc809409c2354fac48b8e14e0fcaeb185143cf52",
+    "runs/ankla/record/proposal-authority.json": "248f1067d8e11481c88747271502fb509f2866c6cbe59894c3fa215bfa5e6630",
+    "runs/ankla/record/proposal-commit.json": "9dac67b243a63d33cb71013511ccc460a15883c5374382e30e941e839a95333b",
+    "runs/ankla/record/proposal-plan.json": "de5085ab534c5458389774706c4721d4c8d7a7d2af3de15548aa356e45149780",
+    "runs/ankla/record/proposal-planning.json": "907d8cdf988e80a7b58b6c3f53f988273a74b922638544d29d6442cebb9c9fde",
+    "runs/ankla/record/proposal-proposal.json": "51fff5a947f319982961c9a0158494c4e41f47a1661aa57d9cfda69e991e8bec",
+    "runs/ankla/record/proposal-retrieve.json": "1e2d05cab965588b97cd156af52608a2c6d4933b2540526c59d03277aacf4c37",
+    "runs/ankla/record/proposal-status.json": "dc3542ee92fcca257764e6fbc4c0c206fbabb1b17813f084726cc7cd9a4e5ead",
+    "runs/ankla/record/resume-authority.json": "3b0ed0184490d326d2d8a4b39b6d711daca4bf8ca6eee80fa51ebefa11a1bd9f",
+    "runs/ankla/record/resume-commit.json": "545862dfc5c5d922d98c0109f3c2261aa0511daec256298b87bdd3b27c8208a9",
+    "runs/ankla/record/resume-plan.json": "7bb8ff4f3bfa5273d62046087d020ae4243d34d564e103b93366e0c88b95b4da",
+    "runs/ankla/record/resume-planning.json": "866c8fecfc330c916a8c4f898b30dfdcf6edd2dcf4497f38c17afb37b104a5d7",
+    "runs/ankla/record/resume-proposal.json": "ec9c441a5b22552e110836facadb23769e78006c552028edde9fde23c25e6377",
+    "runs/ankla/record/resume-retrieve.json": "58244f261a974df1cdde64175c730b760c296da67aff3dd90688bc7e786475c4",
+    "runs/ankla/record/resume-status.json": "f79668f150ae8dd1e994cd9533b71f2152828ec52f704ee7c0a73cdeb7b1b30e",
+    "runs/ankla/record/verify.json": "8e4a775bf20ac740a5f4853a5b1633af0f9cfdc5797cc2c8ebe9ea234038a87e",
+    "runs/ankla/source/ambiguity-authority.json": "faffcc5720229e33951c4bebb66844eab4c8d4ab185abd680f6cc0ed4447f84d",
+    "runs/ankla/source/ambiguity-commit.json": "8c4ede6682c9ce7babf23305bb420442bda4efed5479da37221efa659d068746",
+    "runs/ankla/source/ambiguity-plan.json": "e37f891c22dddd4398735070294c51ba5999e34288708b89998c1d2ae0dd1a95",
+    "runs/ankla/source/ambiguity-planning.json": "a90a11cf163f77d22dfe1749f8fe6e874aad091e699d02ead6611d248f9e821a",
+    "runs/ankla/source/ambiguity-proposal.json": "0cc6bb2f0e30b83c717f0b38e3858fdadd915b1c5f7810bc17c81167f8b65388",
+    "runs/ankla/source/ambiguity-retrieve.json": "8efff1e812b96051eb1f4f3f2632b0470d836766b0d1fe7232a2c6d7be19c9d4",
+    "runs/ankla/source/ambiguity-status.json": "5c65078cad17eac7ea28128c61fc8339760507d0adf5a1ead043a7f8c3b3c055",
+    "runs/ankla/source/correction-authority.json": "1c7142fdadfab3097e49a84602fc1b8b68a4fa862441b9f22dd61227517a4fcf",
+    "runs/ankla/source/correction-commit.json": "3da6a25b1f61ede757824490a27141236c6c317eccb51e6be7c4fd3f923643ee",
+    "runs/ankla/source/correction-plan.json": "5c4829ab730b538bd994f0254a43db2daab11fcd68cfa5188f2c0cc89eb9985a",
+    "runs/ankla/source/correction-planning.json": "90f3521eebd9a3a0a450a7a1eede991276747685af01eb04f141249ac5d52989",
+    "runs/ankla/source/correction-proposal.json": "14fed36debe24e405f87054c75fcd14cd62c9fcbbcbe4f79442470c39ef1718d",
+    "runs/ankla/source/correction-retrieve.json": "6c4ab640404cf5d505ad4e7cf480d075aebb083b3b673821e4b83318a39809d9",
+    "runs/ankla/source/correction-status.json": "4b2b1efe43f2ae8d63f516df9dec83330d317a5927bd1627796793acba30c47a",
+    "runs/ankla/source/init.json": "6d958f872a1254fcbabe2557264e27d3ccc3d737867e6bdeb2c8c64f04df55a3",
+    "runs/ankla/source/proposal-authority.json": "dbae339cb19e8cd5b0400fa3570de9c3bd48ec02c9d1fc535c33446c3f333231",
+    "runs/ankla/source/proposal-commit.json": "98612ab9a03701e4f1a707e26f902edcf8ca1e9fce172a58c728df62b8555b78",
+    "runs/ankla/source/proposal-plan.json": "0078b279ea7db2827a8c23cc1db279f83a43ff7f2b1466bcf50fa1f7474bc0e3",
+    "runs/ankla/source/proposal-planning.json": "d46e98aff7189fec538919c8a12965d31f4449ff07cfaeaf7a39f367da5cf3b4",
+    "runs/ankla/source/proposal-proposal.json": "dab2374b54c097df91b21c6722d8da96fdfd3b1592c83f85ca23f6f6fa3ced85",
+    "runs/ankla/source/proposal-retrieve.json": "db7bbe63d68884b30dbd3185fd7fb9a14e4a39e8f209b5b62dbe1f4e08cf6417",
+    "runs/ankla/source/proposal-status.json": "fee4e5aa9c3d491aa5f91b95ceab6c24d6a40d7edc0df76dbbbd8e415a0a6ef6",
+    "runs/ankla/source/resume-authority.json": "a91d4b2d2967d84b285202940a139acc1468a13c4fb37ed281f94fbf81a81c33",
+    "runs/ankla/source/resume-commit.json": "f3ed48d72233f85e2bca047755194474bba2d538a102c671d9be2a655652e9d2",
+    "runs/ankla/source/resume-plan.json": "dd7a6b462e2ea0ac16f8e558a2402002d99613b964ea25acf26b2e66f3f579c7",
+    "runs/ankla/source/resume-planning.json": "47874216053d0bc4d2964ac4446377573bdf93ab4dc8ee5db920b5c7cdf81165",
+    "runs/ankla/source/resume-proposal.json": "bd4fe8fc01b887ac6d7bde083e479c4bbce7bc6210e72f8395d418555bea0810",
+    "runs/ankla/source/resume-retrieve.json": "08e3d24c88ff2539a8de6bb0ed9a7657c6dfed0a82b937ebabc9090c8ddbecbb",
+    "runs/ankla/source/resume-status.json": "b340634c03af8c0239f247e00ed9a3b8e1066ca31276acd862e83f7d07859be9",
+    "runs/ankla/source/verify.json": "8912f90287efbf7768e5d58b43e59a9528b778cd4a52dc581a34989f7eb04ab4",
+    "runs/memos/record-ambiguity-add.json": "bb8d3bdc588ec52aa9f4b167af56b30a8240dc646360178796314088158bfb25",
+    "runs/memos/record-ambiguity-chat.json": "f7b68f0b61bf9aa471bc887cdbf19f0d72326fc3d7f77f6548a5fd5c149dca01",
+    "runs/memos/record-ambiguity-create.json": "b95eb3058687aba9f847b4578c4abd6bdebc07cdda8c9560423ba310ce20a41e",
+    "runs/memos/record-ambiguity-search.json": "d2e31fa877960e536ba214cd24fd77f8c6e6e83ec434c8defaad7c4a18abfd43",
+    "runs/memos/record-correction-add.json": "a22919710f3ad663f12bcb0ea0e04ac8c1fce5184951e9fa234e5345f9c0b8d5",
+    "runs/memos/record-correction-chat.json": "dce67e8afaf3176c696804a4ed7075e5b5897cb6d2d6f1a614515efbba89cb3b",
+    "runs/memos/record-correction-create.json": "18a8fd576053c1f51aa5cb7bee2465dfd7720afb8443d85a849de9aeee38328e",
+    "runs/memos/record-correction-search.json": "93a705f38b2f50c43f1f72d34e5b8d180140cdfbcbd9cb532f4226d20a36acd2",
+    "runs/memos/record-proposal-add.json": "0c5b1de5b420fa964fed78c0887f2c9699d517bb162e144574d75b275261fd2a",
+    "runs/memos/record-proposal-chat.json": "87e3064dd8e638801975c292501eb3c2fec196f0125a6f91129ae1e8da5d8281",
+    "runs/memos/record-proposal-create.json": "09570bf26c9b86fc4f11f14de10bca5a75349c75ca09c9e58bd7efede3aaa341",
+    "runs/memos/record-proposal-search.json": "53d0edf095df932ff4a8b581d5bdc2f5c769603226457361d89a94e0db039d6e",
+    "runs/memos/record-resume-add.json": "bd23a96795ddd4361ec1b5d5415e9c0059d2e25e78c5e71a922fc5a8edc3f31b",
+    "runs/memos/record-resume-chat.json": "24c60c373f40e8a1a5e90f6e507d19c8824a73fb48d05727a8a86bfad7b0b8e6",
+    "runs/memos/record-resume-create.json": "27d3d1da7f6bb72f5c137bb2642726fca908072e565b17e12c3ce30bcba4b419",
+    "runs/memos/record-resume-search.json": "f85c7d6a4071987f00ec468a6913b581e4399a7b7985a89f47e5c014862b1b33",
+    "runs/memos/source-ambiguity-add.json": "d6b5a5933b754762fcce28aad8cf544ebb3730a6eb6f35889f9579ca67bcd60f",
+    "runs/memos/source-ambiguity-chat.json": "a83b0fd9d31122e15e0ed89d6f152d65621f1ed8cdbcd5320434ee47c510da44",
+    "runs/memos/source-ambiguity-create.json": "d51e6730bbd956d1b5702f52883dc59edcdb567cbbbbdb447b4ff38e08139ba6",
+    "runs/memos/source-ambiguity-search.json": "4517862509cff8fa8c550ade6f6e2c2e1dc38a6cfd806a269ad9960ab88f6cf7",
+    "runs/memos/source-correction-add.json": "80f531fd37b41524a36c5d2ed986ad986b21f6feb99e9f81c4e45e888fe8bf00",
+    "runs/memos/source-correction-chat.json": "5b746562e9f6ee14290ba934aed50a3bd68fb8bd6af9093c514d60a91aee05b7",
+    "runs/memos/source-correction-create.json": "1ce13a461f8a51e1dc9e0c5f2df71f13e6e5d4ef6ffb093b38b0d3a6c95c06cd",
+    "runs/memos/source-correction-search.json": "821486e67d0faf37b50c7c6b1732b2453f92cea7d859f5b2b653d5146c6fb2b3",
+    "runs/memos/source-proposal-add.json": "20d02268da79ab1ff792e963e9dd01465eaf1497863e33036569ff03820be092",
+    "runs/memos/source-proposal-chat.json": "6031f0aff2dc4fe45b1d50a353fa044e9a630f2043e1901519263aeb1851fc9c",
+    "runs/memos/source-proposal-create.json": "2621a20262427a0828fb0a2fa527298ba78db088f5d0e439b5ea0e4d101b5e1f",
+    "runs/memos/source-proposal-search.json": "c6ecc395c47c115a3dde4160a48d1364a989f237272d7bf497943c66fd4639dd",
+    "runs/memos/source-resume-add.json": "92db5723cb9b6ad6e923e35e398eb6cf5f6bc901825483ac4740333ee88ff767",
+    "runs/memos/source-resume-chat.json": "8b87da0ec2a68ec95d14b44348da8249eef6a80b6b9e2d3222888d170069a0b5",
+    "runs/memos/source-resume-create.json": "ddc9665e8dc4617a8944a894d816b5589927853edfac99ddc146a40d21f2c6fc",
+    "runs/memos/source-resume-search.json": "2eb23dee74cf44f9fd7c95972316190961c1609aee86e73bfef35912964b8238"
+  }
+}

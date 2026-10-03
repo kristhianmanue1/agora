@@ -410,3 +410,17 @@ de presupuesto: MemOS procesó la fuente completa antes de buscar. Sin cambios a
 configuración ni integración productiva. Recomendación: proveedor opcional de recuperación
 sólo mediante contrato de evidencia original, separando inferencias y fechas de captura
 vs evento. El benchmark queda cerrado con resultado mixto, sin reemplazar componentes.
+
+### AN-KLA frente a MemOS: bloque sintético cerrado
+
+[Cuatro casos, dos condiciones](../experiments/ankla-memos-v1/README.md): AN-KLA
+0.1.0b24 recuperó literalmente los ocho inputs y ambos stores de laboratorio
+verificaron integridad. MemOS conservó varios contenidos centrales, pero una
+conversación de retoma devolvió cero memorias tras HTTP 200, y la corrección temporal
+volvió a incorporar fechas no suministradas. 32 solicitudes HTTP sin reintentos;
+llamadas internas, tokens y coste no medidos. Memoria vigente de Ágora sin cambios.
+
+No hay equivalencia de ranking: cuatro registros por store AN-KLA frente a un cubo
+por caso MemOS. No se probaron supersede/checkpoint ni enforcement. Recomendación:
+conservar AN-KLA para registros explícitos gobernados; MemOS sigue siendo candidato
+auxiliar, con comprobación de ingestión y procedencia antes de cualquier integración.
