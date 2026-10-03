@@ -395,3 +395,18 @@ Verificación: 525 pruebas pasaron, incluido el recorrido CLI con generación re
 no se ejecutó generación live con el nuevo selector. La aceptación pertenece al
 Operador. Otra fase debe fijar objetivo, presupuesto y
 salida propios; el motor completo no tiene una fecha de terminación acordada.
+
+### Comparación externa acotada: MemOS local
+
+[Dos casos conocidos](../experiments/memos-comparison-v1/README.md): MemOS recuperó
+Visual7W y el benchmark abierto propio que la lectura anterior de Ágora omitía.
+En la corrección temporal retuvo miércoles sobre martes, pero añadió fecha del evento
+y fechas de calendario ausentes del original. También infirió interés personal al
+recibir el artículo. Conservó texto fuente/hash en metadatos; eso no vuelve verdaderas
+las inferencias. Los tres umbrales devolvieron los mismos recuerdos en ambos casos.
+
+16 solicitudes HTTP, cero reintentos; tokens/coste interno no medidos. No es igualdad
+de presupuesto: MemOS procesó la fuente completa antes de buscar. Sin cambios a su
+configuración ni integración productiva. Recomendación: proveedor opcional de recuperación
+sólo mediante contrato de evidencia original, separando inferencias y fechas de captura
+vs evento. El benchmark queda cerrado con resultado mixto, sin reemplazar componentes.

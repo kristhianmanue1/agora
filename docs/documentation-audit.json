@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 186,
-  "bytes": 898624,
+  "documents": 187,
+  "bytes": 904174,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "c0a19cfa46791df21cc3a2b4cc717be041d3fa107da7973b87c9b2bce539c81f",
-      "bytes": 35747,
+      "sha256": "bc49325e18f07d9e7ff88cac772fd312aeb7f1131c9857664cbd8e03f78c2aeb",
+      "bytes": 36752,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -804,6 +804,10 @@
         },
         {
           "target": "../experiments/phase-exit-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/memos-comparison-v1/README.md",
           "exists": true
         }
       ],
@@ -1592,6 +1596,14 @@
       "path": "experiments/meeting-bridge-v1/README.md",
       "sha256": "19156ff51715d6cf664642de5c61526b9f142aaa78f00621e315eed9093b91c9",
       "bytes": 2348,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/memos-comparison-v1/README.md",
+      "sha256": "0ee77df7e248b0c3d47ce9d32c00d6983cd7ec06b6a77792af0347f27edd915f",
+      "bytes": 4545,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

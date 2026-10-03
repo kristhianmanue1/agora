@@ -1,0 +1,251 @@
+{
+  "status": "complete_mixed_outcomes",
+  "rows": [
+    {
+      "id": "qasper",
+      "cube_id": "agora-compare-qasper-9b5927fd1db5",
+      "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+      "source_bytes": 37439,
+      "ingestion_seconds": 59.481,
+      "memories_before": 5,
+      "memories_after": 5,
+      "memory_ids_and_text_unchanged": true,
+      "searches": [
+        {
+          "relativity": 0.45,
+          "count": 5,
+          "seconds": 0.125,
+          "memories": [
+            {
+              "id": "cb762b80-a8d7-43f1-8491-6ca411d33cf8",
+              "memory": "The paper shared by the user on October 2, 2026 explains that, due to the lack of a public open-domain VQA dataset, its authors automatically generated 16,850 open-domain question-answer pairs based on 8,425 images from the Visual7W test split. Visual objects were linked to ConceptNet entities and relation-specific question-answer templates (e.g., UsedFor, CapableOf) were filled with knowledge triples. Confusing candidate answers were deliberately sampled—some satisfying knowledge requirements but absent from the image, others appearing in the image but violating knowledge requirements—so that answering correctly requires reasoning over both visual content and external knowledge.",
+              "ref_id": "[cb762b80]",
+              "score": 0.6157999548431219,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "2c9852ea-27d2-4a4b-a0b5-7e6d6003cb1f",
+              "memory": "On October 2, 2026 at 10:17 PM, the user shared the full text of an academic research paper titled 'Incorporating External Knowledge to Answer Open-Domain Visual Questions with Dynamic Memory Networks'. The paper proposes a novel framework called the Knowledge-incorporated Dynamic Memory Network (KDMN), which enables Visual Question Answering (VQA) systems to answer open-domain questions requiring reasoning beyond image content by leveraging massive external knowledge.",
+              "ref_id": "[2c9852ea]",
+              "score": 0.5590776064072903,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "03738048-c654-4eeb-b1a3-95cb6135aa04",
+              "memory": "The KDMN paper the user shared reports experiments on the Visual7W dataset (327,939 question-answer pairs over 47,300 images) and the auto-generated open-domain benchmark. Implementation details include a 1024-dim joint embedding space, 300-dim word embeddings, 512-dim LSTM internal states, ResNet-101 image features, 20 retrieved knowledge triples per QA pair, 2 dynamic memory update iterations, a 2048-dim episodic memory, batches of 500 QA pairs, and SGD with a base learning rate of 0.0001. The full model achieved state-of-the-art close-domain performance with notable gains on Who (5.9%) and What (4.9%) questions, improved 12.7% over the knowledge-free variant KDMN-NoKG on open-domain VQA (6.8% attributable to external knowledge, 5.9% to the memory network), and gained roughly 3.1% more through ensembling multiple KDMN models.",
+              "ref_id": "[03738048]",
+              "score": 0.558573336491994,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "22b7a042-d81b-4d8d-af4c-a353d3b8d276",
+              "memory": "The user appears to have a research or study interest in multimodal artificial intelligence, specifically open-domain Visual Question Answering, knowledge graphs, and memory-augmented neural networks, as evidenced by their sharing of the detailed KDMN paper on October 2, 2026, which combines ConceptNet knowledge with dynamic memory networks for multi-modal reasoning.",
+              "ref_id": "[22b7a042]",
+              "score": 0.48611395267123886,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "5af3a3b2-d440-48f9-853c-a1c05efa0317",
+              "memory": "The KDMN paper the user shared on October 2, 2026 describes the following method: candidate knowledge is retrieved from ConceptNet (an open multilingual common-sense knowledge graph) using visual objects detected with Fast-RCNN and question keywords extracted with the Natural Language Toolkit, with node importance scores used to select the top-N edges; knowledge triples are treated as SVO (subject-verb-object) phrases, embedded via pre-trained GloVe word embeddings and a two-layer stacked LSTM into a continuous vector space shared with questions and answers; and attention-based dynamic memory networks (building on DMN+) iteratively distill useful knowledge and fuse it with image, question, and answer features (via Hadamard product) to perform multi-hop reasoning and predict the correct multiple-choice answer, trained end-to-end with cross-entropy loss.",
+              "ref_id": "[5af3a3b2]",
+              "score": 0.4541816182416104,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            }
+          ]
+        },
+        {
+          "relativity": 0.3,
+          "count": 5,
+          "seconds": 0.074,
+          "memories": [
+            {
+              "id": "cb762b80-a8d7-43f1-8491-6ca411d33cf8",
+              "memory": "The paper shared by the user on October 2, 2026 explains that, due to the lack of a public open-domain VQA dataset, its authors automatically generated 16,850 open-domain question-answer pairs based on 8,425 images from the Visual7W test split. Visual objects were linked to ConceptNet entities and relation-specific question-answer templates (e.g., UsedFor, CapableOf) were filled with knowledge triples. Confusing candidate answers were deliberately sampled—some satisfying knowledge requirements but absent from the image, others appearing in the image but violating knowledge requirements—so that answering correctly requires reasoning over both visual content and external knowledge.",
+              "ref_id": "[cb762b80]",
+              "score": 0.6157999548431219,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "2c9852ea-27d2-4a4b-a0b5-7e6d6003cb1f",
+              "memory": "On October 2, 2026 at 10:17 PM, the user shared the full text of an academic research paper titled 'Incorporating External Knowledge to Answer Open-Domain Visual Questions with Dynamic Memory Networks'. The paper proposes a novel framework called the Knowledge-incorporated Dynamic Memory Network (KDMN), which enables Visual Question Answering (VQA) systems to answer open-domain questions requiring reasoning beyond image content by leveraging massive external knowledge.",
+              "ref_id": "[2c9852ea]",
+              "score": 0.5590776064072903,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "03738048-c654-4eeb-b1a3-95cb6135aa04",
+              "memory": "The KDMN paper the user shared reports experiments on the Visual7W dataset (327,939 question-answer pairs over 47,300 images) and the auto-generated open-domain benchmark. Implementation details include a 1024-dim joint embedding space, 300-dim word embeddings, 512-dim LSTM internal states, ResNet-101 image features, 20 retrieved knowledge triples per QA pair, 2 dynamic memory update iterations, a 2048-dim episodic memory, batches of 500 QA pairs, and SGD with a base learning rate of 0.0001. The full model achieved state-of-the-art close-domain performance with notable gains on Who (5.9%) and What (4.9%) questions, improved 12.7% over the knowledge-free variant KDMN-NoKG on open-domain VQA (6.8% attributable to external knowledge, 5.9% to the memory network), and gained roughly 3.1% more through ensembling multiple KDMN models.",
+              "ref_id": "[03738048]",
+              "score": 0.558573336491994,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "22b7a042-d81b-4d8d-af4c-a353d3b8d276",
+              "memory": "The user appears to have a research or study interest in multimodal artificial intelligence, specifically open-domain Visual Question Answering, knowledge graphs, and memory-augmented neural networks, as evidenced by their sharing of the detailed KDMN paper on October 2, 2026, which combines ConceptNet knowledge with dynamic memory networks for multi-modal reasoning.",
+              "ref_id": "[22b7a042]",
+              "score": 0.48611395267123886,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "5af3a3b2-d440-48f9-853c-a1c05efa0317",
+              "memory": "The KDMN paper the user shared on October 2, 2026 describes the following method: candidate knowledge is retrieved from ConceptNet (an open multilingual common-sense knowledge graph) using visual objects detected with Fast-RCNN and question keywords extracted with the Natural Language Toolkit, with node importance scores used to select the top-N edges; knowledge triples are treated as SVO (subject-verb-object) phrases, embedded via pre-trained GloVe word embeddings and a two-layer stacked LSTM into a continuous vector space shared with questions and answers; and attention-based dynamic memory networks (building on DMN+) iteratively distill useful knowledge and fuse it with image, question, and answer features (via Hadamard product) to perform multi-hop reasoning and predict the correct multiple-choice answer, trained end-to-end with cross-entropy loss.",
+              "ref_id": "[5af3a3b2]",
+              "score": 0.4541816182416104,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            }
+          ]
+        },
+        {
+          "relativity": 0.1,
+          "count": 5,
+          "seconds": 0.078,
+          "memories": [
+            {
+              "id": "cb762b80-a8d7-43f1-8491-6ca411d33cf8",
+              "memory": "The paper shared by the user on October 2, 2026 explains that, due to the lack of a public open-domain VQA dataset, its authors automatically generated 16,850 open-domain question-answer pairs based on 8,425 images from the Visual7W test split. Visual objects were linked to ConceptNet entities and relation-specific question-answer templates (e.g., UsedFor, CapableOf) were filled with knowledge triples. Confusing candidate answers were deliberately sampled—some satisfying knowledge requirements but absent from the image, others appearing in the image but violating knowledge requirements—so that answering correctly requires reasoning over both visual content and external knowledge.",
+              "ref_id": "[cb762b80]",
+              "score": 0.6157999548431219,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "2c9852ea-27d2-4a4b-a0b5-7e6d6003cb1f",
+              "memory": "On October 2, 2026 at 10:17 PM, the user shared the full text of an academic research paper titled 'Incorporating External Knowledge to Answer Open-Domain Visual Questions with Dynamic Memory Networks'. The paper proposes a novel framework called the Knowledge-incorporated Dynamic Memory Network (KDMN), which enables Visual Question Answering (VQA) systems to answer open-domain questions requiring reasoning beyond image content by leveraging massive external knowledge.",
+              "ref_id": "[2c9852ea]",
+              "score": 0.5590776064072903,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "03738048-c654-4eeb-b1a3-95cb6135aa04",
+              "memory": "The KDMN paper the user shared reports experiments on the Visual7W dataset (327,939 question-answer pairs over 47,300 images) and the auto-generated open-domain benchmark. Implementation details include a 1024-dim joint embedding space, 300-dim word embeddings, 512-dim LSTM internal states, ResNet-101 image features, 20 retrieved knowledge triples per QA pair, 2 dynamic memory update iterations, a 2048-dim episodic memory, batches of 500 QA pairs, and SGD with a base learning rate of 0.0001. The full model achieved state-of-the-art close-domain performance with notable gains on Who (5.9%) and What (4.9%) questions, improved 12.7% over the knowledge-free variant KDMN-NoKG on open-domain VQA (6.8% attributable to external knowledge, 5.9% to the memory network), and gained roughly 3.1% more through ensembling multiple KDMN models.",
+              "ref_id": "[03738048]",
+              "score": 0.558573336491994,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "22b7a042-d81b-4d8d-af4c-a353d3b8d276",
+              "memory": "The user appears to have a research or study interest in multimodal artificial intelligence, specifically open-domain Visual Question Answering, knowledge graphs, and memory-augmented neural networks, as evidenced by their sharing of the detailed KDMN paper on October 2, 2026, which combines ConceptNet knowledge with dynamic memory networks for multi-modal reasoning.",
+              "ref_id": "[22b7a042]",
+              "score": 0.48611395267123886,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            },
+            {
+              "id": "5af3a3b2-d440-48f9-853c-a1c05efa0317",
+              "memory": "The KDMN paper the user shared on October 2, 2026 describes the following method: candidate knowledge is retrieved from ConceptNet (an open multilingual common-sense knowledge graph) using visual objects detected with Fast-RCNN and question keywords extracted with the Natural Language Toolkit, with node importance scores used to select the top-N edges; knowledge triples are treated as SVO (subject-verb-object) phrases, embedded via pre-trained GloVe word embeddings and a two-layer stacked LSTM into a continuous vector space shared with questions and answers; and attention-based dynamic memory networks (building on DMN+) iteratively distill useful knowledge and fuse it with image, question, and answer features (via Hadamard product) to perform multi-hop reasoning and predict the correct multiple-choice answer, trained end-to-end with cross-entropy loss.",
+              "ref_id": "[5af3a3b2]",
+              "score": 0.4541816182416104,
+              "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+              "source_text_present": true
+            }
+          ]
+        }
+      ],
+      "answer": "Based on the supplied evidence, the KDMN paper (\"Incorporating External Knowledge to Answer Open-Domain Visual Questions with Dynamic Memory Networks,\" shared by the user on October 2, 2026) evaluates on **two datasets**:\n\n1. **Visual7W** — 327,939 question-answer pairs over 47,300 images, used for close-domain (image-only) VQA evaluation. [Fact 2, Fact 3]\n\n2. **An auto-generated open-domain benchmark** — 16,850 open-domain question-answer pairs automatically generated from 8,425 images drawn from the Visual7W test split. These were created because no public open-domain VQA dataset existed; objects were linked to ConceptNet entities, relation-specific templates (e.g., UsedFor, CapableOf) were filled with knowledge triples, and confusing distractor answers were deliberately sampled so that correct answering requires reasoning over both image content and external knowledge. [Fact 1, Fact 2, Fact 3]\n\n**What is missing from the evidence:** The retrieved facts do not mention any other VQA datasets (e.g., VQA v2, GQA, OK-VQA, A-OKVQA) being used for evaluation, nor do they specify the exact evaluation split/protocol details for either benchmark. If the paper evaluates on additional datasets beyond Visual7W and the auto-generated open-domain benchmark, that information is not present in the supplied evidence.",
+      "chat_seconds": 11.264
+    },
+    {
+      "id": "temporal",
+      "cube_id": "agora-compare-temporal-f59b7b0ccc7f",
+      "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+      "source_bytes": 166,
+      "ingestion_seconds": 25.316,
+      "memories_before": 1,
+      "memories_after": 1,
+      "memory_ids_and_text_unchanged": true,
+      "searches": [
+        {
+          "relativity": 0.45,
+          "count": 1,
+          "seconds": 0.075,
+          "memories": [
+            {
+              "id": "261667bc-69e8-4983-b629-f63d6aeea6df",
+              "memory": "On October 2, 2026, during a meeting, the Coordinator announced scheduling information about a draft. At 09:00, the Coordinator stated that the draft date was Tuesday (likely Tuesday, October 6, 2026, exact date inferred). At 09:15 the same morning, the Coordinator issued a correction: the draft date is now Wednesday (likely Wednesday, October 7, 2026), and the Tuesday date is cancelled. The user recorded and shared these meeting notes with the assistant at 10:18 PM on October 2, 2026, indicating awareness of the schedule change.",
+              "ref_id": "[261667bc]",
+              "score": 0.6486788326520916,
+              "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+              "source_text_present": true
+            }
+          ]
+        },
+        {
+          "relativity": 0.3,
+          "count": 1,
+          "seconds": 0.068,
+          "memories": [
+            {
+              "id": "261667bc-69e8-4983-b629-f63d6aeea6df",
+              "memory": "On October 2, 2026, during a meeting, the Coordinator announced scheduling information about a draft. At 09:00, the Coordinator stated that the draft date was Tuesday (likely Tuesday, October 6, 2026, exact date inferred). At 09:15 the same morning, the Coordinator issued a correction: the draft date is now Wednesday (likely Wednesday, October 7, 2026), and the Tuesday date is cancelled. The user recorded and shared these meeting notes with the assistant at 10:18 PM on October 2, 2026, indicating awareness of the schedule change.",
+              "ref_id": "[261667bc]",
+              "score": 0.6486788326520916,
+              "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+              "source_text_present": true
+            }
+          ]
+        },
+        {
+          "relativity": 0.1,
+          "count": 1,
+          "seconds": 0.069,
+          "memories": [
+            {
+              "id": "261667bc-69e8-4983-b629-f63d6aeea6df",
+              "memory": "On October 2, 2026, during a meeting, the Coordinator announced scheduling information about a draft. At 09:00, the Coordinator stated that the draft date was Tuesday (likely Tuesday, October 6, 2026, exact date inferred). At 09:15 the same morning, the Coordinator issued a correction: the draft date is now Wednesday (likely Wednesday, October 7, 2026), and the Tuesday date is cancelled. The user recorded and shared these meeting notes with the assistant at 10:18 PM on October 2, 2026, indicating awareness of the schedule change.",
+              "ref_id": "[261667bc]",
+              "score": 0.6486788326520916,
+              "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+              "source_text_present": true
+            }
+          ]
+        }
+      ],
+      "answer": "**Final date (per the latest observed correction):** Wednesday — most likely **Wednesday, October 7, 2026**. [Fact Memory 1]\n\n**What changed:**\n- At **09:00** on October 2, 2026, the Coordinator originally announced the draft date as **Tuesday** (likely October 6, 2026). [Fact Memory 1]\n- At **09:15** the same morning, the Coordinator issued a correction: the draft date is now **Wednesday**, and the **Tuesday date is cancelled**. [Fact Memory 1]\n- You recorded and shared these notes with me at 10:18 PM on October 2, 2026. [Fact Memory 1]\n\n**What is missing / caveats:**\n- The exact calendar dates (Oct 6 / Oct 7) are **inferred, not explicitly stated** in the evidence — the source only confirms \"Tuesday\" and \"Wednesday.\" The specific dates should be treated as likely but unverified.\n- The evidence reflects only the **latest observed correction** as of the meeting notes from October 2, 2026. This is **not a guarantee about future changes** — a subsequent correction or rescheduling could occur, but no such change appears in the available evidence.",
+      "chat_seconds": 13.739
+    }
+  ],
+  "http_requests": 16,
+  "internal_provider_calls": "not_measured",
+  "tokens": "not_measured",
+  "monetary_cost": "not_measured",
+  "replay_verified": true,
+  "source_evaluation": "Same-agent inspection; no independent adjudication",
+  "findings": [
+    "QASPER required answer retrieved at all three thresholds; prior Agora answer omitted Visual7W. Different preprocessing and budgets, no general superiority claim.",
+    "Same returned memory IDs/text across thresholds; no evidence here that lowering threshold is necessary.",
+    "Temporal day correction retained, but extraction adds meeting date October 2 2026 absent from source, and speculates October 6/7. Calendar speculation is qualified, but origin of meeting date is unsupported.",
+    "QASPER extraction added UserMemory inferring personal interests from submitting a paper. This is not an explicit user preference.",
+    "Sources metadata contains original text and supplied hash; final Fact references are not verified span-level citations.",
+    "Memory IDs/text unchanged before vs after chat; not a claim that all server state is immutable."
+  ],
+  "request_hashes": {
+    "qasper-add.json": "c0aacf15943fca1dfc3ba4981edbc86498adfe1c2223add09442e03d3882aee7",
+    "qasper-after.json": "bdaaa2b637336b3d565c1a78bf7d952e4e302403964236b8c9e1bc912234f45c",
+    "qasper-before.json": "26240ccf10de7dee2397c62064403fa10cc58224a742116769bbb15faadd2f81",
+    "qasper-chat.json": "aad37219407839456f14284b504127033add78f35519303992923df9efb18e82",
+    "qasper-create.json": "ab39c682137fdd2ecbb3dbf2d5c4373220dc804a550d8029758b708ae2096847",
+    "qasper-search-0.1.json": "b6f01b995b0149a390ad69ceb2b84f2f3889b5175208c9905429a004fccbbc33",
+    "qasper-search-0.3.json": "ce5c87e5afda4bfe90f435bfaea2c627c8e35e01aac48575c8aaadf5924d4f01",
+    "qasper-search-0.45.json": "30b5ea07eeea3c2851c0bb950be67e2d78527b5e5a2b7c40d45b564483d79ac3",
+    "temporal-add.json": "cdad023dcbcca1961677e98908728081a6d61b91db2d0ab65dbca51ec24d6344",
+    "temporal-after.json": "19c59aef38e53358d4d3512b987b09eec1b72f795696c97535b7ba8cd8fdc796",
+    "temporal-before.json": "6f13dbc8f4a63f5ce1b4adf9b94c4b50cc9265a7aef20c8e9383e5890bddbd41",
+    "temporal-chat.json": "af3b2d956e15fed6bd857f007ba02a8d221fec4b614a64f3ecb6bbce629844b8",
+    "temporal-create.json": "ccdedfb4cde58832cb2882a024ef8b2081a4c69a2ee626d6f2e0aa17aae5a3b9",
+    "temporal-search-0.1.json": "59ad3b4cfb6589f59ba1b6a2073fce1faaffb5a3fbd69adb0663d838f595ffd4",
+    "temporal-search-0.3.json": "64316cea6241567eebc92152c758f6e0895ba2c4820d2550dad4625d240dfc33",
+    "temporal-search-0.45.json": "beae7f34988c2818f4c947e812436a88d894648a908e8e1bbcea870a47721b70"
+  }
+}

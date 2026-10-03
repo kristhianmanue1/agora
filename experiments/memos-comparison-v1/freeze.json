@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "qasper",
+      "source": "experiments/scoped-generalization-v1/inputs/case-2.txt",
+      "source_sha256": "64cdacecb9cd30b6a47abf202d390193e70921b4433481b30e1c600f61ae1518",
+      "question": "What VQA datasets are used for evaluating this task? ",
+      "cube_id": "agora-compare-qasper-9b5927fd1db5"
+    },
+    {
+      "id": "temporal",
+      "source": "experiments/scoped-generalization-v1/inputs/jsonl.jsonl",
+      "source_sha256": "783bf619b22cd23f3776cc70c78cb97f7fc41bf54f31e25b2af1bb7677a523b9",
+      "question": "What is the final date and what changed?",
+      "cube_id": "agora-compare-temporal-f59b7b0ccc7f"
+    }
+  ],
+  "runner_sha256": "0e9d7e16359f92765d3aacb3988c24c33769df15d32e3766e670ba332b11d91d",
+  "relativity_values": [
+    0.45,
+    0.3,
+    0.1
+  ],
+  "chat_relativity": 0.1,
+  "max_requests": 16,
+  "retries": 0,
+  "memos_commit": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+  "memos_worktree": "Pre-existing local configuration modifications; not stock upstream",
+  "scope": "Two known diagnostic cases; comparison is not held-out generalization or equal total cost",
+  "stop": "One run; uncertain request or error stops without retry; do not tune to observed answers",
+  "cost_limit": "16 HTTP requests maximum, internal extraction/search LLM call count not controlled by client; per-request timeout 180s is not server cancellation"
+}
