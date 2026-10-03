@@ -364,6 +364,22 @@
     {
       "path": "experiments/explicit-plan-v1/verification.json",
       "sha256": "3b80ab2e5510cde5c8b283a35468dd85c20163f99508a95bf9db800ff70769a1"
+    },
+    {
+      "path": "experiments/selection-comparison-v1/README.md",
+      "sha256": "f59477cd992ac80118dd66585065d8f3fcd069328404303a5b414632ea65972b"
+    },
+    {
+      "path": "experiments/selection-comparison-v1/freeze.json",
+      "sha256": "48a2767e1029ade2634f86eebc96b14e69aef3d63d5974b97e2cf65081b24df6"
+    },
+    {
+      "path": "experiments/selection-comparison-v1/result.json",
+      "sha256": "c4369d02a6135176f7d196f4a00c64aae14cb7505a4c71705ccdd5828f86a649"
+    },
+    {
+      "path": "experiments/selection-comparison-v1/run.py",
+      "sha256": "efe7aa624ae6728d5485ea234c1b5f562216dd36b270a60923b14df95dfed173"
     }
   ],
   "expected_accounting": {

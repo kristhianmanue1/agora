@@ -540,3 +540,13 @@ reconstruye antes de usar un proveedor o respuesta guardada. El caso de fórmula
 faltante se reprodujo por CLI sin HTTP, conservando respuesta, faltantes y alcance
 parcial. 554 tests pasan. [Expediente](../experiments/explicit-plan-v1/README.md).
 Esto habilita repetición controlada; todavía no demuestra selección automática.
+
+
+### Recuperación automática: diagnóstico de idioma y cobertura
+
+[Comparación local](../experiments/selection-comparison-v1/README.md), ocho
+configuraciones sin modelo: pregunta española frente a fuente inglesa recupera
+cero candidatos; traducción inglesa recupera como máximo 2/4 párrafos del plan
+manual, con 11.010 bytes entregados. No basta ampliar presupuesto. Próxima prueba:
+subpreguntas explícitas en idioma de fuente separadas de instrucciones de respuesta.
+Sin cambio de código, promoción automática ni comparación nueva con MemOS.

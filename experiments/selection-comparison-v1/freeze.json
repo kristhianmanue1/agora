@@ -1,0 +1,67 @@
+{
+  "frozen_at": "2026-10-03T18:09:44.695211+00:00",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "manual_plan_sha256": "c0869dc49d4d61c49e8e570b1ef0b09b966b3cddd154e39fcb131baa1f0ee214",
+  "code_commit": "5f5d931db6b39a296d933f8c3b7fd28dc9626eab",
+  "method": "paragraphs-equal; references withheld from selector",
+  "question_translation": "producer authored before execution; same intended task, not independent translation",
+  "conditions": [
+    {
+      "id": "es-5000-3",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 5000,
+      "top_k": 3
+    },
+    {
+      "id": "es-5000-6",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 5000,
+      "top_k": 6
+    },
+    {
+      "id": "es-12000-3",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 12000,
+      "top_k": 3
+    },
+    {
+      "id": "es-12000-6",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 12000,
+      "top_k": 6
+    },
+    {
+      "id": "en-5000-3",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 5000,
+      "top_k": 3
+    },
+    {
+      "id": "en-5000-6",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 5000,
+      "top_k": 6
+    },
+    {
+      "id": "en-12000-3",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 12000,
+      "top_k": 3
+    },
+    {
+      "id": "en-12000-6",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 12000,
+      "top_k": 6
+    }
+  ],
+  "scope": "one known document and question; diagnostic not held-out evaluation"
+}

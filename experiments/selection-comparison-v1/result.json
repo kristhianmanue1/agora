@@ -1,0 +1,496 @@
+{
+  "schema": "aria/selection-comparison/v1",
+  "conditions": [
+    {
+      "id": "es-5000-3",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 5000,
+      "top_k": 3,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.004536165999999994,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "es-5000-6",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 5000,
+      "top_k": 6,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.0034098749999999928,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "es-12000-3",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 12000,
+      "top_k": 3,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.0034000000000000002,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "es-12000-6",
+      "language": "es",
+      "query": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+      "budget": 12000,
+      "top_k": 6,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 0,
+      "bytes_outside_manual_reference": 0,
+      "selected_ranges": [],
+      "seconds": 0.0033254580000000034,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "en-5000-3",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 5000,
+      "top_k": 3,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4708,
+      "bytes_outside_manual_reference": 4708,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ]
+      ],
+      "seconds": 0.003541417000000005,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "en-5000-6",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 5000,
+      "top_k": 6,
+      "reference_covered_bytes": 585,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 1,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 4961,
+      "bytes_outside_manual_reference": 4376,
+      "selected_ranges": [
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          10851,
+          11958
+        ],
+        [
+          13163,
+          13748
+        ]
+      ],
+      "seconds": 0.004313457999999992,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "en-12000-3",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 12000,
+      "top_k": 3,
+      "reference_covered_bytes": 0,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 0,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 0,
+          "total_bytes": 577,
+          "complete": false
+        },
+        {
+          "index": 1,
+          "covered_bytes": 0,
+          "total_bytes": 585,
+          "complete": false
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 5315,
+      "bytes_outside_manual_reference": 5315,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ]
+      ],
+      "seconds": 0.004317499999999988,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    },
+    {
+      "id": "en-12000-6",
+      "language": "en",
+      "query": "How were the human satisfaction labels collected, what scale was used and which mappings or exclusions are documented? Distinguish this from the trained prediction mechanism. Answer in Spanish. If a formula is missing, declare it unknown: do not reconstruct intervals or infer values by elimination or expressions such as the remaining ratings. Preserve what is known without filling the gap.",
+      "budget": 12000,
+      "top_k": 6,
+      "reference_covered_bytes": 1162,
+      "reference_total_bytes": 3224,
+      "fully_covered_paragraphs": 2,
+      "paragraph_coverage": [
+        {
+          "index": 0,
+          "covered_bytes": 577,
+          "total_bytes": 577,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "covered_bytes": 585,
+          "total_bytes": 585,
+          "complete": true
+        },
+        {
+          "index": 2,
+          "covered_bytes": 0,
+          "total_bytes": 1195,
+          "complete": false
+        },
+        {
+          "index": 3,
+          "covered_bytes": 0,
+          "total_bytes": 867,
+          "complete": false
+        }
+      ],
+      "delivered_bytes": 11010,
+      "bytes_outside_manual_reference": 9848,
+      "selected_ranges": [
+        [
+          2064,
+          3234
+        ],
+        [
+          3236,
+          4245
+        ],
+        [
+          4247,
+          4798
+        ],
+        [
+          7346,
+          7615
+        ],
+        [
+          7617,
+          8122
+        ],
+        [
+          8124,
+          9328
+        ],
+        [
+          9330,
+          9937
+        ],
+        [
+          10433,
+          10849
+        ],
+        [
+          10851,
+          11958
+        ],
+        [
+          11960,
+          12561
+        ],
+        [
+          12563,
+          13161
+        ],
+        [
+          13163,
+          13748
+        ],
+        [
+          13750,
+          14095
+        ],
+        [
+          21546,
+          22099
+        ],
+        [
+          22101,
+          23350
+        ],
+        [
+          23352,
+          23593
+        ]
+      ],
+      "seconds": 0.005131957999999992,
+      "provider_calls": 0,
+      "source_scanned_bytes": 45557
+    }
+  ],
+  "http_attempts": 0,
+  "manual_reference_bytes": 3224,
+  "reference_basis": "producer-selected paragraphs, not exhaustive ground truth",
+  "positive_control": "manual ranges recover 4/4",
+  "negative_control": "empty ranges recover 0/4",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "code_hashes": {
+    "passages.py": "4544cd67d87e82c1cf3a2e3ad4bd7a31205f1b4c964d98fcf8efa89a97e46afd",
+    "subquestions.py": "d469ca097a24e90912ab9598838294913fa41685795f9c25b8b653c75d5c0479",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f"
+  }
+}
