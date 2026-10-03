@@ -2,10 +2,7 @@ diff --git a/src/memos/graph_dbs/neo4j_community.py b/src/memos/graph_dbs/neo4j_
 index b5c92f40..c6b862dc 100644
 --- a/src/memos/graph_dbs/neo4j_community.py
 +++ b/src/memos/graph_dbs/neo4j_community.py
-@@ -465,6 +465,38 @@ class Neo4jCommunityGraphDB(Neo4jGraphDB):
- 
-         return filtered_results
- 
+@@ -467,0 +468,32 @@ class Neo4jCommunityGraphDB(Neo4jGraphDB):
 +    def search_by_keywords_like(
 +        self, query: str, user_name: str | None = None, filter: dict | None = None
 +    ) -> list[dict]:
@@ -38,20 +35,11 @@ index b5c92f40..c6b862dc 100644
 +        with self.driver.session(database=self.db_name) as session:
 +            return [dict(row) for row in session.run(statement, **params)]
 +
-     def search_by_fulltext(
-         self,
-         query_words: list[str],
 diff --git a/src/memos/mem_feedback/feedback.py b/src/memos/mem_feedback/feedback.py
 index 28f495af..df234349 100644
 --- a/src/memos/mem_feedback/feedback.py
 +++ b/src/memos/mem_feedback/feedback.py
-@@ -1121,6 +1121,9 @@ class MemFeedback(BaseMemFeedback):
-             kwp_judge = self._keyword_replace_judgement(feedback_content)
-             if (
-                 kwp_judge
+@@ -1123,0 +1124,3 @@ class MemFeedback(BaseMemFeedback):
 +                # Explicit targets require semantic updates, not a filename-scoped
 +                # global replacement that ignores retrieved_memory_ids.
 +                and not kwargs.get("retrieved_memory_ids")
-                 and kwp_judge["if_keyword_replace"].lower() == "true"
-                 and kwp_judge.get("original", "NONE") != "NONE"
-                 and kwp_judge.get("target", "NONE") != "NONE"
