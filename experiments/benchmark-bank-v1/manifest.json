@@ -420,6 +420,26 @@
     {
       "path": "experiments/idf-comparison-v1/run.py",
       "sha256": "ff67567d78d41d2013788d5fe2f73686babbba8cf8b922eab32db13122a44b33"
+    },
+    {
+      "path": "experiments/section-comparison-v1/README.md",
+      "sha256": "27bc02b26097da900ae4be9cddf671b33b9b8f155680cecc48d6fbeace046482"
+    },
+    {
+      "path": "experiments/section-comparison-v1/freeze.json",
+      "sha256": "b811a0c61df9ebb6815a2b349302027eb5252fbd4e1798bc8226e1c1f9b4a515"
+    },
+    {
+      "path": "experiments/section-comparison-v1/references.json",
+      "sha256": "196cc64464826cf939b0e6d991b71683be05c1e980ed488e25b2a3360c0e3950"
+    },
+    {
+      "path": "experiments/section-comparison-v1/result.json",
+      "sha256": "f2e98e38fcbfdc76ed68860448bdce992669fb2900490b0599fba9a5d87eb3c2"
+    },
+    {
+      "path": "experiments/section-comparison-v1/run.py",
+      "sha256": "34e76af0f301dba94cb8b9a7896189d4f1ab481fe9f3e5c8cad6cc17654d4972"
     }
   ],
   "expected_accounting": {

@@ -569,3 +569,12 @@ verificada. 560 tests pasan. En 20 condiciones locales mejora de 1/4 a 2/4 párr
 con dos subpreguntas y 5.000 bytes, pero no supera 2/4 ni resuelve español sobre
 fuente inglesa. Sin llamadas a modelos, sin promoción del predeterminado.
 [Expediente y limitaciones](../experiments/idf-comparison-v1/README.md).
+
+
+### Selección estructural contrastada con documentos nuevos
+
+[40 condiciones locales](../experiments/section-comparison-v1/README.md): los
+selectores por secciones existentes cubren 4/4 párrafos del caso conocido con
+~6 KB dentro de 12 KB. Dos documentos nuevos muestran resultado mixto: mejora
+una pregunta, falla otra y aparecen etiquetas discrepantes y una tabla no
+renderizada. Sin promoción automática ni llamadas a modelos; no cambia código.

@@ -1,0 +1,163 @@
+[
+  {
+    "document": "1901.05415",
+    "question_id": "known",
+    "annotations": [
+      {
+        "type": "manual",
+        "unanswerable": null,
+        "ranges": [
+          [
+            12589,
+            13166
+          ],
+          [
+            13168,
+            13753
+          ],
+          [
+            14780,
+            15975
+          ],
+          [
+            15977,
+            16844
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 4
+      }
+    ]
+  },
+  {
+    "document": "1907.12984",
+    "question_id": "f3b4e52ba962a0004064132d123fd9b78d9e12e2",
+    "annotations": [
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [
+          [
+            17732,
+            18218
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 1
+      },
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [
+          [
+            17732,
+            18218
+          ],
+          [
+            18220,
+            18866
+          ],
+          [
+            19764,
+            19979
+          ],
+          [
+            19981,
+            20268
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 4
+      }
+    ]
+  },
+  {
+    "document": "1907.12984",
+    "question_id": "ea6edf45f094586caf4684463287254d44b00e95",
+    "annotations": [
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [
+          [
+            21858,
+            21913
+          ],
+          [
+            21915,
+            21997
+          ],
+          [
+            21999,
+            22228
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 3
+      },
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [
+          [
+            28798,
+            29768
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 1
+      }
+    ]
+  },
+  {
+    "document": "2003.04707",
+    "question_id": "58259f2e22363aab20c448e5dd7b6f432556b32d",
+    "annotations": [
+      {
+        "type": "qasper_annotation",
+        "unanswerable": true,
+        "ranges": [],
+        "unmapped": [],
+        "expected_evidence_count": 0
+      },
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [
+          [
+            31440,
+            31577
+          ],
+          [
+            31579,
+            32227
+          ]
+        ],
+        "unmapped": [],
+        "expected_evidence_count": 2
+      }
+    ]
+  },
+  {
+    "document": "2003.04707",
+    "question_id": "b9e0b1940805a5056f71c66d176cc87829e314d4",
+    "annotations": [
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [],
+        "unmapped": [
+          "FLOAT SELECTED: Table 4. Results on CommonsenseQA; the asterisk (*) denotes results taken from leaderboard."
+        ],
+        "expected_evidence_count": 1
+      },
+      {
+        "type": "qasper_annotation",
+        "unanswerable": false,
+        "ranges": [],
+        "unmapped": [],
+        "expected_evidence_count": 0
+      }
+    ]
+  }
+]
