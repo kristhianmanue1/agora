@@ -1,0 +1,608 @@
+[
+  {
+    "document": "1907.12984",
+    "question_id": "ea6edf45f094586caf4684463287254d44b00e95",
+    "initial_bytes": 4981,
+    "initial": {
+      "source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+      "question": "Do they compare against a system that does not use streaming text, but has the entire text at disposal?",
+      "ranges": [
+        [
+          3591,
+          4958
+        ],
+        [
+          4960,
+          5063
+        ],
+        [
+          6621,
+          6900
+        ],
+        [
+          19479,
+          19762
+        ],
+        [
+          26667,
+          27822
+        ],
+        [
+          32968,
+          33044
+        ],
+        [
+          33046,
+          34121
+        ],
+        [
+          39931,
+          40574
+        ]
+      ]
+    },
+    "expanded": {
+      "source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+      "question": "Do they compare against a system that does not use streaming text, but has the entire text at disposal?",
+      "ranges": [
+        [
+          0,
+          74
+        ],
+        [
+          76,
+          1284
+        ],
+        [
+          3591,
+          4958
+        ],
+        [
+          4960,
+          5063
+        ],
+        [
+          6211,
+          6242
+        ],
+        [
+          6621,
+          6900
+        ],
+        [
+          10126,
+          10142
+        ],
+        [
+          11286,
+          11966
+        ],
+        [
+          12731,
+          12753
+        ],
+        [
+          12755,
+          12947
+        ],
+        [
+          19479,
+          19762
+        ],
+        [
+          22275,
+          22402
+        ],
+        [
+          22731,
+          22937
+        ],
+        [
+          22939,
+          23587
+        ],
+        [
+          23589,
+          24927
+        ],
+        [
+          25700,
+          26665
+        ],
+        [
+          26667,
+          27822
+        ],
+        [
+          27824,
+          28796
+        ],
+        [
+          32968,
+          33044
+        ],
+        [
+          33046,
+          34121
+        ],
+        [
+          39392,
+          39929
+        ],
+        [
+          39931,
+          40574
+        ]
+      ],
+      "delivered_bytes": 11997,
+      "additions": [
+        {
+          "range": [
+            25700,
+            26665
+          ],
+          "shared_labels": [
+            "context-aware",
+            "partial decoding",
+            "sub-sentence",
+            "wait-k"
+          ]
+        },
+        {
+          "range": [
+            76,
+            1284
+          ],
+          "shared_labels": [
+            "context-aware",
+            "good",
+            "partial decoding"
+          ]
+        },
+        {
+          "range": [
+            39392,
+            39929
+          ],
+          "shared_labels": [
+            "context-aware",
+            "dutongchuan",
+            "partial decoding"
+          ]
+        },
+        {
+          "range": [
+            23589,
+            24927
+          ],
+          "shared_labels": [
+            "baseline",
+            "context-aware",
+            "partial decoding"
+          ]
+        },
+        {
+          "range": [
+            22939,
+            23587
+          ],
+          "shared_labels": [
+            "baseline",
+            "sub-sentence",
+            "wait-k"
+          ]
+        },
+        {
+          "range": [
+            22731,
+            22937
+          ],
+          "shared_labels": [
+            "baseline",
+            "sub-sentence",
+            "wait-k"
+          ]
+        },
+        {
+          "range": [
+            27824,
+            28796
+          ],
+          "shared_labels": [
+            "baseline",
+            "context-aware",
+            "wait-k"
+          ]
+        },
+        {
+          "range": [
+            11286,
+            11966
+          ],
+          "shared_labels": [
+            "partial decoding",
+            "sub-sentence"
+          ]
+        },
+        {
+          "range": [
+            0,
+            74
+          ],
+          "shared_labels": [
+            "context-aware",
+            "dutongchuan"
+          ]
+        },
+        {
+          "range": [
+            12755,
+            12947
+          ],
+          "shared_labels": [
+            "context-aware",
+            "sub-sentence"
+          ]
+        },
+        {
+          "range": [
+            22275,
+            22402
+          ],
+          "shared_labels": [
+            "context-aware",
+            "partial decoding"
+          ]
+        },
+        {
+          "range": [
+            6211,
+            6242
+          ],
+          "shared_labels": [
+            "context-aware"
+          ]
+        },
+        {
+          "range": [
+            10126,
+            10142
+          ],
+          "shared_labels": [
+            "partial decoding"
+          ]
+        },
+        {
+          "range": [
+            12731,
+            12753
+          ],
+          "shared_labels": [
+            "context-aware"
+          ]
+        }
+      ],
+      "link_semantics": "literal_label_overlap_only",
+      "semantic_completeness": "not_established"
+    }
+  },
+  {
+    "document": "1602.04341",
+    "question_id": "041529e15b70b21986adb781fd9b94b595e451ed",
+    "initial_bytes": 4911,
+    "initial": {
+      "source_sha256": "19fef3894705ed70b9929da1c7a739d2c2f216bbf80ec1b8207a793ecd2c94d7",
+      "question": "what was the margin their system outperformed previous ones?",
+      "ranges": [
+        [
+          0,
+          70
+        ],
+        [
+          72,
+          1024
+        ],
+        [
+          1026,
+          1038
+        ],
+        [
+          1825,
+          3448
+        ],
+        [
+          3450,
+          3641
+        ],
+        [
+          4154,
+          4798
+        ],
+        [
+          6404,
+          6911
+        ],
+        [
+          6913,
+          6925
+        ],
+        [
+          19280,
+          19655
+        ],
+        [
+          22789,
+          22796
+        ],
+        [
+          22798,
+          23316
+        ]
+      ]
+    },
+    "expanded": {
+      "source_sha256": "19fef3894705ed70b9929da1c7a739d2c2f216bbf80ec1b8207a793ecd2c94d7",
+      "question": "what was the margin their system outperformed previous ones?",
+      "ranges": [
+        [
+          0,
+          70
+        ],
+        [
+          72,
+          1024
+        ],
+        [
+          1026,
+          1038
+        ],
+        [
+          1825,
+          3448
+        ],
+        [
+          3450,
+          3641
+        ],
+        [
+          4154,
+          4798
+        ],
+        [
+          6404,
+          6911
+        ],
+        [
+          6913,
+          6925
+        ],
+        [
+          19280,
+          19655
+        ],
+        [
+          22789,
+          22796
+        ],
+        [
+          22798,
+          23316
+        ]
+      ],
+      "delivered_bytes": 4911,
+      "additions": [],
+      "link_semantics": "literal_label_overlap_only",
+      "semantic_completeness": "not_established"
+    }
+  },
+  {
+    "document": "1602.07776",
+    "question_id": "95083d486769b9b5e8c57fe2ef1b452fc3ea5012",
+    "initial_bytes": 4914,
+    "initial": {
+      "source_sha256": "a1cb96626ae22746be020d7d7394e83c3db4a369c1ca584a54c7b6f12f3e6cd8",
+      "question": "what state of the art models do they compare to?",
+      "ranges": [
+        [
+          0,
+          33
+        ],
+        [
+          35,
+          469
+        ],
+        [
+          471,
+          483
+        ],
+        [
+          485,
+          1161
+        ],
+        [
+          3619,
+          4172
+        ],
+        [
+          4174,
+          4186
+        ],
+        [
+          7979,
+          8272
+        ],
+        [
+          8274,
+          8365
+        ],
+        [
+          11994,
+          12010
+        ],
+        [
+          12012,
+          12365
+        ],
+        [
+          24542,
+          26983
+        ]
+      ]
+    },
+    "expanded": {
+      "source_sha256": "a1cb96626ae22746be020d7d7394e83c3db4a369c1ca584a54c7b6f12f3e6cd8",
+      "question": "what state of the art models do they compare to?",
+      "ranges": [
+        [
+          0,
+          33
+        ],
+        [
+          35,
+          469
+        ],
+        [
+          471,
+          483
+        ],
+        [
+          485,
+          1161
+        ],
+        [
+          3619,
+          4172
+        ],
+        [
+          4174,
+          4186
+        ],
+        [
+          7979,
+          8272
+        ],
+        [
+          8274,
+          8365
+        ],
+        [
+          11994,
+          12010
+        ],
+        [
+          12012,
+          12365
+        ],
+        [
+          24542,
+          26983
+        ]
+      ],
+      "delivered_bytes": 4914,
+      "additions": [],
+      "link_semantics": "literal_label_overlap_only",
+      "semantic_completeness": "not_established"
+    }
+  },
+  {
+    "document": "1603.00957",
+    "question_id": "cbb4eba59434d596749408be5b923efda7560890",
+    "initial_bytes": 4636,
+    "initial": {
+      "source_sha256": "b6620d68b0e34561913c2b6cebb4f81e0769f25b5bc27190b5c9da45ae4b329c",
+      "question": "What baselines is the neural relation extractor compared to?",
+      "ranges": [
+        [
+          0,
+          75
+        ],
+        [
+          77,
+          852
+        ],
+        [
+          854,
+          866
+        ],
+        [
+          1799,
+          2894
+        ],
+        [
+          2896,
+          3452
+        ],
+        [
+          5200,
+          5210
+        ],
+        [
+          5212,
+          6156
+        ],
+        [
+          8404,
+          8423
+        ],
+        [
+          8425,
+          8857
+        ],
+        [
+          29247,
+          29965
+        ]
+      ]
+    },
+    "expanded": {
+      "source_sha256": "b6620d68b0e34561913c2b6cebb4f81e0769f25b5bc27190b5c9da45ae4b329c",
+      "question": "What baselines is the neural relation extractor compared to?",
+      "ranges": [
+        [
+          0,
+          75
+        ],
+        [
+          77,
+          852
+        ],
+        [
+          854,
+          866
+        ],
+        [
+          1799,
+          2894
+        ],
+        [
+          2896,
+          3452
+        ],
+        [
+          5200,
+          5210
+        ],
+        [
+          5212,
+          6156
+        ],
+        [
+          8404,
+          8423
+        ],
+        [
+          8425,
+          8857
+        ],
+        [
+          29247,
+          29965
+        ]
+      ],
+      "delivered_bytes": 4636,
+      "additions": [],
+      "link_semantics": "literal_label_overlap_only",
+      "semantic_completeness": "not_established"
+    }
+  }
+]

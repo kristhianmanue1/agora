@@ -556,6 +556,38 @@
     {
       "path": "experiments/comparison-chain-v1/verify.py",
       "sha256": "c5d2d2769ccc61aa9ba7a37cb13078a2747044f892454d26b25a05e5e457a9e4"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/README.md",
+      "sha256": "581354facb3e62f079459b0e283a34cda7651173be32fa8cf69a4ad922255add"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/check_selector.py",
+      "sha256": "88218e09ebddaa874749fbcd96fcbb62d5b646b9c829c18f9a13fc611bfb8fe3"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/freeze.json",
+      "sha256": "0103ac8937adcc1fa4c610167fd4a87aa85ef2f22f07e4e644814021ebaeba7e"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/result.json",
+      "sha256": "e19d2061d2318b154513bfbeec5a0fc0c7186c83f6d331dee77e603fbe020c8d"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/run.py",
+      "sha256": "a0a1409201cc4b6216499caad2df7e4d88d44628f3b324eaf87658c1ca2767c7"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/selections.json",
+      "sha256": "e6b7a39653d452e424d7f8b7a9b2fc1043eea6bff6fe75975f0a9222b3f87759"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/selector.py",
+      "sha256": "a2b326114fee34bbf58026649d2971b9e861133b35d237ce94569bca17aebc57"
+    },
+    {
+      "path": "experiments/linked-expansion-v1/verify.py",
+      "sha256": "756d65abf0cdbe5dfa9eaeb4ea54e81a01deebf9d903ed47627e33a52637ffec"
     }
   ],
   "expected_accounting": {
