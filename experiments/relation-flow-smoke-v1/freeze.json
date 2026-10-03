@@ -1,0 +1,8 @@
+{
+  "source_sha256": "e13ccdecd3b5172f829fb09c3855a6949ce0ff4241eadf5ae91e32726466e7fe",
+  "max_generator_calls": 1,
+  "max_reviewer_calls": 1,
+  "retries": 0,
+  "data": "synthetic",
+  "frozen_at": "2026-10-03T22:57:46.918999+00:00"
+}

@@ -1,0 +1,1 @@
+Atlas version 1 is a translation system. It receives each complete sentence before translating it. Atlas version 1 was evaluated using BLEU. The source reports no whole-document input.

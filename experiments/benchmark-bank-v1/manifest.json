@@ -624,6 +624,42 @@
     {
       "path": "experiments/relation-review-v1/review.py",
       "sha256": "9978c4883d8d46577687103c108e67118b4a833969ffc4f138d4efb89cbe7c1f"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/README.md",
+      "sha256": "a6ec9c3d1f24a4614cd2f7329fba808655f7350fb033e06651b1e005cc5c7b1c"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/freeze.json",
+      "sha256": "3fa34ce3dfd7613c1d21dfe70e3603d000dfaff34bcf5f40c86ef3e80c438a79"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/generation/candidate.json",
+      "sha256": "62083b9bdbd6676cded8cd7c04b2dbd522b6b30cda3eec9189180a31d2450aeb"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/generation/result.json",
+      "sha256": "d62ce12d399937f578eb4b27a9374581c17a2d817acfa742f32d441a64e5d5b2"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/replay-generation/candidate.json",
+      "sha256": "62083b9bdbd6676cded8cd7c04b2dbd522b6b30cda3eec9189180a31d2450aeb"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/replay-generation/result.json",
+      "sha256": "8e071b1ee19daf7a3d5417a2ade2ff8856875353546899e108766cbeca79cb69"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/replay-review/result.json",
+      "sha256": "1ad64a99194a0843f0df2356c5776d3cd2e9c2021e21371149475e731e2a2316"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/review/result.json",
+      "sha256": "f4175158fe3841af18f61f1e19881c40578ea320ef7590767e11b71346a64a28"
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/source.txt",
+      "sha256": "e13ccdecd3b5172f829fb09c3855a6949ce0ff4241eadf5ae91e32726466e7fe"
     }
   ],
   "expected_accounting": {

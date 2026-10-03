@@ -1,0 +1,40 @@
+{
+  "schema": "agora/relation-candidate/v1",
+  "source_id": "relation-smoke",
+  "source_sha256": "e13ccdecd3b5172f829fb09c3855a6949ce0ff4241eadf5ae91e32726466e7fe",
+  "fields": {
+    "system": {
+      "text": "Atlas version 1, a translation system.",
+      "evidence_ids": [
+        "ev_43ed67b320e6d2ac4d9d4f01"
+      ]
+    },
+    "task": {
+      "text": "Translation.",
+      "evidence_ids": [
+        "ev_43ed67b320e6d2ac4d9d4f01"
+      ]
+    },
+    "version": {
+      "text": "Version 1.",
+      "evidence_ids": [
+        "ev_43ed67b320e6d2ac4d9d4f01"
+      ]
+    },
+    "input": {
+      "text": "Each complete sentence, received before translating (sentence-level input; the source reports no whole-document input).",
+      "evidence_ids": [
+        "ev_43ed67b320e6d2ac4d9d4f01"
+      ]
+    },
+    "evaluation": {
+      "text": "Evaluated using BLEU.",
+      "evidence_ids": [
+        "ev_43ed67b320e6d2ac4d9d4f01"
+      ]
+    }
+  },
+  "relation_evidence_ids": [
+    "ev_43ed67b320e6d2ac4d9d4f01"
+  ]
+}

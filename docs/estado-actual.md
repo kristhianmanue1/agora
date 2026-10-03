@@ -618,3 +618,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Relaciones candidatas implementadas (2026-10-03)
 
 [Módulo y CLI optativa](relaciones-candidatas.md): units, template y validate enlazan sistema, tarea, versión, entrada y evaluación a pasajes por ID y SHA. Separan huecos estructurales de revisión semántica pendiente; nunca admiten automáticamente. Seis pruebas nuevas y 569 pruebas de regresión aprobadas. Sin APIs. Conexión con generador/revisor y extracción automática pendientes.
+
+## Generación y revisión de relaciones conectadas (2026-10-03)
+
+[Recorrido explícito](relaciones-candidatas.md): generar con GLM o respuesta conservada, validar IDs/fuente, revisar por GLM/Jev o replay. Respuestas y rechazos conservados; seis juicios consultivos, huecos e inconsistencias visibles, sin admisión automática. [Prueba sintética real](../experiments/relation-flow-smoke-v1/README.md): una generación GLM y una revisión Jev completas, 4.644 tokens observados; reproducción offline aprobada. Regresión: 576 pruebas. Recuperación y vinculación de evidencia dispersa en documentos largos siguen sin demostrar.
