@@ -437,3 +437,17 @@ store, el argv exacto autorizado creó el marcador; alterar el destino volvió a
 Es bloqueo efectivo de esa ruta, no sandbox global ni integración con la ejecución de
 agentes. Memoria declarativa no configura permisos. No se cambió código productivo ni
 se instaló control de ejecución fuera del laboratorio.
+
+### MemOS: equivalentes de transiciones inspeccionados
+
+[Ensayo nativo de feedback](../experiments/memos-transitions-v1/README.md): un cubo
+sintético nuevo, siete solicitudes HTTP y cero reintentos. La corrección Tuesday →
+Wednesday respondió 200 pero cero operaciones; get_all conservó la memoria y search
+siguió devolviendo Tuesday. La ingestión añadió una fecha no suministrada. Resultado
+limitado a un caso; no se determinó la causa interna ni una tasa de fallos.
+
+No se identificó checkpoint de tarea ni ejecución con allowlist en la API inspeccionada.
+Existen serialización y hooks de versión, sin equivalencia transaccional demostrada.
+No se ejecutó restauración sobre el grafo compartido ni se atribuyó bloqueo a una
+respuesta del chat. Próximo paso: diagnóstico acotado de feedback y control positivo
+de actualización antes de cualquier integración.

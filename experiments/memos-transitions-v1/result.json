@@ -1,0 +1,100 @@
+{
+  "scope": "One native semantic feedback attempt; no retries; checkpoints and execution gates inspected, not executed",
+  "memos_head": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+  "cube_id": "agora-transition-31212ebd8a50",
+  "model_configured": "glm-5.3-flash",
+  "model_effective": "unknown: API did not attest backend model",
+  "http_calls": 7,
+  "before": [
+    {
+      "id": "474567f8-6bfa-4b57-87f6-30c6b2ea5331",
+      "memory": "On October 2, 2026 at 11:04 PM, the user noted that for Project Cedar, an approved review meeting is scheduled to take place on a Tuesday, but no specific calendar date has been specified. Since October 2, 2026 was a Friday, the meeting most likely falls on Tuesday, October 6, 2026, though the exact date remains unconfirmed.",
+      "status": "activated",
+      "version": 1,
+      "history": [],
+      "evolve_to": []
+    }
+  ],
+  "after": [
+    {
+      "id": "474567f8-6bfa-4b57-87f6-30c6b2ea5331",
+      "memory": "On October 2, 2026 at 11:04 PM, the user noted that for Project Cedar, an approved review meeting is scheduled to take place on a Tuesday, but no specific calendar date has been specified. Since October 2, 2026 was a Friday, the meeting most likely falls on Tuesday, October 6, 2026, though the exact date remains unconfirmed.",
+      "status": "activated",
+      "version": 1,
+      "history": [],
+      "evolve_to": []
+    }
+  ],
+  "search": [
+    {
+      "id": "474567f8-6bfa-4b57-87f6-30c6b2ea5331",
+      "memory": "On October 2, 2026 at 11:04 PM, the user noted that for Project Cedar, an approved review meeting is scheduled to take place on a Tuesday, but no specific calendar date has been specified. Since October 2, 2026 was a Friday, the meeting most likely falls on Tuesday, October 6, 2026, though the exact date remains unconfirmed.",
+      "status": "activated",
+      "version": 1,
+      "history": [],
+      "evolve_to": []
+    }
+  ],
+  "feedback": {
+    "code": 200,
+    "message": "Memory feedback successfully",
+    "data": [
+      {
+        "answer": "",
+        "record": {
+          "add": [],
+          "update": []
+        }
+      }
+    ]
+  },
+  "observations": {
+    "before_equals_after": true,
+    "search_returns_old_memory": true,
+    "search_returns_correction": false
+  },
+  "calls": [
+    {
+      "file": "00-openapi.json",
+      "sha256": "4c6b40b3dda4aef64f898da5aaf424746383c53d4f62516221e5ef0c0ea9e862",
+      "http": 200,
+      "seconds": 0.019835958
+    },
+    {
+      "file": "01-create.json",
+      "sha256": "27b1cced22a74d101042aa34dd6718bbd59f8c1e65425c253e82b9cac0b56ed4",
+      "http": 200,
+      "seconds": 0.034435459
+    },
+    {
+      "file": "02-add.json",
+      "sha256": "64ae16f739a051d18af2e887faea81b2721b7e24ba39a00e9b7cbd603e85f95f",
+      "http": 200,
+      "seconds": 25.054592291
+    },
+    {
+      "file": "03-before.json",
+      "sha256": "0f119724d35dc32453bead1cee5cd25cd98cc431855faeedd7ae71be17e22703",
+      "http": 200,
+      "seconds": 0.1245305409999986
+    },
+    {
+      "file": "04-feedback.json",
+      "sha256": "375c4c9b0556617fd1910a660fb4aa049b57be60f0fbd6b95d2dee5c9dcd9399",
+      "http": 200,
+      "seconds": 29.963301874999996
+    },
+    {
+      "file": "05-after.json",
+      "sha256": "9d85bcb3f545a601dc1e6bfc6e9f433333b87dfaaef96ec8aef511fff489f5c2",
+      "http": 200,
+      "seconds": 0.043977332999993735
+    },
+    {
+      "file": "06-search.json",
+      "sha256": "d519aaca37acc0ca762c23052615d25a05cd5a0f39adb1fd67d80c34b1b2fdb1",
+      "http": 200,
+      "seconds": 0.09121366600000158
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 189,
-  "bytes": 915135,
+  "documents": 190,
+  "bytes": 921213,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -566,8 +566,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "27b92840f19e9b6f3e0c7f72bb9c889d5e7e6b6b757a5344e93644024e256294",
-      "bytes": 38486,
+      "sha256": "ed245e3a14b21d2b0a6f8bbc599b42e513fcfd139036d38f00d94aa2833af12a",
+      "bytes": 39368,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -816,6 +816,10 @@
         },
         {
           "target": "../experiments/ankla-transitions-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/memos-transitions-v1/README.md",
           "exists": true
         }
       ],
@@ -1628,6 +1632,14 @@
       "path": "experiments/memos-comparison-v1/README.md",
       "sha256": "0ee77df7e248b0c3d47ce9d32c00d6983cd7ec06b6a77792af0347f27edd915f",
       "bytes": 4545,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/memos-transitions-v1/README.md",
+      "sha256": "5eca0b30115016bde9cf8bc033b7f5b1cddf11027cdf91c34c873fdb13574c83",
+      "bytes": 5196,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
