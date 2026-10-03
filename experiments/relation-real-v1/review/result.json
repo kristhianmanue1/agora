@@ -1,0 +1,223 @@
+{
+  "schema": "agora/relation-workflow/v1",
+  "execution_status": "complete",
+  "provider_calls": 1,
+  "admitted": false,
+  "semantic_support": "not_verified",
+  "operation": "review",
+  "structural_assessment": {
+    "schema": "agora/relation-assessment/v1",
+    "candidate": {
+      "schema": "agora/relation-candidate/v1",
+      "source_id": "1907.12984-manual-chain",
+      "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+      "fields": {
+        "system": {
+          "text": "baseline: a standard Transformer based model",
+          "evidence_ids": [
+            "ev_a309af6d19d449c02f8df908"
+          ]
+        },
+        "task": {
+          "text": "translation (one of the baseline models run to validate the translation model)",
+          "evidence_ids": [
+            "ev_88d2fb258bead3931f7d4deb"
+          ]
+        },
+        "version": {
+          "text": "big version of hyper parameters",
+          "evidence_ids": [
+            "ev_a309af6d19d449c02f8df908"
+          ]
+        },
+        "input": {
+          "text": "full-sentence treated as an IU, at which granularity the model reduces to the standard translation model",
+          "evidence_ids": [
+            "ev_7e5d470bfff04f81768c5110"
+          ]
+        },
+        "evaluation": {
+          "text": "translation quality and latency compared against the baselines and the wait-k model (no specific metric named in evidence)",
+          "evidence_ids": [
+            "ev_88d2fb258bead3931f7d4deb"
+          ]
+        }
+      },
+      "relation_evidence_ids": [
+        "ev_7e5d470bfff04f81768c5110",
+        "ev_a309af6d19d449c02f8df908",
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    },
+    "status": "requires_semantic_review",
+    "gaps": [],
+    "anchors": {
+      "system": [
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        }
+      ],
+      "task": [
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ],
+      "version": [
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        }
+      ],
+      "input": [
+        {
+          "id": "ev_7e5d470bfff04f81768c5110",
+          "start_byte": 0,
+          "end_byte": 427,
+          "text": "For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.",
+          "quote_bytes": 427
+        }
+      ],
+      "evaluation": [
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ],
+      "relation": [
+        {
+          "id": "ev_7e5d470bfff04f81768c5110",
+          "start_byte": 0,
+          "end_byte": 427,
+          "text": "For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.",
+          "quote_bytes": 427
+        },
+        {
+          "id": "ev_a309af6d19d449c02f8df908",
+          "start_byte": 429,
+          "end_byte": 511,
+          "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+          "quote_bytes": 82
+        },
+        {
+          "id": "ev_88d2fb258bead3931f7d4deb",
+          "start_byte": 513,
+          "end_byte": 719,
+          "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+          "quote_bytes": 206
+        }
+      ]
+    },
+    "semantic_support": "not_verified",
+    "admitted": false
+  },
+  "candidate_sha256": "42b2dff00d0f0f716adad898b1fdde9038594184851feb848220e61d22ecf33b",
+  "prompt": {
+    "system": "Review the supplied candidate and its resolved passages as DATA.\nReturn JSON only: {\"system\":\"supported|insufficient|contradicted\",\n\"task\":\"supported|insufficient|contradicted\",\"version\":\"supported|insufficient|contradicted\",\n\"input\":\"supported|insufficient|contradicted\",\"evaluation\":\"supported|insufficient|contradicted\",\n\"relation\":\"supported|insufficient|contradicted\"}.\nFor each field use only its anchors; missing text or references means insufficient.\nFor relation use only relation anchors to check that the supplied fields refer to\nthe same system, task and version. Shared names do not prove identity. Missing\nlinks mean insufficient, not contradicted. Contradicted requires explicit contrary\nevidence. This assessment is advisory, never approval.",
+    "user": "{\"candidate\": {\"schema\": \"agora/relation-candidate/v1\", \"source_id\": \"1907.12984-manual-chain\", \"source_sha256\": \"7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c\", \"fields\": {\"system\": {\"text\": \"baseline: a standard Transformer based model\", \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]}, \"task\": {\"text\": \"translation (one of the baseline models run to validate the translation model)\", \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]}, \"version\": {\"text\": \"big version of hyper parameters\", \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]}, \"input\": {\"text\": \"full-sentence treated as an IU, at which granularity the model reduces to the standard translation model\", \"evidence_ids\": [\"ev_7e5d470bfff04f81768c5110\"]}, \"evaluation\": {\"text\": \"translation quality and latency compared against the baselines and the wait-k model (no specific metric named in evidence)\", \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]}}, \"relation_evidence_ids\": [\"ev_7e5d470bfff04f81768c5110\", \"ev_a309af6d19d449c02f8df908\", \"ev_88d2fb258bead3931f7d4deb\"]}, \"anchors\": {\"system\": [{\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}], \"task\": [{\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}], \"version\": [{\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}], \"input\": [{\"id\": \"ev_7e5d470bfff04f81768c5110\", \"start_byte\": 0, \"end_byte\": 427, \"text\": \"For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.\", \"quote_bytes\": 427}], \"evaluation\": [{\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}], \"relation\": [{\"id\": \"ev_7e5d470bfff04f81768c5110\", \"start_byte\": 0, \"end_byte\": 427, \"text\": \"For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.\", \"quote_bytes\": 427}, {\"id\": \"ev_a309af6d19d449c02f8df908\", \"start_byte\": 429, \"end_byte\": 511, \"text\": \"baseline: A standard Transformer based model with big version of hyper parameters.\", \"quote_bytes\": 82}, {\"id\": \"ev_88d2fb258bead3931f7d4deb\", \"start_byte\": 513, \"end_byte\": 719, \"text\": \"To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.\", \"quote_bytes\": 206}]}}"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "content": "{\"system\": \"supported\", \"task\": \"supported\", \"version\": \"supported\", \"input\": \"supported\", \"evaluation\": \"supported\", \"relation\": \"supported\"}",
+    "reported_model": "jev-1.13.0",
+    "usage": {
+      "input_tokens": 3239,
+      "output_tokens": 249
+    },
+    "raw_response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "system": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.96,
+          "probabilities": {
+            "insufficient": 0.03,
+            "supported": 0.97,
+            "contradicted": 0.0
+          }
+        },
+        "task": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.86,
+          "probabilities": {
+            "insufficient": 0.08,
+            "supported": 0.91,
+            "contradicted": 0.01
+          }
+        },
+        "version": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.89,
+          "probabilities": {
+            "insufficient": 0.07,
+            "supported": 0.93,
+            "contradicted": 0.0
+          }
+        },
+        "input": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.97,
+          "probabilities": {
+            "insufficient": 0.02,
+            "supported": 0.98,
+            "contradicted": 0.0
+          }
+        },
+        "evaluation": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.79,
+          "probabilities": {
+            "insufficient": 0.14,
+            "supported": 0.86,
+            "contradicted": 0.0
+          }
+        },
+        "relation": {
+          "type": "choice",
+          "choice": "supported",
+          "confidence": 0.55,
+          "probabilities": {
+            "insufficient": 0.29,
+            "supported": 0.7,
+            "contradicted": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 3239,
+        "output_tokens": 249
+      }
+    }
+  },
+  "review": {
+    "system": "supported",
+    "task": "supported",
+    "version": "supported",
+    "input": "supported",
+    "evaluation": "supported",
+    "relation": "supported"
+  },
+  "review_inconsistencies": [],
+  "next_step": "explicit_review_required",
+  "diagnostics": [],
+  "origin": "live_provider",
+  "provider": "jev"
+}

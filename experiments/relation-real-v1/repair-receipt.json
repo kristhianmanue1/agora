@@ -1,0 +1,8 @@
+{
+  "operation": "remove_single_trailing_backtick",
+  "original_content_sha256": "97d5efacfc28b9bc763726933fbbe64d18a33084d944ce0caf228f121e657c1b",
+  "derived_content_sha256": "2b703f2ad190bb4a15fc22f400270fd679f086e6e499432e8e41d14749961444",
+  "semantic_edits": false,
+  "new_provider_calls": 0,
+  "note": "Explicit local syntax repair; original rejection retained; replay is not a fresh generation."
+}

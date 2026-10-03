@@ -1,0 +1,18 @@
+{
+  "content": "\n{\n  \"schema\": \"agora/relation-candidate/v1\",\n  \"source_id\": \"1907.12984-manual-chain\",\n  \"source_sha256\": \"7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c\",\n  \"fields\": {\n    \"system\": {\n      \"text\": \"baseline: a standard Transformer based model\",\n      \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]\n    },\n    \"task\": {\n      \"text\": \"translation (one of the baseline models run to validate the translation model)\",\n      \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]\n    },\n    \"version\": {\n      \"text\": \"big version of hyper parameters\",\n      \"evidence_ids\": [\"ev_a309af6d19d449c02f8df908\"]\n    },\n    \"input\": {\n      \"text\": \"full-sentence treated as an IU, at which granularity the model reduces to the standard translation model\",\n      \"evidence_ids\": [\"ev_7e5d470bfff04f81768c5110\"]\n    },\n    \"evaluation\": {\n      \"text\": \"translation quality and latency compared against the baselines and the wait-k model (no specific metric named in evidence)\",\n      \"evidence_ids\": [\"ev_88d2fb258bead3931f7d4deb\"]\n    }\n  },\n  \"relation_evidence_ids\": [\"ev_7e5d470bfff04f81768c5110\", \"ev_a309af6d19d449c02f8df908\", \"ev_88d2fb258bead3931f7d4deb\"]\n}\n",
+  "finish_reason": "stop",
+  "requested_model": "glm-5.3-flash",
+  "reported_model": "glm-5.3-flash",
+  "usage": {
+    "completion_tokens": 2726,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2302
+    },
+    "prompt_tokens": 755,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3481
+  },
+  "response_id": "20261004073807b0fed27401fd4f90"
+}

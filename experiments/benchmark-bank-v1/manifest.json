@@ -660,6 +660,50 @@
     {
       "path": "experiments/relation-flow-smoke-v1/source.txt",
       "sha256": "e13ccdecd3b5172f829fb09c3855a6949ce0ff4241eadf5ae91e32726466e7fe"
+    },
+    {
+      "path": "experiments/relation-real-v1/README.md",
+      "sha256": "c8d4da9a02f04d2e75d76b6e50455893d618a077826ce902e5537b838d46b243"
+    },
+    {
+      "path": "experiments/relation-real-v1/freeze.json",
+      "sha256": "fa9bec532cc94b8080d10fc1dfa2043ad403aba1d69c088e1ee98736db6fc41d"
+    },
+    {
+      "path": "experiments/relation-real-v1/generation/result.json",
+      "sha256": "2234cdbf218c4afb239a490132ec6dfc49613a1039668b03b236c36f8cbf0c55"
+    },
+    {
+      "path": "experiments/relation-real-v1/prepare.py",
+      "sha256": "d767ca079538b1325b0e15392828bb61bdc692eb98d80fcbaf87e7bbed49cd64"
+    },
+    {
+      "path": "experiments/relation-real-v1/repair-receipt.json",
+      "sha256": "494356300b2bcebefd1940b3b1bfd6153fc9cafd4c03dd3731a1ad168ce3ca6a"
+    },
+    {
+      "path": "experiments/relation-real-v1/repaired-generation/candidate.json",
+      "sha256": "88594033b869fb0a3f61b6c498e4446b59328148a44bb59ebe5f7975d09e46af"
+    },
+    {
+      "path": "experiments/relation-real-v1/repaired-generation/result.json",
+      "sha256": "f86d123cfe4c4e4d0cb662640f455e8bab78a66d999452cb16d3f8e631ba4077"
+    },
+    {
+      "path": "experiments/relation-real-v1/repaired-response.json",
+      "sha256": "e2af9863ca57725b24ee312b45c992c1ec8a27192e7c44e9408a2891f4ab8bf6"
+    },
+    {
+      "path": "experiments/relation-real-v1/review/result.json",
+      "sha256": "c40a0a7a8514534999e121bed5843167b352dd3721bd50e7db0fa27ea9751894"
+    },
+    {
+      "path": "experiments/relation-real-v1/source.txt",
+      "sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c"
+    },
+    {
+      "path": "experiments/relation-real-v1/verify.py",
+      "sha256": "d675226c72aa38a8dd9339e39c77cbef19af7cc1b1a301f5c091d0c55ae240c0"
     }
   ],
   "expected_accounting": {

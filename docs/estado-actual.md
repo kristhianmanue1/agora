@@ -622,3 +622,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Generación y revisión de relaciones conectadas (2026-10-03)
 
 [Recorrido explícito](relaciones-candidatas.md): generar con GLM o respuesta conservada, validar IDs/fuente, revisar por GLM/Jev o replay. Respuestas y rechazos conservados; seis juicios consultivos, huecos e inconsistencias visibles, sin admisión automática. [Prueba sintética real](../experiments/relation-flow-smoke-v1/README.md): una generación GLM y una revisión Jev completas, 4.644 tokens observados; reproducción offline aprobada. Regresión: 576 pruebas. Recuperación y vinculación de evidencia dispersa en documentos largos siguen sin demostrar.
+
+## Recorrido con el documento real: reparación y límite de versión
+
+[Ensayo trazable](../experiments/relation-real-v1/README.md): tres pasajes manuales del artículo 1907.12984, ligados mediante mapa de offsets a una fuente derivada de 719 bytes. GLM produjo JSON con un carácter extra; se conservó el rechazo y se reparó explícitamente sólo ese carácter, sin nueva generación. Jev marcó seis juicios supported, sin admisión. Total observado: 6.969 tokens. Queda ambigüedad: el campo version recibió una configuración de hiperparámetros, no una versión de software establecida. Debe precisarse el contrato antes de ampliar la campaña. No se demostró recuperación automática.

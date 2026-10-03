@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-10-03T23:37:43.742962+00:00",
+  "source_id": "1907.12984-manual-chain",
+  "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+  "original_source_id": "1907.12984",
+  "original_source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+  "source_bytes": 719,
+  "selected_original_bytes": 715,
+  "mapping": [
+    {
+      "derived_range": [
+        0,
+        427
+      ],
+      "original_range": [
+        6902,
+        7329
+      ],
+      "text_sha256": "95d62fb9fbb08b3fb1b91915f6e4ed92009127f790c28c9606fdf80127f48746"
+    },
+    {
+      "derived_range": [
+        429,
+        511
+      ],
+      "original_range": [
+        21915,
+        21997
+      ],
+      "text_sha256": "3d20a10fab01a482f40c7e15852fb6a5c93336a6e7548dc60714522cd5f68e0f"
+    },
+    {
+      "derived_range": [
+        513,
+        719
+      ],
+      "original_range": [
+        22731,
+        22937
+      ],
+      "text_sha256": "69cca4802d1fa1bc8cbd31bec0a949fad2110f2dbe163a3195ca95af2bd90856"
+    }
+  ],
+  "selection": "manual development case; not automatic retrieval",
+  "question": "Describe only the standard Transformer baseline used for translation comparison. Identify system, task, version, input granularity and evaluation supported by these passages. Preserve uncertainty; do not turn a full sentence into a full document, invent a software version, metric name or numerical result.",
+  "max_generator_calls": 1,
+  "max_reviewer_calls": 1,
+  "retries": 0,
+  "producer_checks": [
+    "sentence scope without whole-document expansion",
+    "no invented version or numerical metric",
+    "comparison concerns translation, not boundary detection"
+  ],
+  "independent_adjudication": false
+}

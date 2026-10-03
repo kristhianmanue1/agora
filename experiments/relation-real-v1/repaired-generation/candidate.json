@@ -1,0 +1,42 @@
+{
+  "schema": "agora/relation-candidate/v1",
+  "source_id": "1907.12984-manual-chain",
+  "source_sha256": "7aa09987f04537cbb7aaa062acb262301bf661c3f35e865e3f7979323490c85c",
+  "fields": {
+    "system": {
+      "text": "baseline: a standard Transformer based model",
+      "evidence_ids": [
+        "ev_a309af6d19d449c02f8df908"
+      ]
+    },
+    "task": {
+      "text": "translation (one of the baseline models run to validate the translation model)",
+      "evidence_ids": [
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    },
+    "version": {
+      "text": "big version of hyper parameters",
+      "evidence_ids": [
+        "ev_a309af6d19d449c02f8df908"
+      ]
+    },
+    "input": {
+      "text": "full-sentence treated as an IU, at which granularity the model reduces to the standard translation model",
+      "evidence_ids": [
+        "ev_7e5d470bfff04f81768c5110"
+      ]
+    },
+    "evaluation": {
+      "text": "translation quality and latency compared against the baselines and the wait-k model (no specific metric named in evidence)",
+      "evidence_ids": [
+        "ev_88d2fb258bead3931f7d4deb"
+      ]
+    }
+  },
+  "relation_evidence_ids": [
+    "ev_7e5d470bfff04f81768c5110",
+    "ev_a309af6d19d449c02f8df908",
+    "ev_88d2fb258bead3931f7d4deb"
+  ]
+}
