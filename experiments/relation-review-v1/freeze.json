@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-03T22:37:48.274058+00:00",
+  "request_sha256": "5d7a1bde07f4f120ad18ae77d1a782777b616563d4a3dc7afc91939056186182",
+  "max_calls": 1,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "producer_expectations": {
+    "C01": "supported",
+    "C02": "insufficient",
+    "C03": "insufficient",
+    "C04": "contradicted",
+    "C05": "insufficient",
+    "C06": "supported",
+    "C07": "contradicted",
+    "C08": "insufficient",
+    "D01": "supported",
+    "D02": "insufficient"
+  },
+  "expectations_sent": false,
+  "independent_labels": false,
+  "scope": "8 synthetic controls and 2 claims on a manually selected development chain; candidate relation verification, not extraction or retrieval",
+  "source_chain_sha256": "5e24d32cce598d0df6fd322d033ff639e6258b9a5f809df73032ba919e2d45b7"
+}

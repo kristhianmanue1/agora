@@ -610,3 +610,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Ampliación conservadora por etiquetas (2026-10-03)
 
 [Implementación experimental y reproducción](../experiments/linked-expansion-v1/README.md): cuatro transiciones conservan todos los pasajes previos, con rechazo de fuente/pregunta distinta, rangos inválidos o presupuesto inferior al contenido conservado. Los enlaces por etiquetas literales no mejoran la cobertura anotada; en el caso streaming recuperan sólo 1/3 de la cadena manual. No se promueve la heurística ni se cambia la CLI. Sin APIs ni nueva validación reservada: todos los casos son de desarrollo. Antes de otra campaña se necesita validar identidad del sistema y relaciones con entrada/evaluación; etiquetas repetidas no lo demuestran.
+
+## Revisión de relaciones candidatas (2026-10-03)
+
+[Piloto Jev](../experiments/relation-review-v1/README.md): ocho controles sintéticos y dos afirmaciones sobre la cadena manual del caso streaming. Coincidencia exacta 7/10 con etiquetas del productor; respaldo frente a otros estados 10/10. Tres rechazos confunden evidencia insuficiente con contradicción (tarea, versión y alcance documento/oración). Una llamada real: 3.375 tokens. No demuestra extracción de relaciones ni recuperación automática. Sin promoción o integración decisoria: se requiere conservar IDs de evidencia y distinguir huecos de evidencia antes de afirmar contradicción.

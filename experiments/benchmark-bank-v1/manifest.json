@@ -588,6 +588,42 @@
     {
       "path": "experiments/linked-expansion-v1/verify.py",
       "sha256": "756d65abf0cdbe5dfa9eaeb4ea54e81a01deebf9d903ed47627e33a52637ffec"
+    },
+    {
+      "path": "experiments/relation-review-v1/README.md",
+      "sha256": "002109eb22b4d6a0b0fd9f70a7d22edb1ebf8b58aea6561ea0340178b28174f3"
+    },
+    {
+      "path": "experiments/relation-review-v1/assess.py",
+      "sha256": "4995ba00ac41d301fca8ee6b12a1dd7076c15615a35013aca18b31c0a1d5b18d"
+    },
+    {
+      "path": "experiments/relation-review-v1/assessment.json",
+      "sha256": "162991b734c194a7d358a63cce2be14a0d5b0b1fe50873d43705a8646f34af04"
+    },
+    {
+      "path": "experiments/relation-review-v1/check_assess.py",
+      "sha256": "3e6a48ae8bdc5495d970cf67459647c2ee09ca8e37d6ba9765a5202c6f491927"
+    },
+    {
+      "path": "experiments/relation-review-v1/freeze.json",
+      "sha256": "26697c4aa6f7d524b24922d4d7ec63d0c54513388146ffd8bbc880cda528d473"
+    },
+    {
+      "path": "experiments/relation-review-v1/prepare.py",
+      "sha256": "63a4832fb0dc579a662763dd0da3ad6b0d8f4e4ebfd7ff6b2dc348a4f3dc64a1"
+    },
+    {
+      "path": "experiments/relation-review-v1/request.json",
+      "sha256": "5d7a1bde07f4f120ad18ae77d1a782777b616563d4a3dc7afc91939056186182"
+    },
+    {
+      "path": "experiments/relation-review-v1/review.json",
+      "sha256": "1c689328f8af45c9c421042a9cec2b6745862414739192749b6f865622644f65"
+    },
+    {
+      "path": "experiments/relation-review-v1/review.py",
+      "sha256": "9978c4883d8d46577687103c108e67118b4a833969ffc4f138d4efb89cbe7c1f"
     }
   ],
   "expected_accounting": {

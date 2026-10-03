@@ -1,0 +1,27 @@
+{
+  "cases": 10,
+  "exact_matches": 7,
+  "supported_vs_other_matches": 10,
+  "disagreements": [
+    {
+      "id": "C02",
+      "producer": "insufficient",
+      "reviewer": "contradicted"
+    },
+    {
+      "id": "C08",
+      "producer": "insufficient",
+      "reviewer": "contradicted"
+    },
+    {
+      "id": "D02",
+      "producer": "insufficient",
+      "reviewer": "contradicted"
+    }
+  ],
+  "observed_tokens": 3375,
+  "http_attempts": 1,
+  "label_authority": "producer_only",
+  "promotion": "none",
+  "semantic_admission": false
+}
