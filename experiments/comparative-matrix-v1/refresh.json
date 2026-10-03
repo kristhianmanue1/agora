@@ -1,0 +1,205 @@
+{
+  "observed_at": "2026-10-03T13:41:52.378665+00:00",
+  "new_llm_calls": 0,
+  "ankla": {
+    "supersede_current_excludes_old": true,
+    "historical_revision_verified": true,
+    "checkpoint_roundtrip": true,
+    "resume_contains_next_step": true,
+    "stale_checkpoint_rejected_without_revision_change": true,
+    "stale_write_rejected_without_revision_change": true,
+    "denied_marker_absent": true,
+    "positive_marker_executed": true,
+    "altered_argument_marker_absent": true,
+    "scope": "AN-KLA CLI and attest whitelist laboratory only; not a general sandbox, hostile-host defense or deployed integration"
+  },
+  "memos": {
+    "health": {
+      "status": "healthy",
+      "service": "memos",
+      "version": "1.0.1"
+    },
+    "previous_regression_cube": "agora-long-1801-05617-a219385e",
+    "stored_memory_count": 5,
+    "http_requests": 2,
+    "llm_calls": 0,
+    "repair_hashes_unchanged": true
+  },
+  "skopos_agora": {
+    "conflict": {
+      "skopos": {
+        "exact_content": true,
+        "fragment_hash_matches": true,
+        "seconds": 0.012195583083666861,
+        "turn_id": "codex-cli:conflict:conflict",
+        "offset_start": 0,
+        "offset_end": 526
+      },
+      "agora": {
+        "envelope": {
+          "schema": "agora/source-envelope/v0.1",
+          "source": {
+            "source_id": "conflict",
+            "revision": "286a61a9cd9a6838235ea0e73324e8c09078e29e8f0f0272544425276fe7a944",
+            "revision_kind": "sha256",
+            "source_bytes": 279,
+            "media_type": "text/plain; charset=utf-8",
+            "provenance": {
+              "adapter": "file",
+              "identity": "caller_declared"
+            }
+          },
+          "spans": [
+            {
+              "start_byte": 0,
+              "end_byte": 82,
+              "sha256": "e8d8de7abd1a12ec0c879c35a7dedac9667ddd86d60727390f2072c555abd6e7",
+              "text": "Synthetic project Juniper. Alice states that the delivery is approved for Tuesday."
+            },
+            {
+              "start_byte": 84,
+              "end_byte": 232,
+              "sha256": "cf1bd4191311251c0de6cc28b114ba9456b50c6413fdda2e1b71baaccab43554",
+              "text": "Bob states that the same delivery is approved for Wednesday. Neither statement supersedes the other. The coordinator has not resolved this conflict."
+            },
+            {
+              "start_byte": 234,
+              "end_byte": 279,
+              "sha256": "22a9cb5a5502261e9e54a3f87b897a8bdb045b3152f9899d255f4d53c3e57ce6",
+              "text": "No budget amount or budget owner is provided."
+            }
+          ],
+          "delivered_bytes": 275,
+          "integrity": "matches_requested_revision",
+          "coverage": "partial",
+          "truncated": false,
+          "redacted": false,
+          "evidence_sufficiency": "unknown"
+        },
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 3,
+          "seed_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "selected_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 279,
+          "selection_complete": true,
+          "search_exhaustive_for_meaning": false
+        },
+        "exact_spans": true,
+        "changed_source_rejected": true,
+        "seconds": 0.00030995893757790327
+      },
+      "source_sha256": "286a61a9cd9a6838235ea0e73324e8c09078e29e8f0f0272544425276fe7a944"
+    },
+    "correction": {
+      "skopos": {
+        "exact_content": true,
+        "fragment_hash_matches": true,
+        "seconds": 5.866703577339649e-05,
+        "turn_id": "codex-cli:correction:correction",
+        "offset_start": 0,
+        "offset_end": 532
+      },
+      "agora": {
+        "envelope": {
+          "schema": "agora/source-envelope/v0.1",
+          "source": {
+            "source_id": "correction",
+            "revision": "b1f0f025a595ca454fdda18ce4aaf57a1695472ab8802a8e5d2ace6af3f48a31",
+            "revision_kind": "sha256",
+            "source_bytes": 283,
+            "media_type": "text/plain; charset=utf-8",
+            "provenance": {
+              "adapter": "file",
+              "identity": "caller_declared"
+            }
+          },
+          "spans": [
+            {
+              "start_byte": 0,
+              "end_byte": 75,
+              "sha256": "9ba1075dab8b7a6a9911061c80b6477000135f45f6bab6b20fcfbdb8c1036185",
+              "text": "Synthetic project Maple. Earlier record: delivery was approved for Tuesday."
+            },
+            {
+              "start_byte": 77,
+              "end_byte": 220,
+              "sha256": "8fc376687facfb688db1379a4bf4b19c9aa62163ae78bafa46848a5eee1b17b4",
+              "text": "Explicit correction from the coordinator: Wednesday replaces Tuesday as the approved delivery day. No calendar date, month or year is provided."
+            },
+            {
+              "start_byte": 222,
+              "end_byte": 283,
+              "sha256": "fc8b38d823513952b1dc8f56eba5cb901006330eca06b71f5e8b36c7130ae249",
+              "text": "Priya is the delivery owner. Budget approval remains pending."
+            }
+          ],
+          "delivered_bytes": 279,
+          "integrity": "matches_requested_revision",
+          "coverage": "partial",
+          "truncated": false,
+          "redacted": false,
+          "evidence_sufficiency": "unknown"
+        },
+        "retrieval": {
+          "method": "lexical-paragraph-overlap/v0.1",
+          "top_k": 3,
+          "matching_paragraphs": 3,
+          "seed_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "selected_paragraphs": [
+            0,
+            1,
+            2
+          ],
+          "oversized_candidates": [],
+          "local_scan_bytes": 283,
+          "selection_complete": true,
+          "search_exhaustive_for_meaning": false
+        },
+        "exact_spans": true,
+        "changed_source_rejected": true,
+        "seconds": 0.00021233304869383574
+      },
+      "source_sha256": "b1f0f025a595ca454fdda18ce4aaf57a1695472ab8802a8e5d2ace6af3f48a31"
+    }
+  },
+  "agora_scope_tests": {
+    "passed": 4,
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p test_*scope_guard.py -q"
+  },
+  "skopos_diarized_tests": {
+    "passed": 4,
+    "scope": "local untracked experimental parser; synthetic fixtures; no audio or MongoDB",
+    "source_sha256": "0984246091acd68f3a2411c287a7eb05f83bc344c69dc39daf9d6b2f7ee6cc48"
+  },
+  "revisions": {
+    "agora": {
+      "head": "6011a2878075497d0afe3c394dc47ecbdac4865d",
+      "status": ""
+    },
+    "skopos": {
+      "head": "5773dbd8b6440f8ddb44d334f56f7fb98fa91ad0",
+      "status": "M project-manifest.yaml\n?? experiments/diarized-source-v1/\n?? tests/test_diarized_source.py"
+    },
+    "memos": {
+      "head": "a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "status": "M docker/docker-compose.yml\n M src/memos/graph_dbs/neo4j_community.py\n M src/memos/mem_feedback/feedback.py\n M src/memos/mem_reader/utils.py\n M src/memos/settings.py\n M uv.lock\n?? scripts/run_memos_zai.sh\n?? tests/graph_dbs/test_neo4j_keyword_feedback.py\n?? tests/mem_feedback/test_targeted_feedback_route.py\n?? tests/mem_reader/test_json_trailing_comma.py"
+    }
+  },
+  "ankla_version": "0.1.0b24",
+  "independent_review": false
+}

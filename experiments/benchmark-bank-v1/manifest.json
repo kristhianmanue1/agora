@@ -128,6 +128,14 @@
     {
       "path": "experiments/memos-activation-v1/parser-validation.json",
       "sha256": "f809e37ccb8c35df7be4ccc790fe3c7cae93321d07ade000c347a51b810f6220"
+    },
+    {
+      "path": "experiments/comparative-matrix-v1/refresh.json",
+      "sha256": "cdd39d2e7a56065aa9d7ab460014d9c6a6d6b99fa5f01eb19b23179ae3089cfd"
+    },
+    {
+      "path": "experiments/comparative-matrix-v1/matrix.json",
+      "sha256": "69171e621e7f0753310981e8b3675ae54ad518e4c69eb0f6180a16056dd0c932"
     }
   ],
   "expected_accounting": {
