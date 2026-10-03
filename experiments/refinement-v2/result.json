@@ -1,0 +1,93 @@
+{
+  "schema": "aria/refinement-result/v2",
+  "observed_at": "2026-10-03T15:58:15.241592+00:00",
+  "rows": [
+    {
+      "run": "default",
+      "case": "1901.05415-q1",
+      "status": "rejected",
+      "diagnostic": "generation_incomplete",
+      "tokens": 16280,
+      "usage": {
+        "completion_tokens": 4096,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4096
+        },
+        "prompt_tokens": 12184,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16280
+      },
+      "seconds": 70.4800673329737,
+      "response_id": "20261003235146fd503cc591a04dbc"
+    },
+    {
+      "run": "default",
+      "case": "1901.05415-q2",
+      "status": "complete",
+      "diagnostic": null,
+      "tokens": 14363,
+      "usage": {
+        "completion_tokens": 2177,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1708
+        },
+        "prompt_tokens": 12186,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 14363
+      },
+      "seconds": 34.40578145906329,
+      "response_id": "20261003235255a8c996a39a0e4dff"
+    },
+    {
+      "run": "low",
+      "case": "1901.05415-q1",
+      "status": "rejected",
+      "diagnostic": "part_quote_bytes_exceeded",
+      "tokens": 12891,
+      "usage": {
+        "completion_tokens": 707,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12184,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 12891
+      },
+      "seconds": 14.912398249958642,
+      "response_id": "20261003235517d3a0e7d3848b4e42"
+    }
+  ],
+  "total_tokens": 43534,
+  "http_attempts": 3,
+  "automatic_retries": 0,
+  "known_questions": 2,
+  "complete_candidates": 1,
+  "rejections": 2,
+  "tests_passed": 543,
+  "semantic_review": "producer only; no independent adjudication",
+  "assessment": [
+    {
+      "case": "1901.05415-q2",
+      "run": "default",
+      "finding": "Source-bound references resolve and response recovers 9.4 accuracy points/31%, +1.6 with 131k, F1 gains .28/.42 with 1k; candidate not admitted."
+    },
+    {
+      "case": "1901.05415-q1",
+      "run": "default",
+      "finding": "4096 completion tokens all reported as reasoning; generation incomplete."
+    },
+    {
+      "case": "1901.05415-q1",
+      "run": "low",
+      "finding": "Response completes but cites 22426 bytes >12000; also invents positive label threshold 3+ despite source INLINEFORM0 and contradictory negative mapping in extra appendix discussion. No semantic acceptance; structural gate did not detect semantic defect."
+    }
+  ],
+  "scope": "Known-case regression, no new MemOS comparison. IDs and length bounds opt-in; reasoning low is not promoted.",
+  "next_step": "Use a focused missing-formula regression and semantic check before reopening held-out tests; do not relax citation budgets or accept reconstructed values."
+}

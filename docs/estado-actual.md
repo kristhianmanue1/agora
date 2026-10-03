@@ -503,3 +503,12 @@ conservada; no certifica semántica ni costes no observados.
 Herramientas instaladas en entorno temporal autorizado: make format pasó en copia
 desechable de MemOS, pytest dirigido 55 passed / 3 integración Neo4j skipped. Se
 aplicó sólo formato a archivos propios. Parches locales sin publicar ni promover.
+
+
+### Identificadores en el consumidor multipasaje (v0.4 optativa)
+
+`passage_cli --citation-mode ids` conecta las unidades por identificador existentes,
+limita el texto de salida y conserva los faltantes por aspecto. Incluye control de
+alcance; el modo literal y sus contratos anteriores siguen disponibles. No añade
+reparación automática ni admisión de resultados. Pruebas y repetición de los dos
+rechazos conocidos: [refinement-v2](../experiments/refinement-v2/README.md).

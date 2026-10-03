@@ -248,6 +248,50 @@
     {
       "path": "experiments/refinement-v1/run_jev.py",
       "sha256": "d0f50b95048065fa6e8752ea367d4c0cd531ef3a7af6c0c4fc8830604b1b5d2e"
+    },
+    {
+      "path": "experiments/refinement-v2/README.md",
+      "sha256": "daece9c14dc5d3471c4bdd828461bf2f3c694ea9c96182341319abbe590a6d1c"
+    },
+    {
+      "path": "experiments/refinement-v2/default/1901.05415-q1-receipt.json",
+      "sha256": "68db68c532b2509b45c3501fde6d19339cf5f76c6f765112390f5bbd47b7c370"
+    },
+    {
+      "path": "experiments/refinement-v2/default/1901.05415-q2-receipt.json",
+      "sha256": "8d652d7c82d9eec2e129a26be7f3a8b2748520eb8d5cd17bca4ef9547761cdc5"
+    },
+    {
+      "path": "experiments/refinement-v2/default/cases.json",
+      "sha256": "ea4b0bd0e80b31ebf42aabda2382f7cae65b844b70abefdd7d3378aa0f25b487"
+    },
+    {
+      "path": "experiments/refinement-v2/default/freeze.json",
+      "sha256": "de82802eb2ed7615644198c618c8a7591b59ff5a332fe6ed0c027952d1afb93c"
+    },
+    {
+      "path": "experiments/refinement-v2/default/run_agora.py",
+      "sha256": "5686604f11cb9e507ab5c46141ae564e448f17db015e585e9721a1ab97451499"
+    },
+    {
+      "path": "experiments/refinement-v2/low/1901.05415-q1-receipt.json",
+      "sha256": "44397657ce42e556079232f21e97b0b6692882deadb32199bae3a20697b917b3"
+    },
+    {
+      "path": "experiments/refinement-v2/low/cases.json",
+      "sha256": "d1e78c940d696d6eb45793fb3170cb9b969d398150cfcb5dd4cc7f95d7e2c333"
+    },
+    {
+      "path": "experiments/refinement-v2/low/freeze.json",
+      "sha256": "fd4a145eceed08d9296f9468dcc2f760c86af4e9f22bd81c944acd2d3f917d84"
+    },
+    {
+      "path": "experiments/refinement-v2/low/run_agora.py",
+      "sha256": "ca7fa0196b642e6759aa90fc27a564b52ff21f06354fbb890964fa32a786471b"
+    },
+    {
+      "path": "experiments/refinement-v2/result.json",
+      "sha256": "cd4d929593b900b8d3586a50c363a58e4edb7f0ca967bd140b3d65cf566a1824"
     }
   ],
   "expected_accounting": {

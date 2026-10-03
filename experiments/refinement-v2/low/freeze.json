@@ -1,0 +1,21 @@
+{
+  "schema": "aria/refinement-campaign/v2",
+  "frozen_at": "2026-10-03T15:55:16.578329+00:00",
+  "max_calls": 1,
+  "retries": 0,
+  "model": "glm-5.3-flash",
+  "max_output_tokens": 4096,
+  "timeout_seconds": 180,
+  "citation_mode": "ids",
+  "max_response_text_characters": 2000,
+  "prior": "refinement-v2/default",
+  "purpose": "known failures regression; prompt and output contract changed, not a reserved comparison",
+  "implementation_hashes": {
+    "passages.py": "4544cd67d87e82c1cf3a2e3ad4bd7a31205f1b4c964d98fcf8efa89a97e46afd",
+    "passage_cli.py": "82c3522dc070a51f17009ebf2192e4e050c921d3f64d43b0b210ee769889d2f2",
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0"
+  },
+  "cases_sha256": "d1e78c940d696d6eb45793fb3170cb9b969d398150cfcb5dd4cc7f95d7e2c333",
+  "reasoning_effort": "low"
+}

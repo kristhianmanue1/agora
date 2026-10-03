@@ -115,7 +115,7 @@ def prepare(adapter, revision, question, mode, *, ranges=None,
     return envelope, retrieval, user
 
 
-def query_passages(adapter, revision, question, provider, mode='retrieve', *, scope_guard=False, **options):
+def query_passages(adapter, revision, question, provider, mode='retrieve', *, scope_guard=False, citation_mode="literal", **options):
     """One provider call at most; scope guard opts into passage-query v0.3."""
     result = {'schema': 'agora/passage-query/v0.1', 'question': question, 'mode': mode,
               'source_id': adapter.source_id, 'source_sha256': revision,
@@ -126,7 +126,15 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', *, sc
     if scope_guard:
         result.update(schema='agora/passage-query/v0.3', answer_scope='selected_passages',
                       requires_expansion=True, document_absence_established=False)
+    if citation_mode == 'ids':
+        result.update(schema='agora/passage-query/v0.4', citation_mode='ids',
+                      answer_scope='selected_passages', requires_expansion=True,
+                      document_absence_established=False,
+                      response_limits={'max_text_characters': 2000, 'max_claims': 6,
+                                       'max_missing_items': 4})
     try:
+        if citation_mode not in ('literal', 'ids'):
+            raise SourceError('invalid_citation_mode')
         envelope, retrieval, user = prepare(adapter, revision, question, mode, **options)
         result['retrieval'] = retrieval
         if envelope is None:
@@ -138,7 +146,7 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', *, sc
             return result
         result['envelope'] = envelope
         system = SYSTEM
-        if scope_guard:
+        if scope_guard or citation_mode == 'ids':
             partial = envelope['coverage'] != 'full'
             scope = 'selected_passages' if partial else 'full_source'
             result.update(answer_scope=scope, requires_expansion=partial)
@@ -151,11 +159,50 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', *, sc
                        '\nThe full source is supplied. Do not infer absence without checking it.')
             if len(system.encode()) + len(user.encode()) > options.get('prompt_budget', 65536):
                 raise SourceError('prompt_budget_exceeded')
+        if citation_mode == 'ids':
+            from .evidence import EvidencePolicy
+            from .evidence_ids import build_units, id_system, validate_ids
+            policy = EvidencePolicy()
+            units = build_units(envelope, adapter.source_id, revision)
+            result['evidence_units'] = units
+            system = id_system(policy) + (
+                '\nAnswer only the requested information. At most 6 claims and 4 missing items, '
+                'with at most 2000 characters total across claim texts and missing items. '
+                'Preserve qualifications; declare missing information instead of guessing '
+                'lost formulas. Select evidence IDs; never copy evidence text. '
+                'Reading scope is explicit: selected_passages cannot prove source absence.')
+            user = json.dumps({'question': question,
+                               'aspects': [{'id': 'P1', 'question': question}],
+                               'reading_scope': result['answer_scope'],
+                               'evidence_units': [{'id': u['id'], 'text': u['text'],
+                                                   'quote_bytes': u['quote_bytes']} for u in units]},
+                              ensure_ascii=False)
+        if len(system.encode()) + len(user.encode()) > options.get('prompt_budget', 65536):
+            raise SourceError('prompt_budget_exceeded')
         result['prompt'] = {'system': system, 'user': user}
         result['prompt_bytes'] = len(system.encode()) + len(user.encode())
         result['provider_calls'] = 1
         response = provider(system, user)
         result['response'] = response
+        if citation_mode == 'ids':
+            parts, errors, anchors = validate_ids(response, units, ['P1'], policy)
+            if not errors:
+                part = parts[0]
+                size = sum(len(c['text']) for c in part['claims']) + sum(map(len, part['missing']))
+                if size > 2000 or len(part['claims']) > 6 or len(part['missing']) > 4:
+                    errors = [{'code': 'response_text_budget_exceeded'}]
+            if errors:
+                result.update(execution_status='rejected', diagnostics=errors,
+                              diagnostic=errors[0]['code'])
+                return result
+            status = ('not_found_in_supplied_material' if part['status'] == 'not_in_passages'
+                      else 'candidate_requires_expansion' if result['requires_expansion']
+                      else 'candidate_partial' if part['status'] == 'partial' else 'candidate')
+            result.update(execution_status='complete', answer_status=status,
+                          answer='\n'.join(c['text'] for c in part['claims']),
+                          parts=parts, citations=anchors, missing=part['missing'],
+                          evidence_sufficiency='unknown', normalization='resolved_evidence_ids')
+            return result
         joined = '\n'.join(span['text'] for span in envelope['spans'])
         parts, operation = validate_answer(response, joined, ['P1'])
         part = parts[0]

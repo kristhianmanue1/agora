@@ -141,3 +141,12 @@ coincidió con las etiquetas del productor en 22/24 decisiones de seis controles
 repetidos en dos órdenes; confundió respaldo con cobertura dos veces. No hubo
 nuevas llamadas MemOS ni promoción automática del revisor. Véanse límites y
 coste acumulado en ese expediente; v3 permanece intacto.
+
+
+## Implementación posterior: referencias por ID en multipasaje
+
+`../refinement-v2/` registra el cambio optativo de código y tres llamadas de
+regresión: una candidata recuperada y dos rechazos, por 43.534 tokens adicionales.
+543 tests locales pasan; el caso de etiquetado permanece abierto por truncamiento
+y, en un intento separado, exceso de citas y reconstrucción indebida de fórmula.
+No hay nueva medición MemOS ni promoción automática de GLM low o de Jev.

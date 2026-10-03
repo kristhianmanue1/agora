@@ -1,0 +1,367 @@
+{
+  "schema": "agora/passage-query/v0.4",
+  "question": "How were the satisfaction training labels collected from human evaluators, what rating scale was used, and how were ratings mapped or excluded? Separately distinguish this from the trained prediction mechanism. Do not reconstruct missing formula text.",
+  "mode": "source",
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "options": {
+    "content_budget": 100000,
+    "prompt_budget": 131072,
+    "top_k": 6
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "answer_scope": "full_source",
+  "requires_expansion": false,
+  "document_absence_established": false,
+  "citation_mode": "ids",
+  "response_limits": {
+    "max_text_characters": 2000,
+    "max_claims": 6,
+    "max_missing_items": 4
+  },
+  "prompt_bytes": 51353,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"Las etiquetas de satisfacción para entrenamiento se recogieron mediante crowdsourcing: los trabajadores chatearon con el agente de diálogo básico y asignaron una calificación del 1 al 5 sobre la calidad de cada respuesta del agente.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"El mapeo fue: contextos con calificación 1 se asignaron a la clase negativa (insatisfecho) y calificaciones de 3 en adelante (INLINEFORM0) a la clase positiva (satisfecho); los contextos con calificación 2 fueron descartados para aumentar la separación entre clases y lograr un conjunto de entrenamiento más limpio.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Las calificaciones numéricas solo se solicitaron al recopilar los datos de entrenamiento iniciales, no durante el despliegue, donde solo se usa diálogo natural.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"La escala se presentó a los usuarios como una calificación de cada respuesta del bot de 1 (muy malo) a 5 (muy bueno), dada al final de cada respuesta propia del trabajador; se recogieron inicialmente 2.5k ejemplos de satisfacción divididos en 1k entrenamiento, 500 validación y 1k prueba, y luego 40k adicionales.\",\"evidence_ids\":[\"ev_cedd6b35b67eaa8787dee912\",\"ev_6b01db7f34e3f8af666edc68\",\"ev_534ac3cdc373bf302fbad8ff\"]},{\"text\":\"El mecanismo de predicción entrenado es distinto: un clasificador de satisfacción (tarea auxiliar con un Transformer cuya cabeza de tarea convierte el contexto codificado en una predicción escalar de satisfacción mediante una capa lineal final, con parámetros separados de las tareas Diálogo y Retroalimentación) que se usa durante el despliegue para estimar la satisfacción del interlocutor a partir de la respuesta humana y decidir si extraer un ejemplo HB o pedir retroalimentación.\",\"evidence_ids\":[\"ev_ddc7d1ec014ccfd967d718e7\",\"ev_78024a3113ff52484732e83c\",\"ev_c864d1d576ae617ca781c270\",\"ev_3fced8699eb504c8a02978ae\"]},{\"text\":\"En un experimento aparte, la variante para identificar muy buenas respuestas usó un mapeo diferente: calificación 5 como clase positiva y calificaciones de 4 hacia abajo (INLINEFORM0) como negativa, descartando las de 4; ese resultado fue negativo y no se usó para mejorar el Diálogo.\",\"evidence_ids\":[\"ev_534ac3cdc373bf302fbad8ff\"]}],\"missing\":[]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "20261003235517d3a0e7d3848b4e42",
+    "usage": {
+      "completion_tokens": 707,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens": 12184,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 12891
+    }
+  },
+  "execution_status": "rejected",
+  "diagnostics": [
+    {
+      "code": "part_quote_bytes_exceeded",
+      "part_id": "P1",
+      "observed": 22426,
+      "limit": 12000
+    }
+  ],
+  "diagnostic": "part_quote_bytes_exceeded",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_calls": 1,
+    "temperature": 0,
+    "reasoning_effort": "low"
+  },
+  "implementation_hashes": {
+    "passages.py": "4544cd67d87e82c1cf3a2e3ad4bd7a31205f1b4c964d98fcf8efa89a97e46afd",
+    "passage_cli.py": "82c3522dc070a51f17009ebf2192e4e050c921d3f64d43b0b210ee769889d2f2",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c",
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0"
+  },
+  "implementation_unchanged": true,
+  "source_metadata": {
+    "source_id": "1901.05415",
+    "revision": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+    "revision_kind": "sha256",
+    "source_bytes": 45557,
+    "media_type": "text/plain; charset=utf-8",
+    "provenance": {
+      "adapter": "file",
+      "identity": "caller_declared"
+    }
+  },
+  "evidence_unit_metadata": [
+    {
+      "id": "ev_2e4e049e3aef64997ec0dca5",
+      "start_byte": 0,
+      "end_byte": 64,
+      "quote_bytes": 64
+    },
+    {
+      "id": "ev_a20ebbb4f216c6b772b6e88b",
+      "start_byte": 66,
+      "end_byte": 1008,
+      "quote_bytes": 942
+    },
+    {
+      "id": "ev_ff883e0344995cc641ba6e50",
+      "start_byte": 1010,
+      "end_byte": 2062,
+      "quote_bytes": 1052
+    },
+    {
+      "id": "ev_cde5de06525e4bad89a71377",
+      "start_byte": 2064,
+      "end_byte": 3234,
+      "quote_bytes": 1170
+    },
+    {
+      "id": "ev_ddc7d1ec014ccfd967d718e7",
+      "start_byte": 3236,
+      "end_byte": 4245,
+      "quote_bytes": 1009
+    },
+    {
+      "id": "ev_34a0db9fc63623e2d4412de9",
+      "start_byte": 4247,
+      "end_byte": 4798,
+      "quote_bytes": 551
+    },
+    {
+      "id": "ev_03671edbeac4d42ff1e1559d",
+      "start_byte": 4800,
+      "end_byte": 4863,
+      "quote_bytes": 63
+    },
+    {
+      "id": "ev_568b0eda8a1fd45306fffed8",
+      "start_byte": 4865,
+      "end_byte": 5045,
+      "quote_bytes": 180
+    },
+    {
+      "id": "ev_85f07ab44aa6b0ab8f9a4313",
+      "start_byte": 5047,
+      "end_byte": 5272,
+      "quote_bytes": 225
+    },
+    {
+      "id": "ev_40ff966bbde37b60c4f6321d",
+      "start_byte": 5274,
+      "end_byte": 6034,
+      "quote_bytes": 760
+    },
+    {
+      "id": "ev_1df3529407e7b254a4d7b821",
+      "start_byte": 6036,
+      "end_byte": 6398,
+      "quote_bytes": 362
+    },
+    {
+      "id": "ev_2c9acf7ed596e872aee6f521",
+      "start_byte": 6400,
+      "end_byte": 6880,
+      "quote_bytes": 480
+    },
+    {
+      "id": "ev_df947ba579c655f01d81204c",
+      "start_byte": 6882,
+      "end_byte": 7344,
+      "quote_bytes": 462
+    },
+    {
+      "id": "ev_53c60f78e02f2423227fb7a0",
+      "start_byte": 7346,
+      "end_byte": 7615,
+      "quote_bytes": 269
+    },
+    {
+      "id": "ev_6b4ab299761d3f0e61773980",
+      "start_byte": 7617,
+      "end_byte": 8122,
+      "quote_bytes": 505
+    },
+    {
+      "id": "ev_78024a3113ff52484732e83c",
+      "start_byte": 8124,
+      "end_byte": 9328,
+      "quote_bytes": 1204
+    },
+    {
+      "id": "ev_a7b4d74debbe6261a631a433",
+      "start_byte": 9330,
+      "end_byte": 9937,
+      "quote_bytes": 607
+    },
+    {
+      "id": "ev_3673a50e6b765d36510e0390",
+      "start_byte": 9939,
+      "end_byte": 10431,
+      "quote_bytes": 492
+    },
+    {
+      "id": "ev_d2bf7b7f8540999512c46a7e",
+      "start_byte": 10433,
+      "end_byte": 10849,
+      "quote_bytes": 416
+    },
+    {
+      "id": "ev_14245aea1b8caf5636ce0b59",
+      "start_byte": 10851,
+      "end_byte": 11958,
+      "quote_bytes": 1107
+    },
+    {
+      "id": "ev_a46f257c481e174746a0caaf",
+      "start_byte": 11960,
+      "end_byte": 12561,
+      "quote_bytes": 601
+    },
+    {
+      "id": "ev_8764a8b6e54f8aab81a6c502",
+      "start_byte": 12563,
+      "end_byte": 13161,
+      "quote_bytes": 598
+    },
+    {
+      "id": "ev_819fff9db849102d0036a4c2",
+      "start_byte": 13163,
+      "end_byte": 13748,
+      "quote_bytes": 585
+    },
+    {
+      "id": "ev_d78af44567ca575a75228e06",
+      "start_byte": 13750,
+      "end_byte": 14095,
+      "quote_bytes": 345
+    },
+    {
+      "id": "ev_6524577a48b90fc6ab4053fb",
+      "start_byte": 14097,
+      "end_byte": 14752,
+      "quote_bytes": 655
+    },
+    {
+      "id": "ev_3fced8699eb504c8a02978ae",
+      "start_byte": 14754,
+      "end_byte": 15968,
+      "quote_bytes": 1214
+    },
+    {
+      "id": "ev_c864d1d576ae617ca781c270",
+      "start_byte": 15970,
+      "end_byte": 16837,
+      "quote_bytes": 867
+    },
+    {
+      "id": "ev_4655bde5944d3e1ae4c461f0",
+      "start_byte": 16839,
+      "end_byte": 17342,
+      "quote_bytes": 503
+    },
+    {
+      "id": "ev_ed0d9b5c6dfa2607533fd794",
+      "start_byte": 17344,
+      "end_byte": 18730,
+      "quote_bytes": 1386
+    },
+    {
+      "id": "ev_4d2d3ccbb10d6b5721591b22",
+      "start_byte": 18732,
+      "end_byte": 18960,
+      "quote_bytes": 228
+    },
+    {
+      "id": "ev_cbd385e46682ec5db4550fee",
+      "start_byte": 18962,
+      "end_byte": 19306,
+      "quote_bytes": 344
+    },
+    {
+      "id": "ev_0c8a4c9a6064518fe252cbee",
+      "start_byte": 19308,
+      "end_byte": 20613,
+      "quote_bytes": 1305
+    },
+    {
+      "id": "ev_793d46736faccb58a668c025",
+      "start_byte": 20615,
+      "end_byte": 21544,
+      "quote_bytes": 929
+    },
+    {
+      "id": "ev_3a13319c70259daf6469465e",
+      "start_byte": 21546,
+      "end_byte": 22099,
+      "quote_bytes": 553
+    },
+    {
+      "id": "ev_73dedf2979d7ae3f0dc6fcb3",
+      "start_byte": 22101,
+      "end_byte": 23350,
+      "quote_bytes": 1249
+    },
+    {
+      "id": "ev_cd32817b7d1321b177d63ac9",
+      "start_byte": 23352,
+      "end_byte": 23593,
+      "quote_bytes": 241
+    },
+    {
+      "id": "ev_697b0e7f1eba08b0f9f1f459",
+      "start_byte": 23595,
+      "end_byte": 24018,
+      "quote_bytes": 423
+    },
+    {
+      "id": "ev_a8f3fb6390cd693730929c13",
+      "start_byte": 24020,
+      "end_byte": 24567,
+      "quote_bytes": 547
+    },
+    {
+      "id": "ev_5101fe8711f117f870964a62",
+      "start_byte": 24569,
+      "end_byte": 25461,
+      "quote_bytes": 892
+    },
+    {
+      "id": "ev_5297641a6b62e809d56770b3",
+      "start_byte": 25463,
+      "end_byte": 25764,
+      "quote_bytes": 301
+    },
+    {
+      "id": "ev_6ff8f58e71c85b3a896cc988",
+      "start_byte": 25766,
+      "end_byte": 26596,
+      "quote_bytes": 830
+    },
+    {
+      "id": "ev_534ac3cdc373bf302fbad8ff",
+      "start_byte": 26598,
+      "end_byte": 30694,
+      "quote_bytes": 4096
+    },
+    {
+      "id": "ev_6b01db7f34e3f8af666edc68",
+      "start_byte": 30694,
+      "end_byte": 34784,
+      "quote_bytes": 4090
+    },
+    {
+      "id": "ev_04f0fb4973cfd818b68692a2",
+      "start_byte": 34784,
+      "end_byte": 38879,
+      "quote_bytes": 4095
+    },
+    {
+      "id": "ev_cedd6b35b67eaa8787dee912",
+      "start_byte": 38879,
+      "end_byte": 42974,
+      "quote_bytes": 4095
+    },
+    {
+      "id": "ev_865fb23fa7e2fce3a9104713",
+      "start_byte": 42974,
+      "end_byte": 45557,
+      "quote_bytes": 2583
+    }
+  ],
+  "timing": {
+    "seconds": 14.912398249958642,
+    "exit_code": 2
+  }
+}

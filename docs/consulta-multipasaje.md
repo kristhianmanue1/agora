@@ -166,3 +166,47 @@ El comando `generate-plan` también admite `--scope-guard`, tanto con
 `reading_budget_bytes` del plan verificado y la política de ampliación explícita.
 La ausencia de pasajes no dispara una llamada ni demuestra ausencia documental.
 No se inicia automáticamente reading-route ni generate-recovery.
+
+
+## Identificadores y respuesta acotada (opción v0.4)
+
+En `agora.passage_cli`, añadir `--citation-mode ids` activa
+`agora/passage-query/v0.4`. El modo `literal` sigue siendo el predeterminado.
+La opción reutiliza `build_units` y `validate_ids`: el modelo selecciona unidades
+por identificador y el consumidor resuelve texto literal y offsets UTF-8.
+No convierte pertenencia a la fuente en respaldo semántico comprobado.
+
+Ejemplo: en la invocación anterior conservar fuente, hash, pregunta y presupuestos,
+añadir `--citation-mode ids` y usar un directorio `--out` nuevo. Cada ejecución
+permite una llamada, sin reparación ni segunda lectura automática. La credencial
+se entrega mediante el entorno, preferentemente con Llavero.
+
+El contrato nuevo devuelve `parts` con `claims`, `missing` y citas resueltas.
+Límite verificable: seis afirmaciones, cuatro faltantes y 2.000 caracteres totales
+de texto de afirmaciones y faltantes. No cuenta las citas resueltas en ese límite;
+sí conserva sus presupuestos separados (12 ocurrencias y 12.000 bytes por aspecto).
+Una respuesta truncada, un ID desconocido/duplicado o un exceso se rechaza, sin
+recortar ni salvar silenciosamente el resultado.
+
+El control de alcance está incluido aunque no se pase `--scope-guard`:
+`candidate_requires_expansion` para respuestas a lecturas parciales;
+`candidate_partial` cuando el texto completo disponible deja faltantes declarados.
+`not_found_in_supplied_material` nunca acredita ausencia documental. El campo
+`semantic_support` permanece `not_verified`.
+
+La reparación es una ejecución explícita con expediente nuevo vinculado al rechazo
+anterior. No sobrescribir el resultado original ni mezclar coste de ambos intentos.
+Regresión y límites: [refinement-v2](../experiments/refinement-v2/README.md).
+
+
+### Presupuesto de razonamiento del proveedor
+
+`--reasoning-effort low|high|max` envía y registra la selección explícita.
+Al omitirlo, se conserva el comportamiento previo del proveedor. No es un límite
+duro de tokens ni garantiza finalización. Z.AI documenta estos valores para
+GLM-5.3/Flash y no permite desactivar su razonamiento:
+[contrato oficial](https://docs.z.ai/guides/capabilities/thinking), consultado
+2026-10-03. Otros modelos pueden tener restricciones diferentes.
+El límite `--max-output-tokens` también puede consumirse en razonamiento; acotar
+los caracteres de respuesta no basta para evitar truncamientos. La prueba adicional
+con `low` se conserva aparte de los intentos con la configuración predeterminada.

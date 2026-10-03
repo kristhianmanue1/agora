@@ -23,6 +23,10 @@ def main():
     parser.add_argument('--fallback-source-budget', type=int, help='Opt in: full source only on zero lexical matches, bounded bytes')
     parser.add_argument('--scope-guard', action='store_true',
                         help='Opt in to v0.3: partial readings require expansion before source-level closure')
+    parser.add_argument('--citation-mode', choices=['literal', 'ids'], default='literal',
+                        help='Opt in to v0.4: source-bound IDs and bounded claim text; scope guard included')
+    parser.add_argument('--reasoning-effort', choices=['low', 'high', 'max'],
+                        help='Explicit provider setting; omit to preserve provider default')
     parser.add_argument('--model', required=True)
     parser.add_argument('--max-output-tokens', type=token_limit, default=2048)
     parser.add_argument('--timeout-seconds', type=timeout_limit, default=90)
@@ -30,7 +34,7 @@ def main():
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=False)
     attempts = 0
-    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py")
+    modules = ("passages.py", "passage_cli.py", "source.py", "query.py", "transform.py", "__main__.py", "evidence.py", "evidence_ids.py")
     initial_hashes = {name: digest(Path(__file__).with_name(name).read_bytes()) for name in modules}
 
     def provider(system, user):
@@ -43,6 +47,8 @@ def main():
         payload = {'model': args.model, 'messages': [{'role': 'system', 'content': system},
                    {'role': 'user', 'content': user}], 'max_tokens': args.max_output_tokens,
                    'temperature': 0}
+        if args.reasoning_effort is not None:
+            payload['reasoning_effort'] = args.reasoning_effort
         request = urllib.request.Request(ENDPOINT, data=json.dumps(payload).encode(),
                   headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key})
         class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -71,12 +77,14 @@ def main():
     try:
         adapter = FileSourceAdapter(args.source, args.source_id)
         result = query_passages(adapter, args.sha256, args.question, provider, args.mode,
-                                scope_guard=args.scope_guard, **options)
+                                scope_guard=args.scope_guard, citation_mode=args.citation_mode, **options)
     except Exception as exc:
         result = {'execution_status': 'failed', 'diagnostic': type(exc).__name__}
     result['http_attempts'] = attempts
     result['request_config'] = {'model': args.model, 'max_output_tokens': args.max_output_tokens,
                                 'timeout_seconds': args.timeout_seconds, 'max_calls': 1, 'temperature': 0}
+    if args.reasoning_effort is not None:
+        result['request_config']['reasoning_effort'] = args.reasoning_effort
     result['implementation_hashes'] = initial_hashes
     final_hashes = {name: digest(Path(__file__).with_name(name).read_bytes()) for name in modules}
     result['implementation_unchanged'] = initial_hashes == final_hashes

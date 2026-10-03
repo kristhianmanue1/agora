@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1901.05415",
+    "source": "1901.05415.txt",
+    "bytes": 45557,
+    "sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+    "questions": [
+      {
+        "id": "1901.05415-q1",
+        "question": "How were the satisfaction training labels collected from human evaluators, what rating scale was used, and how were ratings mapped or excluded? Separately distinguish this from the trained prediction mechanism. Do not reconstruct missing formula text.",
+        "question_id": "78f8dad0f1acf024f69b3218b2d204b8019bb0d2",
+        "original_question": "how is user satisfaction estimated?",
+        "reformulated": true
+      }
+    ]
+  }
+]
