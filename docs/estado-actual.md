@@ -477,3 +477,17 @@ centrales y omitió detalles críticos en dos; Ágora produjo dos candidatos con
 y rechazó dos salidas incompletas. 35353 tokens MemOS (30135 ingestión + 5218 consulta)
 frente a 15780 Ágora; embeddings/infraestructura/dinero no medidos. Sin promoción,
 sin ganador general y sin ajustes posteriores a las respuestas.
+
+### Alcance de lectura y filtro de vigencia: seguimiento corregido
+
+[Implementación y prueba](../experiments/scope-vigency-repair-v1/README.md): Ágora
+incorpora `--scope-guard` optativo, contrato multipasaje v0.3. Lecturas parciales
+quedan `candidate_requires_expansion`; la segunda lectura sigue siendo explícita.
+527 tests pasan. Dos lecturas completas recuperaron los puntos centrales omitidos
+en casos ya conocidos, con 26663 tokens adicionales: no nuevo resultado reservado.
+
+Se corrige el diagnóstico anterior de MemOS: el filtro debe usar
+`{"and":[{"status":"activated"}]}`. Con esa forma devolvió sólo activos y el
+control inverso sólo archivados. Chat respondió miércoles y fecha desconocida.
+No hubo nuevo parche MemOS ni reinicio de 9696; los dos arreglos previos continúan
+locales, pendientes de gates completos. No tratar búsqueda sin filtro como vigente.

@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 192,
-  "bytes": 937150,
+  "documents": 193,
+  "bytes": 943666,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -470,8 +470,8 @@
     },
     {
       "path": "docs/consulta-multipasaje.md",
-      "sha256": "a85ee015b9580937522b894655bc87d93b86c53659cf75dfb601b2aa85305946",
-      "bytes": 8312,
+      "sha256": "8550007834fe844cf6463a9400a3b26aac822745cf7f4cfd1272896aee651413",
+      "bytes": 9174,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -480,6 +480,10 @@
         },
         {
           "target": "comparacion-multipasaje-glm-02.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/scope-vigency-repair-v1/README.md",
           "exists": true
         }
       ],
@@ -566,8 +570,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "14e3c679770ab2445a52d577e6e28b5b45a2c2b460424221f63ef3fe1004f1a7",
-      "bytes": 40978,
+      "sha256": "f048ee3bb5b43e8bfee492ce81a262f74a127845d85f31f1c9521fccff82bc6d",
+      "bytes": 41859,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -828,6 +832,10 @@
         },
         {
           "target": "../experiments/memos-long-reserved-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/scope-vigency-repair-v1/README.md",
           "exists": true
         }
       ],
@@ -1646,10 +1654,15 @@
     },
     {
       "path": "experiments/memos-long-reserved-v1/README.md",
-      "sha256": "afff8d4aed0646f0d7427e0e1b91d3adb1083d550a9de1e9279c60946dd816ac",
-      "bytes": 8174,
+      "sha256": "cc420cb6df52aa7d2a34632f6ff7258b9443e23c599150c1f816daca6e5b6705",
+      "bytes": 8433,
       "scope": "experiment_record",
-      "local_links": [],
+      "local_links": [
+        {
+          "target": "../scope-vigency-repair-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
@@ -2164,6 +2177,14 @@
       "path": "experiments/rubric-reserved-v1/README.md",
       "sha256": "46b0c888ddd32be8422a132cbd6bc0ff68862ad54b83b0550010d8faf5961177",
       "bytes": 3467,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/scope-vigency-repair-v1/README.md",
+      "sha256": "875cff6a463a637ba9d1dab1188ec7f708a8058739a16ed2e178c56ff982953f",
+      "bytes": 4514,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []

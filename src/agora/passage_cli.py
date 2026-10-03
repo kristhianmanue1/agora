@@ -21,6 +21,8 @@ def main():
     parser.add_argument('--prompt-budget', type=int, default=65536)
     parser.add_argument('--top-k', type=int, default=3)
     parser.add_argument('--fallback-source-budget', type=int, help='Opt in: full source only on zero lexical matches, bounded bytes')
+    parser.add_argument('--scope-guard', action='store_true',
+                        help='Opt in to v0.3: partial readings require expansion before source-level closure')
     parser.add_argument('--model', required=True)
     parser.add_argument('--max-output-tokens', type=token_limit, default=2048)
     parser.add_argument('--timeout-seconds', type=timeout_limit, default=90)
@@ -68,7 +70,8 @@ def main():
         options['ranges'] = args.range
     try:
         adapter = FileSourceAdapter(args.source, args.source_id)
-        result = query_passages(adapter, args.sha256, args.question, provider, args.mode, **options)
+        result = query_passages(adapter, args.sha256, args.question, provider, args.mode,
+                                scope_guard=args.scope_guard, **options)
     except Exception as exc:
         result = {'execution_status': 'failed', 'diagnostic': type(exc).__name__}
     result['http_attempts'] = attempts

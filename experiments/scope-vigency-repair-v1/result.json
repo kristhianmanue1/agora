@@ -1,0 +1,288 @@
+{
+  "memos": {
+    "active": {
+      "request": {
+        "user_id": "root",
+        "readable_cube_ids": [
+          "agora-transition-d5bee807a562"
+        ],
+        "session_id": "agora-transition-d5bee807a562",
+        "query": "What is the currently approved day for the Cedar review meeting?",
+        "relativity": 0.1,
+        "top_k": 10,
+        "include_preference": false,
+        "search_tool_memory": false,
+        "search_skill_memory": false,
+        "chat_history": [],
+        "internet_search": false,
+        "filter": {
+          "and": [
+            {
+              "status": "activated"
+            }
+          ]
+        }
+      },
+      "memories": [
+        {
+          "id": "2b3e3f7b-d43c-4d4f-be92-d0a2c5414b9f",
+          "status": "activated",
+          "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending. The approved review meeting for Synthetic project Cedar is now on Wednesday, replacing the previously stated Tuesday; no calendar date is supplied for the meeting, and the old Tuesday statement is preserved as historical only."
+        }
+      ]
+    },
+    "archived": {
+      "request": {
+        "user_id": "root",
+        "readable_cube_ids": [
+          "agora-transition-d5bee807a562"
+        ],
+        "session_id": "agora-transition-d5bee807a562",
+        "query": "What is the currently approved day for the Cedar review meeting?",
+        "relativity": 0.1,
+        "top_k": 10,
+        "include_preference": false,
+        "search_tool_memory": false,
+        "search_skill_memory": false,
+        "chat_history": [],
+        "internet_search": false,
+        "filter": {
+          "and": [
+            {
+              "status": "archived"
+            }
+          ]
+        }
+      },
+      "memories": [
+        {
+          "id": "1d6eaa42-c0c6-4999-bced-639591decfd5",
+          "status": "archived",
+          "memory": "At 11:34 PM on October 2, 2026 (a Friday), the user stated that for the Synthetic project Cedar, the approved review meeting is scheduled for Tuesday. No specific calendar date had been specified at that time. Since the message was sent on a Friday, the referenced Tuesday most likely corresponds to October 6, 2026, but the exact date remains unconfirmed and pending."
+        },
+        {
+          "id": "bf022c0d-8ef2-4cf1-bd84-2fbf51926d07",
+          "status": "archived",
+          "memory": "As of October 2, 2026, the user was tracking the status of the Synthetic project Cedar's review meeting and was aware that, although the meeting had been approved for a Tuesday, no calendar date had been specified. This suggests the user may need to follow up to confirm or finalize the exact date of the review meeting."
+        }
+      ]
+    },
+    "answer": "**Currently approved meeting day:** Wednesday (for the Synthetic project Cedar review meeting). This replaced the earlier Tuesday statement.\n\n**Is the exact calendar date known?** No. No calendar date has been supplied for the Wednesday meeting, so the date remains unknown.\n\n**Historical note:** The earlier statement that the meeting was on Tuesday — with a guess that it might correspond to October 6, 2026 — is preserved only as historical context and is no longer the approved schedule."
+  },
+  "agora": [
+    {
+      "id": "1602.07563-q2",
+      "answer_status": "candidate",
+      "answer_scope": "full_source",
+      "requires_expansion": false,
+      "answer": "El documento no da una cifra única y concluyente: los autores declaran que «no pueden dar respuestas concluyentes», pero estiman que se necesitan alrededor de 100.000 anotaciones para el rendimiento máximo (que depende del acuerdo entre anotadores), mientras que 20.000 anotaciones de alta calidad ya proporcionan un rendimiento razonable. Los casos concretos varían: el polaco alcanzó su pico con unos 150.000 tuits (alfa 0.536, cercano al acuerdo de 0.571), el esloveno a los 70.000 tuits, el búlgaro a los 40.000 tuits, y el serbio alcanzó el acuerdo entre anotadores a los 70.000 tuits; en cambio, en inglés, pese a unos 90.000 tuits etiquetados, seguía existiendo una brecha y se necesitaban más anotaciones. Para Facebook(it) se especula que 20.000 ejemplos de entrenamiento no bastan para acercarse al acuerdo entre anotadores.",
+      "citations": [
+        {
+          "quote": "We cannot provide conclusive answers here. It seems that 20,000 high-quality annotations already provide reasonable performance. The peak performance depends on the inter-annotator agreement and we estimate that around 100,000 annotations are needed.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 33860,
+              "end_byte": 34110
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "We show that the model performance approaches the inter-annotator agreement when the size of the training set is sufficiently large.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 733,
+              "end_byte": 865
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "Despite the relatively large training set (around 90,000 labeled tweets) there is still a performance gap and even more annotations are needed to approach the inter-annotator agreement.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 17112,
+              "end_byte": 17297
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "After a slow improvement of the classifier's performance, the peak is reached at around 150,000 labeled tweets, and afterwards the performance remains stable and is even slightly decreasing. The maximum INLINEFORM0 is 0.536, close to the inter-annotator agreement of 0.571.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 17877,
+              "end_byte": 18150
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "The classifier's performance reaches its peak earlier, at 70,000 tweets, with the maximum INLINEFORM0 of 0.459, as well as the maximum INLINEFORM1 .",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 18684,
+              "end_byte": 18832
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "The classifier's peak performance is reached even earlier, at 40,000 tweets ( INLINEFORM0 is 0.378), but the inter-annotator agreement is also considerably lower, more than 10% points below the Slovenian ( INLINEFORM1 is 0.367).",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 19157,
+              "end_byte": 19385
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "The Serbian classifier reaches the inter-annotator agreement (albeit low) at 70,000 tweets.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 22272,
+              "end_byte": 22363
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "Based on the lessons from the language datasets, we speculate that 20,000 training examples is not enough, and that additional Facebook comments have to be labeled to approach the inter-annotator agreement.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 27300,
+              "end_byte": 27506
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2698,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2073
+        },
+        "prompt_tokens": 13364,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 16062
+      },
+      "reported_model": "glm-5.3-flash",
+      "source_sha256": "05eeb85d15e39f83001294c1d0bbdf205c5f3e519f42e598a53a3640a2fafa32",
+      "implementation_hashes": {
+        "passages.py": "d83478e4c8a126ebca9f4360c3d59f65ff6470813f27ca746855c3ce08364c1b",
+        "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+        "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+        "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+        "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+        "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+      }
+    },
+    {
+      "id": "1601.03313-q1",
+      "answer_status": "candidate",
+      "answer_scope": "full_source",
+      "requires_expansion": false,
+      "answer": "Midieron la corrección gramatical con dos métodos: (1) una evaluación manual en la que cada discurso generado se evaluó según una lista de criterios, asignando a cada criterio una puntuación entre 0 y 3 (la corrección gramatical promedió 2.3 sobre 3); y (2) una evaluación automática en la que identificaban las etiquetas POS de cada oración del discurso generado y comprobaban en todas las oraciones del corpus si alguna tenía la misma secuencia de etiquetas POS. Los autores advierten que tener la misma estructura de etiquetas POS no implica necesariamente que la gramática sea correcta, y que no encontrar una oración coincidente tampoco implica un error, pero apunta en cierta dirección; además, el sistema mostraba las oraciones sin coincidencia para poder evaluarlas manualmente.",
+      "citations": [
+        {
+          "quote": "For the manual evaluation we have defined a list of evaluation criteria. That is, a generated speech is evaluated by assessing each of the criterion and assigning a score between 0 and 3 to it.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 22947,
+              "end_byte": 23140
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "In particular, the grammatical correctness and the sentence transitions were very good. Each of them scored on average 2.3 out of 3.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 24900,
+              "end_byte": 25032
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "The automatic evaluation aims to evaluate both the grammatical correctness and the consistency of the speech in terms of its content. For evaluating the grammatical correctness we identify for each sentence of the speech its POS tags. Then we check all sentences of the entire corpus whether one has the same sequence of POS tags.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 23259,
+              "end_byte": 23589
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "Having a sentence with the same POS tag structure does not necessarily mean that the grammar is correct. Neither does the lack of finding a matching sentence imply the existence of an error. But it points in a certain direction.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 23590,
+              "end_byte": 23818
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        },
+        {
+          "quote": "Furthermore, we let the system output the sentence for which it could not find a matching sentence so that we can evaluate those sentences manually.",
+          "matches": [
+            {
+              "passage": 1,
+              "start_byte": 23819,
+              "end_byte": 23967
+            }
+          ],
+          "match_policy": "first_occurrence_per_passage"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 1265,
+        "completion_tokens_details": {
+          "reasoning_tokens": 863
+        },
+        "prompt_tokens": 9336,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10601
+      },
+      "reported_model": "glm-5.3-flash",
+      "source_sha256": "97b04b39f8c2b7fdfd8541dc7b269f08191d072c73381a4247967fae22762e29",
+      "implementation_hashes": {
+        "passages.py": "d83478e4c8a126ebca9f4360c3d59f65ff6470813f27ca746855c3ce08364c1b",
+        "passage_cli.py": "207a6b906781c6ce46a892521e1ecd3d0eb9ca7e0fa2e14bc4f8f0dc0bf905d2",
+        "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+        "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+        "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+        "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c"
+      }
+    }
+  ],
+  "raw_sha256": {
+    "memos/active.json": "7c0e052b900035c7cb791c73d55bd8fc10e9d482567a8289aae354edf8136a6f",
+    "memos/chat-active.json": "a615787f11d5196d1ea0fa07ab163d011600922795e5625af9be3372bbe33dac",
+    "memos/archived.json": "fef6fff51f8c545ffcd88f54dd61b0ae3860f64dc88a2e7609ad9916fb8e0012",
+    "agora/1601.03313-q1-replay.json": "38f38cda1496e3401645ae06ccceeea662172bdffe572d8afe25fd4901669962",
+    "agora/1602.07563-q2-replay.json": "5bf08630afe87a6d8693fa746827217e8b3e3c28f0fce0bb280aee91793bc543",
+    "agora/1602.07563-q2-time.json": "77c700f4c42c7fed7b59107056499192289978ddd381f5deda39765681ca5fb8",
+    "agora/1601.03313-q1-time.json": "8bec813e439e93c7d114235732021e75bc9fbd9c1bc37290a9cfe45da08ec46f",
+    "agora/1602.07563-q2/result.json": "ed63e07d9fb7664c10c5f852c96bd6e0d36aac6fb76f420b1dfc28c180a016ed",
+    "agora/1601.03313-q1/result.json": "cd1d5ff5acd14650daf4adf10659c5544d9c1e75b7d1aa87b91f785f920b454e"
+  }
+}

@@ -1,5 +1,9 @@
 # Reparación local de feedback y documentos largos reservados
 
+> Corrección posterior: [scope-vigency-repair-v1](../scope-vigency-repair-v1/README.md)
+> comprobó que el filtro anterior tenía forma incorrecta. Con la sintaxis nativa
+> sí se separan activos y archivados. Se conservan debajo observaciones históricas.
+
 ## Resultado principal
 
 El fallo de escritura de feedback se reprodujo, se identificó contra logs/código y

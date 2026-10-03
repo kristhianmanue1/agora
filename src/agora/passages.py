@@ -115,14 +115,17 @@ def prepare(adapter, revision, question, mode, *, ranges=None,
     return envelope, retrieval, user
 
 
-def query_passages(adapter, revision, question, provider, mode='retrieve', **options):
-    """One provider call at most; new schema, deliberately separate from v0.3."""
+def query_passages(adapter, revision, question, provider, mode='retrieve', *, scope_guard=False, **options):
+    """One provider call at most; scope guard opts into passage-query v0.3."""
     result = {'schema': 'agora/passage-query/v0.1', 'question': question, 'mode': mode,
               'source_id': adapter.source_id, 'source_sha256': revision,
               'options': options, 'provider_calls': 0, 'review_status': 'unreviewed',
               'semantic_support': 'not_verified', 'memory_admission': 'not_performed'}
     if options.get('fallback_source_budget') is not None:
         result['schema'] = 'agora/passage-query/v0.2'
+    if scope_guard:
+        result.update(schema='agora/passage-query/v0.3', answer_scope='selected_passages',
+                      requires_expansion=True, document_absence_established=False)
     try:
         envelope, retrieval, user = prepare(adapter, revision, question, mode, **options)
         result['retrieval'] = retrieval
@@ -134,10 +137,24 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', **opt
                           evidence_sufficiency='unknown', answer='', citations=[])
             return result
         result['envelope'] = envelope
-        result['prompt'] = {'system': SYSTEM, 'user': user}
-        result['prompt_bytes'] = len(SYSTEM.encode()) + len(user.encode())
+        system = SYSTEM
+        if scope_guard:
+            partial = envelope['coverage'] != 'full'
+            scope = 'selected_passages' if partial else 'full_source'
+            result.update(answer_scope=scope, requires_expansion=partial)
+            payload = json.loads(user)
+            payload['reading_scope'] = scope
+            user = json.dumps(payload, ensure_ascii=False)
+            system += ('\nThe supplied passages are NOT the whole document. '
+                       'Missing detail means not found in these passages, never absent '
+                       'from the whole source. State this scope explicitly.' if partial else
+                       '\nThe full source is supplied. Do not infer absence without checking it.')
+            if len(system.encode()) + len(user.encode()) > options.get('prompt_budget', 65536):
+                raise SourceError('prompt_budget_exceeded')
+        result['prompt'] = {'system': system, 'user': user}
+        result['prompt_bytes'] = len(system.encode()) + len(user.encode())
         result['provider_calls'] = 1
-        response = provider(SYSTEM, user)
+        response = provider(system, user)
         result['response'] = response
         joined = '\n'.join(span['text'] for span in envelope['spans'])
         parts, operation = validate_answer(response, joined, ['P1'])
@@ -158,6 +175,8 @@ def query_passages(adapter, revision, question, provider, mode='retrieve', **opt
         result.update(execution_status='complete', answer_status='candidate' if part['status'] == 'answer'
                       else 'not_found_in_supplied_material', answer=part['answer'], citations=citations,
                       normalization=operation, evidence_sufficiency='unknown')
+        if scope_guard and result['requires_expansion'] and part['status'] == 'answer':
+            result['answer_status'] = 'candidate_requires_expansion'
     except (SourceError, TransformError, UnicodeError) as exc:
         result.update(execution_status='rejected', diagnostic=str(exc))
     except Exception as exc:

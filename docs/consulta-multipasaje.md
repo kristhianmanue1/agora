@@ -143,3 +143,18 @@ medir tiempo y limitar interpretaciones. Se ejecutó copia congelada y se mantuv
 la parada. No es auditoría externa. Próximo paso: diagnosticar acceso/proveedor y
 fijar una nueva corrida antes de intentar comparación semántica. No hay promoción
 de la ruta automática ni afirmación de fidelidad o ahorro de tokens.
+
+## Protección explícita del alcance (v0.3)
+
+Añadir `--scope-guard` activa `agora/passage-query/v0.3`. Si la lectura es parcial,
+una respuesta queda `candidate_requires_expansion` y `requires_expansion: true`.
+No cerrar una conclusión sobre la fuente completa con ese resultado. Ampliar con
+una nueva invocación explícita, por ejemplo `--mode source --scope-guard`, fijando
+el mismo hash y presupuestos suficientes. No se envía una segunda llamada automática.
+
+`answer_scope` distingue `selected_passages` y `full_source`;
+`document_absence_established` permanece false. Ni leer todo ni resolver citas
+certifica soporte semántico. Sin el flag se conservan v0.1/v0.2. El código de salida
+cero indica finalización de la operación, no aceptación de la respuesta.
+
+[Ensayo de recuperación y límites](../experiments/scope-vigency-repair-v1/README.md).
