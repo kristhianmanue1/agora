@@ -1,0 +1,44 @@
+{
+  "frozen_at": "2026-10-03T22:25:44.295694+00:00",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "selector_sha256": "274049cd5e9c540c89186637c2a80bb2347ddb1a83ccb2a0b26ec2c05fd617a5",
+  "cases": [
+    {
+      "id": "1907.12984",
+      "question_id": "ea6edf45f094586caf4684463287254d44b00e95",
+      "question": "Do they compare against a system that does not use streaming text, but has the entire text at disposal?",
+      "known": true,
+      "sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40"
+    },
+    {
+      "id": "1602.04341",
+      "question_id": "041529e15b70b21986adb781fd9b94b595e451ed",
+      "question": "what was the margin their system outperformed previous ones?",
+      "sha256": "19fef3894705ed70b9929da1c7a739d2c2f216bbf80ec1b8207a793ecd2c94d7",
+      "bytes": 28432
+    },
+    {
+      "id": "1602.07776",
+      "question_id": "95083d486769b9b5e8c57fe2ef1b452fc3ea5012",
+      "question": "what state of the art models do they compare to?",
+      "sha256": "a1cb96626ae22746be020d7d7394e83c3db4a369c1ca584a54c7b6f12f3e6cd8",
+      "bytes": 26985
+    },
+    {
+      "id": "1603.00957",
+      "question_id": "cbb4eba59434d596749408be5b923efda7560890",
+      "question": "What baselines is the neural relation extractor compared to?",
+      "sha256": "b6620d68b0e34561913c2b6cebb4f81e0769f25b5bc27190b5c9da45ae4b329c",
+      "bytes": 32457
+    }
+  ],
+  "budgets": [
+    5000,
+    12000
+  ],
+  "selection_rule": "first 3 sorted absent-from-prior-freeze-files papers 25-100KB with first comparison/baseline/outperform question; no answer filtering",
+  "limits": [
+    "Novelty is relative to prior freeze.json files only; not guaranteed global holdout.",
+    "No API calls; annotation recall is not answer correctness."
+  ]
+}

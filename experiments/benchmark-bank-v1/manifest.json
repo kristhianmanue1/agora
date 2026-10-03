@@ -524,6 +524,38 @@
     {
       "path": "experiments/streaming-diagnosis-v1/verify.py",
       "sha256": "4563dc4716bdf4b88ca8dcc830ba60a6686490a8fe5c1a1af277529536855785"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/README.md",
+      "sha256": "457e9184c8ff7d4378bd05932278970bd386b9e1308925282584a8767d83fd36"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/check_selector.py",
+      "sha256": "548c0ccee75667b91b97bf3a3550807e50066b357abd6692b03d7e2e5a4c2fbf"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/freeze.json",
+      "sha256": "42a54500b8ce00c1d2d14cb62a467cad28f80600a6231c86a61abee4774a1136"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/result.json",
+      "sha256": "2160b9506b8977b31a2696ad52e3b2e7b0a38d666568219ca7c2ad515941677b"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/run.py",
+      "sha256": "a7447e9e58a4b6b8d0c1214496a5517006b08a87982b1ad46ef450025eac6a19"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/selections.json",
+      "sha256": "9716114f2474723a2e2a8135af6e34b1b780560c3234ff87368f80d39775eabb"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/selector.py",
+      "sha256": "274049cd5e9c540c89186637c2a80bb2347ddb1a83ccb2a0b26ec2c05fd617a5"
+    },
+    {
+      "path": "experiments/comparison-chain-v1/verify.py",
+      "sha256": "c5d2d2769ccc61aa9ba7a37cb13078a2747044f892454d26b25a05e5e457a9e4"
     }
   ],
   "expected_accounting": {
