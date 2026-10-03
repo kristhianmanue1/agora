@@ -440,6 +440,30 @@
     {
       "path": "experiments/section-comparison-v1/run.py",
       "sha256": "34e76af0f301dba94cb8b9a7896189d4f1ab481fe9f3e5c8cad6cc17654d4972"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/README.md",
+      "sha256": "ce8b74348fa728d98ea97d68452ee207091684883eea8f5a12683e5c2ff6c125"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/fixture-response.json",
+      "sha256": "504efce4bc7fd043b8f5ee9d3cf068e161f9b4d5b6a0d75e2d03e841410b9fb8"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/probe.json",
+      "sha256": "817f38b05291cb299a75d6fbe8a4f971a1bb2c0221ad4a8a8bfff1fec0d0f8db"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/run.py",
+      "sha256": "2ff0c4505f07bb84d7b23ea006164f130e22234ecc606ad90a7f99d2ceff511e"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/verification.json",
+      "sha256": "03b8cb697cf1321fbb6b948518d74b82531b9c78025acfd7486ea43c2d46c9c1"
+    },
+    {
+      "path": "experiments/structured-handoff-v1/view.json",
+      "sha256": "01d519596806d5eed6698e20ca76de570b73ed997dd47eeb405c17ebd6cdf9bc"
     }
   ],
   "expected_accounting": {

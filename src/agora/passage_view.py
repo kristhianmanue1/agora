@@ -11,7 +11,26 @@ def display(result):
     if type(result) is not dict:
         raise ValueError('invalid_result_object')
     complete = result.get('execution_status') == 'complete'
+    answer = result.get('answer') if complete else None
     missing = result.get('missing') if complete else None
+    parts = []
+    if complete and result.get('schema') in ('agora/claim-evidence-query/v1', 'agora/claim-evidence-query/v2'):
+        raw_parts = result.get('parts')
+        if type(raw_parts) is not list or not raw_parts:
+            raise ValueError('invalid_display_parts')
+        for part in raw_parts:
+            if (type(part) is not dict or type(part.get('id')) is not str
+                    or type(part.get('claims')) is not list or type(part.get('missing')) is not list
+                    or any(type(item) is not str for item in part['missing'])
+                    or any(type(c) is not dict or type(c.get('text')) is not str for c in part['claims'])):
+                raise ValueError('invalid_display_parts')
+            parts.append({'id': part['id'], 'status': part.get('status'),
+                          'answer': '\n'.join(c['text'] for c in part['claims']),
+                          'missing': part['missing']})
+        if 'answer' not in result:
+            answer = '\n'.join(p['answer'] for p in parts)
+        if 'missing' not in result:
+            missing = [item for p in parts for item in p['missing']]
     warnings = ['Esta vista muestra datos guardados; no verifica su respaldo semántico.']
     if missing is None:
         warnings.append('Información faltante no declarada: no equivale a ausencia de faltantes.')
@@ -24,7 +43,8 @@ def display(result):
         'execution_status': result.get('execution_status'),
         'answer_status': result.get('answer_status'),
         'http_attempts': result.get('http_attempts'),
-        'answer': result.get('answer') if complete else None,
+        'answer': answer,
+        'parts': parts,
         'missing': missing,
         'answer_scope': result.get('answer_scope', 'unknown'),
         'requires_expansion': result.get('requires_expansion'),

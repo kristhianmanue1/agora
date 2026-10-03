@@ -1,0 +1,31 @@
+{
+  "schema": "agora/passage-display/v1",
+  "execution_status": "complete",
+  "answer_status": "candidate_requires_expansion",
+  "http_attempts": 0,
+  "answer": "La valoración 1 se asigna a la clase negativa.",
+  "parts": [
+    {
+      "id": "P1",
+      "status": "partial",
+      "answer": "La valoración 1 se asigna a la clase negativa.",
+      "missing": [
+        "Rango positivo desconocido por fórmula faltante."
+      ]
+    }
+  ],
+  "missing": [
+    "Rango positivo desconocido por fórmula faltante."
+  ],
+  "answer_scope": "selected_passages",
+  "requires_expansion": true,
+  "document_absence_established": false,
+  "semantic_support": "not_verified",
+  "review_status": "unreviewed",
+  "memory_admission": "not_performed",
+  "diagnostic": null,
+  "warnings": [
+    "Esta vista muestra datos guardados; no verifica su respaldo semántico.",
+    "Lectura parcial: requiere ampliación antes de un cierre sobre la fuente completa."
+  ]
+}

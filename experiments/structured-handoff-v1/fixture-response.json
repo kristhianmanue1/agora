@@ -1,0 +1,4 @@
+{
+  "finish_reason": "stop",
+  "content": "{\"parts\": [{\"id\": \"P1\", \"status\": \"partial\", \"claims\": [{\"text\": \"La valoraci\\u00f3n 1 se asigna a la clase negativa.\", \"evidence_ids\": [\"ev_20dd1ba65d7caadfd3cb72e5\"]}], \"missing\": [\"Rango positivo desconocido por f\\u00f3rmula faltante.\"]}]}"
+}

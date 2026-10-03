@@ -54,3 +54,22 @@ class PassageViewTests(unittest.TestCase):
                 p.write_text(payload)
                 with patch('sys.argv',['view',str(p)]),contextlib.redirect_stdout(io.StringIO()):
                     self.assertEqual(main(),2)
+
+class EvidenceViewTests(unittest.TestCase):
+    def test_claim_parts_keep_missing_and_aspect_identity(self):
+        result={'schema':'agora/claim-evidence-query/v2','execution_status':'complete',
+                'requires_expansion':True,'parts':[
+                    {'id':'P1','status':'partial','claims':[{'text':'Dato conocido.'}], 'missing':['Fórmula ausente.']},
+                    {'id':'P2','status':'not_in_passages','claims':[], 'missing':['Responsable desconocido.']}]}
+        view=display(result)
+        self.assertEqual(view['missing'],['Fórmula ausente.','Responsable desconocido.'])
+        self.assertIn('Dato conocido.',view['answer'])
+        self.assertEqual(view['parts'][1]['id'],'P2')
+        self.assertEqual(view['parts'][1]['missing'],['Responsable desconocido.'])
+        self.assertTrue(view['requires_expansion'])
+    def test_invalid_claim_parts_are_not_shown_as_success(self):
+        with self.assertRaisesRegex(ValueError,'invalid_display_parts'):
+            display({'schema':'agora/claim-evidence-query/v2','execution_status':'complete','parts':[{'id':'P1','claims':[]}]})
+    def test_rejected_claim_parts_are_not_salvaged(self):
+        view=display({'schema':'agora/claim-evidence-query/v2','execution_status':'rejected','parts':[{'claims':[{'text':'Raw'}]}]})
+        self.assertIsNone(view['answer']);self.assertEqual(view['parts'],[])

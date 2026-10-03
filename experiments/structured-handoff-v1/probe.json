@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "http_attempts": 0,
+  "provider_invocations": 1,
+  "checks": [
+    {
+      "unit_count": 22,
+      "manual_paragraphs_in_prompt": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "prompt_bytes": 15972,
+      "scope_instruction_present": true
+    }
+  ]
+}

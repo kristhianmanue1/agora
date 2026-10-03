@@ -578,3 +578,11 @@ selectores por secciones existentes cubren 4/4 párrafos del caso conocido con
 ~6 KB dentro de 12 KB. Dos documentos nuevos muestran resultado mixto: mejora
 una pregunta, falla otra y aparecen etiquetas discrepantes y una tabla no
 renderizada. Sin promoción automática ni llamadas a modelos; no cambia código.
+
+
+### Plan estructurado: entrega y presentación verificadas
+
+El recorrido existente entrega los cuatro párrafos conocidos al generador por IDs
+con 11.990 bytes dentro de 12.000. Se corrigió la vista para no ocultar faltantes
+anidados en `parts`. 563 tests pasan. La prueba usó proveedor simulado: cero HTTP,
+no respuesta nueva de modelo. [Expediente](../experiments/structured-handoff-v1/README.md).

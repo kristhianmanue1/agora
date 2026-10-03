@@ -272,3 +272,10 @@ las cuotas y expansión a vecinos; no traduce ni realiza búsqueda semántica.
 Genera `agora/subquestions-plan/v4-idf-experimental`, reproducible por `generate-plan`.
 `paragraphs-equal` sigue predeterminado y los contratos anteriores no cambian.
 [Algoritmo, comparación y límites](../experiments/idf-comparison-v1/README.md).
+
+
+La vista `passage_view` también admite resultados `agora/claim-evidence-query/v1`
+y `/v2` de `generate-plan` con IDs: muestra las afirmaciones y faltantes de `parts`
+junto al detalle por aspecto. Es una proyección de presentación; no altera el
+resultado ni certifica su contenido. Rechaza partes mal formadas y no rescata
+respuestas de ejecuciones fallidas. [Prueba del recorrido](../experiments/structured-handoff-v1/README.md).

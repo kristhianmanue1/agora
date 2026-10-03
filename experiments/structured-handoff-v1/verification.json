@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "tests_passed": 563,
+  "synthetic": true,
+  "http_attempts": 0,
+  "plan_schema": "agora/subquestions-plan/v3-structured-experimental",
+  "plan_sha256": "b7e0ca93b0a877e5e8216293f21b7bd868ad3dd26797654c8a6744a6b5070547",
+  "delivered_bytes": 11990,
+  "budget_bytes": 12000,
+  "source_sha256": "3cb19a89c67cd4496ab8c40e8d716f52dfbf4bd30c4ce99bfdd0ce0f4cc5bec6",
+  "manual_paragraphs_in_prompt": 4,
+  "answer_status": "candidate_requires_expansion",
+  "requires_expansion": true,
+  "missing_visible": true,
+  "semantic_support": "not_verified",
+  "new_model_response": false
+}
