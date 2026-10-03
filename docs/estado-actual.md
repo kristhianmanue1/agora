@@ -586,3 +586,13 @@ El recorrido existente entrega los cuatro párrafos conocidos al generador por I
 con 11.990 bytes dentro de 12.000. Se corrigió la vista para no ocultar faltantes
 anidados en `parts`. 563 tests pasan. La prueba usó proveedor simulado: cero HTTP,
 no respuesta nueva de modelo. [Expediente](../experiments/structured-handoff-v1/README.md).
+
+
+### Generación real del caso estructurado
+
+[Una llamada verificada](../experiments/structured-live-v1/README.md): ocho
+ afirmaciones, once referencias literales, fórmula positiva conservada como
+ desconocida y faltantes visibles. 8.595 tokens, 87,30 s; candidata de alcance
+ parcial, revisada sólo por el productor. Sin admisión ni promoción general.
+El recorrido del caso conocido queda demostrado; el siguiente trabajo corresponde
+al fallo en documentos nuevos, no a repetir indefinidamente el mismo caso.

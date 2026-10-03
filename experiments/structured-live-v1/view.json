@@ -1,0 +1,35 @@
+{
+  "schema": "agora/passage-display/v1",
+  "execution_status": "complete",
+  "answer_status": "candidate_requires_expansion",
+  "http_attempts": 1,
+  "answer": "El conjunto de datos de la tarea de Satisfacción se recogió mediante crowdsourcing: trabajadores chatearon con el agente de diálogo baseline y asignaron una calificación en una escala 1-5 por la calidad de cada una de las respuestas del agente.\nLos contextos con calificación 1 se mapearon a la clase negativa (insatisfecho).\nLos contextos con calificación 2 fueron descartados para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.\nEstas calificaciones numéricas solo se solicitaron al recopilar los datos de entrenamiento iniciales; durante el despliegue no se pidieron y solo se usa diálogo natural.\nA diferencia de la recogida de etiquetas humanas, el mecanismo entrenado es una tarea auxiliar en la que el agente aprende a predecir la satisfacción de su compañero con sus respuestas: los ejemplos son pares que asocian el mismo contexto de la tarea de Diálogo con una etiqueta que va de insatisfecho a satisfecho.\nDurante el despliegue, cada turno el agente observa el contexto y predice la satisfacción del compañero: si la puntuación supera un umbral especificado, extrae un nuevo ejemplo de Diálogo Humano-Bot con la respuesta humana; si el usuario parece insatisfecho, pide retroalimentación y la respuesta obtenida crea un ejemplo para la tarea de Feedback.\nLa tasa de recolección de nuevos ejemplos de Diálogo o de Feedback puede ajustarse subiendo o bajando el umbral de satisfacción.\nEl predictor de satisfacción codifica el contexto con un Transformer y lo convierte en una predicción escalar mediante una capa lineal final en la cabeza de tarea; la tarea de Satisfacción usa parámetros de modelo separados de los de las tareas de Diálogo y Feedback.",
+  "parts": [
+    {
+      "id": "P1",
+      "status": "partial",
+      "answer": "El conjunto de datos de la tarea de Satisfacción se recogió mediante crowdsourcing: trabajadores chatearon con el agente de diálogo baseline y asignaron una calificación en una escala 1-5 por la calidad de cada una de las respuestas del agente.\nLos contextos con calificación 1 se mapearon a la clase negativa (insatisfecho).\nLos contextos con calificación 2 fueron descartados para aumentar la separación entre clases y obtener un conjunto de entrenamiento más limpio.\nEstas calificaciones numéricas solo se solicitaron al recopilar los datos de entrenamiento iniciales; durante el despliegue no se pidieron y solo se usa diálogo natural.\nA diferencia de la recogida de etiquetas humanas, el mecanismo entrenado es una tarea auxiliar en la que el agente aprende a predecir la satisfacción de su compañero con sus respuestas: los ejemplos son pares que asocian el mismo contexto de la tarea de Diálogo con una etiqueta que va de insatisfecho a satisfecho.\nDurante el despliegue, cada turno el agente observa el contexto y predice la satisfacción del compañero: si la puntuación supera un umbral especificado, extrae un nuevo ejemplo de Diálogo Humano-Bot con la respuesta humana; si el usuario parece insatisfecho, pide retroalimentación y la respuesta obtenida crea un ejemplo para la tarea de Feedback.\nLa tasa de recolección de nuevos ejemplos de Diálogo o de Feedback puede ajustarse subiendo o bajando el umbral de satisfacción.\nEl predictor de satisfacción codifica el contexto con un Transformer y lo convierte en una predicción escalar mediante una capa lineal final en la cabeza de tarea; la tarea de Satisfacción usa parámetros de modelo separados de los de las tareas de Diálogo y Feedback.",
+      "missing": [
+        "El valor o rango de calificaciones de la escala 1-5 que se mapea a la clase positiva (satisfecho) aparece como INLINEFORM0 en el fragmento sin valor textual: es desconocido en los pasajes suministrados y no se deduce por eliminación ni mediante expresiones como «los restantes».",
+        "El valor numérico del umbral de satisfacción utilizado durante el despliegue (INLINEFORM10 en el fragmento) no está presente en los pasajes: es desconocido.",
+        "Las expresiones exactas (fórmulas) marcadas como INLINEFORM en los fragmentos —por ejemplo, la forma de los pares de ejemplos de Satisfacción y de la predicción escalar— carecen de contenido textual en los pasajes y se desconocen."
+      ]
+    }
+  ],
+  "missing": [
+    "El valor o rango de calificaciones de la escala 1-5 que se mapea a la clase positiva (satisfecho) aparece como INLINEFORM0 en el fragmento sin valor textual: es desconocido en los pasajes suministrados y no se deduce por eliminación ni mediante expresiones como «los restantes».",
+    "El valor numérico del umbral de satisfacción utilizado durante el despliegue (INLINEFORM10 en el fragmento) no está presente en los pasajes: es desconocido.",
+    "Las expresiones exactas (fórmulas) marcadas como INLINEFORM en los fragmentos —por ejemplo, la forma de los pares de ejemplos de Satisfacción y de la predicción escalar— carecen de contenido textual en los pasajes y se desconocen."
+  ],
+  "answer_scope": "selected_passages",
+  "requires_expansion": true,
+  "document_absence_established": false,
+  "semantic_support": "not_verified",
+  "review_status": "unreviewed",
+  "memory_admission": "not_performed",
+  "diagnostic": null,
+  "warnings": [
+    "Esta vista muestra datos guardados; no verifica su respaldo semántico.",
+    "Lectura parcial: requiere ampliación antes de un cierre sobre la fuente completa."
+  ]
+}

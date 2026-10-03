@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-10-03T18:56:19.813219+00:00",
+  "producer_disposition": "bounded candidate acceptable; not admitted",
+  "review_independence": false,
+  "criteria": {
+    "Spanish": true,
+    "known_labelling_facts_retained": true,
+    "positive_mapping_explicitly_unknown": true,
+    "training_prediction_distinguished": true,
+    "all_11_citation_anchors_exact": true,
+    "partial_scope_and_missing_visible": true
+  },
+  "claims": 8,
+  "citation_occurrences": 11,
+  "quote_bytes": 8876,
+  "usage": {
+    "completion_tokens": 4828,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3964
+    },
+    "prompt_tokens": 3767,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8595
+  },
+  "http_attempts": 1,
+  "seconds": 87.30179612501524,
+  "semantic_status_in_product": "not_verified",
+  "limitations": [
+    "one known case",
+    "producer review only",
+    "retrieval and answer questions differ explicitly",
+    "87s of 90s timeout leaves little margin",
+    "structural v3 plan preserves lexical selection: 11990 bytes rather than 5991 for isolated structure selector",
+    "claim-evidence contract allows 16 claims; passage v0.4 six-claim cap does not apply here"
+  ]
+}

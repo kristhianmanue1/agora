@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "seconds": 87.30179612501524,
+  "stdout": "{\"status\": \"complete\", \"answer_status\": \"candidate_requires_expansion\", \"diagnostic\": null, \"diagnostics\": [], \"http_attempts\": 1, \"output\": \"/tmp/agora-structured-live-v1/live/result.json\", \"requires_expansion\": true, \"reading_budget_bytes\": 12000, \"expansion_policy\": \"explicit_review_and_budget_required\"}\n",
+  "stderr": ""
+}

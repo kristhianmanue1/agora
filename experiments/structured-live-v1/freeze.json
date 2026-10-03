@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-10-03T18:52:35.802457+00:00",
+  "source_sha256": "3cb19a89c67cd4496ab8c40e8d716f52dfbf4bd30c4ce99bfdd0ce0f4cc5bec6",
+  "plan_sha256": "b7e0ca93b0a877e5e8216293f21b7bd868ad3dd26797654c8a6744a6b5070547",
+  "code_commit": "0f2a83020a6c8a68aea3746556b54029e37c226e",
+  "question": "¿Cómo se recogieron las etiquetas humanas de satisfacción, qué escala se usó y qué mapeos o exclusiones están documentados? Distingue esto del mecanismo de predicción entrenado. Responde en español. Si una fórmula falta, declárala desconocida: no reconstruyas intervalos ni deduzcas valores por eliminación o mediante expresiones como «los restantes». Conserva lo conocido sin completar el hueco.",
+  "retrieval_question": "How were human satisfaction labels collected, rated, mapped and excluded? How does the trained model predict satisfaction from dialogue context?",
+  "question_policy": "English retrieval question, explicit Spanish generation question from prior repaired case",
+  "model": "glm-5.3-flash",
+  "max_calls": 1,
+  "max_output_tokens": 8192,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "delivered_bytes": 11990,
+  "reading_budget_bytes": 12000,
+  "citation_mode": "ids",
+  "scope_guard": true,
+  "acceptance": [
+    "complete structurally",
+    "Spanish response",
+    "documented labels and prediction distinguished",
+    "positive mapping remains explicitly unknown",
+    "literal references and partial scope preserved"
+  ],
+  "review": "producer inspection only, not independent adjudication"
+}

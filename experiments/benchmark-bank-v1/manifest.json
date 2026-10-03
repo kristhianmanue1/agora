@@ -464,6 +464,30 @@
     {
       "path": "experiments/structured-handoff-v1/view.json",
       "sha256": "01d519596806d5eed6698e20ca76de570b73ed997dd47eeb405c17ebd6cdf9bc"
+    },
+    {
+      "path": "experiments/structured-live-v1/README.md",
+      "sha256": "25534fb33de68a7ec35890b98d81e627aa4e0fa8ebbed012a7cafc8168d2c4ba"
+    },
+    {
+      "path": "experiments/structured-live-v1/assessment.json",
+      "sha256": "c9256e566749464bcb01f7842b81a696861f8d12f362b72d351db44b4efb24e9"
+    },
+    {
+      "path": "experiments/structured-live-v1/execution.json",
+      "sha256": "b8394390787eebefaf8db0df75aa63becf3ea5c4c742597df7114d6ef4f65eb1"
+    },
+    {
+      "path": "experiments/structured-live-v1/freeze.json",
+      "sha256": "cd635ecf90c99f0865afe081936d4539b9f043ae977ca67e91d4bd8f85bb47ae"
+    },
+    {
+      "path": "experiments/structured-live-v1/receipt.json",
+      "sha256": "30b00f90bea7065823e127f6c3ede1f93d00c4751a23aa5afbb31df1f4617985"
+    },
+    {
+      "path": "experiments/structured-live-v1/view.json",
+      "sha256": "65611f5414887b2c339fe384f774456eed65ced14bf2b97ecd95d569ec35bb00"
     }
   ],
   "expected_accounting": {
