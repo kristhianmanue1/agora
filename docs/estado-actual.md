@@ -424,3 +424,16 @@ No hay equivalencia de ranking: cuatro registros por store AN-KLA frente a un cu
 por caso MemOS. No se probaron supersede/checkpoint ni enforcement. Recomendación:
 conservar AN-KLA para registros explícitos gobernados; MemOS sigue siendo candidato
 auxiliar, con comprobación de ingestión y procedencia antes de cualquier integración.
+
+### Transiciones AN-KLA y acción de laboratorio: verificadas con límites
+
+[Ensayo y reproducción limpia](../experiments/ankla-transitions-v1/README.md): supersede
+retira el registro anterior de recuperación vigente y preserva su revisión; checkpoint
+show/resume conservan working-state-v2; planes de checkpoint y escritura con revisión
+obsoleta son rechazados sin cambiar CURRENT. AN-KLA 0.1.0b24, cero llamadas a modelos.
+
+attest run rechazó una acción no permitida antes de crear el archivo marcador. En otro
+store, el argv exacto autorizado creó el marcador; alterar el destino volvió a bloquear.
+Es bloqueo efectivo de esa ruta, no sandbox global ni integración con la ejecución de
+agentes. Memoria declarativa no configura permisos. No se cambió código productivo ni
+se instaló control de ejecución fuera del laboratorio.

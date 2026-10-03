@@ -1,0 +1,91 @@
+{
+  "supersede_current_excludes_old": true,
+  "historical_revision_verified": true,
+  "checkpoint_roundtrip": true,
+  "resume_contains_next_step": true,
+  "stale_checkpoint_rejected_without_revision_change": true,
+  "stale_write_rejected_without_revision_change": true,
+  "denied_marker_absent": true,
+  "positive_marker_executed": true,
+  "altered_argument_marker_absent": true,
+  "scope": "AN-KLA CLI and attest whitelist laboratory only; not a general sandbox, hostile-host defense or deployed integration",
+  "version": "an-kla-memory 0.1.0b24",
+  "provider_calls": 0,
+  "runner_sha256": "34bd6d83105b2a17183469232447a722b436bcceb7b22ef058bf5eace87a26df",
+  "negative_results": {
+    "stale-checkpoint": {
+      "exit_code": 1,
+      "diagnostic": "an-kla error: checkpoint_plan_base_changed"
+    },
+    "stale-write-rejected": {
+      "exit_code": 1,
+      "diagnostic": "an-kla error: write_plan_base_changed (refresh_status_and_replan)"
+    },
+    "denied-action": {
+      "exit_code": 1,
+      "diagnostic": "an-kla error: attest_command_not_allowed"
+    },
+    "altered-action": {
+      "exit_code": 1,
+      "diagnostic": "an-kla error: attest_command_not_allowed"
+    }
+  },
+  "artifact_hashes": {
+    "advance-authority.json": "2c90b26cc2bc46db0097b1a0ce4285d03e05b1c3527a066245a1e609971f7ead",
+    "advance-commit.json": "d2ce9ac8981cf960af0be0c727b8e0e6efe79b9cf73366d739c8c46b8d5492ef",
+    "advance-plan.json": "4f3f23833f139e508556b12aa8c9d1a17124a05d0cab8b1d684d57296e2fe0e8",
+    "advance-planning.json": "b4bbfa27d2e1acdcd1961f938d77ede4c9a4841569a5e4241bfbf15931c7546b",
+    "advance-proposal.json": "623815886bb1897c6fd5254573554c67b2972a55a4bda1dfa9823addf388b62c",
+    "advance-status.json": "44a0b6bdfa50af822ac2db1f70fd593f6a236ed73764fa711dcb2a96a58fc698",
+    "after-stale-checkpoint.json": "44a0b6bdfa50af822ac2db1f70fd593f6a236ed73764fa711dcb2a96a58fc698",
+    "after-stale-write.json": "d79f0f502dafa37f2bdf6a3570d9df807d769d0c280f2b69776c7eb53e0d6e29",
+    "allowed-action.json": "ba361e9310194fdd6ed6048cea1e1d35ae4dddc77bfca3136b9abec2e0afdba7",
+    "allowed-init.json": "523d9f8dd272a3d19de28ef00f083737a7aad84d1093f4d987f989ebbb8c68ac",
+    "altered-action.json": "c378600dec394637b11336234874f8f1ab2d32f0a4889621f960a6c9589f11fc",
+    "before-stale-checkpoint.json": "44a0b6bdfa50af822ac2db1f70fd593f6a236ed73764fa711dcb2a96a58fc698",
+    "before-stale-write.json": "d79f0f502dafa37f2bdf6a3570d9df807d769d0c280f2b69776c7eb53e0d6e29",
+    "checkpoint-after.json": "61f7653d6fc4918847dddd2f69111d1191366181449a174da0f16ea804ed259a",
+    "checkpoint-authority.json": "6100a1f57ff8e0a6632018a3caf14d54b978149e35afa20389ad3c70d091771b",
+    "checkpoint-base.json": "8fd6dc996b5c93454bf12af87ce79877df397f65ab39b7065af147d77f4d1058",
+    "checkpoint-before.json": "132741beedd0d824c445fbaa55f7d657975587c2f554b7d2a30aeba8c867d918",
+    "checkpoint-commit.json": "5881e391d53034a3f2c9985182d84444c9f3df7373e9067afb6284df9d6e463e",
+    "checkpoint-plan.json": "8365a35ed3715240110792cb3b8b2897de896d8316af0fca9ec68eba2b4affa3",
+    "checkpoint-planning.json": "65eb9e2c548f21662109d167747cc97dd8539805514f7b54f60fbbbba0ea6b19",
+    "checkpoint-template.json": "2fe41298f757b131858379fe7a0b04fb9dfa84bc3d4a6504af355551fd4fb1bc",
+    "denied-action.json": "5b3637b6325ed67e3a215db1854a9b6ee730241f8f84bc6709ce42b1dd18e1a6",
+    "denied-init.json": "3830b12c615395dcdebaad172111c8a1da869d5bd48b8cfcf61cc6035c03a62b",
+    "final-verify.json": "ebbf14def9b613e5542c72ac0ae692752e3788974d30c2c911d71d68d2a5405d",
+    "init.json": "77a0efc3c4e379b4e08f779fa2bd9c6d8989807748a613b823e5f8ab978fcbd3",
+    "initial-authority.json": "2ddea81473a498a7384b1f92c3d6275368ae99b4163e881739f8b3866524f426",
+    "initial-commit.json": "d12757b725d7443f357db5015bf31b2854e71763c337dbe2b4106d25bc3fb573",
+    "initial-plan.json": "7f702c22aac5d518229f290ddc80c349141e20fa900d21a5155796f6edc0ac42",
+    "initial-planning.json": "d64cbefaa9e0a99f7427ab430688ede9d65240d685537ca6777aed6e314171fb",
+    "initial-proposal.json": "4ee27ac05a65467dba5be6a7c7350c03fc7dc1d70b581ac7802cf8a7bb52f51a",
+    "initial-revision.json": "a2e8e782367ac8b47b7a6736854ed880d12d40281e795c70a1003200f4e89c00",
+    "initial-status.json": "187252b1afe6b56861505275a33e69d6f35a903d91aa5cb85b95d32dc1c8a8c7",
+    "old-inventory.json": "b25eac2ec6c7b1aac977980b2edeb123e69ba9ca46e84ead6e249841e731f895",
+    "old-verify.json": "64ee39cfdc0b3b2e49548972f6197b5d6aa3ab9d48f002482216a70fc180d7a5",
+    "replacement-authority.json": "b5f9deabd16e54a9241857124be24db72c68313489ab412f2fa52b9c2b65c758",
+    "replacement-commit.json": "078107ed65379833dbfd9da19ccc8ece1fc64fdf0439905d4ac9126810181af6",
+    "replacement-plan.json": "b27c72740805e0eb7f2a7c06729d3766a3e0b10df10ba5d16aa84255dbc97faa",
+    "replacement-planning.json": "aa49147918eedff86a738de2fc2b6646c28ba8ff4a2ace708313c6d95a35614f",
+    "replacement-proposal.json": "2d99b89b4169ec9e4aea0ac70b2283fcc925f98039fad6fcfb2c3cc48aaa57ff",
+    "replacement-status.json": "a2e8e782367ac8b47b7a6736854ed880d12d40281e795c70a1003200f4e89c00",
+    "result.json": "491531b42f3563deb43134523223b8d932da7f5cbe671501f4ea1a74bacde4a7",
+    "resume.json": "195eca029a4001257a283009b8af4214b636507f8d1f2966261787aeff337965",
+    "stale-checkpoint.json": "eea75470af80729ec797c331724c9fd05ef26e6d1b09f63427440b0b6471a8b5",
+    "stale-write-authority.json": "2f8d8d848b52bd78a6fffc0c8d40f654798f2ef4a6336bc6ba619ba621e5db9b",
+    "stale-write-plan.json": "9cce0cbda788803d9fec9cac2042b99a590412975005bcd764c2725ef7bc9141",
+    "stale-write-planning.json": "e0851e8c4433405c194a4ce2f23833880e0de2ffe4e1cd0dad59926f6bee0abe",
+    "stale-write-proposal.json": "e04f6e49e6da0ec8e2cab522aaacf3e011653928fe4b9fe0a25a42c50d8cb0a6",
+    "stale-write-rejected.json": "8045326a0e452e96886fecc83bc44dc553efa62a3c998ed38848a6ed678f7baa",
+    "stale-write-status.json": "44a0b6bdfa50af822ac2db1f70fd593f6a236ed73764fa711dcb2a96a58fc698",
+    "supersede-retrieve.json": "075ae1f4a18576bedabe553f2a7d030d466ed65def91d1ea2fa15fe41935a08d",
+    "working-state.json": "12d9f81b3543d2405ecbc1ce2b3efdd3710c3239f4e186ee2e28e3ab99984896"
+  },
+  "preparation_errors": [
+    "full context view requires exact subject; records without subject_ref require inventory for historical presence",
+    "captured_at supplied without canonical microseconds was rejected; corrected in new input before any checkpoint commit"
+  ],
+  "independent_review": false
+}
