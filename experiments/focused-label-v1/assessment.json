@@ -1,0 +1,62 @@
+{
+  "schema": "aria/focused-label-regression/v1",
+  "observed_at": "2026-10-03T17:13:07.379746+00:00",
+  "rows": [
+    {
+      "stage": "initial",
+      "effort": "default",
+      "tokens": 3552,
+      "seconds": 36.62046087498311,
+      "execution_status": "complete",
+      "answer_status": "candidate_requires_expansion",
+      "semantic_disposition": "producer_rejects",
+      "findings": [
+        "English despite Spanish system instruction",
+        "Positive mapping inferred as remaining ratings; qualification does not remove unsupported inference"
+      ]
+    },
+    {
+      "stage": "initial",
+      "effort": "low",
+      "tokens": 1647,
+      "seconds": 5.220641917083412,
+      "execution_status": "complete",
+      "answer_status": "candidate_requires_expansion",
+      "semantic_disposition": "producer_rejects",
+      "findings": [
+        "English despite Spanish system instruction",
+        "Invented positive mapping 3-5; no missing item"
+      ]
+    },
+    {
+      "stage": "repair",
+      "effort": "default",
+      "tokens": 3591,
+      "seconds": 31.300817082985304,
+      "execution_status": "complete",
+      "answer_status": "candidate_requires_expansion",
+      "semantic_disposition": "producer_accepts_bounded_repair",
+      "findings": [
+        "Spanish answer, requested available facts retained, positive mapping explicitly unknown, no elimination reconstruction"
+      ]
+    }
+  ],
+  "total_tokens": 8790,
+  "http_attempts": 3,
+  "automatic_retries": 0,
+  "initialization_failure": "One local ModuleNotFoundError before HTTP; fixed explicit repo path; zero API cost",
+  "source_bytes": 45557,
+  "selected_bytes": 3224,
+  "selection": "manual producer selection of four original paragraphs",
+  "semantic_review": "producer only, not independent; no automated semantic acceptance",
+  "closure": "bounded repair accepted by producer; candidate not admitted; general automatic repair remains unproven",
+  "product_code_changed": false,
+  "previous_evidence": "../refinement-v2/",
+  "residual": [
+    "candidate_requires_expansion retained",
+    "no independent adjudication",
+    "manual selection and wording refinement confound causal attribution",
+    "low not promoted",
+    "single successful final attempt does not establish reliability"
+  ]
+}

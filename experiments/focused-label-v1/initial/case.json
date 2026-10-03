@@ -1,0 +1,54 @@
+{
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "source_bytes": 45557,
+  "question": "How were the satisfaction training labels collected from human evaluators, what rating scale was used, and how were ratings mapped or excluded? Separately distinguish this from the trained prediction mechanism. Do not reconstruct missing formula text.",
+  "selection_method": "producer selected four existing paragraphs after known failures; not blind retrieval",
+  "ranges": [
+    {
+      "start_byte": 12584,
+      "end_byte": 13161,
+      "sha256": "a0345c0157e6d30a45c25f0834f6ba8076479c64f2cdd0ffb0ff967fb7634b67",
+      "text": "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”."
+    },
+    {
+      "start_byte": 13163,
+      "end_byte": 13748,
+      "sha256": "e669f37ccf85ac60012b2573f4b3657d7c7a5fb567080a6fd3c420a2b5ef3f9b",
+      "text": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+    },
+    {
+      "start_byte": 14773,
+      "end_byte": 15968,
+      "sha256": "0479619730639da6a75da9314af14a14a22b7a27af81fc3792ef523da6e83b7e",
+      "text": "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc."
+    },
+    {
+      "start_byte": 15970,
+      "end_byte": 16837,
+      "sha256": "a18227240126bf4c70938daffbd1b65c67790f787fb037121658f04e4e888b37",
+      "text": "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate."
+    }
+  ],
+  "expected": {
+    "labellers": "crowdworkers",
+    "scale": "1 to 5",
+    "negative": "rating 1",
+    "excluded": "rating 2",
+    "positive": "unknown in extracted source: INLINEFORM0",
+    "prediction": "separate trained satisfaction classifier, Transformer context and linear head"
+  },
+  "acceptance": [
+    "complete execution with literal source-bound IDs",
+    "all available requested facts retained",
+    "positive threshold explicitly missing, not reconstructed",
+    "missing list nonempty; candidate not admitted",
+    "within existing text and quote budgets"
+  ],
+  "limits": [
+    "known-case regression",
+    "selection prepared by producer",
+    "no independent semantic review",
+    "does not establish source-wide absence or general retrieval performance"
+  ]
+}

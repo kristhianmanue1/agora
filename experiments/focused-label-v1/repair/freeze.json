@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-10-03T17:10:19.071515+00:00",
+  "case_sha256": "baba17847fb752110589d28951a78265e80cf0f6acfb4ce77b9206a13775a569",
+  "max_calls": 1,
+  "retries": 0,
+  "efforts": [
+    "default"
+  ],
+  "model": "glm-5.3-flash",
+  "max_output_tokens": 4096,
+  "timeout_seconds": 180,
+  "content_budget": 5000,
+  "prompt_budget": 16000,
+  "code_commit": "915bd51c28115d9436833df2ca5da8fe78c0b2b1",
+  "code_changes": false,
+  "purpose": "explicit repair after known failures; question wording changed; not blind causal comparison"
+}

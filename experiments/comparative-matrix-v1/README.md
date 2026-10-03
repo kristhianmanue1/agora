@@ -150,3 +150,12 @@ regresión: una candidata recuperada y dos rechazos, por 43.534 tokens adicional
 543 tests locales pasan; el caso de etiquetado permanece abierto por truncamiento
 y, en un intento separado, exceso de citas y reconstrucción indebida de fórmula.
 No hay nueva medición MemOS ni promoción automática de GLM low o de Jev.
+
+
+### Reparación asistida del caso de fórmula faltante
+
+[Expediente](../focused-label-v1/README.md): selección manual de cuatro párrafos, tres llamadas (8.790
+tokens), dos respuestas estructuralmente válidas rechazadas por el productor y una
+reparación final que conserva el dato faltante. Sin cambio de código ni aceptación
+automática. La candidata mantiene alcance parcial; mostrar `missing` junto a
+`answer` es necesario para no ocultar el límite. No es nueva comparación MemOS.

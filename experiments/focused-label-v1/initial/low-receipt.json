@@ -1,0 +1,228 @@
+{
+  "schema": "agora/passage-query/v0.4",
+  "question": "How were the satisfaction training labels collected from human evaluators, what rating scale was used, and how were ratings mapped or excluded? Separately distinguish this from the trained prediction mechanism. Do not reconstruct missing formula text.",
+  "mode": "reference",
+  "source_id": "1901.05415",
+  "source_sha256": "e86ffc3325548fdbdf50007cceef3e75ac4464a8eeb19adbe2440b56e30c3985",
+  "options": {
+    "content_budget": 5000,
+    "prompt_budget": 16000,
+    "top_k": 3,
+    "ranges": [
+      [
+        12584,
+        13161
+      ],
+      [
+        13163,
+        13748
+      ],
+      [
+        14773,
+        15968
+      ],
+      [
+        15970,
+        16837
+      ]
+    ]
+  },
+  "provider_calls": 1,
+  "review_status": "unreviewed",
+  "semantic_support": "not_verified",
+  "memory_admission": "not_performed",
+  "citation_mode": "ids",
+  "answer_scope": "selected_passages",
+  "requires_expansion": true,
+  "document_absence_established": false,
+  "response_limits": {
+    "max_text_characters": 2000,
+    "max_claims": 6,
+    "max_missing_items": 4
+  },
+  "prompt_bytes": 6059,
+  "response": {
+    "content": "{\"parts\":[{\"id\":\"P1\",\"status\":\"answered\",\"claims\":[{\"text\":\"The satisfaction training labels were collected via crowdsourcing: workers chatted with the baseline dialogue agent and assigned a 1-5 rating for the quality of each of the agent's responses.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Ratings of 1 were mapped to the negative (dissatisfied) class, other ratings (3-5) mapped to the positive (satisfied) class, and ratings of 2 were discarded to increase separation between classes for a cleaner training set.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.\",\"evidence_ids\":[\"ev_819fff9db849102d0036a4c2\"]},{\"text\":\"Separately from label collection, the trained prediction mechanism encodes the context with a Transformer and converts it to a scalar satisfaction prediction via a final linear layer in the task head.\",\"evidence_ids\":[\"ev_c864d1d576ae617ca781c270\"]},{\"text\":\"The Satisfaction task uses separate model parameters from the Dialogue/Feedback tasks, and examples take the form (context, label) pairs where the label ranges from dissatisfied to satisfied.\",\"evidence_ids\":[\"ev_f1aad37cec05939ce7b75d3c\",\"ev_3d3f0eace53f08df3858f201\"]}],\"missing\":[]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "response_id": "20261004010912a8c25850fea6486b",
+    "usage": {
+      "completion_tokens": 348,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens": 1299,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1647
+    }
+  },
+  "execution_status": "complete",
+  "answer_status": "candidate_requires_expansion",
+  "answer": "The satisfaction training labels were collected via crowdsourcing: workers chatted with the baseline dialogue agent and assigned a 1-5 rating for the quality of each of the agent's responses.\nRatings of 1 were mapped to the negative (dissatisfied) class, other ratings (3-5) mapped to the positive (satisfied) class, and ratings of 2 were discarded to increase separation between classes for a cleaner training set.\nNumeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.\nSeparately from label collection, the trained prediction mechanism encodes the context with a Transformer and converts it to a scalar satisfaction prediction via a final linear layer in the task head.\nThe Satisfaction task uses separate model parameters from the Dialogue/Feedback tasks, and examples take the form (context, label) pairs where the label ranges from dissatisfied to satisfied.",
+  "parts": [
+    {
+      "id": "P1",
+      "status": "answered",
+      "claims": [
+        {
+          "text": "The satisfaction training labels were collected via crowdsourcing: workers chatted with the baseline dialogue agent and assigned a 1-5 rating for the quality of each of the agent's responses.",
+          "quotes": [
+            "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+          ],
+          "evidence_ids": [
+            "ev_819fff9db849102d0036a4c2"
+          ]
+        },
+        {
+          "text": "Ratings of 1 were mapped to the negative (dissatisfied) class, other ratings (3-5) mapped to the positive (satisfied) class, and ratings of 2 were discarded to increase separation between classes for a cleaner training set.",
+          "quotes": [
+            "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+          ],
+          "evidence_ids": [
+            "ev_819fff9db849102d0036a4c2"
+          ]
+        },
+        {
+          "text": "Numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+          "quotes": [
+            "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used."
+          ],
+          "evidence_ids": [
+            "ev_819fff9db849102d0036a4c2"
+          ]
+        },
+        {
+          "text": "Separately from label collection, the trained prediction mechanism encodes the context with a Transformer and converts it to a scalar satisfaction prediction via a final linear layer in the task head.",
+          "quotes": [
+            "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate."
+          ],
+          "evidence_ids": [
+            "ev_c864d1d576ae617ca781c270"
+          ]
+        },
+        {
+          "text": "The Satisfaction task uses separate model parameters from the Dialogue/Feedback tasks, and examples take the form (context, label) pairs where the label ranges from dissatisfied to satisfied.",
+          "quotes": [
+            "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc.",
+            "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”."
+          ],
+          "evidence_ids": [
+            "ev_f1aad37cec05939ce7b75d3c",
+            "ev_3d3f0eace53f08df3858f201"
+          ]
+        }
+      ],
+      "missing": []
+    }
+  ],
+  "citations": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "quote_index": 0,
+      "evidence_id": "ev_819fff9db849102d0036a4c2",
+      "quote": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "matches": [
+        {
+          "start_byte": 13163,
+          "end_byte": 13748
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "quote_index": 0,
+      "evidence_id": "ev_819fff9db849102d0036a4c2",
+      "quote": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "matches": [
+        {
+          "start_byte": 13163,
+          "end_byte": 13748
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "quote_index": 0,
+      "evidence_id": "ev_819fff9db849102d0036a4c2",
+      "quote": "The dataset for this task was collected via crowdsourcing. Workers chatted with our baseline dialogue agent and assigned a rating 1-5 for the quality of each of the agent's responses. Contexts with rating 1 were mapped to the negative class (dissatisfied) and ratings INLINEFORM0 mapped to the positive class (satisfied). Contexts with rating 2 were discarded to increase the separation between classes for a cleaner training set. Note that these numeric ratings were requested only when collecting the initial training data, not during deployment, where only natural dialogue is used.",
+      "matches": [
+        {
+          "start_byte": 13163,
+          "end_byte": 13748
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "quote_index": 0,
+      "evidence_id": "ev_c864d1d576ae617ca781c270",
+      "quote": "Our dialogue agent's models are built on the Transformer architecture BIBREF39 , which has been shown to perform well on a variety of NLP tasks BIBREF40 , BIBREF41 , including multiple persona-based chat applications BIBREF42 , BIBREF43 , BIBREF44 . For the Satisfaction task, the context INLINEFORM0 is encoded with a Transformer and converted to the scalar satisfaction prediction INLINEFORM1 by a final linear layer in the task head. The Dialogue and Feedback tasks are set up as ranking problems, as in BIBREF11 , BIBREF45 , where the model ranks a collection of candidate responses and returns the top-ranked one as its response. The context INLINEFORM2 is encoded with one Transformer and INLINEFORM3 and INLINEFORM4 candidates are encoded with another. The score for each candidate is calculated as the dot product of the encoded context and encoded candidate.",
+      "matches": [
+        {
+          "start_byte": 15970,
+          "end_byte": 16837
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 4,
+      "quote_index": 0,
+      "evidence_id": "ev_f1aad37cec05939ce7b75d3c",
+      "quote": "The self-feeding chatbot has two primary components: an interface component and a model component. The interface component is shared by all tasks, and includes input/output processing (tokenization, vectorization, etc.), conversation history storage, candidate preparation, and control flow (e.g., when to ask a question vs. when to give a normal dialogue response). The model component contains a neural network for each task, with embeddings, a network body, and a task head, some of which can be shared. In our case, we obtained maximum performance by sharing all parameters between the Feedback and Dialogue tasks (prepending Feedback responses with a special token), and using separate model parameters for the Satisfaction task. Identifying optimal task structure in multi-task learning (MTL) architectures is an open research problem BIBREF38 . Regardless of what parameters are shared, each training batch contains examples from only one task at a time, candidate sets remain separate, and each task's cross-entropy loss is multiplied by a task-specific scaling factor tuned on the validation set to help account for discrepancies in dataset size, loss magnitude, dataset relevance, etc.",
+      "matches": [
+        {
+          "start_byte": 14773,
+          "end_byte": 15968
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 4,
+      "quote_index": 1,
+      "evidence_id": "ev_3d3f0eace53f08df3858f201",
+      "quote": "The objective of the Satisfaction auxiliary task is to predict whether or not a speaking partner is satisfied with the quality of the current conversation. Examples take the form of INLINEFORM0 pairs, where INLINEFORM1 is the same context as in the Dialogue task, and INLINEFORM2 , ranging from dissatisfied to satisfied. Crucially, it is hard to estimate from the bot's utterance itself whether the user will be satisfied, but much easier using the human's response to the utterance, as they may explicitly say something to that effect, e.g. “What are you talking about?”.",
+      "matches": [
+        {
+          "start_byte": 12584,
+          "end_byte": 13161
+        }
+      ]
+    }
+  ],
+  "missing": [],
+  "evidence_sufficiency": "unknown",
+  "normalization": "resolved_evidence_ids",
+  "http_attempts": 1,
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_calls": 1,
+    "temperature": 0,
+    "reasoning_effort": "low"
+  },
+  "implementation_hashes": {
+    "passages.py": "4544cd67d87e82c1cf3a2e3ad4bd7a31205f1b4c964d98fcf8efa89a97e46afd",
+    "passage_cli.py": "82c3522dc070a51f17009ebf2192e4e050c921d3f64d43b0b210ee769889d2f2",
+    "source.py": "c1454409cd88ba17da3c9df31536dbb78db25480224fac931aa573c28b7d487f",
+    "query.py": "2d82b6b9a0bb949d358178bb3bcd98fc0add0ba5651f7910024ec2e49a65bf2b",
+    "transform.py": "8095dc317f2e6e0d914ca4d8c4b3f2dc1da02c368ddb4adc186274db51fc9eec",
+    "__main__.py": "d73c26fc481253876360e09c135b6c44c8407eb7affb2ff232bd5b91d717452c",
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0"
+  },
+  "implementation_unchanged": true,
+  "timing": {
+    "seconds": 5.220641917083412,
+    "exit_code": 0
+  }
+}

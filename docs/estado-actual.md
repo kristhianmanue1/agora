@@ -512,3 +512,12 @@ limita el texto de salida y conserva los faltantes por aspecto. Incluye control 
 alcance; el modo literal y sus contratos anteriores siguen disponibles. No añade
 reparación automática ni admisión de resultados. Pruebas y repetición de los dos
 rechazos conocidos: [refinement-v2](../experiments/refinement-v2/README.md).
+
+
+### Reparación asistida del caso de fórmula faltante
+
+[Expediente](../experiments/focused-label-v1/README.md): selección manual de cuatro párrafos, tres llamadas (8.790
+tokens), dos respuestas estructuralmente válidas rechazadas por el productor y una
+reparación final que conserva el dato faltante. Sin cambio de código ni aceptación
+automática. La candidata mantiene alcance parcial; mostrar `missing` junto a
+`answer` es necesario para no ocultar el límite. No es nueva comparación MemOS.

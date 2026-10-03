@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-10-03T17:08:06.472077+00:00",
+  "case_sha256": "1dfb7ea7065b6107bacc2f0c44e77dfedc035525a17c91070dc375e1d3785589",
+  "max_calls": 2,
+  "retries": 0,
+  "efforts": [
+    "default",
+    "low"
+  ],
+  "model": "glm-5.3-flash",
+  "max_output_tokens": 4096,
+  "timeout_seconds": 180,
+  "content_budget": 5000,
+  "prompt_budget": 16000,
+  "code_commit": "915bd51c28115d9436833df2ca5da8fe78c0b2b1",
+  "code_changes": false
+}

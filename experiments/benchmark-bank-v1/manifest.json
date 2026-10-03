@@ -292,6 +292,54 @@
     {
       "path": "experiments/refinement-v2/result.json",
       "sha256": "cd4d929593b900b8d3586a50c363a58e4edb7f0ca967bd140b3d65cf566a1824"
+    },
+    {
+      "path": "experiments/focused-label-v1/README.md",
+      "sha256": "641f5d2d095ea685830328777f9096a8cf8c43f1295924e762a2410389c9fa80"
+    },
+    {
+      "path": "experiments/focused-label-v1/assessment.json",
+      "sha256": "ac8424a067947812611950acd0c3172d1b7672642797e53bfa55d2ae0c3bc652"
+    },
+    {
+      "path": "experiments/focused-label-v1/initial/case.json",
+      "sha256": "1dfb7ea7065b6107bacc2f0c44e77dfedc035525a17c91070dc375e1d3785589"
+    },
+    {
+      "path": "experiments/focused-label-v1/initial/default-receipt.json",
+      "sha256": "c790fd4e6f897ac12230c804d8bb065720519d155e1892d4ac1de5ddf41fc5b6"
+    },
+    {
+      "path": "experiments/focused-label-v1/initial/freeze.json",
+      "sha256": "9f01484cbd2b4b532b67639ee4d9fd937436c9316dd1db6970350e06af546355"
+    },
+    {
+      "path": "experiments/focused-label-v1/initial/low-receipt.json",
+      "sha256": "c3100cbeb0acdeee20a45daaf9cb1c5b12285a6da4463016f0062dcfc655cff6"
+    },
+    {
+      "path": "experiments/focused-label-v1/initial/run.py",
+      "sha256": "f4e63093c064f45d95ce8fd1515591ce4db32febe3ebfa55c70c222e9ba31ce4"
+    },
+    {
+      "path": "experiments/focused-label-v1/repair/case.json",
+      "sha256": "baba17847fb752110589d28951a78265e80cf0f6acfb4ce77b9206a13775a569"
+    },
+    {
+      "path": "experiments/focused-label-v1/repair/default-receipt.json",
+      "sha256": "5148f8ff0a7d66249d4223a11072debca016d49c0387ca5fe9e36debb0cb6062"
+    },
+    {
+      "path": "experiments/focused-label-v1/repair/freeze.json",
+      "sha256": "33af845b8403e6bdddfba1819da424e05eb32676f4ad61c3c415235f543c8c08"
+    },
+    {
+      "path": "experiments/focused-label-v1/repair/run.py",
+      "sha256": "f4e63093c064f45d95ce8fd1515591ce4db32febe3ebfa55c70c222e9ba31ce4"
+    },
+    {
+      "path": "experiments/focused-label-v1/verify.py",
+      "sha256": "e874f7b90f33037a4b98b494d0da23f8fa62e310cdb66dae408a99329031f439"
     }
   ],
   "expected_accounting": {
