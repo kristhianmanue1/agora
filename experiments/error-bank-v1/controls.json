@@ -1,0 +1,166 @@
+[
+  {
+    "id": "39efef93faa",
+    "family": "metric_swap_cited",
+    "variant": "error",
+    "origin": "memos-long-reserved-v2: inversión precisión/recall con cita literal correcta",
+    "source": "The reranker improves recall to 0.86 and precision to 0.88 on the test split. BLEU remains unchanged.",
+    "question": "¿Qué recall y precisión alcanza el reranker y qué ocurre con BLEU?",
+    "answer": "El reranker alcanza recall 0.88 y precisión 0.86, citando: «The reranker improves recall to 0.86 and precision to 0.88 on the test split». BLEU no cambia.",
+    "expected_support": "unsupported",
+    "expected_coverage": "complete",
+    "expected_flags": [
+      "citation_verbatim_figures_swapped"
+    ]
+  },
+  {
+    "id": "2a8cd020bc7",
+    "family": "metric_swap_cited",
+    "variant": "control",
+    "origin": "memos-long-reserved-v2: inversión precisión/recall con cita literal correcta",
+    "source": "The reranker improves recall to 0.86 and precision to 0.88 on the test split. BLEU remains unchanged.",
+    "question": "¿Qué recall y precisión alcanza el reranker y qué ocurre con BLEU?",
+    "answer": "El reranker alcanza recall 0.86 y precisión 0.88: «The reranker improves recall to 0.86 and precision to 0.88 on the test split». BLEU no cambia.",
+    "expected_support": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "992bd2ee5a0",
+    "family": "study_merge",
+    "variant": "error",
+    "origin": "memos-long-reserved-v3: HiStGen/WIKIOG presentados como dos trabajos",
+    "source": "Jakobsen et al. report a 9.4-point gain in dialogue satisfaction. Mireles et al. report F1 0.42 for the intent classifier. The two studies use different corpora.",
+    "question": "¿Qué mejora reporta cada trabajo, sobre qué tarea y con qué corpus?",
+    "answer": "El artículo de Jakobsen reporta una mejora de 9.4 puntos en satisfacción de diálogo y un F1 de 0.42 en clasificación de intención, con el mismo corpus.",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "expected_flags": [
+      "study_merge"
+    ]
+  },
+  {
+    "id": "248a36b6ad8",
+    "family": "study_merge",
+    "variant": "control",
+    "origin": "memos-long-reserved-v3: HiStGen/WIKIOG presentados como dos trabajos",
+    "source": "Jakobsen et al. report a 9.4-point gain in dialogue satisfaction. Mireles et al. report F1 0.42 for the intent classifier. The two studies use different corpora.",
+    "question": "¿Qué mejora reporta cada trabajo, sobre qué tarea y con qué corpus?",
+    "answer": "Jakobsen et al. reportan 9.4 puntos en satisfacción de diálogo; Mireles et al. reportan F1 0.42 en clasificación de intención; usan corpus distintos.",
+    "expected_support": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "38399152b43",
+    "family": "qualifier_scope",
+    "variant": "error",
+    "origin": "memos-long-reserved-v2: pruebas cualitativas cotidianas omitidas",
+    "source": "We conducted a preliminary qualitative study with three pharmacologists in daily-use settings. The results were informal; no controlled trial was performed.",
+    "question": "¿Qué pruebas se hicieron con farmacólogos y con qué carácter?",
+    "answer": "El sistema se validó con pruebas realizadas por tres farmacólogos.",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "expected_flags": [
+      "qualifier_dropped",
+      "overstatement"
+    ]
+  },
+  {
+    "id": "b5bb5beb913",
+    "family": "qualifier_scope",
+    "variant": "control",
+    "origin": "memos-long-reserved-v2: pruebas cualitativas cotidianas omitidas",
+    "source": "We conducted a preliminary qualitative study with three pharmacologists in daily-use settings. The results were informal; no controlled trial was performed.",
+    "question": "¿Qué pruebas se hicieron con farmacólogos y con qué carácter?",
+    "answer": "Se realizó un estudio cualitativo preliminar e informal con tres farmacólogos en uso cotidiano; no se hizo ningún ensayo controlado.",
+    "expected_support": "supported",
+    "expected_coverage": "complete"
+  },
+  {
+    "id": "956f04b3a92",
+    "family": "question_ambiguity",
+    "variant": "error",
+    "origin": "memos-long-reserved-v3: mejora de diálogo frente a mejora del clasificador",
+    "source": "Dialogue satisfaction improved by 9.4 points. Separately, the intent classifier's F1 rose from 0.28 to 0.42.",
+    "question": "¿Cuánto mejoró el rendimiento?",
+    "answer": "El rendimiento mejoró 9.4 puntos; el documento no reporta ninguna otra mejora.",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "expected_flags": [
+      "ambiguity_unflagged",
+      "scope_overreach"
+    ]
+  },
+  {
+    "id": "f1807b234c7",
+    "family": "question_ambiguity",
+    "variant": "control",
+    "origin": "memos-long-reserved-v3: mejora de diálogo frente a mejora del clasificador",
+    "source": "Dialogue satisfaction improved by 9.4 points. Separately, the intent classifier's F1 rose from 0.28 to 0.42.",
+    "question": "¿Cuánto mejoró el rendimiento?",
+    "answer": "El documento reporta dos mejoras distintas: 9.4 puntos en satisfacción de diálogo y F1 de 0.28 a 0.42 en el clasificador de intención. No hay una única cifra que resuma «el rendimiento».",
+    "expected_support": "supported",
+    "expected_coverage": "complete",
+    "expected_flags": [
+      "ambiguity_made_visible"
+    ]
+  },
+  {
+    "id": "dcc2defc2ad",
+    "family": "scope_generalization",
+    "variant": "error",
+    "origin": "memos-long-reserved-v2: generalización de ausencia desde lectura parcial",
+    "source": "Section 3: We compare against two baselines, BM25 and a keyword-overlap ranker. Section 4: Our model adds a reranking stage.",
+    "question": "¿Contra qué líneas base se compara?",
+    "answer": "El documento no describe ninguna línea base.",
+    "expected_support": "unsupported",
+    "expected_coverage": "omitted",
+    "retrieved": [
+      "Section 4: Our model adds a reranking stage."
+    ],
+    "expected_flags": [
+      "generalizes_absence_from_partial"
+    ]
+  },
+  {
+    "id": "24ac7970d7c",
+    "family": "scope_generalization",
+    "variant": "control",
+    "origin": "memos-long-reserved-v2: generalización de ausencia desde lectura parcial",
+    "source": "Section 3: We compare against two baselines, BM25 and a keyword-overlap ranker. Section 4: Our model adds a reranking stage.",
+    "question": "¿Contra qué líneas base se compara?",
+    "answer": "En los pasajes consultados no aparece ninguna línea base; no puedo afirmar que el documento completo carezca de ellas.",
+    "expected_support": "supported",
+    "expected_coverage": "omitted",
+    "retrieved": [
+      "Section 4: Our model adds a reranking stage."
+    ],
+    "expected_flags": [
+      "declared_partial_scope"
+    ]
+  },
+  {
+    "id": "8eec010eaac",
+    "family": "backing_vs_coverage",
+    "variant": "error",
+    "origin": "refinement-v1: confusión respaldo/cobertura, dos fallos de Jev",
+    "source": "Training labels came from graduate annotators over four weeks. The classifier uses a bag-of-words feature set with L2 regularization.",
+    "question": "¿Qué características usa el clasificador y con qué regularización?",
+    "answer": "Las etiquetas de entrenamiento provienen de anotadores licenciados durante cuatro semanas.",
+    "expected_support": "supported",
+    "expected_coverage": "omitted",
+    "expected_flags": [
+      "true_but_nonresponsive"
+    ]
+  },
+  {
+    "id": "d74f3cf57a1",
+    "family": "backing_vs_coverage",
+    "variant": "control",
+    "origin": "refinement-v1: confusión respaldo/cobertura, dos fallos de Jev",
+    "source": "Training labels came from graduate annotators over four weeks. The classifier uses a bag-of-words feature set with L2 regularization.",
+    "question": "¿Qué características usa el clasificador y con qué regularización?",
+    "answer": "El clasificador usa características bag-of-words con regularización L2.",
+    "expected_support": "supported",
+    "expected_coverage": "complete"
+  }
+]

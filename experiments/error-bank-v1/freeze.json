@@ -1,0 +1,17 @@
+{
+  "schema": "aria/error-bank/v1",
+  "frozen_at": "2026-10-04T10:16:40.010854+00:00",
+  "purpose": "reviewer calibration bank; not a reserved benchmark and not a MemOS/Ágora comparison",
+  "controls_sha256": "2ca773944c62c61a9f84452696f94cb6e5a8c77671a2ea490538ee4b25d7d863",
+  "llm_calls_to_build": 0,
+  "generator_calls_planned": 0,
+  "jev_max_calls": 4,
+  "retries": 0,
+  "jev_timeout_seconds": 90,
+  "jev_control_order": "forward then reversed; expected labels and flags never sent",
+  "id_rule": "first 11 hex chars of sha256(family|variant)",
+  "regression_set_ref": "../refinement-v1/controls.json (6 controls; this bank extends, does not replace)",
+  "evaluation": "Producer-authored synthetic controls; Jev is a separate provider, not independent human adjudication",
+  "acceptance": "Gate in README; passing the gate does not promote automatically",
+  "estimated_execution_tokens": "~14000 (extrapolated from 7006 tokens for 6 controls in refinement-v1)"
+}
