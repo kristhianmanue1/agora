@@ -634,3 +634,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Entrada del baseline: inferencia conservada, sin completar el candidato
 
 [Contraste de fuente y publicación original](../experiments/baseline-input-assessment-v1/README.md): la condición baseline probablemente usa oraciones completas, pero la reutilización del mismo modelo para suboraciones impide deducir la entrada sólo desde su identidad. Figuras, tabla y texto original consultados refuerzan la interpretación; no equivalen a configuración explícita de la ejecución. Se conserva input desconocido en el candidato v2 y se registra la inferencia por separado. Cero llamadas a modelos y ninguna mutación del candidato. No repetir generaciones sobre los mismos tres pasajes; confirmar exige configuración de experimento o conservar el pendiente.
+
+## Entrada de descubrimiento para agentes
+
+[Guía de primer uso](guia-agentes.md): scripts/agora.py ofrece capabilities/describe/doctor/examples en JSON, ejemplo relations-offline sin red ni escrituras y run para ocho familias existentes. No instala servicios, no unifica silenciosamente contratos ni activa proveedores durante descubrimiento. Las ayudas se prueban desde otro directorio y el diagnóstico distingue Python inferior al mínimo documentado. La utilidad de primer uso aún no fue evaluada por un agente independiente.

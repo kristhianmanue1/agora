@@ -7,6 +7,23 @@ válido no demuestran por sí solos que una afirmación sea verdadera o completa
 **Estado operativo:** [capacidades, límites y próxima prioridad](docs/estado-actual.md).
 **Documentación completa:** [inventario y auditoría](docs/auditoria-documentacion.md).
 
+## Entrada para agentes
+
+Empezar por [la guía breve para agentes](docs/guia-agentes.md). Con Python 3.10+,
+la entrada `python3 scripts/agora.py` descubre y despacha las CLI existentes:
+
+```sh
+python3 scripts/agora.py capabilities --json
+python3 scripts/agora.py doctor --json
+python3 scripts/agora.py example relations-offline --json
+python3 scripts/agora.py describe relations --json
+python3 scripts/agora.py run relations --help
+```
+
+Descubrimiento y ejemplo sin red ni escrituras. `run` conserva los efectos del
+comando elegido. Si existe `.venv`, su intérprete puede usarse en lugar de python3.
+El catálogo es explícito y parcial: ocho familias públicas, no todos los experimentos.
+
 ## Qué hay implementado
 
 - Transformación inicial de texto y selección de fragmentos con identidad,
