@@ -86,6 +86,7 @@ Consultar sus `not_checked` y `next_step`; no interpretar OK como validación gl
 
 Las pruebas ejecutan las ocho ayudas reales desde un directorio ajeno al proyecto,
 verifican propagación de errores, ausencia de archivos creados por el ejemplo y
-conservación de huecos. No hubo un agente independiente de primer uso: la utilidad
-para un agente nuevo está respaldada por este recorrido automatizado, pendiente
-de esa evaluación de usabilidad.
+conservación de huecos. Una [prueba posterior con agente de contexto nuevo](../experiments/agent-first-use-v1/README.md)
+completó el recorrido sin inspeccionar código y detectó ambigüedades documentales
+corregidas. Fue una instancia separada en el mismo entorno/proveedor; no una
+certificación independiente ni validación para todos los agentes.

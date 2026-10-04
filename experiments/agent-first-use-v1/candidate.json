@@ -1,0 +1,44 @@
+{
+  "schema": "agora/relation-candidate/v2",
+  "source_id": "first-use-translation",
+  "source_sha256": "e087de277bb8aa5e6e10c0b326eff1c2cb6665fbfbf6a5e9a60b73c7482a5804",
+  "fields": {
+    "system": {
+      "text": "Lumen",
+      "evidence_ids": [
+        "ev_a08d7f7011cc8d3d9c8b30b2"
+      ]
+    },
+    "task": {
+      "text": "Spanish-to-English translation",
+      "evidence_ids": [
+        "ev_a08d7f7011cc8d3d9c8b30b2"
+      ]
+    },
+    "software_version": {
+      "text": null,
+      "evidence_ids": []
+    },
+    "model_configuration": {
+      "text": "Transformer model with six encoder layers and six decoder layers",
+      "evidence_ids": [
+        "ev_a08d7f7011cc8d3d9c8b30b2"
+      ]
+    },
+    "input": {
+      "text": "complete Spanish sentences",
+      "evidence_ids": [
+        "ev_a08d7f7011cc8d3d9c8b30b2"
+      ]
+    },
+    "evaluation": {
+      "text": "BLEU on a synthetic held-out dataset",
+      "evidence_ids": [
+        "ev_a08d7f7011cc8d3d9c8b30b2"
+      ]
+    }
+  },
+  "relation_evidence_ids": [
+    "ev_a08d7f7011cc8d3d9c8b30b2"
+  ]
+}

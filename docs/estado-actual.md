@@ -637,4 +637,8 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 
 ## Entrada de descubrimiento para agentes
 
-[Guía de primer uso](guia-agentes.md): scripts/agora.py ofrece capabilities/describe/doctor/examples en JSON, ejemplo relations-offline sin red ni escrituras y run para ocho familias existentes. No instala servicios, no unifica silenciosamente contratos ni activa proveedores durante descubrimiento. Las ayudas se prueban desde otro directorio y el diagnóstico distingue Python inferior al mínimo documentado. La utilidad de primer uso aún no fue evaluada por un agente independiente.
+[Guía de primer uso](guia-agentes.md): scripts/agora.py ofrece capabilities/describe/doctor/examples en JSON, ejemplo relations-offline sin red ni escrituras y run para ocho familias existentes. No instala servicios, no unifica silenciosamente contratos ni activa proveedores durante descubrimiento. Las ayudas se prueban desde otro directorio y el diagnóstico distingue Python inferior al mínimo documentado. El recorrido fue probado posteriormente por un agente de contexto nuevo en el mismo entorno; véase la prueba de primer uso al final. No es certificación independiente.
+
+## Primer uso con agente de contexto nuevo
+
+[Prueba separada](../experiments/agent-first-use-v1/README.md): cuatro objetivos completados usando documentación pública y CLI; candidato v2 con versión desconocida conservada y sin admisión. El agente resolvió el aviso de Python antiguo usando .venv. Se corrigieron texto pendiente obsoleto y alcance ambiguo de --contract-version en ayuda. Resultados locales revalidados; no hubo revisión externa entre proveedores ni nueva prueba ciega tras las correcciones.

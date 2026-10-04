@@ -1,0 +1,123 @@
+{
+  "schema": "agora/offline-example/v1",
+  "example": "relations-offline",
+  "network_calls": 0,
+  "files_written": 0,
+  "source": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+  "result": {
+    "schema": "agora/relation-assessment/v2",
+    "candidate": {
+      "schema": "agora/relation-candidate/v2",
+      "source_id": "offline-example",
+      "source_sha256": "c0a157fa66ae65d1babbd127474ccf715b0cfffda586a2a78fba8f2fa294ed86",
+      "fields": {
+        "system": {
+          "text": "Atlas",
+          "evidence_ids": [
+            "ev_f218b6286618cedb8c7e6b3d"
+          ]
+        },
+        "task": {
+          "text": "translation",
+          "evidence_ids": [
+            "ev_f218b6286618cedb8c7e6b3d"
+          ]
+        },
+        "software_version": {
+          "text": null,
+          "evidence_ids": []
+        },
+        "model_configuration": {
+          "text": null,
+          "evidence_ids": []
+        },
+        "input": {
+          "text": "complete sentences",
+          "evidence_ids": [
+            "ev_f218b6286618cedb8c7e6b3d"
+          ]
+        },
+        "evaluation": {
+          "text": "BLEU",
+          "evidence_ids": [
+            "ev_f218b6286618cedb8c7e6b3d"
+          ]
+        }
+      },
+      "relation_evidence_ids": [
+        "ev_f218b6286618cedb8c7e6b3d"
+      ]
+    },
+    "status": "needs_more_evidence",
+    "gaps": [
+      {
+        "field": "software_version",
+        "reason": "missing_text"
+      },
+      {
+        "field": "model_configuration",
+        "reason": "missing_text"
+      }
+    ],
+    "anchors": {
+      "system": [
+        {
+          "id": "ev_f218b6286618cedb8c7e6b3d",
+          "start_byte": 0,
+          "end_byte": 89,
+          "text": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+          "quote_bytes": 89
+        }
+      ],
+      "task": [
+        {
+          "id": "ev_f218b6286618cedb8c7e6b3d",
+          "start_byte": 0,
+          "end_byte": 89,
+          "text": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+          "quote_bytes": 89
+        }
+      ],
+      "software_version": [],
+      "model_configuration": [],
+      "input": [
+        {
+          "id": "ev_f218b6286618cedb8c7e6b3d",
+          "start_byte": 0,
+          "end_byte": 89,
+          "text": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+          "quote_bytes": 89
+        }
+      ],
+      "evaluation": [
+        {
+          "id": "ev_f218b6286618cedb8c7e6b3d",
+          "start_byte": 0,
+          "end_byte": 89,
+          "text": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+          "quote_bytes": 89
+        }
+      ],
+      "relation": [
+        {
+          "id": "ev_f218b6286618cedb8c7e6b3d",
+          "start_byte": 0,
+          "end_byte": 89,
+          "text": "Atlas is a translation system. It receives complete sentences and is evaluated with BLEU.",
+          "quote_bytes": 89
+        }
+      ]
+    },
+    "semantic_support": "not_verified",
+    "admitted": false
+  },
+  "expected": {
+    "status": "needs_more_evidence",
+    "unknown_fields": [
+      "software_version",
+      "model_configuration"
+    ],
+    "admitted": false
+  },
+  "interpretation": "Unknown version/configuration are retained; valid IDs do not prove semantic support."
+}

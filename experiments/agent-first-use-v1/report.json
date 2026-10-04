@@ -1,0 +1,33 @@
+{
+  "tested_commit": "fbda48da77b70aca40be46045adcd255a7b13da4",
+  "reviewer": "separate fresh-context agent /root/agora_first_use",
+  "reported_commands": 23,
+  "criteria": {
+    "discover": true,
+    "offline_example": true,
+    "v2_candidate_unknown_version": true,
+    "find_review_without_execution": true
+  },
+  "producer_revalidation": "candidate and assessment reproduced exactly with current validator",
+  "reported_restrictions": "No src/tests/experiments inspection, network, provider calls or memory lookup",
+  "evidence_limit": "Command counts and access restrictions reported by agent; full raw shell transcript not archived here. Artifact outcomes revalidated by producer.",
+  "findings": [
+    {
+      "id": "U1",
+      "finding": "system Python 3.9.6 produces doctor attention; agent switched to documented .venv Python 3.12.12 without assistance",
+      "severity": "friction"
+    },
+    {
+      "id": "U2",
+      "finding": "Relation guide retains stale pending-generator statement above connected workflow",
+      "severity": "documentation"
+    },
+    {
+      "id": "U3",
+      "finding": "--contract-version help does not state it applies only to template/generate",
+      "severity": "help"
+    }
+  ],
+  "independence": "Separate agent context in same environment/provider, not cross-provider adjudication",
+  "source_sha256": "e087de277bb8aa5e6e10c0b326eff1c2cb6665fbfbf6a5e9a60b73c7482a5804"
+}

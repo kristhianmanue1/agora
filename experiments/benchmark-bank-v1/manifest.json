@@ -744,6 +744,34 @@
     {
       "path": "experiments/baseline-input-assessment-v1/verify.py",
       "sha256": "1ac798ffe45e4b91452fa18314fa216f6ce311f50a09af0794d685528ef81246"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/README.md",
+      "sha256": "83a408f23f7488cb1130f79a292bbe3b7fc26df11ce0648ac20427ebadf8d8cc"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/assessment.json",
+      "sha256": "25f1fd8980a63dd3c14394b0bd3ec1cf542a5eebf992344d4961a9f79bae9dfe"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/candidate.json",
+      "sha256": "825524ff762e2f797d774088f20e0bb9e29763dfc70c554eadfcdc2a7f200692"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/freeze.json",
+      "sha256": "65b1ab11cf868c892f2b6756f9d4b4183043a479ad2e2898bda2715dadadea2c"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/offline-example.json",
+      "sha256": "cf8d2bdbe9f95d6075207fdda0fd8625096200bf9c7a865684683453b303a8b8"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/report.json",
+      "sha256": "47e6a17785255f03069b4db3afc6db9cdfac4a72fec901b72ff6cb3730fccb2f"
+    },
+    {
+      "path": "experiments/agent-first-use-v1/source.txt",
+      "sha256": "e087de277bb8aa5e6e10c0b326eff1c2cb6665fbfbf6a5e9a60b73c7482a5804"
     }
   ],
   "expected_accounting": {

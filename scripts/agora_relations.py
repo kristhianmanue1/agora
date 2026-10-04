@@ -15,7 +15,7 @@ def main():
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--source-id', required=True)
     parser.add_argument('--candidate', type=Path)
-    parser.add_argument('--contract-version', choices=['v1','v2'])
+    parser.add_argument('--contract-version', choices=['v1','v2'], help='Only for template; validate reads the candidate schema.')
     args = parser.parse_args()
     if args.contract_version and args.action != 'template':
         parser.error('--contract-version applies only to template; validate uses candidate schema')

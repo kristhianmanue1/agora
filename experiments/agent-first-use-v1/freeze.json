@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-10-04T04:58:39.143243+00:00",
+  "head": "fbda48da77b70aca40be46045adcd255a7b13da4",
+  "files": {
+    "README.md": "e9dfd4475a2b28cc77c73d81395ed759befcf9d3357b9ba7ec06041b9591568f",
+    "docs/guia-agentes.md": "9644c6c154ea2a869137ffb14dd66fedb94cd7863685f4ec869aab16edab4f42",
+    "scripts/agora.py": "c2dbbbbac49bd6e90c99774bfa31b5f5d9eed81430801b9405f628f13a3b6db4",
+    "src/agora/agent_cli.py": "134c710651e2cde54cf7976cec7ebac46573b227f8e13f66930ff87477a3dc3d"
+  },
+  "protocol": "fresh agent without turn history; public docs/CLI only; no implementation inspection; offline synthetic source; no provider calls",
+  "criteria": [
+    "discovers capability and Python requirement",
+    "executes offline example and distinguishes non-admission",
+    "constructs v2 relation through public CLI preserving unknown software version",
+    "finds provider review route without sending data"
+  ],
+  "independence_limit": "separate agent context, same orchestration environment; not cross-provider independent adjudication",
+  "repository_mutation_during_trial": false
+}

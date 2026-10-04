@@ -44,7 +44,8 @@ Seis pruebas nuevas y regresión completa de 569 pruebas aprobadas (2026-10-03).
 Incluyen recorrido CLI, identidad, UTF-8, huecos y una afirmación incorrecta con
 ID válido que permanece sin verificar. Autorrevisión, no auditoría independiente.
 
-Pendiente: conectar el generador y revisar cada relación contra sus pasajes.
+La conexión con generador y revisor está disponible en el recorrido siguiente.
+Siguen pendientes la extracción y recuperación fiables de relaciones dispersas.
 El módulo no certifica significado, contradicción, exhaustividad ni identidad
 semántica entre menciones.
 

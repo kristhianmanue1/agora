@@ -26,7 +26,7 @@ def main():
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--response',type=Path)
     mode.add_argument('--live',choices=['glm','jev'])
-    parser.add_argument('--contract-version',choices=['v1','v2'])
+    parser.add_argument('--contract-version',choices=['v1','v2'],help='Only for generate; review reads the candidate schema.')
     args=parser.parse_args()
     if args.contract_version and args.action!='generate':
         parser.error('--contract-version applies only to generate; review uses candidate schema')

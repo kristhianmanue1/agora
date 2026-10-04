@@ -1,0 +1,4 @@
+Lumen is a translation system for Spanish-to-English translation.
+It uses a Transformer model with six encoder layers and six decoder layers.
+It receives complete Spanish sentences and produces English sentences.
+Evaluation on a synthetic held-out dataset uses BLEU.

@@ -22,6 +22,9 @@ python3 scripts/agora.py run relations --help
 
 Descubrimiento y ejemplo sin red ni escrituras. `run` conserva los efectos del
 comando elegido. Si existe `.venv`, su intérprete puede usarse en lugar de python3.
+Si doctor devuelve attention por Python antiguo, repetir con `.venv/bin/python`
+cuando exista, o con otro intérprete 3.10+; no es necesario reinstalar para probar
+el entorno local disponible.
 El catálogo es explícito y parcial: ocho familias públicas, no todos los experimentos.
 
 ## Qué hay implementado

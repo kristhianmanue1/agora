@@ -1,0 +1,113 @@
+{
+  "schema": "agora/relation-assessment/v2",
+  "candidate": {
+    "schema": "agora/relation-candidate/v2",
+    "source_id": "first-use-translation",
+    "source_sha256": "e087de277bb8aa5e6e10c0b326eff1c2cb6665fbfbf6a5e9a60b73c7482a5804",
+    "fields": {
+      "system": {
+        "text": "Lumen",
+        "evidence_ids": [
+          "ev_a08d7f7011cc8d3d9c8b30b2"
+        ]
+      },
+      "task": {
+        "text": "Spanish-to-English translation",
+        "evidence_ids": [
+          "ev_a08d7f7011cc8d3d9c8b30b2"
+        ]
+      },
+      "software_version": {
+        "text": null,
+        "evidence_ids": []
+      },
+      "model_configuration": {
+        "text": "Transformer model with six encoder layers and six decoder layers",
+        "evidence_ids": [
+          "ev_a08d7f7011cc8d3d9c8b30b2"
+        ]
+      },
+      "input": {
+        "text": "complete Spanish sentences",
+        "evidence_ids": [
+          "ev_a08d7f7011cc8d3d9c8b30b2"
+        ]
+      },
+      "evaluation": {
+        "text": "BLEU on a synthetic held-out dataset",
+        "evidence_ids": [
+          "ev_a08d7f7011cc8d3d9c8b30b2"
+        ]
+      }
+    },
+    "relation_evidence_ids": [
+      "ev_a08d7f7011cc8d3d9c8b30b2"
+    ]
+  },
+  "status": "needs_more_evidence",
+  "gaps": [
+    {
+      "field": "software_version",
+      "reason": "missing_text"
+    }
+  ],
+  "anchors": {
+    "system": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ],
+    "task": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ],
+    "software_version": [],
+    "model_configuration": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ],
+    "input": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ],
+    "evaluation": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ],
+    "relation": [
+      {
+        "id": "ev_a08d7f7011cc8d3d9c8b30b2",
+        "start_byte": 0,
+        "end_byte": 266,
+        "text": "Lumen is a translation system for Spanish-to-English translation.\nIt uses a Transformer model with six encoder layers and six decoder layers.\nIt receives complete Spanish sentences and produces English sentences.\nEvaluation on a synthetic held-out dataset uses BLEU.",
+        "quote_bytes": 266
+      }
+    ]
+  },
+  "semantic_support": "not_verified",
+  "admitted": false
+}
