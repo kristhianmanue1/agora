@@ -732,6 +732,18 @@
     {
       "path": "experiments/relation-version-v2/verify.py",
       "sha256": "da0ca287a89db676fccdd798e16afce7360b1df983f8a724d7005df8ba537435"
+    },
+    {
+      "path": "experiments/baseline-input-assessment-v1/README.md",
+      "sha256": "96ae9d98ae2b2143d2e757e8ca9e0e5a9e440ed049510562451efb0b5881a8e8"
+    },
+    {
+      "path": "experiments/baseline-input-assessment-v1/assessment.json",
+      "sha256": "a705a76e627e33a88101347c38689d121b6d1a5d9da3ed732c083b4b23e4ba95"
+    },
+    {
+      "path": "experiments/baseline-input-assessment-v1/verify.py",
+      "sha256": "1ac798ffe45e4b91452fa18314fa216f6ce311f50a09af0794d685528ef81246"
     }
   ],
   "expected_accounting": {

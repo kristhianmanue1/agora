@@ -630,3 +630,7 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Contrato de relaciones v2 optativo
 
 [Contrato y uso](relaciones-candidatas.md): software_version separado de model_configuration; v1 sigue disponible sin reinterpretación ni migración silenciosa. Validación/revisión leen el schema del candidato. [Prueba real de desarrollo](../experiments/relation-version-v2/README.md): versión desconocida y configuración citada correctamente separadas; entrada también desconocida, por lo que el caso sigue incompleto. Una generación GLM y una revisión Jev, 7.137 tokens, sin reparación. Regresión completa: 581 pruebas aprobadas, incluidas cinco nuevas. No se demuestra fiabilidad semántica general ni recuperación automática.
+
+## Entrada del baseline: inferencia conservada, sin completar el candidato
+
+[Contraste de fuente y publicación original](../experiments/baseline-input-assessment-v1/README.md): la condición baseline probablemente usa oraciones completas, pero la reutilización del mismo modelo para suboraciones impide deducir la entrada sólo desde su identidad. Figuras, tabla y texto original consultados refuerzan la interpretación; no equivalen a configuración explícita de la ejecución. Se conserva input desconocido en el candidato v2 y se registra la inferencia por separado. Cero llamadas a modelos y ninguna mutación del candidato. No repetir generaciones sobre los mismos tres pasajes; confirmar exige configuración de experimento o conservar el pendiente.

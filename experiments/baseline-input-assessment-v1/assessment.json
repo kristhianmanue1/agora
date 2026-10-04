@@ -1,0 +1,83 @@
+{
+  "observed_at": "2026-10-04T04:26:17.424932+00:00",
+  "source_id": "1907.12984",
+  "source_sha256": "86ea8c9559fa7212b56684a470a72c2738819d78fc21c93bc212683970bdfd40",
+  "method": "producer source inspection and adversarial counterexample; no provider call",
+  "spans": [
+    {
+      "id": "full_sentence_behavior",
+      "start_byte": 2825,
+      "end_byte": 3589,
+      "text": "However, existing work pays less attention to the fluency of translation, which is extremely important in the context of simultaneous translation. For example, we have a sub-sentence NMT model that starts to translate after reading a sub-sentence rather than waiting until the end of a sentence like the full-sentence models does. This will definitely reduce the time waiting for the source language speech. However, as shown in the Figure FIGREF2 , the translation for each sub-sentence is barely adequate, whereas the translation of the entire source sentence lacks coherence and fluency. Moreover, it is clear that the model produces an inappropriate translation “your own” for the source token “自己” due to the absence of the preceding sub-sentence.",
+      "sha256": "3b5d9c63451af68048ad3e9575110a397b8198461a55f43a2c8acce53cf210b5"
+    },
+    {
+      "id": "granularity_equivalence",
+      "start_byte": 6902,
+      "end_byte": 7329,
+      "text": "For example, by treating a full-sentence as an IU, the model is reduced to the standard translation model. When the IU is one segment, it is reduced to the segment-to-segment translation model BIBREF18 , BIBREF12 . Moreover, if we treat one token as an IU, it is reduced to our previous wait-k model BIBREF0 . The key point of our model is to train the IU detector to recognize the IU boundary at the corresponding granularity.",
+      "sha256": "95d62fb9fbb08b3fb1b91915f6e4ed92009127f790c28c9606fdf80127f48746"
+    },
+    {
+      "id": "baseline_identity",
+      "start_byte": 21915,
+      "end_byte": 21997,
+      "text": "baseline: A standard Transformer based model with big version of hyper parameters.",
+      "sha256": "3d20a10fab01a482f40c7e15852fb6a5c93336a6e7548dc60714522cd5f68e0f"
+    },
+    {
+      "id": "reused_model_different_input",
+      "start_byte": 21999,
+      "end_byte": 22228,
+      "text": "sub-sentence: We split a full sentence into multiple sub-sentences by comma, and translate them using the baseline model. To evaluate the translation quality, we concatenate the translation of each sub-sentence into one sentence.",
+      "sha256": "852d6e0605dcd4ee2c6d39e3c62fe97864a189673941efd3b533f493c7871e3f"
+    },
+    {
+      "id": "comparison_conditions",
+      "start_byte": 22731,
+      "end_byte": 22937,
+      "text": "To validate the effectiveness of our translation model, we run two baseline models, baseline and sub-sentence. We also compare the translation quality as well as latency of our models with the wait-k model.",
+      "sha256": "69cca4802d1fa1bc8cbd31bec0a949fad2110f2dbe163a3195ca95af2bd90856"
+    },
+    {
+      "id": "human_global_context",
+      "start_byte": 19139,
+      "end_byte": 19477,
+      "text": "Each talk's transcription is translated into English by a single translator, and then segmented into bilingual sentence pairs according to the sentence boundaries in the English translations. Therefore, every sentence is translated based on the understanding of the entire talk and is translated faithfully and coherently in global sense.",
+      "sha256": "390ac878cf3e8d6bcdb439d2986b117775af741ce915278f799f2b4d42a760ee"
+    }
+  ],
+  "candidate_path": "experiments/relation-version-v2/generation/candidate.json",
+  "candidate_sha256": "4f7e102d908d4ed134df215b43f978ff6e17cc47d2683f4ed5b91fba5469a0de",
+  "decision": "retain_unknown_input_in_current_candidate",
+  "inference": "The baseline experimental condition likely uses complete sentences; this is not the same as claiming the model always requires them.",
+  "counterexample": "The sub-sentence condition explicitly reuses the baseline model on split input.",
+  "not_established": [
+    "explicit input binding for the baseline experimental condition in the inspected rendered text",
+    "whole-document input",
+    "software release identifier"
+  ],
+  "limits": [
+    "QASPER text plus original HTML/PDF extracted text at listed locations; upstream configuration/code not inspected",
+    "producer assessment, not independent adjudication",
+    "known development paper, manually selected evidence"
+  ],
+  "additional_evidence_needed": [
+    "upstream experiment configuration or inference code tied to the exact baseline run; do not repeat already-inspected table/captions"
+  ],
+  "provider_calls": 0,
+  "external_inspection": {
+    "url": "https://arxiv.org/html/1907.12984",
+    "pdf_url": "https://arxiv.org/pdf/1907.12984",
+    "version": "1907.12984v2",
+    "locations": [
+      "Figure 1 caption",
+      "Section 4.3 model settings",
+      "Table 2",
+      "Figure 8 caption",
+      "NIST08 discussion after Table 2"
+    ],
+    "observation": "Figure 1 explains full-sentence waiting. Table 2 separates baseline and sub-sentence; Figure 8 identifies their plot markers. The NIST08 discussion associates the baseline with difficulties on long sentences. These strengthen the sentence-level interpretation but do not supply an explicit input-configuration declaration for the baseline run.",
+    "acquisition": "web tool text extraction; no PDF screenshot, no upstream code execution"
+  }
+}
