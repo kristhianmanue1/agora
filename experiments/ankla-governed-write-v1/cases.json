@@ -1,0 +1,46 @@
+{
+  "experiment": "ankla-governed-write-v1",
+  "purpose": "Tres sondas para An-KLA: conservación de reglas bajo actualización, validación de contratos JSON y control de vigencia. Base para la matriz comparativa MemOS vs Ágora/Skopos/An-KLA.",
+  "frozen_at": "2026-10-04T05:50:00Z",
+  "ankla_version": "0.1.0b28",
+  "ankla_commit": "0f874e97601858d788a19182a0829be1761c3898",
+  "lab_root": "/tmp/ankla-lab-v1",
+  "probes": [
+    {
+      "id": "P1-conservacion-bajo-actualizacion",
+      "question": "¿Al sustituir una regla, la versión anterior queda conservada (no eliminada) y verificable?",
+      "steps": "add fact regla-despliegue v1 → supersede con v2 → verify + inventory + export revisión anterior",
+      "expectations": [
+        "commit v1 exitoso, revision avanza",
+        "commit v2 (supersede) exitoso",
+        "verify de la revisión anterior: integridad OK",
+        "inventory revela el registro sustituido, marcado, no ausente",
+        "ningún paso borra físicamente el registro v1"
+      ]
+    },
+    {
+      "id": "P2-contratos-json",
+      "question": "¿Los contratos JSON normativos rechazan propuestas inválidas sin mutar la memoria?",
+      "steps": "contar schemas → plan-write válido (control positivo) → 3 propuestas corruptas: sin record.id, supersede sin campo supersedes, base_revision malformado",
+      "expectations": [
+        "schema list cuenta los contratos instalados con sha256 cada uno",
+        "propuesta válida: planifica sin mutar",
+        "cada propuesta corrupta: rechazada por validación",
+        "tras cada rechazo: status/reporte sin cambios de revisión (cero mutación)"
+      ]
+    },
+    {
+      "id": "P3-control-vigencia",
+      "question": "¿La recuperación devuelve solo lo vigente tras sustituir o refutar?",
+      "steps": "retrieve tras supersede (no debe devolver v1 como vigente) → refute de una segunda regla → retrieve de nuevo (la refutada tampoco) → history/verify conserva huella",
+      "expectations": [
+        "retrieve consulta regla-despliegue: devuelve v2, no v1",
+        "retrieve de la regla refutada: no vigente",
+        "verify integridad OK tras refute",
+        "la refutación queda registrada como transacción, no como borrado"
+      ]
+    }
+  ],
+  "budget": "Local, sin LLM. Tiempo medido por sonda. Sin reintentos ni ajuste posterior.",
+  "memos_counterpart_note": "La columna MemOS de vigencia usa evidencia ya registrada en scope-vigency-repair-v1 (filtro nativo con sintaxis and-array separa activos/archivados) y memos-long-reserved-v1 (search devolvía archivados con filtro simple). No se re-ejecuta MemOS en este expediente."
+}

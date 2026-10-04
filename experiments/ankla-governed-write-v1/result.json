@@ -1,0 +1,43 @@
+{
+  "experiment": "ankla-governed-write-v1",
+  "executed_at": "2026-10-04T05:50:00Z/2026-10-04T06:20:00Z",
+  "ankla_version": "0.1.0b28",
+  "ankla_commit": "0f874e97601858d788a19182a0829be1761c3898",
+  "environment": "local, python3, sin LLM (coste en tokens: 0)",
+  "probes": [
+    {
+      "id": "P1-conservacion-bajo-actualizacion",
+      "verdict": "PASS",
+      "detail": "add v1 (2.07s) + supersede v2 (1.88s), ciclos gobernados plan→commit con autoridad emitida. v1 queda 'sustituida' (overlay), NO eliminada: registro físico íntegro (285 bytes, text+summary+dominio), recuperable por inventario en su revisión. Consistencia temporal: en revisión vieja v1=vigente; en actual v1=sustituida, v2=vigente. verify ok:true con 2 facts + 2 eventos de gobernanza registrados.",
+      "expectations_met": ["commit v1 exitoso", "commit v2 exitoso", "verify integridad OK", "registro sustituido marcado y presente", "cero borrado físico"]
+    },
+    {
+      "id": "P2-contratos-json",
+      "verdict": "PASS",
+      "detail": "78 contratos normativos instalados con sha256 cada uno (write-proposal-v1, refute-proposal-v1, refute-authority-claim-v1, refute-decision-v1, context-status/v1…). Controles negativos deliberados: sin record.id → invalid_write_proposal(record.id); supersede sin campo → (supersedes:missing_for_supersede); base_revision malformado → (base_revision:not_digest). Revisión INTACTA tras los tres rechazos: cero mutación. Además, la sesión produjo rechazos naturales espontáneos: lineage ausente, refs[].kind=record inválido (enum no lo permite), authority_scope_mismatch al cambiar la propuesta tras emitir autoridad, y techo de representación para autoridad derivada.",
+      "expectations_met": ["recuento con sha256", "válido planifica sin mutar", "3/3 corruptas rechazadas", "status sin cambios tras cada rechazo"]
+    },
+    {
+      "id": "P3-control-vigencia",
+      "verdict": "PASS CON HALLAZGO",
+      "detail": "Tras supersede: retrieve --query despliegue selecciona SOLO v2 (score 1) y excluye v1 como inactive con ID explícito en excluded_detail. El presupuesto de --budget es BYTES, no número de resultados (error de operador documentado: budget 5 excluyó por presupuesto, no por vigencia). El refute está CONTRATADO pero NO OPERABLE en b28: la política exige resolutor de autoridad externo (resolve+verify+attestación) y ni CLI ni MCP cablean ninguno (MemoryStore lo recibe por inyección del host). refute plan termina en skip/refute_authority_resolver_unavailable. Refutación = operación de máxima garantía, cerrada a la espera de integración de host.",
+      "expectations_met": ["retrieve devuelve v2, no v1", "exclusión inactive con detalle", "integridad OK tras intentos"],
+      "expectation_unmet": ["refute commit operativo: bloqueado por diseño en b28 (resolver no disponible)"]
+    }
+  ],
+  "governance_observations": [
+    "Autoridad model_derived con tope 'summary': la política beta SIEMPRE rechaza requested_representation=full para autoridad derivada (summary_required_for_authority_ceiling) y exige campo summary en el registro",
+    "Operaciones soportadas por política b28: add y supersede (decay rechazado con operation_not_supported)",
+    "Cada ciclo de escritura registra evento de gobernanza firmado en el stream events",
+    "Coste: 0 tokens (todo local); latencia ~2s por ciclo completo plan→commit"
+  ],
+  "operator_errors_documented": [
+    "--budget interpretado como nº de resultados cuando son bytes",
+    "refs[].kind='record' fuera del enum (artifact|event|fact|episode|revision|external)"
+  ],
+  "matrix_implications": {
+    "An-KLA_columna_reglas_vigencia": "conservación bajo actualización: demostrada; vigencia en recuperación: demostrada; refutación: contratada, no operable en b28",
+    "MemOS_columna_vigencia": "usar evidencia previa de scope-vigency-repair-v1 y memos-long-reserved-v1; no re-ejecutado aquí",
+    "coste": "An-KLA: 0 tokens / ~2s por escritura gobernada; contraste con MemOS 16k-35k tokens por respuesta en ronda larga"
+  }
+}

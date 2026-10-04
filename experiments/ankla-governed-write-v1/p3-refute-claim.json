@@ -1,0 +1,22 @@
+{
+ "schema": "an-kla/refute-authority-claim-v1",
+ "proposal_sha256": "sha256:3af13605e7723e0a861b6f18fd8867dfcf4be1ec579e4a032b7c317b7ecbbc70",
+ "base_revision": "sha256:0a0daa560ce59fb5060f6165e7d0723e5d38293a32303b59de367fbd2667436b",
+ "requested_authority_class": "tool_observed",
+ "issuer_claim": {
+  "kind": "tool",
+  "subject_sha256": "sha256:beca9f253f51df8b137cef7570cb004a3701aaec6466ebc93be734466d3931b2",
+  "configuration_fingerprint": "sha256:4b13d958704ade863d22bfa978356ab5d15ec0d0c191635da42aa7accf97cdf0"
+ },
+ "evidence": [
+  {
+   "kind": "revision",
+   "revision_sha256": "sha256:0a0daa560ce59fb5060f6165e7d0723e5d38293a32303b59de367fbd2667436b"
+  }
+ ],
+ "scope": {
+  "operation": "refute",
+  "stream": "facts",
+  "target_record_sha256": "sha256:ebfdd6868013ba5c5c462a5801b698b4ba0f5cef90c344b3fa27412893a66e05"
+ }
+}

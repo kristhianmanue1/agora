@@ -1,0 +1,16 @@
+{
+ "schema": "an-kla/write-proposal-v1",
+ "base_revision": "no-es-un-sha",
+ "stream": "facts",
+ "operation": "add",
+ "requested_representation": "summary",
+ "lineage": {
+  "derived_from_retrieval": false,
+  "refs": []
+ },
+ "record": {
+  "id": "r-valida",
+  "text": "t",
+  "summary": "s"
+ }
+}

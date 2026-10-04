@@ -1,0 +1,18 @@
+{
+ "schema": "an-kla/write-proposal-v1",
+ "base_revision": "sha256:dea54860f4c3df51295d59de7b1a6d7cb9acee490f35b7fbb78c8de469626ca4",
+ "stream": "facts",
+ "operation": "add",
+ "requested_representation": "summary",
+ "record": {
+  "id": "regla-despliegue",
+  "verified_at": "2026-10-04T05:50:00Z",
+  "text": "Todo despliegue a produccion requiere revision de seguridad y aprobacion del operador.",
+  "dominio": "despliegue",
+  "summary": "Regla de despliegue: exige revision de seguridad y aprobacion del operador para produccion."
+ },
+ "lineage": {
+  "derived_from_retrieval": false,
+  "refs": []
+ }
+}

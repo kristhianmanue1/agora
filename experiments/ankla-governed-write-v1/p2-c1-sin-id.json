@@ -1,0 +1,15 @@
+{
+ "schema": "an-kla/write-proposal-v1",
+ "base_revision": "sha256:0a0daa560ce59fb5060f6165e7d0723e5d38293a32303b59de367fbd2667436b",
+ "stream": "facts",
+ "operation": "add",
+ "requested_representation": "summary",
+ "lineage": {
+  "derived_from_retrieval": false,
+  "refs": []
+ },
+ "record": {
+  "text": "x sin id",
+  "summary": "sin id"
+ }
+}

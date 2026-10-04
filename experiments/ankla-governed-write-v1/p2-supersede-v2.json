@@ -1,0 +1,24 @@
+{
+ "schema": "an-kla/write-proposal-v1",
+ "base_revision": "sha256:1c9dc9aaf104b5db1ec4ad3c1499b1b03a81a73e7cc9a3b2950065241897cb5f",
+ "stream": "facts",
+ "operation": "supersede",
+ "supersedes": "regla-despliegue",
+ "requested_representation": "summary",
+ "record": {
+  "id": "regla-despliegue-v2",
+  "verified_at": "2026-10-04T06:00:00Z",
+  "text": "Todo despliegue a produccion requiere revision de seguridad, aprobacion del operador y ventana de despliegue entre 09:00 y 13:00.",
+  "summary": "Regla de despliegue v2: anade ventana horaria obligatoria a los requisitos previos.",
+  "dominio": "despliegue"
+ },
+ "lineage": {
+  "derived_from_retrieval": false,
+  "refs": [
+   {
+    "kind": "fact",
+    "id": "regla-despliegue"
+   }
+  ]
+ }
+}

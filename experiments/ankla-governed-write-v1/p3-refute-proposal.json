@@ -1,0 +1,7 @@
+{
+ "schema": "an-kla/refute-proposal-v1",
+ "base_revision": "sha256:0a0daa560ce59fb5060f6165e7d0723e5d38293a32303b59de367fbd2667436b",
+ "stream": "facts",
+ "target_record_sha256": "sha256:ebfdd6868013ba5c5c462a5801b698b4ba0f5cef90c344b3fa27412893a66e05",
+ "reason": "source_retracted"
+}
