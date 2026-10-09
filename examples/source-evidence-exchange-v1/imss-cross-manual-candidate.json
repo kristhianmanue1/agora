@@ -1,0 +1,28 @@
+{
+  "claims": [
+    {
+      "evidence_refs": [
+        {
+          "end_byte": 94,
+          "manifest_sha256": "521b96a3982b51a3ce78383a119a2ffdfa7e1b5c2b8f8a1a80c1e8a00c0d7022",
+          "segment_id": "s2",
+          "start_byte": 52
+        },
+        {
+          "end_byte": 127,
+          "manifest_sha256": "96dc4592802a7ff6089962a4d6dc9c48a797a4a5a2bf529a35f0ea8b8a357089",
+          "segment_id": "s2",
+          "start_byte": 70
+        }
+      ],
+      "id": "cross-1",
+      "kind": "relation_candidate",
+      "text": "Las funciones citadas de los dos manuales parecen relacionarse con la planeación de infraestructura médica; el vínculo y la vigencia requieren revisión."
+    }
+  ],
+  "manifest_sha256s": [
+    "521b96a3982b51a3ce78383a119a2ffdfa7e1b5c2b8f8a1a80c1e8a00c0d7022",
+    "96dc4592802a7ff6089962a4d6dc9c48a797a4a5a2bf529a35f0ea8b8a357089"
+  ],
+  "schema": "agora/source-evidence-bundle-candidate/v1"
+}

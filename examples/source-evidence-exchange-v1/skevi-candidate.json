@@ -1,0 +1,20 @@
+{
+  "claims": [
+    {
+      "evidence_refs": [
+        {
+          "end_byte": 47,
+          "segment_id": "s1",
+          "start_byte": 0
+        }
+      ],
+      "id": "c1",
+      "kind": "relation_candidate",
+      "text": "El fixture vincula revisión y evidencia."
+    }
+  ],
+  "derivative_sha256": "14440263f4dcd4730b8dc501e0a7eb2a08b9c55986a9b88caa05722c38b647d3",
+  "manifest_sha256": "ccb0bc00dae66de8bb478f3e52829086869845c287e8db8be4e151621092f688",
+  "schema": "agora/source-evidence-candidate/v1",
+  "source_sha256": "14440263f4dcd4730b8dc501e0a7eb2a08b9c55986a9b88caa05722c38b647d3"
+}

@@ -1,0 +1,54 @@
+{
+  "derivative": {
+    "coverage": "partial",
+    "id": "imss-0500-derived",
+    "producer": {
+      "derivation_id": null,
+      "manifest_sha256": null,
+      "system": "local-fixture",
+      "version": "v1"
+    },
+    "sha256": "b4d724919c5b546b0a7778202aeca9df3fc193e97b618aa4dd8d748abe9625d1"
+  },
+  "schema": "agora/source-evidence-exchange/v1",
+  "segments": [
+    {
+      "end_byte": 42,
+      "extraction_status": "unreviewed",
+      "id": "s1",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "page": 45,
+          "section": "8.1.3"
+        }
+      },
+      "modality": "native_text",
+      "sha256": "899e0a428f3d61c3f9c2d994949a65106973cdbf8756baf7b6d3949189df9363",
+      "start_byte": 0
+    },
+    {
+      "end_byte": 94,
+      "extraction_status": "unreviewed",
+      "id": "s2",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "function": 2,
+          "page": 45,
+          "section": "8.1.3"
+        }
+      },
+      "modality": "native_text",
+      "sha256": "6418506208a9ba1e8dac12d35616b9433aac51c175b44c34677a6aa7ba4cc473",
+      "start_byte": 52
+    }
+  ],
+  "source": {
+    "id": "imss-0500-002-001",
+    "media_type": "application/pdf",
+    "revision": "2022-12-26-observed-stamp",
+    "sha256": "ce665959759f74331464471c71dc9cff107e061de09b8be5419a7cf1302e48b7",
+    "uri": "https://www.imss.gob.mx/sites/all/statics/pdf/manualesynormas/0500-002-001_3.pdf"
+  }
+}

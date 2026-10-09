@@ -1,0 +1,38 @@
+{
+  "derivative": {
+    "coverage": "partial",
+    "id": "skevi-derived",
+    "producer": {
+      "derivation_id": null,
+      "manifest_sha256": null,
+      "system": "local-fixture",
+      "version": "v1"
+    },
+    "sha256": "14440263f4dcd4730b8dc501e0a7eb2a08b9c55986a9b88caa05722c38b647d3"
+  },
+  "schema": "agora/source-evidence-exchange/v1",
+  "segments": [
+    {
+      "end_byte": 47,
+      "extraction_status": "unreviewed",
+      "id": "s1",
+      "locator": {
+        "kind": "text_range",
+        "value": {
+          "end_byte": 47,
+          "start_byte": 0
+        }
+      },
+      "modality": "plain_text",
+      "sha256": "14440263f4dcd4730b8dc501e0a7eb2a08b9c55986a9b88caa05722c38b647d3",
+      "start_byte": 0
+    }
+  ],
+  "source": {
+    "id": "skevi-synthetic-fixture",
+    "media_type": "text/plain; charset=utf-8",
+    "revision": "fixture-v1",
+    "sha256": "14440263f4dcd4730b8dc501e0a7eb2a08b9c55986a9b88caa05722c38b647d3",
+    "uri": null
+  }
+}
