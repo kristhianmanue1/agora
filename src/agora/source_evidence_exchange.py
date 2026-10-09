@@ -17,10 +17,23 @@ BUNDLE_RESOLUTION = "agora/source-evidence-bundle-resolution/v1"
 MAX_MANIFEST = 1024 * 1024
 MAX_CANDIDATE = 1024 * 1024
 MAX_ORIGINAL = 64 * 1024 * 1024
+SUPPORTED_MEDIA_TYPES = {
+    "application/pdf",
+    "text/plain; charset=utf-8",
+    "text/markdown; charset=utf-8",
+    "text/html; charset=utf-8",
+    "text/html; charset=iso-8859-1",
+}
 
 
 def _object(value, keys, error):
     if type(value) is not dict or set(value) != set(keys):
+        raise SourceError(error)
+    return value
+
+
+def _object_variant(value, key_sets, error):
+    if type(value) is not dict or set(value) not in key_sets:
         raise SourceError(error)
     return value
 
@@ -42,6 +55,71 @@ def _hash(value, error):
 def _positive_int(value, error):
     if type(value) is not int or value < 0:
         raise SourceError(error)
+    return value
+
+
+def _typed_anchor(value, error):
+    if type(value) is int:
+        return _positive_int(value, error)
+    return _label(value, error, 200)
+
+
+def _temporal(value):
+    _object(value, ("document_date", "status"), "invalid_temporal_status")
+    if value["document_date"] is not None:
+        _label(value["document_date"], "invalid_document_date", 40)
+    if value["status"] != "not_assessed":
+        raise SourceError("invalid_temporal_status")
+    return value
+
+
+def _normalization(value):
+    _object(value, ("status", "description"), "invalid_normalization")
+    if value["status"] not in ("not_applied", "applied"):
+        raise SourceError("invalid_normalization")
+    if value["description"] is not None:
+        _label(value["description"], "invalid_normalization", 500)
+    if value["status"] == "not_applied" and value["description"] is not None:
+        raise SourceError("invalid_normalization")
+    return value
+
+
+def _source(value):
+    _object_variant(value,
+                    ({"id", "sha256", "media_type", "revision", "uri"},
+                     {"id", "sha256", "media_type", "revision", "uri", "temporal"}),
+                    "invalid_source_shape")
+    _label(value["id"], "invalid_source_id")
+    _hash(value["sha256"], "invalid_source_sha256")
+    _label(value["media_type"], "invalid_source_media_type")
+    _label(value["revision"], "invalid_source_revision")
+    if value["uri"] is not None:
+        _label(value["uri"], "invalid_source_uri", 1000)
+    if "temporal" in value:
+        _temporal(value["temporal"])
+    return value
+
+
+def _derivative(value):
+    _object_variant(value,
+                    ({"id", "sha256", "coverage", "producer"},
+                     {"id", "sha256", "coverage", "producer", "normalization"}),
+                    "invalid_derivative_shape")
+    _label(value["id"], "invalid_derivative_id")
+    _hash(value["sha256"], "invalid_derivative_sha256")
+    if value["coverage"] not in ("full", "partial", "unknown"):
+        raise SourceError("invalid_coverage")
+    producer = _object(value["producer"],
+                       ("system", "version", "manifest_sha256", "derivation_id"),
+                       "invalid_producer_shape")
+    _label(producer["system"], "invalid_producer_system")
+    _label(producer["version"], "invalid_producer_version")
+    if producer["manifest_sha256"] is not None:
+        _hash(producer["manifest_sha256"], "invalid_producer_manifest_sha256")
+    if producer["derivation_id"] is not None:
+        _label(producer["derivation_id"], "invalid_derivation_id", 200)
+    if "normalization" in value:
+        _normalization(value["normalization"])
     return value
 
 
@@ -73,28 +151,61 @@ def _check_original(path, expected):
     return "sha256_verified"
 
 
-def _locator(value):
+def _locator(value, profiled):
     _object(value, ("kind", "value"), "invalid_locator")
-    _label(value["kind"], "invalid_locator_kind", 80)
+    kind = value["kind"]
     coordinates = value["value"]
     if type(coordinates) is not dict or not coordinates or len(coordinates) > 8:
         raise SourceError("invalid_locator_value")
-    for key, item in coordinates.items():
-        _label(key, "invalid_locator_key", 80)
-        if key == "bbox":
-            if (type(item) is not list or len(item) != 4 or
-                    any(type(number) not in (int, float) or not 0 <= number <= 1
-                        for number in item) or item[0] > item[2] or item[1] > item[3]):
-                raise SourceError("invalid_bbox")
-        elif type(item) is str:
-            _label(item, "invalid_locator_value", 500)
-        elif type(item) is int:
-            _positive_int(item, "invalid_locator_value")
-        else:
-            raise SourceError("invalid_locator_value")
-    if value["kind"] == "pdf_page" and (
-            type(coordinates.get("page")) is not int or coordinates["page"] < 1):
-        raise SourceError("invalid_pdf_page")
+    if not profiled:
+        _label(kind, "invalid_locator_kind", 80)
+        for key, item in coordinates.items():
+            _label(key, "invalid_locator_key", 80)
+            if key == "bbox":
+                if (type(item) is not list or len(item) != 4 or
+                        any(type(number) not in (int, float) or not 0 <= number <= 1
+                            for number in item) or item[0] > item[2] or item[1] > item[3]):
+                    raise SourceError("invalid_bbox")
+            elif type(item) is str:
+                _label(item, "invalid_locator_value", 500)
+            elif type(item) is int:
+                _positive_int(item, "invalid_locator_value")
+            else:
+                raise SourceError("invalid_locator_value")
+        if kind == "pdf_page" and (
+                type(coordinates.get("page")) is not int or coordinates["page"] < 1):
+            raise SourceError("invalid_pdf_page")
+        return value
+    if kind not in ("pdf_page", "text_range", "html_fragment"):
+        raise SourceError("unsupported_locator_kind")
+    common = {"section", "activity", "article"}
+    if kind == "pdf_page":
+        allowed = common | {"page", "function", "item_id", "bbox"}
+        if type(coordinates.get("page")) is not int or coordinates["page"] < 1:
+            raise SourceError("invalid_pdf_page")
+    elif kind == "text_range":
+        allowed = common | {"start_byte", "end_byte"}
+        if (type(coordinates.get("start_byte")) is not int or
+                type(coordinates.get("end_byte")) is not int or
+                not 0 <= coordinates["start_byte"] < coordinates["end_byte"]):
+            raise SourceError("invalid_text_range")
+    else:
+        allowed = common | {"selector"}
+        _label(coordinates.get("selector"), "invalid_html_selector", 500)
+    if not set(coordinates) <= allowed:
+        raise SourceError("invalid_locator_key")
+    for key in common & set(coordinates):
+        _typed_anchor(coordinates[key], "invalid_typed_anchor")
+    if "function" in coordinates:
+        _typed_anchor(coordinates["function"], "invalid_locator_value")
+    if "item_id" in coordinates:
+        _label(coordinates["item_id"], "invalid_locator_value", 200)
+    if "bbox" in coordinates:
+        item = coordinates["bbox"]
+        if (type(item) is not list or len(item) != 4 or
+                any(type(number) not in (int, float) or not 0 <= number <= 1
+                    for number in item) or item[0] > item[2] or item[1] > item[3]):
+            raise SourceError("invalid_bbox")
     return value
 
 
@@ -103,28 +214,11 @@ def validate_exchange(derived_path, manifest, original_path=None):
     _object(manifest, ("schema", "source", "derivative", "segments"), "invalid_exchange_shape")
     if manifest["schema"] != EXCHANGE:
         raise SourceError("unsupported_exchange_schema")
-    source = _object(manifest["source"],
-                     ("id", "sha256", "media_type", "revision", "uri"), "invalid_source_shape")
-    _label(source["id"], "invalid_source_id")
-    _hash(source["sha256"], "invalid_source_sha256")
-    _label(source["media_type"], "invalid_source_media_type")
-    _label(source["revision"], "invalid_source_revision")
-    if source["uri"] is not None:
-        _label(source["uri"], "invalid_source_uri", 1000)
-    derivative = _object(manifest["derivative"],
-                         ("id", "sha256", "coverage", "producer"), "invalid_derivative_shape")
-    _label(derivative["id"], "invalid_derivative_id")
-    _hash(derivative["sha256"], "invalid_derivative_sha256")
-    if derivative["coverage"] not in ("full", "partial", "unknown"):
-        raise SourceError("invalid_coverage")
-    producer = _object(derivative["producer"],
-                       ("system", "version", "manifest_sha256", "derivation_id"), "invalid_producer_shape")
-    _label(producer["system"], "invalid_producer_system")
-    _label(producer["version"], "invalid_producer_version")
-    if producer["manifest_sha256"] is not None:
-        _hash(producer["manifest_sha256"], "invalid_producer_manifest_sha256")
-    if producer["derivation_id"] is not None:
-        _label(producer["derivation_id"], "invalid_derivation_id", 200)
+    source = _source(manifest["source"])
+    derivative = _derivative(manifest["derivative"])
+    profiled = "temporal" in source or "normalization" in derivative
+    if profiled and source["media_type"] not in SUPPORTED_MEDIA_TYPES:
+        raise SourceError("unsupported_source_media_type")
     data = FileSourceAdapter(derived_path, derivative["id"])._read(derivative["sha256"])
     size = len(data)
     segments = manifest["segments"]
@@ -144,7 +238,7 @@ def validate_exchange(derived_path, manifest, original_path=None):
             raise SourceError("invalid_segment_range")
         previous = end
         _hash(segment["sha256"], "invalid_segment_sha256")
-        _locator(segment["locator"])
+        _locator(segment["locator"], profiled)
         _label(segment["modality"], "invalid_modality", 80)
         if segment["extraction_status"] not in ("unreviewed", "visually_checked"):
             raise SourceError("invalid_extraction_status")
@@ -156,6 +250,55 @@ def validate_exchange(derived_path, manifest, original_path=None):
             raise SourceError("segment_sha256_mismatch")
         by_id[ident] = segment
     return by_id, data, _check_original(original_path, source["sha256"])
+
+
+def _resolved_evidence(manifest, segment, start, end, raw, manifest_sha=None):
+    """Carry byte literal and declared metadata without interpreting either."""
+    try:
+        literal = raw.decode("utf-8")
+    except UnicodeError as exc:
+        raise SourceError("evidence_splits_utf8") from exc
+    result = {"source_sha256": manifest["source"]["sha256"],
+              "derivative_sha256": manifest["derivative"]["sha256"],
+              "segment_id": segment["id"], "start_byte": start, "end_byte": end,
+              "literal_text": literal, "literal_sha256": digest(raw),
+              "locator": segment["locator"], "modality": segment["modality"],
+              "extraction_status": segment["extraction_status"],
+              "extraction_status_provenance": "caller_declared",
+              "derivative_normalization": manifest["derivative"].get(
+                  "normalization", {"status": "not_declared", "description": None}),
+              "source_temporal_status": manifest["source"].get(
+                  "temporal", {"document_date": None, "status": "not_declared"})}
+    if manifest_sha is not None:
+        result["manifest_sha256"] = manifest_sha
+    return result
+
+
+def _relation(value, manifests, evidence):
+    _object_variant(value,
+                    ({"kind", "temporal_status", "identity_status", "normalization"},
+                     {"kind", "temporal_status", "identity_status", "normalization", "version_relation"}),
+                    "invalid_relation")
+    if value["kind"] not in ("cross_source_candidate", "temporal_conflict_candidate",
+                              "identity_unresolved_candidate", "version_relation_candidate"):
+        raise SourceError("invalid_relation_kind")
+    if value["temporal_status"] != "not_assessed":
+        raise SourceError("invalid_relation_temporal_status")
+    if value["identity_status"] != "not_assessed":
+        raise SourceError("invalid_relation_identity_status")
+    _normalization(value["normalization"])
+    if value["kind"] == "temporal_conflict_candidate":
+        dates = {manifests[item["manifest_sha256"]]["source"].get("temporal", {}).get("document_date")
+                 for item in evidence}
+        if None in dates or len(dates) < 2:
+            raise SourceError("temporal_conflict_requires_distinct_declared_dates")
+    if value["kind"] == "version_relation_candidate":
+        if value.get("version_relation") not in ("amends", "amended_by", "supersedes",
+                                                  "superseded_by"):
+            raise SourceError("invalid_version_relation")
+    elif "version_relation" in value:
+        raise SourceError("unexpected_version_relation")
+    return value
 
 
 def resolve(derived_path, manifest_raw, manifest, candidate, original_path=None):
@@ -202,17 +345,7 @@ def resolve(derived_path, manifest_raw, manifest, candidate, original_path=None)
             if key in ref_seen:
                 raise SourceError("duplicate_evidence_ref")
             ref_seen.add(key)
-            raw = data[start:end]
-            try:
-                literal = raw.decode("utf-8")
-            except UnicodeError as exc:
-                raise SourceError("evidence_splits_utf8") from exc
-            evidence.append({"segment_id": ref["segment_id"], "start_byte": start,
-                             "end_byte": end, "literal_text": literal,
-                             "literal_sha256": digest(raw), "locator": segment["locator"],
-                             "modality": segment["modality"],
-                             "extraction_status": segment["extraction_status"],
-                             "extraction_status_provenance": "caller_declared"})
+            evidence.append(_resolved_evidence(manifest, segment, start, end, data[start:end]))
         resolved.append({"id": ident, "kind": claim["kind"], "text": claim["text"],
                          "evidence": evidence, "semantic_support": "not_verified"})
     return {"schema": RESOLUTION, "status": "candidate_unreviewed", "source": manifest["source"],
@@ -245,7 +378,10 @@ def resolve_bundle(exchanges, candidate):
     resolved = []
     seen = set()
     for claim in claims:
-        _object(claim, ("id", "kind", "text", "evidence_refs"), "invalid_claim_shape")
+        _object_variant(claim,
+                        ({"id", "kind", "text", "evidence_refs"},
+                         {"id", "kind", "text", "evidence_refs", "relation"}),
+                        "invalid_claim_shape")
         ident = _label(claim["id"], "invalid_claim_id", 100)
         if ident in seen:
             raise SourceError("duplicate_claim_id")
@@ -280,24 +416,18 @@ def resolve_bundle(exchanges, candidate):
                 raise SourceError("duplicate_evidence_ref")
             used.add(key)
             used_sources.add(manifest["source"]["sha256"])
-            raw = data[start:end]
-            try:
-                literal = raw.decode("utf-8")
-            except UnicodeError as exc:
-                raise SourceError("evidence_splits_utf8") from exc
-            evidence.append({"manifest_sha256": ref["manifest_sha256"],
-                             "source_sha256": manifest["source"]["sha256"],
-                             "derivative_sha256": manifest["derivative"]["sha256"],
-                             "segment_id": ref["segment_id"], "start_byte": start,
-                             "end_byte": end, "literal_text": literal,
-                             "literal_sha256": digest(raw), "locator": segment["locator"],
-                             "modality": segment["modality"],
-                             "extraction_status": segment["extraction_status"],
-                             "extraction_status_provenance": "caller_declared"})
+            evidence.append(_resolved_evidence(manifest, segment, start, end, data[start:end],
+                                               ref["manifest_sha256"]))
         if len(used_sources) < 2:
             raise SourceError("relation_requires_multiple_sources")
-        resolved.append({"id": ident, "kind": "relation_candidate", "text": claim["text"],
-                         "evidence": evidence, "semantic_support": "not_verified"})
+        relation = claim.get("relation")
+        if relation is not None:
+            relation = _relation(relation, {key: value[0] for key, value in indexed.items()}, evidence)
+        resolved_claim = {"id": ident, "kind": "relation_candidate", "text": claim["text"],
+                          "evidence": evidence, "semantic_support": "not_verified"}
+        if relation is not None:
+            resolved_claim["relation"] = relation
+        resolved.append(resolved_claim)
     return {"schema": BUNDLE_RESOLUTION, "status": "candidate_unreviewed",
             "sources": sources, "claims": resolved, "admitted": False, "provider_calls": 0}
 
