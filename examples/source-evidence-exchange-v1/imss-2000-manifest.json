@@ -1,0 +1,54 @@
+{
+  "derivative": {
+    "coverage": "partial",
+    "id": "imss-2000-derived",
+    "producer": {
+      "derivation_id": null,
+      "manifest_sha256": null,
+      "system": "local-fixture",
+      "version": "v1"
+    },
+    "sha256": "0af7e802a827377a65b8b7dd0a0b8a8d8f5b868822fa72f9b75a36b26f988a51"
+  },
+  "schema": "agora/source-evidence-exchange/v1",
+  "segments": [
+    {
+      "end_byte": 60,
+      "extraction_status": "unreviewed",
+      "id": "s1",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "page": 172,
+          "section": "7.1.4.4.1"
+        }
+      },
+      "modality": "native_text",
+      "sha256": "0d787283e66e24425ecb3355a4e203132ab5f2aa17712e093bcc09c44090e4cd",
+      "start_byte": 0
+    },
+    {
+      "end_byte": 127,
+      "extraction_status": "unreviewed",
+      "id": "s2",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "function": 1,
+          "page": 172,
+          "section": "7.1.4.4.1"
+        }
+      },
+      "modality": "native_text",
+      "sha256": "b59d691ae24af09fd102bc452730d281cf72dd6e392c01bbbe61a3b818146899",
+      "start_byte": 70
+    }
+  ],
+  "source": {
+    "id": "imss-2000-002-001",
+    "media_type": "application/pdf",
+    "revision": "sha256-pinned-copy",
+    "sha256": "719d6da341bff3733750f05357de50ca09fabc7c31c4354186dae8a7a3a70323",
+    "uri": "https://www.imss.gob.mx/sites/all/statics/pdf/manualesynormas/2000-002-001.pdf"
+  }
+}

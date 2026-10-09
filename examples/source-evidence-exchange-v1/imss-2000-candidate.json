@@ -1,0 +1,20 @@
+{
+  "claims": [
+    {
+      "evidence_refs": [
+        {
+          "end_byte": 60,
+          "segment_id": "s1",
+          "start_byte": 0
+        }
+      ],
+      "id": "c1",
+      "kind": "interpretation_candidate",
+      "text": "La sección 7.1.4.4.1 se titula Coordinación Técnica de Infraestructura Médica."
+    }
+  ],
+  "derivative_sha256": "0af7e802a827377a65b8b7dd0a0b8a8d8f5b868822fa72f9b75a36b26f988a51",
+  "manifest_sha256": "96dc4592802a7ff6089962a4d6dc9c48a797a4a5a2bf529a35f0ea8b8a357089",
+  "schema": "agora/source-evidence-candidate/v1",
+  "source_sha256": "719d6da341bff3733750f05357de50ca09fabc7c31c4354186dae8a7a3a70323"
+}

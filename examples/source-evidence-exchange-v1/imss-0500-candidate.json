@@ -1,0 +1,20 @@
+{
+  "claims": [
+    {
+      "evidence_refs": [
+        {
+          "end_byte": 42,
+          "segment_id": "s1",
+          "start_byte": 0
+        }
+      ],
+      "id": "c1",
+      "kind": "interpretation_candidate",
+      "text": "La sección 8.1.3 se titula Dirección de Prestaciones Médicas."
+    }
+  ],
+  "derivative_sha256": "b4d724919c5b546b0a7778202aeca9df3fc193e97b618aa4dd8d748abe9625d1",
+  "manifest_sha256": "521b96a3982b51a3ce78383a119a2ffdfa7e1b5c2b8f8a1a80c1e8a00c0d7022",
+  "schema": "agora/source-evidence-candidate/v1",
+  "source_sha256": "ce665959759f74331464471c71dc9cff107e061de09b8be5419a7cf1302e48b7"
+}
