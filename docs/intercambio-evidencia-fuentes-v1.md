@@ -68,9 +68,12 @@ El mismo esquema v1 admite un perfil ampliado sin cambiar las formas anteriores:
   HTML, no hace OCR y no comprueba que el derivado transcriba visualmente al
   original.
 - En ese perfil, los localizadores admitidos son `pdf_page` (requiere `page`), `text_range`
-  (requiere rango UTF-8) y `html_fragment` (requiere `selector`). Los anclajes
-  `section`, `activity` y `article` son tipados como entero no negativo o texto
-  no vacío. `function`, `item_id` y `bbox` quedan restringidos a `pdf_page`.
+  (requiere rango UTF-8) y `html_fragment` (requiere `selector` o rango de bytes
+  del original; puede conservar ambos e `item_id`). Ágora valida la forma del
+  rango; el consumidor coteja offsets y hash contra el HTML original. Los
+  anclajes `section`, `activity` y `article` son tipados como entero no negativo
+  o texto no vacío. `function` y `bbox` quedan restringidos a `pdf_page`;
+  `item_id` también se admite en `html_fragment` cuando lo produce Skopos.
   Un localizador de conversación o de DOCX se rechaza cerrado en este perfil.
   La forma heredada conserva la aceptación genérica anterior para no romper
   consumidores v1, pero no acredita soporte de extracción, localización tipada

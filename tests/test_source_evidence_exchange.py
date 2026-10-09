@@ -244,6 +244,12 @@ class EvidenceExchangeTests(unittest.TestCase):
             _, _, integrity = validate_exchange(derived, manifest, original)
             self.assertEqual(integrity, "sha256_verified")
             self.assertNotEqual(source_sha, manifest["derivative"]["sha256"])
+            manifest["segments"][0]["locator"]["value"] = {
+                "start_byte": 3, "end_byte": 15, "item_id": "html-item-1"}
+            validate_exchange(derived, manifest, original)
+            manifest["segments"][0]["locator"]["value"]["end_byte"] = 2
+            with self.assertRaisesRegex(SourceError, "invalid_html_byte_range"):
+                validate_exchange(derived, manifest, original)
 
     def test_version_relation_stays_candidate_and_requires_declared_kind(self):
         with tempfile.TemporaryDirectory() as temp:

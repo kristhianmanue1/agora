@@ -190,8 +190,16 @@ def _locator(value, profiled):
                 not 0 <= coordinates["start_byte"] < coordinates["end_byte"]):
             raise SourceError("invalid_text_range")
     else:
-        allowed = common | {"selector"}
-        _label(coordinates.get("selector"), "invalid_html_selector", 500)
+        allowed = common | {"selector", "start_byte", "end_byte", "item_id"}
+        has_range = "start_byte" in coordinates or "end_byte" in coordinates
+        if "selector" in coordinates:
+            _label(coordinates["selector"], "invalid_html_selector", 500)
+        if has_range and (type(coordinates.get("start_byte")) is not int or
+                          type(coordinates.get("end_byte")) is not int or
+                          not 0 <= coordinates["start_byte"] < coordinates["end_byte"]):
+            raise SourceError("invalid_html_byte_range")
+        if not has_range and "selector" not in coordinates:
+            raise SourceError("missing_html_anchor")
     if not set(coordinates) <= allowed:
         raise SourceError("invalid_locator_key")
     for key in common & set(coordinates):
