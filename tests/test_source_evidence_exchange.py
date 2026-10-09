@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 
 from agora.source import SourceError
@@ -20,6 +21,27 @@ def case(name):
     manifest = json.loads(raw)
     candidate = json.loads((EXAMPLES / f"{name}-candidate.json").read_bytes())
     return EXAMPLES / f"{name}-derived.txt", raw, manifest, candidate
+
+
+def temporal_exchange(root, ident, source_sha256, document_date, media_type, locator, text):
+    raw_text = text.encode("utf-8")
+    derived = root / (ident + ".txt")
+    derived.write_bytes(raw_text)
+    manifest = {
+        "schema": "agora/source-evidence-exchange/v1",
+        "source": {"id": ident, "sha256": source_sha256, "media_type": media_type,
+                   "revision": "fixture-declared", "uri": None,
+                   "temporal": {"document_date": document_date, "status": "not_assessed"}},
+        "derivative": {"id": ident + "-derived", "sha256": hashlib.sha256(raw_text).hexdigest(),
+                       "coverage": "partial", "producer": {"system": "fixture", "version": "v1",
+                       "manifest_sha256": None, "derivation_id": None},
+                       "normalization": {"status": "not_applied", "description": None}},
+        "segments": [{"id": "s1", "start_byte": 0, "end_byte": len(raw_text),
+                      "sha256": hashlib.sha256(raw_text).hexdigest(), "locator": locator,
+                      "modality": "native_text", "extraction_status": "unreviewed"}],
+    }
+    manifest_raw = json.dumps(manifest, ensure_ascii=False, sort_keys=True).encode()
+    return derived, manifest_raw, manifest
 
 
 class EvidenceExchangeTests(unittest.TestCase):
@@ -128,6 +150,133 @@ class EvidenceExchangeTests(unittest.TestCase):
         result = json.loads(run.stdout)
         self.assertEqual(result["status"], "candidate_unreviewed")
         self.assertEqual(result["provider_calls"], 0)
+
+    def test_five_source_temporal_relation_preserves_literals_without_adjudicating(self):
+        fixtures = [
+            ("imss-dpm-2000", "719d6da341bff3733750f05357de50ca09fabc7c31c4354186dae8a7a3a70323",
+             "2025", "application/pdf", {"kind": "pdf_page", "value":
+             {"page": 1, "section": "DPM", "activity": "organización"}},
+             "Fixture DPM 2000."),
+            ("imss-0500", "ce665959759f74331464471c71dc9cff107e061de09b8be5419a7cf1302e48b7",
+             "2022", "application/pdf", {"kind": "pdf_page", "value":
+             {"page": 2, "section": "8.1.3", "activity": 2}}, "Fixture IMSS 0500."),
+            ("imss-da-1000", "2578bc3df7bafaefd250e971e0087f1b28dc5e9878ed343e8159a23e22d8de49",
+             "2025", "application/pdf", {"kind": "pdf_page", "value":
+             {"page": 3, "section": "DA", "activity": "1"}}, "Fixture DA 1000."),
+            ("imss-procedimiento-2900", "141d9b090efa4d70799ee1368350a5167347b4e8cd5f99912fb192ce6c704faa",
+             "2021", "application/pdf", {"kind": "pdf_page", "value":
+             {"page": 4, "activity": "2900"}}, "Fixture procedimiento 2900."),
+            ("dof-5625913", "e088234e624a6172a7e85eb0aed5c338b55c84e399b6ea086cd326f85ddc580e",
+            "2021", "text/html; charset=iso-8859-1", {"kind": "html_fragment", "value":
+             {"selector": "#articulo-1", "article": "1"}}, "Fixture DOF 5625913."),
+        ]
+        with tempfile.TemporaryDirectory() as temp:
+            entries = [temporal_exchange(Path(temp), *fixture) for fixture in fixtures]
+            exchanges = [(path, raw, manifest, None) for path, raw, manifest in entries]
+            hashes = [hashlib.sha256(raw).hexdigest() for _, raw, _ in entries]
+            candidate = {"schema": "agora/source-evidence-bundle-candidate/v1",
+                         "manifest_sha256s": hashes,
+                         "claims": [{"id": "c1", "kind": "relation_candidate",
+                         "text": "Candidato: contrastar fechas declaradas 2021 y 2025; no adjudica vigencia.",
+                         "relation": {"kind": "temporal_conflict_candidate",
+                                      "temporal_status": "not_assessed",
+                                      "identity_status": "not_assessed",
+                                      "normalization": {"status": "not_applied", "description": None}},
+                         "evidence_refs": [{"manifest_sha256": item, "segment_id": "s1",
+                                            "start_byte": 0,
+                                            "end_byte": entries[index][0].stat().st_size}
+                                           for index, item in enumerate(hashes)]}]}
+            candidate["claims"].append({"id": "c2", "kind": "relation_candidate",
+                "text": "Candidato: la identidad institucional entre DPM y DA no está adjudicada.",
+                "relation": {"kind": "identity_unresolved_candidate",
+                             "temporal_status": "not_assessed", "identity_status": "not_assessed",
+                             "normalization": {"status": "not_applied", "description": None}},
+                "evidence_refs": [{"manifest_sha256": hashes[index], "segment_id": "s1",
+                                   "start_byte": 0, "end_byte": entries[index][0].stat().st_size}
+                                  for index in (0, 2)]})
+            result = resolve_bundle(exchanges, candidate)
+        claim = result["claims"][0]
+        self.assertEqual(claim["relation"]["temporal_status"], "not_assessed")
+        self.assertEqual(claim["semantic_support"], "not_verified")
+        self.assertFalse(result["admitted"])
+        self.assertEqual(result["provider_calls"], 0)
+        self.assertEqual([item["source_temporal_status"]["document_date"] for item in claim["evidence"]],
+                         ["2025", "2022", "2025", "2021", "2021"])
+        self.assertEqual(claim["evidence"][-1]["locator"]["value"]["article"], "1")
+        self.assertEqual(claim["evidence"][0]["derivative_normalization"],
+                         {"status": "not_applied", "description": None})
+        self.assertEqual(result["claims"][1]["relation"]["kind"], "identity_unresolved_candidate")
+        self.assertEqual(result["claims"][1]["relation"]["identity_status"], "not_assessed")
+
+    def test_typed_profiles_fail_closed_and_do_not_admit_temporal_vigency(self):
+        path, raw, manifest, _ = case("imss-0500")
+        wrong = copy.deepcopy(manifest)
+        wrong["source"]["temporal"] = {"document_date": "2025", "status": "not_assessed"}
+        wrong["source"]["media_type"] = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        with self.assertRaisesRegex(SourceError, "unsupported_source_media_type"):
+            validate_exchange(path, wrong)
+        wrong = copy.deepcopy(manifest)
+        wrong["derivative"]["normalization"] = {"status": "not_applied", "description": None}
+        wrong["segments"][0]["locator"]["kind"] = "conversation_turn"
+        with self.assertRaisesRegex(SourceError, "unsupported_locator_kind"):
+            validate_exchange(path, wrong)
+        wrong = copy.deepcopy(manifest)
+        wrong["source"]["temporal"] = {"document_date": "2025", "status": "vigente"}
+        with self.assertRaisesRegex(SourceError, "invalid_temporal_status"):
+            validate_exchange(path, wrong)
+        wrong = copy.deepcopy(manifest)
+        wrong["derivative"]["normalization"] = {"status": "not_applied", "description": None}
+        wrong["segments"][0]["locator"]["value"]["article"] = ["1"]
+        with self.assertRaisesRegex(SourceError, "invalid_typed_anchor"):
+            validate_exchange(path, wrong)
+
+    def test_iso_8859_1_html_original_keeps_raw_hash_with_utf8_derivative(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            original = root / "source.html"
+            original.write_bytes(b"<p>Coordinaci\xf3n</p>")
+            source_sha = hashlib.sha256(original.read_bytes()).hexdigest()
+            derived, _, manifest = temporal_exchange(
+                root, "html-latin1", source_sha, "2021",
+                "text/html; charset=iso-8859-1",
+                {"kind": "html_fragment", "value": {"selector": "p"}},
+                "Coordinación")
+            _, _, integrity = validate_exchange(derived, manifest, original)
+            self.assertEqual(integrity, "sha256_verified")
+            self.assertNotEqual(source_sha, manifest["derivative"]["sha256"])
+
+    def test_version_relation_stays_candidate_and_requires_declared_kind(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            first = temporal_exchange(root, "older", "a" * 64, "2021", "text/plain; charset=utf-8",
+                                      {"kind": "text_range", "value": {"start_byte": 0, "end_byte": 20}},
+                                      "older source literal")
+            second = temporal_exchange(root, "later", "b" * 64, "2022", "text/plain; charset=utf-8",
+                                       {"kind": "text_range", "value": {"start_byte": 0, "end_byte": 20}},
+                                       "later source literal")
+            exchanges = [(item[0], item[1], item[2], None) for item in (first, second)]
+            hashes = [hashlib.sha256(item[1]).hexdigest() for item in (first, second)]
+            candidate = {"schema": "agora/source-evidence-bundle-candidate/v1",
+                         "manifest_sha256s": hashes,
+                         "claims": [{"id": "amends-candidate", "kind": "relation_candidate",
+                         "text": "A source may amend another source.",
+                         "evidence_refs": [{"manifest_sha256": item, "segment_id": "s1",
+                                            "start_byte": 0, "end_byte": 20} for item in hashes],
+                         "relation": {"kind": "version_relation_candidate",
+                                      "temporal_status": "not_assessed",
+                                      "identity_status": "not_assessed",
+                                      "normalization": {"status": "not_applied", "description": None},
+                                      "version_relation": "amends"}}]}
+            result = resolve_bundle(exchanges, candidate)
+            relation = result["claims"][0]["relation"]
+            self.assertEqual("amends", relation["version_relation"])
+            self.assertEqual("not_assessed", relation["temporal_status"])
+            self.assertEqual("not_verified", result["claims"][0]["semantic_support"])
+            self.assertFalse(result["admitted"])
+
+            candidate["claims"][0]["relation"]["version_relation"] = "current"
+            with self.assertRaisesRegex(SourceError, "invalid_version_relation"):
+                resolve_bundle(exchanges, candidate)
 
 
 if __name__ == "__main__":
