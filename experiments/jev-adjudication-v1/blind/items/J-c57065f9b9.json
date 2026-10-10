@@ -1,0 +1,17 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-c57065f9b9",
+  "source_file": "../sources/S-9a6732b8.txt",
+  "source_sha256": "29378327b9b472e40792b9442bfbb2af91f65954efbcb176cfbda3623d421f34",
+  "question": "Which English dataset do they evaluate on?",
+  "requirements": [
+    "Name the English dataset used for evaluation."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "They evaluate on the original MS-COCO English dataset restricted to the sportball category, called 'English-sportball', consisting of 3,850 sportball images, which is first evaluated to provide base results for the following comparisons.",
+    "Their experiments and comparisons are conducted through three datasets of the same size and sportball images: two Vietnamese datasets (Google-translated and human-annotated) and the original MS-COCO English dataset, split into 2,695 training, 924 validation and 231 test images.",
+    "The English dataset used for comparison is the original MS-COCO (Microsoft Common in Objects in Context) dataset, whose English captions categorized with sportball were used to train the Pytorch-tutorial and NIC Show-and-Tell models."
+  ],
+  "stated_limitations": []
+}

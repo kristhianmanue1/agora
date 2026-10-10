@@ -1,0 +1,15 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-ee244fe1bb",
+  "source_file": "../sources/S-6ff37dc9.txt",
+  "source_sha256": "614e7eb9f5e3f6b3fbef20670931ecbee8a1bddecfd4f528e1cd8e06fa1b3959",
+  "question": "What are the languages of the datasets?",
+  "requirements": [
+    "List dataset languages only if explicitly supported by the source; otherwise abstain."
+  ],
+  "response_status": "abstained",
+  "claims": [],
+  "stated_limitations": [
+    "The source identifies the datasets used (CNN/DM and XSum) and describes them as 'standard datasets for news summarization,' with CNN/DM being 'highly extractive' and XSum being 'highly abstractive,' but it never explicitly states the languages of these datasets. No explicit statement about dataset languages (e.g., English) is present in the source, so no language claims can be supported."
+  ]
+}

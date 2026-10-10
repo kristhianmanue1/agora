@@ -1,0 +1,20 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-f61701dc78",
+  "source_file": "../sources/S-1d14aa22.txt",
+  "source_sha256": "921028d215f429d2fa82efaeac247485be925e6d17579e645616bc5c672d955f",
+  "question": "How are the embeddings evaluated in the human judgement comparison?",
+  "requirements": [
+    "Identify the comparison with human judgments.",
+    "Describe how embedding similarities are evaluated."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "The comparison is against human similarity judgments, in which human annotators judge how similar two words are on a fixed scale.",
+    "Model word vectors are evaluated by ranking the word pairs according to their cosine similarity and then measuring the correlation (Spearman's rho) between model judgments and human judgments.",
+    "The evaluation uses the WordSim353 dataset, the test split of the MEN dataset, and the Rare Word (RW) dataset."
+  ],
+  "stated_limitations": [
+    "The source references Tables 3 and 4 for the actual correlation scores, but the numeric results themselves are not included in the provided text."
+  ]
+}

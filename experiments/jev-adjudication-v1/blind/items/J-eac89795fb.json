@@ -1,0 +1,18 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-eac89795fb",
+  "source_file": "../sources/S-683729c2.txt",
+  "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+  "question": "How this system recommend features for the new application?",
+  "requirements": [
+    "Explain how the new application is compared with known applications.",
+    "State how recommendations are ordered."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "For a new application, the system first estimates its semantic proximity with existing applications in the knowledge base that have known features (by embedding the new application's fields and computing field-level similarities, with the mean similarity across fields serving as the proximity).",
+    "The closeness of the new application to each existing application is captured in an ego-similarity network (diagonal matrix), which is then combined with the feature relevance matrix to estimate the probable relevance of each feature for the new application.",
+    "Recommendations are ordered by ranking the feature specifications in decreasing order of their computed relevance for the new application, and these ranked features are suggested to the NLP data scientist along with supporting evidence."
+  ],
+  "stated_limitations": []
+}

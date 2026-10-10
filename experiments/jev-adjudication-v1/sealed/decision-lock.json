@@ -1,0 +1,19 @@
+{
+  "schema": "agora/jev-adjudication-decision-lock/v1",
+  "created_before_independent_adjudication": true,
+  "scope": "retrospective calibration; no claim that provider calls were preregistered by this packet",
+  "sentinels": {
+    "J-0c61dbcf11": {"support": "supported", "coverage": "omitted", "reason": "Case-03 ordering claim was deleted; retained claims describe true proximity and relevance steps."},
+    "J-027b4092b6": {"support": "unsupported", "coverage": "omitted", "reason": "The answer denies NewsTest2014 although the source names it as an evaluation dataset."}
+  },
+  "decision_rules": {
+    "independent_panel": "Two adjudicators work without the sealed mapping or each other's labels; a third resolves material disagreements before unblinding. With one adjudicator the outcome is provisional.",
+    "sentinel_failure": "If either sentinel misses its expected support or coverage label, review rubric application before interpreting provider agreement; retain the original labels and explanations.",
+    "unknown_label": "Ambiguous or uncertain items require explicit human review and never count as a safe automatic pass.",
+    "false_acceptance": "Any provider complete where adjudicated coverage is omitted, or provider supported where adjudicated support is unsupported, blocks promotion of this reviewer configuration.",
+    "false_rejection": "Record provider omitted for adjudicated complete and provider unsupported for adjudicated supported separately; do not relabel the adjudication to fit the provider.",
+    "advance_to_larger_trial": "Only after panel adjudication, sentinel checks and zero false acceptances may this configuration be considered for a larger prospective trial. This 12-item retrospective packet cannot authorize product activation even if all labels match."
+  },
+  "provider_calls_now": 0,
+  "activation": "not_authorized_by_packet"
+}

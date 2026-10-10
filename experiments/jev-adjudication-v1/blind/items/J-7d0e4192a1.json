@@ -1,0 +1,16 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-7d0e4192a1",
+  "source_file": "../sources/S-e2f172fa.txt",
+  "source_sha256": "ff1bebab77de33b47330851b76046502e1def373918b15e7e0195a9503c40bec",
+  "question": "what emotion cause dataset was used?",
+  "requirements": [
+    "Name the emotion-cause dataset used."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "The experiments were conducted on a simplified Chinese emotion cause corpus (reference BIBREF31), described as the only publicly available dataset for the emotion cause extraction task to the authors' knowledge.",
+    "The dataset is a corpus containing 2,105 documents from SINA city news, in which each document has only one emotion word and one or more emotion causes, and the documents are manually segmented into clauses."
+  ],
+  "stated_limitations": []
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-fb95c39b04",
+  "source_file": "../sources/S-4b52ad5a.txt",
+  "source_sha256": "6f8250062b62455c7815b57d76c7c12d3ea124445e621edd173ad7810cee77fb",
+  "question": "What languages were included in this multilingual population?",
+  "requirements": [
+    "List languages in the population only if explicitly supported by the source; otherwise abstain."
+  ],
+  "response_status": "abstained",
+  "claims": [],
+  "stated_limitations": [
+    "The source describes the study population as 'multilingual' and notes plans to analyse 'multilingual accounts' from 'individuals of diverse ethnicities', but it never explicitly lists which specific languages are included in that population. The only specific languages mentioned are English (the focus of earlier research and the project's first phase) and Dutch (as an example of an existing LIWC translation, not a population language); the source also references Twitter's 60 language codes and USAS tagging eight languages without naming them. No explicit enumeration of the multilingual population's languages is provided."
+  ]
+}

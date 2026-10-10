@@ -1,0 +1,126 @@
+{
+  "schema": "agora/blind-adjudication-mapping/v1",
+  "scope": "retrospective; preparer knew earlier Jev results for some controls",
+  "entries": [
+    {
+      "item_id": "J-f119f8f68a",
+      "source_id": "S-e2f172fa",
+      "origin": "T0-case-02-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-02/A/result.json",
+      "item_sha256": "f704b0bbe38c159d6c2d20ef7c6c46d1ae2cbaa21cb31593d0a20500698422b8",
+      "source_sha256": "ff1bebab77de33b47330851b76046502e1def373918b15e7e0195a9503c40bec",
+      "origin_fingerprint": "a9a6c54756d37759857cb49227857c9c6594ab8a8c7e220ebfdf7efea2612a5e"
+    },
+    {
+      "item_id": "J-7d0e4192a1",
+      "source_id": "S-e2f172fa",
+      "origin": "T0-case-02-B",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-02/B/result.json",
+      "item_sha256": "c9df2577f0c5175cd3338cb344f8e7fc8c47d2bd255bd87963460f78f9f3f124",
+      "source_sha256": "ff1bebab77de33b47330851b76046502e1def373918b15e7e0195a9503c40bec",
+      "origin_fingerprint": "3624c35127bab5ffbd331deec616ae2df9faad867dc15144162dfd65b8ffdfac:candidate=c7b58d1e2a287a062d83d7a88f507d5383c41336faf101aa978fa43e031f33d0"
+    },
+    {
+      "item_id": "J-44965bbcf5",
+      "source_id": "S-6ff37dc9",
+      "origin": "T0-case-05-B",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-05/B/result.json",
+      "item_sha256": "b02d48c90c188557116b1f49a560fb6a8ae644761a1c663c5708bceeea80bde0",
+      "source_sha256": "614e7eb9f5e3f6b3fbef20670931ecbee8a1bddecfd4f528e1cd8e06fa1b3959",
+      "origin_fingerprint": "cba79a1a9f7a683c0ee3d28405fa2d2296488ba27731f9a9eb92bd3a2830da3d:candidate=365a15961a08aa762cbff92d06f1d80eeac365dc71a2c233fb1f642740e7edfd"
+    },
+    {
+      "item_id": "J-c57065f9b9",
+      "source_id": "S-9a6732b8",
+      "origin": "T0-case-04-B",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-04/B/result.json",
+      "item_sha256": "c7b67625b1a05dbfb5addfc4236e67eb0092c3be6d12815a24f1bf2de80f760f",
+      "source_sha256": "29378327b9b472e40792b9442bfbb2af91f65954efbcb176cfbda3623d421f34",
+      "origin_fingerprint": "d674b63a4f338a9b1a1da4b30bc6d377e2e18d14e71644f0002af46c604a4b17:candidate=6be8d97d75091738d5dfdf68e0f7deee04f3edaaff6174589a0e7d81e98aa1f3"
+    },
+    {
+      "item_id": "J-fb95c39b04",
+      "source_id": "S-4b52ad5a",
+      "origin": "T0-case-06-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-06/A/result.json",
+      "item_sha256": "2c14b0a7c2ddf15a119f38efefdd14e421c01e8612726540444177385d4bc228",
+      "source_sha256": "6f8250062b62455c7815b57d76c7c12d3ea124445e621edd173ad7810cee77fb",
+      "origin_fingerprint": "cfda289cdb4f27049d1ca79155ae07f45301e2a6f060b983924b794e00655fd7"
+    },
+    {
+      "item_id": "J-0c61dbcf11",
+      "source_id": "S-683729c2",
+      "origin": "case-03-omission-control",
+      "kind": "prepared_omission",
+      "origin_path": "experiments/jev-case-03-review-v1/control-run-2026-10-10-01/control-candidate.json",
+      "item_sha256": "a920d0144d9d5dd49b94a359b16082fd30c194488c01452009560d7cd971e6fd",
+      "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+      "origin_fingerprint": "5a59233c8908d9a6bd2794a9bb81f1efb0522542dd28a3e108553497a18ff004"
+    },
+    {
+      "item_id": "J-4dd08cb3f0",
+      "source_id": "S-9a6732b8",
+      "origin": "T0-case-04-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-04/A/result.json",
+      "item_sha256": "fc9d0424f8502f9a214425d70808dd31496a4df8d07907cf7fcb8851e176b67a",
+      "source_sha256": "29378327b9b472e40792b9442bfbb2af91f65954efbcb176cfbda3623d421f34",
+      "origin_fingerprint": "f4928272a2617991a696b95dc845e4da73577650eda7551d43a6aa17b0c5be1f"
+    },
+    {
+      "item_id": "J-027b4092b6",
+      "source_id": "S-f40320a7",
+      "origin": "heldout-datasets-contradiction-control",
+      "kind": "prepared_contradiction",
+      "origin_path": "experiments/jev-heldout-qasper-v1/freeze.json",
+      "item_sha256": "9e0727b1bd2975657ac54f77fbcf86569595324a5c4af37aa462ffac248d06ca",
+      "source_sha256": "e7d6746c1da899475775bc07f36abf77067a12d3aa0b6953e355119aeefa6fef",
+      "origin_fingerprint": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3"
+    },
+    {
+      "item_id": "J-d47c8db243",
+      "source_id": "S-1d14aa22",
+      "origin": "T0-case-01-B",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-01/B/result.json",
+      "item_sha256": "2759c85c03dfed957e838f2889542cd2fb86410ac246b23abd9c7740fe786c96",
+      "source_sha256": "921028d215f429d2fa82efaeac247485be925e6d17579e645616bc5c672d955f",
+      "origin_fingerprint": "b4a1ff487e9bbde8ca03b64283fa16991eedea001879bce93a105024de82f16c:candidate=fd69bd29516b139bc6d060f0f1d0286943525b546e2c29f38fb7091d3f310d78"
+    },
+    {
+      "item_id": "J-eac89795fb",
+      "source_id": "S-683729c2",
+      "origin": "T0-case-03-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-03/A/result.json",
+      "item_sha256": "dd69546ce2fcef5d787901eecfb21e10f2c98819913ac80b23e4c1b62a4c6cd7",
+      "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+      "origin_fingerprint": "ee9f930ea097ab909a85c94d9e395019f7459771692549f71181100526e1b004"
+    },
+    {
+      "item_id": "J-f61701dc78",
+      "source_id": "S-1d14aa22",
+      "origin": "T0-case-01-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-01/A/result.json",
+      "item_sha256": "310f038462e7cab3fde43527da8a298b18908d13c9925e6b465bfe84bce6bb0a",
+      "source_sha256": "921028d215f429d2fa82efaeac247485be925e6d17579e645616bc5c672d955f",
+      "origin_fingerprint": "ef74ee0520701b5989820e0aed8e7354a0d9a6849c7ee58eefd27bb726d2e1d7"
+    },
+    {
+      "item_id": "J-ee244fe1bb",
+      "source_id": "S-6ff37dc9",
+      "origin": "T0-case-05-A",
+      "kind": "spontaneous",
+      "origin_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-05/A/result.json",
+      "item_sha256": "e576f45cbacd0316f95be67655c3315a714ae72722824aa3604abe40b5b7cd24",
+      "source_sha256": "614e7eb9f5e3f6b3fbef20670931ecbee8a1bddecfd4f528e1cd8e06fa1b3959",
+      "origin_fingerprint": "0961813ec704e58e154b743bf9b7c34889e8ca429cb9f5c665618b10c32902d3"
+    }
+  ]
+}
