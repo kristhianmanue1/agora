@@ -1,0 +1,1 @@
+{"max_output_tokens":8192,"model_requested":"offline-fixture","ordinal":3,"provider_id":"offline_synthetic_control","remote_outcome":"unknown","request_sha256":"a166f243fc8ee63034b1900ffc68f59bac3b8d27656dd8c3b46a11a4dbc7c885","source_sha256":"51635a98abb5648a211113e4ac02b39ee1f1fb5d99f4eeeaac61e818cae524bf","stage":"relevance","state":"attempted","timeout_seconds":120}

@@ -1,0 +1,1 @@
+{"content":"{\"parts\": [{\"id\": \"P1\", \"status\": \"answered\", \"claims\": [{\"text\": \"La actividad 22 menciona el desarrollo del Proyecto ejecutivo.\", \"evidence_ids\": [\"ev_302a0fd538c61fb1a81b5454\"]}], \"missing\": []}]}","finish_reason":"stop","reported_model":"offline-fixture","requested_model":"offline-fixture","usage":{"synthetic":true,"total_tokens":0}}

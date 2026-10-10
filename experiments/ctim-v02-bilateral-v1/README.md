@@ -38,6 +38,27 @@ relajó el validador para atribuir una cita global a una línea PDF concreta.
 La salida textual es una candidata para revisión, no una respuesta CTIM
 aceptada ni una integración activada en expertoGobernanza.
 
+## Corrección de exportación y control offline
+
+La exportación v2 representa una cita que ocupa segmentos contiguos mediante
+`segment_refs` con rangos y localizadores individuales. El control
+`offline-full-page-control-v2/` usa `exchange-v2/derived.txt` sin saltos y un
+proveedor **sintético local** identificado como `offline-fixture`: no hubo
+llamadas de modelo ni se adjudicó su afirmación.
+`package-offline-full-page-control-v2/` se exportó y verificó con el
+PDF original, `original_integrity=sha256_verified` y 41 referencias contiguas
+a líneas de la página 15. Esto comprueba el vínculo estructural, no la
+fidelidad semántica ni la revisión visual de cada línea.
+
+El recorrido real `flow-2026-10-10-08-normalized-v2/` continúa fallando al
+exportar **con** `exchange-focused/`: su cita global cruza `[omitted]`, que no
+es evidencia de Skopos. `package-2026-10-10-08-text-only-v2/` exporta el mismo
+recorrido **sin** atribución PDF. Expone `candidate_answer_status=candidate_partial`,
+los seis faltantes declarados, `coverage_advice=complete` y
+`candidate_coverage_conflict=true`, con `disposition=requires_review`. El
+paquete textual v1 anterior permanece como recibo histórico; no representa
+este conflicto nuevo.
+
 La ejecución de Skopos requirió el almacén local; el primer intento sin él
 quedó en `response-store-unavailable.json`. El recibo
 `runtime-receipt.jsonl` corresponde a un arranque fallido del supervisor;

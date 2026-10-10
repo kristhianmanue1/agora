@@ -10,6 +10,35 @@ from .jev_flow_review import SCHEMA as JEV_SCHEMA
 from .source_evidence_exchange import validate_exchange
 
 SCHEMA = "agora/consultation-package/v1-experimental"
+MULTI_SEGMENT_SCHEMA = "agora/consultation-package/v2-experimental"
+
+
+def _segment_refs(start, end, source_raw, segments):
+    """Map every quoted byte to exactly one validated segment, without gaps."""
+    cursor = start
+    refs = []
+    for segment in sorted(segments.values(), key=lambda item: item["start_byte"]):
+        if segment["end_byte"] <= cursor:
+            continue
+        if segment["start_byte"] > cursor:
+            raise ValueError("citation_unmapped_to_exchange")
+        stop = min(end, segment["end_byte"])
+        if stop <= cursor:
+            continue
+        raw = source_raw[cursor:stop]
+        try:
+            literal = raw.decode("utf-8")
+        except UnicodeError as exc:
+            raise ValueError("citation_splits_utf8") from exc
+        refs.append({"segment_id": segment["id"], "start_byte": cursor,
+                     "end_byte": stop, "literal_text": literal,
+                     "literal_sha256": _sha(raw), "locator": segment["locator"],
+                     "modality": segment["modality"],
+                     "extraction_status": segment["extraction_status"]})
+        cursor = stop
+        if cursor == end:
+            return refs
+    raise ValueError("citation_unmapped_to_exchange")
 
 
 def _linked(run, stage, filename):
@@ -80,6 +109,7 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
 
     reviews = {(a["part_id"], a["claim_index"]): a for a in split["assessment"]} if split else {}
     claims = []
+    has_multi_segment_citation = False
     expected_jev = set()
     for part in candidate["parts"]:
         for index, claim in enumerate(part["claims"]):
@@ -104,14 +134,15 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
                             "literal_sha256": _sha(source_raw[start:end]),
                             "evidence_id": citation.get("evidence_id")}
                     if segments is not None:
-                        matching = [segment for segment in segments.values()
-                                    if segment["start_byte"] <= start and end <= segment["end_byte"]]
-                        if len(matching) != 1:
-                            raise ValueError("citation_unmapped_to_exchange")
-                        segment = matching[0]
-                        item.update(segment_id=segment["id"], locator=segment["locator"],
-                                    modality=segment["modality"],
-                                    extraction_status=segment["extraction_status"])
+                        refs = _segment_refs(start, end, source_raw, segments)
+                        if len(refs) == 1:
+                            ref = refs[0]
+                            item.update(segment_id=ref["segment_id"], locator=ref["locator"],
+                                        modality=ref["modality"],
+                                        extraction_status=ref["extraction_status"])
+                        else:
+                            has_multi_segment_citation = True
+                            item["segment_refs"] = refs
                     evidence.append(item)
             claims.append({"part_id": part["id"], "claim_index": index,
                            "text": claim["text"], "evidence": evidence,
@@ -122,7 +153,13 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
         raise ValueError("jev_claim_set_mismatch")
     if split and set(reviews) != {(c["part_id"], c["claim_index"]) for c in claims}:
         raise ValueError("claim_review_set_mismatch")
-    package = {"schema": SCHEMA, "status": "candidate_for_consumer_review",
+    declared_missing = [{"part_id": part["id"], "status": part["status"],
+                         "missing": part["missing"]} for part in candidate["parts"]
+                        if part["status"] != "answered" or part["missing"]]
+    candidate_coverage_conflict = bool(declared_missing and coverage["coverage"] == "complete")
+    package_v2 = has_multi_segment_citation or bool(declared_missing)
+    package = {"schema": MULTI_SEGMENT_SCHEMA if package_v2 else SCHEMA,
+            "status": "candidate_for_consumer_review",
             "source": provenance, "source_id": flow["source_id"],
             "question": flow["question"], "requirements": flow["requirements"],
             "claims": claims, "coverage_advice": coverage["coverage"],
@@ -135,6 +172,10 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
             "adjudication": "not_performed", "memory_admission": "not_performed",
             "institutional_acceptance": "not_performed",
             "disposition": "requires_review"}
+    if package_v2:
+        package["candidate_answer_status"] = candidate["answer_status"]
+        package["candidate_declared_missing"] = declared_missing
+        package["candidate_coverage_conflict"] = candidate_coverage_conflict
     if flow["schema"] == FLOW_V2_SCHEMA:
         validate_budgets(flow["budgets"])
         if _sha(_encoded(flow["budgets"])) != flow["budgets_sha256"]:

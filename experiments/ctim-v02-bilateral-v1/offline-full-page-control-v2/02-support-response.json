@@ -1,0 +1,1 @@
+{"content":"{\"claims\": [{\"id\": 0, \"support\": \"supported\", \"quote_indices\": [0], \"reason\": \"Exact quote.\"}]}","finish_reason":"stop","reported_model":"offline-fixture","requested_model":"offline-fixture","usage":{"total_tokens":7}}

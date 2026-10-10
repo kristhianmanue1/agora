@@ -89,10 +89,23 @@ desde los artefactos ligados y exige igualdad completa, sin red ni escritura.
 Sin `--exchange`, el paquete identifica **sólo el UTF-8 suministrado** y declara
 `original_integrity=not_established`. Para ligar citas a un PDF/HTML original,
 añadir `--exchange exchange.json --original original.pdf`: el validador exige
-SHA del original, SHA del derivado, segmentos y que cada cita caiga completa
-en un segmento. Sólo entonces adjunta localizador y modalidad declarados por
-el productor. El hash de PDF no verifica por sí mismo fidelidad visual, y un
-paquete parcial no acredita cobertura del documento completo.
+SHA del original, SHA del derivado y segmentos. Si una cita ocupa un segmento,
+conserva el esquema `agora/consultation-package/v1-experimental` y su localizador
+único. Si ocupa varios segmentos contiguos, usa
+`agora/consultation-package/v2-experimental` y `segment_refs`: cada referencia
+lleva rango de bytes, literal, hash, localizador, modalidad y estado de
+extracción. Todos los bytes de la cita deben estar cubiertos. Un separador
+`[omitted]` o cualquier hueco sin segmento impide la exportación vinculada;
+no se le asigna localizador PDF. El hash del original no verifica por sí mismo
+fidelidad visual, y un paquete parcial no acredita cobertura del documento
+completo.
+
+El esquema v2 también conserva `candidate_answer_status`,
+`candidate_declared_missing` y `candidate_coverage_conflict`. Este último es
+verdadero si el candidato declara información faltante y la revisión externa
+propone `coverage=complete`. Ambos juicios quedan literales para el consumidor;
+el paquete permanece en `requires_review`. El paquete v1 de una ejecución
+anterior no se reescribe ni se interpreta como si tuviera estos campos.
 
 Este paquete es la frontera propuesta de Ágora hacia ARIA y
 expertoGobernanza. La incorporación al consumidor, sus gates de cita y el
