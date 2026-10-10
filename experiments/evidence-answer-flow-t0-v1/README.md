@@ -1,6 +1,6 @@
 # T0: lote de calibración para respuesta con evidencia
 
-**Estado:** diseño congelado antes de nuevas llamadas a modelos. Este lote prepara la comparación entre una respuesta directa y el recorrido compuesto propuesto en `docs/plan-consulta-con-modelos-y-evidencia-2026-10-10.md`. No hay resultados de los dos brazos ni decisión de promoción.
+**Estado:** diseño congelado antes de nuevas llamadas a modelos. Este lote prepara la comparación entre una respuesta directa y el recorrido compuesto experimental descrito en `docs/plan-consulta-con-modelos-y-evidencia-2026-10-10.md`. No hay resultados de los dos brazos ni decisión de promoción.
 
 ## Fuentes y selección
 
@@ -14,7 +14,7 @@ Los artículos QASPER son fuentes de investigación sobre NLP, no sustitutos de 
 
 1. **Entrada compartida:** fuente textual completa reconstruida por `agora.qasper.render`, pregunta exacta, requisitos de tarea y mismo modelo solicitado `glm-5.3-flash`; fuente y pregunta se verifican contra `freeze.json` antes de cada despacho. La etiqueta QASPER y los criterios de adjudicación quedan fuera del prompt. No se usa recuperación ni PDF.
 2. **A, línea base:** una llamada de generación directa con la fuente y lista explícita de requisitos. `baseline-prompt.json` fija el texto exacto y su SHA-256 consta en `freeze.json`. Debe devolver estado de respuesta o abstención, afirmaciones y citas literales. Límite de salida: 4.096 tokens; timeout: 120 segundos; temperatura 0; cero reintentos. La forma se valida por separado de la calidad semántica.
-3. **B, recorrido:** la misma fuente, pregunta, requisitos, modelo y límite de generación; luego revisión de respaldo, cobertura y, si se solicita, diagnóstico. Hasta cinco despachos totales: uno de generación, dos ejes de `split_review`, uno de cobertura y uno de diagnóstico. Si una etapa falla o supera presupuesto, se registra y no se sustituye por una conclusión. Esta descripción es el perfil a implementar; no afirma que el recorrido exista hoy.
+3. **B, recorrido:** la misma fuente, pregunta, requisitos, modelo y límite de generación; luego revisión de respaldo, cobertura y, si se solicita, diagnóstico. Hasta cinco despachos totales: uno de generación, dos ejes de `split_review`, uno de cobertura y uno de diagnóstico. Si una etapa falla o supera presupuesto, se registra y no se sustituye por una conclusión. La API optativa está implementada localmente; su calidad semántica sigue sin probarse.
 4. **Orden y costo:** alternar AB/BA por ID de caso; ejecutar cada par en una ventana temporal próxima y registrar tiempos, bytes, llamadas, uso reportado y costo monetario sólo si hay recibo. El techo de llamadas es explícito para ambos; la línea base usa una por diseño. No equiparar presupuesto disponible con costo efectivo.
 5. **Seguridad de ejecución:** antes de cada llamada, registrar en un archivo nuevo y durable identidad del caso/brazo/etapa, hashes de entrada/petición, presupuesto y estado `attempted`; el resultado remoto tras timeout o interrupción es `unknown`. No repetir automáticamente. No llamar a un proveedor si la política de envío de esa fuente no está autorizada para el contexto.
 
