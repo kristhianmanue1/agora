@@ -1,0 +1,134 @@
+{
+  "run": "run-2026-10-10-glm-paired-01",
+  "execution_status": "complete_execution",
+  "denominator": 6,
+  "pairs": [
+    {
+      "id": "case-01",
+      "stratum": "answerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.362
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.293
+        }
+      }
+    },
+    {
+      "id": "case-02",
+      "stratum": "answerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.269
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.296
+        }
+      }
+    },
+    {
+      "id": "case-03",
+      "stratum": "answerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.434
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.281
+        }
+      }
+    },
+    {
+      "id": "case-04",
+      "stratum": "answerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.397
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.294
+        }
+      }
+    },
+    {
+      "id": "case-05",
+      "stratum": "unanswerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.275
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.28
+        }
+      }
+    },
+    {
+      "id": "case-06",
+      "stratum": "unanswerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "invalid_or_incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.291
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 0,
+          "elapsed_seconds": 0.297
+        }
+      }
+    }
+  ],
+  "arm_statuses": {
+    "A": {
+      "invalid_or_incomplete": 6
+    },
+    "B": {
+      "incomplete": 6
+    }
+  },
+  "dispatches": 12,
+  "responses": 0,
+  "reported_total_tokens": 0,
+  "model_reported": {},
+  "adjudication": "not_performed"
+}

@@ -2,7 +2,7 @@
 
 **Estado:** implementación local experimental, 2026-10-10. **Entrada pública de agentes:** no activada. **Admisión en memoria:** no realizada.
 
-`agora.evidence_answer_flow` compone las capacidades existentes sobre **un archivo UTF-8 completo tal como se entrega**, fijado por SHA-256. El llamador proporciona `source`, `source_id`, `source_sha256`, pregunta, una lista de 1 a 12 requisitos breves, un proveedor inyectable y un directorio de salida nuevo. La CLI sólo ofrece `--live-zai` con `ZAI_API_KEY` del entorno o `--replay-run` de una ejecución completa. Debe comprobarse por separado que está autorizado transmitir el archivo al proveedor elegido. El archivo puede ser un extracto: su hash y la revisión de cobertura no acreditan el PDF o documento original.
+`agora.evidence_answer_flow` compone las capacidades existentes sobre **un archivo UTF-8 completo tal como se entrega**, fijado por SHA-256. El llamador proporciona `source`, `source_id`, `source_sha256`, pregunta, una lista de 1 a 12 requisitos breves, un proveedor inyectable y un directorio de salida nuevo. La CLI sólo ofrece `--live-zai` con `ZAI_API_KEY` o `SKOPOS_LLM_API_KEY` del entorno (inyectable por Llavero) o `--replay-run` de una ejecución completa. Debe comprobarse por separado que está autorizado transmitir el archivo al proveedor elegido. El archivo puede ser un extracto: su hash y la revisión de cobertura no acreditan el PDF o documento original.
 
 ```sh
 PYTHONPATH=src .venv/bin/python -m agora.evidence_answer_flow \

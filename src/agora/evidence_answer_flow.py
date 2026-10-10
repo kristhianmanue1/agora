@@ -61,7 +61,7 @@ class ZaiProvider:
 
     def __call__(self, system, user, *, model, max_output_tokens, timeout_seconds,
                  json_object):
-        key = os.environ.get("ZAI_API_KEY")
+        key = os.environ.get("ZAI_API_KEY") or os.environ.get("SKOPOS_LLM_API_KEY")
         if not key:
             raise ValueError("provider_key_missing")
         payload = {"model": model, "messages": [

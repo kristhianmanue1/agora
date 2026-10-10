@@ -1,0 +1,138 @@
+{
+  "run": "run-2026-10-10-glm-paired-02-llavero",
+  "execution_status": "complete_execution",
+  "denominator": 6,
+  "pairs": [
+    {
+      "id": "case-01",
+      "stratum": "answerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 15.923
+        },
+        "B": {
+          "status": "candidate_reviewed",
+          "dispatches": 5,
+          "responses": 5,
+          "elapsed_seconds": 73.735
+        }
+      }
+    },
+    {
+      "id": "case-02",
+      "stratum": "answerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 13.185
+        },
+        "B": {
+          "status": "candidate_reviewed",
+          "dispatches": 5,
+          "responses": 5,
+          "elapsed_seconds": 57.632
+        }
+      }
+    },
+    {
+      "id": "case-03",
+      "stratum": "answerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 13.352
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 18.552
+        }
+      }
+    },
+    {
+      "id": "case-04",
+      "stratum": "answerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 16.125
+        },
+        "B": {
+          "status": "review_incomplete",
+          "dispatches": 2,
+          "responses": 2,
+          "elapsed_seconds": 41.018
+        }
+      }
+    },
+    {
+      "id": "case-05",
+      "stratum": "unanswerable",
+      "order": "AB",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 7.062
+        },
+        "B": {
+          "status": "candidate_reviewed",
+          "dispatches": 3,
+          "responses": 3,
+          "elapsed_seconds": 28.958
+        }
+      }
+    },
+    {
+      "id": "case-06",
+      "stratum": "unanswerable",
+      "order": "BA",
+      "arms": {
+        "A": {
+          "status": "candidate",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 9.179
+        },
+        "B": {
+          "status": "incomplete",
+          "dispatches": 1,
+          "responses": 1,
+          "elapsed_seconds": 10.017
+        }
+      }
+    }
+  ],
+  "arm_statuses": {
+    "A": {
+      "candidate": 6
+    },
+    "B": {
+      "candidate_reviewed": 3,
+      "incomplete": 2,
+      "review_incomplete": 1
+    }
+  },
+  "dispatches": 23,
+  "responses": 23,
+  "reported_total_tokens": 148083,
+  "model_reported": {
+    "glm-5.3-flash": 23
+  },
+  "adjudication": "not_performed"
+}

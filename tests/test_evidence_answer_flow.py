@@ -1,4 +1,5 @@
 import hashlib
+import io
 import json
 import os
 import subprocess
@@ -7,9 +8,10 @@ import tempfile
 import time
 import urllib.error
 import unittest
+from unittest import mock
 from pathlib import Path
 
-from agora.evidence_answer_flow import run_flow, replay_flow
+from agora.evidence_answer_flow import ZaiProvider, run_flow, replay_flow
 
 
 class FakeProvider:
@@ -158,6 +160,25 @@ class EvidenceAnswerFlowTests(unittest.TestCase):
                 self.assertEqual(provider.calls, ['generation'])
                 self.assertTrue((self.root / ('bad-' + finish) /
                                  '01-generation-response.json').exists())
+
+    def test_llavero_credential_alias_reaches_transport(self):
+        class Opener:
+            def open(self, request, timeout):
+                self.authorization = request.get_header('Authorization')
+                return io.BytesIO(json.dumps({
+                    'choices': [{'message': {'content': '{}'}, 'finish_reason': 'stop'}],
+                    'model': 'glm-5.3-flash', 'id': 'r1', 'usage': {}}).encode())
+
+        opener = Opener()
+        with mock.patch.dict(os.environ, {'ZAI_API_KEY': '',
+                                          'SKOPOS_LLM_API_KEY': 'test-placeholder'}):
+            with mock.patch('urllib.request.build_opener', return_value=opener):
+                result = ZaiProvider()('system', 'user', model='glm-5.3-flash',
+                                       max_output_tokens=32, timeout_seconds=30,
+                                       json_object=True)
+        self.assertEqual(opener.authorization, 'Bearer test-placeholder')
+        self.assertEqual(result['reported_model'], 'glm-5.3-flash')
+        self.assertIn('sent_payload_sha256', result)
 
     def test_abstention_skips_claim_review(self):
         provider = FakeProvider(abstain=True, coverage='justified_abstention')
