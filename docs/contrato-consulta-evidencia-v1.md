@@ -5,13 +5,15 @@
 ## Presupuestos ampliados: `answer-v2`
 
 `answer-v2` conserva el alcance y los cinco despachos máximos de `answer`, pero
-fija presupuestos de salida por etapa: generación 16 384, respaldo 16 384,
-pertinencia 8 192, cobertura 4 096 y omisiones 8 192 tokens. Su manifiesto usa
+fija presupuestos de salida por etapa: generación 32 768, respaldo 32 768,
+pertinencia 16 384, cobertura 8 192 y omisiones 16 384 tokens. Su manifiesto usa
 `agora/evidence-answer-flow/v2-experimental` y registra cada presupuesto y su
 hash; cada intento registra el límite realmente solicitado. `--budgets` acepta
 un JSON con el esquema `agora/evidence-answer-budgets/v2-experimental` y los
 cinco campos `*_max_output_tokens`; el validador limita cada etapa y el total a
-131 072. La configuración no garantiza que el proveedor conceda todos esos
+131 072. Los valores predeterminados reservan hasta 106 496 tokens de salida
+entre las cinco llamadas; `--budgets` permite reducirlos o ajustarlos por etapa.
+La configuración no garantiza que el proveedor conceda todos esos
 tokens ni que el contenido útil aumente: los tokens de razonamiento consumen
 el mismo límite informado por el proveedor.
 

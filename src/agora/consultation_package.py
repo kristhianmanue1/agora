@@ -8,9 +8,11 @@ from .evidence_answer_flow import SCHEMA as FLOW_SCHEMA, _encoded, _save, _sha
 from .evidence_answer_flow_v2 import SCHEMA as FLOW_V2_SCHEMA, validate_budgets
 from .jev_flow_review import SCHEMA as JEV_SCHEMA
 from .source_evidence_exchange import validate_exchange
+from .citation_refinement import load_refinement
 
 SCHEMA = "agora/consultation-package/v1-experimental"
 MULTI_SEGMENT_SCHEMA = "agora/consultation-package/v2-experimental"
+REFINED_SCHEMA = "agora/consultation-package/v3-experimental"
 
 
 def _segment_refs(start, end, source_raw, segments):
@@ -51,7 +53,8 @@ def _linked(run, stage, filename):
     return json.loads(raw)
 
 
-def build_package(source, flow_run, *, jev_run=None, exchange=None, original=None):
+def build_package(source, flow_run, *, jev_run=None, exchange=None, original=None,
+                  citation_refinement=None):
     flow_run = Path(flow_run)
     source_raw = Path(source).read_bytes()
     flow_raw = (flow_run / "result.json").read_bytes()
@@ -67,6 +70,14 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
     candidate = _linked(flow_run, stages["generation"], "candidate.json")
     if candidate.get("source_sha256") != flow["source_sha256"]:
         raise ValueError("candidate_source_mismatch")
+    refinement = None
+    refinement_sha256 = None
+    if citation_refinement is not None:
+        if exchange is None or original is None:
+            raise ValueError("refinement_requires_exchange_and_original")
+        refinement, refinement_sha256 = load_refinement(
+            citation_refinement, source_raw, flow["source_sha256"], candidate,
+            stages["generation"]["sha256"])
     claim_stage = stages.get("claim_review", {})
     split = (_linked(flow_run, claim_stage, "split-review.json")
              if claim_stage.get("status") == "complete" else None)
@@ -124,31 +135,39 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
                          if c["part_id"] == part["id"] and c["claim_index"] == index]
             if not citations:
                 raise ValueError("claim_without_citation")
-            for citation in citations:
-                quote = citation["quote"]
-                for match in citation["matches"]:
-                    start, end = match["start_byte"], match["end_byte"]
-                    if not 0 <= start < end <= len(source_raw) or source_raw[start:end].decode("utf-8") != quote:
-                        raise ValueError("citation_mismatch")
-                    item = {"start_byte": start, "end_byte": end, "literal_text": quote,
-                            "literal_sha256": _sha(source_raw[start:end]),
-                            "evidence_id": citation.get("evidence_id")}
-                    if segments is not None:
-                        refs = _segment_refs(start, end, source_raw, segments)
-                        if len(refs) == 1:
-                            ref = refs[0]
-                            item.update(segment_id=ref["segment_id"], locator=ref["locator"],
-                                        modality=ref["modality"],
-                                        extraction_status=ref["extraction_status"])
-                        else:
-                            has_multi_segment_citation = True
-                            item["segment_refs"] = refs
-                    evidence.append(item)
+            if refinement is None:
+                selected = [(match["start_byte"], match["end_byte"], citation.get("evidence_id"),
+                             citation["quote"]) for citation in citations for match in citation["matches"]]
+            else:
+                selected = [(start, end, evidence_id, source_raw[start:end].decode("utf-8"))
+                            for start, end, evidence_id in refinement[key]]
+            for start, end, evidence_id, quote in selected:
+                if not 0 <= start < end <= len(source_raw) or source_raw[start:end].decode("utf-8") != quote:
+                    raise ValueError("citation_mismatch")
+                item = {"start_byte": start, "end_byte": end, "literal_text": quote,
+                        "literal_sha256": _sha(source_raw[start:end]),
+                        "evidence_id": evidence_id}
+                if segments is not None:
+                    refs = _segment_refs(start, end, source_raw, segments)
+                    if len(refs) == 1:
+                        ref = refs[0]
+                        item.update(segment_id=ref["segment_id"], locator=ref["locator"],
+                                    modality=ref["modality"],
+                                    extraction_status=ref["extraction_status"])
+                    else:
+                        has_multi_segment_citation = True
+                        item["segment_refs"] = refs
+                evidence.append(item)
             claims.append({"part_id": part["id"], "claim_index": index,
                            "text": claim["text"], "evidence": evidence,
-                           "glm_support": review["support"] if review else "not_run",
+                           "glm_support": ("not_reassessed_for_refined_citation" if refinement is not None
+                                           else review["support"] if review else "not_run"),
                            "glm_relevance": review["relevance"] if review else "not_run",
-                           "jev_support": jev["labels"].get(label_id) if jev else "not_run"})
+                           "jev_support": ("not_reassessed_for_refined_citation" if refinement is not None and jev
+                                           else jev["labels"].get(label_id) if jev else "not_run")})
+            if refinement is not None:
+                claims[-1]["glm_support_original"] = review["support"] if review else "not_run"
+                claims[-1]["jev_support_original"] = jev["labels"].get(label_id) if jev else "not_run"
     if jev and set(jev["labels"]) != expected_jev:
         raise ValueError("jev_claim_set_mismatch")
     if split and set(reviews) != {(c["part_id"], c["claim_index"]) for c in claims}:
@@ -158,7 +177,8 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
                         if part["status"] != "answered" or part["missing"]]
     candidate_coverage_conflict = bool(declared_missing and coverage["coverage"] == "complete")
     package_v2 = has_multi_segment_citation or bool(declared_missing)
-    package = {"schema": MULTI_SEGMENT_SCHEMA if package_v2 else SCHEMA,
+    package = {"schema": REFINED_SCHEMA if refinement is not None else
+               MULTI_SEGMENT_SCHEMA if package_v2 else SCHEMA,
             "status": "candidate_for_consumer_review",
             "source": provenance, "source_id": flow["source_id"],
             "question": flow["question"], "requirements": flow["requirements"],
@@ -172,10 +192,14 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
             "adjudication": "not_performed", "memory_admission": "not_performed",
             "institutional_acceptance": "not_performed",
             "disposition": "requires_review"}
-    if package_v2:
+    if package_v2 or refinement is not None:
         package["candidate_answer_status"] = candidate["answer_status"]
         package["candidate_declared_missing"] = declared_missing
         package["candidate_coverage_conflict"] = candidate_coverage_conflict
+    if refinement is not None:
+        package["citation_refinement_sha256"] = refinement_sha256
+        package["citation_refinement_status"] = "literal_ranges_verified_support_not_reassessed"
+        package["coverage_advice_scope"] = "original_candidate"
     if flow["schema"] == FLOW_V2_SCHEMA:
         validate_budgets(flow["budgets"])
         if _sha(_encoded(flow["budgets"])) != flow["budgets_sha256"]:
@@ -192,12 +216,14 @@ def main(argv=None):
     parser.add_argument("--jev-run", type=Path)
     parser.add_argument("--exchange", type=Path)
     parser.add_argument("--original", type=Path)
+    parser.add_argument("--citation-refinement", type=Path)
     destination = parser.add_mutually_exclusive_group(required=True)
     destination.add_argument("--out", type=Path)
     destination.add_argument("--verify-package", type=Path)
     args = parser.parse_args(argv)
     package = build_package(args.source, args.flow_run, jev_run=args.jev_run,
-                            exchange=args.exchange, original=args.original)
+                            exchange=args.exchange, original=args.original,
+                            citation_refinement=args.citation_refinement)
     if args.verify_package:
         raw = args.verify_package.read_bytes()
         if json.loads(raw) != package:
