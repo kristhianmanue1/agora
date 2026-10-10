@@ -1,0 +1,42 @@
+{
+  "schema": "agora/t0-failed-slots-correction-audit/v2",
+  "run": "run-2026-10-10-failed-slots-v2-01",
+  "status": "complete_execution",
+  "base_denominator": 6,
+  "selected_slots": 3,
+  "statuses": {
+    "incomplete": 1,
+    "candidate_reviewed": 2
+  },
+  "dispatches": 9,
+  "responses": 9,
+  "reported_total_tokens": 55695,
+  "model_reported": {
+    "glm-5.3-flash": 9
+  },
+  "rows": [
+    {
+      "id": "case-03",
+      "original_status": "incomplete",
+      "correction_status": "incomplete",
+      "dispatches": 1,
+      "responses": 1
+    },
+    {
+      "id": "case-04",
+      "original_status": "review_incomplete",
+      "correction_status": "candidate_reviewed",
+      "dispatches": 5,
+      "responses": 5
+    },
+    {
+      "id": "case-06",
+      "original_status": "incomplete",
+      "correction_status": "candidate_reviewed",
+      "dispatches": 3,
+      "responses": 3
+    }
+  ],
+  "adjudication": "not_performed",
+  "original_t0_result": "3/6 unchanged"
+}

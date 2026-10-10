@@ -1,0 +1,1 @@
+{"max_output_tokens":4096,"model_requested":"glm-5.3-flash","ordinal":5,"provider_id":"zai","remote_outcome":"unknown","request_sha256":"ad5648a1c7010a9cde5011c9e387187523fd3ccee904531d349b8592d50b3abd","source_sha256":"29378327b9b472e40792b9442bfbb2af91f65954efbcb176cfbda3623d421f34","stage":"omission","state":"attempted","timeout_seconds":90}

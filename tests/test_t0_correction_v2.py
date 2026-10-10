@@ -12,6 +12,10 @@ sys.path.insert(0, str(T0))
 spec = importlib.util.spec_from_file_location('t0_correction_v2', T0 / 'run_failed_slots_v2.py')
 runner = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runner)
+audit_spec = importlib.util.spec_from_file_location('t0_correction_audit_v2',
+                                                   T0 / 'audit_failed_slots_v2.py')
+auditor = importlib.util.module_from_spec(audit_spec)
+audit_spec.loader.exec_module(auditor)
 
 
 class AbstainingProvider:
@@ -47,6 +51,15 @@ class T0CorrectionTests(unittest.TestCase):
             self.assertEqual(len(result['implementation_sha256']), 7)
             self.assertEqual(set(p.name for p in out.iterdir()),
                              {'result.json', 'case-03', 'case-04', 'case-06'})
+            audited = auditor.audit(out)
+            self.assertEqual(audited['selected_slots'], 3)
+            self.assertEqual(audited['dispatches'], 9)
+            attempt_path = out / 'case-03/01-generation-attempt.json'
+            attempt = json.loads(attempt_path.read_text())
+            attempt['ordinal'] = 9
+            attempt_path.write_text(json.dumps(attempt))
+            with self.assertRaises(ValueError):
+                auditor.audit(out)
             with self.assertRaises(FileExistsError):
                 runner.run(out, provider)
             self.assertEqual(provider.calls, 9)

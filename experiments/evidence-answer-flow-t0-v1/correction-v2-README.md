@@ -12,3 +12,22 @@ Cambios deliberados respecto al perfil B original:
 **Criterio estructural fijado:** las etapas solicitadas de los tres B deben terminar. Se contabilizan también los casos truncados, inválidos o con timeout; un fallo no provoca otro intento en la misma serie. Aun si termina 3/3, el resultado sólo demuestra viabilidad local de este perfil en esos tres textos. Faltan adjudicación semántica, costo comparativo, repetición en muestra nueva y T5 para decidir utilidad. El modelo efectivo y facturación siguen sin verificación independiente.
 
 El `result.json` de la corrección registra hashes de perfil, congelado y código **antes de red**. La revisión original permanece como referencia, y el auditor T0 sigue produciendo 3/6 para su serie.
+
+## Resultado observado, 2026-10-10
+
+La serie separada `correction-runs/run-2026-10-10-failed-slots-v2-01` terminó los tres slots fijados. El [auditor offline](audit_failed_slots_v2.py) comprobó vínculos de fuente, congelado, perfil, código, etapas, intentos y recibos: **9 intentos y 9 respuestas**, todos con `reported_model=glm-5.3-flash`, y **55.695 tokens** acumulados según `usage.total_tokens` reportado. Esas cifras no prueban facturación ni modelo efectivo.
+
+| Caso B | Original | Corrección v2 | Hallazgo estructural |
+| --- | --- | --- | --- |
+| 03 | `incomplete` | `incomplete` | `finish_reason=length`: los 4.096 tokens de generación fueron reportados como `reasoning_tokens`; contenido vacío. |
+| 04 | `review_incomplete` | `candidate_reviewed` | Generación, respaldo, pertinencia, cobertura y diagnóstico terminaron. |
+| 06 | `incomplete` | `candidate_reviewed` | Abstención sin afirmaciones; respaldo y pertinencia `not_run`, cobertura y diagnóstico terminaron. |
+
+El criterio fijado de 3/3 **falló**: terminó 2/3. El T0 original permanece 3/6; «cinco casos con alguna ejecución B completa entre dos perfiles» es una observación descriptiva y **no** una tasa de éxito de una sola configuración. No hubo adjudicación semántica cegada de las respuestas ni evaluación de utilidad. La [documentación oficial de Z.AI sobre GLM‑5.3‑Flash](https://docs.z.ai/guides/vlm/glm-5.3-flash) indica que `thinking.type` sólo admite `enabled`; [Thinking Mode](https://docs.z.ai/guides/capabilities/thinking-mode) confirma que no puede desactivarse para esa familia. Una próxima propuesta deberá evaluar una selección explícita de pasajes u otra reducción de complejidad, con alcance de fuente y contrato nuevos, antes de considerar más presupuesto de salida. Nada de esto autoriza promoción o activación.
+
+Reproducción del auditor sin red:
+
+```sh
+.venv/bin/python experiments/evidence-answer-flow-t0-v1/audit_failed_slots_v2.py \
+  experiments/evidence-answer-flow-t0-v1/correction-runs/run-2026-10-10-failed-slots-v2-01
+```
