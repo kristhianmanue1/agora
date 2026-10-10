@@ -96,7 +96,7 @@ def validate_claims(response, envelope, ids, policy):
     return parts,errors,anchors
 
 
-def query_evidence(adapter,revision,question,aspects,provider,*,ranges=None,content_budget=160000,prompt_budget=200000,policy=None,citation_mode="literal",response_language="es",max_unit_bytes=4096):
+def query_evidence(adapter,revision,question,aspects,provider,*,ranges=None,content_budget=160000,prompt_budget=200000,policy=None,citation_mode="literal",response_language="es",max_unit_bytes=4096,system_suffix=""):
     policy=(policy or EvidencePolicy()).validate()
     result={'schema':'agora/claim-evidence-query/v1','policy':asdict(policy),'source_id':adapter.source_id,'source_sha256':revision,'semantic_support':'not_verified','coverage':'not_verified','review_status':'unreviewed','memory_admission':'not_performed','provider_calls':0}
     try:
@@ -104,6 +104,7 @@ def query_evidence(adapter,revision,question,aspects,provider,*,ranges=None,cont
         ids=request_parts(aspects)
         if citation_mode not in ("literal","ids"):raise ValueError("invalid_citation_mode")
         if response_language not in ("es","en"):raise ValueError("invalid_response_language")
+        if type(system_suffix) is not str or len(system_suffix)>1000:raise ValueError("invalid_system_suffix")
         if type(max_unit_bytes) is not int or not 4<=max_unit_bytes<=12000:raise ValueError("invalid_unit_budget")
         result.update(response_language=response_language,language_status="not_verified",max_unit_bytes=max_unit_bytes)
         if type(question) is not str or not question.strip() or len(question)>2000:raise ValueError('invalid_question')
@@ -122,6 +123,7 @@ def query_evidence(adapter,revision,question,aspects,provider,*,ranges=None,cont
         language={"es":"Spanish","en":"English"}[response_language]
         system += f"\nWrite every claim text and missing item in {language}, even when the question and source use another language. Preserve names and quoted evidence verbatim. Include only claims needed to answer the requested aspects."
         if response_language=="en":system=system.replace("Answer in Spanish", "Answer in English")
+        if system_suffix:system+='\n'+system_suffix
         size=len(system.encode())+len(user.encode())
         if size>prompt_budget:raise ValueError('prompt_budget_exceeded')
         result.update(envelope=envelope,prompt={'system':system,'user':user},prompt_bytes=size,requested_aspects=aspects,provider_calls=1)

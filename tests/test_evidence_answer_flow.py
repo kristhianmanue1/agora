@@ -11,7 +11,7 @@ import unittest
 from unittest import mock
 from pathlib import Path
 
-from agora.evidence_answer_flow import ZaiProvider, run_flow, replay_flow
+from agora.evidence_answer_flow import PROFILE_SCHEMA, ZaiProvider, run_flow, replay_flow
 
 
 class FakeProvider:
@@ -179,6 +179,24 @@ class EvidenceAnswerFlowTests(unittest.TestCase):
         self.assertEqual(opener.authorization, 'Bearer test-placeholder')
         self.assertEqual(result['reported_model'], 'glm-5.3-flash')
         self.assertIn('sent_payload_sha256', result)
+
+    def test_versioned_profile_changes_recorded_request_and_replays(self):
+        profile = {'schema': PROFILE_SCHEMA, 'id': 'failed-slots-v2',
+                   'generation_system_suffix': 'Return concise complete JSON.',
+                   'support_max_output_tokens': 4096,
+                   'relevance_max_output_tokens': 2048}
+        result = self.run_case('profile', FakeProvider(), profile=profile)
+        self.assertEqual(result['status'], 'candidate_reviewed')
+        candidate = json.loads((self.root / 'profile/candidate.json').read_text())
+        self.assertIn(profile['generation_system_suffix'], candidate['prompt']['system'])
+        support = json.loads((self.root / 'profile/02-support-attempt.json').read_text())
+        self.assertEqual(support['max_output_tokens'], 4096)
+        self.assertEqual(replay_flow(self.root / 'profile', self.source,
+                                     self.root / 'profile-replay')['stages'], result['stages'])
+        with self.assertRaises(ValueError):
+            self.run_case('invalid-profile', FakeProvider(),
+                          profile={**profile, 'support_max_output_tokens': 999999})
+        self.assertFalse((self.root / 'invalid-profile').exists())
 
     def test_abstention_skips_claim_review(self):
         provider = FakeProvider(abstain=True, coverage='justified_abstention')

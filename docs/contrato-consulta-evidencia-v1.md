@@ -13,6 +13,8 @@ PYTHONPATH=src .venv/bin/python -m agora.evidence_answer_flow \
 
 `requirements.json` es una lista de cadenas. Para replay se pasa sólo `--source`, `--out` y `--replay-run /ruta/run-001`; la pregunta y los requisitos proceden del registro. No se acepta una salida existente. La ruta no está incorporada a `agent_cli` ni cambia las CLI individuales.
 
+La API acepta un perfil optativo `agora/evidence-answer-flow-profile/v2-experimental` con un sufijo de instrucción de generación y presupuestos de salida para respaldo y pertinencia. El manifiesto conserva el perfil y su hash; el prompt realmente modificado aparece en `candidate.json` y su petición se registra antes de red. Sin perfil, se mantienen los límites originales. La [corrección T0 v2](../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md) usa este mecanismo sólo para los B fallidos. La CLI pública de este módulo aún no expone selección de perfil.
+
 ## Ejecución y vínculos
 
 1. Se verifica que los bytes de la fuente son regulares, UTF-8, no vacíos, menores o iguales a 160 000 bytes y coinciden con el hash. Se vuelven a leer antes de cada posible despacho. Se envía la fuente entera a `query_evidence` con `citation_mode=ids` y se conserva su `claim-evidence-query/v2` en `candidate.json`.

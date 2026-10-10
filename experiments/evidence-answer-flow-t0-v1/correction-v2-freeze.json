@@ -1,0 +1,27 @@
+{
+  "schema": "agora/t0-failed-slots-correction/v2",
+  "date": "2026-10-10",
+  "base_run": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero",
+  "base_result_sha256": "ba7abfb4ebab601999d4fc073988c5bff1e8a80056ecdc4cb41a9ac73fdef869",
+  "base_denominator": 6,
+  "failed_slots": [
+    "case-03",
+    "case-04",
+    "case-06"
+  ],
+  "model_requested": "glm-5.3-flash",
+  "profile_sha256": "a42eaec24c021f036a467d4e61e5f1272b5186d02caa0d7d2e196237be8709dc",
+  "implementation_sha256": {
+    "experiments/evidence-answer-flow-t0-v1/run_failed_slots_v2.py": "f6ed0ee889d7488a4eabbd50d605408c9c135a7d29dca05adb48c7a112832cd4",
+    "src/agora/evidence.py": "d3c76b524dc5ee55642090e2072280a01b65ab317eb0593dfedbf136fd85fa43",
+    "src/agora/evidence_ids.py": "819cfb946f8238ebff5f11f0a21c87328a95be9cbb2e30521cec594cd4546bf0",
+    "src/agora/evidence_answer_flow.py": "e806363bca2a2a64eb7b7f67aee59647740dacd7ba65b8cf2b8504c049d51bce",
+    "src/agora/split_review.py": "7dcc9b6af07f7d2115a9f3353d20d6ca2e86a17180e9e561e13f2d1809aa997a",
+    "src/agora/coverage_cli.py": "3e87b48b63cc0d0b91c14a6927b0343b3526496c9e5e61613015676e118a28a9",
+    "src/agora/omission_cli.py": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c"
+  },
+  "maximum_dispatches_per_slot": 5,
+  "retries": 0,
+  "structural_criterion": "all_three_selected_B_flows_complete_requested_stages",
+  "interpretation": "separate_correction_not_replacement_or_semantic_acceptance"
+}

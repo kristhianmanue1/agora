@@ -1,0 +1,7 @@
+{
+  "schema": "agora/evidence-answer-flow-profile/v2-experimental",
+  "id": "t0-failed-slots-v2",
+  "generation_system_suffix": "Return one syntactically complete JSON object. For this single aspect, use at most six self-contained claims and at most two evidence IDs per claim, for no more than twelve IDs total. Cite only units essential to each claim. Preserve material qualifications; if the evidence cannot support a complete answer within these limits, return partial with explicit missing items. Check brackets and commas before ending.",
+  "support_max_output_tokens": 4096,
+  "relevance_max_output_tokens": 2048
+}

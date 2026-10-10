@@ -18,6 +18,7 @@ from .split_review import review_split
 SCHEMA = "agora/evidence-answer-flow/v1-experimental"
 MAX_SOURCE_BYTES = 160000  # coverage_cli's bound; never silently truncate.
 MAX_CALLS = 5
+PROFILE_SCHEMA = "agora/evidence-answer-flow-profile/v2-experimental"
 
 
 def _encoded(value):
@@ -204,15 +205,32 @@ def _task(question, requirements):
     return task
 
 
+def _profile(profile):
+    if profile is None:
+        return {"generation_system_suffix": "", "support_max_output_tokens": 2048,
+                "relevance_max_output_tokens": 2048}
+    if (type(profile) is not dict or set(profile) !=
+            {"schema", "id", "generation_system_suffix", "support_max_output_tokens",
+             "relevance_max_output_tokens"} or profile["schema"] != PROFILE_SCHEMA or
+            type(profile["id"]) is not str or not profile["id"].strip() or
+            type(profile["generation_system_suffix"]) is not str or
+            len(profile["generation_system_suffix"]) > 1000 or
+            profile["support_max_output_tokens"] not in (2048, 4096) or
+            profile["relevance_max_output_tokens"] not in (2048, 4096)):
+        raise ValueError("invalid_flow_profile")
+    return profile
+
+
 def run_flow(source, source_id, source_sha256, question, requirements, output,
              provider, *, provider_id="injected", model_requested="glm-5.3-flash",
-             diagnose_omissions=True, response_language="es"):
+             diagnose_omissions=True, response_language="es", profile=None):
     """Create a fresh, private output directory; never retry an uncertain call."""
     task = _task(question, requirements)
     if response_language not in ("es", "en") or type(diagnose_omissions) is not bool:
         raise ValueError("invalid_flow_config")
     if type(provider_id) is not str or not provider_id or type(model_requested) is not str or not model_requested:
         raise ValueError("invalid_provider_config")
+    config = _profile(profile)
     output = Path(output)
     output.mkdir(mode=0o700, parents=False, exist_ok=False)
     manifest = {"schema": SCHEMA, "status": "rejected", "source_id": source_id,
@@ -224,6 +242,8 @@ def run_flow(source, source_id, source_sha256, question, requirements, output,
                 "adjudication": "not_performed", "memory_admission": "not_performed",
                 "disposition": "requires_review", "stages": {}, "dispatches": 0,
                 "max_dispatches": MAX_CALLS}
+    if profile is not None:
+        manifest.update(profile=config, profile_sha256=_sha(_encoded(config)))
     dispatch = None
     try:
         adapter = FileSourceAdapter(source, source_id, MAX_SOURCE_BYTES)
@@ -237,7 +257,8 @@ def run_flow(source, source_id, source_sha256, question, requirements, output,
             lambda system, user: dispatch.call("generation", system, user,
                                                max_output_tokens=4096, timeout_seconds=120),
             content_budget=source_bytes, prompt_budget=200000,
-            citation_mode="ids", response_language=response_language)
+            citation_mode="ids", response_language=response_language,
+            system_suffix=config["generation_system_suffix"])
         candidate_sha = _save(output / "candidate.json", generation)
         manifest["stages"]["generation"] = {"status": generation["execution_status"],
                                              "sha256": candidate_sha, "path": "candidate.json"}
@@ -250,9 +271,11 @@ def run_flow(source, source_id, source_sha256, question, requirements, output,
             split = review_split(
                 candidate,
                 lambda system, user: dispatch.call("support", system, user,
-                                                   max_output_tokens=2048, timeout_seconds=120),
+                                                   max_output_tokens=config["support_max_output_tokens"],
+                                                   timeout_seconds=120),
                 lambda system, user: dispatch.call("relevance", system, user,
-                                                   max_output_tokens=2048, timeout_seconds=120))
+                                                   max_output_tokens=config["relevance_max_output_tokens"],
+                                                   timeout_seconds=120))
             split_sha = _save(output / "split-review.json", split)
             manifest["stages"]["claim_review"] = {"status": split["execution_status"],
                                                    "sha256": split_sha,
@@ -332,7 +355,7 @@ def replay_flow(recorded, source, output):
                       replay, provider_id="replay", model_requested=previous["model_requested"],
                       diagnose_omissions=previous["stages"]["omission"]["status"] != "not_run",
                       response_language=json.loads((Path(recorded) / "candidate.json").read_text())[
-                          "response_language"])
+                          "response_language"], profile=previous.get("profile"))
     if replay.index != len(replay.rows) or result["stages"] != previous["stages"]:
         raise ValueError("replay_result_mismatch")
     return result
