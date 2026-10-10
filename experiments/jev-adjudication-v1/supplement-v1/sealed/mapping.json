@@ -1,0 +1,53 @@
+{
+  "schema": "agora/jev-disputed-omission-supplement/v1",
+  "entries": [
+    {
+      "item_id": "J-208680c60e",
+      "source_id": "S-987604aa",
+      "case": "baselines",
+      "variant": "omission",
+      "expected": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "item_sha256": "a72b8fe4071fafb514ba6ec0af2a42ea2191832f06f83930bdf46f9e98130e5d",
+      "source_sha256": "dd10eda58bd95b110d0e6e42ca0f7f6f97044a3c4005b673736bdcc280349fb5"
+    },
+    {
+      "item_id": "J-8f343264ca",
+      "source_id": "S-9b5fd85c",
+      "case": "datasets",
+      "variant": "complete",
+      "expected": {
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "item_sha256": "008dd730c48cbff5ed7da3e45f46c6cc564a35621531f757e7cd7fa0742a5e98",
+      "source_sha256": "e7d6746c1da899475775bc07f36abf77067a12d3aa0b6953e355119aeefa6fef"
+    },
+    {
+      "item_id": "J-84a2405837",
+      "source_id": "S-9b5fd85c",
+      "case": "datasets",
+      "variant": "omission",
+      "expected": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "item_sha256": "ed7d6a0869eed0d03d952859fe6a234e101608b769b32cdbaef89392129f8d4b",
+      "source_sha256": "e7d6746c1da899475775bc07f36abf77067a12d3aa0b6953e355119aeefa6fef"
+    },
+    {
+      "item_id": "J-579a28818e",
+      "source_id": "S-987604aa",
+      "case": "baselines",
+      "variant": "complete",
+      "expected": {
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "item_sha256": "2b2aa1ba2978739bc77570eb415c7d96fbbeac7e232b38cc1fcacecd145e718c",
+      "source_sha256": "dd10eda58bd95b110d0e6e42ca0f7f6f97044a3c4005b673736bdcc280349fb5"
+    }
+  ]
+}

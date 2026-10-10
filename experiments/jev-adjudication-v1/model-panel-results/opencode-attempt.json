@@ -1,0 +1,20 @@
+{
+  "schema": "agora/model-panel-attempt/v1",
+  "reviewer": "opencode",
+  "status": "returned",
+  "blind_archive_sha256": "c506d1efca120b92eb38b15e5a261687fa05817b8b715d6fca32b5b83bdae3d4",
+  "freeze_sha256": "7fb0d0587c728c2819edd5f7e55fcfa32d909eb1e9b5f2ebe52596e9635db443",
+  "prompt_sha256": "c6517c03562eae13b7f31641c2e1026ebec008333b798c82077094b3fa9f996b",
+  "output_schema_sha256": "a4920003561646698cc79732f2a8a0ebf7565140b37721193666799d10d89615",
+  "program": "opencode",
+  "model_requested": "zai-coding-plan/glm-5.3-flash",
+  "max_dispatches": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:41:18Z",
+  "unblinded": false,
+  "exit_code": 0,
+  "elapsed_seconds": 243.992,
+  "ended_at": "2026-10-10T11:45:22Z",
+  "stdout_sha256": "592b7b5b30a3f6b561b22e1f275ede951192722a9d03cb8c877c7cf4cec82390",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

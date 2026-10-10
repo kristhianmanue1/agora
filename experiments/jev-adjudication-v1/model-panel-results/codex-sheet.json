@@ -1,0 +1,129 @@
+{
+  "schema": "agora/model-adjudication-sheet/v1",
+  "entries": [
+    {
+      "item_id": "J-027b4092b6",
+      "question_clarity": "clear",
+      "support": "unsupported",
+      "coverage": "omitted",
+      "support_evidence": "S-f40320a7.txt:71 names Europarl v9 for training and explicitly names both NewsTest2013 and NewsTest2014 for evaluation, contradicting the exclusion of NewsTest2014.",
+      "coverage_evidence": "S-f40320a7.txt:71 lists NewsTest2014 as an evaluation dataset; the answer denies its use.",
+      "material_omissions": [
+        "NewsTest2014 as an evaluation dataset"
+      ],
+      "notes": "Europarl v9 and NewsTest2013 are correctly named, but the claim about NewsTest2014 is false."
+    },
+    {
+      "item_id": "J-0c61dbcf11",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-683729c2.txt:113–121 describes field embeddings, similarities and mean proximity; lines 125–129 describe the ego-similarity matrix and its combination with feature relevance.",
+      "coverage_evidence": "S-683729c2.txt:141 says feature specifications are ranked in decreasing order of relevance; the answer gives no ordering.",
+      "material_omissions": [
+        "Recommendations are ranked in decreasing order of computed feature relevance."
+      ],
+      "notes": "The stated comparison mechanism is supported, so this is a true but incomplete answer."
+    },
+    {
+      "item_id": "J-44965bbcf5",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-6ff37dc9.txt:163 names CNN/DM and XSum and describes extractiveness, without naming their languages. Full source, lines 1–210: searched dataset names, language and English; no dataset-language statement found.",
+      "coverage_evidence": "S-6ff37dc9.txt:163 establishes the datasets but no languages. Full source, lines 1–210: no explicit language for either dataset.",
+      "material_omissions": [],
+      "notes": "The source does not establish the requested languages, so abstention follows the item's requirement."
+    },
+    {
+      "item_id": "J-4dd08cb3f0",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9a6732b8.txt:119 identifies the original MS-COCO English dataset in the comparison; line 129 names English-sportball and its 3,850 images.",
+      "coverage_evidence": "S-9a6732b8.txt:129 names the evaluated English dataset as the original MS-COCO English dataset restricted to sportball.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-7d0e4192a1",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-e2f172fa.txt:101 names the simplified Chinese emotion cause corpus, qualifies its claimed uniqueness, and gives the 2,105 SINA city news documents and clause segmentation.",
+      "coverage_evidence": "S-e2f172fa.txt:101 explicitly identifies the corpus used in the experiments.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-c57065f9b9",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9a6732b8.txt:37 expands MS-COCO; lines 119 and 129 give the comparison, split, English-sportball name and 3,850 images; lines 137–141 describe the two models' results.",
+      "coverage_evidence": "S-9a6732b8.txt:129 names the original MS-COCO English dataset, called English-sportball, as the evaluated English dataset.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-d47c8db243",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-1d14aa22.txt:101 gives human judgments, cosine-similarity ranking and Spearman correlation; lines 103–105 name the three datasets, OOV counts and reporting scopes.",
+      "coverage_evidence": "S-1d14aa22.txt:101–103 identifies the human comparison and how embedding similarities are evaluated.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-eac89795fb",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-683729c2.txt:113–121 describes field similarity and mean proximity; lines 125–129 describe the ego-similarity matrix and feature relevance; line 141 gives ranking and supporting evidence.",
+      "coverage_evidence": "S-683729c2.txt:125–129 explains comparison with known applications; line 141 orders features by decreasing computed relevance.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-ee244fe1bb",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-6ff37dc9.txt:163 names CNN/DM and XSum and describes their summarization styles. Full source, lines 1–210: searched dataset names, language and English; no explicit dataset languages found.",
+      "coverage_evidence": "S-6ff37dc9.txt:163 establishes the datasets but gives no languages; none are specified elsewhere in lines 1–210.",
+      "material_omissions": [],
+      "notes": "The source does not establish the requested languages."
+    },
+    {
+      "item_id": "J-f119f8f68a",
+      "question_clarity": "clear",
+      "support": "unsupported",
+      "coverage": "complete",
+      "support_evidence": "S-e2f172fa.txt:101 supports the corpus name and details but qualifies the uniqueness claim with “to the best of our knowledge”; the answer omits that limit.",
+      "coverage_evidence": "S-e2f172fa.txt:101 identifies the simplified Chinese emotion cause corpus used, which the answer names.",
+      "material_omissions": [],
+      "notes": "The dataset is correctly identified. The unqualified claim that it is the only publicly available dataset exceeds the source's stated knowledge limit."
+    },
+    {
+      "item_id": "J-f61701dc78",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-1d14aa22.txt:101–105 supports the comparison method, datasets and references to Tables 3 and 4. Full source, lines 1–140: searched Table 3, Table 4, Spearman and numeric correlations; no correlation scores are included.",
+      "coverage_evidence": "S-1d14aa22.txt:101–103 identifies human judgments and evaluation by cosine-similarity ranking followed by Spearman correlation.",
+      "material_omissions": [],
+      "notes": "The stated absence concerns numeric scores in this source, not the evaluation method."
+    },
+    {
+      "item_id": "J-fb95c39b04",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-4b52ad5a.txt:15 and 29 describe planned multilingual accounts without listing their languages; lines 23, 35 and 37 mention language codes, USAS coverage and Dutch LIWC as separate contexts. Full source, lines 1–66: searched multilingual, language, English and Dutch.",
+      "coverage_evidence": "S-4b52ad5a.txt:15 and 29 describe the population and phases but do not identify the languages in the multilingual population; none are enumerated in lines 1–66.",
+      "material_omissions": [],
+      "notes": "English is identified for an earlier phase and Dutch as a LIWC translation example; neither establishes the languages of the multilingual population."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "agora/model-panel-attempt/v1",
+  "reviewer": "codex",
+  "status": "returned",
+  "blind_archive_sha256": "11c202901d7382793d26ecfc97370de2ccf058a2483d72c99ff21efdd1cb45ad",
+  "freeze_sha256": "5a50484289cc4dbd19bf8ffa737badc99abfc64dbf4b917389ed6262bf795d28",
+  "prompt_sha256": "680e50ace0ab34ead4b78eec47c13f33111a87bbeeda6b10f6f498e02ac63562",
+  "output_schema_sha256": "420bfc9eb0b39f3ca91d2546e1c1bc6811676fd8017d7b3905c685aea68a4a6b",
+  "program": "codex",
+  "model_requested": "gpt-6-sol",
+  "max_dispatches": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:49:52Z",
+  "unblinded": false,
+  "exit_code": 0,
+  "elapsed_seconds": 23.414,
+  "ended_at": "2026-10-10T11:50:15Z",
+  "stdout_sha256": "d431afc3353bdcf7b367e3a8fe0d76111b539c738574eed10cfbecaa7a038d3d",
+  "stderr_sha256": "24d15b8fcc04fe46a7dc8ccd200bbfa294986eeb29ddee3077e052bfc7f13637",
+  "final_sha256": "d8b591800ccf84e88b6d21376bdd5abc70705f996fd17ca10ccbcfcfd030ec14"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "agora/model-adjudication-sheet/v1",
+  "entries": [
+    {
+      "item_id": "J-208680c60e",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-987604aa.txt:91-97 lists LDA, Doc-NADE, and HTMM as experimental baselines.",
+      "coverage_evidence": "S-987604aa.txt:91-99 also lists GMNTM.",
+      "material_omissions": [
+        "GMNTM"
+      ],
+      "notes": "The listed models are supported, but the answer is incomplete."
+    },
+    {
+      "item_id": "J-579a28818e",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-987604aa.txt:91-99 lists LDA, Doc-NADE, HTMM, and GMNTM.",
+      "coverage_evidence": "S-987604aa.txt:91-99 identifies those four as the experimental baselines.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-84a2405837",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-9b5fd85c.txt:69-71 names Europarl v9 for training and NewsTest2013 for evaluation.",
+      "coverage_evidence": "S-9b5fd85c.txt:71 also names NewsTest2014 as an evaluation dataset.",
+      "material_omissions": [
+        "NewsTest2014"
+      ],
+      "notes": "The named datasets are supported, but the evaluation list is incomplete."
+    },
+    {
+      "item_id": "J-8f343264ca",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9b5fd85c.txt:69-71 names Europarl v9 for training and NewsTest2013 and NewsTest2014 for evaluation.",
+      "coverage_evidence": "S-9b5fd85c.txt:71 provides the training dataset and both evaluation datasets.",
+      "material_omissions": [],
+      "notes": ""
+    }
+  ]
+}

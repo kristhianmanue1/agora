@@ -1,0 +1,111 @@
+{
+  "schema": "agora/jev-disputed-omission-comparison/v1",
+  "status": "compared_not_human_adjudicated",
+  "rows": [
+    {
+      "item_id": "J-208680c60e",
+      "case": "baselines",
+      "variant": "omission",
+      "expected": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "prior_jev": {
+        "labels": {
+          "support": "unsupported",
+          "coverage": "omitted"
+        },
+        "receipt_sha256": "1dc835977699d611edd84136900dfa93878710d4511d024224b860760e51ffcf"
+      }
+    },
+    {
+      "item_id": "J-8f343264ca",
+      "case": "datasets",
+      "variant": "complete",
+      "expected": {
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "prior_jev": {
+        "labels": {
+          "support": "supported",
+          "coverage": "complete"
+        },
+        "receipt_sha256": "05a17eb9bfecff7c7c16fc83607ca08c7a79aaa2d0eb7fb5991759f245650e27"
+      }
+    },
+    {
+      "item_id": "J-84a2405837",
+      "case": "datasets",
+      "variant": "omission",
+      "expected": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "prior_jev": {
+        "labels": {
+          "support": "unsupported",
+          "coverage": "omitted"
+        },
+        "receipt_sha256": "67de0df19c3ae0b5ec891dda5959f04d1dc8c4bc7199348599dab2a1cb10cc41"
+      }
+    },
+    {
+      "item_id": "J-579a28818e",
+      "case": "baselines",
+      "variant": "complete",
+      "expected": {
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "prior_jev": {
+        "labels": {
+          "support": "supported",
+          "coverage": "complete"
+        },
+        "receipt_sha256": "1e846db71f9df3ad45d51c61628e728d6bdf00b3de875420c8cef8cd06e4dfb9"
+      }
+    }
+  ],
+  "new_jev_calls": 0
+}

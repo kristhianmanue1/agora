@@ -1,0 +1,15 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-208680c60e",
+  "source_file": "../sources/S-987604aa.txt",
+  "source_sha256": "dd10eda58bd95b110d0e6e42ca0f7f6f97044a3c4005b673736bdcc280349fb5",
+  "question": "What baselines did they compare with?",
+  "requirements": [
+    "List all baseline models used in the experiments."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "They compare with LDA, Doc-NADE, and HTMM."
+  ],
+  "stated_limitations": []
+}

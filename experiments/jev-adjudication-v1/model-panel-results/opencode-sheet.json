@@ -1,0 +1,129 @@
+{
+  "schema": "agora/model-adjudication-sheet/v1",
+  "entries": [
+    {
+      "item_id": "J-027b4092b6",
+      "question_clarity": "clear",
+      "support": "unsupported",
+      "coverage": "omitted",
+      "support_evidence": "S-f40320a7.txt:71 'We use the publicly available Europarl v9 parallel data set for training German (De) and English (En)... We evaluate with the NewsTest2013 and NewsTest2014 datasets from the WMT 2014 news translation track' — contradicts the claim 'Evaluation uses NewsTest2013 but not NewsTest2014'; the Europarl v9 training claim is supported by the same line.",
+      "coverage_evidence": "Requirement 'name every evaluation dataset' is unmet: S-f40320a7.txt:71 establishes both NewsTest2013 and NewsTest2014; the response names only NewsTest2013 and denies NewsTest2014.",
+      "material_omissions": [
+        "Evaluation dataset NewsTest2014, denied by the response but established at S-f40320a7.txt:71"
+      ],
+      "notes": "The false negative statement about NewsTest2014 is the sole support failure; the training-dataset claim is accurate."
+    },
+    {
+      "item_id": "J-0c61dbcf11",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-683729c2.txt:85 'estimating its semantic proximity... with existing applications with known features'; :113/:117 field embeddings and field-level cosine similarity; :121 'estimate mean similarity across constituent fields as a proximity'; :127 'degree-1 ego-similarity network... diagonal matrix'; :129 NorSim = Δ×PF 'measures probable relevance of feature Fj for NewP'.",
+      "coverage_evidence": "Requirement 'how the new application is compared with known applications' is covered by S-683729c2.txt:113-129; requirement 'how recommendations are ordered' is unaddressed in the response, while the source establishes it at :141: 'Rank feature specifications in ΘF decreasing order based upon Relevance(NewP,.)... suggested to the NLP Data Scientist together with the supporting evidence'.",
+      "material_omissions": [
+        "Ordering of recommendations: ranking of feature specifications in decreasing order of computed relevance and suggestion with supporting evidence (S-683729c2.txt:141)"
+      ],
+      "notes": "Proximity and relevance claims are faithful to the source; the response stops before the ranking step, leaving requirement 2 unanswered."
+    },
+    {
+      "item_id": "J-44965bbcf5",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-6ff37dc9.txt:163 — the datasets are described as 'standard datasets for news summarization', one 'highly extractive', one 'highly abstractive', with no language stated; matches the stated limitation.",
+      "coverage_evidence": "Absence verified over the full 210 lines of S-6ff37dc9.txt; terms searched: 'English', 'language(s)', and specific language names; no explicit dataset-language statement appears anywhere in the source.",
+      "material_omissions": [],
+      "notes": "Judged independently from this source alone; abstention is correct."
+    },
+    {
+      "item_id": "J-4dd08cb3f0",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9a6732b8.txt:129 (English-sportball: original MS-COCO English dataset, 3,850 sportball images); :119 (comparisons through two Vietnamese datasets and the original MS-COCO English dataset, same sportball images); :41/:47 (MS-COCO, 3,850 sportball images from the 2017 edition).",
+      "coverage_evidence": "S-9a6732b8.txt:119 and :129 name the English dataset used (original MS-COCO English, sportball category, referred to as English-sportball), satisfying the requirement.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-7d0e4192a1",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-e2f172fa.txt:101, including the hedge 'to the best of our knowledge' and 'The documents are segmented into clauses manually'.",
+      "coverage_evidence": "S-e2f172fa.txt:101 names the dataset used (simplified Chinese emotion cause corpus, BIBREF31), satisfying the sole requirement.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-c57065f9b9",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9a6732b8.txt:129 'Original English (English-sportball): The original MS-COCO English dataset with 3,850 sportball images. This dataset is first evaluated in order to have base results for following comparisons'; :119 three datasets and 2,695/924/231 split; :137 models 'trained with three mentioned datasets, which are English-sportball, GT-sportball, UIT-ViIC'; :37 'Microsoft COCO (Microsoft Common in Objects in Context)'.",
+      "coverage_evidence": "S-9a6732b8.txt:119 and :129 identify the English evaluation dataset (original MS-COCO English restricted to sportball), satisfying the requirement.",
+      "material_omissions": [],
+      "notes": "All figures cited (3,850 images; 2,695/924/231 split) match the source."
+    },
+    {
+      "item_id": "J-d47c8db243",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-1d14aa22.txt:101 'tested our model similarity scores against human similarity judgments... judge how similar two words are on a fixed scale... ranking the word pairs according to their cosine similarity... correlation (using Spearman's ρ)'; :103 WordSim353, test split of MEN, RW, '1083/2034 for the RW dataset' OOV; :105 'results for in-corpus word pairs in Table 3, and for all word pairs... in Table 4'.",
+      "coverage_evidence": "S-1d14aa22.txt:101-105 answers both requirements: identifies the human-judgment comparison and describes the evaluation method (cosine-similarity ranking + Spearman correlation) with the three datasets used.",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-eac89795fb",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-683729c2.txt:85/:113/:117/:121 (proximity estimation via field embeddings and mean field similarity); :127-:129 (ego-similarity diagonal matrix combined with relevance matrix PF to give probable relevance); :141 'Rank feature specifications in ΘF decreasing order based upon Relevance(NewP,.), which are suggested to the NLP Data Scientist together with the supporting evidence'.",
+      "coverage_evidence": "Both requirements covered in S-683729c2.txt: comparison with known applications (:113-129) and ordering of recommendations (:141).",
+      "material_omissions": [],
+      "notes": ""
+    },
+    {
+      "item_id": "J-ee244fe1bb",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-6ff37dc9.txt:163 'CNN/DM dataset BIBREF5 and the XSum dataset BIBREF6, which are both standard datasets for news summarization... highly extractive... highly abstractive'; the stated limitation accurately paraphrases this line.",
+      "coverage_evidence": "Absence verified over the full 210 lines of S-6ff37dc9.txt; terms searched: 'English', 'language(s)' and specific language names. Only generic 'language generation' phrasing appears (lines 3, 7); line 163 describes the datasets without any language statement.",
+      "material_omissions": [],
+      "notes": "Abstention is correct: the source never explicitly states the datasets' languages."
+    },
+    {
+      "item_id": "J-f119f8f68a",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-e2f172fa.txt:101 'We conduct experiments on a simplified Chinese emotion cause corpus BIBREF31, the only publicly available dataset on this task to the best of our knowledge. The corpus contains 2,105 documents from SINA city news. Each document has only one emotion word and one or more emotion causes.'",
+      "coverage_evidence": "S-e2f172fa.txt:101 names the dataset used (simplified Chinese emotion cause corpus), satisfying the sole requirement; the source assigns the dataset no proper name beyond this description.",
+      "material_omissions": [],
+      "notes": "Claim drops the source hedge 'to the best of our knowledge' (:101); minor and does not change the answer to the question asked."
+    },
+    {
+      "item_id": "J-f61701dc78",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-1d14aa22.txt:101 (human annotators judge similarity on a fixed scale; word pairs ranked by cosine similarity; Spearman's ρ correlation); :103 (WordSim353, test split of MEN, Rare Word dataset).",
+      "coverage_evidence": "S-1d14aa22.txt:101-103 answers both requirements; the stated limitation is accurate: numeric scores appear only in Tables 3-4 (referenced at :105) and are not present in the text.",
+      "material_omissions": [],
+      "notes": "Omitting numeric table results does not affect coverage: the question asks how evaluation is performed, not the scores."
+    },
+    {
+      "item_id": "J-fb95c39b04",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "justified_abstention",
+      "support_evidence": "S-4b52ad5a.txt:15 'looking at English-language data by westerners and at multilingual data by individuals of diverse ethnicities'; :29 'finally multilingual accounts'; :23 Twitter 'filter tweets according to 60 language codes'; :35 USAS 'can tag semantic categories in eight languages'; :37 Dutch appears only as an example LIWC translation — all matching the stated limitation.",
+      "coverage_evidence": "Absence verified over the full 66 lines of S-4b52ad5a.txt; terms searched: 'language(s)', 'multilingual', and language names (English, Dutch, German, French, Spanish, Chinese, Japanese). No enumeration of the multilingual population's languages exists; only English (prior research and the English-language phases, lines 3, 11, 15, 29) and Dutch (LIWC translation example, line 37) are named anywhere.",
+      "material_omissions": [],
+      "notes": "'This multilingual population' is identifiable in the source (lines 3, 15), so the question is clear even though the source never enumerates its languages; abstention is correct."
+    }
+  ]
+}

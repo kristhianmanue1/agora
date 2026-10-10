@@ -1,0 +1,11 @@
+{
+  "schema": "agora/model-adjudication-sheet-lock/v1",
+  "reviewer": "codex",
+  "model_requested": "gpt-6-sol",
+  "model_effective": "unknown: CLI output does not independently verify executor identity",
+  "source_stdout_sha256": "9d05c92a58d413d33b7564fc1924c71349df934757a735588dcbf14672c61143",
+  "sheet_sha256": "c035768c8b36309e5444862b6d3d6daa78935d090df393bf2d392f6f9613ca8f",
+  "items": 12,
+  "trailing_non_json_text_bytes": 0,
+  "unblinded": false
+}

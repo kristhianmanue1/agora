@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "entries"],
+  "properties": {
+    "schema": {"type": "string", "const": "agora/model-adjudication-sheet/v1"},
+    "entries": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "question_clarity", "support", "coverage", "support_evidence", "coverage_evidence", "material_omissions", "notes"],
+        "properties": {
+          "item_id": {"type": "string"},
+          "question_clarity": {"type": "string", "enum": ["clear", "ambiguous", "uncertain"]},
+          "support": {"type": "string", "enum": ["supported", "unsupported", "uncertain"]},
+          "coverage": {"type": "string", "enum": ["complete", "omitted", "justified_abstention", "uncertain"]},
+          "support_evidence": {"type": "string"},
+          "coverage_evidence": {"type": "string"},
+          "material_omissions": {"type": "array", "items": {"type": "string"}},
+          "notes": {"type": "string"}
+        }
+      }
+    }
+  }
+}

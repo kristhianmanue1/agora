@@ -1,0 +1,11 @@
+{
+  "schema": "agora/model-adjudication-sheet-lock/v1",
+  "reviewer": "opencode",
+  "model_requested": "zai-coding-plan/glm-5.3-flash",
+  "model_effective": "unknown: CLI output does not independently verify executor identity",
+  "source_stdout_sha256": "592b7b5b30a3f6b561b22e1f275ede951192722a9d03cb8c877c7cf4cec82390",
+  "sheet_sha256": "f57618bd2a91c251288e472a84aedf654367fe5fdc0f6af3e1dab4ee68aca9a9",
+  "items": 12,
+  "trailing_non_json_text_bytes": 227,
+  "unblinded": false
+}

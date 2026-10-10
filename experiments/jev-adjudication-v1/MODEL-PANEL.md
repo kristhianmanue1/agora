@@ -27,3 +27,31 @@ por hash antes de abrir `sealed/`. Si un proceso falla, queda registrada la
 salida incompleta y no se inventa una hoja. Los criterios de respaldo y
 cobertura de `blind/INSTRUCTIONS.md` permanecen; las reglas de promoción del
 protocolo humano no se satisfacen por reemplazar a sus adjudicadores.
+
+## Resultado observado
+
+Ambos programas devolvieron 12 juicios válidos en su primer intento, en
+directorios separados que contenían sólo `blind/`. Las hojas y hashes se
+fijaron antes de comparar con `sealed/`. El [resultado cotejado](model-panel-results/comparison.json)
+registra acuerdo en claridad 12/12, respaldo 11/12 y cobertura 12/12. Los dos
+controles preparados tuvieron las etiquetas esperadas en ambos revisores.
+
+El único desacuerdo es `J-f119f8f68a`: Codex marcó `unsupported` y OpenCode
+`supported`. La respuesta presenta un corpus como el único disponible para la
+tarea; la fuente condiciona esa exclusividad a «to the best of our knowledge».
+La pérdida de esa salvedad puede ser material para respaldo. Se conserva el
+desacuerdo sin decidirlo por mayoría.
+
+Las hojas, locks y comparación están en `model-panel-results/`. Los logs crudos
+quedan locales en `exports/model-panel/` y no se publican. Los registros de
+herramientas visibles mostraron lectura de las fichas y fuentes de `blind/`;
+esto no prueba aislamiento a nivel de sistema operativo. OpenCode añadió 227
+bytes de prosa después del JSON; el validador extrajo el primer objeto sin
+corregir sus etiquetas. El modelo efectivo permanece `unknown`.
+
+Los dos controles del paquete original **no eran** las dos omisiones exactas
+que Jev había marcado `unsupported`. Para probar ese desacuerdo específico se
+ejecutó un [suplemento ciego separado](supplement-v1/README.md), sin modificar
+las doce fichas originales. El acuerdo del panel es evidencia experimental,
+no aceptación humana independiente ni habilitación del revisor como puerta de
+admisión.

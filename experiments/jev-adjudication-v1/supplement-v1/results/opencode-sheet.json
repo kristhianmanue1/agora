@@ -1,0 +1,49 @@
+{
+  "schema": "agora/model-adjudication-sheet/v1",
+  "entries": [
+    {
+      "item_id": "J-208680c60e",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-987604aa.txt lines 91-97: 'The following baselines were used in our experiments: LDA BIBREF2... Doc-NADE BIBREF24... HTMM BIBREF9.' The three named baselines each appear verbatim.",
+      "coverage_evidence": "S-987604aa.txt lines 91-99 enumerate four baselines; line 99 adds 'GMNTM BIBREF12. GMNTM considers models the order of words within a sentence by a feedforward neural network.' The answer stops at three.",
+      "material_omissions": [
+        "GMNTM, the fourth baseline listed in the source (line 99)"
+      ],
+      "notes": "True but incomplete: every claim made is supported, but the requirement asks for all baselines. No baseline is used in the qualitative topic2sentence section (lines 113-127), so nothing else is missing."
+    },
+    {
+      "item_id": "J-579a28818e",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-987604aa.txt lines 91-99: 'The following baselines were used in our experiments: LDA BIBREF2. ... Doc-NADE BIBREF24. ... HTMM BIBREF9. ... GMNTM BIBREF12.' All four named baselines appear.",
+      "coverage_evidence": "S-987604aa.txt lines 91-99 list exactly four baselines (LDA, Doc-NADE, HTMM, GMNTM) and the answer names all four; no other baseline appears in the Experiments or Qualitative Results sections (lines 75-127).",
+      "material_omissions": [],
+      "notes": "Repeated question judged independently against the same source. The standard LSTM language model in line 105 is only a reference point in further verification, not an experimental baseline."
+    },
+    {
+      "item_id": "J-84a2405837",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "omitted",
+      "support_evidence": "S-9b5fd85c.txt line 71: 'We use the publicly available Europarl v9 parallel data set for training German (De) and English (En) languages... We evaluate with the NewsTest2013 and NewsTest2014 datasets from the WMT 2014 news translation track.' Both claims made are true.",
+      "coverage_evidence": "S-9b5fd85c.txt line 71 names two evaluation datasets, NewsTest2013 and NewsTest2014; the answer names only one. Searched the full source for Europarl, NewsTest, WMT: no other training or evaluation dataset appears.",
+      "material_omissions": [
+        "NewsTest2014 as an evaluation dataset"
+      ],
+      "notes": "True but incomplete: Europarl v9 and NewsTest2013 are correct, but the requirement demands every evaluation dataset."
+    },
+    {
+      "item_id": "J-8f343264ca",
+      "question_clarity": "clear",
+      "support": "supported",
+      "coverage": "complete",
+      "support_evidence": "S-9b5fd85c.txt line 71: training on 'Europarl v9 parallel data set'; evaluation with 'the NewsTest2013 and NewsTest2014 datasets from the WMT 2014 news translation track.'",
+      "coverage_evidence": "S-9b5fd85c.txt line 71 names the single training dataset and both evaluation datasets, and the answer lists all three; a full-source search for Europarl, NewsTest and WMT found no additional dataset.",
+      "material_omissions": [],
+      "notes": "Repeated question judged independently against the same source."
+    }
+  ]
+}

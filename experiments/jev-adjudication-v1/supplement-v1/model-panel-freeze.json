@@ -1,0 +1,11 @@
+{
+  "schema": "agora/jev-disputed-omission-model-panel/v1",
+  "blind_archive_sha256": "11c202901d7382793d26ecfc97370de2ccf058a2483d72c99ff21efdd1cb45ad",
+  "reviewers": [
+    {"id": "codex", "program": "codex", "model_requested": "gpt-6-sol", "max_dispatches": 1, "retries": 0},
+    {"id": "opencode", "program": "opencode", "model_requested": "zai-coding-plan/glm-5.3-flash", "max_dispatches": 1, "retries": 0}
+  ],
+  "delivery_scope": "supplement blind ZIP only, separate local workspaces",
+  "unblind_before_both_reviews_fixed": false,
+  "adjudication_status": "model_review_experimental_not_human"
+}

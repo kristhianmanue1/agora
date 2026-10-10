@@ -1,0 +1,5 @@
+Review the 4 items in the local blind/ directory. Read blind/INSTRUCTIONS.md, each blind/items/J-*.json, and the referenced blind/sources/S-*.txt. Use only these files. Do not access any parent directory, repository, other session, internet source, or another reviewer's output. Do not change the files.
+
+For each item, independently judge question_clarity (clear|ambiguous|uncertain), support (supported|unsupported|uncertain), and coverage (complete|omitted|justified_abstention|uncertain) using the rubric. Distinguish a true but incomplete answer from an unsupported claim. Provide source filename and line number or a locatable source excerpt for both evidence fields. Explain any uncertain label. Do not infer origin, arm, model, or expected label.
+
+Return exactly one JSON object with schema "agora/model-adjudication-sheet/v1" and entries: an array of exactly 4 objects, one for each item ID. Each object must contain item_id, question_clarity, support, coverage, support_evidence, coverage_evidence, material_omissions (array of strings), and notes. Keep the evidence concise. No Markdown fences or introductory text.

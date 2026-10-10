@@ -1,0 +1,253 @@
+{
+  "schema": "agora/model-panel-comparison/v1",
+  "status": "compared_not_independently_adjudicated",
+  "items": 12,
+  "agreement": {
+    "question_clarity": 12,
+    "support": 11,
+    "coverage": 12
+  },
+  "sentinels": {
+    "J-0c61dbcf11": {
+      "origin": "case-03-omission-control",
+      "expected": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "codex_pass": true,
+      "opencode_pass": true
+    },
+    "J-027b4092b6": {
+      "origin": "heldout-datasets-contradiction-control",
+      "expected": {
+        "support": "unsupported",
+        "coverage": "omitted"
+      },
+      "codex_pass": true,
+      "opencode_pass": true
+    }
+  },
+  "known_prior_jev": {
+    "T0-case-03-A": {
+      "labels": {
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "receipt_sha256": "a128c505341fac588140b98a89d92633b0f9c50d6f7eb48ce9bdb3f84d3e5ea0"
+    },
+    "case-03-omission-control": {
+      "labels": {
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "receipt_sha256": "d6aa761ae95aab2a925504cd21339c374529f47ff107efdc21dd0f4e6e3d401d"
+    },
+    "heldout-datasets-contradiction-control": {
+      "labels": {
+        "support": "unsupported",
+        "coverage": "omitted"
+      },
+      "receipt_sha256": "6b4e268efb5edcd04ad58b805ff3fa880ef1c684bbc96d724a50b7a7859d8860"
+    }
+  },
+  "rows": [
+    {
+      "item_id": "J-f119f8f68a",
+      "origin": "T0-case-02-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "unsupported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": [
+        "support"
+      ]
+    },
+    {
+      "item_id": "J-7d0e4192a1",
+      "origin": "T0-case-02-B",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-44965bbcf5",
+      "origin": "T0-case-05-B",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-c57065f9b9",
+      "origin": "T0-case-04-B",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-fb95c39b04",
+      "origin": "T0-case-06-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-0c61dbcf11",
+      "origin": "case-03-omission-control",
+      "kind": "prepared_omission",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "omitted"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-4dd08cb3f0",
+      "origin": "T0-case-04-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-027b4092b6",
+      "origin": "heldout-datasets-contradiction-control",
+      "kind": "prepared_contradiction",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "unsupported",
+        "coverage": "omitted"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "unsupported",
+        "coverage": "omitted"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-d47c8db243",
+      "origin": "T0-case-01-B",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-eac89795fb",
+      "origin": "T0-case-03-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-f61701dc78",
+      "origin": "T0-case-01-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "complete"
+      },
+      "disagreement_axes": []
+    },
+    {
+      "item_id": "J-ee244fe1bb",
+      "origin": "T0-case-05-A",
+      "kind": "spontaneous",
+      "codex": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "opencode": {
+        "question_clarity": "clear",
+        "support": "supported",
+        "coverage": "justified_abstention"
+      },
+      "disagreement_axes": []
+    }
+  ],
+  "unresolved": [
+    "J-f119f8f68a"
+  ],
+  "new_jev_calls": 0
+}

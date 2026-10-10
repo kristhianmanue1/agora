@@ -1,0 +1,16 @@
+{
+  "schema": "agora/blind-adjudication-item/v1",
+  "item_id": "J-84a2405837",
+  "source_file": "../sources/S-9b5fd85c.txt",
+  "source_sha256": "e7d6746c1da899475775bc07f36abf77067a12d3aa0b6953e355119aeefa6fef",
+  "question": "What datasets do they look at?",
+  "requirements": [
+    "Name the training dataset.",
+    "Name every evaluation dataset."
+  ],
+  "response_status": "answered",
+  "claims": [
+    "Training uses Europarl v9. Evaluation uses NewsTest2013."
+  ],
+  "stated_limitations": []
+}
