@@ -1,0 +1,116 @@
+{
+  "schema": "agora/evidence-answer-flow-t0-freeze/v1",
+  "frozen_date": "2026-10-10",
+  "selection_scope": "Six locally unmentioned QASPER IDs chosen before new model calls; producer inspected annotation agreement; calibration only, not T5 holdout",
+  "dataset": {
+    "path": "experiments/qasper-v1/inputs/test.json",
+    "sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+    "render": "agora.qasper.render"
+  },
+  "comparison": {
+    "model_requested": "glm-5.3-flash",
+    "temperature": 0,
+    "baseline_max_calls": 1,
+    "flow_max_calls": 5,
+    "generation_max_output_tokens": 4096,
+    "generation_timeout_seconds": 120,
+    "retries": 0,
+    "same_source_question_requirements": true,
+    "adjudication": "blind to arm and automatic review until content judgment recorded",
+    "baseline_prompt_sha256": "7cbd2076a5a84c5ea880102632df26aeac4cb72581529547a215b4d1bca94bd7"
+  },
+  "cases": [
+    {
+      "id": "case-01",
+      "document_id": "1606.02601",
+      "question_id": "0bc305d6b90f77f835bc4c904b22a4be07f963b2",
+      "question": "How are the embeddings evaluated in the human judgement comparison?",
+      "stratum": "answerable",
+      "source_bytes": 24485,
+      "source_sha256": "921028d215f429d2fa82efaeac247485be925e6d17579e645616bc5c672d955f",
+      "annotation_count": 3,
+      "reference_answers_sha256": "c02e75af8f100154e242202004ba51263e4b4e4ac8b872c9e42c00ef772a886e",
+      "requirements": [
+        "Identify the comparison with human judgments.",
+        "Describe how embedding similarities are evaluated."
+      ],
+      "run_order": "AB"
+    },
+    {
+      "id": "case-02",
+      "document_id": "1708.05482",
+      "question_id": "ced63053eb631c78a4ddd8c85ec0f3323a631a54",
+      "question": "what emotion cause dataset was used?",
+      "stratum": "answerable",
+      "source_bytes": 28112,
+      "source_sha256": "ff1bebab77de33b47330851b76046502e1def373918b15e7e0195a9503c40bec",
+      "annotation_count": 3,
+      "reference_answers_sha256": "df7f0aed2fbb3b1a7ca454298dc5fd22f310ad47960ed0c1d03e46a0234e2b98",
+      "requirements": [
+        "Name the emotion-cause dataset used."
+      ],
+      "run_order": "BA"
+    },
+    {
+      "id": "case-03",
+      "document_id": "2002.03056",
+      "question_id": "9be9354eeb2bb1827eeb1e23a20cfdca59fb349a",
+      "question": "How this system recommend features for the new application?",
+      "stratum": "answerable",
+      "source_bytes": 26070,
+      "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+      "annotation_count": 2,
+      "reference_answers_sha256": "5b4d37bc13ac4e60562fcea3bdbef2c86b42431808255aa9c9651ca6af0994e5",
+      "requirements": [
+        "Explain how the new application is compared with known applications.",
+        "State how recommendations are ordered."
+      ],
+      "run_order": "AB"
+    },
+    {
+      "id": "case-04",
+      "document_id": "2002.00175",
+      "question_id": "2f75b0498cf6a1fc35f1fb1cac44fc2fbd3d7878",
+      "question": "Which English dataset do they evaluate on?",
+      "stratum": "answerable",
+      "source_bytes": 21509,
+      "source_sha256": "29378327b9b472e40792b9442bfbb2af91f65954efbcb176cfbda3623d421f34",
+      "annotation_count": 2,
+      "reference_answers_sha256": "63e4df61c23e85b8cf7c57d268e027c90ee5f3f6f31ac917c79bba74b70bf341",
+      "requirements": [
+        "Name the English dataset used for evaluation."
+      ],
+      "run_order": "BA"
+    },
+    {
+      "id": "case-05",
+      "document_id": "2003.13028",
+      "question_id": "3e3d123960e40bcb1618e11999bd2031ccc1d155",
+      "question": "What are the languages of the datasets?",
+      "stratum": "unanswerable",
+      "source_bytes": 24314,
+      "source_sha256": "614e7eb9f5e3f6b3fbef20670931ecbee8a1bddecfd4f528e1cd8e06fa1b3959",
+      "annotation_count": 2,
+      "reference_answers_sha256": "e56d3b5fa9465b7f43078f85e2aec1ae2be79fc887133aa8a6d84864b6a872fc",
+      "requirements": [
+        "List dataset languages only if explicitly supported by the source; otherwise abstain."
+      ],
+      "run_order": "AB"
+    },
+    {
+      "id": "case-06",
+      "document_id": "1906.01010",
+      "question_id": "a926d71e6e58066d279d9f7dc3210cd43f410164",
+      "question": "What languages were included in this multilingual population?",
+      "stratum": "unanswerable",
+      "source_bytes": 24430,
+      "source_sha256": "6f8250062b62455c7815b57d76c7c12d3ea124445e621edd173ad7810cee77fb",
+      "annotation_count": 3,
+      "reference_answers_sha256": "a4eeca44b2541bbe15939335c8c9658f4ef591c80d49d66fc69c202387f55ee0",
+      "requirements": [
+        "List languages in the population only if explicitly supported by the source; otherwise abstain."
+      ],
+      "run_order": "BA"
+    }
+  ]
+}
