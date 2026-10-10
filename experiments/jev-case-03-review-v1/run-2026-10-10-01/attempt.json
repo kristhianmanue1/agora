@@ -1,0 +1,28 @@
+{
+  "schema": "agora/jev-case-03-review/v1-experimental",
+  "status": "attempted",
+  "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+  "candidate_file_sha256": "ee9f930ea097ab909a85c94d9e395019f7459771692549f71181100526e1b004",
+  "request_sha256": "e1e68c96e9240e5dbb9c9e4ebb15babd5465a7471fb9c429ab4e0f84b33e6aad",
+  "request_bytes": 29700,
+  "model_requested": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "question": "How this system recommend features for the new application?",
+  "criteria": {
+    "support": {
+      "supported": "Every material assertion in the candidate answer is supported by the full source.",
+      "unsupported": "At least one material assertion in the candidate answer exceeds or conflicts with the full source.",
+      "uncertain": "The support of the candidate answer cannot be determined from the full source."
+    },
+    "coverage": {
+      "complete": "The candidate answers both stated requirements using information established by the full source.",
+      "omitted": "The full source establishes material information for a stated requirement that the candidate omits.",
+      "uncertain": "The question or full source prevents a reliable determination of completeness."
+    }
+  },
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:19:41Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}
