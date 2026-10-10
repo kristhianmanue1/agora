@@ -1,0 +1,16 @@
+{
+  "schema": "agora/jev-case-03-omission-control/v1",
+  "status": "attempted",
+  "freeze_sha256": "30664c5a5ec1727875beb05489de98142d7fda032360751b27f9953a6d27d477",
+  "request_sha256": "3631b9efb9cbfee302051d995675dad3bdd59a91bc5d43bb7312dc4119bb0eae",
+  "request_bytes": 29237,
+  "control_candidate_sha256": "5a59233c8908d9a6bd2794a9bb81f1efb0522542dd28a3e108553497a18ff004",
+  "removed_claim_sha256": "1834fe9a86622b933379dbd97034c3e0555d324a68fb9e51d8307cb9e466a2f5",
+  "model_requested": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:22:16Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "agora/jev-case-03-omission-control/v1",
+  "source_sha256": "2b73c7448e2d49c0b180ec9048daca9ce7e0f082a05e0d4499341eb6e953e7ad",
+  "baseline_candidate_file_sha256": "ee9f930ea097ab909a85c94d9e395019f7459771692549f71181100526e1b004",
+  "baseline_request_sha256": "e1e68c96e9240e5dbb9c9e4ebb15babd5465a7471fb9c429ab4e0f84b33e6aad",
+  "baseline_runner_sha256": "aff3e0bb94844e264d8ddd48fe17ab9e41b9e981f3d318abb21f6737d46d1e3e",
+  "mutation": "Remove only claim index 2, which states descending recommendation order; retain status, remaining claims, task, requirements, source and reviewer questions unchanged.",
+  "expected_support": "supported",
+  "expected_coverage": "omitted",
+  "max_calls": 1,
+  "retries": 0,
+  "adjudication": "producer_self_review_after_response"
+}

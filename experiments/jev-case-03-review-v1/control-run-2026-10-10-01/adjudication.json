@@ -1,0 +1,47 @@
+{
+  "schema": "agora/jev-case-03-omission-adjudication/v1-experimental",
+  "reviewer": "Codex producer self-review; no independent human adjudicator",
+  "reviewed_after_provider_response": true,
+  "question_scope": "The two T0 requirements frozen for QASPER case-03",
+  "baseline_labels": {
+    "support": "supported",
+    "coverage": "complete"
+  },
+  "control_expected_before_dispatch": {
+    "support": "supported",
+    "coverage": "omitted"
+  },
+  "control_observed": {
+    "support": "supported",
+    "coverage": "omitted"
+  },
+  "source_checks": [
+    {
+      "property": "remaining comparison claim",
+      "source_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-03/source.txt",
+      "lines": "117,121,125",
+      "observation": "The source states field embeddings, field similarity and mean proximity for applications."
+    },
+    {
+      "property": "remaining relevance claim",
+      "source_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-03/source.txt",
+      "lines": "127-129",
+      "observation": "The source states the ego-similarity network and the combination with the feature relevance matrix."
+    },
+    {
+      "property": "deliberately omitted ranking requirement",
+      "source_path": "experiments/evidence-answer-flow-t0-v1/runs/run-2026-10-10-glm-paired-02-llavero/case-03/source.txt",
+      "lines": "141",
+      "observation": "The source orders feature specifications by decreasing relevance; the control candidate does not state an ordering."
+    }
+  ],
+  "finding": "The reviewer distinguished this one complete candidate from its single-claim omission under unchanged question, source and criteria.",
+  "limits": [
+    "The producer prepared and adjudicated the control; this is not an independent review.",
+    "One local positive-negative pair does not establish reviewer reliability, calibration or generalization.",
+    "The experiment does not generate or repair the failed T0 B candidate.",
+    "The complete label is limited to the two frozen requirements; the source also discusses later feedback adaptation."
+  ],
+  "memory_admission": "not_performed",
+  "activation": "not_performed"
+}
