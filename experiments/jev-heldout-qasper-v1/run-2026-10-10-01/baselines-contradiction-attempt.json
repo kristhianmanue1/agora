@@ -1,0 +1,14 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "baselines-contradiction",
+  "status": "attempted",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "98f8778776e9a0e611c671658f96ba91ffe55959646c1b294d20157b6e6a3aa6",
+  "request_bytes": 24699,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:30Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}

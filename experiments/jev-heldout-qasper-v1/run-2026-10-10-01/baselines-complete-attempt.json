@@ -1,0 +1,14 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "baselines-complete",
+  "status": "attempted",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "b9b1619e6b6ba132a1948739084ba7f21d868929b74847f16b5f2539bf37191b",
+  "request_bytes": 24691,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:30Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}

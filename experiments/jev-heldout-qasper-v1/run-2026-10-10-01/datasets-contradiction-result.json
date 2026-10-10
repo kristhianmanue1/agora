@@ -1,0 +1,49 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "datasets-contradiction",
+  "status": "completed",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "a89950b3364562a035977dd25e8d9ee77fba8456d82eedf13173245ea1e61920",
+  "request_bytes": 28431,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:29Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "support": {
+        "type": "choice",
+        "choice": "unsupported",
+        "confidence": 0.97,
+        "probabilities": {
+          "supported": 0.02,
+          "unsupported": 0.98,
+          "uncertain": 0.0
+        }
+      },
+      "coverage": {
+        "type": "choice",
+        "choice": "omitted",
+        "confidence": 0.98,
+        "probabilities": {
+          "complete": 0.01,
+          "omitted": 0.99,
+          "uncertain": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 6790,
+      "output_tokens": 79
+    }
+  },
+  "labels": {
+    "support": "unsupported",
+    "coverage": "omitted"
+  },
+  "elapsed_seconds": 0.265,
+  "ended_at": "2026-10-10T11:26:30Z"
+}

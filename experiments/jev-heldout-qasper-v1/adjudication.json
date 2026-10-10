@@ -1,0 +1,42 @@
+{
+  "schema": "agora/jev-heldout-qasper-adjudication/v1-experimental",
+  "review_type": "producer_self_review_with_external_QASPER_annotations",
+  "reviewed_after_provider_responses": true,
+  "source_checks": [
+    {
+      "case": "datasets",
+      "source_document": "qasper:2004.02334",
+      "source_line_in_render": 71,
+      "observation": "The source names Europarl v9 for training and NewsTest2013 plus NewsTest2014 for evaluation; all three annotators include these targets."
+    },
+    {
+      "case": "baselines",
+      "source_document": "qasper:1604.02038",
+      "source_lines_in_render": "91-99",
+      "observation": "The baseline list explicitly names LDA, Doc-NADE, HTMM, and GMNTM; all four annotators include these targets."
+    }
+  ],
+  "disagreements": [
+    {
+      "id": "datasets-omission",
+      "expected_support": "supported",
+      "observed_support": "unsupported",
+      "reason": "The candidate states only two true dataset uses; it does not assert that NewsTest2013 is the sole evaluation set. Omission of NewsTest2014 is a coverage defect, not an unsupported assertion under the frozen support criterion."
+    },
+    {
+      "id": "baselines-omission",
+      "expected_support": "supported",
+      "observed_support": "unsupported",
+      "reason": "The candidate names three models that the baseline section explicitly lists. It does not assert an exhaustive list; omission of GMNTM is a coverage defect under the frozen requirement."
+    }
+  ],
+  "result": "Coverage matched frozen expectations in 6/6 controls; support matched 4/6. Jev distinguished omissions on the coverage axis but conflated omission with unsupported assertion on the support axis in both omission controls.",
+  "limitations": [
+    "The producer selected documents, wrote control answers and adjudicated disagreements.",
+    "QASPER annotators independently identified answer items but did not adjudicate these six candidate variants or this rubric.",
+    "Two documents and six single-shot requests do not estimate general reliability or calibrated confidence.",
+    "No CTIM material or failed T0 B answer was evaluated in this series."
+  ],
+  "activation": "not_performed",
+  "memory_admission": "not_performed"
+}

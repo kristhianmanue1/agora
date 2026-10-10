@@ -1,0 +1,14 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "datasets-complete",
+  "status": "attempted",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "513fe58dd68e6806d84ee8180bbc817f70d3e1274a1e0926f2e55794c8de4fb6",
+  "request_bytes": 28427,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:29Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed"
+}

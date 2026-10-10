@@ -1,0 +1,54 @@
+{
+  "schema": "agora/jev-heldout-qasper/v1-experimental",
+  "dataset": "experiments/qasper-v1/inputs/test.json",
+  "dataset_sha256": "6e29ad410e6e39aa1936017fb965b30a20eb2e7751997f55b97c9d281aa884e5",
+  "selection": "Two previously unused Jev documents with answerable multi-item questions and agreement on target items across QASPER annotators; purposive selection before these calls, not random sampling.",
+  "model_requested": "jev-1.13.0",
+  "max_calls": 6,
+  "timeout_seconds": 90,
+  "retries": 0,
+  "criteria": {
+    "support": {
+      "supported": "Every material assertion in the candidate answer is supported by the full source.",
+      "unsupported": "At least one material assertion in the candidate answer exceeds or conflicts with the full source.",
+      "uncertain": "The support of the candidate answer cannot be determined from the full source."
+    },
+    "coverage": {
+      "complete": "The candidate answers all stated requirements using information established by the full source.",
+      "omitted": "The full source establishes material information for a stated requirement that the candidate omits or denies.",
+      "uncertain": "The question or full source prevents a reliable determination of completeness."
+    }
+  },
+  "cases": [
+    {
+      "id": "datasets",
+      "document_id": "2004.02334",
+      "question_id": "11c4071d9d7efeede84f47892b1fa0c6a93667eb",
+      "source_sha256": "e7d6746c1da899475775bc07f36abf77067a12d3aa0b6953e355119aeefa6fef",
+      "question": "What datasets do they look at?",
+      "requirements": ["Name the training dataset.", "Name every evaluation dataset."],
+      "annotation_targets": ["Europarl v9", "NewsTest2013", "NewsTest2014"],
+      "variants": [
+        {"id": "complete", "answer": "Training uses Europarl v9. Evaluation uses NewsTest2013 and NewsTest2014.", "expected": {"support": "supported", "coverage": "complete"}},
+        {"id": "omission", "answer": "Training uses Europarl v9. Evaluation uses NewsTest2013.", "expected": {"support": "supported", "coverage": "omitted"}},
+        {"id": "contradiction", "answer": "Training uses Europarl v9. Evaluation uses NewsTest2013 but not NewsTest2014.", "expected": {"support": "unsupported", "coverage": "omitted"}}
+      ]
+    },
+    {
+      "id": "baselines",
+      "document_id": "1604.02038",
+      "question_id": "bc8526d4805e2554adb2e9c01736d3f3a3b19895",
+      "source_sha256": "dd10eda58bd95b110d0e6e42ca0f7f6f97044a3c4005b673736bdcc280349fb5",
+      "question": "What baselines did they compare with?",
+      "requirements": ["List all baseline models used in the experiments."],
+      "annotation_targets": ["LDA", "Doc-NADE", "HTMM", "GMNTM"],
+      "variants": [
+        {"id": "omission", "answer": "They compare with LDA, Doc-NADE, and HTMM.", "expected": {"support": "supported", "coverage": "omitted"}},
+        {"id": "contradiction", "answer": "They compare with LDA, Doc-NADE, and HTMM, but not GMNTM.", "expected": {"support": "unsupported", "coverage": "omitted"}},
+        {"id": "complete", "answer": "They compare with LDA, Doc-NADE, HTMM, and GMNTM.", "expected": {"support": "supported", "coverage": "complete"}}
+      ]
+    }
+  ],
+  "provider_input_excludes": ["expected labels", "annotation targets", "variant IDs", "QASPER annotations"],
+  "adjudication": "Producer self-review after response; QASPER annotations are external references, not a blind human adjudication of the six controls."
+}

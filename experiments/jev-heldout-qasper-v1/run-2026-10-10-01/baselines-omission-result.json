@@ -1,0 +1,49 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "baselines-omission",
+  "status": "completed",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "8e75a78e4fa7d022ecac07670af49c04da9d7cce1617c9913be3b1a910e9d72a",
+  "request_bytes": 24684,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:30Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "support": {
+        "type": "choice",
+        "choice": "unsupported",
+        "confidence": 0.56,
+        "probabilities": {
+          "supported": 0.29,
+          "unsupported": 0.71,
+          "uncertain": 0.0
+        }
+      },
+      "coverage": {
+        "type": "choice",
+        "choice": "omitted",
+        "confidence": 0.98,
+        "probabilities": {
+          "complete": 0.01,
+          "omitted": 0.99,
+          "uncertain": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 5723,
+      "output_tokens": 79
+    }
+  },
+  "labels": {
+    "support": "unsupported",
+    "coverage": "omitted"
+  },
+  "elapsed_seconds": 0.201,
+  "ended_at": "2026-10-10T11:26:30Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "agora/jev-heldout-qasper-run/v1-experimental",
+  "case_id": "baselines-complete",
+  "status": "completed",
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "request_sha256": "b9b1619e6b6ba132a1948739084ba7f21d868929b74847f16b5f2539bf37191b",
+  "request_bytes": 24691,
+  "model_requested": "jev-1.13.0",
+  "http_attempts": 1,
+  "retries": 0,
+  "started_at": "2026-10-10T11:26:30Z",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "support": {
+        "type": "choice",
+        "choice": "supported",
+        "confidence": 1.0,
+        "probabilities": {
+          "supported": 1.0,
+          "unsupported": 0.0,
+          "uncertain": 0.0
+        }
+      },
+      "coverage": {
+        "type": "choice",
+        "choice": "complete",
+        "confidence": 0.98,
+        "probabilities": {
+          "complete": 0.99,
+          "omitted": 0.01,
+          "uncertain": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 5727,
+      "output_tokens": 78
+    }
+  },
+  "labels": {
+    "support": "supported",
+    "coverage": "complete"
+  },
+  "elapsed_seconds": 0.275,
+  "ended_at": "2026-10-10T11:26:30Z"
+}

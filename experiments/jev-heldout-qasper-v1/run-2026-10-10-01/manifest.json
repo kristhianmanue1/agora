@@ -1,0 +1,6 @@
+{
+  "freeze_sha256": "7776619ea36a448523aae83830b69b3a3f685324876235081cbeaeb58b9acad3",
+  "max_calls": 6,
+  "model_requested": "jev-1.13.0",
+  "retries": 0
+}
