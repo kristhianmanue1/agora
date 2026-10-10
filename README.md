@@ -40,7 +40,9 @@ respuesta ya generada, sin repetir GLM; ambos resultados requieren revisión.
 un consumidor externo; sólo añade localizadores del original si recibe un
 intercambio verificado contra el archivo original.
 `skopos-page-v02` construye ese intercambio desde una respuesta CTIM v0.2,
-su solicitud, manifiesto y PDF local; sigue pendiente su prueba bilateral real.
+su solicitud, manifiesto y PDF local. El [ensayo real de la página 15](experiments/ctim-v02-bilateral-v1/README.md)
+verificó la estructura, pero su respuesta sigue parcial y la cita global cruza
+un salto sin evidencia; no habilita consumo institucional.
 
 ## Qué hay implementado
 
