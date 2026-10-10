@@ -1,0 +1,1 @@
+{"max_output_tokens":4096,"model_requested":"glm-4.6","ordinal":1,"provider_id":"zai","remote_outcome":"unknown","request_sha256":"acdec668c6bf4e58268ad85b6fb2c196cb3a1ba50def496bfe962fdbc1eb9d57","source_sha256":"2cc46da92b20048d414a5f8f771534555b14470e410a1c3624e1c29aa6fa75d8","stage":"generation","state":"attempted","timeout_seconds":120}

@@ -4,7 +4,8 @@ import argparse
 import json
 from pathlib import Path
 
-from .evidence_answer_flow import SCHEMA as FLOW_SCHEMA, _save, _sha
+from .evidence_answer_flow import SCHEMA as FLOW_SCHEMA, _encoded, _save, _sha
+from .evidence_answer_flow_v2 import SCHEMA as FLOW_V2_SCHEMA, validate_budgets
 from .jev_flow_review import SCHEMA as JEV_SCHEMA
 from .source_evidence_exchange import validate_exchange
 
@@ -26,7 +27,7 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
     source_raw = Path(source).read_bytes()
     flow_raw = (flow_run / "result.json").read_bytes()
     flow = json.loads(flow_raw)
-    if flow.get("schema") != FLOW_SCHEMA or flow.get("status") not in (
+    if flow.get("schema") not in (FLOW_SCHEMA, FLOW_V2_SCHEMA) or flow.get("status") not in (
             "candidate_reviewed", "review_disagreement"):
         raise ValueError("flow_not_complete")
     if flow.get("source_scope") != "supplied_file_only":
@@ -121,7 +122,7 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
         raise ValueError("jev_claim_set_mismatch")
     if split and set(reviews) != {(c["part_id"], c["claim_index"]) for c in claims}:
         raise ValueError("claim_review_set_mismatch")
-    return {"schema": SCHEMA, "status": "candidate_for_consumer_review",
+    package = {"schema": SCHEMA, "status": "candidate_for_consumer_review",
             "source": provenance, "source_id": flow["source_id"],
             "question": flow["question"], "requirements": flow["requirements"],
             "claims": claims, "coverage_advice": coverage["coverage"],
@@ -134,6 +135,13 @@ def build_package(source, flow_run, *, jev_run=None, exchange=None, original=Non
             "adjudication": "not_performed", "memory_admission": "not_performed",
             "institutional_acceptance": "not_performed",
             "disposition": "requires_review"}
+    if flow["schema"] == FLOW_V2_SCHEMA:
+        validate_budgets(flow["budgets"])
+        if _sha(_encoded(flow["budgets"])) != flow["budgets_sha256"]:
+            raise ValueError("flow_budgets_mismatch")
+        package["flow_budgets"] = flow["budgets"]
+        package["flow_budgets_sha256"] = flow["budgets_sha256"]
+    return package
 
 
 def main(argv=None):

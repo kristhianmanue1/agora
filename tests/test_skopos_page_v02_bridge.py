@@ -97,6 +97,24 @@ class SkoposPageV02BridgeTests(unittest.TestCase):
         with self.assertRaisesRegex(SourceError, "skopos_manifest_hash_mismatch"):
             build(request, response, raw, manifest, original, [item_id], "0" * 64)
 
+    def test_native_line_order_is_preserved(self):
+        request, response, _, manifest, original, first = fixture()
+        second = "e" * 64
+        line = {"item_id": second, "text": "y lo remite a CII",
+                "bbox": [0.1, 0.31, 0.8, 0.4]}
+        response = copy.deepcopy(response)
+        manifest["pages"][0]["native_text"]["lines"].append(line)
+        response["result"]["native_text"]["lines"].append(copy.deepcopy(line))
+        raw = json.dumps(manifest).encode()
+        expected = hashlib.sha256(raw).hexdigest()
+        data, exchange = build(request, response, raw, manifest, original,
+                               [first, second], expected)
+        self.assertEqual(data.decode(), "CTIM revisa el anteproyecto\ny lo remite a CII\n")
+        self.assertEqual(len(exchange["segments"]), 2)
+        with self.assertRaisesRegex(SourceError, "skopos_item_order_mismatch"):
+            build(request, response, raw, manifest, original,
+                  [second, first], expected)
+
 
 if __name__ == "__main__":
     unittest.main()

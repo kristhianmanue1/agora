@@ -35,6 +35,7 @@ resultado esperado: no intentar “repararlo” inventando datos.
 | Generar o revisar relaciones con GLM/Jev o replay | `relation-run` |
 | Consultar fuente por aspectos con citas/IDs | `evidence` |
 | Responder una pregunta con generación y revisión GLM sobre una fuente UTF-8 | `answer` |
+| Responder con presupuestos de salida explícitos por etapa | `answer-v2` |
 | Revisar con Jev las citas de una ejecución `answer` ya terminada | `jev-review` |
 | Exportar offline un paquete de consulta para un consumidor | `export-answer` |
 | Construir intercambio PDF desde una respuesta Skopos CTIM v0.2 | `skopos-page-v02` |
@@ -59,7 +60,7 @@ lista operaciones; [el recorrido de pendientes](pendientes-cli.md) especifica
 entradas y ejemplos completos. Para generación/revisión de relaciones consultar
 [la guía correspondiente](relaciones-candidatas.md). Para `answer`, Jev y el
 paquete de salida, leer el [contrato de consulta](contrato-consulta-evidencia-v1.md).
-Los demás enlaces aparecen en `describe`. El catálogo cubre doce capacidades,
+Los demás enlaces aparecen en `describe`. El catálogo cubre trece capacidades,
 no cada módulo interno
 ni todos los experimentos históricos.
 

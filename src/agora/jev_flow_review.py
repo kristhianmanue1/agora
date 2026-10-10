@@ -8,6 +8,7 @@ import urllib.error
 import urllib.request
 
 from .evidence_answer_flow import SCHEMA as FLOW_SCHEMA, _save, _sha
+from .evidence_answer_flow_v2 import SCHEMA as FLOW_V2_SCHEMA
 from .fidelity_cli import request as fidelity_request, CRITERIA
 
 SCHEMA = "agora/jev-flow-review/v1-experimental"
@@ -22,7 +23,7 @@ def _read_json(path):
 def _preflight(recorded, source):
     recorded = Path(recorded)
     manifest = _read_json(recorded / "result.json")
-    if manifest.get("schema") != FLOW_SCHEMA or manifest.get("status") not in (
+    if manifest.get("schema") not in (FLOW_SCHEMA, FLOW_V2_SCHEMA) or manifest.get("status") not in (
             "candidate_reviewed", "review_disagreement"):
         raise ValueError("flow_not_reviewable")
     if manifest.get("source_scope") != "supplied_file_only":

@@ -20,6 +20,7 @@ python3 scripts/agora.py describe relations --json
 python3 scripts/agora.py run relations --help
 python3 scripts/agora.py describe answer --json
 python3 scripts/agora.py run answer --help
+python3 scripts/agora.py describe answer-v2 --json
 python3 scripts/agora.py describe jev-review --json
 python3 scripts/agora.py describe export-answer --json
 python3 scripts/agora.py describe skopos-page-v02 --json

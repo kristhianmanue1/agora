@@ -1,0 +1,590 @@
+{
+  "derivative": {
+    "coverage": "partial",
+    "id": "skopos-v02-page-15",
+    "producer": {
+      "derivation_id": "0bf9b839c94bc7c57c122700c4f60cad8efa0de0c350058bbbffaee7a2d47973",
+      "manifest_sha256": "e274d67b7c0640f0b10e8203c85bf30a19e9d027fd02d55591b1187e0f356a26",
+      "system": "skopos",
+      "version": "v0.2"
+    },
+    "sha256": "2cc46da92b20048d414a5f8f771534555b14470e410a1c3624e1c29aa6fa75d8"
+  },
+  "schema": "agora/source-evidence-exchange/v1",
+  "segments": [
+    {
+      "end_byte": 5,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-1",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.09566736310527346,
+            0.34322316365580907,
+            0.14471771356009003,
+            0.3574331091064983
+          ],
+          "item_id": "3f30bc46cd952971f3e5700a024f9ffae9b8d5896cbf5c3f75113ef3318f226d",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "fca95313906740b989be9a7a44974553525a050d749a0460668ad700333c5247",
+      "start_byte": 0
+    },
+    {
+      "end_byte": 10,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-2",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.09566736310527349,
+            0.5523071850265111,
+            0.14379575764124683,
+            0.5665171304772003
+          ],
+          "item_id": "e7f4323ce1c58589f9197dfadff42acf554833b294abab9a36068e3660aa13ea",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c",
+      "start_byte": 5
+    },
+    {
+      "end_byte": 85,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-3",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.3909861090484219,
+            0.3390292351037716,
+            0.9014159268755146,
+            0.35916251602484417
+          ],
+          "item_id": "429dcd4ba637244eaaccd7414e54254ca15e80b2925470ed51ad31a3785a0714",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "b76ffc47a82a3ec3d08cc311aed859370ed22c88416dd1c357114b0f720ff0ea",
+      "start_byte": 20
+    },
+    {
+      "end_byte": 141,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-4",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842609358008243,
+            0.35645081001666357,
+            0.901471586591726,
+            0.37658409093773615
+          ],
+          "item_id": "62da2aaaaf0355b837c00d2d8613d1f4d0e07d7959492a4e0003fc3266c4ce3c",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "8ccaba12cd6ce8b43344cc4a6a2b8c3d204207fc6bf0fba7aa53ea0e245bece1",
+      "start_byte": 85
+    },
+    {
+      "end_byte": 184,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-5",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842870744246225,
+            0.3780687121042261,
+            0.9011431175361493,
+            0.3922786575549154
+          ],
+          "item_id": "fd119b8c2d05d788c457a83077e71fc1dd19fa421eb4cf938fd1e6d6502604c1",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "d469a347c3a012025e1fbd64ad196c8d6887d75145cad78d2ed0f106581d6fb4",
+      "start_byte": 141
+    },
+    {
+      "end_byte": 239,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-6",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842870744246225,
+            0.3912939598424475,
+            0.9007165982577893,
+            0.4114272407635201
+          ],
+          "item_id": "349ad422740a4151204b7a0969416b11db644d6c553c829b3eec8f1265e58284",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "0fd875aed512a6a0c9d5711520983fd74161dbb550922a25b79f85d1c09a5f1b",
+      "start_byte": 184
+    },
+    {
+      "end_byte": 296,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-7",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842870744246225,
+            0.4087155347553395,
+            0.9007431121694935,
+            0.4288488156764121
+          ],
+          "item_id": "b29df2c06f9041cd770e6f21a2932c4d7afb1b5e5b19b50d4fd74eb9577e736e",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "a327855e348358975392216ba7b1e256db60557a7decc0175426e4aa54839d16",
+      "start_byte": 239
+    },
+    {
+      "end_byte": 348,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-8",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842870744246225,
+            0.43033343684290204,
+            0.9010199708992304,
+            0.44454338229359136
+          ],
+          "item_id": "a7332922215f49b7405f8bdec72337a23333e81b92178be6c3a580c7108e3681",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "17222727672395f0cc628836e52e270dee074ecc4fac01585b6bef9dc7cd16ad",
+      "start_byte": 296
+    },
+    {
+      "end_byte": 404,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-9",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842870744246225,
+            0.4435586845811236,
+            0.9014737585806705,
+            0.46369196550219616
+          ],
+          "item_id": "e529ca1560fc84ff2e7e2a2b0c9f0aa45e703fb38e815fff3c2cbf85815942d0",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "a641a1729b62446a34fba7b950299290ecc74366f855a0fbf20ed16456bba3cf",
+      "start_byte": 348
+    },
+    {
+      "end_byte": 449,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-10",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842838070966477,
+            0.46098025949401555,
+            0.7695782628896296,
+            0.48111354041508814
+          ],
+          "item_id": "10a14a07c9ab2de9f650046e4cb91946beae7f15ec8cf234d718df96840edbb7",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "03f702bfe438b8298ba9fdce9fb21a109bd4888c57955fc4b1bc358d07a0602d",
+      "start_byte": 404
+    },
+    {
+      "end_byte": 459,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-11",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.608619884861792,
+            0.5000197364944705,
+            0.6838016375368803,
+            0.5142296819451597
+          ],
+          "item_id": "5c9f22d9c3a5e861fa863172f0b2b1016a116775363eaa2e1b3aeb7ccd670d05",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "407621a8328d36d3cb5e7315aa56aaf502f74dba63376c86c19b7431f710629d",
+      "start_byte": 449
+    },
+    {
+      "end_byte": 497,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-12",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.4766544683520879,
+            0.5174413114073624,
+            0.8153708097612793,
+            0.5316512568580518
+          ],
+          "item_id": "10143790bb6f0ad2309094530aaf6ff50cbed46166491ed924472c2f9e22fbea",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "d43ca33b452e82597f1ac8a85b1c14d4595ea9ca87ccb815cff544531e4730ed",
+      "start_byte": 459
+    },
+    {
+      "end_byte": 552,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-13",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.3909864357812194,
+            0.5523071850265111,
+            0.9010424173117247,
+            0.5665171304772003
+          ],
+          "item_id": "55b8279be1ec64b7251fefaf9aaac2810d56e12fd13cb4116115357fcf0e71e2",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "e56aab9a74efaa2907b7c9fd0d5090af3706ce368911a3c591598a917ec43384",
+      "start_byte": 497
+    },
+    {
+      "end_byte": 609,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-14",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42843001437365236,
+            0.5655324327647325,
+            0.8657373588551265,
+            0.5856657136858051
+          ],
+          "item_id": "5d73bbe041b93bdc4addfa37e0b2b974f485bbb841b97e4b2fa0fa2907814084",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "14389b92b0138e9c382048ac5991600e123fe92052d53d2f63f04000601c91d0",
+      "start_byte": 552
+    },
+    {
+      "end_byte": 668,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-15",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.3909864357812195,
+            0.604571909765187,
+            0.9012933787477341,
+            0.6187818552158764
+          ],
+          "item_id": "fd2a0e16b07b0f83dbdce620096d6d6b87c96e95890f77ea3b9479364e6a8b77",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "289df78eda3d6e912126fb31f0a93ba1813208fbb1a9a40c5725a03e04a115d8",
+      "start_byte": 609
+    },
+    {
+      "end_byte": 712,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-16",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.4284300143736524,
+            0.621993484678079,
+            0.901471732445247,
+            0.6362034301287683
+          ],
+          "item_id": "8f2dda2049d8e3c94343d18254dda0270a8678d7ba494726f51c2c1f279ba97d",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "f64db43f66cb184e7bc97a9606234a8f37e0f446deb003456d72967353df0450",
+      "start_byte": 668
+    },
+    {
+      "end_byte": 761,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-17",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42843001437365236,
+            0.6394150595909711,
+            0.900877913621458,
+            0.6536250050416603
+          ],
+          "item_id": "440149d13918ae40c75a855a7a6d8df71306f3207f81a84de3954aa2890fa5f8",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "f8257f6256b6e1d041f4b40346f4f2d045a8ea5efda00febd31ce55a7172010a",
+      "start_byte": 712
+    },
+    {
+      "end_byte": 807,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-18",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42843001437365236,
+            0.656836634503863,
+            0.9011223164846767,
+            0.6710465799545524
+          ],
+          "item_id": "09279d8c2f639b796f31ca334fc781b41ce275fe8eb6229639317a39c9e06e18",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "01db5c6586faddcf96e6fbe148833bab6bab3c61e1913adfd44da4bd01bc2232",
+      "start_byte": 761
+    },
+    {
+      "end_byte": 858,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-19",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42843001437365236,
+            0.6700618822420845,
+            0.9011757614752932,
+            0.6901951631631571
+          ],
+          "item_id": "000a062e4e9ce7d3bb09e359aeaa3550bfe7ec70fbd8df88f6ac192ad6d4e12c",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "bbeeac66dc4d6b05ae4dd5f207c377597556e3ac4beb97cd252aecd2bf1c9791",
+      "start_byte": 807
+    },
+    {
+      "end_byte": 872,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-20",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42843001437365225,
+            0.6874834571549766,
+            0.5300680926202705,
+            0.7076167380760492
+          ],
+          "item_id": "15b10f43bde8bc8bcdd203476540e7e40313d8ce2bbbb35a65b6dc330dd44c0f",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "26a876d61f258cb59267575cd4f5168bf697eb9663ad00ffe54c4aa590054e4e",
+      "start_byte": 858
+    },
+    {
+      "end_byte": 874,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-21",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.5300092807167222,
+            0.6916797843296472,
+            0.5354591837788668,
+            0.7058897297803364
+          ],
+          "item_id": "2ebdfdd8a85e287cfc52be2941cec832b1b2aead4e8494b30195af9b9eb9fdc1",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "eb4bd64f7014f7d42e9d358035802242741b974e8dfcd37c59f9c21ce29d781e",
+      "start_byte": 872
+    },
+    {
+      "end_byte": 933,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-22",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.39098643578121933,
+            0.7223266069807606,
+            0.9009604370468923,
+            0.7424598879018331
+          ],
+          "item_id": "6d3a5baaac2c23d8e0be93a3a2bae5ea9f0237fcc4d84e03be8d9b3ad628d481",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "67dc46fb4afb044179559d8d1103ee24eb1fa3ce31f59a8d1f72a696fb3ba1c7",
+      "start_byte": 874
+    },
+    {
+      "end_byte": 990,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-23",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.4284296876408546,
+            0.7397860548825936,
+            0.9001385387997544,
+            0.7599193358036662
+          ],
+          "item_id": "a6e7a6fd00dd0cf12e185817733315a267a2b60c8c5f85f718fcb46586c134ae",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "c7d5b1e8be0f4d82e60a4f87900f6897a57322517e27e93feae2d92ca845d497",
+      "start_byte": 933
+    },
+    {
+      "end_byte": 1044,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-24",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.3909857823156242,
+            0.7788255318830481,
+            0.9008625526710631,
+            0.7930354773337375
+          ],
+          "item_id": "679469ba89abbd450e1ffbc4ffb0474623d1eab053199fb85efa6e9260bb63c1",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "e1a167bea0dce8a3fb6b62d6ca63cd4bab596f4c3418b402d1b4c51c1e94a2d3",
+      "start_byte": 990
+    },
+    {
+      "end_byte": 1104,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-25",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842936090805717,
+            0.7920507796212697,
+            0.9007725204097045,
+            0.8121840605423423
+          ],
+          "item_id": "3e4c5891934383871cb069a1433ca5048146844ab5a2d681099831b1af05900a",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "dc1c3eadb4375c76a984a45c66f6b0878863557c25a0543d2d757fee5be602dd",
+      "start_byte": 1044
+    },
+    {
+      "end_byte": 1157,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-26",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842936090805717,
+            0.8136686817088322,
+            0.9008152208510873,
+            0.8278786271595214
+          ],
+          "item_id": "62fcdd1b32aca84ecf80a4d2dd3b54a96fec28e56803cd7f3f979b5297a12997",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "dd1a833f3671f49fa39b8fcf40e07318c0cc24c052209b5cbdc0c5f6e9a62b2d",
+      "start_byte": 1104
+    },
+    {
+      "end_byte": 1178,
+      "extraction_status": "unreviewed",
+      "id": "skopos-item-27",
+      "locator": {
+        "kind": "pdf_page",
+        "value": {
+          "bbox": [
+            0.42842936090805717,
+            0.8310902566217242,
+            0.5996153626422451,
+            0.8453002020724134
+          ],
+          "item_id": "f44039218f3c9f527664f1c7b4c58c6d88dfb4fd5f77e4eab69bd05fbe158400",
+          "page": 15
+        }
+      },
+      "modality": "native_text",
+      "sha256": "09b313269c7f18a746085e2958f430ee0d47d60cdcb87a2ba935703fc64be111",
+      "start_byte": 1157
+    }
+  ],
+  "source": {
+    "id": "imss-procedure-2900-003-001-2021",
+    "media_type": "application/pdf",
+    "revision": "1",
+    "sha256": "141d9b090efa4d70799ee1368350a5167347b4e8cd5f99912fb192ce6c704faa",
+    "uri": null
+  }
+}

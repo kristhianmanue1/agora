@@ -1,0 +1,2 @@
+{"adapter_sha256": "e772254bb3b68cfd44b0e28b0e51e26ec9f672694323383325ba1521538c048e", "advertised_tools": ["list_sources", "find_literal", "fetch_fragment"], "budget_bytes": 65536, "event": "started", "policy_sha256": "8945a496241976ab6ecf5699c2aae9a0ba3c908a1eb2c82baa4e75df6f0bdaee", "runtime_owner": "adapter"}
+{"bytes_emitted": 0, "calls": 0, "event": "closed", "failures": []}

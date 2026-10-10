@@ -1,0 +1,1 @@
+{"max_output_tokens":4096,"model_requested":"glm-4.7","ordinal":1,"provider_id":"zai-glm47-thinking-disabled","remote_outcome":"unknown","request_sha256":"dbb9d10a689b0945d687b0a189ed318575c12291f47c4ee1cddf1bf7b90e3ccf","source_sha256":"2cc46da92b20048d414a5f8f771534555b14470e410a1c3624e1c29aa6fa75d8","stage":"generation","state":"attempted","timeout_seconds":120}

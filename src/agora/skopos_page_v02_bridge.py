@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 import sys
+import tempfile
 
 from .source import SourceError, digest
 from .source_evidence_exchange import EXCHANGE, _label, _read_json, validate_exchange
@@ -66,15 +67,21 @@ def build(request, response, manifest_raw, manifest, original_raw, item_ids,
     by_id = {line["item_id"]: line for line in lines}
     if len(by_id) != len(lines):
         raise SourceError("duplicate_skopos_item_id")
+    positions = {line["item_id"]: index for index, line in enumerate(lines)}
     data = bytearray()
     segments = []
+    previous_position = -1
     for index, item_id in enumerate(item_ids):
         _label(item_id, "invalid_item_id", 100)
         line = by_id.get(item_id)
         if line is None:
             raise SourceError("unknown_skopos_item_id")
-        if index:
+        position = positions[item_id]
+        if position <= previous_position:
+            raise SourceError("skopos_item_order_mismatch")
+        if index and position > previous_position + 1:
             data.extend(b"[omitted]\n")
+        previous_position = position
         start = len(data)
         raw = (_label(line.get("text"), "invalid_skopos_text", 8192) + "\n").encode()
         data.extend(raw)
@@ -118,13 +125,16 @@ def main(argv=None):
         original_raw = args.original.read_bytes()
         data, exchange = build(request, response, manifest_raw, manifest,
                                original_raw, args.item_id, args.manifest_sha256)
+        with tempfile.TemporaryDirectory() as temporary:
+            validate_path = Path(temporary) / "derived.txt"
+            validate_path.write_bytes(data)
+            validate_exchange(validate_path, exchange, args.original)
         args.out_dir.mkdir(mode=0o700, parents=False, exist_ok=False)
         derived = args.out_dir / "derived.txt"
         derived.write_bytes(data)
         manifest_path = args.out_dir / "exchange.json"
         manifest_path.write_text(json.dumps(exchange, ensure_ascii=False,
                                             sort_keys=True, indent=2) + "\n")
-        validate_exchange(derived, exchange, args.original)
         print(json.dumps({"status": "created", "derived_sha256": digest(data),
                           "exchange_sha256": digest(manifest_path.read_bytes()),
                           "segments": len(exchange["segments"]), "provider_calls": 0}))

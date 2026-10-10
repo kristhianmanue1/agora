@@ -2,6 +2,34 @@
 
 **Estado:** implementación experimental optativa, 2026-10-10. **Entrada para agentes:** `answer`, con despacho explícito. **Admisión en memoria:** no realizada.
 
+## Presupuestos ampliados: `answer-v2`
+
+`answer-v2` conserva el alcance y los cinco despachos máximos de `answer`, pero
+fija presupuestos de salida por etapa: generación 16 384, respaldo 16 384,
+pertinencia 8 192, cobertura 4 096 y omisiones 8 192 tokens. Su manifiesto usa
+`agora/evidence-answer-flow/v2-experimental` y registra cada presupuesto y su
+hash; cada intento registra el límite realmente solicitado. `--budgets` acepta
+un JSON con el esquema `agora/evidence-answer-budgets/v2-experimental` y los
+cinco campos `*_max_output_tokens`; el validador limita cada etapa y el total a
+131 072. La configuración no garantiza que el proveedor conceda todos esos
+tokens ni que el contenido útil aumente: los tokens de razonamiento consumen
+el mismo límite informado por el proveedor.
+
+```sh
+.venv/bin/python scripts/agora.py run answer-v2 \
+  --source source.txt --source-id local --source-sha256 HASH \
+  --question 'Pregunta' --requirements requirements.json \
+  --out /ruta/nueva/run-002 --live-zai --model glm-5.3-flash
+```
+
+En v2, sólo el sufijo observado `</br>` tras un objeto JSON válido se retira del
+contenido destinado al validador. El recibo conserva `content_original`, ambos
+hashes y la regla aplicada. Otros sufijos o JSON inválido siguen rechazados.
+La fuente continúa limitada a 160 000 bytes por el contrato de cobertura. Para
+documentos más extensos hacen falta selección de pasajes, vínculos con el
+original y eventualmente composición entre fuentes; aumentar tokens no amplía
+por sí mismo la cobertura documental.
+
 `agora.evidence_answer_flow` compone las capacidades existentes sobre **un archivo UTF-8 completo tal como se entrega**, fijado por SHA-256. El llamador proporciona `source`, `source_id`, `source_sha256`, pregunta, una lista de 1 a 12 requisitos breves, un proveedor inyectable y un directorio de salida nuevo. La CLI sólo ofrece `--live-zai` con `ZAI_API_KEY` o `SKOPOS_LLM_API_KEY` del entorno (inyectable por Llavero) o `--replay-run` de una ejecución completa. Debe comprobarse por separado que está autorizado transmitir el archivo al proveedor elegido. El archivo puede ser un extracto: su hash y la revisión de cobertura no acreditan el PDF o documento original.
 
 ```sh
