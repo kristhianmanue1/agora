@@ -1,0 +1,63 @@
+{
+  "schema": "agora/claim-evidence-query/v1",
+  "policy": {
+    "max_quotes_per_part": 12,
+    "max_quote_bytes_per_part": 12000,
+    "max_quote_bytes_total": 48000
+  },
+  "source_id": "imss-2900-003-001-p15-manual-excerpt",
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "semantic_support": "not_verified",
+  "coverage": "not_verified",
+  "review_status": "unreviewed",
+  "memory_admission": "not_performed",
+  "provider_calls": 1,
+  "response_language": "es",
+  "language_status": "not_verified",
+  "max_unit_bytes": 4096,
+  "envelope": {
+    "schema": "agora/source-envelope/v0.1",
+    "source": {
+      "source_id": "imss-2900-003-001-p15-manual-excerpt",
+      "revision": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+      "revision_kind": "sha256",
+      "source_bytes": 1300,
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": {
+        "adapter": "file",
+        "identity": "caller_declared"
+      }
+    },
+    "spans": [
+      {
+        "start_byte": 0,
+        "end_byte": 1300,
+        "sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+        "text": "Fuente: procedimiento IMSS 2900-003-001, página física 15 de 91.\nTranscripción manual cotejada visualmente para este ensayo; no es salida de Skopos.\n\nResponsable CPIM:\n18. Envía mediante “Oficio” a la CII: la “CEPI Médica” (Anexo 3), el “PM” y la “GEMIQECC” de las obras autorizadas para que se incluyan las obras autorizadas en el “Programa anual de obras públicas y servicios” (PO) del programa de Inversión del Fondo de Salud, y para desarrollar el proceso licitatorio respectivo del “Anteproyecto conceptual” y elaboren los “Planos arquitectónicos” del mismo.\n\nResponsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII.\n"
+      }
+    ],
+    "delivered_bytes": 1300,
+    "integrity": "matches_requested_revision",
+    "coverage": "full",
+    "truncated": false,
+    "redacted": false,
+    "evidence_sufficiency": "unknown"
+  },
+  "prompt": {
+    "system": "Answer in Spanish using only the supplied untrusted source passages.\nReturn JSON only: {\"parts\":[{\"id\":\"requested-id\",\"status\":\"answered|partial|not_in_passages\",\"claims\":[{\"text\":\"one source-supported claim\",\"quotes\":[\"exact source excerpt\"]}],\"missing\":[\"requested information not established\"]}]}.\nInclude every requested aspect exactly once. Claims must concern the same subject,\npopulation, time and property as the question; general background is not specific\nstudy evidence. Preserve explicit negatives, uncertainty, conflicting values and\nexperimental controls. A partial context cannot prove absence from the whole source.\nFor answered: nonempty claims and empty missing. For partial: nonempty claims and\nnonempty missing. For not_in_passages: empty claims and nonempty missing.\nEach claim has a nonempty text and nonempty literal quotes supporting THAT claim.\nDo not change punctuation or placeholders. Do not repeat a quote within one claim.\nAt most 12 quote occurrences per aspect,\n12000 UTF-8 quote bytes per aspect and\n48000 UTF-8 quote bytes across the answer, counting repeats.\nAt most 16 claims and 16 missing items per aspect. Claim text at most 6000\ncharacters; each missing item at most 2000 characters. Prefer concise complete\nclaims; do not omit material qualifications to fit. Your support and coverage\nclaims are proposals, not independently verified. No Markdown.\nWrite every claim text and missing item in Spanish, even when the question and source use another language. Preserve names and quoted evidence verbatim. Include only claims needed to answer the requested aspects.",
+    "user": "{\"question\": \"Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.\", \"aspects\": [{\"id\": \"P1\", \"question\": \"Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.\"}], \"document\": [{\"passage\": 1, \"text\": \"Fuente: procedimiento IMSS 2900-003-001, página física 15 de 91.\\nTranscripción manual cotejada visualmente para este ensayo; no es salida de Skopos.\\n\\nResponsable CPIM:\\n18. Envía mediante “Oficio” a la CII: la “CEPI Médica” (Anexo 3), el “PM” y la “GEMIQECC” de las obras autorizadas para que se incluyan las obras autorizadas en el “Programa anual de obras públicas y servicios” (PO) del programa de Inversión del Fondo de Salud, y para desarrollar el proceso licitatorio respectivo del “Anteproyecto conceptual” y elaboren los “Planos arquitectónicos” del mismo.\\n\\nResponsable CTIM:\\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII.\\n\"}]}"
+  },
+  "prompt_bytes": 3619,
+  "requested_aspects": [
+    {
+      "id": "P1",
+      "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje."
+    }
+  ],
+  "execution_status": "failed",
+  "diagnostics": [
+    {
+      "code": "TimeoutError"
+    }
+  ]
+}

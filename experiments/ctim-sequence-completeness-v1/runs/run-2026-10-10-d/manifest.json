@@ -1,0 +1,60 @@
+{
+  "schema": "agora/ctim-sequence-run/v1",
+  "status": "finished",
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "freeze_sha256": "1a65e378ac0ceef32b65d7242633c1a521fa07da20c0f86fa389eafbef692937",
+  "original_path": "/Users/krisnova/www/expertoGobernanza/docs/fuentes/imss/2900-003-001.pdf",
+  "original_sha256": "141d9b090efa4d70799ee1368350a5167347b4e8cd5f99912fb192ce6c704faa",
+  "implementation": {
+    "evidence.py": "f33d8ba98c2afc033a579c2e0965e25b41fdd58d40bb5733299a4ea97798fba8",
+    "coverage_cli.py": "3e87b48b63cc0d0b91c14a6927b0343b3526496c9e5e61613015676e118a28a9",
+    "omission_cli.py": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c"
+  },
+  "runner_sha256": "4dcb4477c2784b864bdb13885fee3214121adaae07f67d66878a246968282da2",
+  "provider": "ollama",
+  "provider_model_requested": "qwen3:8b",
+  "retries": 0,
+  "source_status": "manual_visual_transcription_of_page_15",
+  "results": {
+    "positive": {
+      "review": {
+        "status": "complete",
+        "origin": "live",
+        "http_attempts": 1,
+        "disposition": "requires_review",
+        "coverage": "complete",
+        "output": "/Users/krisnova/www/aria/agora/experiments/ctim-sequence-completeness-v1/runs/run-2026-10-10-d/positive-review/result.json"
+      },
+      "diagnosis": {
+        "status": "complete",
+        "diagnostic": null,
+        "diagnosis_status": "proposed_omissions",
+        "omission_count": 8,
+        "http_attempts": 1,
+        "disposition": "requires_review",
+        "output": "/Users/krisnova/www/aria/agora/experiments/ctim-sequence-completeness-v1/runs/run-2026-10-10-d/positive-diagnosis/result.json"
+      }
+    },
+    "negative-missing-20": {
+      "review": {
+        "status": "complete",
+        "origin": "live",
+        "http_attempts": 1,
+        "disposition": "requires_review",
+        "coverage": "omitted",
+        "output": "/Users/krisnova/www/aria/agora/experiments/ctim-sequence-completeness-v1/runs/run-2026-10-10-d/negative-missing-20-review/result.json"
+      },
+      "diagnosis": {
+        "status": "complete",
+        "diagnostic": null,
+        "diagnosis_status": "proposed_omissions",
+        "omission_count": 1,
+        "http_attempts": 1,
+        "disposition": "requires_review",
+        "output": "/Users/krisnova/www/aria/agora/experiments/ctim-sequence-completeness-v1/runs/run-2026-10-10-d/negative-missing-20-diagnosis/result.json"
+      }
+    },
+    "generated_status": "failed",
+    "generated": "not_reviewed_generation_incomplete"
+  }
+}

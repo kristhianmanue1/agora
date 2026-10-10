@@ -1,0 +1,60 @@
+{
+  "schema": "agora/omission-diagnosis/v1-experimental",
+  "status": "complete",
+  "origin": "live",
+  "http_attempts": 1,
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "candidate_sha256": "3e54c96a61b16ef507c583e16f03d6019b1995bd9255a14750292c6b8a77ff3d",
+  "review_sha256": "9455c3c26c6c0788a043a8a428a99327df9c5b6188a4af1cce13f07feeb4f1f1",
+  "part_id": "P1",
+  "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.",
+  "disposition": "requires_review",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "source_completeness": "not_established",
+  "implementation_sha256": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c",
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 4096,
+    "temperature": 0,
+    "timeout_seconds": 90,
+    "retries": 0
+  },
+  "request_sha256": "f716a50e1008354a71d7e031217096181adce9149cc143a5f06a2208dcf78fa9",
+  "prior_coverage": "complete",
+  "response": {
+    "content": "{\"status\":\"proposed_omissions\",\"omissions\":[{\"missing\":\"En la actividad 20, el texto de la afirmación del candidato omite el propósito que la fuente atribuye a las necesidades de modificación identificadas por el área de Arquitectura Médica de la CTIM: deben ser modificaciones que favorezcan el proceso de atención médica en el desempeño de sus actividades. Ese detalle está establecido en la unidad de evidencia y solo aparece en la cita adjunta del candidato, no en su descripción de la acción principal.\",\"evidence_ids\":[\"ev_5b8cdcd883cd8d57f8c6fb55\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 3855,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3709
+      },
+      "prompt_tokens": 1468,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      },
+      "total_tokens": 5323
+    },
+    "response_id": "20261010180301c8cbb93911dc4ae4"
+  },
+  "diagnosis_status": "proposed_omissions",
+  "omissions": [
+    {
+      "missing": "En la actividad 20, el texto de la afirmación del candidato omite el propósito que la fuente atribuye a las necesidades de modificación identificadas por el área de Arquitectura Médica de la CTIM: deben ser modificaciones que favorezcan el proceso de atención médica en el desempeño de sus actividades. Ese detalle está establecido en la unidad de evidencia y solo aparece en la cita adjunta del candidato, no en su descripción de la acción principal.",
+      "evidence": [
+        {
+          "id": "ev_5b8cdcd883cd8d57f8c6fb55",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    }
+  ],
+  "review_disagreement": true
+}

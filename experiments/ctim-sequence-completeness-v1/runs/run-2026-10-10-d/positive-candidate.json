@@ -1,0 +1,44 @@
+{
+  "schema": "agora/claim-evidence-query/v1",
+  "execution_status": "complete",
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "parts": [
+    {
+      "id": "P1",
+      "status": "answered",
+      "claims": [
+        {
+          "text": "Actividad 18, responsable CPIM: Envía mediante “Oficio” a la CII: la “CEPI Médica” (Anexo 3), el “PM” y la “GEMIQECC” de las obras autorizadas para que se incluyan las obras autorizadas en el “Programa anual de obras públicas y servicios” (PO) del programa de Inversión del Fondo de Salud, y para desarrollar el proceso licitatorio respectivo del “Anteproyecto conceptual” y elaboren los “Planos arquitectónicos” del mismo.",
+          "quotes": [
+            "18. Envía mediante “Oficio” a la CII: la “CEPI Médica” (Anexo 3), el “PM” y la “GEMIQECC” de las obras autorizadas para que se incluyan las obras autorizadas en el “Programa anual de obras públicas y servicios” (PO) del programa de Inversión del Fondo de Salud, y para desarrollar el proceso licitatorio respectivo del “Anteproyecto conceptual” y elaboren los “Planos arquitectónicos” del mismo."
+          ]
+        },
+        {
+          "text": "Actividad 19, responsable CTIM: Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.",
+          "quotes": [
+            "19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”."
+          ]
+        },
+        {
+          "text": "Actividad 20, responsable CTIM: Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.",
+          "quotes": [
+            "20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”."
+          ]
+        },
+        {
+          "text": "Actividad 21, responsable CTIM: Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.",
+          "quotes": [
+            "21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda."
+          ]
+        },
+        {
+          "text": "Actividad 22, responsable CTIM: Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII.",
+          "quotes": [
+            "22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+          ]
+        }
+      ],
+      "missing": []
+    }
+  ]
+}

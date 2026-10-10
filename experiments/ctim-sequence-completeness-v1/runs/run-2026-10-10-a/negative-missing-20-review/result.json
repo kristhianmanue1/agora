@@ -1,0 +1,25 @@
+{
+  "schema": "agora/coverage-review/v1-experimental",
+  "status": "failed",
+  "origin": "live",
+  "http_attempts": 1,
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "candidate_sha256": "c994486a5be85278c1ae29fa907edeb0ead660ef82a0c258257c2ab3b122831c",
+  "part_id": "P1",
+  "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.",
+  "fidelity": "not_assessed",
+  "source_completeness": "not_established",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "disposition": "requires_review",
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 2048,
+    "temperature": 0,
+    "timeout_seconds": 90,
+    "retries": 0
+  },
+  "implementation_sha256": "3e87b48b63cc0d0b91c14a6927b0343b3526496c9e5e61613015676e118a28a9",
+  "request_sha256": "1f8eb31521bca07b5c7d3d778a4978e835e551318e587ebd82e82de6f3b1857b",
+  "diagnostic": "HTTPError"
+}

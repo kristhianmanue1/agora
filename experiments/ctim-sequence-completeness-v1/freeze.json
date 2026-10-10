@@ -1,0 +1,10 @@
+{
+  "schema": "agora/ctim-sequence-test-freeze/v1",
+  "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.",
+  "expected_steps": [18, 19, 20, 21, 22],
+  "expected_actor_by_step": {"18": "CPIM", "19": "CTIM", "20": "CTIM", "21": "CTIM", "22": "CTIM"},
+  "positive_control": "Five steps with the right actors and distinct actions should receive complete / no_omission_found.",
+  "negative_control": "A candidate with steps 18, 19, 21 and 22, but no step 20 modification-and-agreement activity, should receive omitted / proposed_omissions citing activity 20.",
+  "falsification": "Any missed step or actor confusion in the generated answer, a false omission for the positive control, or failure to detect step 20 in the negative control prevents a full pass.",
+  "scope": "One visually checked excerpt from one PDF page; no corpus discovery, document vigency, institutional adjudication or memory admission."
+}

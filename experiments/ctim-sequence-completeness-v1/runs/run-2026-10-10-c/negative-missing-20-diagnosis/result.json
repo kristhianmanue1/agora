@@ -1,0 +1,60 @@
+{
+  "schema": "agora/omission-diagnosis/v1-experimental",
+  "status": "complete",
+  "origin": "live",
+  "http_attempts": 1,
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "candidate_sha256": "c994486a5be85278c1ae29fa907edeb0ead660ef82a0c258257c2ab3b122831c",
+  "review_sha256": "d6943db4c3916ba872f86a243e0b011c856e35e28bfba63438b2fd7620113bb0",
+  "part_id": "P1",
+  "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.",
+  "disposition": "requires_review",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "source_completeness": "not_established",
+  "implementation_sha256": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c",
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 4096,
+    "temperature": 0,
+    "timeout_seconds": 90,
+    "retries": 0
+  },
+  "request_sha256": "4e881e134fa99e655a67cd69ea484530cd7b9788636d6399ed2092ef7f43d937",
+  "prior_coverage": "omitted",
+  "response": {
+    "content": "{\"status\":\"proposed_omissions\",\"omissions\":[{\"missing\":\"Falta la actividad 20, responsable CTIM: identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezcan el proceso de atención médica en el desempeño de sus actividades, e informa a la CII hasta acordar el 'Anteproyecto conceptual'. El candidato salta de la actividad 19 a la 21, dejando incompleta la secuencia 18-22 solicitada en la tarea.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "glm-5.3-flash",
+    "reported_model": "glm-5.3-flash",
+    "usage": {
+      "completion_tokens": 1366,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1218
+      },
+      "prompt_tokens": 1333,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      },
+      "total_tokens": 2699
+    },
+    "response_id": "202610101801585133509c5ac24b18"
+  },
+  "diagnosis_status": "proposed_omissions",
+  "omissions": [
+    {
+      "missing": "Falta la actividad 20, responsable CTIM: identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezcan el proceso de atención médica en el desempeño de sus actividades, e informa a la CII hasta acordar el 'Anteproyecto conceptual'. El candidato salta de la actividad 19 a la 21, dejando incompleta la secuencia 18-22 solicitada en la tarea.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    }
+  ],
+  "review_disagreement": false
+}

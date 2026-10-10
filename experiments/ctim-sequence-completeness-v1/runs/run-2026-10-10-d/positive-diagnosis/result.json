@@ -1,0 +1,144 @@
+{
+  "schema": "agora/omission-diagnosis/v1-experimental",
+  "status": "complete",
+  "origin": "live",
+  "http_attempts": 1,
+  "source_sha256": "db72e2fbb43e100102e39beb1d11a5b09eaafb8df76f2c3c8fbc06c6f131ea66",
+  "candidate_sha256": "6d58b59e2a5d31da53dbfd9b4b57ffd37c0e865f6cc87f0fd23dacdef6fd4d30",
+  "review_sha256": "90409278f25a4789b41d1ef8ec436284d31aff7ff197b48167e9da685d46c9b5",
+  "part_id": "P1",
+  "question": "Según el pasaje suministrado del procedimiento 2900-003-001, reconstruye en orden las actividades 18 a 22, indicando para cada una responsable, acción principal y documento u objeto. Distingue la remisión de CPIM de las actividades posteriores de CTIM. Responde sólo con lo sustentado por el pasaje.",
+  "disposition": "requires_review",
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "source_completeness": "not_established",
+  "implementation_sha256": "d1c963ba07a3c0065f302aa13a0240e7d4f28ac9c00262b1f995cb7c039ff32c",
+  "request_config": {
+    "model": "glm-5.3-flash",
+    "max_tokens": 4096,
+    "temperature": 0,
+    "timeout_seconds": 90,
+    "retries": 0
+  },
+  "request_sha256": "1b6e3adb3cc0092f59521462ad699d52412426c62f5dc918ef5137c4c0073ed9",
+  "prior_coverage": "complete",
+  "response": {
+    "content": "{\"status\":\"proposed_omissions\",\"omissions\":[{\"missing\":\"El texto menciona que la CTIM identifica necesidades de modificación que favorezcan el proceso de atención médica, pero no especifica qué criterios o estándares se utilizan para determinar estas necesidades.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se menciona en el pasaje cuál es el plazo o cronograma establecido para la revisión del Anteproyecto conceptual por parte de la CII, OOAD o UMAE.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se especifica en el pasaje cuál es el criterio o métrica utilizada para evaluar si las modificaciones identificadas por la CTIM favorecen el proceso de atención médica.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se menciona en el pasaje si existe un mecanismo formal de aprobación o validación del Anteproyecto conceptual una vez que ha sido firmado por la CTIM.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se especifica en el pasaje si el seguimiento al desarrollo del Proyecto ejecutivo incluye la revisión de documentos técnicos o la evaluación de cumplimiento de estándares.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se menciona en el pasaje si existen registros o informes documentales que respalden las acciones de seguimiento realizadas por la CTIM en el desarrollo del Proyecto ejecutivo.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se especifica en el pasaje si la CTIM coordina con otras áreas o departamentos fuera de la División de Proyectos de la CII para el seguimiento del Proyecto ejecutivo.\",\"evidence_ids\":[\"ev_f70a7c933a89e6a704fe7723\"]},{\"missing\":\"No se menciona en el pasaje si el proceso licitatorio del Anteproyecto conceptual incluye evaluaciones de viabilidad técnica o financiera.\",\"evidence_ids\":[\"ev_7dee4a0ba22ac6db3aa8e029\"]}]}",
+    "finish_reason": "stop",
+    "requested_model": "qwen3:8b",
+    "reported_model": "qwen3:8b",
+    "usage": {
+      "prompt_tokens": 1512,
+      "completion_tokens": 598
+    },
+    "response_id": null
+  },
+  "diagnosis_status": "proposed_omissions",
+  "omissions": [
+    {
+      "missing": "El texto menciona que la CTIM identifica necesidades de modificación que favorezcan el proceso de atención médica, pero no especifica qué criterios o estándares se utilizan para determinar estas necesidades.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se menciona en el pasaje cuál es el plazo o cronograma establecido para la revisión del Anteproyecto conceptual por parte de la CII, OOAD o UMAE.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se especifica en el pasaje cuál es el criterio o métrica utilizada para evaluar si las modificaciones identificadas por la CTIM favorecen el proceso de atención médica.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se menciona en el pasaje si existe un mecanismo formal de aprobación o validación del Anteproyecto conceptual una vez que ha sido firmado por la CTIM.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se especifica en el pasaje si el seguimiento al desarrollo del Proyecto ejecutivo incluye la revisión de documentos técnicos o la evaluación de cumplimiento de estándares.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se menciona en el pasaje si existen registros o informes documentales que respalden las acciones de seguimiento realizadas por la CTIM en el desarrollo del Proyecto ejecutivo.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se especifica en el pasaje si la CTIM coordina con otras áreas o departamentos fuera de la División de Proyectos de la CII para el seguimiento del Proyecto ejecutivo.",
+      "evidence": [
+        {
+          "id": "ev_f70a7c933a89e6a704fe7723",
+          "start_byte": 601,
+          "end_byte": 1299,
+          "text": "Responsable CTIM:\n19. Recibe de la CII, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual”.\n20. Identifica por medio del área de Arquitectura Médica de la CTIM las necesidades de modificación necesarias que favorezca el proceso de atención médica en el desempeño de sus actividades e informa a la CII, hasta acordar el “Anteproyecto conceptual”.\n21. Firma el “Anteproyecto conceptual” y lo envía con “Oficio” a la CII o OOAD o UMAE, según corresponda.\n22. Realiza acciones de seguimiento al desarrollo del “Proyecto ejecutivo” a través de visitas, reuniones de trabajo y otras en coordinación con la División de Proyectos de la CII."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    },
+    {
+      "missing": "No se menciona en el pasaje si el proceso licitatorio del Anteproyecto conceptual incluye evaluaciones de viabilidad técnica o financiera.",
+      "evidence": [
+        {
+          "id": "ev_7dee4a0ba22ac6db3aa8e029",
+          "start_byte": 153,
+          "end_byte": 599,
+          "text": "Responsable CPIM:\n18. Envía mediante “Oficio” a la CII: la “CEPI Médica” (Anexo 3), el “PM” y la “GEMIQECC” de las obras autorizadas para que se incluyan las obras autorizadas en el “Programa anual de obras públicas y servicios” (PO) del programa de Inversión del Fondo de Salud, y para desarrollar el proceso licitatorio respectivo del “Anteproyecto conceptual” y elaboren los “Planos arquitectónicos” del mismo."
+        }
+      ],
+      "semantic_support": "not_verified",
+      "absence_from_candidate": "not_verified"
+    }
+  ],
+  "review_disagreement": true
+}
