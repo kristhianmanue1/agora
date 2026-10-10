@@ -32,6 +32,17 @@ del recorrido. Puede reconstruir y verificar el paquete con
 `requires_review`; ningún resultado de modelos admite memoria, cita jurídica
 o interpretación institucional.
 
+La selección opcional `--citation-refinement` acepta un manifiesto
+`agora/citation-refinement/v1-experimental` fijado al SHA de la fuente y del
+candidato. Cada afirmación debe tener rangos de bytes UTF-8, ordenados y
+contenidos en sus citas originales, con SHA literal. Sólo se permite junto con
+`--exchange` y `--original`. La exportación usa
+`agora/consultation-package/v3-experimental`, marca las etiquetas de respaldo
+GLM/Jev como `not_reassessed_for_refined_citation` y conserva las etiquetas
+originales por separado. La cobertura sigue referida al candidato original.
+Una coincidencia literal y de localizador no demuestra que el fragmento
+seleccionado respalde la afirmación; ese juicio queda para el consumidor.
+
 La integración en ARIA consiste en consumir este contrato **sin mover la
 custodia de fuentes a Ágora**: Skopos entrega original y derivado verificables;
 Ágora transforma y revisa candidatos; expertoGobernanza decide si una cita

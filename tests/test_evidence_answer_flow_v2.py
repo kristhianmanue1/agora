@@ -46,7 +46,7 @@ class BudgetTests(unittest.TestCase):
                           "03-relevance-attempt.json", "04-coverage-attempt.json",
                           "05-omission-attempt.json")]
             sizes = [json.loads(raw)["max_output_tokens"] for raw in attempted]
-            self.assertEqual(sizes, [16384, 16384, 8192, 4096, 8192])
+            self.assertEqual(sizes, [32768, 32768, 16384, 8192, 16384])
 
     def test_budget_limits_fail_before_provider_dispatch(self):
         candidate = dict(DEFAULT_BUDGETS, generation_max_output_tokens=65536,

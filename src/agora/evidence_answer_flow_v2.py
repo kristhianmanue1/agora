@@ -15,11 +15,11 @@ from .evidence_answer_flow import (Dispatch, ProviderFailure, ZaiProvider, _enco
 
 SCHEMA = "agora/evidence-answer-flow/v2-experimental"
 BUDGET_SCHEMA = "agora/evidence-answer-budgets/v2-experimental"
-DEFAULT_BUDGETS = {"schema": BUDGET_SCHEMA, "generation_max_output_tokens": 16384,
-                   "support_max_output_tokens": 16384,
-                   "relevance_max_output_tokens": 8192,
-                   "coverage_max_output_tokens": 4096,
-                   "omission_max_output_tokens": 8192}
+DEFAULT_BUDGETS = {"schema": BUDGET_SCHEMA, "generation_max_output_tokens": 32768,
+                   "support_max_output_tokens": 32768,
+                   "relevance_max_output_tokens": 16384,
+                   "coverage_max_output_tokens": 8192,
+                   "omission_max_output_tokens": 16384}
 
 
 class ZaiProviderV2(ZaiProvider):

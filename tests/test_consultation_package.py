@@ -73,6 +73,49 @@ class ConsultationPackageTests(unittest.TestCase):
         self.assertEqual(package["source"]["original_integrity"], "sha256_verified")
         self.assertEqual(package["claims"][0]["evidence"][0]["segment_id"], "s1")
 
+    def test_refined_package_keeps_original_review_scope(self):
+        raw = self.source.read_bytes()
+        flow = json.loads((self.flow / "result.json").read_text())
+        candidate = json.loads((self.flow / "candidate.json").read_text())
+        claim = candidate["parts"][0]["claims"][0]
+        excerpt = raw[:5]
+        refinement = {"schema": "agora/citation-refinement/v1-experimental",
+                      "source_sha256": self.sha,
+                      "candidate_sha256": flow["stages"]["generation"]["sha256"],
+                      "claims": [{"part_id": "P1", "claim_index": 0,
+                                  "claim_sha256": hashlib.sha256(claim["text"].encode()).hexdigest(),
+                                  "ranges": [{"start_byte": 0, "end_byte": len(excerpt),
+                                              "literal_sha256": hashlib.sha256(excerpt).hexdigest()}]}]}
+        selection = self.root / "selection.json"
+        selection.write_text(json.dumps(refinement))
+        with self.assertRaisesRegex(ValueError, "refinement_requires_exchange_and_original"):
+            build_package(self.source, self.flow, citation_refinement=selection)
+        exchange = {"schema": "agora/source-evidence-exchange/v1",
+                    "source": {"id": "atlas-original", "sha256": self.sha,
+                               "media_type": "text/plain; charset=utf-8",
+                               "revision": "fixture-1", "uri": None},
+                    "derivative": {"id": "atlas-derived", "sha256": self.sha,
+                                   "coverage": "full", "producer": {
+                                       "system": "fixture", "version": "1",
+                                       "manifest_sha256": None, "derivation_id": None}},
+                    "segments": [{"id": "s1", "start_byte": 0, "end_byte": len(raw),
+                                  "sha256": self.sha,
+                                  "locator": {"kind": "text_range", "value": {
+                                      "start_byte": 0, "end_byte": len(raw)}},
+                                  "modality": "native_text",
+                                  "extraction_status": "unreviewed"}]}
+        path = self.root / "exchange-refined.json"
+        path.write_text(json.dumps(exchange))
+        package = build_package(self.source, self.flow, exchange=path,
+                                original=self.source, citation_refinement=selection)
+        self.assertEqual(package["schema"], "agora/consultation-package/v3-experimental")
+        self.assertEqual(package["claims"][0]["evidence"][0]["literal_text"], "Atlas")
+        self.assertEqual(package["claims"][0]["glm_support"],
+                         "not_reassessed_for_refined_citation")
+        self.assertEqual(package["claims"][0]["glm_support_original"], "supported")
+        self.assertEqual(package["coverage_advice_scope"], "original_candidate")
+        self.assertEqual(package["disposition"], "requires_review")
+
     def test_contiguous_segments_keep_each_range_and_pdf_locator(self):
         raw = self.source.read_bytes()
         original = self.root / "original.pdf"
