@@ -1,5 +1,10 @@
 # Protocolo cerrado para adjudicar respuestas de Ágora
 
+**Enmienda vigente para la ronda solicitada:** el Operador designó a Codex y
+OpenCode como revisores por modelo. Ver [MODEL-PANEL.md](MODEL-PANEL.md). La
+regla humana siguiente se conserva como requisito para una futura adjudicación
+humana y no se atribuye a la ronda de modelos.
+
 ## Alcance y procedencia
 
 Este paquete retrospectivo contiene **12 respuestas y siete fuentes**: diez
@@ -71,3 +76,8 @@ adjudicación, con presupuesto y recibos propios. Este protocolo no las hace.
 La verificación reconstruye cada ficha desde el resultado o control de origen,
 comprueba los hashes y la hoja vacía. Los archivos de `blind/` pueden copiarse
 para el adjudicador; entregar el árbol completo rompería el cegamiento.
+
+`export_blind.py` crea localmente `exports/jev-adjudication-v1-blind.zip` con
+sólo esos 21 archivos y un recibo de hashes fuera del ZIP. `exports/` está
+ignorado por Git; el archivo no se envía automáticamente a nadie. El destinatario
+y el canal deben quedar identificados antes de registrar una entrega.

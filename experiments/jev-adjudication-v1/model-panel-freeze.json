@@ -1,0 +1,11 @@
+{
+  "schema": "agora/jev-adjudication-model-panel/v1",
+  "blind_archive_sha256": "c506d1efca120b92eb38b15e5a261687fa05817b8b715d6fca32b5b83bdae3d4",
+  "reviewers": [
+    {"id": "codex", "program": "codex", "model_requested": "gpt-6-sol", "max_dispatches": 1, "retries": 0},
+    {"id": "opencode", "program": "opencode", "model_requested": "zai-coding-plan/glm-5.3-flash", "max_dispatches": 1, "retries": 0}
+  ],
+  "delivery_scope": "blind ZIP only, extracted into separate local workspaces",
+  "unblind_before_both_reviews_fixed": false,
+  "adjudication_status": "model_review_experimental_not_human"
+}
