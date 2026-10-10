@@ -45,5 +45,8 @@ class AgentCliTests(unittest.TestCase):
     def test_describe_and_example_discovery(self):
         r=self.call('describe','relation-run','--json');self.assertEqual(r.returncode,0)
         self.assertEqual(json.loads(r.stdout)['network_effects'],'explicit_live_only')
+        answer=json.loads(self.call('describe','answer','--json').stdout)
+        self.assertEqual(answer['network_effects'],'explicit_live_or_replay')
+        self.assertEqual(answer['maturity'],'experimental')
         commands=json.loads(self.call('examples','--json').stdout)['examples']
         self.assertEqual(commands[0]['id'],'relations-offline')

@@ -34,6 +34,10 @@ resultado esperado: no intentar “repararlo” inventando datos.
 | IDs de evidencia, plantilla y validación de una relación | `relations` |
 | Generar o revisar relaciones con GLM/Jev o replay | `relation-run` |
 | Consultar fuente por aspectos con citas/IDs | `evidence` |
+| Responder una pregunta con generación y revisión GLM sobre una fuente UTF-8 | `answer` |
+| Revisar con Jev las citas de una ejecución `answer` ya terminada | `jev-review` |
+| Exportar offline un paquete de consulta para un consumidor | `export-answer` |
+| Construir intercambio PDF desde una respuesta Skopos CTIM v0.2 | `skopos-page-v02` |
 | Elegir fuente completa o representación previa | `route` |
 | Recorrer una fuente en unidades | `traverse` |
 | Resumen inicial | `summarize` |
@@ -53,8 +57,10 @@ aunque descubrimiento y diagnóstico devuelven JSON también sin `--json`.
 `issues` requiere un workspace explícito para sus subcomandos. Su ayuda general
 lista operaciones; [el recorrido de pendientes](pendientes-cli.md) especifica
 entradas y ejemplos completos. Para generación/revisión de relaciones consultar
-[la guía correspondiente](relaciones-candidatas.md). Los demás enlaces aparecen
-en `describe`. El catálogo cubre ocho familias públicas, no cada módulo interno
+[la guía correspondiente](relaciones-candidatas.md). Para `answer`, Jev y el
+paquete de salida, leer el [contrato de consulta](contrato-consulta-evidencia-v1.md).
+Los demás enlaces aparecen en `describe`. El catálogo cubre doce capacidades,
+no cada módulo interno
 ni todos los experimentos históricos.
 
 ## Leer los contratos y efectos antes de ejecutar
@@ -84,7 +90,7 @@ Consultar sus `not_checked` y `next_step`; no interpretar OK como validación gl
 
 ## Prueba del recorrido de descubrimiento
 
-Las pruebas ejecutan las ocho ayudas reales desde un directorio ajeno al proyecto,
+Las pruebas ejecutan las ayudas reales desde un directorio ajeno al proyecto,
 verifican propagación de errores, ausencia de archivos creados por el ejemplo y
 conservación de huecos. Una [prueba posterior con agente de contexto nuevo](../experiments/agent-first-use-v1/README.md)
 completó el recorrido sin inspeccionar código y detectó ambigüedades documentales

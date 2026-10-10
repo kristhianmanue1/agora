@@ -1,19 +1,75 @@
 # Consulta optativa con evidencia: contrato experimental v1
 
-**Estado:** implementación local experimental, 2026-10-10. **Entrada pública de agentes:** no activada. **Admisión en memoria:** no realizada.
+**Estado:** implementación experimental optativa, 2026-10-10. **Entrada para agentes:** `answer`, con despacho explícito. **Admisión en memoria:** no realizada.
 
 `agora.evidence_answer_flow` compone las capacidades existentes sobre **un archivo UTF-8 completo tal como se entrega**, fijado por SHA-256. El llamador proporciona `source`, `source_id`, `source_sha256`, pregunta, una lista de 1 a 12 requisitos breves, un proveedor inyectable y un directorio de salida nuevo. La CLI sólo ofrece `--live-zai` con `ZAI_API_KEY` o `SKOPOS_LLM_API_KEY` del entorno (inyectable por Llavero) o `--replay-run` de una ejecución completa. Debe comprobarse por separado que está autorizado transmitir el archivo al proveedor elegido. El archivo puede ser un extracto: su hash y la revisión de cobertura no acreditan el PDF o documento original.
 
 ```sh
-PYTHONPATH=src .venv/bin/python -m agora.evidence_answer_flow \
+.venv/bin/python scripts/agora.py run answer \
   --source source.txt --source-id local --source-sha256 HASH \
   --question 'Pregunta' --requirements requirements.json \
   --out /ruta/nueva/run-001 --live-zai --model glm-5.3-flash
 ```
 
-`requirements.json` es una lista de cadenas. Para replay se pasa sólo `--source`, `--out` y `--replay-run /ruta/run-001`; la pregunta y los requisitos proceden del registro. No se acepta una salida existente. La ruta no está incorporada a `agent_cli` ni cambia las CLI individuales.
+`requirements.json` es una lista de cadenas. Para replay se pasa sólo `--source`, `--out` y `--replay-run /ruta/run-001`; la pregunta y los requisitos proceden del registro. No se acepta una salida existente. `scripts/agora.py describe answer --json` descubre esta capacidad; `run answer --help` muestra los argumentos. La entrada sólo despacha tras `run answer`; `capabilities`, `describe` y `doctor` no llaman modelos.
 
-La API acepta un perfil optativo `agora/evidence-answer-flow-profile/v2-experimental` con un sufijo de instrucción de generación y presupuestos de salida para respaldo y pertinencia. El manifiesto conserva el perfil y su hash; el prompt realmente modificado aparece en `candidate.json` y su petición se registra antes de red. Sin perfil, se mantienen los límites originales. La [corrección T0 v2](../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md) usa este mecanismo sólo para los B fallidos. La CLI pública de este módulo aún no expone selección de perfil.
+La API acepta un perfil optativo `agora/evidence-answer-flow-profile/v2-experimental` con un sufijo de instrucción de generación y presupuestos de salida para respaldo y pertinencia. El manifiesto conserva el perfil y su hash; el prompt realmente modificado aparece en `candidate.json` y su petición se registra antes de red. Sin perfil, se mantienen los límites originales. La [corrección T0 v2](../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md) usó este mecanismo sólo para los B fallidos. La CLI del módulo no expone selección de perfil para conservar el hash del ejecutor congelado en esa serie.
+
+## Jev junto a GLM, como segunda señal
+
+Tras un `answer` terminado, `jev-review` recibe el directorio de esa ejecución,
+la misma fuente y una salida nueva. Verifica hashes de fuente, candidato y
+manifiesto antes de una sola llamada Jev. La respuesta original y las revisiones
+GLM quedan intactas. Jev evalúa cada afirmación sólo frente a las citas que
+lleva adjuntas; no evalúa la cobertura de la fuente completa ni la vigencia.
+
+```sh
+.venv/bin/python scripts/agora.py run jev-review \
+  --flow-run /ruta/run-001 --source source.txt \
+  --out /ruta/nueva/jev-001 --live-jev
+```
+
+La credencial se suministra como `TYPESAFE_API_KEY` por el entorno o Llavero.
+`jev-review` registra el intento durable antes del despacho, no reintenta,
+conserva respuesta y etiquetas por afirmación, y deja el estado remoto
+desconocido tras interrupción o timeout. Su agregado `requires_review` es
+orientativo: Jev confundió respaldo y cobertura en dos controles de listas
+incompletas. Una divergencia con GLM se presenta para examen, nunca se
+resuelve por mayoría ni altera `candidate_reviewed` o `memory_admission`.
+
+## Paquete de salida para ARIA y expertoGobernanza
+
+`export-answer` trabaja offline. Recomprueba el hash de la fuente, el manifiesto
+del recorrido, cada etapa terminada, las citas literales y, si se adjunta Jev,
+su vínculo al mismo candidato. Devuelve
+`agora/consultation-package/v1-experimental`: pregunta, requisitos,
+afirmaciones, rangos UTF-8, consejos GLM/Jev separados, cobertura,
+diagnóstico, alcance y hashes. Siempre conserva `requires_review`,
+`adjudication=not_performed`, `memory_admission=not_performed` e
+`institutional_acceptance=not_performed`.
+
+```sh
+.venv/bin/python scripts/agora.py run export-answer \
+  --source source.txt --flow-run /ruta/run-001 \
+  --jev-run /ruta/jev-001 --out /ruta/nueva/paquete-001
+```
+
+El consumidor puede repetir el mismo comando con `--verify-package
+/ruta/paquete-001/package.json` en lugar de `--out`: reconstruye el paquete
+desde los artefactos ligados y exige igualdad completa, sin red ni escritura.
+
+Sin `--exchange`, el paquete identifica **sólo el UTF-8 suministrado** y declara
+`original_integrity=not_established`. Para ligar citas a un PDF/HTML original,
+añadir `--exchange exchange.json --original original.pdf`: el validador exige
+SHA del original, SHA del derivado, segmentos y que cada cita caiga completa
+en un segmento. Sólo entonces adjunta localizador y modalidad declarados por
+el productor. El hash de PDF no verifica por sí mismo fidelidad visual, y un
+paquete parcial no acredita cobertura del documento completo.
+
+Este paquete es la frontera propuesta de Ágora hacia ARIA y
+expertoGobernanza. La incorporación al consumidor, sus gates de cita y el
+preflight CTIM N1–N5 requieren una verificación bilateral sobre salidas reales;
+ningún comando de esta sección los activa ni escribe en otro repositorio.
 
 ## Ejecución y vínculos
 
@@ -33,4 +89,4 @@ La API acepta un perfil optativo `agora/evidence-answer-flow-profile/v2-experime
 - Los esquemas v1/v2 de generación y los comandos existentes no se modifican. Un modelo solicitado distinto del informado en el recibo detiene el recorrido y deja ambos valores consultables. El uso/costo sólo puede atribuirse según telemetría recibida; no se deduce facturación.
 - El replay exige las peticiones lógicas idénticas, las respuestas grabadas y la misma fuente. Comprueba igualdad de las etapas estructuradas; no repite la inferencia ni demuestra reproducibilidad del proveedor.
 
-La calibración [T0](../experiments/evidence-answer-flow-t0-v1/README.md) y una evaluación reservada T5 siguen siendo puertas antes de incluir esta operación en la entrada pública de agentes. El [plan](plan-consulta-con-modelos-y-evidencia-2026-10-10.md) distingue además PDF y múltiples fuentes como puertas posteriores.
+La calibración [T0](../experiments/evidence-answer-flow-t0-v1/README.md) no superó su umbral y T5 sigue pendiente. El Operador pidió convertir el recorrido existente en funcionalidad visible; `answer` se ofrece por ello como **opción experimental explícita**, sin cambiar rutas predeterminadas ni considerarlo aceptado para uso institucional. El [plan](plan-consulta-con-modelos-y-evidencia-2026-10-10.md) distingue además PDF y múltiples fuentes como puertas posteriores.

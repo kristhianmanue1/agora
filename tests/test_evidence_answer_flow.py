@@ -90,6 +90,18 @@ class EvidenceAnswerFlowTests(unittest.TestCase):
         self.assertEqual(replay_flow(self.root / 'run', self.source,
                                      self.root / 'replay')['stages'], result['stages'])
 
+    def test_agent_entry_replays_recorded_flow_without_provider(self):
+        original = self.run_case('recorded', FakeProvider())
+        entry = Path(__file__).resolve().parents[1] / 'scripts/agora.py'
+        result = subprocess.run([sys.executable, str(entry), 'run', 'answer',
+                                 '--source', str(self.source), '--out', str(self.root / 'via-agent'),
+                                 '--replay-run', str(self.root / 'recorded')],
+                                cwd=self.root, capture_output=True, text=True, timeout=20)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        replayed = json.loads((self.root / 'via-agent/result.json').read_text())
+        self.assertEqual(replayed['stages'], original['stages'])
+        self.assertEqual(replayed['provider_id'], 'replay')
+
     def test_timeout_preserves_attempt_and_never_retries(self):
         provider = FakeProvider(fail_stage='support')
         result = self.run_case('timeout', provider)

@@ -18,6 +18,11 @@ python3 scripts/agora.py doctor --json
 python3 scripts/agora.py example relations-offline --json
 python3 scripts/agora.py describe relations --json
 python3 scripts/agora.py run relations --help
+python3 scripts/agora.py describe answer --json
+python3 scripts/agora.py run answer --help
+python3 scripts/agora.py describe jev-review --json
+python3 scripts/agora.py describe export-answer --json
+python3 scripts/agora.py describe skopos-page-v02 --json
 ```
 
 Descubrimiento y ejemplo sin red ni escrituras. `run` conserva los efectos del
@@ -25,7 +30,16 @@ comando elegido. Si existe `.venv`, su intérprete puede usarse en lugar de pyth
 Si doctor devuelve attention por Python antiguo, repetir con `.venv/bin/python`
 cuando exista, o con otro intérprete 3.10+; no es necesario reinstalar para probar
 el entorno local disponible.
-El catálogo es explícito y parcial: ocho familias públicas, no todos los experimentos.
+El catálogo es explícito y parcial: incluye una consulta con modelos **experimental
+y optativa**, no todos los experimentos. La [consulta revisada de una fuente](docs/contrato-consulta-evidencia-v1.md)
+requiere proveedor indicado, fuente UTF-8 fijada por SHA, requisitos y salida
+nueva. `jev-review` puede añadir un segundo juicio sobre las citas de una
+respuesta ya generada, sin repetir GLM; ambos resultados requieren revisión.
+`export-answer` prepara un paquete offline con citas y estados separados para
+un consumidor externo; sólo añade localizadores del original si recibe un
+intercambio verificado contra el archivo original.
+`skopos-page-v02` construye ese intercambio desde una respuesta CTIM v0.2,
+su solicitud, manifiesto y PDF local; sigue pendiente su prueba bilateral real.
 
 ## Qué hay implementado
 
