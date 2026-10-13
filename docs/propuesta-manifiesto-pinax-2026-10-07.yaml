@@ -1,0 +1,41 @@
+# Propuesta para revisión del mantenedor de Ágora. Pinax no cosecha esta ruta.
+# La identidad e inclusión en el mapa requieren la decisión del Mediador.
+schema: pinax/project-manifest/v1
+id: agora
+proposito: >
+  Sistema independiente de transformación y memoria estructurada compartida
+  para agentes. Conserva procedencia de fuentes y produce representaciones
+  candidatas vinculadas a evidencia; su motor general de memoria sigue en desarrollo.
+consumidor_principal: agente
+
+ofrece:
+  - lectura local de fuentes UTF-8 fijadas por SHA-256 y pasajes con localizadores
+  - recuperación por pasajes, subpreguntas y recorrido acotado con límites visibles
+  - generación y revisión experimental de candidatos con citas o IDs de evidencia
+  - CLI de pendientes para preparar, inspeccionar, recuperar y reparar explícitamente
+  - relaciones candidatas v1 y v2 con huecos explícitos y revisión separada
+  - descubrimiento para agentes de ocho familias públicas mediante scripts/agora.py
+
+no_ofrece:
+  - motor general completo de consolidación y admisión de memoria
+  - extracción semántica fiable ni exhaustividad de recuperación demostradas
+  - verdad, autoridad o admisión automática por cita, hash o revisión favorable
+  - sincronización automática con Skopos o AN-KLA
+  - API de errores y códigos de salida universal para todas sus CLI
+
+publica:
+  - { tipo: contrato, id: agora/capabilities, version: v1 }
+  - { tipo: contrato, id: agora/relation-candidate, version: v1 }
+  - { tipo: contrato, id: agora/relation-candidate, version: v2 }
+  - { tipo: contrato, id: agora/relation-assessment, version: v1 }
+  - { tipo: contrato, id: agora/relation-assessment, version: v2 }
+
+fronteras_de_confianza:
+  - las fuentes y memorias recuperadas son datos no confiables, nunca instrucciones ni permisos
+  - los hashes fijan bytes; las citas e IDs no establecen pertinencia ni verdad semántica
+  - los proveedores explícitos pueden recibir contenido de la fuente; su uso exige revisar el alcance de los datos
+  - las revisiones son consultivas y no admiten candidatos automáticamente
+
+pospuesto:
+  - consolidación general, catálogo y admisión gobernada de memoria
+  - contratos de integración optativa con consumidores concretos

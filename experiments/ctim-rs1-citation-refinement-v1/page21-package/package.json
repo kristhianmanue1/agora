@@ -1,0 +1,444 @@
+{
+  "schema": "agora/consultation-package/v3-experimental",
+  "status": "candidate_for_consumer_review",
+  "source": {
+    "kind": "verified_exchange",
+    "source_sha256": "ee7ec9b09e6c171dd4e37ed5c1d155366093b2098f38d060a6170f0eefe200c4",
+    "exchange_sha256": "2e2faaac027b9bdf2e2de0fa8ce67b39eea497088d6157947dac3379800bf088",
+    "original_sha256": "1f8ad5e506b21cbf6b568b68790d2a757ba870524a6ba341f2dff3637d2494f2",
+    "original_integrity": "sha256_verified",
+    "derivative_coverage": "partial",
+    "original_document_completeness": "not_established"
+  },
+  "source_id": "operator-ctim-procedure-rs1-2026-10-10",
+  "question": "En las actividades 25–27 del pasaje, ¿qué hace CTIM y a quién envía o comunica cada resultado?",
+  "requirements": [
+    "Responder sólo con hechos presentes en el pasaje.",
+    "Para cada actividad 25, 26 y 27, indicar acción, objeto y destinatario cuando consten.",
+    "Adjuntar identificadores de evidencia del pasaje a cada afirmación y declarar cualquier dato no establecido."
+  ],
+  "claims": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "text": "Actividad 25: CTIM recibe de la CPSI, OOAD o UMAE, según corresponda, solicitud de revisión del “Anteproyecto conceptual” mediante oficio (acción: recibir; objeto: solicitud de revisión del “Anteproyecto conceptual”; remitente: CPSI, OOAD o UMAE).",
+      "evidence": [
+        {
+          "start_byte": 0,
+          "end_byte": 135,
+          "literal_text": "CTIM\n25. Recibe de la CPSI, OOAD o UMAE, según\ncorresponda, solicitud de revisión del “Anteproyecto\nconceptual” mediante oficio.\n",
+          "literal_sha256": "50b1f5f9088d38bea533df26ccca3cfb131ed6de140a9b344a4529af23de3446",
+          "evidence_id": "ev_c67251f5d7d49bea452a349d",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-item-1",
+              "start_byte": 0,
+              "end_byte": 5,
+              "literal_text": "CTIM\n",
+              "literal_sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.07213077647058824,
+                    0.2280858585858585,
+                    0.10728188758169935,
+                    0.24049696969696954
+                  ],
+                  "item_id": "81abf60291b2e0e331faf111b0c451c7c4c9174f8ba8dea4c993a47114c7cea2",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-2",
+              "start_byte": 5,
+              "end_byte": 48,
+              "literal_text": "25. Recibe de la CPSI, OOAD o UMAE, según\n",
+              "literal_sha256": "ed78cb810347c99068c862937d9a58227fd8fab69daf6e8ec9c18efd373d5567",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.28867976732026146,
+                    0.2280858585858585,
+                    0.6630766013071896,
+                    0.24049696969696954
+                  ],
+                  "item_id": "2f71297c9a7dbec02499593659a3cc191e8e0077dc2cd5c6e6fe145b64a8247f",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-3",
+              "start_byte": 48,
+              "end_byte": 104,
+              "literal_text": "corresponda, solicitud de revisión del “Anteproyecto\n",
+              "literal_sha256": "4e549986d8df85206a52f1d2c3ff49af13b269f190a93a88665858c27307fab5",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.24097474747474734,
+                    0.6630866666666666,
+                    0.2533858585858585
+                  ],
+                  "item_id": "d6540ab8e120c0665974f05ad257eb9c8e401beb9b131d9281b5486e4cc048f3",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-4",
+              "start_byte": 104,
+              "end_byte": 135,
+              "literal_text": "conceptual” mediante oficio.\n",
+              "literal_sha256": "ad9ec0560e0c3c392e0cc8488796bfa65a8969110b073fa91f8dec6bbe10bf22",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.25364141414141406,
+                    0.49522752941176473,
+                    0.2660525252525252
+                  ],
+                  "item_id": "d394da5a0dc0e816c712643081630b1f60eae7ecfb7f8bdf2b5c2eabf782411a",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "text": "Actividad 26: CTIM identifica las modificaciones necesarias e informa a la CPSI, OOAD o UMAE hasta acordar el “Anteproyecto conceptual”, conforme a los “Lineamientos para la revisión y validación de Anteproyectos Conceptuales para Unidades Médicas sujetas a acción de obra”, (Anexo 6) (acción: identificar modificaciones e informar; objeto: modificaciones al “Anteproyecto conceptual”; destinatario: CPSI, OOAD o UMAE).",
+      "evidence": [
+        {
+          "start_byte": 0,
+          "end_byte": 5,
+          "literal_text": "CTIM\n",
+          "literal_sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c",
+          "evidence_id": "ev_c67251f5d7d49bea452a349d",
+          "segment_id": "skopos-item-1",
+          "locator": {
+            "kind": "pdf_page",
+            "value": {
+              "bbox": [
+                0.07213077647058824,
+                0.2280858585858585,
+                0.10728188758169935,
+                0.24049696969696954
+              ],
+              "item_id": "81abf60291b2e0e331faf111b0c451c7c4c9174f8ba8dea4c993a47114c7cea2",
+              "page": 21
+            }
+          },
+          "modality": "native_text",
+          "extraction_status": "unreviewed"
+        },
+        {
+          "start_byte": 135,
+          "end_byte": 418,
+          "literal_text": "26. Identifica las modificaciones necesarias e informa a la\nCPSI, OOAD o UMAE hasta acordar el “Anteproyecto\nconceptual”, conforme a los “Lineamientos para la\nrevisión y validación de Anteproyectos Conceptuales\npara Unidades Médicas sujetas a acción de obra”,\n(Anexo 6).\n",
+          "literal_sha256": "c0c25d6c330828c5f70cdc2f3ebdff57fd4aeb627419b82ea856d60a7a7c4c11",
+          "evidence_id": "ev_c67251f5d7d49bea452a349d",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-item-5",
+              "start_byte": 135,
+              "end_byte": 195,
+              "literal_text": "26. Identifica las modificaciones necesarias e informa a la\n",
+              "literal_sha256": "9a6b29096cbf5c05c7b08b1a984a2fa8f98fac5136cce3bb871d472b5d2856c4",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.28867976732026146,
+                    0.2791969696969696,
+                    0.6630909803921567,
+                    0.29160808080808076
+                  ],
+                  "item_id": "13cec46cd881ce5c951a6a73130e7357b076fd2438b133e3537a3b32ff005004",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-6",
+              "start_byte": 195,
+              "end_byte": 246,
+              "literal_text": "CPSI, OOAD o UMAE hasta acordar el “Anteproyecto\n",
+              "literal_sha256": "d142243a44ca9da3041b44319266358fd50d3877bc11093aa8a005e794a80f9e",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.29208585858585845,
+                    0.6630766013071895,
+                    0.3044969696969696
+                  ],
+                  "item_id": "d17877759309d77de92a4c6855d421d1a3d3033cd923fb5c374ddf4f91436516",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-7",
+              "start_byte": 246,
+              "end_byte": 300,
+              "literal_text": "conceptual”, conforme a los “Lineamientos para la\n",
+              "literal_sha256": "88ef03fc7f0ceb8b1f31c85844e713deadb42ebee5cc848f905a7b42518174c8",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.30475252525252516,
+                    0.6630800522875816,
+                    0.3171636363636363
+                  ],
+                  "item_id": "c2d94e750fb8cda694577216a8e1c1efaeb8de2429dd1cb6286f4b4f7f069bb0",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-8",
+              "start_byte": 300,
+              "end_byte": 354,
+              "literal_text": "revisión y validación de Anteproyectos Conceptuales\n",
+              "literal_sha256": "74a27f950ea427d872018b7d6a1536cf28b3fde35f8d114b8021789720bb9345",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.317641414141414,
+                    0.663095294117647,
+                    0.33005252525252515
+                  ],
+                  "item_id": "af2ca1fcd7285fe11542aebdc6ffcafd17ce9a61fe2cf48622a9d66ebba6e2a4",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-9",
+              "start_byte": 354,
+              "end_byte": 407,
+              "literal_text": "para Unidades Médicas sujetas a acción de obra”,\n",
+              "literal_sha256": "4518c0a915cfbafe0f86a28944274ed7c5e842c3884e36043049555957274f0f",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.3303080808080807,
+                    0.6630774640522875,
+                    0.34271919191919187
+                  ],
+                  "item_id": "cbf94d347162f82cd53d09cc3b68ca362adcedd0aa421b4224d5b7cc755f51de",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-10",
+              "start_byte": 407,
+              "end_byte": 418,
+              "literal_text": "(Anexo 6).\n",
+              "literal_sha256": "74818cae4e90cdd19d4558e2d70c1797a9967d396ddd5e38b1c01a4ee3279572",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.34319696969696956,
+                    0.38251908496732023,
+                    0.3556080808080807
+                  ],
+                  "item_id": "b4463312d23fa29d2388fa9aab0f4aef94f9392e70c3503157f4cb47bb4cb11b",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "text": "Actividad 27: CTIM firma el “Anteproyecto conceptual” y lo envía con “Oficio de autorización del anteproyecto conceptual” a la CPSI y al OOAD o UMAE, según corresponda (acción: firmar y enviar; objeto: “Anteproyecto conceptual” con “Oficio de autorización del anteproyecto conceptual”; destinatarios: CPSI y OOAD o UMAE).",
+      "evidence": [
+        {
+          "start_byte": 0,
+          "end_byte": 5,
+          "literal_text": "CTIM\n",
+          "literal_sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c",
+          "evidence_id": "ev_c67251f5d7d49bea452a349d",
+          "segment_id": "skopos-item-1",
+          "locator": {
+            "kind": "pdf_page",
+            "value": {
+              "bbox": [
+                0.07213077647058824,
+                0.2280858585858585,
+                0.10728188758169935,
+                0.24049696969696954
+              ],
+              "item_id": "81abf60291b2e0e331faf111b0c451c7c4c9174f8ba8dea4c993a47114c7cea2",
+              "page": 21
+            }
+          },
+          "modality": "native_text",
+          "extraction_status": "unreviewed"
+        },
+        {
+          "start_byte": 418,
+          "end_byte": 582,
+          "literal_text": "27. Firma el “Anteproyecto conceptual” y lo envía con\n“Oficio de autorización del anteproyecto conceptual” a\nla CPSI y al OOAD o UMAE, según corresponda.",
+          "literal_sha256": "f828ed7acb1af76ddd76934982553f744cf3ff48ba8e01f567bc53214695f715",
+          "evidence_id": "ev_c67251f5d7d49bea452a349d",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-item-11",
+              "start_byte": 418,
+              "end_byte": 477,
+              "literal_text": "27. Firma el “Anteproyecto conceptual” y lo envía con\n",
+              "literal_sha256": "52c0114060bb494fccabd658ec189dca00c29c8cc4781acf8632b6199b4ac46b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.28867976732026146,
+                    0.3687525252525251,
+                    0.6630881045751633,
+                    0.38116363636363626
+                  ],
+                  "item_id": "36a80ee472d62e5ab73a7cf1c57ef4f7b48444e0e537d25f5c9782c678664d12",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-12",
+              "start_byte": 477,
+              "end_byte": 537,
+              "literal_text": "“Oficio de autorización del anteproyecto conceptual” a\n",
+              "literal_sha256": "329e8a986db7d0254dc221d4578b2146c4cdb1e1e97bb81af87100fe1adb77bb",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.3814191919191918,
+                    0.6630734379084967,
+                    0.393830303030303
+                  ],
+                  "item_id": "2e34f01e3c22ef57f49058886d1ca6df7c7bb1bf02d01ae6986d464ec70aa1ff",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-item-13",
+              "start_byte": 537,
+              "end_byte": 582,
+              "literal_text": "la CPSI y al OOAD o UMAE, según corresponda.",
+              "literal_sha256": "d78c8cce7eb83e8f98938aecb0137e5629de1b93003095dcc93ac16a676b2410",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "bbox": [
+                    0.3161797385620915,
+                    0.39430808080808066,
+                    0.6302678431372547,
+                    0.4067191919191918
+                  ],
+                  "item_id": "e5416da7cae582c000913f1e42a94aedbf268c0b14bcd274bdcdf7535ef714bc",
+                  "page": 21
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    }
+  ],
+  "coverage_advice": "complete",
+  "omission_advice": "not_run",
+  "review_disagreement": false,
+  "glm_model_requested": "glm-5.3-flash",
+  "jev_model_requested": null,
+  "model_effective": "unknown",
+  "flow_result_sha256": "578bc74e6d151a7d7a334d69496cce5eb461299412aaf94c1955bd3ad057fb72",
+  "jev_result_sha256": null,
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "institutional_acceptance": "not_performed",
+  "disposition": "requires_review",
+  "candidate_answer_status": "candidate",
+  "candidate_declared_missing": [],
+  "candidate_coverage_conflict": false,
+  "citation_refinement_sha256": "39fd665182695e0078133a41febb306073f2ace4cf72bd52c1fb1f7c97aa6a58",
+  "citation_refinement_status": "literal_ranges_verified_support_not_reassessed",
+  "coverage_advice_scope": "original_candidate",
+  "flow_budgets": {
+    "coverage_max_output_tokens": 8192,
+    "generation_max_output_tokens": 16384,
+    "omission_max_output_tokens": 4096,
+    "relevance_max_output_tokens": 4096,
+    "schema": "agora/evidence-answer-budgets/v2-experimental",
+    "support_max_output_tokens": 8192
+  },
+  "flow_budgets_sha256": "f6c74b869be3b7cd2f43e43fee59744148b7765ba6813b34fd84bb7fc3239db4"
+}

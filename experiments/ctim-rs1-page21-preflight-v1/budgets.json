@@ -1,0 +1,8 @@
+{
+  "schema": "agora/evidence-answer-budgets/v2-experimental",
+  "generation_max_output_tokens": 16384,
+  "support_max_output_tokens": 8192,
+  "relevance_max_output_tokens": 4096,
+  "coverage_max_output_tokens": 8192,
+  "omission_max_output_tokens": 4096
+}

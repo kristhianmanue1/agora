@@ -1,0 +1,53 @@
+{
+  "schema": "agora/citation-refinement/v1-experimental",
+  "source_sha256": "ee7ec9b09e6c171dd4e37ed5c1d155366093b2098f38d060a6170f0eefe200c4",
+  "candidate_sha256": "7260c735df6d1deeb0213b7155e5aedc5a49b21f276cd7a3b47739d1800a7cd7",
+  "claims": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "claim_sha256": "e113133a4a7b7a5fdf322fcaf52eca0cc137253a7ca1b9c679cdc8f11dfc25e6",
+      "ranges": [
+        {
+          "start_byte": 0,
+          "end_byte": 135,
+          "literal_sha256": "50b1f5f9088d38bea533df26ccca3cfb131ed6de140a9b344a4529af23de3446"
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "claim_sha256": "585cf381df4736402ce9c785b9523d61e86fbb78bda50fb469d87e1794d9140a",
+      "ranges": [
+        {
+          "start_byte": 0,
+          "end_byte": 5,
+          "literal_sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c"
+        },
+        {
+          "start_byte": 135,
+          "end_byte": 418,
+          "literal_sha256": "c0c25d6c330828c5f70cdc2f3ebdff57fd4aeb627419b82ea856d60a7a7c4c11"
+        }
+      ]
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "claim_sha256": "f5ce5e927c0ac43accb49b2e2b374455a46148a360a3bd260ce380ff6cffeae6",
+      "ranges": [
+        {
+          "start_byte": 0,
+          "end_byte": 5,
+          "literal_sha256": "341451472afe081a0fbe59139d78e5635c58ebd059d2953f4a990cfde96e3d6c"
+        },
+        {
+          "start_byte": 418,
+          "end_byte": 582,
+          "literal_sha256": "f828ed7acb1af76ddd76934982553f744cf3ff48ba8e01f567bc53214695f715"
+        }
+      ]
+    }
+  ]
+}

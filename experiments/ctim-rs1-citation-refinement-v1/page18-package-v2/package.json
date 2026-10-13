@@ -1,0 +1,1159 @@
+{
+  "schema": "agora/consultation-package/v3-experimental",
+  "status": "candidate_for_consumer_review",
+  "source": {
+    "kind": "verified_exchange",
+    "source_sha256": "ae101c1df39c2d7f0cab65b30d4a53c1fc78e1edf25749e61e18d9ff9083bd48",
+    "exchange_sha256": "8dffe0456c0eccaccd976992e1268947e78ae977139eb2367e694a4918ba6cf3",
+    "original_sha256": "1f8ad5e506b21cbf6b568b68790d2a757ba870524a6ba341f2dff3637d2494f2",
+    "original_integrity": "sha256_verified",
+    "derivative_coverage": "partial",
+    "original_document_completeness": "not_established"
+  },
+  "source_id": "operator-ctim-procedure-rs1-2026-10-10",
+  "question": "En este pasaje del borrador, ¿qué dice la actividad 14 sobre el anexo de CEPI y qué ocurre en las actividades 16 y 17 si no se atienden y reenvían las correcciones en 15 días hábiles? Señala qué no demuestra este pasaje sobre la reactivación posterior del folio o el estado real de la plataforma.",
+  "requirements": [
+    "Atribuye sólo al responsable visible las actividades 14 a 17; distingue el texto del borrador de la operación efectiva de la plataforma.",
+    "Identifica que la actividad 14 menciona Anexo 3 para la cédula analizada y Anexo 2 para la cédula comentada, sin resolver esa discrepancia por conjetura.",
+    "Separa el control de 15 días hábiles de la actividad 16 del estado y conclusión descritos en la actividad 17.",
+    "Declara expresamente que este pasaje no establece criterios de reactivación posterior del folio ni prueba el comportamiento real de la plataforma.",
+    "Cita el pasaje literalmente por evidencia; no infieras aprobación ni vigencia institucional."
+  ],
+  "claims": [
+    {
+      "part_id": "P1",
+      "claim_index": 0,
+      "text": "Actividad 14: el responsable visible CPIM analiza la \"Cédula de Evaluación de Proyectos de Inversión Física Médica digital (CEPI Médica)\", (Anexo 3) con base a la información proporcionada, la cual se valida con los sistemas estadísticos institucionales, y en caso necesario emite y notifica comentarios a la \"Cédula de Evaluación de Proyectos de Inversión Física Médica (CEPI Médica)\", (Anexo 2), \"dentro de la plataforma de para la atención por el OOAD o UMAE\". El texto del borrador menciona así el Anexo 3 para la cédula que analiza y el Anexo 2 para la cédula a la que emite comentarios, sin que el pasaje resuelva esa discrepancia.",
+      "evidence": [
+        {
+          "start_byte": 0,
+          "end_byte": 449,
+          "literal_text": "CPIM\n14. Analiza la “Cédula de Evaluación de Proyectos de\nInversión Física Médica digital (CEPI Médica)”, (Anexo\n3) con base a la información proporcionada, la cual se\nvalida con los sistemas estadísticos institucionales. En\ncaso necesario emite y notifica comentarios a la\n“Cédula de Evaluación de Proyectos de Inversión\nFísica Médica (CEPI Médica)”, (Anexo 2), dentro de la\nplataforma de para la atención por el OOAD o UMAE\n",
+          "literal_sha256": "daafd397575b98052924e4a97cfe932d3d0003c186cff0593f7e3f704f18c11e",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-p18-item-6",
+              "start_byte": 0,
+              "end_byte": 5,
+              "literal_text": "CPIM\n",
+              "literal_sha256": "fca95313906740b989be9a7a44974553525a050d749a0460668ad700333c5247",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "24da51f1f19dc753f4e3f1f81ebdcc99b36fadd86723c68cdf0fa6261e70eec3",
+                  "bbox": [
+                    0.07612574640522876,
+                    0.3051969696969695,
+                    0.11207291241830067,
+                    0.3176080808080807
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-12",
+              "start_byte": 5,
+              "end_byte": 62,
+              "literal_text": "14. Analiza la “Cédula de Evaluación de Proyectos de\n",
+              "literal_sha256": "9c525d436e518d5f45e17631b18619bd509cb3cb42e5aa99f50eb5f21988784c",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "788c1e8bdf06116c8e32e169c82c380199a28a135b6f608a23bd21cbec962fe9",
+                  "bbox": [
+                    0.28867976732026146,
+                    0.3051969696969695,
+                    0.6630938562091502,
+                    0.3176080808080807
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-13",
+              "start_byte": 62,
+              "end_byte": 123,
+              "literal_text": "Inversión Física Médica digital (CEPI Médica)”, (Anexo\n",
+              "literal_sha256": "5ef66727a5528e2c93c3f82b7e05521c8fd479533c1cf03f7f4476b7cb1301d9",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "044e1d1fcae8d24692e14773b42887b5e2949dd006b20749a0efff856b41d1c4",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.31808585858585836,
+                    0.6630866666666665,
+                    0.3304969696969695
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-14",
+              "start_byte": 123,
+              "end_byte": 179,
+              "literal_text": "3) con base a la información proporcionada, la cual se\n",
+              "literal_sha256": "b7d879afb1aaebd71bf156dc30db3ab2c0ab99bde4b665cc08d1d90b44ead2dd",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "39bcf4bca020f68f4c5541cd31a711fb402df01065c7bb387f4aca895d2de48b",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.3307525252525251,
+                    0.6630895424836601,
+                    0.3431636363636362
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-15",
+              "start_byte": 179,
+              "end_byte": 237,
+              "literal_text": "valida con los sistemas estadísticos institucionales. En\n",
+              "literal_sha256": "7b4c59a9998bda87d3dc12cb9b138be27cbe54d3a306f71e59781657c28d3b54",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "0a26eb1fb2d522d837c7b14b9bfb79e6a339a52dd092533b747246061fcd0cc6",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.343641414141414,
+                    0.66308954248366,
+                    0.3560525252525252
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-16",
+              "start_byte": 237,
+              "end_byte": 286,
+              "literal_text": "caso necesario emite y notifica comentarios a la\n",
+              "literal_sha256": "6c00a4a78b4a0e998da4f3d2c4d90656f6f62a0d6ccf7e69ec0f91a07ab8f4eb",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "657309a8463ab219b86d76a580e41ae807a6dc5e8fed333d1dc526fe708443db",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.35630808080808074,
+                    0.6630734379084967,
+                    0.3687191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-17",
+              "start_byte": 286,
+              "end_byte": 339,
+              "literal_text": "“Cédula de Evaluación de Proyectos de Inversión\n",
+              "literal_sha256": "d6898277528b36f2f01c6c0a2a106b7e3bafe71787109a08991efd2673d43f86",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "47c8483e1288a842d01b24662b807a68c0e5522b6ae2a63134348cfdae8ce0b8",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.3691969696969696,
+                    0.6630924183006536,
+                    0.38160808080808073
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-18",
+              "start_byte": 339,
+              "end_byte": 398,
+              "literal_text": "Física Médica (CEPI Médica)”, (Anexo 2), dentro de la\n",
+              "literal_sha256": "f8d63b6d1b25e3016b7b56a921b8da82b2f130a821bdddb892ac4cbc116ac675",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "a0ed24fa0b3a98b42be0965225ff6ed81b74537235879467e5c03ca7d50515e1",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.3818636363636363,
+                    0.6630734379084967,
+                    0.39427474747474744
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-19",
+              "start_byte": 398,
+              "end_byte": 449,
+              "literal_text": "plataforma de para la atención por el OOAD o UMAE\n",
+              "literal_sha256": "3af23ce4a25fb8a51d670954b2a769751177cda8c9797c8ec9f2caa905d69516",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "ffec2fc8574f3dea07f3c4da8ad5dcc9a117240d59726b9bed8be3a406e5166c",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.39475252525252513,
+                    0.6542642352941177,
+                    0.4071636363636363
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 1,
+      "text": "Actividad 15: la CPIM informa mediante la plataforma al encargado de la elaboración \"los cambios propuestos y/o correciones a realizar\" a la \"Cédula de Evaluación de Proyectos de Inversión Física Médica (CEPI Médica)\", (Anexo 2), quedando establecidas, en su caso, las necesidades y soluciones de área física.",
+      "evidence": [
+        {
+          "start_byte": 0,
+          "end_byte": 5,
+          "literal_text": "CPIM\n",
+          "literal_sha256": "fca95313906740b989be9a7a44974553525a050d749a0460668ad700333c5247",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_id": "skopos-p18-item-6",
+          "locator": {
+            "kind": "pdf_page",
+            "value": {
+              "page": 18,
+              "item_id": "24da51f1f19dc753f4e3f1f81ebdcc99b36fadd86723c68cdf0fa6261e70eec3",
+              "bbox": [
+                0.07612574640522876,
+                0.3051969696969695,
+                0.11207291241830067,
+                0.3176080808080807
+              ]
+            }
+          },
+          "modality": "native_text",
+          "extraction_status": "unreviewed"
+        },
+        {
+          "start_byte": 449,
+          "end_byte": 751,
+          "literal_text": "15. Informa mediante la plataforma al encargado de la\nelaboración los cambios propuestos y/o correciones a\nrealizar a la “Cédula de Evaluación de Proyectos de\nInversión Física Médica (CEPI Médica)”, (Anexo 2)\nquedando establecidas, en su caso, las necesidades y\nsoluciones de área física.\n",
+          "literal_sha256": "abc81c31300f0d694b7ef3676e913943020366855c8ea89b409f99394ecfe405",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-p18-item-20",
+              "start_byte": 449,
+              "end_byte": 503,
+              "literal_text": "15. Informa mediante la plataforma al encargado de la\n",
+              "literal_sha256": "df563004fc1d632106ee66a4cddf4f01750d22d3bca41a5227c9f515b75b0605",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "5147ebe76350c169ed8a925dafc8d5fe3bd2e256ea185599b1494aae8d621ea5",
+                  "bbox": [
+                    0.28867976732026146,
+                    0.4203080808080807,
+                    0.6630814901960784,
+                    0.43271919191919184
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-21",
+              "start_byte": 503,
+              "end_byte": 557,
+              "literal_text": "elaboración los cambios propuestos y/o correciones a\n",
+              "literal_sha256": "460e074c48840ecfebb6aa42320f0a297997c452473b10fefb0d68a4da8cb9ff",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "308a4a57608a1eae62a7185fc8efbcf3082a9a4d42f5e21d2da3a6e496c7e92e",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.4329747474747474,
+                    0.6630757385620915,
+                    0.44538585858585844
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-22",
+              "start_byte": 557,
+              "end_byte": 613,
+              "literal_text": "realizar a la “Cédula de Evaluación de Proyectos de\n",
+              "literal_sha256": "bce7500f4eeffaf581c1b70c4264329639208e6304389fdedbf73bff0dfed37e",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "35cb3e5b7f175edf341b845e723eae1b31f1bd10fbbc8fdfbb2505adfdd4ccb5",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.44586363636363624,
+                    0.6630863790849673,
+                    0.4582747474747474
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-23",
+              "start_byte": 613,
+              "end_byte": 669,
+              "literal_text": "Inversión Física Médica (CEPI Médica)”, (Anexo 2)\n",
+              "literal_sha256": "1562faadcace981a16dafbd68c821acafc71a3b8ea0ee02dc6908cab83968548",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "50c2067404fcd4d1912de6331857ccc0577f21585651d546d5910b46f9fe9804",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.45853030303030295,
+                    0.6630751633986928,
+                    0.470941414141414
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-24",
+              "start_byte": 669,
+              "end_byte": 722,
+              "literal_text": "quedando establecidas, en su caso, las necesidades y\n",
+              "literal_sha256": "93a7630f7daf692a2e501a2c35f7bfe93d1353e31fa60b1bb819c768eade3a9d",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "31fb4c67acdaddd93909048221f4d292a23a692df9883cf481d783f4f8ee328b",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.4714191919191918,
+                    0.6630806274509804,
+                    0.48383030303030294
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-25",
+              "start_byte": 722,
+              "end_byte": 751,
+              "literal_text": "soluciones de área física.\n",
+              "literal_sha256": "343a1cff4cba376eea2393dbf36d3c99df4ccf63b272ec637a0a8699c58065b3",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "dd74a086c449d61aa26a98628217a4d8df8bdcd5c8ebfcbb4ca509fc86718ec2",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.4840858585858585,
+                    0.47843822222222215,
+                    0.49649696969696966
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 2,
+      "text": "Actividad 16 (para el supuesto de cédula no procedente): la CPIM \"Identifica dentro de los siguientes 15 días hábiles, si se atienden los cambios propuestos o correcciones y el reenvío de la CEPI Médica\"; este control del plazo de 15 días hábiles es previo y está separado del paso de estatus y de la conclusión del procedimiento descritos en la actividad 17.",
+      "evidence": [
+        {
+          "start_byte": 800,
+          "end_byte": 1334,
+          "literal_text": "Cédula no procedente\nCPIM\n16.\nIdentifica dentro de los siguientes 15 días hábiles, si se\natienden los cambios propuestos o correcciones y el\nreenvío de la CEPI Médica.\nNo\ncorrigen y no reenvían solicitud en el\nplazo de\n15 días hábiles\n17. Corrobora que el folio de la “Cédula de Evaluación de\nProyectos de Inversión Física Médica digital” (CEPI\nMédica) generado por la plataforma pase a estatus\n“Inactivo/ No prioritario” por falta de seguimiento y\natención en los plazos establecidos y concluye\nprocedimiento.\n",
+          "literal_sha256": "b9a96270a03dfeef4b3d97f8b6e4417cbf71c762c15b63358cea7cfd9c04e994",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-p18-item-28",
+              "start_byte": 800,
+              "end_byte": 822,
+              "literal_text": "Cédula no procedente\n",
+              "literal_sha256": "3745fea00fc83543ea80799d2e6b4899d178f4f07484f5f731a4e5a6adaba029",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "9fbd214fea39c96806dd7bed8819526ac87da74853ed63f978d91d6592f78d87",
+                  "bbox": [
+                    0.4003764705882353,
+                    0.5611969696969695,
+                    0.5513741176470588,
+                    0.5736080808080806
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-29",
+              "start_byte": 822,
+              "end_byte": 827,
+              "literal_text": "CPIM\n",
+              "literal_sha256": "fca95313906740b989be9a7a44974553525a050d749a0460668ad700333c5247",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "41fbffb43aee24151281d4d97e887881ab0eae072649ed91893d0ed64a526ecc",
+                  "bbox": [
+                    0.07213077647058824,
+                    0.5871969696969697,
+                    0.10807794248366014,
+                    0.5996080808080807
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-30",
+              "start_byte": 827,
+              "end_byte": 831,
+              "literal_text": "16.\n",
+              "literal_sha256": "fc31550d81d07c00258470ffc3ee3e81c70a4ca6e2abd4183e08f7ddee40164a",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "9176734e8a465c21c68944c8b0f72a9783026dafd3f6d2cb1f98cc67ec4601a4",
+                  "bbox": [
+                    0.28867976732026146,
+                    0.5871969696969697,
+                    0.3086724470588236,
+                    0.5996080808080807
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-31",
+              "start_byte": 831,
+              "end_byte": 892,
+              "literal_text": "Identifica dentro de los siguientes 15 días hábiles, si se\n",
+              "literal_sha256": "baacc51b7678ae493f63680d56695cda76492829833ce205bb31bfe36a95626b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "8df6d930efa2e45aeb1aa73fdc9931d6bc8813de383542228ff70a1d25c3f103",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.5871969696969697,
+                    0.663072862745098,
+                    0.5996080808080807
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-32",
+              "start_byte": 892,
+              "end_byte": 944,
+              "literal_text": "atienden los cambios propuestos o correcciones y el\n",
+              "literal_sha256": "22cab328e81f05b9ac025231d6527b7c10a75e382704d5ccc333b8ad092605d2",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "7b36c47e44f660b6c9c62a09fb33bce44055f879b5766b1ef729d6163fd2cf86",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.6000858585858585,
+                    0.6630734379084967,
+                    0.6124969696969697
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-33",
+              "start_byte": 944,
+              "end_byte": 973,
+              "literal_text": "reenvío de la CEPI Médica.\n",
+              "literal_sha256": "28ce5cde09bb2566aa8d2fba1878bf9328eadd018dfb387c8a7e7e1458f6cc46",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "bd92517651f8d3e3ff927d3c2edb7573c2b6ac870b3b7f17d43c8f464ee6d3fb",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.612752525252525,
+                    0.49121864052287584,
+                    0.6251636363636361
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-34",
+              "start_byte": 973,
+              "end_byte": 976,
+              "literal_text": "No\n",
+              "literal_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "0e2445ce1504959e63103a89b47901e625c9c037b6e1693abf10acd7ed4c3ac4",
+                  "bbox": [
+                    0.32023780392156864,
+                    0.6383080808080808,
+                    0.339408,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-35",
+              "start_byte": 976,
+              "end_byte": 1016,
+              "literal_text": "corrigen y no reenvían solicitud en el\n",
+              "literal_sha256": "751498cfb82cd336b10641675f8747200d24d7ecc1a2e7611b0ce4903246e1c4",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "e65428e1b3c083b685978ae31452ce85c492f612185fe500d1595091b8d659f2",
+                  "bbox": [
+                    0.34340020915032676,
+                    0.6383080808080808,
+                    0.5974987712418302,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-36",
+              "start_byte": 1016,
+              "end_byte": 1025,
+              "literal_text": "plazo de\n",
+              "literal_sha256": "f0f52ee8fc08547a4a5f6db956b91f20f3ac5f489ee72124edebcd54b9ecf67b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "7547b36aa5c113b602003ec8eeba5ea860602d51c0412972f6368d75b985308c",
+                  "bbox": [
+                    0.601493568627451,
+                    0.6383080808080808,
+                    0.6590127843137255,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-37",
+              "start_byte": 1025,
+              "end_byte": 1043,
+              "literal_text": "15 días hábiles\n",
+              "literal_sha256": "05f38a75e033eae4edec1d356a7845147f0e4139a6f3480e2b226788725d5918",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "75e8aa3e30344a2507d5c21ec4335faf7231a157659dbbe0b87938f68644fcf0",
+                  "bbox": [
+                    0.4384755816993464,
+                    0.6511969696969696,
+                    0.5408230326797385,
+                    0.6636080808080806
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-38",
+              "start_byte": 1043,
+              "end_byte": 1105,
+              "literal_text": "17. Corrobora que el folio de la “Cédula de Evaluación de\n",
+              "literal_sha256": "e574a72d9f7fcdc91e9bd688b104edbe338edaf667f1bc8085c45983cf0c834c",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "b21b6a64a097f60479bcdde3b8bbf59e381f20c64d8ce0580474c55837093536",
+                  "bbox": [
+                    0.28867976732026146,
+                    0.6767525252525252,
+                    0.6630852287581698,
+                    0.6891636363636363
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-39",
+              "start_byte": 1105,
+              "end_byte": 1162,
+              "literal_text": "Proyectos de Inversión Física Médica digital” (CEPI\n",
+              "literal_sha256": "52c8afdd7152eb612e023245212c941bd98de0d97b8a0514bea932ee1bc8d92d",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "aa308430696bf0a3c20846cf37b10b9aef49e6decbc7b7cca555b43895c279f6",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.6894191919191919,
+                    0.66308954248366,
+                    0.7018303030303029
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-40",
+              "start_byte": 1162,
+              "end_byte": 1213,
+              "literal_text": "Médica) generado por la plataforma pase a estatus\n",
+              "literal_sha256": "bfc7305b2edacd5a40d39144d60b26feff1bfc7dc87bce71b4c1eb752a0d9b1d",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "bc2d19f186c779009888c1b7d3921392976fbfa5589e7dde3b965789d596319d",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7023080808080808,
+                    0.6630771764705882,
+                    0.7147191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-41",
+              "start_byte": 1213,
+              "end_byte": 1271,
+              "literal_text": "“Inactivo/ No prioritario” por falta de seguimiento y\n",
+              "literal_sha256": "06ef9b5fd57ef333d2a42aa4ee2dd3ab00e771efda3cef1acceca137e0aad73b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "3da5970a2572a3231e7269c0ece0f419ecc5e52bcc0a9e6c79cf019b11e494cb",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7149747474747474,
+                    0.6630881045751634,
+                    0.7273858585858586
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-42",
+              "start_byte": 1271,
+              "end_byte": 1319,
+              "literal_text": "atención en los plazos establecidos y concluye\n",
+              "literal_sha256": "481b8ceb875b2dac82a2941f5b84b764763250aa2ced32558a5cea454cd8fea7",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "0bf7cc17b8b4d08e8675018ba073bdf11e70bf69499b45f4aa4180967945087b",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7278636363636364,
+                    0.6630760261437908,
+                    0.7402747474747474
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-43",
+              "start_byte": 1319,
+              "end_byte": 1334,
+              "literal_text": "procedimiento.\n",
+              "literal_sha256": "8ae9bc2559638ebad583f38e59a4ce8e34185eca06349d65da7955c6fcf9da46",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "845913436686ab22aad4d0edcabc406ed96b8bed4f4f760493e6bcc061664597",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.740530303030303,
+                    0.41049560784313727,
+                    0.7529414141414141
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    },
+    {
+      "part_id": "P1",
+      "claim_index": 3,
+      "text": "Actividad 17: ante el supuesto de que no corrigen y no reenvían solicitud en el plazo de 15 días hábiles, la CPIM corrobora que el folio de la \"Cédula de Evaluación de Proyectos de Inversión Física Médica digital\" (CEPI Médica) generado por la plataforma pase a estatus \"Inactivo/ No prioritario\" \"por falta de seguimiento y atención en los plazos establecidos\" y concluye procedimiento; la nota añade que la evidencia documental digital de los trabajos relacionados quedará resguardada en la plataforma de la CPIM para fines de auditoría.",
+      "evidence": [
+        {
+          "start_byte": 822,
+          "end_byte": 827,
+          "literal_text": "CPIM\n",
+          "literal_sha256": "fca95313906740b989be9a7a44974553525a050d749a0460668ad700333c5247",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_id": "skopos-p18-item-29",
+          "locator": {
+            "kind": "pdf_page",
+            "value": {
+              "page": 18,
+              "item_id": "41fbffb43aee24151281d4d97e887881ab0eae072649ed91893d0ed64a526ecc",
+              "bbox": [
+                0.07213077647058824,
+                0.5871969696969697,
+                0.10807794248366014,
+                0.5996080808080807
+              ]
+            }
+          },
+          "modality": "native_text",
+          "extraction_status": "unreviewed"
+        },
+        {
+          "start_byte": 973,
+          "end_byte": 1477,
+          "literal_text": "No\ncorrigen y no reenvían solicitud en el\nplazo de\n15 días hábiles\n17. Corrobora que el folio de la “Cédula de Evaluación de\nProyectos de Inversión Física Médica digital” (CEPI\nMédica) generado por la plataforma pase a estatus\n“Inactivo/ No prioritario” por falta de seguimiento y\natención en los plazos establecidos y concluye\nprocedimiento.\nNOTA: La evidencia documental digital de los trabajos\nrelacionados, quedará resguardada en la plataforma de la CPIM,\npara fines de auditoría.",
+          "literal_sha256": "60513934083971469f27f8e81d33d6220555c4c58bd27ae1ce9db2e9b9ed0b71",
+          "evidence_id": "ev_409fad0d798b2a11289f4817",
+          "segment_refs": [
+            {
+              "segment_id": "skopos-p18-item-34",
+              "start_byte": 973,
+              "end_byte": 976,
+              "literal_text": "No\n",
+              "literal_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "0e2445ce1504959e63103a89b47901e625c9c037b6e1693abf10acd7ed4c3ac4",
+                  "bbox": [
+                    0.32023780392156864,
+                    0.6383080808080808,
+                    0.339408,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-35",
+              "start_byte": 976,
+              "end_byte": 1016,
+              "literal_text": "corrigen y no reenvían solicitud en el\n",
+              "literal_sha256": "751498cfb82cd336b10641675f8747200d24d7ecc1a2e7611b0ce4903246e1c4",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "e65428e1b3c083b685978ae31452ce85c492f612185fe500d1595091b8d659f2",
+                  "bbox": [
+                    0.34340020915032676,
+                    0.6383080808080808,
+                    0.5974987712418302,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-36",
+              "start_byte": 1016,
+              "end_byte": 1025,
+              "literal_text": "plazo de\n",
+              "literal_sha256": "f0f52ee8fc08547a4a5f6db956b91f20f3ac5f489ee72124edebcd54b9ecf67b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "7547b36aa5c113b602003ec8eeba5ea860602d51c0412972f6368d75b985308c",
+                  "bbox": [
+                    0.601493568627451,
+                    0.6383080808080808,
+                    0.6590127843137255,
+                    0.6507191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-37",
+              "start_byte": 1025,
+              "end_byte": 1043,
+              "literal_text": "15 días hábiles\n",
+              "literal_sha256": "05f38a75e033eae4edec1d356a7845147f0e4139a6f3480e2b226788725d5918",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "75e8aa3e30344a2507d5c21ec4335faf7231a157659dbbe0b87938f68644fcf0",
+                  "bbox": [
+                    0.4384755816993464,
+                    0.6511969696969696,
+                    0.5408230326797385,
+                    0.6636080808080806
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-38",
+              "start_byte": 1043,
+              "end_byte": 1105,
+              "literal_text": "17. Corrobora que el folio de la “Cédula de Evaluación de\n",
+              "literal_sha256": "e574a72d9f7fcdc91e9bd688b104edbe338edaf667f1bc8085c45983cf0c834c",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "b21b6a64a097f60479bcdde3b8bbf59e381f20c64d8ce0580474c55837093536",
+                  "bbox": [
+                    0.28867976732026146,
+                    0.6767525252525252,
+                    0.6630852287581698,
+                    0.6891636363636363
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-39",
+              "start_byte": 1105,
+              "end_byte": 1162,
+              "literal_text": "Proyectos de Inversión Física Médica digital” (CEPI\n",
+              "literal_sha256": "52c8afdd7152eb612e023245212c941bd98de0d97b8a0514bea932ee1bc8d92d",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "aa308430696bf0a3c20846cf37b10b9aef49e6decbc7b7cca555b43895c279f6",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.6894191919191919,
+                    0.66308954248366,
+                    0.7018303030303029
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-40",
+              "start_byte": 1162,
+              "end_byte": 1213,
+              "literal_text": "Médica) generado por la plataforma pase a estatus\n",
+              "literal_sha256": "bfc7305b2edacd5a40d39144d60b26feff1bfc7dc87bce71b4c1eb752a0d9b1d",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "bc2d19f186c779009888c1b7d3921392976fbfa5589e7dde3b965789d596319d",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7023080808080808,
+                    0.6630771764705882,
+                    0.7147191919191919
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-41",
+              "start_byte": 1213,
+              "end_byte": 1271,
+              "literal_text": "“Inactivo/ No prioritario” por falta de seguimiento y\n",
+              "literal_sha256": "06ef9b5fd57ef333d2a42aa4ee2dd3ab00e771efda3cef1acceca137e0aad73b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "3da5970a2572a3231e7269c0ece0f419ecc5e52bcc0a9e6c79cf019b11e494cb",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7149747474747474,
+                    0.6630881045751634,
+                    0.7273858585858586
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-42",
+              "start_byte": 1271,
+              "end_byte": 1319,
+              "literal_text": "atención en los plazos establecidos y concluye\n",
+              "literal_sha256": "481b8ceb875b2dac82a2941f5b84b764763250aa2ced32558a5cea454cd8fea7",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "0bf7cc17b8b4d08e8675018ba073bdf11e70bf69499b45f4aa4180967945087b",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7278636363636364,
+                    0.6630760261437908,
+                    0.7402747474747474
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-43",
+              "start_byte": 1319,
+              "end_byte": 1334,
+              "literal_text": "procedimiento.\n",
+              "literal_sha256": "8ae9bc2559638ebad583f38e59a4ce8e34185eca06349d65da7955c6fcf9da46",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "845913436686ab22aad4d0edcabc406ed96b8bed4f4f760493e6bcc061664597",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.740530303030303,
+                    0.41049560784313727,
+                    0.7529414141414141
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-44",
+              "start_byte": 1334,
+              "end_byte": 1388,
+              "literal_text": "NOTA: La evidencia documental digital de los trabajos\n",
+              "literal_sha256": "3c61a616787bff7a4b10de8d1c49798e64951e71148313c67677c6c5745ab0af",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "34cf0a5fc13212f4552a88c97d6c365cc8565c413f7b3368447d2dd4c9fe97ff",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7659169696969697,
+                    0.6631566640522877,
+                    0.7763423030303029
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-45",
+              "start_byte": 1388,
+              "end_byte": 1452,
+              "literal_text": "relacionados, quedará resguardada en la plataforma de la CPIM,\n",
+              "literal_sha256": "24e41cad54141579784400c24805d32ccbb4972ce83945b0a5f0777208a8551b",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "ac3d17d2509a69c13980fe29c99f88c530da2af0e636d9b404611a140a6b63ca",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.7765836363636363,
+                    0.6629442562091505,
+                    0.7870089696969695
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            },
+            {
+              "segment_id": "skopos-p18-item-46",
+              "start_byte": 1452,
+              "end_byte": 1477,
+              "literal_text": "para fines de auditoría.",
+              "literal_sha256": "657d5ddf44dd9cbde158aec811fc5b293e907b7c4762614f14b96dbd9540cfa3",
+              "locator": {
+                "kind": "pdf_page",
+                "value": {
+                  "page": 18,
+                  "item_id": "8018762bfb5610009fb6bfcb830b400bd6d187e985d6655b71bc609e26418b73",
+                  "bbox": [
+                    0.3161797385620915,
+                    0.787250303030303,
+                    0.4387891032679738,
+                    0.7976756363636364
+                  ]
+                }
+              },
+              "modality": "native_text",
+              "extraction_status": "unreviewed"
+            }
+          ]
+        }
+      ],
+      "glm_support": "not_reassessed_for_refined_citation",
+      "glm_relevance": "relevant",
+      "jev_support": "not_run",
+      "glm_support_original": "supported",
+      "jev_support_original": "not_run"
+    }
+  ],
+  "coverage_advice": "complete",
+  "omission_advice": "not_run",
+  "review_disagreement": false,
+  "glm_model_requested": "glm-5.3-flash",
+  "jev_model_requested": null,
+  "model_effective": "unknown",
+  "flow_result_sha256": "9cdbacb9c0a0e26f978de10d1de511e3aa2116560175311aab417b37141facd7",
+  "jev_result_sha256": null,
+  "adjudication": "not_performed",
+  "memory_admission": "not_performed",
+  "institutional_acceptance": "not_performed",
+  "disposition": "requires_review",
+  "candidate_answer_status": "candidate_partial",
+  "candidate_declared_missing": [
+    {
+      "part_id": "P1",
+      "status": "partial",
+      "missing": [
+        "El pasaje no establece criterios ni mecanismo de reactivación posterior del folio una vez que pasa a estatus \"Inactivo/ No prioritario\": el texto solo llega a la conclusión del procedimiento y al resguardo de la evidencia documental digital para fines de auditoría.",
+        "El pasaje corresponde al texto de un borrador y no prueba el comportamiento real de la plataforma ni su operación efectiva; asimismo, no acredita la aprobación ni la vigencia institucional del procedimiento descrito.",
+        "El pasaje no explica la razón de la discrepancia entre el Anexo 3 citado para la cédula analizada y el Anexo 2 citado para la cédula comentada en la actividad 14."
+      ]
+    }
+  ],
+  "candidate_coverage_conflict": true,
+  "citation_refinement_sha256": "881d81cf8711b931f548d0facc33343f29698f00c7ae1d5117cea5c542f5ea3b",
+  "citation_refinement_status": "literal_ranges_verified_support_not_reassessed",
+  "coverage_advice_scope": "original_candidate",
+  "flow_budgets": {
+    "coverage_max_output_tokens": 8192,
+    "generation_max_output_tokens": 16384,
+    "omission_max_output_tokens": 4096,
+    "relevance_max_output_tokens": 4096,
+    "schema": "agora/evidence-answer-budgets/v2-experimental",
+    "support_max_output_tokens": 8192
+  },
+  "flow_budgets_sha256": "f6c74b869be3b7cd2f43e43fee59744148b7765ba6813b34fd84bb7fc3239db4"
+}
