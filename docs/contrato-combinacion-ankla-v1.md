@@ -1,9 +1,14 @@
-# Contrato de combinación AN-KLA ↔ Ágora: admisión gobernada (borrador v1)
+# Contrato de combinación AN-KLA ↔ Ágora: admisión gobernada (v1)
 
-**Estado:** borrador, 2026-10-19. No es un contrato vigente y no existe
-implementación: es la propuesta de frontera de salida de Ágora hacia la
-memoria gobernada. Su aceptación pertenece al Operador. Ágora funciona sin
-AN-KLA y este contrato no es requisito de ninguna ruta actual.
+**Estado:** vigente, 2026-10-19. Aceptado por el Operador el 2026-10-19 tras
+ejecutar sus puertas de validación: [ensayo en almacén sintético](../experiments/ankla-admission-v1/README.md)
+(admisión gobernada, supersede con estados correctos, autoridad falsificada
+rechazada con `cli_privileged_authority_unresolved`, cero rutas de escritura
+directa en `src/agora` y `verify` con identidad completa). Publicado en
+`project-manifest.yaml` como contrato `agora/result-ref/v1`. La exportación
+del paquete de consulta como campo de la referencia queda como incremento
+posterior: en el ensayo viajó `package_sha256: null` declarado. Ágora sigue
+funcionando sin AN-KLA y este contrato no es requisito de ninguna ruta.
 
 ## Regla cardinal
 

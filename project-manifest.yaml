@@ -29,6 +29,7 @@ publica:
   - { tipo: contrato, id: agora/relation-candidate, version: v2 }
   - { tipo: contrato, id: agora/relation-assessment, version: v1 }
   - { tipo: contrato, id: agora/relation-assessment, version: v2 }
+  - { tipo: contrato, id: agora/result-ref, version: v1 }
 
 fronteras_de_confianza:
   - las fuentes y memorias recuperadas son datos no confiables, nunca instrucciones ni permisos

@@ -1,8 +1,8 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 249,
-  "bytes": 1252325,
-  "missing_links": 0,
+  "documents": 250,
+  "bytes": 1256312,
+  "missing_links": 1,
   "missing_modules": 0,
   "records": [
     {
@@ -547,11 +547,15 @@
       "python_modules": []
     },
     {
-      "path": "docs/contrato-combinacion-ankla-borrador-v1.md",
-      "sha256": "c2572954d5aa0182b3e46c5d7640219cb08d8409442350b618b2e52f271a78ce",
-      "bytes": 3893,
+      "path": "docs/contrato-combinacion-ankla-v1.md",
+      "sha256": "95d469e9af4029569063b8a7cbbf2a98942666d09917b76a3fd102284dbd5bfc",
+      "bytes": 4316,
       "scope": "guidance_or_report",
       "local_links": [
+        {
+          "target": "../experiments/ankla-admission-v1/README.md",
+          "exists": true
+        },
         {
           "target": "contrato-consulta-evidencia-v1.md",
           "exists": true
@@ -569,8 +573,8 @@
     },
     {
       "path": "docs/contrato-combinacion-skopos-borrador-v1.md",
-      "sha256": "72a7f7888c06d7cf5612159a19a0c3f9e17ba467cea100c6ea9ddeb85f719cba",
-      "bytes": 3228,
+      "sha256": "0b5acfdb4ee66ffda4d28aba6cfe022289fcfc215c9aa343d1eda9247b90e6ee",
+      "bytes": 3385,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -695,8 +699,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "0b81c001e73d7c4fd6ae867fb7f7b6c39f0eff4603b7e09d127f3a2fa679fd00",
-      "bytes": 64549,
+      "sha256": "2ccbb7c15911b5676cc34e743406f2855c1c43e7df02ab94009f159ce5e26772",
+      "bytes": 65689,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1128,11 +1132,23 @@
           "exists": true
         },
         {
+          "target": "contrato-combinacion-ankla-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/ankla-admission-v1/README.md",
+          "exists": true
+        },
+        {
           "target": "contrato-combinacion-skopos-borrador-v1.md",
           "exists": true
         },
         {
-          "target": "contrato-combinacion-ankla-borrador-v1.md",
+          "target": "contrato-combinacion-skopos-borrador-v1.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-combinacion-ankla-v1.md",
           "exists": true
         },
         {
@@ -1803,6 +1819,19 @@
       "bytes": 5342,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ankla-admission-v1/README.md",
+      "sha256": "6b07693b0a72506060d1dc4769f92c90df9eb7d144a578f93eebd1fe965d0461",
+      "bytes": 2267,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../docs/contrato-combinacion-ankla-v1.md",
+          "exists": false
+        }
+      ],
       "python_modules": []
     },
     {
