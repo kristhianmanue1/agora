@@ -42,6 +42,15 @@ no se promedia.
 3. Los umbrales se fijan antes de ver resultados de una versión nueva.
 4. Ningún resultado promociona defaults; la aceptación pertenece al Operador.
 
+**Congelado vigente:** [`model-phase-freeze.json`](model-phase-freeze.json)
+(2026-10-19, `frozen_before_any_live_call`). Define los tres casos con sus
+textos fuente fijados por SHA-256, etiquetas esperadas, umbrales ex-ante con
+cláusulas de fallo explícitas, techos de once despachos en total y cero
+reintentos. La ejecución con proveedor vivo requiere autorización expresa del
+Operador (proveedor y presupuesto); sin ella, el congelado permanece sin
+ejecutar. Un fallo conserva el caso y exige rediseño: no se recalifica una
+versión después de ver sus resultados.
+
 ## Registro de versiones
 
 `freeze.json` registra el hash de cada módulo de `src/agora/*.py` y del

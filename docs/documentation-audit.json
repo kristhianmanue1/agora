@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
   "documents": 251,
-  "bytes": 1260192,
+  "bytes": 1262742,
   "missing_links": 2,
   "missing_modules": 0,
   "records": [
@@ -703,8 +703,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "b6249930a5a720d01b32766905601d38310bd8b21bffbde0548299774a7243ce",
-      "bytes": 66967,
+      "sha256": "0a8b36bf21a553d08d4838bd6546480bcf034f0153a6e8fef29728446ae8dfe3",
+      "bytes": 68336,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1133,6 +1133,14 @@
         },
         {
           "target": "propuesta-manifiesto-pinax-2026-10-07.yaml",
+          "exists": true
+        },
+        {
+          "target": "../experiments/skopos-bilateral-verify-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/quality-battery-v1/README.md",
           "exists": true
         },
         {
@@ -2719,10 +2727,15 @@
     },
     {
       "path": "experiments/quality-battery-v1/README.md",
-      "sha256": "c4b36f1793fd14f78d01d2d731fa2cfabb6670eb38972ba4319e28a95850c5dd",
-      "bytes": 3538,
+      "sha256": "796c2ae7de372be645329928422aff417ff9fc3335f9f27f7b943314d0e5ab7f",
+      "bytes": 4111,
       "scope": "experiment_record",
-      "local_links": [],
+      "local_links": [
+        {
+          "target": "model-phase-freeze.json",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
@@ -3093,8 +3106,8 @@
     },
     {
       "path": "experiments/skopos-bilateral-verify-v1/README.md",
-      "sha256": "9084d79f37731dad2d443f99662c1ced3a3f36c6143d587f0066a54ec7837f29",
-      "bytes": 2174,
+      "sha256": "88d10c7e79e5d0ee9378a992857dfce55c128e3ab8c8d8391239e6f4c15502a0",
+      "bytes": 2782,
       "scope": "experiment_record",
       "local_links": [
         {

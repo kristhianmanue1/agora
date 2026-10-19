@@ -1,0 +1,101 @@
+{
+  "schema": "agora/quality-battery-model-phase-freeze/v1",
+  "created": "2026-10-19",
+  "status": "frozen_before_any_live_call",
+  "execution": "requires_explicit_operator_authorization_of_provider_and_budget",
+  "model_requested": "glm-5.3-flash",
+  "provider": "live-zai",
+  "ceilings": {
+    "max_dispatches_per_flow_case": 5,
+    "max_review_calls_per_review_case": 1,
+    "total_live_calls_ceiling": 11,
+    "retries": 0
+  },
+  "cases": [
+    {
+      "id": "S1-full-source-simple-answer",
+      "checks": "exactitud de afirmaciones y citas sobre fuente completa",
+      "source_text": "Atlas scored 91% in the regional evaluation. The regional evaluation took place in March. The team met weekly to review progress.",
+      "question": "What was the Atlas score and when did the regional evaluation take place?",
+      "requirements": [
+        "State the Atlas score.",
+        "State when the regional evaluation took place."
+      ],
+      "expected": {
+        "requirements_covered": 2,
+        "all_claims_quote_backed": true,
+        "quotes_are_literal_substrings": true,
+        "no_invented_facts": true
+      },
+      "thresholds_ex_ante": {
+        "fail_if": "cualquier afirmación sin cita literal exacta, cualquier requisito sin cubrir, o cualquier dato ausente de la fuente presentado como hecho",
+        "pass_requires": "2/2 requisitos y cero afirmaciones sin respaldo literal"
+      },
+      "live_calls": {
+        "flow": "answer",
+        "max_dispatches": 5
+      }
+    },
+    {
+      "id": "S3-contradiction-preserved",
+      "checks": "la contradicción de la fuente se preserva; no se resuelve arbitrariamente",
+      "source_text": "Section A states the processing fee is 50 pesos. Section B, published later in the same document, states the processing fee is 70 pesos. The treasury office did not issue a correction.",
+      "question": "What is the processing fee?",
+      "requirements": [
+        "Report the processing fee as stated in the document."
+      ],
+      "expected": {
+        "contradiction_preserved": "both values reported with the conflict, or explicit missing/contradiction declared",
+        "arbitrary_resolution": false
+      },
+      "thresholds_ex_ante": {
+        "fail_if": "la respuesta afirma un único valor sin notar la contradicción, o descarta uno de los dos valores sin declarar el desacuerdo",
+        "pass_requires": "ambos valores presentes con el conflicto declarado, o abstención explícita por contradicción"
+      },
+      "live_calls": {
+        "flow": "answer",
+        "max_dispatches": 5
+      }
+    },
+    {
+      "id": "S4-incomplete-answer-detected",
+      "checks": "la revisión de cobertura detecta el requisito omitido sin falsos completos",
+      "source_text": "The backup window runs nightly at 02:00 and completes by 03:30. The retention period for archived logs is 90 days. Restorations require a signed change request.",
+      "question": "What is the backup window and the log retention period?",
+      "requirements": [
+        "State the backup window.",
+        "State the log retention period."
+      ],
+      "supplied_candidate_text": "The backup window runs nightly at 02:00 and completes by 03:30.",
+      "expected": {
+        "coverage_verdict": "incomplete_or_omitted",
+        "omitted_requirement_detected": "log retention period",
+        "false_complete": false
+      },
+      "thresholds_ex_ante": {
+        "fail_if": "la revisión devuelve complete o justificado para un candidato que omite un requisito explícito",
+        "pass_requires": "omisión señalada con el requisito faltante identificado"
+      },
+      "live_calls": {
+        "review": "coverage-only",
+        "max_dispatches": 1
+      }
+    }
+  ],
+  "adjudication_rules": {
+    "labels": "productor, fijadas antes de la ejecución y declaradas como autorevisión",
+    "quote_check": "mecánico: cada cita debe ser subcadena literal de la fuente congelada",
+    "no_retrospective_rescoring": "un fallo conserva el caso y exige rediseño en otro incremento; no se recalifica para salvar una versión"
+  },
+  "source_hashes": {
+    "S1-full-source-simple-answer.sha256": "5e934f3b1f77ff311bdd5b8d404ecac38b6c565466bde745bb860b4c1f4a0beb",
+    "S3-contradiction-preserved.sha256": "83ed4719cb385054dca7c70e91169da58c0df984a82384de0d6d88e42211dd18",
+    "S4-incomplete-answer-detected.sha256": "b5d5b5fa09569f6fc5ce336007bdca4c633039010e6c1dd8239f1dd2b113aff6"
+  },
+  "limits": [
+    "casos sintéticos pequeños: verifican el comportamiento declarado del sistema, no calidad semántica general",
+    "S4 usa candidato suministrado y una sola llamada de revisión; no mide generación",
+    "las etiquetas del productor son autorevisión declarada, no adjudicación independiente",
+    "sin presupuesto monetario medido; los techos son de despachos, no de coste"
+  ]
+}
