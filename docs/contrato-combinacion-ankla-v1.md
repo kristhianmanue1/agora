@@ -5,9 +5,10 @@ ejecutar sus puertas de validación: [ensayo en almacén sintético](../experime
 (admisión gobernada, supersede con estados correctos, autoridad falsificada
 rechazada con `cli_privileged_authority_unresolved`, cero rutas de escritura
 directa en `src/agora` y `verify` con identidad completa). Publicado en
-`project-manifest.yaml` como contrato `agora/result-ref/v1`. La exportación
-del paquete de consulta como campo de la referencia queda como incremento
-posterior: en el ensayo viajó `package_sha256: null` declarado. Ágora sigue
+`project-manifest.yaml` como contrato `agora/result-ref/v1`. La referencia
+viaja ahora con paquete exportado real: `package_schema` y `package_sha256`
+de `agora/consultation-package` se producen y registran en el propio ensayo
+desde el 2026-10-19. Ágora sigue
 funcionando sin AN-KLA y este contrato no es requisito de ninguna ruta.
 
 ## Regla cardinal

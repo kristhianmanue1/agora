@@ -5,7 +5,10 @@
       "step": "agora_run_and_registry",
       "flow_status": "candidate_reviewed",
       "result_id": "r-0001",
-      "result_sha256": "182173fb7410fc7643566c15f543becc77b4268ad911294bfc924fa45679fbe4"
+      "result_sha256": "182173fb7410fc7643566c15f543becc77b4268ad911294bfc924fa45679fbe4",
+      "package_schema": "agora/consultation-package/v1-experimental",
+      "package_sha256": "89d04b1b75d85801c357d77d25655b45580ad3b5850ece87ae1228add6db00ee",
+      "package_claims": 1
     },
     {
       "step": "store_initialized",

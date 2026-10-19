@@ -40,8 +40,9 @@ observadas, quedan en `runs/RESULTS.json`.
 
 ## Límites
 
-- La referencia con `package_sha256` null no es la forma objetivo completa
-  del contrato; exportar el paquete y admitirlo es el incremento siguiente.
+- Desde el 2026-10-19 la referencia lleva paquete exportado real
+  (`package_schema`/`package_sha256` de `agora/consultation-package`); el
+  paquete es de una corrida con proveedor simulado.
 - Un solo caso sintético; no demuestra generalización ni rendimiento.
 - No prueba compactación, export/restore ni concurrentes.
 - El resultado admitido sigue siendo `requires_review`: nada aquí lo vuelve
