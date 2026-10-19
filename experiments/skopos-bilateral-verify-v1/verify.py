@@ -22,10 +22,11 @@ def sha_file(path):
 
 
 def canonical_sha(path):
+    """Forma canónica del contrato de acceso Skopos v0.3 (compacta, ordenada)."""
     try:
         value = json.loads(Path(path).read_text(encoding="utf-8"))
-        encoded = json.dumps(value, sort_keys=True,
-                             ensure_ascii=False).encode("utf-8", "surrogatepass")
+        encoded = json.dumps(value, sort_keys=True, ensure_ascii=False,
+                             separators=(",", ":")).encode("utf-8", "surrogatepass")
     except Exception:
         return None
     return hashlib.sha256(encoded).hexdigest()
@@ -74,9 +75,9 @@ def main():
         hashes["request.json"], canonical_sha(request))
     checks.append({"check": "internal_request_binding_reproduces_locally",
                    "observed": binding_reproduces,
-                   "detail": "response.request_sha256 no reproduce desde los bytes "
-                             "locales del request (crudo ni canónico): la huella la "
-                             "calculó Skopos sobre su propia serialización"})
+                   "detail": "reproduce con la forma canónica compacta documentada "
+                             "en el contrato de acceso Skopos v0.3 "
+                             "(sort_keys, ensure_ascii=False, separadores ',:' )"})
 
     referenced = []
     for path in sk_tree:

@@ -31,8 +31,8 @@
     },
     {
       "check": "internal_request_binding_reproduces_locally",
-      "observed": false,
-      "detail": "response.request_sha256 no reproduce desde los bytes locales del request (crudo ni canónico): la huella la calculó Skopos sobre su propia serialización"
+      "observed": true,
+      "detail": "reproduce con la forma canónica compacta documentada en el contrato de acceso Skopos v0.3 (sort_keys, ensure_ascii=False, separadores ',:' )"
     },
     {
       "check": "skopos_custody_references_original",

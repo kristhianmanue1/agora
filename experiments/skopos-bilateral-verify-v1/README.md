@@ -30,20 +30,29 @@ propios de Skopos (repositorio local `~/www/aria/skopos`):
 **`bilateral_not_confirmed`.** Los hallazgos negativos son el resultado de la
 puerta, no defectos del script:
 
-- Skopos **referencia** el original por hash en sus registros de custodia,
-  pero sus directorios `custody-delivery/` y `document-delivery/` están vacíos
-  y **ninguna copia** del par petición/respuesta servido existe en su árbol
-  de corridas.
-- La huella `request_sha256` de la respuesta no se reproduce desde los bytes
-  que Ágora conserva (crudos ni canónicos): la calculó Skopos sobre su propia
-  serialización, así que el enlace hoy no es verificable por el consumidor.
+- Skopos **referencia** el original por hash en sus registros de custodia
+  (dieciséis archivos), pero sus directorios `custody-delivery/` y
+  `document-delivery/` están vacíos y **ninguna copia** del par
+  petición/respuesta servido existe en su árbol de corridas.
 - Los bytes del PDF original no están en ninguno de los dos repositorios;
   la verificación de integridad del intercambio quedaría en `not_checked`.
+
+**Remediación (2026-10-19, Skopos `d7dadea`):** el contrato de acceso v0.3
+añadió retención optativa de pares servidos (`served_retention_dir`) y
+documentó la forma canónica compacta de `request_sha256`; con ella el enlace
+**sí reproduce** desde los bytes del consumidor (comprobación en verde tras
+la remediación). El par histórico de la página 15 nunca fue retenido y no
+puede reconstruirse: la confirmación bilateral exigirá un servicio nuevo con
+retención activada (renovación del piloto) y, para integridad del original,
+acceso a sus bytes por la vía de custodia. El caso reservado requiere una
+derivación de página no consumida (la 15 y la 21 ya lo fueron).
 
 ## Qué exige esto antes de la vigencia del contrato
 
 Está nombrado en `runs/RESULTS.json`. En síntesis: retención duradera de los
 pares servidos (o consumo sólo desde corridas duraderas de Skopos), huella
 reproducible desde los bytes del consumidor, y acceso al original para la
-verificación. El caso reservado sigue pendiente y requiere una derivación
-Skopos de una página no consumida por Ágora.
+verificación. **Actualización 2026-10-19:** Skopos incorporó la retención
+optativa y la forma canónica en su contrato de acceso v0.3 (commit `d7dadea`);
+queda pendiente un servicio nuevo con retención activada y el caso reservado
+con página no consumida.
