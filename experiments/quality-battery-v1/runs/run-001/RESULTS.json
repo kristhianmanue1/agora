@@ -1,0 +1,201 @@
+{
+  "schema": "agora/quality-battery/v1",
+  "battery": "quality-battery-v1",
+  "scenarios": [
+    {
+      "id": "S2",
+      "name": "absent_mandatory_declared_not_invented",
+      "checks": [
+        {
+          "name": "flow_status",
+          "expected": "'candidate_reviewed'",
+          "observed": "'candidate_reviewed'",
+          "pass": true
+        },
+        {
+          "name": "no_invented_claims",
+          "expected": "0",
+          "observed": "0",
+          "pass": true
+        },
+        {
+          "name": "missing_visible",
+          "expected": "True",
+          "observed": "True",
+          "pass": true
+        },
+        {
+          "name": "part_status",
+          "expected": "'not_in_passages'",
+          "observed": "'not_in_passages'",
+          "pass": true
+        },
+        {
+          "name": "claim_review_not_run",
+          "expected": "('not_run', 'no_claims')",
+          "observed": "('not_run', 'no_claims')",
+          "pass": true
+        },
+        {
+          "name": "memory_admission",
+          "expected": "'not_performed'",
+          "observed": "'not_performed'",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "name": "reference_validity_is_not_semantic_backing",
+      "checks": [
+        {
+          "name": "references_resolve",
+          "expected": "True",
+          "observed": "True",
+          "pass": true
+        },
+        {
+          "name": "support_axis",
+          "expected": "'insufficient'",
+          "observed": "'insufficient'",
+          "pass": true
+        },
+        {
+          "name": "review_flags_revision",
+          "expected": "'needs_revision'",
+          "observed": "'needs_revision'",
+          "pass": true
+        },
+        {
+          "name": "adjudication_not_performed",
+          "expected": "'not_performed'",
+          "observed": "'not_performed'",
+          "pass": true
+        },
+        {
+          "name": "disposition",
+          "expected": "'requires_review'",
+          "observed": "'requires_review'",
+          "pass": true
+        },
+        {
+          "name": "completeness_not_established",
+          "expected": "'not_established'",
+          "observed": "'not_established'",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "name": "altered_source_rejected_before_dispatch",
+      "checks": [
+        {
+          "name": "flow_status",
+          "expected": "'rejected'",
+          "observed": "'rejected'",
+          "pass": true
+        },
+        {
+          "name": "diagnostic",
+          "expected": "'SourceError'",
+          "observed": "'SourceError'",
+          "pass": true
+        },
+        {
+          "name": "zero_dispatches",
+          "expected": "0",
+          "observed": "0",
+          "pass": true
+        },
+        {
+          "name": "zero_provider_calls",
+          "expected": "0",
+          "observed": "0",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "name": "partial_derivative_gap_not_citable",
+      "checks": [
+        {
+          "name": "coverage_declared_partial",
+          "expected": "'partial'",
+          "observed": "'partial'",
+          "pass": true
+        },
+        {
+          "name": "gap_citation_rejected",
+          "expected": "'evidence_outside_segment'",
+          "observed": "'evidence_outside_segment'",
+          "pass": true
+        },
+        {
+          "name": "literal_is_source_bytes",
+          "expected": "'Alpha'",
+          "observed": "'Alpha'",
+          "pass": true
+        },
+        {
+          "name": "semantic_support",
+          "expected": "'not_verified'",
+          "observed": "'not_verified'",
+          "pass": true
+        },
+        {
+          "name": "not_admitted",
+          "expected": "False",
+          "observed": "False",
+          "pass": true
+        },
+        {
+          "name": "original_integrity",
+          "expected": "'sha256_verified'",
+          "observed": "'sha256_verified'",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "name": "uncertain_remote_durable_no_retry",
+      "checks": [
+        {
+          "name": "flow_status",
+          "expected": "'remote_outcome_unknown'",
+          "observed": "'remote_outcome_unknown'",
+          "pass": true
+        },
+        {
+          "name": "calls_without_retry",
+          "expected": "['generation', 'support']",
+          "observed": "['generation', 'support']",
+          "pass": true
+        },
+        {
+          "name": "dispatches_count",
+          "expected": "2",
+          "observed": "2",
+          "pass": true
+        },
+        {
+          "name": "attempt_receipts",
+          "expected": "2",
+          "observed": "2",
+          "pass": true
+        },
+        {
+          "name": "no_support_response",
+          "expected": "False",
+          "observed": "False",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "failed": 0,
+  "provider_calls_live": 0,
+  "date": "2026-10-19"
+}
