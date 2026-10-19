@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 194,
-  "bytes": 949942,
+  "documents": 245,
+  "bytes": 1224447,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "749419be71d7ba8201dca6ccf44ef53c354c73ecd09251d1b255139181bd1a88",
-      "bytes": 4916,
+      "sha256": "779c591a4c263931e8903c99d48df84dc020eef6a99a97268220214f18760c9c",
+      "bytes": 7206,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -121,7 +121,23 @@
           "exists": true
         },
         {
+          "target": "docs/guia-agentes.md",
+          "exists": true
+        },
+        {
+          "target": "docs/contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "experiments/ctim-v02-bilateral-v1/README.md",
+          "exists": true
+        },
+        {
           "target": "docs/pendientes-cli.md",
+          "exists": true
+        },
+        {
+          "target": "docs/relaciones-candidatas.md",
           "exists": true
         },
         {
@@ -470,8 +486,8 @@
     },
     {
       "path": "docs/consulta-multipasaje.md",
-      "sha256": "c71840c3030891fe7e99f83c8a10baff76e1da560a7a019c80b75f1cb84baeb0",
-      "bytes": 9592,
+      "sha256": "4010147b29afa1272620bbbfcc54ca0fd4a2cc0a81d40f9f37a629f75765f89d",
+      "bytes": 16026,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -484,6 +500,22 @@
         },
         {
           "target": "../experiments/scope-vigency-repair-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/refinement-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/explicit-plan-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/idf-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/structured-handoff-v1/README.md",
           "exists": true
         }
       ],
@@ -515,6 +547,44 @@
       "python_modules": []
     },
     {
+      "path": "docs/contrato-consulta-evidencia-v1.md",
+      "sha256": "4f412bc513f64a4a22c2e02a5ae65a197c1dd62011c3d6ec20e6513ab7d4da72",
+      "bytes": 11949,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "plan-consulta-con-modelos-y-evidencia-2026-10-10.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/contrato-paquete-consulta-aria-experto-v1.md",
+      "sha256": "cc42ef8f53fa62286d9ecc021fd9c68c2dda43c9cd1cecee26b2452607e09723",
+      "bytes": 6334,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/answer-entry-ctim-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/ctim-v02-bilateral-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "docs/control-contexto-suficiente-01.md",
       "sha256": "45d3c0f2cce0815ecd34386bb0899f1017ef680ccd45722823d59c5a4957fe02",
       "bytes": 4246,
@@ -526,6 +596,27 @@
       "path": "docs/controles-revision-01.md",
       "sha256": "16c3c9f4114b6ab85cbcb1d98e3cb76d8777600f283f5948a4a95fc9ba5d7f1c",
       "bytes": 9121,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/ctim-18-22-matriz-evidencia-2026-10-10.md",
+      "sha256": "288833a613df35566e95f073488fae3b288f63b95ff0b66bae267b9088c2ea4e",
+      "bytes": 4152,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/ctim-sequence-completeness-v1/source.txt",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/ctim-bilateral-agora-evaluation-v1.md",
+      "sha256": "0b2d27a08cdc46cb8fe020ce045a8f82903038b176c82326ecdb646cefc39195",
+      "bytes": 7867,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
@@ -570,8 +661,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "2aa94f765cfad111dbe680b8f04ab755e104ef98b00fb923446ecd3a521a26cd",
-      "bytes": 42555,
+      "sha256": "bc99a3fd822f644daa619c7eaf9901f41012911b4d85f13e162edf9f1ce652a4",
+      "bytes": 60897,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -600,6 +691,14 @@
         },
         {
           "target": "evaluacion-corpus-publicos.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "intercambio-evidencia-fuentes-v1.md",
           "exists": true
         },
         {
@@ -841,6 +940,158 @@
         {
           "target": "../experiments/benchmark-bank-v1/README.md",
           "exists": true
+        },
+        {
+          "target": "../experiments/refinement-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/focused-label-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "consulta-multipasaje.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/explicit-plan-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/selection-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/subquestion-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/idf-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/section-comparison-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/structured-handoff-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/structured-live-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/streaming-diagnosis-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/comparison-chain-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/linked-expansion-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/relation-review-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "relaciones-candidatas.md",
+          "exists": true
+        },
+        {
+          "target": "relaciones-candidatas.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/relation-flow-smoke-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/relation-real-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "relaciones-candidatas.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/relation-version-v2/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/baseline-input-assessment-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "guia-agentes.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/agent-first-use-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "intercambio-evidencia-fuentes-v1.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/jev-adjudication-v1/PROTOCOL.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/jev-adjudication-v1/MODEL-PANEL.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/jev-heldout-qasper-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/jev-case-03-review-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "ctim-bilateral-agora-evaluation-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/ctim-v02-bilateral-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "ctim-18-22-matriz-evidencia-2026-10-10.md",
+          "exists": true
+        },
+        {
+          "target": "plan-consulta-con-modelos-y-evidencia-2026-10-10.md",
+          "exists": true
+        },
+        {
+          "target": "preflight-borrador-normativo-ctim-2026-10-10.md",
+          "exists": true
+        },
+        {
+          "target": "../project-manifest.yaml",
+          "exists": true
+        },
+        {
+          "target": "propuesta-manifiesto-pinax-2026-10-07.yaml",
+          "exists": true
         }
       ],
       "python_modules": []
@@ -976,6 +1227,39 @@
       "python_modules": []
     },
     {
+      "path": "docs/guia-agentes.md",
+      "sha256": "36d0349d611c23828b794bb611bec71c289abe6ab3ba50e3817ed28f095965ce",
+      "bytes": 5483,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "pendientes-cli.md",
+          "exists": true
+        },
+        {
+          "target": "relaciones-candidatas.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/agent-first-use-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/intercambio-evidencia-fuentes-v1.md",
+      "sha256": "89e085d4bbdd74c43886ba74550079eaade0cc4de681d55a6ef8a9e6d9bba986",
+      "bytes": 15437,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "docs/lectura-revisada-cli.md",
       "sha256": "61bcf9b7abb9669c1907a45099d8ecccb79f4aab46cd0a7c9eda7b1ac411147e",
       "bytes": 6876,
@@ -1034,6 +1318,79 @@
       "path": "docs/piloto-conjunto-ids-02.md",
       "sha256": "ff7c2e347d3c83eb3ddb6e90e0de95bd85ef6c09d961c7d112ee7fab38b4b955",
       "bytes": 3631,
+      "scope": "guidance_or_report",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/plan-consulta-con-modelos-y-evidencia-2026-10-10.md",
+      "sha256": "766eaacbdf7508e540af2bfb576bbccfe9f3bc370c97396797ad6a03db167c3f",
+      "bytes": 22584,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/ctim-sequence-completeness-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "ctim-18-22-matriz-evidencia-2026-10-10.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-afirmaciones-evidencia.md",
+          "exists": true
+        },
+        {
+          "target": "generacion-desde-plan.md",
+          "exists": true
+        },
+        {
+          "target": "revision-acotada-por-afirmacion.md",
+          "exists": true
+        },
+        {
+          "target": "revision-suficiencia-cli.md",
+          "exists": true
+        },
+        {
+          "target": "diagnostico-omisiones-cli.md",
+          "exists": true
+        },
+        {
+          "target": "relaciones-candidatas.md",
+          "exists": true
+        },
+        {
+          "target": "ctim-bilateral-agora-evaluation-v1.md",
+          "exists": true
+        },
+        {
+          "target": "ctim-18-22-matriz-evidencia-2026-10-10.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/preflight-borrador-normativo-ctim-2026-10-10.md",
+      "sha256": "74ab69905f23461c1176fccd5d41d1eefd13fa4f37415dbf978eddf80901322b",
+      "bytes": 2937,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
@@ -1162,6 +1519,19 @@
       "bytes": 3881,
       "scope": "guidance_or_report",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "docs/relaciones-candidatas.md",
+      "sha256": "6c2f78bbb8822b5d4290cb860deb50347e8dfe09fad7097bc0e5f76430a68417",
+      "bytes": 7011,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/relation-flow-smoke-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
@@ -1358,6 +1728,14 @@
       "python_modules": []
     },
     {
+      "path": "experiments/agent-first-use-v1/README.md",
+      "sha256": "83a408f23f7488cb1130f79a292bbe3b7fc26df11ce0648ac20427ebadf8d8cc",
+      "bytes": 1597,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/agora-skevi-v1/AGENTS.md",
       "sha256": "0fb49ee777e85a49d25453c8d5e69b8fbf5b44c28e5dc977ee279d2cc880c5c7",
       "bytes": 1003,
@@ -1369,6 +1747,14 @@
       "path": "experiments/agora-skevi-v1/README.md",
       "sha256": "f51397a2f67323b3d5cc47c3a053a71eece380a6a87d88e80c66d336b62f33c7",
       "bytes": 5342,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ankla-governed-write-v1/README.md",
+      "sha256": "b73128c50f579d1e52acf3fa4d8cead6450b3bc96e12094aedd90c506906b673",
+      "bytes": 3182,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
@@ -1390,9 +1776,25 @@
       "python_modules": []
     },
     {
+      "path": "experiments/answer-entry-ctim-v1/README.md",
+      "sha256": "dd17be2e24174117fe62dffb9379d2740cf0bf0bf4b5f35796a3683db8fd9000",
+      "bytes": 2662,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/baseline-input-assessment-v1/README.md",
+      "sha256": "96ae9d98ae2b2143d2e757e8ca9e0e5a9e440ed049510562451efb0b5881a8e8",
+      "bytes": 3103,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/benchmark-bank-v1/README.md",
-      "sha256": "49d4bf6d7c6e8ce09daa98f6252eda2f00dba6ef6f2de52b865cea43bd17d8ab",
-      "bytes": 5162,
+      "sha256": "78b2bdcb4d4db0492073f7a435ba408e8321a68e68405de0c43043ae54df072e",
+      "bytes": 6170,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
@@ -1450,6 +1852,27 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/comparative-matrix-v1/README.md",
+      "sha256": "29738fdbca0e6f0aedcae1254d1769d36840a0681daaeac20f3bbecd31836b1d",
+      "bytes": 11752,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../focused-label-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/comparison-chain-v1/README.md",
+      "sha256": "457e9184c8ff7d4378bd05932278970bd386b9e1308925282584a8767d83fd36",
+      "bytes": 3855,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {
@@ -1516,9 +1939,124 @@
       "python_modules": []
     },
     {
+      "path": "experiments/ctim-rs1-citation-refinement-v1/README.md",
+      "sha256": "54ad3b01293912d9052b16354e5e3a06a075955c4b260e69b3eb82312dfa48dd",
+      "bytes": 3078,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ctim-rs1-page21-preflight-v1/README.md",
+      "sha256": "22ac1c40230c4942e656abeae6a00c463ee1727e88466c601544f2a876178e1b",
+      "bytes": 3237,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "RESULTS.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ctim-rs1-page21-preflight-v1/RESULTS-v2.md",
+      "sha256": "27f099a3793b09404452ab61331fad2ef4c7d255dd6c0e991108b7447b246480",
+      "bytes": 3504,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ctim-rs1-page21-preflight-v1/RESULTS.md",
+      "sha256": "956930ddca7984a508298f12cab0b0a461e873015fe5e9d80bb58edf357dec2c",
+      "bytes": 2421,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ctim-sequence-completeness-v1/README.md",
+      "sha256": "78bc5db0ba648df23563405d0201aca7963b8ccc04ae75dd20ad734cb0c65aca",
+      "bytes": 6521,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/ctim-v02-bilateral-v1/README.md",
+      "sha256": "ce9981a210cfc9b05b9d1e2d9c7f08af0c51d9cb26b511cd6e391398019ff493",
+      "bytes": 4236,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/error-bank-run-v1/README.md",
+      "sha256": "717d164177e27eeb524be3f1362a3f811716602414bb0cfc11cb777d1a85d976",
+      "bytes": 1165,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/error-bank-v1/README.md",
+      "sha256": "74910e29faabba06451a8f76b6ffaec925537482ad4ca55f64573129aa8a4b82",
+      "bytes": 4138,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/evidence-answer-flow-t0-v1/README.md",
+      "sha256": "78ab61a302602285968c0c466836a321e1529d49893ceaa8ed51831f53b78c2b",
+      "bytes": 9284,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../../docs/contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "correction-v2-README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/evidence-answer-flow-t0-v1/correction-v2-README.md",
+      "sha256": "005ebc4e7f5979cbba9e76b7edbeec5e3405c0b1c85ca0c5fa840a0770f41d0f",
+      "bytes": 4035,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "correction-v2-freeze.json",
+          "exists": true
+        },
+        {
+          "target": "correction-v2-profile.json",
+          "exists": true
+        },
+        {
+          "target": "audit_failed_slots_v2.py",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "experiments/evidence-expansion-v1/README.md",
       "sha256": "891b46dbe41f80c7b254cc7a06a3d9c6b92ac0994e1930b6b259a33317a1982a",
       "bytes": 2167,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/explicit-plan-v1/README.md",
+      "sha256": "c680f8dce12cedf9ae524c23d21b83da9be7211388eff375bed0de37f74de71e",
+      "bytes": 2838,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
@@ -1532,9 +2070,25 @@
       "python_modules": []
     },
     {
+      "path": "experiments/focused-label-v1/README.md",
+      "sha256": "641f5d2d095ea685830328777f9096a8cf8c43f1295924e762a2410389c9fa80",
+      "bytes": 4599,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/hybrid-retrieval-v1/README.md",
       "sha256": "ffcad8c77c38cc0dc6de6d5c57a58c4791ceb0820ca1ac14d4fd2ad5be83bf39",
       "bytes": 2700,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/idf-comparison-v1/README.md",
+      "sha256": "53c8d3c36977da0e3b4b218f8a462d98dda95935188b8a6f808b04201e85e5a5",
+      "bytes": 4708,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
@@ -1612,6 +2166,123 @@
       "python_modules": []
     },
     {
+      "path": "experiments/jev-adjudication-v1/MODEL-PANEL.md",
+      "sha256": "5a6de252328cb5798f907cfa6c08749a4924ddef937fd9510ab17ee6e1769df6",
+      "bytes": 3448,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "model-panel-results/comparison.json",
+          "exists": true
+        },
+        {
+          "target": "supplement-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-adjudication-v1/PROTOCOL.md",
+      "sha256": "43dac52cbba01be5ec8cf49ce182a8f99b2ccdabf37503eaf463fcf9c4fa196a",
+      "bytes": 4501,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "MODEL-PANEL.md",
+          "exists": true
+        },
+        {
+          "target": "blind/INSTRUCTIONS.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-adjudication-v1/blind/INSTRUCTIONS.md",
+      "sha256": "13e0388aaf6bf3bc927246134bbb02e8d56eb9d25e8a6a47c0cad4ee4646ad27",
+      "bytes": 2354,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-adjudication-v1/supplement-v1/README.md",
+      "sha256": "a80f36ee0cd81e2e0cee35d9700413472a75f28440978fa5156ce9eca9c57d05",
+      "bytes": 3642,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "model-panel-freeze.json",
+          "exists": true
+        },
+        {
+          "target": "results/",
+          "exists": true
+        },
+        {
+          "target": "results/comparison.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-adjudication-v1/supplement-v1/blind/INSTRUCTIONS.md",
+      "sha256": "cac9f2e0f636eeef45aa41cb932d04853e01a6b0dbcfc3519df89739d3edc44e",
+      "bytes": 2353,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-case-03-review-v1/README.md",
+      "sha256": "56019da3c365e55880615013b862dea0a9d45c2baae028abc8c47965f7d5de80",
+      "bytes": 3610,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "control-freeze.json",
+          "exists": true
+        },
+        {
+          "target": "run_control.py",
+          "exists": true
+        },
+        {
+          "target": "control-run-2026-10-10-01/adjudication.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/jev-heldout-qasper-v1/README.md",
+      "sha256": "c79bfae8767d2e88e66e336d98f5a2df3030e24d68c44313c8e159382cbec9e0",
+      "bytes": 2933,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "audit.py",
+          "exists": true
+        },
+        {
+          "target": "adjudication.json",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/linked-expansion-v1/README.md",
+      "sha256": "581354facb3e62f079459b0e283a34cda7651173be32fa8cf69a4ad922255add",
+      "bytes": 3357,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/manual-dpm-v1/LIVE.md",
       "sha256": "55884546aec723e49661f160af3f5fcfaada7caa58c2c3d52789fa6df1dba896",
       "bytes": 4396,
@@ -1657,6 +2328,14 @@
       "python_modules": []
     },
     {
+      "path": "experiments/memos-activation-v1/README.md",
+      "sha256": "8bdd1ccb719079bb70527ac4d57e1254330dddc4deed59cf9315aa31f6f10fc6",
+      "bytes": 2054,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/memos-comparison-v1/README.md",
       "sha256": "0ee77df7e248b0c3d47ce9d32c00d6983cd7ec06b6a77792af0347f27edd915f",
       "bytes": 4545,
@@ -1675,6 +2354,22 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/memos-long-reserved-v2/README.md",
+      "sha256": "4a95240aa06a7c46cc3a29e48c5f13cc3a6bde796404241c11d8ef2d57aa23eb",
+      "bytes": 6615,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/memos-long-reserved-v3/README.md",
+      "sha256": "f06118f76ec1a7d64eb5deec4a76fdb28ad39537a264ccaa33baa2718b170b59",
+      "bytes": 7549,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {
@@ -1985,6 +2680,54 @@
       "python_modules": []
     },
     {
+      "path": "experiments/refinement-v1/README.md",
+      "sha256": "54539c51eed50a49dd7f2dbc29f55ee68d63aadb4a807ae9107ab6063d720b16",
+      "bytes": 4017,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/refinement-v2/README.md",
+      "sha256": "daece9c14dc5d3471c4bdd828461bf2f3c694ea9c96182341319abbe590a6d1c",
+      "bytes": 4446,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/relation-flow-smoke-v1/README.md",
+      "sha256": "a6ec9c3d1f24a4614cd2f7329fba808655f7350fb033e06651b1e005cc5c7b1c",
+      "bytes": 1021,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/relation-real-v1/README.md",
+      "sha256": "c8d4da9a02f04d2e75d76b6e50455893d618a077826ce902e5537b838d46b243",
+      "bytes": 3277,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/relation-review-v1/README.md",
+      "sha256": "002109eb22b4d6a0b0fd9f70a7d22edb1ebf8b58aea6561ea0340178b28174f3",
+      "bytes": 3352,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/relation-version-v2/README.md",
+      "sha256": "3e0bf6ae1201cba5072aeb1a746a8ca5f2583fe826b0a2b7633ecb6ad2c36df1",
+      "bytes": 1383,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/repair-store-v1/README.md",
       "sha256": "4e973b03a73829922774d3facc678af324ac17b9d381366297eef9ed7ce43cef",
       "bytes": 2059,
@@ -2218,6 +2961,22 @@
       "python_modules": []
     },
     {
+      "path": "experiments/section-comparison-v1/README.md",
+      "sha256": "27bc02b26097da900ae4be9cddf671b33b9b8f155680cecc48d6fbeace046482",
+      "bytes": 4750,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/selection-comparison-v1/README.md",
+      "sha256": "f59477cd992ac80118dd66585065d8f3fcd069328404303a5b414632ea65972b",
+      "bytes": 3974,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/shared-neighbor-validation-v1/README.md",
       "sha256": "c9c76b45a66a74edc7a57d402037bf303a8ab9ac45c6e1205f9dbabb58e5f3c9",
       "bytes": 4337,
@@ -2274,9 +3033,41 @@
       "python_modules": []
     },
     {
+      "path": "experiments/streaming-diagnosis-v1/README.md",
+      "sha256": "af4f02ade06a362f0a113530997e51a57a9002101f1a8952fae3f8284560250d",
+      "bytes": 3496,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
       "path": "experiments/structure-retrieval-v1/README.md",
       "sha256": "088b603f1163819bfa7a21f9041922c2ba527a48201449a38c8146acbf6ffbca",
       "bytes": 3156,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/structured-handoff-v1/README.md",
+      "sha256": "ce8b74348fa728d98ea97d68452ee207091684883eea8f5a12683e5c2ff6c125",
+      "bytes": 2821,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/structured-live-v1/README.md",
+      "sha256": "25534fb33de68a7ec35890b98d81e627aa4e0fa8ebbed012a7cafc8168d2c4ba",
+      "bytes": 3666,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/subquestion-comparison-v1/README.md",
+      "sha256": "7f33805d1bc679f7de1dc5df9eb000e64e1e0630742b0d9bc1cfbb2ce0ad68e3",
+      "bytes": 4143,
       "scope": "experiment_record",
       "local_links": [],
       "python_modules": []
