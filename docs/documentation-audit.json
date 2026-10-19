@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 247,
-  "bytes": 1244197,
+  "documents": 249,
+  "bytes": 1252325,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -547,6 +547,40 @@
       "python_modules": []
     },
     {
+      "path": "docs/contrato-combinacion-ankla-borrador-v1.md",
+      "sha256": "c2572954d5aa0182b3e46c5d7640219cb08d8409442350b618b2e52f271a78ce",
+      "bytes": 3893,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/ankla-transitions-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
+      "path": "docs/contrato-combinacion-skopos-borrador-v1.md",
+      "sha256": "72a7f7888c06d7cf5612159a19a0c3f9e17ba467cea100c6ea9ddeb85f719cba",
+      "bytes": 3228,
+      "scope": "guidance_or_report",
+      "local_links": [
+        {
+          "target": "../experiments/ctim-v02-bilateral-v1/README.md",
+          "exists": true
+        }
+      ],
+      "python_modules": []
+    },
+    {
       "path": "docs/contrato-consulta-evidencia-v1.md",
       "sha256": "0ca17e5eda983a8d791bdef9b820ad17a32d54cc071dc08746c50b3d1d58ff44",
       "bytes": 12698,
@@ -661,8 +695,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "5c12d3b1ab8823da1f949550a4c184790f1062ed6f55bb181393d2e9179a0f90",
-      "bytes": 63542,
+      "sha256": "0b81c001e73d7c4fd6ae867fb7f7b6c39f0eff4603b7e09d127f3a2fa679fd00",
+      "bytes": 64549,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1091,6 +1125,14 @@
         },
         {
           "target": "propuesta-manifiesto-pinax-2026-10-07.yaml",
+          "exists": true
+        },
+        {
+          "target": "contrato-combinacion-skopos-borrador-v1.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-combinacion-ankla-borrador-v1.md",
           "exists": true
         },
         {
