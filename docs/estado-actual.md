@@ -1,6 +1,6 @@
 # Estado actual de Ágora
 
-Observación: 2026-09-29. Prototipo experimental independiente. Este documento resume capacidades actuales; las decisiones arquitectónicas conservan su autoridad y los informes fechados conservan sus resultados originales.
+Observación: 2026-10-19. Prototipo experimental independiente. Este documento resume capacidades actuales; las decisiones arquitectónicas conservan su autoridad y los informes fechados conservan sus resultados originales.
 
 ## Qué funciona y dónde entrar
 
@@ -13,6 +13,8 @@ Observación: 2026-09-29. Prototipo experimental independiente. Este documento r
 | Ampliar evidencia de una revisión | Original inmutable y revisión derivada por GLM/Jev | [CLI de ampliación](ampliacion-cli.md) |
 | Revisar afirmaciones | Revisores experimentales y criterios separados de admisión | [Revisión](revision-acotada-por-afirmacion.md) |
 | Evaluar métodos | QASPER, AttrScore, controles y documentos de desarrollo | [Corpus](evaluacion-corpus-publicos.md) |
+| Consultar una fuente con evidencia y segunda señal | `answer`/`answer-v2` con despachos y recibos; `jev-review`; exportación offline | [Consulta con evidencia](contrato-consulta-evidencia-v1.md) |
+| Intercambiar evidencia entre sistemas | Intercambio local v1 y puente Skopos v0.2, sin red ni proveedor | [Intercambio](intercambio-evidencia-fuentes-v1.md) |
 
 La entrada `python3 scripts/agora_issues.py --help` reúne pendientes, ampliación y planes. Otras familias mantienen sus CLI específicas. No existe todavía una única interfaz que cubra toda la biblioteca. Con Llavero, usar ruta absoluta del intérprete y del script; `PYTHONPATH` puede no propagarse.
 
@@ -22,7 +24,7 @@ La entrada `python3 scripts/agora_issues.py --help` reúne pendientes, ampliaci�
 - GLM/Jev: ambos coinciden con cuatro etiquetas del productor; sin base para sustituir al revisor predeterminado.
 - Funciones: 439 bytes para los dos pasajes del caso compuesto; 2.152 bytes para una función de cada una de seis áreas. Cobertura global no establecida y referencias de páginas completas todavía parciales.
 - Generación conectada: devuelve seis áreas con responsabilidades y alcance parcial, pero se rechaza porque seis citas no son literales. El ensayo posterior con IDs sí produjo un candidato parcial válido, sin certificar exhaustividad. Evidencia y límites: [generación](generacion-desde-plan.md).
-- Última regresión de código: 460 pruebas aprobadas. Es una fotografía de esta revisión, no un contador contractual ni validación semántica general.
+- Última regresión de código: 637 pruebas aprobadas (2026-10-19, `.venv` Python 3.12.12). Es una fotografía de esta revisión, no un contador contractual ni validación semántica general.
 
 ## Fronteras y pendientes
 
@@ -642,3 +644,27 @@ Tres párrafos seleccionados manualmente forman una cadena de 715 bytes. Los mé
 ## Primer uso con agente de contexto nuevo
 
 [Prueba separada](../experiments/agent-first-use-v1/README.md): cuatro objetivos completados usando documentación pública y CLI; candidato v2 con versión desconocida conservada y sin admisión. El agente resolvió el aviso de Python antiguo usando .venv. Se corrigieron texto pendiente obsoleto y alcance ambiguo de --contract-version en ayuda. Resultados locales revalidados; no hubo revisión externa entre proveedores ni nueva prueba ciega tras las correcciones.
+
+## Intercambio de evidencia entre fuentes (2026-10-08)
+
+[Contrato](intercambio-evidencia-fuentes-v1.md): intercambio local neutral respecto del productor, con contratos `agora/source-evidence-exchange/v1`, `source-evidence-candidate/v1`, `source-evidence-bundle-candidate/v1` y sus resoluciones. Segmentos ligados a rangos UTF-8 con hash, localizador declarado y estado de extracción; los huecos entre segmentos no son citables como evidencia. `resolve` devuelve texto literal del derivado con `semantic_support=not_verified` y `admitted=false`. El puente `skopos-page-v02` construye el intercambio desde una respuesta CTIM v0.2, su solicitud, manifiesto y PDF local; acepta anclas de bytes HTML del original. Funciona sin proveedor, Mongo ni red. No comprueba que la transcripción corresponda a la imagen del PDF ni la vigencia de la norma.
+
+## Consulta experimental con evidencia: answer y answer-v2 (2026-10-10)
+
+[Contrato](contrato-consulta-evidencia-v1.md): `answer` compone las capacidades existentes sobre un archivo UTF-8 completo de hasta 160 000 bytes fijado por SHA-256, con hasta cinco despachos y recibos durables por etapa (`attempt`/`response`/`outcome`) y sin reintentos automáticos. `jev-review` añade una segunda señal sobre las citas adjuntas de una respuesta ya generada; `export-answer` produce un paquete offline con citas y estados separados, y sólo añade localizadores del original cuando recibe un intercambio verificado. La [calibración T0](../experiments/evidence-answer-flow-t0-v1/README.md) no superó su umbral (B 3/6); la [corrección v2](../experiments/evidence-answer-flow-t0-v1/correction-v2-README.md) terminó los tres B fallidos con 9/9 respuestas y 55.695 tokens reportados, sin alterar la serie original. `answer-v2` fija presupuestos de salida por etapa (generación 32 768, respaldo 32 768, pertinencia 16 384, cobertura 8 192, omisiones 16 384; total limitado a 131 072 vía `--budgets`) y acepta como única normalización el sufijo `</br>` tras un JSON válido. Se preservaron citas multisesgmento y se expone `candidate_coverage_conflict` cuando el candidato declara faltante y la revisión propone cobertura completa. El refinamiento offline de citas está disponible con presupuestos versionados. No hay evaluación independiente por requisito, ni admisión: `requires_review` en todos los casos.
+
+## Paneles ciegos de adjudicación Jev (2026-10-10)
+
+[Protocolo cerrado](../experiments/jev-adjudication-v1/PROTOCOL.md): paquete retrospectivo de doce respuestas y siete fuentes (diez salidas del T0 emparejado y dos controles), con cegamiento operativo entre `blind/` y `sealed/`. El Operador designó a Codex y OpenCode como revisores por modelo ([panel congelado](../experiments/jev-adjudication-v1/MODEL-PANEL.md)). [Controles QASPER congelados](../experiments/jev-heldout-qasper-v1/README.md) y [revisión del caso 03](../experiments/jev-case-03-review-v1/README.md) completan la serie. Es calibración ciega para el adjudicador, no muestra prospectiva ni adjudicación independiente realizada.
+
+## Ensayo bilateral CTIM y preflight normativo (2026-10-10)
+
+[Evaluación definida](ctim-bilateral-agora-evaluation-v1.md) y [ensayo de la página 15](../experiments/ctim-v02-bilateral-v1/README.md): los intentos 01–07 documentan credencial rechazada (HTTP 401), tres generaciones agotadas con 4 096 tokens, una discordancia de modelo reportado y el sufijo `</br>`; la ejecución v2 normalizada terminó `candidate_reviewed` con cinco despachos completos y ocho afirmaciones, marcando como faltante la asignación CPIM/CTIM porque el texto no conserva las columnas visuales. La exportación text-only verificó las ocho afirmaciones sin vínculo PDF; la exportación con intercambio falló con `citation_unmapped_to_exchange`. [Matriz de evidencia](ctim-18-22-matriz-evidencia-2026-10-10.md), [plan de consulta](plan-consulta-con-modelos-y-evidencia-2026-10-10.md) y [preflight del borrador normativo](preflight-borrador-normativo-ctim-2026-10-10.md) quedan preparados. No habilita consumo institucional.
+
+## Manifiesto de proyecto adoptado (2026-10-13)
+
+[project-manifest.yaml](../project-manifest.yaml) adoptado con esquema `pinax/project-manifest/v1`, confirmado por el mantenedor y verificado línea por línea desde la [propuesta del 2026-10-07](propuesta-manifiesto-pinax-2026-10-07.yaml), cuya procedencia se conserva. Declara lo que Ágora ofrece y no ofrece, sus fronteras de confianza y los contratos publicados (`agora/capabilities/v1`, `relation-candidate` y `relation-assessment` v1/v2). El manifiesto describe el estado actual; no convierte capacidades experimentales en aceptadas.
+
+## Contraste documental de esta revisión (2026-10-19)
+
+Auditoría de superficie contra código, ejecutada con comandos reales y sin escrituras más allá de esta actualización: 637 pruebas aprobadas con `.venv` Python 3.12.12; cero enlaces rotos en `README.md` y este documento; `doctor` en verde con `.venv` (el aviso con Python 3.9.6 del sistema es el comportamiento documentado); `capabilities` y `doctor` reportan las catorce familias de CLI con sus guías presentes; el manifiesto es consistente con el catálogo. Este documento se actualiza para cubrir los incrementos del 08 al 13 de octubre, que habían quedado fuera de la observación del 29 de septiembre. La cobertura de enlaces no revalida la semántica de cada informe histórico.
