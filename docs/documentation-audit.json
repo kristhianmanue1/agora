@@ -1,7 +1,7 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 245,
-  "bytes": 1224447,
+  "documents": 247,
+  "bytes": 1244197,
   "missing_links": 0,
   "missing_modules": 0,
   "records": [
@@ -92,16 +92,16 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "ab5282e96ffeaba1f2b12a3feecb81dc8952d75d353b16c4a10a130efe94ac54",
-      "bytes": 8086,
+      "sha256": "6fefb52354382f4140a490785fd95cf61c033c143f43287dc96076e1b17638c3",
+      "bytes": 8178,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
     },
     {
       "path": "AN-KLA.md",
-      "sha256": "12b7f0175516b9d0e406e2df6e252bb4c7558257e7483eb4145e06ec40139eaf",
-      "bytes": 13997,
+      "sha256": "cd980478b231e179abeab28417b635662c187b2bf3780bc15e5c76e14d933f43",
+      "bytes": 23978,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
@@ -548,8 +548,8 @@
     },
     {
       "path": "docs/contrato-consulta-evidencia-v1.md",
-      "sha256": "4f412bc513f64a4a22c2e02a5ae65a197c1dd62011c3d6ec20e6513ab7d4da72",
-      "bytes": 11949,
+      "sha256": "0ca17e5eda983a8d791bdef9b820ad17a32d54cc071dc08746c50b3d1d58ff44",
+      "bytes": 12698,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -661,8 +661,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "bc99a3fd822f644daa619c7eaf9901f41012911b4d85f13e162edf9f1ce652a4",
-      "bytes": 60897,
+      "sha256": "5c12d3b1ab8823da1f949550a4c184790f1062ed6f55bb181393d2e9179a0f90",
+      "bytes": 63542,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1092,6 +1092,18 @@
         {
           "target": "propuesta-manifiesto-pinax-2026-10-07.yaml",
           "exists": true
+        },
+        {
+          "target": "intercambio-evidencia-fuentes-v1.md",
+          "exists": true
+        },
+        {
+          "target": "contrato-consulta-evidencia-v1.md",
+          "exists": true
+        },
+        {
+          "target": "../experiments/quality-battery-v1/README.md",
+          "exists": true
         }
       ],
       "python_modules": []
@@ -1253,8 +1265,8 @@
     },
     {
       "path": "docs/intercambio-evidencia-fuentes-v1.md",
-      "sha256": "89e085d4bbdd74c43886ba74550079eaade0cc4de681d55a6ef8a9e6d9bba986",
-      "bytes": 15437,
+      "sha256": "ba651748a9842f21b37dd14fe2f583856fc61d245e56a557b1787dd822db1160",
+      "bytes": 15849,
       "scope": "guidance_or_report",
       "local_links": [],
       "python_modules": []
@@ -2624,6 +2636,22 @@
           "exists": true
         }
       ],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/quality-battery-v1/README.md",
+      "sha256": "c4b36f1793fd14f78d01d2d731fa2cfabb6670eb38972ba4319e28a95850c5dd",
+      "bytes": 3538,
+      "scope": "experiment_record",
+      "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/quality-battery-v1/RESULTS.md",
+      "sha256": "e7c16e98456866e4519335d6903dd8e3d80716bf53253fe768ef47d29caa8a98",
+      "bytes": 2333,
+      "scope": "experiment_record",
+      "local_links": [],
       "python_modules": []
     },
     {

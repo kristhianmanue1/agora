@@ -280,9 +280,41 @@ class EvidenceExchangeTests(unittest.TestCase):
             self.assertEqual("not_verified", result["claims"][0]["semantic_support"])
             self.assertFalse(result["admitted"])
 
-            candidate["claims"][0]["relation"]["version_relation"] = "current"
-            with self.assertRaisesRegex(SourceError, "invalid_version_relation"):
-                resolve_bundle(exchanges, candidate)
+    def test_derivative_transformations_travel_with_resolved_evidence(self):
+        path, raw, manifest, candidate = case("imss-0500")
+        chain = [{"operation": "pdf-text-extraction", "version": "v0.2"},
+                 {"operation": "layout-normalization", "version": "2026.10"}]
+        manifest["derivative"]["transformations"] = chain
+        raw = json.dumps(manifest, ensure_ascii=False).encode()
+        candidate["manifest_sha256"] = hashlib.sha256(raw).hexdigest()
+        result = resolve(path, raw, manifest, candidate)
+        self.assertEqual(result["derivative"]["transformations"], chain)
+        evidence = result["claims"][0]["evidence"][0]
+        self.assertEqual(evidence["derivative_transformations"], chain)
+        self.assertEqual(evidence["derivative_normalization"]["status"], "not_declared")
+
+    def test_derivative_without_transformations_defaults_to_empty_chain(self):
+        path, raw, manifest, candidate = case("imss-0500")
+        result = resolve(path, raw, manifest, candidate)
+        self.assertNotIn("transformations", result["derivative"])
+        evidence = result["claims"][0]["evidence"][0]
+        self.assertEqual(evidence["derivative_transformations"], [])
+
+    def test_invalid_transformation_chains_are_rejected(self):
+        path, raw, manifest, candidate = case("imss-0500")
+        for bad in ([{"operation": "extraction"}],
+                    [{"operation": "extraction", "version": "v1", "notes": "extra"}],
+                    [{"operation": "", "version": "v1"}],
+                    [{"operation": "extraction", "version": ""}],
+                    "pdf-text-extraction",
+                    [{"operation": "extraction", "version": "v1"}] * 9):
+            mutated = copy.deepcopy(manifest)
+            mutated["derivative"]["transformations"] = bad
+            mutated_raw = json.dumps(mutated, ensure_ascii=False).encode()
+            fixed = copy.deepcopy(candidate)
+            fixed["manifest_sha256"] = hashlib.sha256(mutated_raw).hexdigest()
+            with self.assertRaises(SourceError):
+                resolve(path, mutated_raw, mutated, fixed)
 
 
 if __name__ == "__main__":

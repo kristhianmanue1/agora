@@ -114,6 +114,18 @@ expertoGobernanza. La incorporación al consumidor, sus gates de cita y el
 preflight CTIM N1–N5 requieren una verificación bilateral sobre salidas reales;
 ningún comando de esta sección los activa ni escribe en otro repositorio.
 
+## Registro de resultados por identificador
+
+`results` (`python3 -m agora.result_registry`) indexa ejecuciones `answer` ya
+existentes bajo ids estables (`r-0001`, …) en un registro JSON append-only:
+`register --registry R --run DIR`, `get --registry R --id X`, `list --registry R`.
+`get` revalida el hash del `result.json` registrado y falla cerrado ante deriva
+o borrado; nunca reescribe las ejecuciones ni despacha proveedores. Devuelve el
+manifiesto y el prefijo de replay (`--replay-run`), de modo que la inspección o
+reanudación de una ejecución incompleta permanece offline. El registro no
+admite candidatos: `admission: not_performed` en toda recuperación. Los
+esquemas indizados son los de los recorridos `answer` v1/v2 experimental.
+
 ## Ejecución y vínculos
 
 1. Se verifica que los bytes de la fuente son regulares, UTF-8, no vacíos, menores o iguales a 160 000 bytes y coinciden con el hash. Se vuelven a leer antes de cada posible despacho. Se envía la fuente entera a `query_evidence` con `citation_mode=ids` y se conserva su `claim-evidence-query/v2` en `candidate.json`.

@@ -22,6 +22,7 @@ ENTRIES = {
     'traverse': ('src/agora/traversal_cli.py', 'agora.traversal_cli', 'Recorrer una fuente por unidades con presupuesto.', 'fuente, SHA, modelo y límites', 'representaciones y artefactos de recorrido', 'writes_output_directory', 'provider_calls', 'docs/recorrido-acotado.md'),
     'summarize': ('src/agora/__main__.py', 'agora', 'Crear el resumen candidato inicial.', 'fuente, SHA, modelo y salida', 'resumen candidato y referencias', 'writes_output_directory', 'provider_call', 'README.md'),
     'view': ('src/agora/passage_view.py', 'agora.passage_view', 'Inspeccionar respuesta guardada, faltantes y alcance.', 'resultado JSON existente', 'vista sin nueva evaluación semántica', 'stdout_only', 'none', 'README.md'),
+    'results': ('src/agora/result_registry.py', 'agora.result_registry', 'Registrar y recuperar resultados de recorridos answer por identificador, revalidando su hash.', 'registro JSON y directorio de ejecución existente', 'entrada de registro o manifiesto con verificación de deriva', 'writes_registry_file', 'none', 'docs/contrato-consulta-evidencia-v1.md'),
 }
 
 

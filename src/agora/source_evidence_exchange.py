@@ -100,10 +100,24 @@ def _source(value):
     return value
 
 
+def _transformations(value):
+    """Caller-declared, versioned chain of steps that produced the derivative."""
+    if type(value) is not list or not 1 <= len(value) <= 8:
+        raise SourceError("invalid_transformations")
+    for step in value:
+        _object(step, ("operation", "version"), "invalid_transformation_shape")
+        _label(step["operation"], "invalid_transformation_operation", 80)
+        _label(step["version"], "invalid_transformation_version", 80)
+    return value
+
+
 def _derivative(value):
     _object_variant(value,
                     ({"id", "sha256", "coverage", "producer"},
-                     {"id", "sha256", "coverage", "producer", "normalization"}),
+                     {"id", "sha256", "coverage", "producer", "normalization"},
+                     {"id", "sha256", "coverage", "producer", "transformations"},
+                     {"id", "sha256", "coverage", "producer", "normalization",
+                      "transformations"}),
                     "invalid_derivative_shape")
     _label(value["id"], "invalid_derivative_id")
     _hash(value["sha256"], "invalid_derivative_sha256")
@@ -120,6 +134,8 @@ def _derivative(value):
         _label(producer["derivation_id"], "invalid_derivation_id", 200)
     if "normalization" in value:
         _normalization(value["normalization"])
+    if "transformations" in value:
+        _transformations(value["transformations"])
     return value
 
 
@@ -275,6 +291,8 @@ def _resolved_evidence(manifest, segment, start, end, raw, manifest_sha=None):
               "extraction_status_provenance": "caller_declared",
               "derivative_normalization": manifest["derivative"].get(
                   "normalization", {"status": "not_declared", "description": None}),
+              "derivative_transformations": manifest["derivative"].get(
+                  "transformations", []),
               "source_temporal_status": manifest["source"].get(
                   "temporal", {"document_date": None, "status": "not_declared"})}
     if manifest_sha is not None:

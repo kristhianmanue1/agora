@@ -19,7 +19,12 @@ Mongo ni red. Entrada y salida JSON; la CLI sólo imprime a stdout.
   `sha256`, `media_type`, `revision` declarada y `uri` opcional; un derivado UTF-8
   identificado por SHA-256, `coverage` declarada y productor. `producer.system`
   puede ser `skopos` u otro productor; `manifest_sha256` y `derivation_id` son
-  referencias opcionales, no attestations. Cada segmento liga un rango UTF-8
+  referencias opcionales, no attestations. El derivado puede declarar además
+  `transformations`: una cadena ordenada de hasta ocho pasos
+  `{operation, version}` que describen cómo se produjo (extracción, OCR,
+  alineación, normalización). Es metadato declarado por el llamador, no
+  atestiguado; su ausencia significa «no declarado», no «sin transformaciones».
+  Cada segmento liga un rango UTF-8
   `[start_byte,end_byte)`, su hash, localizador, modalidad y estado de
   extracción declarado. Los huecos entre segmentos pueden contener marcadores
   editoriales; no se pueden citar como evidencia.
@@ -32,8 +37,9 @@ Mongo ni red. Entrada y salida JSON; la CLI sólo imprime a stdout.
 
 `resolve` devuelve `agora/source-evidence-resolution/v1` y `resolve-bundle`
 devuelve `agora/source-evidence-bundle-resolution/v1`. Cada evidencia resuelta
-incluye texto **literal del derivado**, hash del fragmento, rango, modalidad y
-localizador original declarado. El texto de la afirmación permanece aparte con
+incluye texto **literal del derivado**, hash del fragmento, rango, modalidad,
+localizador original declarado y la cadena `transformations` del derivado
+(lista vacía cuando no fue declarada). El texto de la afirmación permanece aparte con
 `semantic_support=not_verified`; la respuesta conserva `admitted=false` y
 `provider_calls=0`. Ninguna de estas comprobaciones demuestra que la
 transcripción corresponda a la imagen del PDF, que una arista visual sea una
