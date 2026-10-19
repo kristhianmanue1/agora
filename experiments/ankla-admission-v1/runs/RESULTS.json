@@ -1,0 +1,42 @@
+{
+  "schema": "agora/ankla-admission-trial/v1",
+  "steps": [
+    {
+      "step": "agora_run_and_registry",
+      "flow_status": "candidate_reviewed",
+      "result_id": "r-0001",
+      "result_sha256": "182173fb7410fc7643566c15f543becc77b4268ad911294bfc924fa45679fbe4"
+    },
+    {
+      "step": "store_initialized",
+      "genesis": "ok"
+    },
+    {
+      "step": "admission_committed",
+      "committed": true
+    },
+    {
+      "step": "supersede_committed",
+      "committed": true,
+      "fact_states": {
+        "f-agora-ref-trial-1": "sustituida",
+        "f-agora-ref-trial-2": "vigente"
+      }
+    },
+    {
+      "step": "forged_authority_outcome",
+      "error": "cli_privileged_authority_unresolved",
+      "returncode": 1,
+      "not_committed": true
+    },
+    {
+      "step": "no_direct_write_path",
+      "src_matches": 0
+    },
+    {
+      "step": "store_verify",
+      "ok": true,
+      "identity": "complete"
+    }
+  ]
+}

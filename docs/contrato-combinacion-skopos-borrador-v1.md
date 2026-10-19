@@ -1,9 +1,11 @@
 # Contrato de combinación Skopos ↔ Ágora: entrada de evidencia (borrador v1)
 
-**Estado:** borrador, 2026-10-19. No es un contrato vigente: formaliza como
-propuesta la frontera ya pilotada. Su aceptación pertenece al Operador y exige
-la verificación bilateral descrita abajo. Nada de este documento cambia los
-contratos existentes ni activa integración alguna.
+**Estado:** borrador aceptado por el Operador, 2026-10-19. La decisión está
+registrada; la vigencia espera sus dos puertas restantes: la verificación
+bilateral sobre salidas reales (Skopos confirma respuesta y manifiesto;
+Ágora confirma derivado, segmentos y localizadores contra el original) y un
+caso reservado no usado por el desarrollo del puente. Nada de este documento
+cambia los contratos existentes ni activa integración alguna.
 
 ## Dirección y objeto
 
