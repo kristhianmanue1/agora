@@ -1,11 +1,16 @@
 # Contrato de combinación Skopos ↔ Ágora: entrada de evidencia (borrador v1)
 
 **Estado:** borrador aceptado por el Operador, 2026-10-19. La decisión está
-registrada; la vigencia espera sus dos puertas restantes: la verificación
-bilateral sobre salidas reales (Skopos confirma respuesta y manifiesto;
-Ágora confirma derivado, segmentos y localizadores contra el original) y un
-caso reservado no usado por el desarrollo del puente. Nada de este documento
-cambia los contratos existentes ni activa integración alguna.
+registrada; la vigencia espera sus puertas. La [verificación bilateral fue
+ejecutada](../experiments/skopos-bilateral-verify-v1/README.md) el 2026-10-19
+con resultado **`bilateral_not_confirmed`**: los registros de Skopos
+referencian el original por hash (dieciséis archivos de custodia), pero no
+retienen el par petición/respuesta servido, la huella `request_sha256` no se
+reproduce desde los bytes del consumidor y el PDF original no está disponible
+para verificación. Los requisitos de remediación están nombrados en el
+resultado. El caso reservado sigue pendiente y requiere una derivación Skopos
+de página no consumida. Nada de este documento cambia los contratos
+existentes ni activa integración alguna.
 
 ## Dirección y objeto
 

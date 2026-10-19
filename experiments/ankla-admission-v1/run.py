@@ -20,6 +20,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
+from agora.consultation_package import build_package  # noqa: E402
 from agora.evidence_answer_flow import run_flow  # noqa: E402
 from agora.result_registry import register  # noqa: E402
 
@@ -116,15 +117,24 @@ def main():
         registry = lab / "registry.json"
         entry = register(registry, run_dir)
         result_sha = entry["result_sha256"]
+        package = build_package(source, run_dir)
+        package_path = lab / "package.json"
+        package_path.write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n",
+                                encoding="utf-8")
+        package_sha = hashlib.sha256(package_path.read_bytes()).hexdigest()
         reference = {"kind": "agora-result-ref/v1", "result_id": entry["id"],
                      "result_sha256": result_sha,
-                     "package_schema": None, "package_sha256": None,
+                     "package_schema": package["schema"],
+                     "package_sha256": package_sha,
                      "source_sha256": source_sha,
                      "question": flow["question"], "status": flow["status"],
                      "requires_review": True}
         steps.append({"step": "agora_run_and_registry",
                       "flow_status": flow["status"], "result_id": entry["id"],
-                      "result_sha256": result_sha})
+                      "result_sha256": result_sha,
+                      "package_schema": package["schema"],
+                      "package_sha256": package_sha,
+                      "package_claims": len(package.get("claims", []))})
 
         # 2. Fresh synthetic AN-KLA store: init then governed admission.
         store = lab / "ankla-store"

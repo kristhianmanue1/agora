@@ -1,0 +1,56 @@
+{
+  "schema": "agora/skopos-bilateral-verify/v1",
+  "date": "2026-10-19",
+  "verdict": "bilateral_not_confirmed",
+  "artifacts_sha256": {
+    "request.json": "03084fb7fe733aafffefd680a1d64a1e2bf71021fb350f5f2843e3470b28f68a",
+    "response.json": "bbf11c28ba70dba69988aaa0d5bad33ebd675fa63f35f61e6fa7d95e7c6a9adb",
+    "exchange.json": "321c8606084233a44793ebb9265c6e205894d07c99ea2705e26763e9e8a8c086",
+    "derived.txt": "2cc46da92b20048d414a5f8f771534555b14470e410a1c3624e1c29aa6fa75d8"
+  },
+  "original_sha256": "141d9b090efa4d70799ee1368350a5167347b4e8cd5f99912fb192ce6c704faa",
+  "checks": [
+    {
+      "check": "byte_identical_copies_in_skopos",
+      "expected": "al menos request y response retenidos",
+      "observed": {
+        "request.json": 0,
+        "response.json": 0,
+        "exchange.json": 0,
+        "derived.txt": 0
+      }
+    },
+    {
+      "check": "content_normalized_copies_in_skopos",
+      "observed": {
+        "request.json": 0,
+        "response.json": 0,
+        "exchange.json": 0,
+        "derived.txt": 0
+      }
+    },
+    {
+      "check": "internal_request_binding_reproduces_locally",
+      "observed": false,
+      "detail": "response.request_sha256 no reproduce desde los bytes locales del request (crudo ni canónico): la huella la calculó Skopos sobre su propia serialización"
+    },
+    {
+      "check": "skopos_custody_references_original",
+      "observed": 16,
+      "files": [
+        "/Users/krisnova/www/aria/skopos/runs/ctim-rs1-draft-local-v1/eight-source-inventory.json",
+        "/Users/krisnova/www/aria/skopos/runs/source-imss-ctim-pilot-v1/imss-procedure-2900-003-001-2021/operation-receipt.json",
+        "/Users/krisnova/www/aria/skopos/runs/source-imss-ctim-pilot-v1/imss-procedure-2900-003-001-2021/document-policy.json"
+      ]
+    },
+    {
+      "check": "original_pdf_bytes_present",
+      "observed": []
+    }
+  ],
+  "required_before_contract_vigencia": [
+    "Skopos debe retener los pares petición/respuesta que sirve (hoy custody-delivery y document-delivery están vacíos y ninguna copia de request/response existe en su árbol de corridas)",
+    "la huella request_sha256 debe poder reproducirse desde los bytes que el consumidor conserva, o Skopos debe publicar su forma canónica",
+    "el original (PDF) debe estar disponible para la verificación de integridad del intercambio, o la verificación queda en not_checked"
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "scope": "all tracked and nonignored Markdown; complete text scanned mechanically; no external-link or historical-result revalidation",
-  "documents": 250,
-  "bytes": 1256312,
-  "missing_links": 1,
+  "documents": 251,
+  "bytes": 1260192,
+  "missing_links": 2,
   "missing_modules": 0,
   "records": [
     {
@@ -548,8 +548,8 @@
     },
     {
       "path": "docs/contrato-combinacion-ankla-v1.md",
-      "sha256": "95d469e9af4029569063b8a7cbbf2a98942666d09917b76a3fd102284dbd5bfc",
-      "bytes": 4316,
+      "sha256": "f570638a9581e6bfef8c584b27d031509859ef8a92e56a562309ab16f7631b2c",
+      "bytes": 4348,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -573,10 +573,14 @@
     },
     {
       "path": "docs/contrato-combinacion-skopos-borrador-v1.md",
-      "sha256": "0b5acfdb4ee66ffda4d28aba6cfe022289fcfc215c9aa343d1eda9247b90e6ee",
-      "bytes": 3385,
+      "sha256": "32a0c8d2381fd1c0b8ad7a3707c9ff3bee29c5b0a465fef4b535159c902ac6a5",
+      "bytes": 3741,
       "scope": "guidance_or_report",
       "local_links": [
+        {
+          "target": "../experiments/skopos-bilateral-verify-v1/README.md",
+          "exists": true
+        },
         {
           "target": "../experiments/ctim-v02-bilateral-v1/README.md",
           "exists": true
@@ -699,8 +703,8 @@
     },
     {
       "path": "docs/estado-actual.md",
-      "sha256": "2ccbb7c15911b5676cc34e743406f2855c1c43e7df02ab94009f159ce5e26772",
-      "bytes": 65689,
+      "sha256": "b6249930a5a720d01b32766905601d38310bd8b21bffbde0548299774a7243ce",
+      "bytes": 66967,
       "scope": "guidance_or_report",
       "local_links": [
         {
@@ -1129,6 +1133,10 @@
         },
         {
           "target": "propuesta-manifiesto-pinax-2026-10-07.yaml",
+          "exists": true
+        },
+        {
+          "target": "../experiments/skopos-bilateral-verify-v1/README.md",
           "exists": true
         },
         {
@@ -1823,8 +1831,8 @@
     },
     {
       "path": "experiments/ankla-admission-v1/README.md",
-      "sha256": "6b07693b0a72506060d1dc4769f92c90df9eb7d144a578f93eebd1fe965d0461",
-      "bytes": 2267,
+      "sha256": "5a2a98fbf0b3dbe758325c17aeb85b690aa182b1bbce5f2d7a780888d07d2d4a",
+      "bytes": 2307,
       "scope": "experiment_record",
       "local_links": [
         {
@@ -3081,6 +3089,23 @@
       "bytes": 4337,
       "scope": "experiment_record",
       "local_links": [],
+      "python_modules": []
+    },
+    {
+      "path": "experiments/skopos-bilateral-verify-v1/README.md",
+      "sha256": "9084d79f37731dad2d443f99662c1ced3a3f36c6143d587f0066a54ec7837f29",
+      "bytes": 2174,
+      "scope": "experiment_record",
+      "local_links": [
+        {
+          "target": "../docs/contrato-combinacion-skopos-borrador-v1.md",
+          "exists": false
+        },
+        {
+          "target": "../ctim-v02-bilateral-v1/README.md",
+          "exists": true
+        }
+      ],
       "python_modules": []
     },
     {
